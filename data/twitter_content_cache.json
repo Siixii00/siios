@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-25T10:54:28.487874",
-    "total_items": 60
+    "last_updated": "2026-10-25T14:52:46.011769",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "Meta Ignores Brazilian Court Order to End Bolsonaro Favoritism",
-        "url": "https://www.panamericandispatch.org/p/meta-ignores-brazilian-court-order",
+        "title": "Tool book of a Nuremberg knight from 1505",
+        "url": "https://loeffelholz-codex.org/en/",
         "source": "Hacker News",
-        "score": 165
+        "score": 70
+      },
+      {
+        "title": "Show HN: Farol – a risk map of a pull request for the person who approves it",
+        "url": "https://github.com/winnin/farol",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
+        "title": "fheroes2: A recreation of Heroes of Might and Magic II game engine",
+        "url": "https://github.com/ihhub/fheroes2",
+        "source": "Hacker News",
+        "score": 93
       },
       {
         "title": "We should be more ambitious with the software we build",
         "url": "https://danluu.com/ambitious/",
         "source": "Hacker News",
-        "score": 449
+        "score": 553
       },
       {
         "title": "Cerebras Deploys Trillion-Parameter AI Models",
         "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
         "source": "Hacker News",
-        "score": 185
+        "score": 248
       },
       {
-        "title": "France asked ISPs to prepare temporary DNS blocks for major social platforms",
-        "url": "https://www.blast-info.fr/articles/2026/information-exclusive-blast-le-premier-ministre-a-prepare-la-coupure-des-reseaux-sociaux-pour-le-24-octobre-9D8cgrU5S5iiW14Sb9nMzQ",
+        "title": "R/open source bans all solo projects and projects using LLMs",
+        "url": "https://www.reddit.com/r/opensource/comments/1xelcuf/your_tokens_arent_valuable_no_more_ai",
         "source": "Hacker News",
-        "score": 36
+        "score": 25
       },
       {
         "title": "How Japanese Dried Bonito Is Made",
         "url": "https://kottke.org/26/10/how-japanese-dried-bonito-is-made",
         "source": "Hacker News",
-        "score": 48
+        "score": 110
       },
       {
         "title": "The Goose Programming Language",
         "url": "https://aardappel.github.io/goose/",
         "source": "Hacker News",
-        "score": 419
+        "score": 485
       },
       {
-        "title": "Rewriting a Commercial Engine in Jai",
-        "url": "https://polygonjs.com/blog/why-i-rewrote-polygon-from-scratch",
+        "title": "Samsung running a TensorFlow lite model on 960x540 image to track you",
+        "url": "https://twitter.com/mike64_t/status/2114150399406202896",
         "source": "Hacker News",
-        "score": 26
+        "score": 172
+      },
+      {
+        "title": "The Lego group reveals collaboration with Daft Punk",
+        "url": "https://www.lego.com/en-us/categories/adults-welcome/article/daft-punk",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
+        "title": "Reverse engineer of PC-98 Touhou games retires",
+        "url": "https://rec98.nmlgc.net/blog/2026-10-05",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "Nikon photography contest winner loses title after scientists spot signs of AI",
+        "url": "https://www.techspot.com/news/114171-nikon-photography-contest-winner-loses-title-after-scientists.html",
+        "source": "Hacker News",
+        "score": 63
       },
       {
         "title": "SpeedCrunch 1.1",
         "url": "https://www.speedcrunch.org/",
         "source": "Hacker News",
-        "score": 154
-      },
-      {
-        "title": "Cannabis legalisation and cardiovascular hospitalisations in the USA",
-        "url": "https://bmjopen.bmj.com/content/16/10/e111050",
-        "source": "Hacker News",
-        "score": 6
+        "score": 183
       },
       {
         "title": "Small Programs and Languages",
         "url": "https://ratfactor.com/cards/pl-small",
         "source": "Hacker News",
-        "score": 118
+        "score": 145
       },
       {
-        "title": "Why Gopher in 2026?",
-        "url": "https://gopher.muffinlabs.com/sdf.org/users/nervtoji/phlog/001.txt",
+        "title": "Did it just build.. a clock?",
+        "url": "https://theclock.online/",
         "source": "Hacker News",
-        "score": 80
-      },
-      {
-        "title": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
-        "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
-        "source": "Hacker News",
-        "score": 373
-      },
-      {
-        "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
-        "url": "https://edjefferson.com/localwiki/",
-        "source": "Hacker News",
-        "score": 1597
-      },
-      {
-        "title": "Node2Shell evolves to HTTP2Shell, blast radius affects many HTTP libs and apps",
-        "url": "https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497",
-        "source": "Hacker News",
-        "score": 326
-      },
-      {
-        "title": "I don't understand quantum physics (2018)",
-        "url": "https://www.southampton.ac.uk/~doug/quantum_physics/index.html",
-        "source": "Hacker News",
-        "score": 319
+        "score": 9
       }
     ],
     "ai": [
@@ -101,89 +101,90 @@
         "title": "Cerebras Deploys Trillion-Parameter AI Models",
         "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
         "source": "Hacker News AI",
-        "score": 185
+        "score": 248
       },
       {
-        "title": "Rewriting a Commercial Engine in Jai",
-        "url": "https://polygonjs.com/blog/why-i-rewrote-polygon-from-scratch",
+        "title": "R/open source bans all solo projects and projects using LLMs",
+        "url": "https://www.reddit.com/r/opensource/comments/1xelcuf/your_tokens_arent_valuable_no_more_ai",
         "source": "Hacker News AI",
-        "score": 26
-      },
-      {
-        "title": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
-        "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
-        "source": "Hacker News AI",
-        "score": 373
-      },
-      {
-        "title": "Neural chip decodes interactions between brain regions",
-        "url": "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/",
-        "source": "Hacker News AI",
-        "score": 109
-      },
-      {
-        "title": "Pragtical v3.14 Lua-based text editor adds menus, floating views, and sessions",
-        "url": "https://pragtical.dev/blog/pragtical-v3140-release",
-        "source": "Hacker News AI",
-        "score": 17
-      },
-      {
-        "title": "In Rainbows",
-        "url": "https://hitogata.neocities.org/Rainbows",
-        "source": "Hacker News AI",
-        "score": 28
-      },
-      {
-        "title": "A practical guide to AI image generation, from diffusion to agents",
-        "url": "https://danielball.com/notes/ai_image_generation.html",
-        "source": "Hacker News AI",
-        "score": 270
+        "score": 25
       },
       {
         "title": "Nikon photography contest winner loses title after scientists spot signs of AI",
         "url": "https://www.techspot.com/news/114171-nikon-photography-contest-winner-loses-title-after-scientists.html",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 63
+      },
+      {
+        "title": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
+        "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
+        "source": "Hacker News AI",
+        "score": 420
+      },
+      {
+        "title": "Rewriting a Commercial Engine in Jai",
+        "url": "https://polygonjs.com/blog/why-i-rewrote-polygon-from-scratch",
+        "source": "Hacker News AI",
+        "score": 54
+      },
+      {
+        "title": "Neural chip decodes interactions between brain regions",
+        "url": "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/",
+        "source": "Hacker News AI",
+        "score": 120
+      },
+      {
+        "title": "Imagine an AI future where being banned means you are now economically useless",
+        "url": "https://twitter.com/boneGPT/status/2114035719853265264",
+        "source": "Hacker News AI",
+        "score": 10
+      },
+      {
+        "title": "Pragtical v3.14 Lua-based text editor adds menus, floating views, and sessions",
+        "url": "https://pragtical.dev/blog/pragtical-v3140-release",
+        "source": "Hacker News AI",
+        "score": 25
+      },
+      {
+        "title": "In Rainbows",
+        "url": "https://hitogata.neocities.org/Rainbows",
+        "source": "Hacker News AI",
+        "score": 29
       },
       {
         "title": "Why is AI generated language so hard to understand?",
         "url": "https://arxiv.org/abs/2610.29162",
         "source": "Hacker News AI",
-        "score": 205
+        "score": 216
       },
       {
         "title": "Oai-math-revised: a community hub for revising OpenAI's math write-ups",
         "url": "https://terrytao.wordpress.com/2026/10/24/oai-math-revised-a-community-hub-for-revising-openais-math-write-ups/",
         "source": "Hacker News AI",
-        "score": 45
+        "score": 48
       },
       {
         "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
         "url": "https://simedw.com/2026/10/21/world-model-terminal/",
         "source": "Hacker News AI",
-        "score": 641
+        "score": 645
       },
       {
         "title": "Around a dozen banking apps began specifically permitting GrapheneOS",
         "url": "https://grapheneos.social/@GrapheneOS/117492375462459244",
         "source": "Hacker News AI",
-        "score": 649
+        "score": 655
       }
     ],
     "news": [
       {
-        "title": "More than 1,300 arrested as clashes follow another day of mass protests across France",
-        "url": "https://www.bbc.co.uk/news/articles/c95ynd587ynzo?at_medium=RSS&at_campaign=rss",
+        "title": "Voters in Brazil head to polls as Lula goes up against Bolsonaro's son",
+        "url": "https://www.bbc.co.uk/news/articles/cxp8g21j4648o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Israel to close West Bank crossings on election day as crackdown escalates",
         "url": "https://www.bbc.co.uk/news/articles/c6y93ylpl5p2o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Voters in Brazil to choose between Lula and Bolsonaro's son",
-        "url": "https://www.bbc.co.uk/news/articles/cxp8g21j4648o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,12 +198,27 @@
         "source": "BBC World"
       },
       {
+        "title": "More than 1,300 arrested as clashes follow another day of mass protests across France",
+        "url": "https://www.bbc.co.uk/news/articles/c95ynd587ynzo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Vanessa Trump says she is cancer-free six months after revealing diagnosis ",
         "url": "https://www.bbc.co.uk/news/articles/cm1dwzvn6227o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Uh oh, the iPhone Duo complaints have begun ",
+        "url": "https://www.creativebloq.com/news/the-iphone-duo-complaints-have-begun",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " \"If I start at 8am, I feel I've lost the day already,\" manga artist Yé Wei shows us his obsessively organised art studio ",
+        "url": "https://www.creativebloq.com/features/if-i-start-at-8am-i-feel-ive-lost-the-day-already-manga-artist-ye-wei-shows-around-his-obsessively-organised-art-studio",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Just Eat's AI apocalypse raises a glaring question ",
         "url": "https://www.creativebloq.com/news/just-eats-ai-apocalypse-raises-a-pretty-obvious-question",
@@ -222,89 +238,79 @@
         "title": " How Ben & Jerry's became a beacon of brand bravery ",
         "url": "https://www.creativebloq.com/news/how-ben-and-jerrys-became-a-beacon-of-brand-bravery",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " 6 niche horror posters that are sharper than the originals ",
-        "url": "https://www.creativebloq.com/features/6-niche-horror-posters-that-are-sharper-than-the-originals",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " A censored library logo design just took the war on woke to a new level of weird ",
-        "url": "https://www.creativebloq.com/news/a-censored-library-logo-design-just-took-the-war-on-woke-to-a-new-level-of-weird",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
-        "title": "A hidden bias in human language challenges 70 years of science",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261023023738.htm",
+        "title": "Just two drinks a day may be far riskier than you think",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261024222030.htm",
         "source": "Science Daily"
       },
       {
-        "title": "NASA’s asteroid Bennu samples reveal a 4.5-billion-year-old secret",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261023023734.htm",
+        "title": "Scientists reveal the hidden danger of missing blood pressure medication",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261024222028.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Could lowering high blood pressure be as simple as stimulating your ear?",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261023023732.htm",
+        "title": "Low-dose aspirin linked to 70% lower dementia risk, but there's a catch",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261024222026.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists propose a way to detect dangerous “mirror life” before it exists",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261023023726.htm",
+        "title": "This mysterious mushroom makes people see hundreds of tiny humans",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261024222021.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Astronomers uncover a mysterious magnetic web above the Sun",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261023023723.htm",
+        "title": "Three giant black holes discovered in a galaxy from the dawn of time",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261024222000.htm",
         "source": "Science Daily"
       },
       {
-        "title": "These tiny snakes roll four times faster than they slither",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261023023718.htm",
+        "title": "New evidence suggests spinosaurus spent most of its life underwater",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261024221956.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Your blood could reveal inflammatory bowel disease 10 years before diagnosis",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261023023713.htm",
+        "title": "Popular cannabis sleep gummies may have a hidden dark side",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261024221952.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Vincent Price Is the Weirdest Serial Killer Ever in this '70s Cult Classic",
-        "url": "https://www.polygon.com/halloween-horror-what-to-watch-vincent-price-abominable-dr-phibes/",
+        "title": "Elden Ring Has Quietly Become A24's Most Expensive Movie Yet",
+        "url": "https://www.polygon.com/elden-ring-movie-budget/",
         "source": "Polygon"
       },
       {
-        "title": "5 Near-Perfect Psychological Thriller Movies Streaming for Free",
-        "url": "https://www.polygon.com/best-psychological-thrillers-movies-streaming-free-online/",
+        "title": "The Most Broken D&D Item Keeps Ruining Games. Here Are 3 Ways to Fix It",
+        "url": "https://www.polygon.com/dnd-most-broken-item-potion-healing-fix-dungeons-dragons/",
         "source": "Polygon"
       },
       {
-        "title": "23 Years Later, Spike's Best 'Buffy' Quote Is Still One of the Best Lines in TV History",
-        "url": "https://www.polygon.com/buffy-vampire-slayer-best-spike-quote/",
+        "title": "Steve Rogers Wields Mjolnir in the Latest Avengers: Doomsday Trailer",
+        "url": "https://www.polygon.com/avengers-doomsday-mjolnir-trailer/",
         "source": "Polygon"
       },
       {
-        "title": "61 Years Later, Paul's Best Dune Line Is Still the Coldest Quote in Sci-Fi History",
-        "url": "https://www.polygon.com/paul-atreides-best-dune-quote/",
+        "title": "GTA: San Andreas’ Most Frustrating MIssion Show How Far Rockstar Has Come in 22 Years",
+        "url": "https://www.polygon.com/gta-san-andreas-retrospective/",
         "source": "Polygon"
       },
       {
-        "title": "Forget Tom Cruise, Sci-Fi's Foundational 1950s Classic Movie Is Free to Watch on YouTube",
-        "url": "https://www.polygon.com/war-of-worlds-streaming-free-youtube-october-2026/",
+        "title": "Nintendo Legend Reveals Super Mario Bros.' Most Surprising Innovation",
+        "url": "https://www.polygon.com/nintendo-super-mario-japan-award-biggest-series-innovation/",
         "source": "Polygon"
       },
       {
-        "title": "58 Years Later, Captain Kirk's Best Star Trek Quote Is the Greatest Line in Sci-Fi History",
-        "url": "https://www.polygon.com/best-star-trek-original-series-quote-captain-kirk/",
+        "title": "BioWare's Closure Is Just the Tip of the Iceberg",
+        "url": "https://www.polygon.com/patch-notes-bioware-closure/",
         "source": "Polygon"
       },
       {
-        "title": "Jean-Claude Van Damme's First Action Classic is Streaming for Free",
-        "url": "https://www.polygon.com/bloodsport-free-youtube/",
+        "title": "9 Near-Perfect 'Far Side' Comics Starring the Nerdy Kid",
+        "url": "https://www.polygon.com/best-nerdy-kid-far-side-comics/",
         "source": "Polygon"
       }
     ],
