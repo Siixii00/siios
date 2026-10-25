@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-10-25T21:30:11.800434",
+    "last_updated": "2026-10-25T23:53:39.231663",
     "total_items": 60
   },
   "content": {
@@ -9,165 +9,170 @@
         "title": "Dolly Parton's Imagination Library",
         "url": "https://imaginationlibrary.com/",
         "source": "Hacker News",
-        "score": 232
-      },
-      {
-        "title": "Why I Am a Programmer",
-        "url": "https://www.alfie.wtf/programming/why-i-am-a-programmer.html",
-        "source": "Hacker News",
-        "score": 42
-      },
-      {
-        "title": "What goes into making an animated film?",
-        "url": "https://www.disneyanimation.com/process/",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "Eunice is almost here",
-        "url": "https://armincat.com/articles/eunice-is-almost-here",
-        "source": "Hacker News",
-        "score": 34
-      },
-      {
-        "title": "Gheist campaign plants secret-dumping workflows using stolen GitHub tokens",
-        "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
-        "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
-        "url": "https://lynchlab.net/llm-skin-cancer",
-        "source": "Hacker News",
-        "score": 306
-      },
-      {
-        "title": "I refuse to accept a censored Internet. Join Me at FOSDEM 27",
-        "url": "https://talkweb.eu/openweb/4558/",
-        "source": "Hacker News",
-        "score": 284
-      },
-      {
-        "title": "Oregon Police Are Charging a Local News Outlet $2.5M for Records About One Cop",
-        "url": "https://theintercept.com/2026/10/01/oregon-police-misconduct-public-records-cost-fee/",
-        "source": "Hacker News",
-        "score": 255
-      },
-      {
-        "title": "The U.S. Power Grid",
-        "url": "https://nomagicpill.site/knowledge/powergrid.html",
-        "source": "Hacker News",
-        "score": 27
+        "score": 324
       },
       {
         "title": "Overgrown, when plants invade your abandoned tabs",
         "url": "https://charliegerard.dev/blog/overgrown-extension/",
         "source": "Hacker News",
-        "score": 8
+        "score": 99
       },
       {
-        "title": "VCF Southwest 2026, but Edited on Silicon Graphics for '90s TV [video]",
-        "url": "https://www.youtube.com/watch?v=46wxttvq9qY",
+        "title": "What goes into making an animated film?",
+        "url": "https://www.disneyanimation.com/process/",
         "source": "Hacker News",
-        "score": 38
-      },
-      {
-        "title": "Show HN: Hurston-1 open source TTS that speak Southern American and Afro-English",
-        "url": "https://huggingface.co/destined/hurston-1",
-        "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "We should be more ambitious with the software we build",
-        "url": "https://danluu.com/ambitious/",
-        "source": "Hacker News",
-        "score": 718
-      },
-      {
-        "title": "UTS #39: Unicode Security Mechanisms",
-        "url": "https://unicode.org/reports/tr39/",
-        "source": "Hacker News",
-        "score": 23
+        "score": 66
       },
       {
         "title": "The State of Context Engineering",
         "url": "https://www.dbreunig.com/2026/10/24/the-state-of-context-engineering.html",
         "source": "Hacker News",
-        "score": 3
-      }
-    ],
-    "ai": [
+        "score": 57
+      },
       {
-        "title": "Gheist campaign plants secret-dumping workflows using stolen GitHub tokens",
-        "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
-        "source": "Hacker News AI",
-        "score": 26
+        "title": "Why I Am a Programmer",
+        "url": "https://www.alfie.wtf/programming/why-i-am-a-programmer.html",
+        "source": "Hacker News",
+        "score": 99
       },
       {
         "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
         "url": "https://lynchlab.net/llm-skin-cancer",
-        "source": "Hacker News AI",
-        "score": 306
+        "source": "Hacker News",
+        "score": 384
       },
       {
-        "title": "Show HN: Hurston-1 open source TTS that speak Southern American and Afro-English",
-        "url": "https://huggingface.co/destined/hurston-1",
-        "source": "Hacker News AI",
-        "score": 24
+        "title": "I refuse to accept a censored Internet. Join Me at FOSDEM 27",
+        "url": "https://talkweb.eu/openweb/4558/",
+        "source": "Hacker News",
+        "score": 360
       },
       {
-        "title": "JetBrains Thinkrail",
-        "url": "https://github.com/JetBrains/thinkrail",
-        "source": "Hacker News AI",
-        "score": 114
+        "title": "Oregon Police Are Charging a Local News Outlet $2.5M for Records About One Cop",
+        "url": "https://theintercept.com/2026/10/01/oregon-police-misconduct-public-records-cost-fee/",
+        "source": "Hacker News",
+        "score": 345
       },
       {
-        "title": "AI use leads UC Berkeley math professor to see 'no point' in grading homework",
-        "url": "https://www.dailycal.org/news/campus/academics/ai-use-leads-uc-berkeley-math-professor-to-see-no-point-in-grading-homework/article_bdf1eae2-c08b-491f-b9f1-81a7cea177de.html",
-        "source": "Hacker News AI",
-        "score": 154
+        "title": "Serbia's Vucic concedes election defeat in historic win for student movement",
+        "url": "https://www.reuters.com/world/europe/serbia-votes-students-seek-unseat-vucic-snap-election-2026-10-25/",
+        "source": "Hacker News",
+        "score": 176
       },
       {
-        "title": "Cerebras Deploys Trillion-Parameter AI Models",
-        "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+        "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+        "url": "https://minimaxir.com/2026/10/cheap-llms/",
+        "source": "Hacker News",
+        "score": 79
+      },
+      {
+        "title": "Reverse engineering a Beyblade launch tracker",
+        "url": "https://blog.simone.computer/reverse-beyblade-launch-tracker",
+        "source": "Hacker News",
+        "score": 10
+      },
+      {
+        "title": "Eunice is almost here",
+        "url": "https://armincat.com/articles/eunice-is-almost-here",
+        "source": "Hacker News",
+        "score": 54
+      },
+      {
+        "title": "Where the Romans Fought (interactive map)",
+        "url": "https://iosiflazaridis.github.io/battles-of-the-romans/",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
+        "title": "Making the Buddha Head from Merv Whole Again",
+        "url": "https://www.getty.edu/news/buddha-head-of-merv-turkmenistan-conservation/",
+        "source": "Hacker News",
+        "score": 8
+      },
+      {
+        "title": "We should be more ambitious with the software we build",
+        "url": "https://danluu.com/ambitious/",
+        "source": "Hacker News",
+        "score": 736
+      }
+    ],
+    "ai": [
+      {
+        "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+        "url": "https://lynchlab.net/llm-skin-cancer",
         "source": "Hacker News AI",
-        "score": 339
+        "score": 384
       },
       {
         "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
         "url": "https://minimaxir.com/2026/10/cheap-llms/",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 79
       },
       {
-        "title": "Why I'm Short the AI Buildout Even Though I'm Long Computers",
-        "url": "https://unverifiablerewards.substack.com/p/why-im-short-the-ai-buildout-even",
+        "title": "Making the Buddha Head from Merv Whole Again",
+        "url": "https://www.getty.edu/news/buddha-head-of-merv-turkmenistan-conservation/",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 8
       },
       {
-        "title": "Nikon photography contest winner loses title after scientists spot signs of AI",
-        "url": "https://www.techspot.com/news/114171-nikon-photography-contest-winner-loses-title-after-scientists.html",
+        "title": "Show HN: Hurston-1 open source TTS that speak Southern American and Afro-English",
+        "url": "https://huggingface.co/destined/hurston-1",
         "source": "Hacker News AI",
-        "score": 125
+        "score": 37
       },
       {
-        "title": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
-        "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
+        "title": "Gheist campaign plants secret-dumping workflows using stolen GitHub tokens",
+        "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
         "source": "Hacker News AI",
-        "score": 491
+        "score": 45
       },
       {
-        "title": "Neural chip decodes interactions between brain regions",
-        "url": "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/",
+        "title": "JetBrains Thinkrail",
+        "url": "https://github.com/JetBrains/thinkrail",
         "source": "Hacker News AI",
-        "score": 134
+        "score": 159
+      },
+      {
+        "title": "AI use leads UC Berkeley math professor to see 'no point' in grading homework",
+        "url": "https://www.dailycal.org/news/campus/academics/ai-use-leads-uc-berkeley-math-professor-to-see-no-point-in-grading-homework/article_bdf1eae2-c08b-491f-b9f1-81a7cea177de.html",
+        "source": "Hacker News AI",
+        "score": 184
+      },
+      {
+        "title": "Cerebras Deploys Trillion-Parameter AI Models",
+        "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+        "source": "Hacker News AI",
+        "score": 348
+      },
+      {
+        "title": "A mathematician reads the AI future",
+        "url": "https://www.theatlantic.com/ideas/2026/10/ai-math-human-future/689133/",
+        "source": "Hacker News AI",
+        "score": 44
+      },
+      {
+        "title": "AI didn't cause the tech jobs bust, but it explains why there's no recovery",
+        "url": "https://vithushansylvester.com/writing/the-real-impact-of-ai-on-tech-jobs",
+        "source": "Hacker News AI",
+        "score": 13
+      },
+      {
+        "title": "Apollo says AI has delivered 'zero financial payoff' outside the tech industry",
+        "url": "https://www.businessinsider.com/apollo-ai-zero-financial-payoff-corporate-america-economic-analysis-2026-10",
+        "source": "Hacker News AI",
+        "score": 16
       }
     ],
     "news": [
       {
-        "title": "Musk says SpaceX restricted Ukraine's Starlink connection as service restored",
-        "url": "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo?at_medium=RSS&at_campaign=rss",
+        "title": "Serbia's veteran ruler Vučić concedes election to student-led protest movement",
+        "url": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Deeply divided Israel braces for pivotal election",
+        "url": "https://www.bbc.co.uk/news/articles/ckpdgy6pl7xlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -176,8 +181,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Serbia's Vučić concedes election defeat to student-led protest movement",
-        "url": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo?at_medium=RSS&at_campaign=rss",
+        "title": "Musk says SpaceX restricted Ukraine's Starlink connection as service restored",
+        "url": "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -193,11 +198,6 @@
       {
         "title": "Gabon says access to social media restored after eight-month ban",
         "url": "https://www.bbc.co.uk/news/articles/c6x2w0ngejneo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "El Salvador president says bodies found in Haiti are not those of hostages ",
-        "url": "https://www.bbc.co.uk/news/articles/c8ly097zw1xwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -272,6 +272,21 @@
     ],
     "gaming": [
       {
+        "title": "Stephen King's Hit Horror TV Series Officially Returning to HBO Max",
+        "url": "https://www.polygon.com/stephen-king-it-welcome-to-derry-season-2-renewal-hbo-max/",
+        "source": "Polygon"
+      },
+      {
+        "title": "27 Years Later, the Best Action Adventure Movie of 1999 Is Officially Free on Youtube",
+        "url": "https://www.polygon.com/the-mummy-free-on-youtube/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Sydney Sweeney's New Netflix Sci-Fi Space Epic Gets First Details",
+        "url": "https://www.polygon.com/gundam-movie-sydney-sweeney-netflix-story-details/",
+        "source": "Polygon"
+      },
+      {
         "title": "Tomb Raider's 2027's Return Looks Stunning in New Official Footage",
         "url": "https://www.polygon.com/tomb-raider-remake-legacy-of-atlantis-new-trailer-30th-anniversary/",
         "source": "Polygon"
@@ -289,21 +304,6 @@
       {
         "title": "'Avatar: Seven Havens' Fans Need to Watch Disney’s Overlooked Apocalyptic Fantasy Adventure",
         "url": "https://www.polygon.com/raya-and-the-last-dragon-perfect-disney-movie-for-avatar-seven-havens-fans/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Clayface Gives Skydance Its Second Box Office Weekend Win In A Row",
-        "url": "https://www.polygon.com/clayface-opening-weekend-box-office/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Forza Might Actually Lose at The Game Awards for the First Time in a Decade",
-        "url": "https://www.polygon.com/game-awards-sports-racing-forza-star-wars-galactic-racer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Mass Effect Universe Director Reveals Canceled Game's Multiverse System",
-        "url": "https://www.polygon.com/mass-effect-universe-parallel-universe-timeline-system/",
         "source": "Polygon"
       }
     ],
