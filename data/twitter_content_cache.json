@@ -1,213 +1,227 @@
 {
   "metadata": {
-    "last_updated": "2026-10-26T09:50:11.893195",
-    "total_items": 62
+    "last_updated": "2026-10-26T16:35:13.976018",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
+        "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
+        "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+        "source": "Hacker News",
+        "score": 123
+      },
+      {
+        "title": "Anthropic S-1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+        "source": "Hacker News",
+        "score": 872
+      },
+      {
+        "title": "CSS-Tricks has a new owner",
+        "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Fixing Tool-Call Accuracy in vLLM",
+        "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
+        "source": "Hacker News",
+        "score": 107
+      },
+      {
+        "title": "SIMD-accelerated computer vision on a $2 microcontroller",
+        "url": "https://shraiwi.com/blog/simd-fast-esp32s3/",
+        "source": "Hacker News",
+        "score": 30
+      },
+      {
+        "title": "Pharo 14",
+        "url": "https://pharo.org/news/2026-10-26-Pharo14Release.html",
+        "source": "Hacker News",
+        "score": 109
+      },
+      {
+        "title": "One of the Greatest Inventions in the History of Human Transport",
+        "url": "https://humantransit.org/2024/12/one-of-the-greatest-inventions-in-the-history-of-human-transport.html",
+        "source": "Hacker News",
+        "score": 155
+      },
+      {
+        "title": "Birdwatching rewires the brain and slows cognitive decline",
+        "url": "https://www.bbc.com/future/article/20261019-birdwatching-rewires-the-brain-and-slows-cognitive-decline",
+        "source": "Hacker News",
+        "score": 346
+      },
+      {
         "title": "Switzerland. Block by block. At 1:1 scale",
         "url": "https://blocks.manifold3d.ch/",
         "source": "Hacker News",
-        "score": 62
+        "score": 380
+      },
+      {
+        "title": "Partyline: A group voice application for Reticulum, built on LXST",
+        "url": "https://github.com/RFnexus/partyline",
+        "source": "Hacker News",
+        "score": 21
+      },
+      {
+        "title": "Colorfigures",
+        "url": "https://april-zhu.com/colorfigures",
+        "source": "Hacker News",
+        "score": 75
+      },
+      {
+        "title": "PhysicsForums and the Dead Internet Theory (2025)",
+        "url": "https://hallofdreams.org/posts/physicsforums/",
+        "source": "Hacker News",
+        "score": 49
       },
       {
         "title": "Show HN: TitleArt – Make text like it's 1997",
         "url": "https://titleart.dvy.io/",
         "source": "Hacker News",
-        "score": 229
+        "score": 349
       },
       {
-        "title": "PaperPilot – Zero-Cloud, Pure-Rust PDF Engine with WASM and MCP",
-        "url": "https://github.com/KrushnaVardhanReddy/PaperPilot",
+        "title": "Brown student maps the hidden global labor powering AI",
+        "url": "https://www.brown.edu/news/2026-10-26/ai-data-workers",
         "source": "Hacker News",
-        "score": 133
+        "score": 92
       },
       {
-        "title": "The result of the C++26 DIS ballot",
-        "url": "https://train-it.eu/blog/cpp26-contracts-the-ballot-result/",
+        "title": "NBA announces partnership with prediction markets Kalshi, Polymarket",
+        "url": "https://www.nytimes.com/athletic/7723134/2026/10/26/nba-kalshi-polymarket-agreement-prediction-markets/",
         "source": "Hacker News",
-        "score": 46
-      },
-      {
-        "title": "Behind the scenes at the NeXT Computer office",
-        "url": "https://exhibits.stanford.edu/menuez/browse/next-computer-inc?per_page=96&sort=pub_year_isi+asc%2C+title_sort+asc&view=masonry",
-        "source": "Hacker News",
-        "score": 110
-      },
-      {
-        "title": "Dolly Parton's Imagination Library",
-        "url": "https://imaginationlibrary.com/",
-        "source": "Hacker News",
-        "score": 540
-      },
-      {
-        "title": "Growing Trees",
-        "url": "https://brashandplucky.com/2026/10/15/growing-trees.html",
-        "source": "Hacker News",
-        "score": 53
-      },
-      {
-        "title": "Show HN: A Truly Modular Keyboard",
-        "url": "https://github.com/notaroomba/keybytes",
-        "source": "Hacker News",
-        "score": 156
-      },
-      {
-        "title": "Overgrown, when plants invade your abandoned tabs",
-        "url": "https://charliegerard.dev/blog/overgrown-extension/",
-        "source": "Hacker News",
-        "score": 272
-      },
-      {
-        "title": "Attention Is Not What You Need (2025)",
-        "url": "https://arxiv.org/abs/2512.19428",
-        "source": "Hacker News",
-        "score": 108
-      },
-      {
-        "title": "Iron Age salt-mining complex found beneath Hallstatt in Austria",
-        "url": "https://archaeologymag.com/2026/09/iron-age-salt-mining-complex-beneath-hallstatt/",
-        "source": "Hacker News",
-        "score": 74
-      },
-      {
-        "title": "Microsoft Decision-1: 9B Qwen Model Launch Explained",
-        "url": "https://shattered.io/microsoft-decision-1-qwen3-5-9b-model-2026/",
-        "source": "Hacker News",
-        "score": 58
-      },
-      {
-        "title": "IBM CEO says open weight models are now good and cheap on-prem",
-        "url": "https://www.theregister.com/systems/2026/10/22/ibm-ceo-says-open-weight-models-are-now-irresistibly-good-and-cheap-on-prem/5304640",
-        "source": "Hacker News",
-        "score": 245
-      },
-      {
-        "title": "Birdwatching rewires the brain and slows cognitive decline",
-        "url": "https://www.bbc.com/future/article/20261019-birdwatching-rewires-the-brain-and-slows-cognitive-decline",
-        "source": "Hacker News",
-        "score": 14
-      },
-      {
-        "title": "Why I Am a Programmer",
-        "url": "https://www.alfie.wtf/programming/why-i-am-a-programmer.html",
-        "source": "Hacker News",
-        "score": 225
+        "score": 27
       }
     ],
     "ai": [
       {
-        "title": "Microsoft Decision-1: 9B Qwen Model Launch Explained",
-        "url": "https://shattered.io/microsoft-decision-1-qwen3-5-9b-model-2026/",
+        "title": "Anthropic S-1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
         "source": "Hacker News AI",
-        "score": 58
+        "score": 872
+      },
+      {
+        "title": "Fixing Tool-Call Accuracy in vLLM",
+        "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
+        "source": "Hacker News AI",
+        "score": 107
+      },
+      {
+        "title": "SIMD-accelerated computer vision on a $2 microcontroller",
+        "url": "https://shraiwi.com/blog/simd-fast-esp32s3/",
+        "source": "Hacker News AI",
+        "score": 30
       },
       {
         "title": "Birdwatching rewires the brain and slows cognitive decline",
         "url": "https://www.bbc.com/future/article/20261019-birdwatching-rewires-the-brain-and-slows-cognitive-decline",
         "source": "Hacker News AI",
-        "score": 14
+        "score": 346
       },
       {
-        "title": "Show HN: ADRs for AI – Deliberation records for human–AI work, versioned in Git",
-        "url": "https://adrs.systems",
+        "title": "Brown student maps the hidden global labor powering AI",
+        "url": "https://www.brown.edu/news/2026-10-26/ai-data-workers",
         "source": "Hacker News AI",
-        "score": 44
+        "score": 92
+      },
+      {
+        "title": "Why is it so expensive to send an email?",
+        "url": "https://evancz.dev/why-is-it-so-expensive-to-send-an-email",
+        "source": "Hacker News AI",
+        "score": 10
       },
       {
         "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
         "url": "https://lynchlab.net/llm-skin-cancer",
         "source": "Hacker News AI",
-        "score": 555
+        "score": 636
+      },
+      {
+        "title": "Show HN: ADRs for AI – Deliberation records for human–AI work, versioned in Git",
+        "url": "https://adrs.systems",
+        "source": "Hacker News AI",
+        "score": 60
       },
       {
         "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
         "url": "https://minimaxir.com/2026/10/cheap-llms/",
         "source": "Hacker News AI",
-        "score": 309
+        "score": 392
       },
       {
         "title": "Making the Buddha Head from Merv Whole Again",
         "url": "https://www.getty.edu/news/buddha-head-of-merv-turkmenistan-conservation/",
         "source": "Hacker News AI",
-        "score": 46
+        "score": 62
       },
       {
         "title": "AI didn't cause the tech jobs bust, but it explains why there's no recovery",
         "url": "https://vithushansylvester.com/writing/the-real-impact-of-ai-on-tech-jobs",
         "source": "Hacker News AI",
-        "score": 51
-      },
-      {
-        "title": "Tesla cancels Cybertruck in Australia and NZ after 7 years of deposits",
-        "url": "https://electrek.co/2026/10/23/tesla-cancels-cybertruck-australia-new-zealand/",
-        "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "Show HN: Hurston-1 open source TTS that speak Southern American and Afro-English",
-        "url": "https://huggingface.co/destined/hurston-1",
-        "source": "Hacker News AI",
-        "score": 60
-      },
-      {
-        "title": "Cognitive Mercantilism: AI panic resembles fears of early capitalism",
-        "url": "https://contraptions.venkateshrao.com/p/cognitive-mercantilism",
-        "source": "Hacker News AI",
-        "score": 65
-      },
-      {
-        "title": "Everybody panic: A Valve developer said \"HLX\" in public",
-        "url": "https://arstechnica.com/gaming/2026/10/everybody-panic-a-valve-developer-said-hlx-in-public/",
-        "source": "Hacker News AI",
-        "score": 14
-      },
-      {
-        "title": "A mathematician reads the AI future",
-        "url": "https://www.theatlantic.com/ideas/2026/10/ai-math-human-future/689133/",
-        "source": "Hacker News AI",
-        "score": 58
+        "score": 73
       }
     ],
     "news": [
+      {
+        "title": "Lula wins fourth term in dramatic Brazil election comeback",
+        "url": "https://www.bbc.co.uk/news/articles/ckm23y3mg1yyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Celebrations in Serbia after veteran ruler Vučić loses election to student-led protest movement",
         "url": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
+        "title": "Chris Brown given suspended eight-month prison sentence over nightclub attack",
+        "url": "https://www.bbc.co.uk/news/articles/cq3dje4g4d5jo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Anthropic warns of 'catastrophic risk' to humankind ahead of blockbuster share listing",
+        "url": "https://www.bbc.co.uk/news/articles/cq398p1wd1evo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Catholic bishops apologise for 'exploited' Trump meeting ",
+        "url": "https://www.bbc.co.uk/news/articles/cw8rz1d286v3o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "US Marine indicted for murder and robbery of woman in Japan",
+        "url": "https://www.bbc.co.uk/news/articles/c3vgxjex1z9wo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Venezuelan opposition leader María Machado returns after months in exile",
         "url": "https://www.bbc.co.uk/news/articles/cq8ez592pp0eo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Australian murderer loses bid to eat Vegemite in prison",
-        "url": "https://www.bbc.co.uk/news/articles/cvwy7wz9x12go?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Eric Bauza, voice of Bugs Bunny and Daffy Duck, dies aged 46",
-        "url": "https://www.bbc.co.uk/news/articles/cwzd6q630vjeo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Rapper Nicki Minaj joins Trump onstage at Michigan rally",
-        "url": "https://www.bbc.co.uk/news/articles/cqrmyl1mljppo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Uganda imposes 21-day quarantine on citizens returning from DR Congo",
-        "url": "https://www.bbc.co.uk/news/articles/crx2dyd24188o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Deeply divided Israel braces for pivotal election",
-        "url": "https://www.bbc.co.uk/news/articles/ckpdgy6pl7xlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Commuters appalled by accidental optical illusion ad ",
+        "url": "https://www.creativebloq.com/news/commuters-appalled-by-accidental-optical-illusion-ad",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Simpsons' brilliant parody of The Nightmare Before Christmas is proof that handmade creativity is on the rise ",
+        "url": "https://www.creativebloq.com/news/the-simpsons-brilliant-parody-of-the-nightmare-before-christmas-is-proof-that-handmade-creativity-is-on-the-rise",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Don’t judge me if I 3D print my own Wicker husband ",
+        "url": "https://www.creativebloq.com/news/dont-judge-me-if-i-3d-print-my-own-wicker-husband",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This might be why Apple iPhone Duo screens are cracking in exactly the same place ",
+        "url": "https://www.creativebloq.com/news/this-might-be-why-apple-iphone-duo-screens-are-cracking-in-exactly-the-same-place",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Discover the process and Photoshop brushes behind this fantasy book cover ",
         "url": "https://www.creativebloq.com/how-to/discover-the-process-and-photoshop-brushes-behind-this-fantasy-book-cover",
@@ -222,99 +236,79 @@
         "title": " These beautiful buds bring expertly tuned audiophile sound to wireless inner-ear headphones ",
         "url": "https://www.creativebloq.com/deals/these-beautiful-buds-bring-audiophile-sound-quality-to-wireless-inner-ear-headphones",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Uh oh, the iPhone Duo complaints have begun ",
-        "url": "https://www.creativebloq.com/news/the-iphone-duo-complaints-have-begun",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " \"If I start at 8am, I feel I've lost the day already,\" manga artist Yé Wei shows us his obsessively organised art studio ",
-        "url": "https://www.creativebloq.com/features/if-i-start-at-8am-i-feel-ive-lost-the-day-already-manga-artist-ye-wei-shows-around-his-obsessively-organised-art-studio",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Just Eat's AI apocalypse raises a glaring question ",
-        "url": "https://www.creativebloq.com/news/just-eats-ai-apocalypse-raises-a-pretty-obvious-question",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Why do AI platforms want humans to design their branding? ",
-        "url": "https://www.creativebloq.com/news/why-do-ai-platforms-want-humans-to-design-their-branding",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Exercise doesn't just strengthen your heart. It rewires it",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261025222848.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "A simple liquid can stop cavities without drilling, major study confirms",
         "url": "https://www.sciencedaily.com/releases/2026/10/261025222339.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Just two drinks a day may be far riskier than you think",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261024222030.htm",
+        "title": "A 2,700-year-old solar eclipse just revealed something surprising about Earth",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261025073055.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists reveal the hidden danger of missing blood pressure medication",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261024222028.htm",
+        "title": "New 3D thermal invisibility cloak makes objects disappear from infrared cameras",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261025073051.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Low-dose aspirin linked to 70% lower dementia risk, but there's a catch",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261024222026.htm",
+        "title": "Tiny magnetic vortices could help computers work more like your brain",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261025073038.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists overcome a hidden obstacle to more powerful quantum computers",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261024222024.htm",
+        "title": "Archaeologists may have just found the world's oldest shipwreck",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261025073036.htm",
         "source": "Science Daily"
       },
       {
-        "title": "This mysterious mushroom makes people see hundreds of tiny humans",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261024222021.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Three giant black holes discovered in a galaxy from the dawn of time",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261024222000.htm",
+        "title": "Chinese scientists discover “D-rex,” a giant fungus with roots stretching back 65 million years",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261025073034.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Beloved Bugs Bunny and Daffy Duck Voice Eric Bauza Passes Away at 46",
-        "url": "https://www.polygon.com/bugs-bunny-daffy-duck-actor-eric-bauza-death/",
+        "title": "'Public Access Afterworld' Is a Brilliant Mess That 'Camp Miasma' Fans Need to Read ASAP",
+        "url": "https://www.polygon.com/public-access-afterworld-book-review/",
         "source": "Polygon"
       },
       {
-        "title": "10 Best 'Star Trek: Original Series' Episodes of All Time, Ranked",
-        "url": "https://www.polygon.com/best-star-trek-original-series-episodes-ranked/",
+        "title": "Pokémon Pokopia DLC 2 Leaks Reveal New Pokémon and More",
+        "url": "https://www.polygon.com/pokemon-pokopia-dlc-2-new-lineup-leaked/",
         "source": "Polygon"
       },
       {
-        "title": "The 10 Best SNES Games to Play on Nintendo Switch Online",
-        "url": "https://www.polygon.com/best-snes-games-nintendo-switch-online-classics/",
+        "title": "FBI Is Officially Investigating An Unprecedented Pokémon Card Heist",
+        "url": "https://www.polygon.com/pokemon-tcg-psa-card-grading-theft-fbi-fedex-truck-value/",
         "source": "Polygon"
       },
       {
-        "title": "Phantom Blade Zero Reviews Just Beat Every Soulslike In 2026",
-        "url": "https://www.polygon.com/phantom-blade-zero-review-roundup-score/",
+        "title": "Square Enix Reveals Stunning New Final Fantasy 40th Anniversary Release",
+        "url": "https://www.polygon.com/final-fantasy-40th-anniversary-vinyl-cd-soundtrack-announced-track-list/",
         "source": "Polygon"
       },
       {
-        "title": "Phantom Blade Zero Is the Perfect Martial Arts Game, For Better or Worse",
-        "url": "https://www.polygon.com/phantom-blade-zero-review/",
+        "title": "Nintendo Switch 2 Hackers Made a Huge Breakthrough",
+        "url": "https://www.polygon.com/nintendo-switch-2-hackers-jailbreak-dumping-files-modding/",
         "source": "Polygon"
       },
       {
-        "title": "Stephen King's Hit Horror TV Series Officially Returning to HBO Max",
-        "url": "https://www.polygon.com/stephen-king-it-welcome-to-derry-season-2-renewal-hbo-max/",
+        "title": "Fortnite Reveals First Look at One Piece Content",
+        "url": "https://www.polygon.com/fortnite-one-piece-battle-pass-luffy-ace-skins-teaser/",
         "source": "Polygon"
       },
       {
-        "title": "27 Years Later, the Best Action Adventure Movie of 1999 Is Officially Free on Youtube",
-        "url": "https://www.polygon.com/the-mummy-free-on-youtube/",
+        "title": "A Paranormal Activity Game Was Canceled Right Before Launch. Now It’s the Next P.T.",
+        "url": "https://www.polygon.com/paranormal-activity-canceled-playable-archive-interview/",
         "source": "Polygon"
       }
     ],
