@@ -1,167 +1,161 @@
 {
   "metadata": {
-    "last_updated": "2026-10-26T16:35:13.976018",
-    "total_items": 61
+    "last_updated": "2026-10-26T21:25:47.367656",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
+        "title": "Type Server Protocol",
+        "url": "https://github.com/microsoft/pylance-release/blob/main/docs/tsp/type-server-protocol.md",
+        "source": "Hacker News",
+        "score": 139
+      },
+      {
         "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
         "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
         "source": "Hacker News",
-        "score": 123
-      },
-      {
-        "title": "Anthropic S-1",
-        "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
-        "source": "Hacker News",
-        "score": 872
+        "score": 470
       },
       {
         "title": "CSS-Tricks has a new owner",
         "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
         "source": "Hacker News",
-        "score": 27
+        "score": 312
       },
       {
-        "title": "Fixing Tool-Call Accuracy in vLLM",
-        "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
+        "title": "Oldest GUI application that still runs on Windows 11",
+        "url": "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/",
         "source": "Hacker News",
-        "score": 107
+        "score": 173
+      },
+      {
+        "title": "Nietzschian Debugger",
+        "url": "https://github.com/DilawarShafiq/nietzschian-debugger",
+        "source": "Hacker News",
+        "score": 99
+      },
+      {
+        "title": "GPT-6.1 Terra",
+        "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+        "source": "Hacker News",
+        "score": 377
+      },
+      {
+        "title": "The EPA Is Quietly Killing Its Web Archive",
+        "url": "https://www.motherjones.com/environment/2026/10/epa-online-archive-deletion-zeldin-camp-lejeune-trump-clean-power/",
+        "source": "Hacker News",
+        "score": 151
+      },
+      {
+        "title": "A Man from the Future: Why Johnny Can't Stop Abstracting",
+        "url": "http://muratbuffalo.blogspot.com/2026/10/the-man-from-future-why-johnny-cant.html",
+        "source": "Hacker News",
+        "score": 65
+      },
+      {
+        "title": "Anthropic S-1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+        "source": "Hacker News",
+        "score": 1338
       },
       {
         "title": "SIMD-accelerated computer vision on a $2 microcontroller",
         "url": "https://shraiwi.com/blog/simd-fast-esp32s3/",
         "source": "Hacker News",
-        "score": 30
+        "score": 146
       },
       {
-        "title": "Pharo 14",
-        "url": "https://pharo.org/news/2026-10-26-Pharo14Release.html",
+        "title": "Diamond Transistor",
+        "url": "https://www.df.com/diamond-transistor",
         "source": "Hacker News",
-        "score": 109
+        "score": 98
       },
       {
-        "title": "One of the Greatest Inventions in the History of Human Transport",
+        "title": "Sigma Says the Compact, Modular FP2 Is the Ultimate Hybrid Camera",
+        "url": "https://petapixel.com/2026/10/22/sigma-says-the-compact-modular-fp2-is-the-ultimate-hybrid-camera/",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
+        "url": "https://github.com/FrigadeHQ/hob",
+        "source": "Hacker News",
+        "score": 35
+      },
+      {
+        "title": "Blaise Pascal invented fixed route public transport (2024)",
         "url": "https://humantransit.org/2024/12/one-of-the-greatest-inventions-in-the-history-of-human-transport.html",
         "source": "Hacker News",
-        "score": 155
+        "score": 242
       },
       {
         "title": "Birdwatching rewires the brain and slows cognitive decline",
         "url": "https://www.bbc.com/future/article/20261019-birdwatching-rewires-the-brain-and-slows-cognitive-decline",
         "source": "Hacker News",
-        "score": 346
-      },
-      {
-        "title": "Switzerland. Block by block. At 1:1 scale",
-        "url": "https://blocks.manifold3d.ch/",
-        "source": "Hacker News",
-        "score": 380
-      },
-      {
-        "title": "Partyline: A group voice application for Reticulum, built on LXST",
-        "url": "https://github.com/RFnexus/partyline",
-        "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "Colorfigures",
-        "url": "https://april-zhu.com/colorfigures",
-        "source": "Hacker News",
-        "score": 75
-      },
-      {
-        "title": "PhysicsForums and the Dead Internet Theory (2025)",
-        "url": "https://hallofdreams.org/posts/physicsforums/",
-        "source": "Hacker News",
-        "score": 49
-      },
-      {
-        "title": "Show HN: TitleArt – Make text like it's 1997",
-        "url": "https://titleart.dvy.io/",
-        "source": "Hacker News",
-        "score": 349
-      },
-      {
-        "title": "Brown student maps the hidden global labor powering AI",
-        "url": "https://www.brown.edu/news/2026-10-26/ai-data-workers",
-        "source": "Hacker News",
-        "score": 92
-      },
-      {
-        "title": "NBA announces partnership with prediction markets Kalshi, Polymarket",
-        "url": "https://www.nytimes.com/athletic/7723134/2026/10/26/nba-kalshi-polymarket-agreement-prediction-markets/",
-        "source": "Hacker News",
-        "score": 27
+        "score": 471
       }
     ],
     "ai": [
       {
+        "title": "GPT-6.1 Terra",
+        "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+        "source": "Hacker News AI",
+        "score": 377
+      },
+      {
         "title": "Anthropic S-1",
         "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
         "source": "Hacker News AI",
-        "score": 872
-      },
-      {
-        "title": "Fixing Tool-Call Accuracy in vLLM",
-        "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
-        "source": "Hacker News AI",
-        "score": 107
+        "score": 1338
       },
       {
         "title": "SIMD-accelerated computer vision on a $2 microcontroller",
         "url": "https://shraiwi.com/blog/simd-fast-esp32s3/",
         "source": "Hacker News AI",
-        "score": 30
+        "score": 146
+      },
+      {
+        "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
+        "url": "https://github.com/FrigadeHQ/hob",
+        "source": "Hacker News AI",
+        "score": 35
+      },
+      {
+        "title": "Blaise Pascal invented fixed route public transport (2024)",
+        "url": "https://humantransit.org/2024/12/one-of-the-greatest-inventions-in-the-history-of-human-transport.html",
+        "source": "Hacker News AI",
+        "score": 242
       },
       {
         "title": "Birdwatching rewires the brain and slows cognitive decline",
         "url": "https://www.bbc.com/future/article/20261019-birdwatching-rewires-the-brain-and-slows-cognitive-decline",
         "source": "Hacker News AI",
-        "score": 346
+        "score": 471
       },
       {
-        "title": "Brown student maps the hidden global labor powering AI",
-        "url": "https://www.brown.edu/news/2026-10-26/ai-data-workers",
+        "title": "Concerning behavior from a popular open-weight AI model",
+        "url": "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model",
         "source": "Hacker News AI",
-        "score": 92
+        "score": 206
       },
       {
-        "title": "Why is it so expensive to send an email?",
-        "url": "https://evancz.dev/why-is-it-so-expensive-to-send-an-email",
+        "title": "Fixing Tool-Call Accuracy in vLLM",
+        "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
         "source": "Hacker News AI",
-        "score": 10
+        "score": 138
       },
       {
-        "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
-        "url": "https://lynchlab.net/llm-skin-cancer",
+        "title": "ChatGPT Keeps Telling People 404 Media Can Solve Their Tech Support Problems",
+        "url": "https://www.404media.co/chatgpt-keeps-telling-people-404-media-can-solve-their-tech-support-problems/",
         "source": "Hacker News AI",
-        "score": 636
+        "score": 175
       },
       {
-        "title": "Show HN: ADRs for AI – Deliberation records for human–AI work, versioned in Git",
-        "url": "https://adrs.systems",
+        "title": "Proton to 'Re-Interview' Staff About AI to See Who Gets to Keep Their Job",
+        "url": "https://www.404media.co/proton-to-re-interview-staff-about-ai-to-see-who-gets-to-keep-their-job/",
         "source": "Hacker News AI",
-        "score": 60
-      },
-      {
-        "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
-        "url": "https://minimaxir.com/2026/10/cheap-llms/",
-        "source": "Hacker News AI",
-        "score": 392
-      },
-      {
-        "title": "Making the Buddha Head from Merv Whole Again",
-        "url": "https://www.getty.edu/news/buddha-head-of-merv-turkmenistan-conservation/",
-        "source": "Hacker News AI",
-        "score": 62
-      },
-      {
-        "title": "AI didn't cause the tech jobs bust, but it explains why there's no recovery",
-        "url": "https://vithushansylvester.com/writing/the-real-impact-of-ai-on-tech-jobs",
-        "source": "Hacker News AI",
-        "score": 73
+        "score": 6
       }
     ],
     "news": [
@@ -176,8 +170,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Chris Brown given suspended eight-month prison sentence over nightclub attack",
-        "url": "https://www.bbc.co.uk/news/articles/cq3dje4g4d5jo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump administration illegally fired James Comey's daughter, judge rules",
+        "url": "https://www.bbc.co.uk/news/articles/ck78px6glw3lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -277,38 +271,38 @@
     ],
     "gaming": [
       {
-        "title": "'Public Access Afterworld' Is a Brilliant Mess That 'Camp Miasma' Fans Need to Read ASAP",
-        "url": "https://www.polygon.com/public-access-afterworld-book-review/",
+        "title": "Mass Effect's Longshot #SaveMassEffect Campaign Actually Has a Chance",
+        "url": "https://www.polygon.com/save-mass-effect-campaign-the-expanse-amazon/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon Pokopia DLC 2 Leaks Reveal New Pokémon and More",
-        "url": "https://www.polygon.com/pokemon-pokopia-dlc-2-new-lineup-leaked/",
+        "title": "Stardew Valley-inspired RPG Gets Shock Last-Minute Delay",
+        "url": "https://www.polygon.com/emberville-early-access-launch-delay/",
         "source": "Polygon"
       },
       {
-        "title": "FBI Is Officially Investigating An Unprecedented Pokémon Card Heist",
-        "url": "https://www.polygon.com/pokemon-tcg-psa-card-grading-theft-fbi-fedex-truck-value/",
+        "title": "Huntr/x Returns in Surprise New KPop Demon Hunters Short",
+        "url": "https://www.polygon.com/kpop-demon-hunters-new-video-how-its-done-netflix/",
         "source": "Polygon"
       },
       {
-        "title": "Square Enix Reveals Stunning New Final Fantasy 40th Anniversary Release",
-        "url": "https://www.polygon.com/final-fantasy-40th-anniversary-vinyl-cd-soundtrack-announced-track-list/",
+        "title": "GTA 6's Rumored Lucia Actor Breaks Silence With Rare Live Appearance",
+        "url": "https://www.polygon.com/gta-6-manni-perez-lucia-caminos-actor-who-is-instagram-live-money/",
         "source": "Polygon"
       },
       {
-        "title": "Nintendo Switch 2 Hackers Made a Huge Breakthrough",
-        "url": "https://www.polygon.com/nintendo-switch-2-hackers-jailbreak-dumping-files-modding/",
+        "title": "19 Years Later, a Perfect Avatar Episode Redefined the Show's Greatest Rivalry",
+        "url": "https://www.polygon.com/avatar-and-the-fire-lord-retrospective-last-airbender/",
         "source": "Polygon"
       },
       {
-        "title": "Fortnite Reveals First Look at One Piece Content",
-        "url": "https://www.polygon.com/fortnite-one-piece-battle-pass-luffy-ace-skins-teaser/",
+        "title": "10 Best 'Game of Thrones' Episodes of All Time, Ranked According to Their IMDb Scores",
+        "url": "https://www.polygon.com/highest-rated-game-of-thrones-episodes-ever-imdb/",
         "source": "Polygon"
       },
       {
-        "title": "A Paranormal Activity Game Was Canceled Right Before Launch. Now It’s the Next P.T.",
-        "url": "https://www.polygon.com/paranormal-activity-canceled-playable-archive-interview/",
+        "title": "Ghost of Yōtei Was a Hit But Its Studio Is Already Seeing Layoffs",
+        "url": "https://www.polygon.com/ghost-of-yotei-developer-sucker-punch-layoffs-2026/",
         "source": "Polygon"
       }
     ],
