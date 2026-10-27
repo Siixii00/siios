@@ -1,169 +1,182 @@
 {
   "metadata": {
-    "last_updated": "2026-10-27T14:04:50.199839",
-    "total_items": 60
+    "last_updated": "2026-10-27T19:53:02.840071",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
-        "title": "Roblox downloaded 145GB models from us (including adult content) without asking",
-        "url": "https://open3dlab.com/news/roblox-downloaded-145-gb-of-models-from-our-sites/",
+        "title": "Genie 4",
+        "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
         "source": "Hacker News",
-        "score": 306
+        "score": 454
       },
       {
-        "title": "Python's experimental JIT to be removed",
-        "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
+        "title": "Ghostty 1.4.0",
+        "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
         "source": "Hacker News",
-        "score": 132
+        "score": 358
       },
       {
-        "title": "Wikipedia's Cleanup of AI-Generated Content",
-        "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
+        "title": "Classification of Finite Simple Groups Formalized in Lean",
+        "url": "https://cfsg.axiommath.ai/",
         "source": "Hacker News",
-        "score": 124
+        "score": 93
       },
       {
-        "title": "AI promised less work. I've never worked more",
-        "url": "https://oioannou.com/blog/ai-promised-less-work/",
+        "title": "Three TLS Bugs in GoAhead",
+        "url": "https://foxio.io/blog/choose-your-backend-three-tls-bugs-in-goahead",
         "source": "Hacker News",
-        "score": 231
-      },
-      {
-        "title": "Three new discoveries in mathematics, computer science, and physics",
-        "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
-        "source": "Hacker News",
-        "score": 1012
-      },
-      {
-        "title": "The Mythical Man-Month in the Age of AI",
-        "url": "https://j11g.com/the-mythical-man-month-in-the-age-of-ai",
-        "source": "Hacker News",
-        "score": 277
-      },
-      {
-        "title": "Gforth 1.0",
-        "url": "https://gforth.org/manual/1.0/NEWS.html",
-        "source": "Hacker News",
-        "score": 65
-      },
-      {
-        "title": "Here Be Monsters: What Do You Still Need to Know When Agents Do the Work?",
-        "url": "https://blog.adrq.dev/here-be-monsters-what-do-you-still-need-to-know-when-agents-do-the-work",
-        "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "Software may be getting worse, but it used to be horrible",
-        "url": "https://www.bitlog.com/2026/10/27/software-may-be-getting-worse-but-it-used-to-be-horrible/",
-        "source": "Hacker News",
-        "score": 139
-      },
-      {
-        "title": "Wiz: No successful PHP2Shell exploits seen so far; exposure down 67%",
-        "url": "https://www.wiz.io/blog/php2shell-exploitation-so-far",
-        "source": "Hacker News",
-        "score": 9
-      },
-      {
-        "title": "The Exponential Time Hypothesis Is False [pdf]",
-        "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
-        "source": "Hacker News",
-        "score": 693
+        "score": 20
       },
       {
         "title": "New iMac with M6",
         "url": "https://www.apple.com/imac/",
         "source": "Hacker News",
-        "score": 7
+        "score": 233
       },
       {
-        "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
-        "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+        "title": "Python's experimental JIT to be removed",
+        "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
         "source": "Hacker News",
-        "score": 771
+        "score": 364
       },
       {
-        "title": "Oldest GUI application that still runs on Windows 11",
-        "url": "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/",
+        "title": "Wikipedia's Cleanup of AI-Generated Content",
+        "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
         "source": "Hacker News",
-        "score": 480
+        "score": 370
       },
       {
-        "title": "Solar power is becoming bigger than nuclear",
-        "url": "https://www.bbc.com/future/article/20261023-how-solar-became-bigger-than-nuclear",
+        "title": "Microsoft and others tell crypto platform not to tokenize their stocks",
+        "url": "https://gizmodo.com/microsoft-mcdonalds-verizon-and-others-tell-crypto-platform-not-to-tokenize-their-stocks-2000830368",
         "source": "Hacker News",
-        "score": 440
+        "score": 66
+      },
+      {
+        "title": "Introducing LFM3: Every Modality for Specialized Intelligence",
+        "url": "https://www.liquid.ai/blog/lfm3",
+        "source": "Hacker News",
+        "score": 58
+      },
+      {
+        "title": "US Government is hiding a secret court ruling about how it spies on Americans",
+        "url": "https://www.wired.com/story/the-us-government-is-hiding-a-secret-court-ruling-about-how-it-spies-on-americans/",
+        "source": "Hacker News",
+        "score": 561
+      },
+      {
+        "title": "Why Micron Is Suddenly Ditching 4F² DRAM as Rivals Double Down",
+        "url": "https://hothardware.com/news/why-micron-is-suddenly-ditching-4f-dram",
+        "source": "Hacker News",
+        "score": 97
+      },
+      {
+        "title": "PHP2Shell, LiteLLM, GitLab: Find What You Need to Patch",
+        "url": "https://cloudsleuth.io/blog/php2shell-litellm-gitlab-find-what-you-run/",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
+        "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
+        "url": "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/",
+        "source": "Hacker News",
+        "score": 258
+      },
+      {
+        "title": "Discord will soon let anyone find public server messages through Google",
+        "url": "https://discord.com/blog/making-content-from-discoverable-servers-easier-to-discover",
+        "source": "Hacker News",
+        "score": 55
       }
     ],
     "ai": [
       {
+        "title": "Ghostty 1.4.0",
+        "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
+        "source": "Hacker News AI",
+        "score": 361
+      },
+      {
         "title": "Wikipedia's Cleanup of AI-Generated Content",
         "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
         "source": "Hacker News AI",
-        "score": 124
+        "score": 370
       },
       {
-        "title": "AI promised less work. I've never worked more",
-        "url": "https://oioannou.com/blog/ai-promised-less-work/",
+        "title": "PHP2Shell, LiteLLM, GitLab: Find What You Need to Patch",
+        "url": "https://cloudsleuth.io/blog/php2shell-litellm-gitlab-find-what-you-run/",
         "source": "Hacker News AI",
-        "score": 231
+        "score": 33
+      },
+      {
+        "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
+        "url": "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/",
+        "source": "Hacker News AI",
+        "score": 258
+      },
+      {
+        "title": "Police are using AI to pull over drivers for 'suspicious' behavior",
+        "url": "https://gizmodo.com/police-are-using-ai-to-pull-over-drivers-for-suspicious-behavior-2000831220",
+        "source": "Hacker News AI",
+        "score": 253
+      },
+      {
+        "title": "US President says he will ban the term 'artificial intelligence'",
+        "url": "https://thehill.com/homenews/administration/6175633-trump-bans-artificial-intelligence-term/",
+        "source": "Hacker News AI",
+        "score": 34
+      },
+      {
+        "title": "Amazon Is Gutting Its AI Division After Sustained Failure",
+        "url": "https://futurism.com/artificial-intelligence/amazon-ai-division-failure-nova",
+        "source": "Hacker News AI",
+        "score": 75
       },
       {
         "title": "The Mythical Man-Month in the Age of AI",
         "url": "https://j11g.com/the-mythical-man-month-in-the-age-of-ai",
         "source": "Hacker News AI",
-        "score": 277
+        "score": 388
+      },
+      {
+        "title": "Is my data used for model training?",
+        "url": "https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training",
+        "source": "Hacker News AI",
+        "score": 199
+      },
+      {
+        "title": "A 28-Year-Old DOGE Operative Gutted USAID. HR Had No Record of Him Working There",
+        "url": "https://www.wired.com/story/a-28-year-old-doge-operative-gutted-usaid-hr-had-no-record-of-him-working-there/",
+        "source": "Hacker News AI",
+        "score": 154
+      },
+      {
+        "title": "Maine banned phones in schools to help teens focus and connect. It's working",
+        "url": "https://apnews.com/article/maine-cellphone-ban-positive-changes-83bb538cf45879ce6ab4639c6cc73b7b",
+        "source": "Hacker News AI",
+        "score": 13
       },
       {
         "title": "Kauldron: Modular, scalable library to train ML models",
         "url": "https://github.com/google-research/kauldron",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 23
       },
       {
-        "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model (155 responses)",
-        "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/",
+        "title": "Police Are Pulling People over Because AI Deems Their Driving \"Suspicious\"",
+        "url": "https://www.aclu.org/news/privacy-technology/ai-driven-police-stops",
         "source": "Hacker News AI",
-        "score": 155
+        "score": 14
       },
       {
-        "title": "Blaise Pascal invented fixed route public transport (2024)",
-        "url": "https://humantransit.org/2024/12/one-of-the-greatest-inventions-in-the-history-of-human-transport.html",
+        "title": "JetBrains IDEs are now powered by libghostty",
+        "url": "https://blog.jetbrains.com/platform/2026/10/jetbrains-terminal-now-uses-ghostty/",
         "source": "Hacker News AI",
-        "score": 302
-      },
-      {
-        "title": "Anthropic S-1",
-        "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
-        "source": "Hacker News AI",
-        "score": 1659
-      },
-      {
-        "title": "SIMD-accelerated computer vision on a $2 microcontroller",
-        "url": "https://shraiwi.com/blog/simd-fast-esp32s3/",
-        "source": "Hacker News AI",
-        "score": 223
-      },
-      {
-        "title": "GPT-6.1 Terra",
-        "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
-        "source": "Hacker News AI",
-        "score": 606
-      },
-      {
-        "title": "Fixing Tool-Call Accuracy in vLLM",
-        "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
-        "source": "Hacker News AI",
-        "score": 166
+        "score": 50
       }
     ],
     "news": [
-      {
-        "title": "Turnout so far at record levels as Israelis vote in pivotal election",
-        "url": "https://www.bbc.co.uk/news/articles/c3j47l4kdez4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
       {
         "title": "Norway and Finland leaders hold rare call with Putin",
         "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo?at_medium=RSS&at_campaign=rss",
@@ -175,35 +188,45 @@
         "source": "BBC World"
       },
       {
-        "title": "Lula's comeback in Brazil dents Trump's ambitions for Latin America",
-        "url": "https://www.bbc.co.uk/news/articles/cq62yg6rggj0o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Jordan carries out deadly strike in Syria in retaliation for church attack",
-        "url": "https://www.bbc.co.uk/news/articles/cq8ezg6dy6xlo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
         "url": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Nanotyrannus skeleton goes to auction in New York with £4.5m price tag",
-        "url": "https://www.bbc.co.uk/news/articles/cmx28de233r2o?at_medium=RSS&at_campaign=rss",
+        "title": "Lula's comeback in Brazil dents Trump's ambitions for Latin America",
+        "url": "https://www.bbc.co.uk/news/articles/cq62yg6rggj0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Dutch zookeeper dies after being mauled in leopard enclosure",
+        "url": "https://www.bbc.co.uk/news/articles/crwyq90gwg8jo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ghanaian twin brothers and US woman plead guilty to $9m romance scam",
+        "url": "https://www.bbc.co.uk/news/articles/cwz0vg2j442lo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ballon d'Or ceremony raises case of French sports journalist jailed in Algeria",
+        "url": "https://www.bbc.co.uk/news/articles/c6x2qgyqr79wo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " Bambu Lab’s Black Friday sale has started already with up to 20% off 3D printers ",
-        "url": "https://www.creativebloq.com/deals/bambu-labs-black-friday-sale-has-started-already-with-up-to-20-percent-off-3d-printers",
+        "title": " This monitor light has lightened my mood – and it's down to $35! ",
+        "url": "https://www.creativebloq.com/news/this-monitor-light-has-lightened-my-mood-and-its-down-to-usd35",
         "source": "Creative Bloq"
       },
       {
         "title": " This AI billboard might be too ballsy for its own good ",
         "url": "https://www.creativebloq.com/news/this-ai-billboard-might-be-too-ballsy-for-its-own-good",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Bambu Lab’s Black Friday sale has started already with up to 20% off 3D printers ",
+        "url": "https://www.creativebloq.com/deals/bambu-labs-black-friday-sale-has-started-already-with-up-to-20-percent-off-3d-printers",
         "source": "Creative Bloq"
       },
       {
@@ -224,11 +247,6 @@
       {
         "title": " Apple event LIVE: Touchscreen MacBook Pro, iPad mini, iMac and more ",
         "url": "https://www.creativebloq.com/live/news/apple-pro-and-tell-event",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Save $100 on XPPen’s new Magic Pro 13, an Android drawing tablet that turns into a desktop pen display ",
-        "url": "https://www.creativebloq.com/news/xppens-new-magic-pro-13-is-an-android-drawing-tablet-that-turns-into-a-pen-display",
         "source": "Creative Bloq"
       }
     ],
@@ -271,38 +289,38 @@
     ],
     "gaming": [
       {
-        "title": "Modern Warfare 4’s New DMZ Mode Is Full of Broken Promises",
-        "url": "https://www.polygon.com/mw4-modern-warfare-4-dmz-impressions/",
+        "title": "How to unlock Lid's second limit burst in Final Fantasy Resonance",
+        "url": "https://www.polygon.com/final-fantasy-resonance-lid-second-limit-burst-how-to-unlock/",
         "source": "Polygon"
       },
       {
-        "title": "X-Men Stars Confirm Which Characters Could Defeat Doomsday's Villain",
-        "url": "https://www.polygon.com/x-men-cast-who-could-defeat-doctor-doom/",
+        "title": "Elden Ring Movie Shrouded in Secrecy as New Streaming Deal Confirmed",
+        "url": "https://www.polygon.com/elden-ring-movie-script-secrecy-a24-amazon-streaming/",
         "source": "Polygon"
       },
       {
-        "title": "The best M4 build in Modern Warfare 4",
-        "url": "https://www.polygon.com/mw4-modern-warfare-4-m4-build-loadout-class-best/",
+        "title": "Matthew Lillard Officially Teases Mystery Superman Man of Tomorrow Role",
+        "url": "https://www.polygon.com/superman-man-of-tomorrow-dc-matthew-lillard-mystery-role/",
         "source": "Polygon"
       },
       {
-        "title": "'Nocturne' Review: Apple’s Answer to 'The Silence of the Lambs' Is a Massive Failure",
-        "url": "https://www.polygon.com/nocturne-review-apple-tv/",
+        "title": "New Dimension 20 Season Officially Announced",
+        "url": "https://www.polygon.com/dimension-20-starstruck-odyssey-season-2-announced/",
         "source": "Polygon"
       },
       {
-        "title": "22 Years Ago, TV’s Best Sci-Fi Show Proved It Was About More Than the Mystery",
-        "url": "https://www.polygon.com/lost-house-of-the-rising-sun-retrospective/",
+        "title": "Cyberpunk 2 Listing Hints at Multiplayer Quests in CD Projekt Red Sequel",
+        "url": "https://www.polygon.com/cyberpunk-2-multiplayer-quests-leak-cd-projekt-red/",
         "source": "Polygon"
       },
       {
-        "title": "Final Fantasy 7 Revelation Director Talks Deeper Narrative, Exploration, Combat, and Next Projects",
-        "url": "https://www.polygon.com/final-fantasy-7-revelation-hamaguchi-projects-narrative-exploration-combat-system/",
+        "title": "GTA 6 Install Size Officially Revealed",
+        "url": "https://www.polygon.com/gta-6-storage-size-install-ps5-xbox-series-x/",
         "source": "Polygon"
       },
       {
-        "title": "10 Years Ago, Anime's Most Bonkers Series Introduced a Disturbing Villain Who Changed Everything",
-        "url": "https://www.polygon.com/jojo-bizarre-adventure-villain-diamond-is-unbreakable/",
+        "title": "8 MW4 DMZ beginner's tips to help you conquer Hajin",
+        "url": "https://www.polygon.com/mw4-modern-warfare-4-dmz-tips-best/",
         "source": "Polygon"
       }
     ],
