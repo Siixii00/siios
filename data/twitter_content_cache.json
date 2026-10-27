@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-27T19:53:02.840071",
-    "total_items": 63
+    "last_updated": "2026-10-27T23:34:42.473777",
+    "total_items": 65
   },
   "content": {
     "tech": [
@@ -9,171 +9,183 @@
         "title": "Genie 4",
         "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
         "source": "Hacker News",
-        "score": 454
+        "score": 656
       },
       {
-        "title": "Ghostty 1.4.0",
+        "title": "Ghostty 1.4",
         "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
         "source": "Hacker News",
-        "score": 358
+        "score": 653
       },
       {
-        "title": "Classification of Finite Simple Groups Formalized in Lean",
-        "url": "https://cfsg.axiommath.ai/",
+        "title": "Tailscale SSH: Investigation and remediation update",
+        "url": "https://tailscale.com/ssh-investigation-update",
         "source": "Hacker News",
-        "score": 93
+        "score": 154
       },
       {
-        "title": "Three TLS Bugs in GoAhead",
-        "url": "https://foxio.io/blog/choose-your-backend-three-tls-bugs-in-goahead",
+        "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+        "url": "https://www.brangus.io/survival-llm",
         "source": "Hacker News",
-        "score": 20
+        "score": 134
       },
       {
-        "title": "New iMac with M6",
-        "url": "https://www.apple.com/imac/",
+        "title": "Early progress on accelerating drug development with Claude",
+        "url": "https://www.anthropic.com/research/early-progress-drug-development",
         "source": "Hacker News",
-        "score": 233
+        "score": 77
+      },
+      {
+        "title": "Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees",
+        "url": "https://bret.dk/raspberry-pi-zero-3-w-pi-4-model-a/",
+        "source": "Hacker News",
+        "score": 65
+      },
+      {
+        "title": "SS United States to be sunk as largest artificial reef",
+        "url": "https://divemagazine.com/scuba-diving-news/ss-united-states-to-be-sunk-as-worlds-largest-artificial-reef-in-november",
+        "source": "Hacker News",
+        "score": 52
+      },
+      {
+        "title": "New 14‑inch MacBook Pro with M6",
+        "url": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
+        "source": "Hacker News",
+        "score": 252
+      },
+      {
+        "title": "Four Months of Zig",
+        "url": "https://gracefulliberty.com/articles/four-months-of-zig/",
+        "source": "Hacker News",
+        "score": 52
+      },
+      {
+        "title": "An examination of lost firefly species of the US and Canada",
+        "url": "https://journaloflostspecies.org/index.php/jls/article/view/37/33",
+        "source": "Hacker News",
+        "score": 69
+      },
+      {
+        "title": "Reviewers rarely talk about reliability. Owners bring it up twice as often",
+        "url": "https://www.bettascore.ai/research/reliability-reviewers-vs-owners",
+        "source": "Hacker News",
+        "score": 12
       },
       {
         "title": "Python's experimental JIT to be removed",
         "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
         "source": "Hacker News",
-        "score": 364
+        "score": 427
+      },
+      {
+        "title": "Classification of Finite Simple Groups Formalized in Lean",
+        "url": "https://cfsg.axiommath.ai/",
+        "source": "Hacker News",
+        "score": 155
+      },
+      {
+        "title": "New iMac with M6",
+        "url": "https://www.apple.com/imac/",
+        "source": "Hacker News",
+        "score": 295
       },
       {
         "title": "Wikipedia's Cleanup of AI-Generated Content",
         "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
         "source": "Hacker News",
-        "score": 370
-      },
-      {
-        "title": "Microsoft and others tell crypto platform not to tokenize their stocks",
-        "url": "https://gizmodo.com/microsoft-mcdonalds-verizon-and-others-tell-crypto-platform-not-to-tokenize-their-stocks-2000830368",
-        "source": "Hacker News",
-        "score": 66
-      },
-      {
-        "title": "Introducing LFM3: Every Modality for Specialized Intelligence",
-        "url": "https://www.liquid.ai/blog/lfm3",
-        "source": "Hacker News",
-        "score": 58
-      },
-      {
-        "title": "US Government is hiding a secret court ruling about how it spies on Americans",
-        "url": "https://www.wired.com/story/the-us-government-is-hiding-a-secret-court-ruling-about-how-it-spies-on-americans/",
-        "source": "Hacker News",
-        "score": 561
-      },
-      {
-        "title": "Why Micron Is Suddenly Ditching 4F² DRAM as Rivals Double Down",
-        "url": "https://hothardware.com/news/why-micron-is-suddenly-ditching-4f-dram",
-        "source": "Hacker News",
-        "score": 97
-      },
-      {
-        "title": "PHP2Shell, LiteLLM, GitLab: Find What You Need to Patch",
-        "url": "https://cloudsleuth.io/blog/php2shell-litellm-gitlab-find-what-you-run/",
-        "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
-        "url": "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/",
-        "source": "Hacker News",
-        "score": 258
-      },
-      {
-        "title": "Discord will soon let anyone find public server messages through Google",
-        "url": "https://discord.com/blog/making-content-from-discoverable-servers-easier-to-discover",
-        "source": "Hacker News",
-        "score": 55
+        "score": 429
       }
     ],
     "ai": [
       {
-        "title": "Ghostty 1.4.0",
+        "title": "Ghostty 1.4",
         "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
         "source": "Hacker News AI",
-        "score": 361
+        "score": 653
+      },
+      {
+        "title": "Tailscale SSH: Investigation and remediation update",
+        "url": "https://tailscale.com/ssh-investigation-update",
+        "source": "Hacker News AI",
+        "score": 154
+      },
+      {
+        "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+        "url": "https://www.brangus.io/survival-llm",
+        "source": "Hacker News AI",
+        "score": 134
+      },
+      {
+        "title": "Early progress on accelerating drug development with Claude",
+        "url": "https://www.anthropic.com/research/early-progress-drug-development",
+        "source": "Hacker News AI",
+        "score": 77
       },
       {
         "title": "Wikipedia's Cleanup of AI-Generated Content",
         "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
         "source": "Hacker News AI",
-        "score": 370
+        "score": 429
       },
       {
-        "title": "PHP2Shell, LiteLLM, GitLab: Find What You Need to Patch",
-        "url": "https://cloudsleuth.io/blog/php2shell-litellm-gitlab-find-what-you-run/",
+        "title": "Hex Raises $100M",
+        "url": "https://hex.tech/blog/hex-new-era/",
         "source": "Hacker News AI",
-        "score": 33
+        "score": 28
+      },
+      {
+        "title": "One year of Dioxus fullstack in production: the good, the painful",
+        "url": "https://oxidt.com/blog/one-year-of-dioxus-fullstack-in-production-the-good-the-painful",
+        "source": "Hacker News AI",
+        "score": 17
       },
       {
         "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
         "url": "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/",
         "source": "Hacker News AI",
-        "score": 258
-      },
-      {
-        "title": "Police are using AI to pull over drivers for 'suspicious' behavior",
-        "url": "https://gizmodo.com/police-are-using-ai-to-pull-over-drivers-for-suspicious-behavior-2000831220",
-        "source": "Hacker News AI",
-        "score": 253
-      },
-      {
-        "title": "US President says he will ban the term 'artificial intelligence'",
-        "url": "https://thehill.com/homenews/administration/6175633-trump-bans-artificial-intelligence-term/",
-        "source": "Hacker News AI",
-        "score": 34
+        "score": 422
       },
       {
         "title": "Amazon Is Gutting Its AI Division After Sustained Failure",
         "url": "https://futurism.com/artificial-intelligence/amazon-ai-division-failure-nova",
         "source": "Hacker News AI",
-        "score": 75
+        "score": 207
+      },
+      {
+        "title": "PHP2Shell, LiteLLM, GitLab: Find What You Need to Patch",
+        "url": "https://cloudsleuth.io/blog/php2shell-litellm-gitlab-find-what-you-run/",
+        "source": "Hacker News AI",
+        "score": 54
+      },
+      {
+        "title": "Police are using AI to pull over drivers for 'suspicious' behavior",
+        "url": "https://gizmodo.com/police-are-using-ai-to-pull-over-drivers-for-suspicious-behavior-2000831220",
+        "source": "Hacker News AI",
+        "score": 326
       },
       {
         "title": "The Mythical Man-Month in the Age of AI",
         "url": "https://j11g.com/the-mythical-man-month-in-the-age-of-ai",
         "source": "Hacker News AI",
-        "score": 388
+        "score": 425
       },
       {
-        "title": "Is my data used for model training?",
-        "url": "https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training",
+        "title": "New Records Obtained by EFF Expose More Problems with Medicare's AI Experiment",
+        "url": "https://www.eff.org/deeplinks/2026/10/new-records-obtained-eff-expose-more-problems-medicares-ai-experiment",
         "source": "Hacker News AI",
-        "score": 199
+        "score": 6
       },
       {
-        "title": "A 28-Year-Old DOGE Operative Gutted USAID. HR Had No Record of Him Working There",
-        "url": "https://www.wired.com/story/a-28-year-old-doge-operative-gutted-usaid-hr-had-no-record-of-him-working-there/",
+        "title": "She Worried About Cutting Her Medication Dose. ChatGPT Told Her to Push On",
+        "url": "https://www.nytimes.com/2026/10/27/well/ai-chatgpt-medication-epilepsy-death.html",
         "source": "Hacker News AI",
-        "score": 154
+        "score": 15
       },
       {
         "title": "Maine banned phones in schools to help teens focus and connect. It's working",
         "url": "https://apnews.com/article/maine-cellphone-ban-positive-changes-83bb538cf45879ce6ab4639c6cc73b7b",
         "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Kauldron: Modular, scalable library to train ML models",
-        "url": "https://github.com/google-research/kauldron",
-        "source": "Hacker News AI",
-        "score": 23
-      },
-      {
-        "title": "Police Are Pulling People over Because AI Deems Their Driving \"Suspicious\"",
-        "url": "https://www.aclu.org/news/privacy-technology/ai-driven-police-stops",
-        "source": "Hacker News AI",
-        "score": 14
-      },
-      {
-        "title": "JetBrains IDEs are now powered by libghostty",
-        "url": "https://blog.jetbrains.com/platform/2026/10/jetbrains-terminal-now-uses-ghostty/",
-        "source": "Hacker News AI",
-        "score": 50
+        "score": 41
       }
     ],
     "news": [
@@ -183,8 +195,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Truce begins in Ukraine city where residents ate weeds to survive",
-        "url": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo?at_medium=RSS&at_campaign=rss",
+        "title": "Ceasefire extended across Ukraine's Kherson region, officials say",
+        "url": "https://www.bbc.co.uk/news/articles/c6lye1w9p2l8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -198,18 +210,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Dutch zookeeper dies after being mauled in leopard enclosure",
+        "title": "Dutch zookeeper dies after being mauled by leopard",
         "url": "https://www.bbc.co.uk/news/articles/crwyq90gwg8jo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ghanaian twin brothers and US woman plead guilty to $9m romance scam",
-        "url": "https://www.bbc.co.uk/news/articles/cwz0vg2j442lo?at_medium=RSS&at_campaign=rss",
+        "title": "Ex-wife of Zimbabwe's vice-president freed after collapse of attempted murder case",
+        "url": "https://www.bbc.co.uk/news/articles/c6e3xgq11jqlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ballon d'Or ceremony raises case of French sports journalist jailed in Algeria",
-        "url": "https://www.bbc.co.uk/news/articles/c6x2qgyqr79wo?at_medium=RSS&at_campaign=rss",
+        "title": "Alexander brothers each sentenced to 30 years in prison for sex trafficking case",
+        "url": "https://www.bbc.co.uk/news/articles/cqn498mng08ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -289,6 +301,26 @@
     ],
     "gaming": [
       {
+        "title": "The Lord of the Rings: Return of the King Is Officially Getting a New Version Next Year",
+        "url": "https://www.polygon.com/return-of-the-king-trick-taking-game-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Magic Is Reprinting a $20 Commander Powerhouse as a Star Trek Fan Favorite",
+        "url": "https://www.polygon.com/magic-gathering-mtg-star-trek-commander-reprint/",
+        "source": "Polygon"
+      },
+      {
+        "title": "McDonald's New 'Pokémon' Happy Meal Surprise Leaks Ahead Of Launch",
+        "url": "https://www.polygon.com/mcdonalds-pokemon-happy-meal-toy-card-leak-start-date-tcg-promo/",
+        "source": "Polygon"
+      },
+      {
+        "title": "30 Years Later, Magic’s Most Ridiculous 1-Mana Creature Is Still a Competitive Powerhouse",
+        "url": "https://www.polygon.com/magic-phyrexian-dreadnought-stiflenought-premodern/",
+        "source": "Polygon"
+      },
+      {
         "title": "How to unlock Lid's second limit burst in Final Fantasy Resonance",
         "url": "https://www.polygon.com/final-fantasy-resonance-lid-second-limit-burst-how-to-unlock/",
         "source": "Polygon"
@@ -301,26 +333,6 @@
       {
         "title": "Matthew Lillard Officially Teases Mystery Superman Man of Tomorrow Role",
         "url": "https://www.polygon.com/superman-man-of-tomorrow-dc-matthew-lillard-mystery-role/",
-        "source": "Polygon"
-      },
-      {
-        "title": "New Dimension 20 Season Officially Announced",
-        "url": "https://www.polygon.com/dimension-20-starstruck-odyssey-season-2-announced/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Cyberpunk 2 Listing Hints at Multiplayer Quests in CD Projekt Red Sequel",
-        "url": "https://www.polygon.com/cyberpunk-2-multiplayer-quests-leak-cd-projekt-red/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA 6 Install Size Officially Revealed",
-        "url": "https://www.polygon.com/gta-6-storage-size-install-ps5-xbox-series-x/",
-        "source": "Polygon"
-      },
-      {
-        "title": "8 MW4 DMZ beginner's tips to help you conquer Hajin",
-        "url": "https://www.polygon.com/mw4-modern-warfare-4-dmz-tips-best/",
         "source": "Polygon"
       }
     ],
