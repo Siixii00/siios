@@ -1,183 +1,182 @@
 {
   "metadata": {
-    "last_updated": "2026-10-27T07:25:37.363540",
-    "total_items": 61
+    "last_updated": "2026-10-27T14:04:50.199839",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
+        "title": "Roblox downloaded 145GB models from us (including adult content) without asking",
+        "url": "https://open3dlab.com/news/roblox-downloaded-145-gb-of-models-from-our-sites/",
+        "source": "Hacker News",
+        "score": 306
+      },
+      {
+        "title": "Python's experimental JIT to be removed",
+        "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
+        "source": "Hacker News",
+        "score": 132
+      },
+      {
+        "title": "Wikipedia's Cleanup of AI-Generated Content",
+        "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
+        "source": "Hacker News",
+        "score": 124
+      },
+      {
+        "title": "AI promised less work. I've never worked more",
+        "url": "https://oioannou.com/blog/ai-promised-less-work/",
+        "source": "Hacker News",
+        "score": 231
+      },
+      {
         "title": "Three new discoveries in mathematics, computer science, and physics",
         "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities/",
         "source": "Hacker News",
-        "score": 787
+        "score": 1012
+      },
+      {
+        "title": "The Mythical Man-Month in the Age of AI",
+        "url": "https://j11g.com/the-mythical-man-month-in-the-age-of-ai",
+        "source": "Hacker News",
+        "score": 277
+      },
+      {
+        "title": "Gforth 1.0",
+        "url": "https://gforth.org/manual/1.0/NEWS.html",
+        "source": "Hacker News",
+        "score": 65
+      },
+      {
+        "title": "Here Be Monsters: What Do You Still Need to Know When Agents Do the Work?",
+        "url": "https://blog.adrq.dev/here-be-monsters-what-do-you-still-need-to-know-when-agents-do-the-work",
+        "source": "Hacker News",
+        "score": 7
+      },
+      {
+        "title": "Software may be getting worse, but it used to be horrible",
+        "url": "https://www.bitlog.com/2026/10/27/software-may-be-getting-worse-but-it-used-to-be-horrible/",
+        "source": "Hacker News",
+        "score": 139
+      },
+      {
+        "title": "Wiz: No successful PHP2Shell exploits seen so far; exposure down 67%",
+        "url": "https://www.wiz.io/blog/php2shell-exploitation-so-far",
+        "source": "Hacker News",
+        "score": 9
       },
       {
         "title": "The Exponential Time Hypothesis Is False [pdf]",
         "url": "https://github.com/openai/math/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026/paper.pdf",
         "source": "Hacker News",
-        "score": 547
+        "score": 693
+      },
+      {
+        "title": "New iMac with M6",
+        "url": "https://www.apple.com/imac/",
+        "source": "Hacker News",
+        "score": 7
       },
       {
         "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
         "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
         "source": "Hacker News",
-        "score": 669
+        "score": 771
       },
       {
         "title": "Oldest GUI application that still runs on Windows 11",
         "url": "https://blog.enlyth.com/posts/oldest-windows-gui-app-win-11/",
         "source": "Hacker News",
-        "score": 379
-      },
-      {
-        "title": "16-bit Windows (Windows 1.x, 2.x, 3.0, 3.1, etc.) on 64-bit Windows",
-        "url": "https://github.com/otya128/winevdm",
-        "source": "Hacker News",
-        "score": 76
-      },
-      {
-        "title": "The Mythical Man-Month in the Age of AI",
-        "url": "https://j11g.com/the-mythical-man-month-in-the-age-of-ai",
-        "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "I still teach OpenGL ES 3.0",
-        "url": "https://eliasfarhan.ch/graphics/cpp/2026/01/27/why-i-teach-opengles.html",
-        "source": "Hacker News",
-        "score": 40
-      },
-      {
-        "title": "Type Server Protocol",
-        "url": "https://github.com/microsoft/pylance-release/blob/main/docs/tsp/type-server-protocol.md",
-        "source": "Hacker News",
-        "score": 229
-      },
-      {
-        "title": "A simplified proof of ETH is False [pdf]",
-        "url": "https://shivakintali.github.io/papers/ETH.pdf",
-        "source": "Hacker News",
-        "score": 5
-      },
-      {
-        "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model (155 responses)",
-        "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/",
-        "source": "Hacker News",
-        "score": 123
-      },
-      {
-        "title": "CSS-Tricks has a new owner",
-        "url": "https://css-tricks.com/css-tricks-has-a-new-owner/",
-        "source": "Hacker News",
-        "score": 436
-      },
-      {
-        "title": "Writing about pratt parsing so I remember it",
-        "url": "https://www.unix.dog/~yosh/blog/2026-10-25_pratt-parsing.html",
-        "source": "Hacker News",
-        "score": 10
+        "score": 480
       },
       {
         "title": "Solar power is becoming bigger than nuclear",
         "url": "https://www.bbc.com/future/article/20261023-how-solar-became-bigger-than-nuclear",
         "source": "Hacker News",
-        "score": 251
-      },
-      {
-        "title": "APC says let there be light, with standards to speed up photonics manufacturing",
-        "url": "https://www.nextplatform.com/connect/2026/10/23/apc-says-let-there-be-light-with-raft-of-standards-to-speed-up-photonics-manufacturing/5304950",
-        "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "A Printer Printing onto Paper",
-        "url": "https://twitter.com/macrofying/status/2112904628509528219",
-        "source": "Hacker News",
-        "score": 106
+        "score": 440
       }
     ],
     "ai": [
       {
+        "title": "Wikipedia's Cleanup of AI-Generated Content",
+        "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
+        "source": "Hacker News AI",
+        "score": 124
+      },
+      {
+        "title": "AI promised less work. I've never worked more",
+        "url": "https://oioannou.com/blog/ai-promised-less-work/",
+        "source": "Hacker News AI",
+        "score": 231
+      },
+      {
         "title": "The Mythical Man-Month in the Age of AI",
         "url": "https://j11g.com/the-mythical-man-month-in-the-age-of-ai",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 277
+      },
+      {
+        "title": "Kauldron: Modular, scalable library to train ML models",
+        "url": "https://github.com/google-research/kauldron",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model (155 responses)",
         "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/",
         "source": "Hacker News AI",
-        "score": 123
-      },
-      {
-        "title": "Anthropic S-1",
-        "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
-        "source": "Hacker News AI",
-        "score": 1578
+        "score": 155
       },
       {
         "title": "Blaise Pascal invented fixed route public transport (2024)",
         "url": "https://humantransit.org/2024/12/one-of-the-greatest-inventions-in-the-history-of-human-transport.html",
         "source": "Hacker News AI",
-        "score": 281
+        "score": 302
       },
       {
-        "title": "GPT-6.1 Terra",
-        "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+        "title": "Anthropic S-1",
+        "url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
         "source": "Hacker News AI",
-        "score": 575
+        "score": 1659
       },
       {
         "title": "SIMD-accelerated computer vision on a $2 microcontroller",
         "url": "https://shraiwi.com/blog/simd-fast-esp32s3/",
         "source": "Hacker News AI",
-        "score": 197
+        "score": 223
+      },
+      {
+        "title": "GPT-6.1 Terra",
+        "url": "https://openai.com/index/introducing-gpt-6-1-terra/",
+        "source": "Hacker News AI",
+        "score": 606
       },
       {
         "title": "Fixing Tool-Call Accuracy in vLLM",
         "url": "https://www.ubicloud.com/blog/fixing-tool-call-accuracy-in-vllm",
         "source": "Hacker News AI",
-        "score": 162
-      },
-      {
-        "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT",
-        "url": "https://github.com/FrigadeHQ/hob",
-        "source": "Hacker News AI",
-        "score": 139
-      },
-      {
-        "title": "Birdwatching rewires the brain and slows cognitive decline",
-        "url": "https://www.bbc.com/future/article/20261019-birdwatching-rewires-the-brain-and-slows-cognitive-decline",
-        "source": "Hacker News AI",
-        "score": 524
-      },
-      {
-        "title": "Concerning behavior from a popular open-weight AI model",
-        "url": "https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model",
-        "source": "Hacker News AI",
-        "score": 289
-      },
-      {
-        "title": "ChatGPT Keeps Telling People 404 Media Can Solve Their Tech Support Problems",
-        "url": "https://www.404media.co/chatgpt-keeps-telling-people-404-media-can-solve-their-tech-support-problems/",
-        "source": "Hacker News AI",
-        "score": 244
+        "score": 166
       }
     ],
     "news": [
       {
-        "title": "Lula's comeback in Brazil dents Trump's ambitions for Latin America",
-        "url": "https://www.bbc.co.uk/news/articles/cq62yg6rggj0o?at_medium=RSS&at_campaign=rss",
+        "title": "Turnout so far at record levels as Israelis vote in pivotal election",
+        "url": "https://www.bbc.co.uk/news/articles/c3j47l4kdez4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Truce begins in wartorn Ukraine city after it was announced by Melania Trump",
+        "title": "Norway and Finland leaders hold rare call with Putin",
+        "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Truce begins in Ukraine city where residents ate weeds to survive",
         "url": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Opposition leader María Machado returns from exile to a Venezuela reshaped by Trump",
-        "url": "https://www.bbc.co.uk/news/articles/c8vgx3pvdeq1o?at_medium=RSS&at_campaign=rss",
+        "title": "Lula's comeback in Brazil dents Trump's ambitions for Latin America",
+        "url": "https://www.bbc.co.uk/news/articles/cq62yg6rggj0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -186,129 +185,124 @@
         "source": "BBC World"
       },
       {
-        "title": "Ex-FBI chief James Comey faces federal charges for third time",
-        "url": "https://www.bbc.co.uk/news/articles/ckly0xqjnlwvo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Jay-Z to perform at Super Bowl half-time show",
-        "url": "https://www.bbc.co.uk/news/articles/cq8ezg4364epo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Major Chinese brands drop Mbappé as backlash grows over Mao joke",
+        "title": "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
         "url": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Nanotyrannus skeleton goes to auction in New York with £4.5m price tag",
+        "url": "https://www.bbc.co.uk/news/articles/cmx28de233r2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " XPPen’s new Magic Pro 13 is an Android drawing tablet that turns into a pen display ",
+        "title": " Bambu Lab’s Black Friday sale has started already with up to 20% off 3D printers ",
+        "url": "https://www.creativebloq.com/deals/bambu-labs-black-friday-sale-has-started-already-with-up-to-20-percent-off-3d-printers",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This AI billboard might be too ballsy for its own good ",
+        "url": "https://www.creativebloq.com/news/this-ai-billboard-might-be-too-ballsy-for-its-own-good",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Etsy's crackdown on AI slop is welcome, but it shows how far things have slipped ",
+        "url": "https://www.creativebloq.com/news/etsys-crackdown-on-ai-slop-is-welcome-but-it-shows-how-far-things-have-slipped",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This creative agency’s website is giving me Tumblr 2000s vibes, and I’m here for it ",
+        "url": "https://www.creativebloq.com/news/this-creative-agencys-website-is-giving-me-tumblr-2000s-vibes-and-im-here-for-it",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How artworks from classic films inspired this matte painter and director ",
+        "url": "https://www.creativebloq.com/features/how-artworks-from-classic-films-inspired-this-matte-painter-and-director",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Apple event LIVE: Touchscreen MacBook Pro, iPad mini, iMac and more ",
+        "url": "https://www.creativebloq.com/live/news/apple-pro-and-tell-event",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Save $100 on XPPen’s new Magic Pro 13, an Android drawing tablet that turns into a desktop pen display ",
         "url": "https://www.creativebloq.com/news/xppens-new-magic-pro-13-is-an-android-drawing-tablet-that-turns-into-a-pen-display",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Commuters appalled by accidental optical illusion ad ",
-        "url": "https://www.creativebloq.com/news/commuters-appalled-by-accidental-optical-illusion-ad",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Simpsons' brilliant parody of The Nightmare Before Christmas is proof that handmade creativity is on the rise ",
-        "url": "https://www.creativebloq.com/news/the-simpsons-brilliant-parody-of-the-nightmare-before-christmas-is-proof-that-handmade-creativity-is-on-the-rise",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Don’t judge me if I 3D print my own Wicker husband ",
-        "url": "https://www.creativebloq.com/news/dont-judge-me-if-i-3d-print-my-own-wicker-husband",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This might be why Apple iPhone Duo screens are cracking in exactly the same place ",
-        "url": "https://www.creativebloq.com/news/this-might-be-why-apple-iphone-duo-screens-are-cracking-in-exactly-the-same-place",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Discover the process and Photoshop brushes behind this fantasy book cover ",
-        "url": "https://www.creativebloq.com/how-to/discover-the-process-and-photoshop-brushes-behind-this-fantasy-book-cover",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Phantom Blade Zero review: dark wuxia martial arts masters with an apprentice's execution ",
-        "url": "https://www.creativebloq.com/reviews/phantom-blade-zero-review-dark-wuxia-martial-arts-masters-with-an-apprentices-execution",
         "source": "Creative Bloq"
       }
     ],
     "science": [
       {
+        "title": "Low testosterone may make sugar far more harmful to your liver",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261026225622.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "The secret to slower aging may be hiding in your gut",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261026225620.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Common drugs may help dangerous viruses spread through the body",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261026225606.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "James Webb discovers a scorching lava planet with a “giant sunscreen”",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261026225603.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Smithsonian scientists just recreated the first 2 billion years of the Universe",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261026225600.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Do spiders dream? Scientists just found a surprising clue",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261026225555.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Exercise doesn't just strengthen your heart. It rewires it",
         "url": "https://www.sciencedaily.com/releases/2026/10/261025222848.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A simple liquid can stop cavities without drilling, major study confirms",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261025222339.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A 2,700-year-old solar eclipse just revealed something surprising about Earth",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261025073055.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "New 3D thermal invisibility cloak makes objects disappear from infrared cameras",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261025073051.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Tiny magnetic vortices could help computers work more like your brain",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261025073038.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Archaeologists may have just found the world's oldest shipwreck",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261025073036.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Chinese scientists discover “D-rex,” a giant fungus with roots stretching back 65 million years",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261025073034.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "8 Most Entertaining Sci-Fi Books of the 21st Century That Are Impossible to Put Down",
-        "url": "https://www.polygon.com/most-fun-sci-fi-books-21st-century-so-far/",
+        "title": "Modern Warfare 4’s New DMZ Mode Is Full of Broken Promises",
+        "url": "https://www.polygon.com/mw4-modern-warfare-4-dmz-impressions/",
         "source": "Polygon"
       },
       {
-        "title": "Major 'Avatar: Seven Havens’ Korra Reveal May Be Hiding the Truth About the Cataclysm",
-        "url": "https://www.polygon.com/avatar-seven-havens-big-korra-reveal-feels-like-a-total-fakeout/",
+        "title": "X-Men Stars Confirm Which Characters Could Defeat Doomsday's Villain",
+        "url": "https://www.polygon.com/x-men-cast-who-could-defeat-doctor-doom/",
         "source": "Polygon"
       },
       {
-        "title": "Phantom Blade Zero release time in your time zone",
-        "url": "https://www.polygon.com/phantom-blade-zero-release-time-when-edt-pdt/",
+        "title": "The best M4 build in Modern Warfare 4",
+        "url": "https://www.polygon.com/mw4-modern-warfare-4-m4-build-loadout-class-best/",
         "source": "Polygon"
       },
       {
-        "title": "24 Years Later, Nintendo's Most Divisive Mario Game Is a Miracle on Switch 2",
-        "url": "https://www.polygon.com/super-mario-sunshine-nintendo-switch-online/",
+        "title": "'Nocturne' Review: Apple’s Answer to 'The Silence of the Lambs' Is a Massive Failure",
+        "url": "https://www.polygon.com/nocturne-review-apple-tv/",
         "source": "Polygon"
       },
       {
-        "title": "10 Years Later, Nintendo's Switch Reveal Is a Fascinating Time Capsule",
-        "url": "https://www.polygon.com/nintendo-switch-nx-reveal-october-2016/",
+        "title": "22 Years Ago, TV’s Best Sci-Fi Show Proved It Was About More Than the Mystery",
+        "url": "https://www.polygon.com/lost-house-of-the-rising-sun-retrospective/",
         "source": "Polygon"
       },
       {
-        "title": "Marvel's Forgotten Mass Effect Clone Couldn't Escape the Avengers' Failure",
-        "url": "https://www.polygon.com/marvel-guardians-galaxy-underrated-superhero-game/",
+        "title": "Final Fantasy 7 Revelation Director Talks Deeper Narrative, Exploration, Combat, and Next Projects",
+        "url": "https://www.polygon.com/final-fantasy-7-revelation-hamaguchi-projects-narrative-exploration-combat-system/",
         "source": "Polygon"
       },
       {
-        "title": "Mass Effect's Longshot #SaveMassEffect Campaign Actually Has a Chance",
-        "url": "https://www.polygon.com/save-mass-effect-campaign-the-expanse-amazon/",
+        "title": "10 Years Ago, Anime's Most Bonkers Series Introduced a Disturbing Villain Who Changed Everything",
+        "url": "https://www.polygon.com/jojo-bizarre-adventure-villain-diamond-is-unbreakable/",
         "source": "Polygon"
       }
     ],
