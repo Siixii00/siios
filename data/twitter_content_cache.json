@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-28T04:30:23.756353",
+    "last_updated": "2026-10-28T11:02:54.922207",
     "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "Git for US Legislation",
+        "title": "Wealth Inequality in America drawn to scale",
+        "url": "https://dreamagainusa.org/",
+        "source": "Hacker News",
+        "score": 85
+      },
+      {
+        "title": "Start Doing Graph Theory",
+        "url": "https://vertex.degree/",
+        "source": "Hacker News",
+        "score": 91
+      },
+      {
+        "title": "Git for the US Code",
         "url": "https://lexifina.com/blog/git-for-the-us-code",
         "source": "Hacker News",
-        "score": 103
+        "score": 283
       },
       {
         "title": "Genie 4",
         "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
         "source": "Hacker News",
-        "score": 792
-      },
-      {
-        "title": "Ink droplets in motion snag top prize in Nikon Small World contest",
-        "url": "https://arstechnica.com/science/2026/10/meet-the-2026-winner-of-nikons-small-world-photomicrography-contest/",
-        "source": "Hacker News",
-        "score": 123
+        "score": 915
       },
       {
         "title": "Ghostty 1.4",
         "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
         "source": "Hacker News",
-        "score": 854
+        "score": 1058
       },
       {
-        "title": "Tailscale SSH: Investigation and remediation update",
-        "url": "https://tailscale.com/ssh-investigation-update",
+        "title": "Ink droplets in motion snag top prize in Nikon Small World contest",
+        "url": "https://arstechnica.com/science/2026/10/meet-the-2026-winner-of-nikons-small-world-photomicrography-contest/",
         "source": "Hacker News",
-        "score": 230
-      },
-      {
-        "title": "Early progress on accelerating drug development with Claude",
-        "url": "https://www.anthropic.com/research/early-progress-drug-development",
-        "source": "Hacker News",
-        "score": 168
+        "score": 248
       },
       {
         "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
         "url": "https://www.brangus.io/survival-llm",
         "source": "Hacker News",
+        "score": 367
+      },
+      {
+        "title": "MacOS Extensions Pack for the Apple Network Server v1.0",
+        "url": "http://oldvcr.blogspot.com/2026/10/macos-extensions-pack-for-apple-network.html",
+        "source": "Hacker News",
+        "score": 54
+      },
+      {
+        "title": "Tailscale SSH: Investigation and remediation update",
+        "url": "https://tailscale.com/ssh-investigation-update",
+        "source": "Hacker News",
+        "score": 293
+      },
+      {
+        "title": "Early progress on accelerating drug development with Claude",
+        "url": "https://www.anthropic.com/research/early-progress-drug-development",
+        "source": "Hacker News",
         "score": 236
       },
       {
-        "title": "Assembly Nights",
-        "url": "https://ratfactor.com/assembly-nights",
+        "title": "Decompiling Fast Food Tycoon 2: Drawing the World",
+        "url": "https://healeycodes.com/decompiling-fast-food-tycoon-2-drawing-the-world",
         "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees",
-        "url": "https://bret.dk/raspberry-pi-zero-3-w-pi-4-model-a/",
-        "source": "Hacker News",
-        "score": 123
-      },
-      {
-        "title": "81 Jokes for the ZX81",
-        "url": "https://spelk.press/gb/products/81-jokes-for-the-zx81",
-        "source": "Hacker News",
-        "score": 50
-      },
-      {
-        "title": "A Love Letter to the Super Dimension Fortress",
-        "url": "https://brennan.day/a-love-letter-to-the-super-dimension-fortress/",
-        "source": "Hacker News",
-        "score": 15
-      },
-      {
-        "title": "New 14‑inch MacBook Pro with M6",
-        "url": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
-        "source": "Hacker News",
-        "score": 307
+        "score": 53
       },
       {
         "title": "Python's experimental JIT to be removed",
         "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
         "source": "Hacker News",
-        "score": 465
+        "score": 517
       },
       {
-        "title": "Tabletop Whale is an original science illustration blog",
-        "url": "https://tabletopwhale.com",
+        "title": "Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees",
+        "url": "https://bret.dk/raspberry-pi-zero-3-w-pi-4-model-a/",
         "source": "Hacker News",
-        "score": 29
+        "score": 172
       },
       {
-        "title": "New iMac with M6",
-        "url": "https://www.apple.com/imac/",
+        "title": "New 14‑inch MacBook Pro with M6",
+        "url": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
         "source": "Hacker News",
-        "score": 319
+        "score": 370
+      },
+      {
+        "title": "Closing the Sea: Lessons from Ancient Mediterranean Blockades",
+        "url": "https://maritime-executive.com/editorials/closing-the-sea-lessons-from-ancient-mediterranean-blockades",
+        "source": "Hacker News",
+        "score": 16
       }
     ],
     "ai": [
@@ -101,79 +101,79 @@
         "title": "Ghostty 1.4",
         "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
         "source": "Hacker News AI",
-        "score": 854
-      },
-      {
-        "title": "Tailscale SSH: Investigation and remediation update",
-        "url": "https://tailscale.com/ssh-investigation-update",
-        "source": "Hacker News AI",
-        "score": 230
-      },
-      {
-        "title": "Early progress on accelerating drug development with Claude",
-        "url": "https://www.anthropic.com/research/early-progress-drug-development",
-        "source": "Hacker News AI",
-        "score": 168
+        "score": 1058
       },
       {
         "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
         "url": "https://www.brangus.io/survival-llm",
         "source": "Hacker News AI",
+        "score": 367
+      },
+      {
+        "title": "Tailscale SSH: Investigation and remediation update",
+        "url": "https://tailscale.com/ssh-investigation-update",
+        "source": "Hacker News AI",
+        "score": 293
+      },
+      {
+        "title": "Early progress on accelerating drug development with Claude",
+        "url": "https://www.anthropic.com/research/early-progress-drug-development",
+        "source": "Hacker News AI",
         "score": 236
       },
       {
-        "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
-        "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+        "title": "Microsoft and Epic Games Suddenly Agree That AI Is Theft",
+        "url": "https://kotaku.com/now-that-the-shoe-is-on-the-other-foot-microsoft-and-epic-games-suddenly-agree-that-ai-is-theft-2000749316",
         "source": "Hacker News AI",
-        "score": 31
-      },
-      {
-        "title": "Amazon Is Gutting Its AI Division After Sustained Failure",
-        "url": "https://futurism.com/artificial-intelligence/amazon-ai-division-failure-nova",
-        "source": "Hacker News AI",
-        "score": 290
-      },
-      {
-        "title": "Wikipedia's Cleanup of AI-Generated Content",
-        "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
-        "source": "Hacker News AI",
-        "score": 466
-      },
-      {
-        "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
-        "url": "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/",
-        "source": "Hacker News AI",
-        "score": 494
-      },
-      {
-        "title": "PHP2Shell, LiteLLM, GitLab: Find What You Need to Patch",
-        "url": "https://cloudsleuth.io/blog/php2shell-litellm-gitlab-find-what-you-run/",
-        "source": "Hacker News AI",
-        "score": 57
-      },
-      {
-        "title": "The Mythical Man-Month in the Age of AI",
-        "url": "https://j11g.com/the-mythical-man-month-in-the-age-of-ai",
-        "source": "Hacker News AI",
-        "score": 445
-      },
-      {
-        "title": "Police are using AI to pull over drivers for 'suspicious' behavior",
-        "url": "https://gizmodo.com/police-are-using-ai-to-pull-over-drivers-for-suspicious-behavior-2000831220",
-        "source": "Hacker News AI",
-        "score": 356
+        "score": 7
       },
       {
         "title": "Hex Raises $100M",
         "url": "https://hex.tech/blog/hex-new-era/",
         "source": "Hacker News AI",
-        "score": 62
+        "score": 68
+      },
+      {
+        "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
+        "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+        "source": "Hacker News AI",
+        "score": 43
+      },
+      {
+        "title": "Wikipedia's Cleanup of AI-Generated Content",
+        "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
+        "source": "Hacker News AI",
+        "score": 482
+      },
+      {
+        "title": "Spain train crash: 'At least 10 dead' in high-speed collision",
+        "url": "https://www.thetimes.com/world/europe/article/spain-train-crash-madrid-latest-deaths-victims-807kwv23l",
+        "source": "Hacker News AI",
+        "score": 51
+      },
+      {
+        "title": "Amazon Is Gutting Its AI Division After Sustained Failure",
+        "url": "https://futurism.com/artificial-intelligence/amazon-ai-division-failure-nova",
+        "source": "Hacker News AI",
+        "score": 325
+      },
+      {
+        "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
+        "url": "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/",
+        "source": "Hacker News AI",
+        "score": 527
+      },
+      {
+        "title": "The Mythical Man-Month in the Age of AI",
+        "url": "https://j11g.com/the-mythical-man-month-in-the-age-of-ai",
+        "source": "Hacker News AI",
+        "score": 457
       }
     ],
     "news": [
       {
-        "title": "Norway and Finland leaders hold rare call with Putin",
-        "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo?at_medium=RSS&at_campaign=rss",
+        "title": "Luxury cruise passengers stranded in Cambodia due to soaring fuel costs",
+        "url": "https://www.bbc.co.uk/news/articles/cwj342k62exyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -182,13 +182,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
-        "url": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Lula's comeback in Brazil dents Trump's ambitions for Latin America",
-        "url": "https://www.bbc.co.uk/news/articles/cq62yg6rggj0o?at_medium=RSS&at_campaign=rss",
+        "title": "King acknowledges 'suffering of the past' as Caribbean tour begins",
+        "url": "https://www.bbc.co.uk/news/articles/cmwyv8ld22z1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,19 +192,39 @@
         "source": "BBC World"
       },
       {
-        "title": "Ex-wife of Zimbabwe's vice-president freed after collapse of attempted murder case",
-        "url": "https://www.bbc.co.uk/news/articles/c6e3xgq11jqlo?at_medium=RSS&at_campaign=rss",
+        "title": "Norway and Finland leaders hold rare call with Putin",
+        "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Alexander brothers each sentenced to 30 years in prison in sex trafficking case",
-        "url": "https://www.bbc.co.uk/news/articles/cqn498mng08ro?at_medium=RSS&at_campaign=rss",
+        "title": "Lula's comeback in Brazil dents Trump's ambitions for Latin America",
+        "url": "https://www.bbc.co.uk/news/articles/cq62yg6rggj0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ex-wife of Zimbabwe's vice-president freed after collapse of attempted murder case",
+        "url": "https://www.bbc.co.uk/news/articles/c6e3xgq11jqlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " This monitor light has lightened my mood – and it's down to $35! ",
+        "title": " Coca-Cola gives everyday heroes the royal treatment in posh portrait campaign ",
+        "url": "https://www.creativebloq.com/news/coca-cola-gives-everyday-heroes-the-royal-treatment-in-posh-portrait-campaign",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " XPPen Magic Pro 13 review: a premium Android drawing tablet for work and play ",
+        "url": "https://www.creativebloq.com/reviews/xppen-magic-pro-13-review-a-premium-android-drawing-tablet-for-work-and-play",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This 3D artist achieves incredible realism to breath life into striking character designs ",
+        "url": "https://www.creativebloq.com/inspiration/this-3d-artist-achieves-incredible-realism-to-breath-life-into-striking-character-designs",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This monitor light has brightened my mood – and it's down to $35! ",
         "url": "https://www.creativebloq.com/news/this-monitor-light-has-lightened-my-mood-and-its-down-to-usd35",
         "source": "Creative Bloq"
       },
@@ -226,21 +241,6 @@
       {
         "title": " Etsy's crackdown on AI slop is welcome, but it shows how far things have slipped ",
         "url": "https://www.creativebloq.com/news/etsys-crackdown-on-ai-slop-is-welcome-but-it-shows-how-far-things-have-slipped",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This creative agency’s website is giving me Tumblr 2000s vibes, and I’m here for it ",
-        "url": "https://www.creativebloq.com/news/this-creative-agencys-website-is-giving-me-tumblr-2000s-vibes-and-im-here-for-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How artworks from classic films inspired this matte painter and director ",
-        "url": "https://www.creativebloq.com/features/how-artworks-from-classic-films-inspired-this-matte-painter-and-director",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple event LIVE: Touchscreen MacBook Pro, iPad mini, iMac and more ",
-        "url": "https://www.creativebloq.com/live/news/apple-pro-and-tell-event",
         "source": "Creative Bloq"
       }
     ],
@@ -283,6 +283,31 @@
     ],
     "gaming": [
       {
+        "title": "25 Years Later, Nintendo’s Spookiest Game Is a Must-Play On Switch 2",
+        "url": "https://www.polygon.com/luigis-mansion-gamecube-retrospective-switch-online/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Rings of Power Season 3 Will Be a Soft Reboot, Showrunner Says",
+        "url": "https://www.polygon.com/rings-of-power-season-3-soft-reboot-new-direction/",
+        "source": "Polygon"
+      },
+      {
+        "title": "18 Years Later, The Definitive 2000s Gothic Cult Classic is Still a Divisive Guilty Pleasure",
+        "url": "https://www.polygon.com/vampire-knight-gothic-romance-guilty-pleasure/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Legendary Sci-Fi Director's 129-Minute War-Action Masterpiece Is Being Cut From Netflix",
+        "url": "https://www.polygon.com/starship-troopers-leaving-netflix-november-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Funniest 'Peanuts' Comics About Snoopy's Forgotten Siblings",
+        "url": "https://www.polygon.com/snoopy-siblings-peanuts/",
+        "source": "Polygon"
+      },
+      {
         "title": "29 Years Ago, ‘Buffy’s Wisest Character Got a Shocking Backstory that Redefined the Entire Series",
         "url": "https://www.polygon.com/buffy-halloween-season-2-rupert-giles-ripper/",
         "source": "Polygon"
@@ -290,31 +315,6 @@
       {
         "title": "The MCU's Oldest Villain Just Made a Surprise Return in 'VisionQuest'",
         "url": "https://www.polygon.com/visionquest-mcus-oldest-iron-man-villain-raza-hamidmi-al-wazar/",
-        "source": "Polygon"
-      },
-      {
-        "title": "3 Upcoming Sci-Fi RPGs Better Than Waiting for a New Mass Effect",
-        "url": "https://www.polygon.com/upcoming-games-like-mass-effect/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Adult Fairy Tale Books That Are Magical From Start to Finish",
-        "url": "https://www.polygon.com/best-fantasy-books-like-adult-fairy-tales/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Lord of the Rings: Return of the King Is Officially Getting a New Version Next Year",
-        "url": "https://www.polygon.com/return-of-the-king-trick-taking-game-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Magic Is Reprinting a $20 Commander Powerhouse as a Star Trek Fan Favorite",
-        "url": "https://www.polygon.com/magic-gathering-mtg-star-trek-commander-reprint/",
-        "source": "Polygon"
-      },
-      {
-        "title": "McDonald's New 'Pokémon' Happy Meal Surprise Leaks Ahead Of Launch",
-        "url": "https://www.polygon.com/mcdonalds-pokemon-happy-meal-toy-card-leak-start-date-tcg-promo/",
         "source": "Polygon"
       }
     ],
