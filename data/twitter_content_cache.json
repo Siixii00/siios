@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-28T17:59:13.956550",
-    "total_items": 60
+    "last_updated": "2026-10-28T22:29:08.543275",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "Why is this fingerprinting script creating bioweapons?",
+        "url": "https://nullpt.rs/fingerprinting-bioweapons",
+        "source": "Hacker News",
+        "score": 567
+      },
+      {
         "title": "Gemini 4 Carbon",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
         "source": "Hacker News",
-        "score": 264
+        "score": 699
       },
       {
         "title": "CNC Stone Carving",
         "url": "https://carmelitegothic.com/cnc-stone-carving/",
         "source": "Hacker News",
-        "score": 225
+        "score": 353
       },
       {
-        "title": "MacBook Pro with PROLED XDR Display and Touch",
-        "url": "https://www.apple.com/macbook-pro/proled-xdr-display/",
+        "title": "The case of the 9 bit AES key",
+        "url": "https://v12.sh/blog/the-case-of-the-9bit-aes-key",
         "source": "Hacker News",
-        "score": 155
+        "score": 34
       },
       {
         "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
         "url": "https://surgehq.ai/blog/dayjob-tax",
         "source": "Hacker News",
-        "score": 75
+        "score": 168
       },
       {
-        "title": "Start Doing Graph Theory",
-        "url": "https://vertex.degree/",
+        "title": "MacBook Pro with PROLED XDR Display and Touch",
+        "url": "https://www.apple.com/macbook-pro/proled-xdr-display/",
         "source": "Hacker News",
-        "score": 408
+        "score": 441
+      },
+      {
+        "title": "Leak Exposes 41,000 Homeland Security Workers–Including Undercover ICE Agents",
+        "url": "https://www.wired.com/story/massive-leak-exposes-41000-homeland-security-workers-including-undercover-ice-agents/",
+        "source": "Hacker News",
+        "score": 141
+      },
+      {
+        "title": "Formlabs Studio 1 $699 Resin Printer",
+        "url": "https://formlabs.com/products/form-studio-1-basic-founders-edition/",
+        "source": "Hacker News",
+        "score": 56
+      },
+      {
+        "title": "Nango (YC W23) Is Hiring Across Eng, FDE, Marketing, DevRel",
+        "url": "https://nango.dev/careers",
+        "source": "Hacker News",
+        "score": 1
       },
       {
         "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
         "url": "https://www.circuithub.com/post/unveiling-the-grid",
         "source": "Hacker News",
-        "score": 268
+        "score": 376
       },
       {
-        "title": "Show HN: SlideBySide – Present slides without sharing your screen",
-        "url": "https://slidebyside.com/",
+        "title": "Start Doing Graph Theory",
+        "url": "https://vertex.degree/",
         "source": "Hacker News",
-        "score": 10
+        "score": 532
       },
       {
-        "title": "Converge (YC S23) Is Hiring a Founding Platform Engineer",
-        "url": "https://www.runconverge.com/careers/founding-platform-engineer",
+        "title": "The tragedy of losing your Wikipedia page",
+        "url": "https://www.wired.com/story/the-tragedy-of-losing-your-wikipedia-page/",
         "source": "Hacker News",
-        "score": 1
-      },
-      {
-        "title": "Apple's git still trusts the compromised eMudhra certificates",
-        "url": "https://emudhra.we-have-a-problem.com/apple.html",
-        "source": "Hacker News",
-        "score": 823
+        "score": 22
       },
       {
         "title": "AlpineBSD",
         "url": "https://wiki.alpinebsd.org",
         "source": "Hacker News",
-        "score": 65
+        "score": 150
       },
       {
-        "title": "Gaussian Splats part 3: There's always a bigger scene",
-        "url": "https://www.magnopus.com/blog/gaussiansplats-part-3-theres-always-a-bigger-scene",
+        "title": "Spiders Spin 'Silk Dope' into Nature's Toughest Material",
+        "url": "https://www.quantamagazine.org/how-spiders-spin-silk-dope-into-natures-toughest-material-20261028/",
         "source": "Hacker News",
-        "score": 55
+        "score": 30
       },
       {
-        "title": "Fine-tuned Qwen on my 16gb GPU to respond without the letter e",
-        "url": "https://kevin-wu.ca/blog/qwn/",
+        "title": "Google AI gets cagey when asked who won the 2020 elections",
+        "url": "https://arstechnica.com/ai/2026/10/google-ai-gets-cagey-when-asked-who-won-the-2020-elections/",
         "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "The Agent SDK",
-        "url": "https://cursor.com/blog/agent-sdk",
-        "source": "Hacker News",
-        "score": 44
-      },
-      {
-        "title": "Emacs Turns 50",
-        "url": "https://www.technologyreview.com/2026/10/20/1145399/emacs-turns-50/",
-        "source": "Hacker News",
-        "score": 249
-      },
-      {
-        "title": "From confession to conspiracy: How the Wedgewood fake polls story spread",
-        "url": "https://www.cip.uw.edu/2026/10/23/from-confession-to-conspiracy-how-the-wedgewood-fake-polls-story-spread/",
-        "source": "Hacker News",
-        "score": 37
+        "score": 97
       }
     ],
     "ai": [
@@ -101,64 +101,91 @@
         "title": "Gemini 4 Carbon",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
         "source": "Hacker News AI",
-        "score": 264
+        "score": 699
       },
       {
         "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
         "url": "https://surgehq.ai/blog/dayjob-tax",
         "source": "Hacker News AI",
-        "score": 75
+        "score": 168
       },
       {
         "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
         "url": "https://www.circuithub.com/post/unveiling-the-grid",
         "source": "Hacker News AI",
-        "score": 268
+        "score": 376
       },
       {
-        "title": "Ghostty 1.4",
-        "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
+        "title": "The tragedy of losing your Wikipedia page",
+        "url": "https://www.wired.com/story/the-tragedy-of-losing-your-wikipedia-page/",
         "source": "Hacker News AI",
-        "score": 1254
+        "score": 22
+      },
+      {
+        "title": "Google AI gets cagey when asked who won the 2020 elections",
+        "url": "https://arstechnica.com/ai/2026/10/google-ai-gets-cagey-when-asked-who-won-the-2020-elections/",
+        "source": "Hacker News AI",
+        "score": 97
+      },
+      {
+        "title": "Oseberg Tapestry Fragments",
+        "url": "https://en.wikipedia.org/wiki/Oseberg_tapestry_fragments",
+        "source": "Hacker News AI",
+        "score": 11
       },
       {
         "title": "Kentucky man becomes the first humanist granted religious exemption from AI",
         "url": "https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/",
         "source": "Hacker News AI",
-        "score": 279
+        "score": 391
+      },
+      {
+        "title": "Meta censored the No Kings Instagram account during a nationwide campaign",
+        "url": "https://paulfwalsh.substack.com/p/meta-censored-the-no-kings-instagram",
+        "source": "Hacker News AI",
+        "score": 147
+      },
+      {
+        "title": "Ghostty 1.4",
+        "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
+        "source": "Hacker News AI",
+        "score": 1277
+      },
+      {
+        "title": "Sleep framework: A new way for LLMs to retain knowledge in continual learning",
+        "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
+        "source": "Hacker News AI",
+        "score": 25
+      },
+      {
+        "title": "Two high-speed trains collide near Toledo, Spain",
+        "url": "https://www.euronews.com/video/2026/10/28/spain-first-footage-reveals-wreckage-of-deadly-high-speed-train-crash",
+        "source": "Hacker News AI",
+        "score": 169
       },
       {
         "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
         "url": "https://www.brangus.io/survival-llm",
         "source": "Hacker News AI",
-        "score": 484
-      },
-      {
-        "title": "Early progress on accelerating drug development with Claude",
-        "url": "https://www.anthropic.com/research/early-progress-drug-development",
-        "source": "Hacker News AI",
-        "score": 302
-      },
-      {
-        "title": "Tailscale SSH: Investigation and remediation update",
-        "url": "https://tailscale.com/ssh-investigation-update",
-        "source": "Hacker News AI",
-        "score": 350
-      },
-      {
-        "title": "Evidence of a spying operation by ICE against left-wing social movements",
-        "url": "https://www.wired.com/story/ice-is-running-one-of-the-largest-anti-left-surveillance-operations-in-us-history/",
-        "source": "Hacker News AI",
-        "score": 980
-      },
-      {
-        "title": "NTFS3 Hardened in Linux 7.4 Against Corrupted Maliciously-Crafted NTFS Volumes",
-        "url": "https://www.phoronix.com/news/Linux-7.4-NTFS3",
-        "source": "Hacker News AI",
-        "score": 6
+        "score": 510
       }
     ],
     "news": [
+      {
+        "title": "High-speed train crash kills at least 68 people in Spain",
+        "url": "https://www.bbc.co.uk/news/articles/c6p3g84kjqjlo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Bloodied, dazed and angry - how passengers' rail journey turned to disaster in Spain",
+        "url": "https://www.bbc.co.uk/news/articles/cm9qzd47ng98o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Flávio Bolsonaro denies fleeing Brazil after landing in Miami",
+        "url": "https://www.bbc.co.uk/news/articles/c6kglwe4lxwzo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Netanyahu's bloc leading Israel election but short of majority, partial results show",
         "url": "https://www.bbc.co.uk/news/articles/cmdx3knq1xexo?at_medium=RSS&at_campaign=rss",
@@ -170,34 +197,19 @@
         "source": "BBC World"
       },
       {
+        "title": "Girl seriously injured in wolf attack at German wildlife park",
+        "url": "https://www.bbc.co.uk/news/articles/c678prm55gzzo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Luxury cruise passengers stranded in Cambodia due to soaring fuel costs",
         "url": "https://www.bbc.co.uk/news/articles/cwj342k62exyo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Serbian shot dead after attacking officer outside Israeli embassy, minister says",
-        "url": "https://www.bbc.co.uk/news/articles/ck5ynj4eeyj2o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Tanzania celebrates first natural gas discovery in more than 10 years",
-        "url": "https://www.bbc.co.uk/news/articles/c5m2dry2xwwvo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Anger in Kenya over extradition hearing delay for ex-British soldier accused of murdering woman",
-        "url": "https://www.bbc.co.uk/news/articles/cmly073ql392o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Ceasefire extended across Ukraine's Kherson region, officials say",
-        "url": "https://www.bbc.co.uk/news/articles/c6lye1w9p2l8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " They did it! Sennheiser HD 480 Pro is the best closed-back headphone I’ve heard (and it's not even close) ",
+        "title": " They did it! Sennheiser HD 480 Pro are the best closed-back headphones I’ve heard (and it's not even close) ",
         "url": "https://www.creativebloq.com/reviews/they-did-it-sennheiser-hd-480-pro-is-the-best-closed-back-headphone-ive-heard-and-its-not-even-close",
         "source": "Creative Bloq"
       },
@@ -271,38 +283,38 @@
     ],
     "gaming": [
       {
-        "title": "How to get Tifa and Barrett's outfits in FFXIV",
+        "title": "The best Han 86 build in Modern Warfare 4",
+        "url": "https://www.polygon.com/mw4-modern-warfare-4-han-86-build-loadout-class-best/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Case Against Larian Saving Dragon Age, No Matter How Tempting It Sounds",
+        "url": "https://www.polygon.com/larian-dragon-age-takeover-bad-idea/",
+        "source": "Polygon"
+      },
+      {
+        "title": "BG3 Owes Everything to One Underrated 2009 BioWare RPG",
+        "url": "https://www.polygon.com/dragon-age-origins-baldurs-gate-3-underrated/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Backrooms Director Teases Next Dream Projects — Is Portal One of Them?",
+        "url": "https://www.polygon.com/backrooms-director-kane-parsons-portal-movie-valve-rumors/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Resident Evil Lead Teases Series’ ‘Conclusion’ Coming In the Next 10 Years",
+        "url": "https://www.polygon.com/resident-evil-capcom-horror-could-end-soon/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Modern Warfare 4’s Multiplayer Is the Best Call of Duty Has Been in 7 Years",
+        "url": "https://www.polygon.com/mw4-modern-warfare-4-multiplayer-review/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How to get Tifa and Barret's outfits in FFXIV",
         "url": "https://www.polygon.com/ffxiv-tifa-barret-outfit-glamour-how-to-get-ff7-remake-event/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Major 'Avatar: The Last Airbender' Game Finally Lives Up To The Hype",
-        "url": "https://www.polygon.com/best-avatar-game-legends-fighting-switch-2-aang-korra-october-update/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Discord's Massive New Change Will Shake Up The Entire Internet",
-        "url": "https://www.polygon.com/discord-google-reddit-search-messages-how-opt-turn-off/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Lord of the Rings’ New Aragorn Actor Officially Opens up on Role’s Immense Pressure",
-        "url": "https://www.polygon.com/lord-of-the-rings-hunt-for-gollum-aragorn-jamie-dornan-viggo-mortensen/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to open the Nameless Ruins chest in Final Fantasy Resonance",
-        "url": "https://www.polygon.com/final-fantasy-resonance-nameless-ruins-chest-how-to-open/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Wolf Among Us Puts a Deliciously Dark Twist on Our Favorite Fairy Tales",
-        "url": "https://www.polygon.com/the-wolf-among-us-twau-deliciously-dark-twist-favorite-fairy-tales/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Modern Warfare 4 Just Made 100% Completion Impossible With New Update",
-        "url": "https://www.polygon.com/modern-warfare-4-free-for-all-update-nuke-score-limit/",
         "source": "Polygon"
       }
     ],
