@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-27T23:34:42.473777",
-    "total_items": 65
+    "last_updated": "2026-10-28T04:30:23.756353",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "Git for US Legislation",
+        "url": "https://lexifina.com/blog/git-for-the-us-code",
+        "source": "Hacker News",
+        "score": 103
+      },
+      {
         "title": "Genie 4",
         "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
         "source": "Hacker News",
-        "score": 656
+        "score": 792
+      },
+      {
+        "title": "Ink droplets in motion snag top prize in Nikon Small World contest",
+        "url": "https://arstechnica.com/science/2026/10/meet-the-2026-winner-of-nikons-small-world-photomicrography-contest/",
+        "source": "Hacker News",
+        "score": 123
       },
       {
         "title": "Ghostty 1.4",
         "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
         "source": "Hacker News",
-        "score": 653
+        "score": 854
       },
       {
         "title": "Tailscale SSH: Investigation and remediation update",
         "url": "https://tailscale.com/ssh-investigation-update",
         "source": "Hacker News",
-        "score": 154
-      },
-      {
-        "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
-        "url": "https://www.brangus.io/survival-llm",
-        "source": "Hacker News",
-        "score": 134
+        "score": 230
       },
       {
         "title": "Early progress on accelerating drug development with Claude",
         "url": "https://www.anthropic.com/research/early-progress-drug-development",
         "source": "Hacker News",
-        "score": 77
+        "score": 168
+      },
+      {
+        "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+        "url": "https://www.brangus.io/survival-llm",
+        "source": "Hacker News",
+        "score": 236
+      },
+      {
+        "title": "Assembly Nights",
+        "url": "https://ratfactor.com/assembly-nights",
+        "source": "Hacker News",
+        "score": 29
       },
       {
         "title": "Raspberry Pi Zero 3W and Pi 4 Model A spotted in device trees",
         "url": "https://bret.dk/raspberry-pi-zero-3-w-pi-4-model-a/",
         "source": "Hacker News",
-        "score": 65
+        "score": 123
       },
       {
-        "title": "SS United States to be sunk as largest artificial reef",
-        "url": "https://divemagazine.com/scuba-diving-news/ss-united-states-to-be-sunk-as-worlds-largest-artificial-reef-in-november",
+        "title": "81 Jokes for the ZX81",
+        "url": "https://spelk.press/gb/products/81-jokes-for-the-zx81",
         "source": "Hacker News",
-        "score": 52
+        "score": 50
+      },
+      {
+        "title": "A Love Letter to the Super Dimension Fortress",
+        "url": "https://brennan.day/a-love-letter-to-the-super-dimension-fortress/",
+        "source": "Hacker News",
+        "score": 15
       },
       {
         "title": "New 14‑inch MacBook Pro with M6",
         "url": "https://www.apple.com/in/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
         "source": "Hacker News",
-        "score": 252
-      },
-      {
-        "title": "Four Months of Zig",
-        "url": "https://gracefulliberty.com/articles/four-months-of-zig/",
-        "source": "Hacker News",
-        "score": 52
-      },
-      {
-        "title": "An examination of lost firefly species of the US and Canada",
-        "url": "https://journaloflostspecies.org/index.php/jls/article/view/37/33",
-        "source": "Hacker News",
-        "score": 69
-      },
-      {
-        "title": "Reviewers rarely talk about reliability. Owners bring it up twice as often",
-        "url": "https://www.bettascore.ai/research/reliability-reviewers-vs-owners",
-        "source": "Hacker News",
-        "score": 12
+        "score": 307
       },
       {
         "title": "Python's experimental JIT to be removed",
         "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
         "source": "Hacker News",
-        "score": 427
+        "score": 465
       },
       {
-        "title": "Classification of Finite Simple Groups Formalized in Lean",
-        "url": "https://cfsg.axiommath.ai/",
+        "title": "Tabletop Whale is an original science illustration blog",
+        "url": "https://tabletopwhale.com",
         "source": "Hacker News",
-        "score": 155
+        "score": 29
       },
       {
         "title": "New iMac with M6",
         "url": "https://www.apple.com/imac/",
         "source": "Hacker News",
-        "score": 295
-      },
-      {
-        "title": "Wikipedia's Cleanup of AI-Generated Content",
-        "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
-        "source": "Hacker News",
-        "score": 429
+        "score": 319
       }
     ],
     "ai": [
@@ -101,91 +101,73 @@
         "title": "Ghostty 1.4",
         "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
         "source": "Hacker News AI",
-        "score": 653
+        "score": 854
       },
       {
         "title": "Tailscale SSH: Investigation and remediation update",
         "url": "https://tailscale.com/ssh-investigation-update",
         "source": "Hacker News AI",
-        "score": 154
-      },
-      {
-        "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
-        "url": "https://www.brangus.io/survival-llm",
-        "source": "Hacker News AI",
-        "score": 134
+        "score": 230
       },
       {
         "title": "Early progress on accelerating drug development with Claude",
         "url": "https://www.anthropic.com/research/early-progress-drug-development",
         "source": "Hacker News AI",
-        "score": 77
+        "score": 168
       },
       {
-        "title": "Wikipedia's Cleanup of AI-Generated Content",
-        "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
+        "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
+        "url": "https://www.brangus.io/survival-llm",
         "source": "Hacker News AI",
-        "score": 429
+        "score": 236
       },
       {
-        "title": "Hex Raises $100M",
-        "url": "https://hex.tech/blog/hex-new-era/",
+        "title": "Expanding our partnership with GSA to bring Claude to all levels of government",
+        "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
         "source": "Hacker News AI",
-        "score": 28
-      },
-      {
-        "title": "One year of Dioxus fullstack in production: the good, the painful",
-        "url": "https://oxidt.com/blog/one-year-of-dioxus-fullstack-in-production-the-good-the-painful",
-        "source": "Hacker News AI",
-        "score": 17
-      },
-      {
-        "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
-        "url": "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/",
-        "source": "Hacker News AI",
-        "score": 422
+        "score": 31
       },
       {
         "title": "Amazon Is Gutting Its AI Division After Sustained Failure",
         "url": "https://futurism.com/artificial-intelligence/amazon-ai-division-failure-nova",
         "source": "Hacker News AI",
-        "score": 207
+        "score": 290
+      },
+      {
+        "title": "Wikipedia's Cleanup of AI-Generated Content",
+        "url": "https://spectrum.ieee.org/wikipedia-wikiproject-ai-writing-cleanup",
+        "source": "Hacker News AI",
+        "score": 466
+      },
+      {
+        "title": "Anthropic trained Claude on illegally obtained Stanford professors' books",
+        "url": "https://stanforddaily.com/2026/10/27/professors-books-pirated-to-train-claude/",
+        "source": "Hacker News AI",
+        "score": 494
       },
       {
         "title": "PHP2Shell, LiteLLM, GitLab: Find What You Need to Patch",
         "url": "https://cloudsleuth.io/blog/php2shell-litellm-gitlab-find-what-you-run/",
         "source": "Hacker News AI",
-        "score": 54
-      },
-      {
-        "title": "Police are using AI to pull over drivers for 'suspicious' behavior",
-        "url": "https://gizmodo.com/police-are-using-ai-to-pull-over-drivers-for-suspicious-behavior-2000831220",
-        "source": "Hacker News AI",
-        "score": 326
+        "score": 57
       },
       {
         "title": "The Mythical Man-Month in the Age of AI",
         "url": "https://j11g.com/the-mythical-man-month-in-the-age-of-ai",
         "source": "Hacker News AI",
-        "score": 425
+        "score": 445
       },
       {
-        "title": "New Records Obtained by EFF Expose More Problems with Medicare's AI Experiment",
-        "url": "https://www.eff.org/deeplinks/2026/10/new-records-obtained-eff-expose-more-problems-medicares-ai-experiment",
+        "title": "Police are using AI to pull over drivers for 'suspicious' behavior",
+        "url": "https://gizmodo.com/police-are-using-ai-to-pull-over-drivers-for-suspicious-behavior-2000831220",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 356
       },
       {
-        "title": "She Worried About Cutting Her Medication Dose. ChatGPT Told Her to Push On",
-        "url": "https://www.nytimes.com/2026/10/27/well/ai-chatgpt-medication-epilepsy-death.html",
+        "title": "Hex Raises $100M",
+        "url": "https://hex.tech/blog/hex-new-era/",
         "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "Maine banned phones in schools to help teens focus and connect. It's working",
-        "url": "https://apnews.com/article/maine-cellphone-ban-positive-changes-83bb538cf45879ce6ab4639c6cc73b7b",
-        "source": "Hacker News AI",
-        "score": 41
+        "score": 62
       }
     ],
     "news": [
@@ -220,7 +202,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Alexander brothers each sentenced to 30 years in prison for sex trafficking case",
+        "title": "Alexander brothers each sentenced to 30 years in prison in sex trafficking case",
         "url": "https://www.bbc.co.uk/news/articles/cqn498mng08ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
@@ -232,13 +214,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " This AI billboard might be too ballsy for its own good ",
-        "url": "https://www.creativebloq.com/news/this-ai-billboard-might-be-too-ballsy-for-its-own-good",
+        "title": " Bambu Lab’s Black Friday sale has started already with up to 20% off 3D printers ",
+        "url": "https://www.creativebloq.com/deals/bambu-labs-black-friday-sale-has-started-already-with-up-to-20-percent-off-3d-printers",
         "source": "Creative Bloq"
       },
       {
-        "title": " Bambu Lab’s Black Friday sale has started already with up to 20% off 3D printers ",
-        "url": "https://www.creativebloq.com/deals/bambu-labs-black-friday-sale-has-started-already-with-up-to-20-percent-off-3d-printers",
+        "title": " This AI billboard might be too ballsy for its own good ",
+        "url": "https://www.creativebloq.com/news/this-ai-billboard-might-be-too-ballsy-for-its-own-good",
         "source": "Creative Bloq"
       },
       {
@@ -264,6 +246,16 @@
     ],
     "science": [
       {
+        "title": "A simple daily fiber supplement reduced arthritis pain and improved strength",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261027230715.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "The autistic brain processes faces differently than scientists thought",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261027063824.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Low testosterone may make sugar far more harmful to your liver",
         "url": "https://www.sciencedaily.com/releases/2026/10/261026225622.htm",
         "source": "Science Daily"
@@ -274,32 +266,42 @@
         "source": "Science Daily"
       },
       {
+        "title": "Scientists discover the immune system’s hidden sense of touch",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261026225617.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "The asteroid that killed the dinosaurs may have helped ants conquer the world",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261026225608.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Common drugs may help dangerous viruses spread through the body",
         "url": "https://www.sciencedaily.com/releases/2026/10/261026225606.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "James Webb discovers a scorching lava planet with a “giant sunscreen”",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261026225603.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Smithsonian scientists just recreated the first 2 billion years of the Universe",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261026225600.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Do spiders dream? Scientists just found a surprising clue",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261026225555.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Exercise doesn't just strengthen your heart. It rewires it",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261025222848.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "29 Years Ago, ‘Buffy’s Wisest Character Got a Shocking Backstory that Redefined the Entire Series",
+        "url": "https://www.polygon.com/buffy-halloween-season-2-rupert-giles-ripper/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The MCU's Oldest Villain Just Made a Surprise Return in 'VisionQuest'",
+        "url": "https://www.polygon.com/visionquest-mcus-oldest-iron-man-villain-raza-hamidmi-al-wazar/",
+        "source": "Polygon"
+      },
+      {
+        "title": "3 Upcoming Sci-Fi RPGs Better Than Waiting for a New Mass Effect",
+        "url": "https://www.polygon.com/upcoming-games-like-mass-effect/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Adult Fairy Tale Books That Are Magical From Start to Finish",
+        "url": "https://www.polygon.com/best-fantasy-books-like-adult-fairy-tales/",
+        "source": "Polygon"
+      },
       {
         "title": "The Lord of the Rings: Return of the King Is Officially Getting a New Version Next Year",
         "url": "https://www.polygon.com/return-of-the-king-trick-taking-game-interview/",
@@ -313,26 +315,6 @@
       {
         "title": "McDonald's New 'Pokémon' Happy Meal Surprise Leaks Ahead Of Launch",
         "url": "https://www.polygon.com/mcdonalds-pokemon-happy-meal-toy-card-leak-start-date-tcg-promo/",
-        "source": "Polygon"
-      },
-      {
-        "title": "30 Years Later, Magic’s Most Ridiculous 1-Mana Creature Is Still a Competitive Powerhouse",
-        "url": "https://www.polygon.com/magic-phyrexian-dreadnought-stiflenought-premodern/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to unlock Lid's second limit burst in Final Fantasy Resonance",
-        "url": "https://www.polygon.com/final-fantasy-resonance-lid-second-limit-burst-how-to-unlock/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Elden Ring Movie Shrouded in Secrecy as New Streaming Deal Confirmed",
-        "url": "https://www.polygon.com/elden-ring-movie-script-secrecy-a24-amazon-streaming/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Matthew Lillard Officially Teases Mystery Superman Man of Tomorrow Role",
-        "url": "https://www.polygon.com/superman-man-of-tomorrow-dc-matthew-lillard-mystery-role/",
         "source": "Polygon"
       }
     ],
