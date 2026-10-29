@@ -1,173 +1,191 @@
 {
   "metadata": {
-    "last_updated": "2026-10-29T09:30:37.250187",
-    "total_items": 62
+    "last_updated": "2026-10-29T16:41:04.890951",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "We're releasing the weights of Mistral Large 4",
+        "url": "https://mistral.ai/news/mistral-large-4-oss/",
+        "source": "Hacker News",
+        "score": 508
+      },
+      {
+        "title": "H.264 Is Magic (2016)",
+        "url": "https://sidbala.com/h-264-is-magic/",
+        "source": "Hacker News",
+        "score": 56
+      },
+      {
+        "title": "Grace Blackwell needs a new scheduler: 27% more usable GPUs from the same racks",
+        "url": "https://skypilot.ai/blog/grace-blackwell-needs-a-new-scheduler",
+        "source": "Hacker News",
+        "score": 25
+      },
+      {
+        "title": "Zombie stats: Where the numbers AI quotes come from",
+        "url": "https://trakkr.ai/trakkr-research/zombie-stats",
+        "source": "Hacker News",
+        "score": 54
+      },
+      {
+        "title": "DoorDash to Acquire Instacart",
+        "url": "https://about.doordash.com/en-us/news/doordash-to-acquire-instacart",
+        "source": "Hacker News",
+        "score": 191
+      },
+      {
+        "title": "Chained PHP2Shell Exploit Roots 25 Servers, Including US Government Servers",
+        "url": "https://dreamgroup.com/blog/chained-php2shell-exploit-roots-25-servers",
+        "source": "Hacker News",
+        "score": 142
+      },
+      {
+        "title": "Mexico is a showroom for electric vehicles you can't buy in the U.S.",
+        "url": "https://www.washingtonpost.com/climate-environment/2026/10/27/i-saw-future-driving-mexico-its-off-limits-americans/",
+        "source": "Hacker News",
+        "score": 66
+      },
+      {
+        "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
+        "url": "https://news.ycombinator.com/item?id=50291116",
+        "source": "Hacker News",
+        "score": 8
+      },
+      {
         "title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
         "url": "https://divagr.com/blog/qwenputer",
         "source": "Hacker News",
-        "score": 440
+        "score": 647
       },
       {
-        "title": "Why is this fingerprinting script creating bioweapons?",
-        "url": "https://nullpt.rs/fingerprinting-bioweapons",
+        "title": "Java's new AOT cache feature is in a rough state",
+        "url": "https://xpipe.io/blog/java-aot-cache",
         "source": "Hacker News",
-        "score": 1198
+        "score": 55
       },
       {
-        "title": "Getting debug access on a Brother printer over Telnet",
-        "url": "https://inventor7777.github.io/blog/2026/10/22/debug-access-on-brother/",
+        "title": "noalloc: Tooling and libraries to enforce zero heap allocations in Golang",
+        "url": "https://github.com/theconsensuslabs/noalloc",
         "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Forging a Microsoft Edge Full Chain with Logic Bugs Only",
-        "url": "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/",
-        "source": "Hacker News",
-        "score": 36
+        "score": 8
       },
       {
         "title": "Zero click, silent, remote Android DoS",
         "url": "https://smsofdeath.com/",
         "source": "Hacker News",
-        "score": 41
+        "score": 258
       },
       {
-        "title": "StackOverflow now gets fewer than 1000 questions a month",
-        "url": "https://data.stackexchange.com/stackoverflow/query/1926661#graph?t=1",
+        "title": "Why is this fingerprinting script creating bioweapons?",
+        "url": "https://nullpt.rs/fingerprinting-bioweapons",
         "source": "Hacker News",
-        "score": 428
+        "score": 1488
       },
       {
-        "title": "OpenAI's agents talked to each other through the CPU Cache",
-        "url": "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/",
+        "title": "Keplearn: Extract Equations from Data in Seconds",
+        "url": "https://github.com/owls-on-wires/keplearn",
         "source": "Hacker News",
-        "score": 135
+        "score": 23
       },
       {
-        "title": "A Health Update",
-        "url": "https://furbo.org/2026/10/28/a-health-update/",
+        "title": "Newly discovered Kerberos delegation abuse path",
+        "url": "https://hunio.org/security/abusing-constrained-delegation-without-protocol-transition-against-spn-less-accounts/",
         "source": "Hacker News",
-        "score": 248
-      },
-      {
-        "title": "A new faster algorithm to compute 64-bit signed floor division",
-        "url": "https://www.benjoffe.com/fast-floordiv",
-        "source": "Hacker News",
-        "score": 57
-      },
-      {
-        "title": "Cuba is skipping its November 1, 2026 clock change and staying on DST until 2027",
-        "url": "https://www.timeanddate.com/news/time/cuba-keeps-dst-until-nov-2027.html",
-        "source": "Hacker News",
-        "score": 47
-      },
-      {
-        "title": "GitLab Security Incident: Attempted Exploitation of CVE-2026-97229",
-        "url": "https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html",
-        "source": "Hacker News",
-        "score": 175
-      },
-      {
-        "title": "Claude Code regularly sends each background agent’s transcript to its model",
-        "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
-        "source": "Hacker News",
-        "score": 353
-      },
-      {
-        "title": "CNC Stone Carving",
-        "url": "https://carmelitegothic.com/cnc-stone-carving/",
-        "source": "Hacker News",
-        "score": 470
-      },
-      {
-        "title": "Formlabs Studio 1 $699 Resin Printer",
-        "url": "https://formlabs.com/products/form-studio-1-basic-founders-edition/",
-        "source": "Hacker News",
-        "score": 183
-      },
-      {
-        "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
-        "url": "https://www.circuithub.com/post/unveiling-the-grid",
-        "source": "Hacker News",
-        "score": 497
+        "score": 7
       }
     ],
     "ai": [
       {
+        "title": "We're releasing the weights of Mistral Large 4",
+        "url": "https://mistral.ai/news/mistral-large-4-oss/",
+        "source": "Hacker News AI",
+        "score": 508
+      },
+      {
+        "title": "Zombie stats: Where the numbers AI quotes come from",
+        "url": "https://trakkr.ai/trakkr-research/zombie-stats",
+        "source": "Hacker News AI",
+        "score": 54
+      },
+      {
+        "title": "Chained PHP2Shell Exploit Roots 25 Servers, Including US Government Servers",
+        "url": "https://dreamgroup.com/blog/chained-php2shell-exploit-roots-25-servers",
+        "source": "Hacker News AI",
+        "score": 142
+      },
+      {
+        "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
+        "url": "https://news.ycombinator.com/item?id=50291116",
+        "source": "Hacker News AI",
+        "score": 8
+      },
+      {
+        "title": "Gemini 4 Carbon is the new #1 on the Artificial Analysis Intelligence Index v5",
+        "url": "https://artificialanalysis.ai/articles/gemini-4-carbon-new-number-1",
+        "source": "Hacker News AI",
+        "score": 277
+      },
+      {
+        "title": "The US added a record 20.2 GWh of battery storage in just 3 months",
+        "url": "https://electrek.co/2026/08/31/the-us-added-a-record-20-2-gwh-of-battery-storage-in-just-3-months/",
+        "source": "Hacker News AI",
+        "score": 228
+      },
+      {
+        "title": "LLM Voice",
+        "url": "https://martinfowler.com/bliki/LLM-Voice.html",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
         "title": "Forging a Microsoft Edge Full Chain with Logic Bugs Only",
         "url": "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/",
         "source": "Hacker News AI",
-        "score": 36
+        "score": 205
+      },
+      {
+        "title": "Southern Africa's first known stenciled rock art found hiding in plain sight",
+        "url": "https://phys.org/news/2026-10-southern-africa-stenciled-art-plain.html",
+        "source": "Hacker News AI",
+        "score": 34
       },
       {
         "title": "OpenAI's agents talked to each other through the CPU Cache",
         "url": "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/",
         "source": "Hacker News AI",
-        "score": 135
-      },
-      {
-        "title": "Claude Code regularly sends each background agent’s transcript to its model",
-        "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
-        "source": "Hacker News AI",
-        "score": 353
+        "score": 338
       },
       {
         "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
         "url": "https://www.circuithub.com/post/unveiling-the-grid",
         "source": "Hacker News AI",
-        "score": 497
+        "score": 550
       },
       {
         "title": "Gemini 4 Carbon",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
         "source": "Hacker News AI",
-        "score": 929
+        "score": 987
       },
       {
-        "title": "Nixpkgs for the Front End Impaired",
-        "url": "https://fzakaria.com/2026/10/12/nixpkgs-for-the-frontend-impaired",
-        "source": "Hacker News AI",
-        "score": 61
-      },
-      {
-        "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
-        "url": "https://surgehq.ai/blog/dayjob-tax",
-        "source": "Hacker News AI",
-        "score": 231
-      },
-      {
-        "title": "Ghostty 1.4",
-        "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
-        "source": "Hacker News AI",
-        "score": 1319
-      },
-      {
-        "title": "Sleep framework: A new way for LLMs to retain knowledge in continual learning",
-        "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
-        "source": "Hacker News AI",
-        "score": 56
-      },
-      {
-        "title": "Oseberg Tapestry Fragments",
-        "url": "https://en.wikipedia.org/wiki/Oseberg_tapestry_fragments",
-        "source": "Hacker News AI",
-        "score": 23
-      },
-      {
-        "title": "Kentucky man becomes the first humanist granted religious exemption from AI",
-        "url": "https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/",
-        "source": "Hacker News AI",
-        "score": 458
-      },
-      {
-        "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
-        "url": "https://www.brangus.io/survival-llm",
+        "title": "Claude Code regularly sends each background agent’s transcript to its model",
+        "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
         "source": "Hacker News AI",
         "score": 527
+      },
+      {
+        "title": "MIT professor says AI is taking over your brain",
+        "url": "https://www.bostonglobe.com/2026/10/23/opinion/ai-impact-cognitive-ability-eric-so/",
+        "source": "Hacker News AI",
+        "score": 15
+      },
+      {
+        "title": "I Used AI to Fake a Scientific Paper. Here's What Happened",
+        "url": "https://spectrum.ieee.org/ai-generated-scientific-papers",
+        "source": "Hacker News AI",
+        "score": 37
       }
     ],
     "news": [
@@ -177,144 +195,144 @@
         "source": "BBC World"
       },
       {
-        "title": "Flávio Bolsonaro denies fleeing Brazil after landing in Miami",
-        "url": "https://www.bbc.co.uk/news/articles/c6kglwe4lxwzo?at_medium=RSS&at_campaign=rss",
+        "title": "Russian drone attack on Ukrainian train station kills at least 14, officials say",
+        "url": "https://www.bbc.co.uk/news/articles/c9p8gdlz1p2ko?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Flávio Bolsonaro calls himself 'leader of Brazil' after election loss",
+        "url": "https://www.bbc.co.uk/news/articles/c3x2w4109pj8o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Philippine police obtain warrant to search Thomas Markle's devices",
+        "url": "https://www.bbc.co.uk/news/articles/cm0j06y3pn75o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Rock collapse kills two in Turkey's Cappadocia, local media reports",
+        "url": "https://www.bbc.co.uk/news/articles/cknv08nvzld4o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "EU chief lays out vision for new Canada partnership at Montreal summit",
+        "url": "https://www.bbc.co.uk/news/articles/cq8ezj7jylrzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Netanyahu's bloc leading Israel election but short of majority, partial results show",
         "url": "https://www.bbc.co.uk/news/articles/cmdx3knq1xexo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Elon Musk is a 'real genius', Putin says after satellite talks with SpaceX boss",
-        "url": "https://www.bbc.co.uk/news/articles/c63djl148n3eo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Building boom puts 300,000 people in the path of potential Himalayan disasters",
-        "url": "https://www.bbc.co.uk/news/articles/c574pj3zljvjo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Details of thousands of US immigration agents leaked in major hack",
-        "url": "https://www.bbc.co.uk/news/articles/cq8jzkpjr28vo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Death of US actress Hayden Panettiere ruled accidental, ending local police probe",
-        "url": "https://www.bbc.co.uk/news/articles/c6lylxjkkp0vo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
       {
+        "title": " The perfect closed-back wired headphones just got a $40 discount ",
+        "url": "https://www.creativebloq.com/deals/the-perfect-closed-back-wired-headphones-just-got-a-usd40-discount",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Mass Effect 5 art director says it's “truly heartbreaking” we'll never play his team's game ",
+        "url": "https://www.creativebloq.com/news/mass-effect-5-art-director-says-its-truly-heartbreaking-well-never-play-his-teams-game",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Croc 2: Kingdom of the Gobbos (Switch) review: this awkward '90s platformer is finally fixed ",
+        "url": "https://www.creativebloq.com/reviews/croc-2-kingdom-of-the-gobbos-switch-review-this-awkward-90s-platformer-is-finally-fixed",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Maxon teases another AI tool, and artists aren't happy, despite not knowing what it does yet ",
+        "url": "https://www.creativebloq.com/news/maxon-teases-another-ai-tool-and-artists-arent-happy-despite-not-knowing-what-it-does-yet",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Apple is finally embracing chaos and I’m here for it ",
+        "url": "https://www.creativebloq.com/news/apple-is-finally-embracing-chaos-and-im-here-for-it",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This horny anime food-themed tactical RPG roguelite isn't just a thirst trap, even if it will make you hungry ",
+        "url": "https://www.creativebloq.com/features/this-horny-anime-food-themed-tactical-rpg-roguelite-isnt-just-a-thirst-trap-even-if-it-will-make-you-hungry",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Prada's hand-drawn holiday campaign is an utter joy – and a sharp lesson for Coca-Cola ",
         "url": "https://www.creativebloq.com/news/pradas-hand-drawn-holiday-campaign-is-an-utter-joy-and-a-sharp-lesson-for-coca-cola",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Ever wondered what goes on inside a pair of earphones? These transparent IEMs reveal all ",
-        "url": "https://www.creativebloq.com/news/ever-wondered-what-goes-on-inside-a-pair-of-earphones-these-transparent-iems-reveal-all",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " They did it! Sennheiser HD 480 Pro are the best closed-back headphones I’ve heard (and it's not even close) ",
-        "url": "https://www.creativebloq.com/reviews/they-did-it-sennheiser-hd-480-pro-is-the-best-closed-back-headphone-ive-heard-and-its-not-even-close",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Joe & Mac Retro Collection (Switch 2) review: the '90s caveman roundup inherits its flaws as well as its fun ",
-        "url": "https://www.creativebloq.com/reviews/joe-and-mac-retro-collection-switch-2-review-i-came-for-the-cavemen-but-the-sequels-are-the-real-draw",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Will Instagram's 90-minute videos make it impossible to switch off from socials? ",
-        "url": "https://www.creativebloq.com/news/will-instagrams-90-minute-videos-make-it-impossible-to-switch-off-from-socials",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Coca-Cola gives everyday heroes the royal treatment in posh portrait campaign ",
-        "url": "https://www.creativebloq.com/news/coca-cola-gives-everyday-heroes-the-royal-treatment-in-posh-portrait-campaign",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " XPPen Magic Pro 13 review: a premium Android drawing tablet for work and play ",
-        "url": "https://www.creativebloq.com/reviews/xppen-magic-pro-13-review-a-premium-android-drawing-tablet-for-work-and-play",
         "source": "Creative Bloq"
       }
     ],
     "science": [
       {
-        "title": "A single sauna session sends immune cells surging through your body",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261027231021.htm",
+        "title": "Six popular sugar substitutes linked to faster brain aging",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261028234238.htm",
         "source": "Science Daily"
       },
       {
-        "title": "A simple daily fiber supplement reduced arthritis pain and improved strength",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261027230715.htm",
+        "title": "Einstein's equations may explain the universe without dark energy",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261028232719.htm",
         "source": "Science Daily"
       },
       {
-        "title": "The autistic brain processes faces differently than scientists thought",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261027063824.htm",
+        "title": "NASA discovers Jupiter’s invisible shield is more complex than Earth’s",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261028232715.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Your blood pressure could be dangerous even when your numbers look normal",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261027063814.htm",
+        "title": "128,000-year-old ice in Tibet could rewrite climate history",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261028232713.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists just broke a textbook rule of physics",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261027063713.htm",
+        "title": "A 700,000-year-old elephant tooth reveals a lost world where early humans lived",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261028232709.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Meteors don't just burn up. What really happens is far more violent",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261027063710.htm",
+        "title": "Less than 42 minutes of bright daylight linked to higher dementia risk",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261028232707.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Smaller EV batteries, longer range? Scientists may have found a way",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261027063708.htm",
+        "title": "Scientists discover that cranberry juice may help fight tooth decay",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261028232701.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "7 Fire Emblem: Three Houses Replay Ideas to Make Garreg Mach Feel Brand New",
-        "url": "https://www.polygon.com/fire-emblem-three-houses-replay-ideas/",
+        "title": "The Legend of Zelda Was Always Meant To Be Passed Down",
+        "url": "https://www.polygon.com/the-legend-of-zelda-fairy-tale/",
         "source": "Polygon"
       },
       {
-        "title": "5 Forgotten 'Peanuts' Characters That Charles Schulz Abandoned in the Comic Strip",
-        "url": "https://www.polygon.com/forgotten-peanuts-characters/",
+        "title": "Spider-Man’s Most Controversial Story Officially Set to Be Undone After Almost Two Decades",
+        "url": "https://www.polygon.com/marvel-spider-man-one-more-day-reversal-mephisto/",
         "source": "Polygon"
       },
       {
-        "title": "This Underrated 5-Season Fantasy Series Is Basically Harry Potter for Adults",
-        "url": "https://www.polygon.com/the-magicians-fairy-tale-tv-shows/",
+        "title": "Fire Emblem: Fortune’s Weave Actor on Dietrich and Fabio: ‘His First Real Love’",
+        "url": "https://www.polygon.com/fire-emblem-fortune-weave-fabio-dietrich-love/",
         "source": "Polygon"
       },
       {
-        "title": "15 Years Later, the Most Near-Perfect Fast and Furious Movie Is Getting From Netflix",
-        "url": "https://www.polygon.com/fast-furious-five-leaving-netflix-november-2026/",
+        "title": "Nintendo Restocks Zelda 40th Anniversary Switch 2 Console",
+        "url": "https://www.polygon.com/zelda-40th-anniversary-switch-2-hardware-restock/",
         "source": "Polygon"
       },
       {
-        "title": "9 Years Ago, Netflix Released a Rare Sci-Fi Sequel Even Better Than the Original",
-        "url": "https://www.polygon.com/9-years-ago-season-2-of-this-sci-fi-series-proved-the-first-season-wasnt-a-fluke/",
+        "title": "McDonald's 'Pokémon' Happy Meal Is Officially Confirmed, And It's Sooner Than You Think",
+        "url": "https://www.polygon.com/mcdonalds-pokemon-happy-meal-dates-when-what-cards-toys-release/",
         "source": "Polygon"
       },
       {
-        "title": "Game Awards 2026: All Game of the Year Front-Runners and Predictions",
-        "url": "https://www.polygon.com/game-of-the-year-goty-game-awards-2026-frontrunners/",
+        "title": "Pokémon TCG Pocket Just Got a Game-Changing Feature That’s Worth Coming Back For",
+        "url": "https://www.polygon.com/pokemon-tcg-pocket-community-decks/",
         "source": "Polygon"
       },
       {
-        "title": "'Slow Horses' Season 7 Confirmed? Release Date, Plot, and Everything You Need to Know",
-        "url": "https://www.polygon.com/slow-horses-season-7-release-date-plot/",
+        "title": "10 perfect books from before 1900 that are still easy to read today",
+        "url": "https://www.polygon.com/best-old-books-easy-to-read/",
         "source": "Polygon"
       }
     ],
