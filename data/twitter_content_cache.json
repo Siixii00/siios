@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-29T02:10:57.009505",
-    "total_items": 65
+    "last_updated": "2026-10-29T09:30:37.250187",
+    "total_items": 62
   },
   "content": {
     "tech": [
@@ -9,194 +9,171 @@
         "title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
         "url": "https://divagr.com/blog/qwenputer",
         "source": "Hacker News",
-        "score": 77
+        "score": 440
       },
       {
         "title": "Why is this fingerprinting script creating bioweapons?",
         "url": "https://nullpt.rs/fingerprinting-bioweapons",
         "source": "Hacker News",
-        "score": 868
+        "score": 1198
       },
       {
-        "title": "GitLab Security Incident: Attempted Exploitation of CVE-2026-97229",
-        "url": "https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html",
+        "title": "Getting debug access on a Brother printer over Telnet",
+        "url": "https://inventor7777.github.io/blog/2026/10/22/debug-access-on-brother/",
         "source": "Hacker News",
-        "score": 80
+        "score": 33
       },
       {
-        "title": "MicroZig to Adopt Strict No LLM / No AI Policy",
-        "url": "https://github.com/ZigEmbeddedGroup/microzig/blob/main/CODE_OF_CONDUCT.md",
+        "title": "Forging a Microsoft Edge Full Chain with Logic Bugs Only",
+        "url": "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/",
         "source": "Hacker News",
-        "score": 35
+        "score": 36
       },
       {
-        "title": "The first wired XR glasses powered by Android XR",
-        "url": "https://blog.google/products-and-platforms/platforms/android/xreal-aura/",
+        "title": "Zero click, silent, remote Android DoS",
+        "url": "https://smsofdeath.com/",
         "source": "Hacker News",
-        "score": 29
+        "score": 41
+      },
+      {
+        "title": "StackOverflow now gets fewer than 1000 questions a month",
+        "url": "https://data.stackexchange.com/stackoverflow/query/1926661#graph?t=1",
+        "source": "Hacker News",
+        "score": 428
+      },
+      {
+        "title": "OpenAI's agents talked to each other through the CPU Cache",
+        "url": "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/",
+        "source": "Hacker News",
+        "score": 135
       },
       {
         "title": "A Health Update",
         "url": "https://furbo.org/2026/10/28/a-health-update/",
         "source": "Hacker News",
-        "score": 106
+        "score": 248
+      },
+      {
+        "title": "A new faster algorithm to compute 64-bit signed floor division",
+        "url": "https://www.benjoffe.com/fast-floordiv",
+        "source": "Hacker News",
+        "score": 57
+      },
+      {
+        "title": "Cuba is skipping its November 1, 2026 clock change and staying on DST until 2027",
+        "url": "https://www.timeanddate.com/news/time/cuba-keeps-dst-until-nov-2027.html",
+        "source": "Hacker News",
+        "score": 47
+      },
+      {
+        "title": "GitLab Security Incident: Attempted Exploitation of CVE-2026-97229",
+        "url": "https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html",
+        "source": "Hacker News",
+        "score": 175
+      },
+      {
+        "title": "Claude Code regularly sends each background agent’s transcript to its model",
+        "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+        "source": "Hacker News",
+        "score": 353
       },
       {
         "title": "CNC Stone Carving",
         "url": "https://carmelitegothic.com/cnc-stone-carving/",
         "source": "Hacker News",
-        "score": 406
-      },
-      {
-        "title": "Gemini 4 Carbon",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
-        "source": "Hacker News",
-        "score": 813
+        "score": 470
       },
       {
         "title": "Formlabs Studio 1 $699 Resin Printer",
         "url": "https://formlabs.com/products/form-studio-1-basic-founders-edition/",
         "source": "Hacker News",
-        "score": 121
+        "score": 183
       },
       {
         "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
         "url": "https://www.circuithub.com/post/unveiling-the-grid",
         "source": "Hacker News",
-        "score": 427
-      },
-      {
-        "title": "Start Doing Graph Theory",
-        "url": "https://vertex.degree/",
-        "source": "Hacker News",
-        "score": 586
-      },
-      {
-        "title": "MacBook Pro with PROLED XDR Display and Touch",
-        "url": "https://www.apple.com/macbook-pro/proled-xdr-display/",
-        "source": "Hacker News",
-        "score": 505
-      },
-      {
-        "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
-        "url": "https://surgehq.ai/blog/dayjob-tax",
-        "source": "Hacker News",
-        "score": 203
-      },
-      {
-        "title": "How we made our MMDB files a 33% smaller",
-        "url": "https://ipinfo.io/blog/how-made-mmdb-files-smaller",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "AlpineBSD",
-        "url": "https://wiki.alpinebsd.org",
-        "source": "Hacker News",
-        "score": 178
+        "score": 497
       }
     ],
     "ai": [
       {
-        "title": "MicroZig to Adopt Strict No LLM / No AI Policy",
-        "url": "https://github.com/ZigEmbeddedGroup/microzig/blob/main/CODE_OF_CONDUCT.md",
+        "title": "Forging a Microsoft Edge Full Chain with Logic Bugs Only",
+        "url": "https://blog.orange.tw/posts/2026-10-the-last-proof-of-human-craft-browser-full-chain/",
         "source": "Hacker News AI",
-        "score": 35
+        "score": 36
+      },
+      {
+        "title": "OpenAI's agents talked to each other through the CPU Cache",
+        "url": "https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/",
+        "source": "Hacker News AI",
+        "score": 135
+      },
+      {
+        "title": "Claude Code regularly sends each background agent’s transcript to its model",
+        "url": "https://gist.github.com/flamerix-ai/c3905705cc4205e5de3011fa2e74efce",
+        "source": "Hacker News AI",
+        "score": 353
+      },
+      {
+        "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
+        "url": "https://www.circuithub.com/post/unveiling-the-grid",
+        "source": "Hacker News AI",
+        "score": 497
       },
       {
         "title": "Gemini 4 Carbon",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
         "source": "Hacker News AI",
-        "score": 813
-      },
-      {
-        "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
-        "url": "https://www.circuithub.com/post/unveiling-the-grid",
-        "source": "Hacker News AI",
-        "score": 427
-      },
-      {
-        "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
-        "url": "https://surgehq.ai/blog/dayjob-tax",
-        "source": "Hacker News AI",
-        "score": 203
-      },
-      {
-        "title": "Image generation has come a long way since August 2022",
-        "url": "https://www.hbrooks.com/writing/image-generation-has-come-a-long-way",
-        "source": "Hacker News AI",
-        "score": 36
+        "score": 929
       },
       {
         "title": "Nixpkgs for the Front End Impaired",
         "url": "https://fzakaria.com/2026/10/12/nixpkgs-for-the-frontend-impaired",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 61
       },
       {
-        "title": "Oseberg Tapestry Fragments",
-        "url": "https://en.wikipedia.org/wiki/Oseberg_tapestry_fragments",
+        "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
+        "url": "https://surgehq.ai/blog/dayjob-tax",
         "source": "Hacker News AI",
-        "score": 18
-      },
-      {
-        "title": "Kentucky man becomes the first humanist granted religious exemption from AI",
-        "url": "https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/",
-        "source": "Hacker News AI",
-        "score": 436
-      },
-      {
-        "title": "New York Times adds more AI features to its Cooking app. Users aren't thrilled",
-        "url": "https://www.niemanlab.org/2026/10/the-new-york-times-is-adding-more-ai-features-to-its-cooking-app-and-users-arent-thrilled/",
-        "source": "Hacker News AI",
-        "score": 40
+        "score": 231
       },
       {
         "title": "Ghostty 1.4",
         "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
         "source": "Hacker News AI",
-        "score": 1302
-      },
-      {
-        "title": "AI execs may be too out of touch to build for the general public",
-        "url": "https://techcrunch.com/2026/10/28/ai-execs-may-be-too-out-of-touch-to-build-for-the-general-public/",
-        "source": "Hacker News AI",
-        "score": 22
+        "score": 1319
       },
       {
         "title": "Sleep framework: A new way for LLMs to retain knowledge in continual learning",
         "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
         "source": "Hacker News AI",
-        "score": 37
+        "score": 56
+      },
+      {
+        "title": "Oseberg Tapestry Fragments",
+        "url": "https://en.wikipedia.org/wiki/Oseberg_tapestry_fragments",
+        "source": "Hacker News AI",
+        "score": 23
+      },
+      {
+        "title": "Kentucky man becomes the first humanist granted religious exemption from AI",
+        "url": "https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/",
+        "source": "Hacker News AI",
+        "score": 458
       },
       {
         "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
         "url": "https://www.brangus.io/survival-llm",
         "source": "Hacker News AI",
-        "score": 518
-      },
-      {
-        "title": "Two high-speed trains collide near Toledo, Spain",
-        "url": "https://www.euronews.com/video/2026/10/28/spain-first-footage-reveals-wreckage-of-deadly-high-speed-train-crash",
-        "source": "Hacker News AI",
-        "score": 184
-      },
-      {
-        "title": "GitHub saw 7.4B commits in Sep., adding 4M CPU cores+160 PB storage to keep up",
-        "url": "https://thenewstack.io/github-7-4b-commits-september/",
-        "source": "Hacker News AI",
-        "score": 27
+        "score": 527
       }
     ],
     "news": [
       {
-        "title": "High-speed train crash kills at least 68 people in Spain",
-        "url": "https://www.bbc.co.uk/news/articles/c6p3g84kjqjlo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Bloodied, dazed and angry - how passengers' rail journey turned to disaster in Spain",
-        "url": "https://www.bbc.co.uk/news/articles/cm9qzd47ng98o?at_medium=RSS&at_campaign=rss",
+        "title": "Audio reveals exchanges between control centre and drivers before deadly Spain train crash",
+        "url": "https://www.bbc.co.uk/news/articles/cmqxnl312v34o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -210,22 +187,37 @@
         "source": "BBC World"
       },
       {
-        "title": "How could Israel break election deadlock? Here are four scenarios",
-        "url": "https://www.bbc.co.uk/news/articles/cm62y46d97wwo?at_medium=RSS&at_campaign=rss",
+        "title": "Elon Musk is a 'real genius', Putin says after satellite talks with SpaceX boss",
+        "url": "https://www.bbc.co.uk/news/articles/c63djl148n3eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Girl seriously injured in wolf attack at German wildlife park",
-        "url": "https://www.bbc.co.uk/news/articles/c678prm55gzzo?at_medium=RSS&at_campaign=rss",
+        "title": "Building boom puts 300,000 people in the path of potential Himalayan disasters",
+        "url": "https://www.bbc.co.uk/news/articles/c574pj3zljvjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Luxury cruise passengers stranded in Cambodia due to soaring fuel costs",
-        "url": "https://www.bbc.co.uk/news/articles/cwj342k62exyo?at_medium=RSS&at_campaign=rss",
+        "title": "Details of thousands of US immigration agents leaked in major hack",
+        "url": "https://www.bbc.co.uk/news/articles/cq8jzkpjr28vo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Death of US actress Hayden Panettiere ruled accidental, ending local police probe",
+        "url": "https://www.bbc.co.uk/news/articles/c6lylxjkkp0vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Prada's hand-drawn holiday campaign is an utter joy – and a sharp lesson for Coca-Cola ",
+        "url": "https://www.creativebloq.com/news/pradas-hand-drawn-holiday-campaign-is-an-utter-joy-and-a-sharp-lesson-for-coca-cola",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Ever wondered what goes on inside a pair of earphones? These transparent IEMs reveal all ",
+        "url": "https://www.creativebloq.com/news/ever-wondered-what-goes-on-inside-a-pair-of-earphones-these-transparent-iems-reveal-all",
+        "source": "Creative Bloq"
+      },
       {
         "title": " They did it! Sennheiser HD 480 Pro are the best closed-back headphones I’ve heard (and it's not even close) ",
         "url": "https://www.creativebloq.com/reviews/they-did-it-sennheiser-hd-480-pro-is-the-best-closed-back-headphone-ive-heard-and-its-not-even-close",
@@ -250,16 +242,6 @@
         "title": " XPPen Magic Pro 13 review: a premium Android drawing tablet for work and play ",
         "url": "https://www.creativebloq.com/reviews/xppen-magic-pro-13-review-a-premium-android-drawing-tablet-for-work-and-play",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " This 3D artist achieves incredible realism to breath life into striking character designs ",
-        "url": "https://www.creativebloq.com/inspiration/this-3d-artist-achieves-incredible-realism-to-breath-life-into-striking-character-designs",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This monitor light has brightened my mood – and it's down to $35! ",
-        "url": "https://www.creativebloq.com/news/this-monitor-light-has-lightened-my-mood-and-its-down-to-usd35",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
@@ -279,60 +261,60 @@
         "source": "Science Daily"
       },
       {
+        "title": "Your blood pressure could be dangerous even when your numbers look normal",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261027063814.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists just broke a textbook rule of physics",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261027063713.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Meteors don't just burn up. What really happens is far more violent",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261027063710.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Smaller EV batteries, longer range? Scientists may have found a way",
         "url": "https://www.sciencedaily.com/releases/2026/10/261027063708.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover a secret glow in toxic fire salamanders",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261027063707.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover a hidden reason why muscles weaken with age",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261027063704.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Antarctica’s “Doomsday Glacier” could raise sea levels twice as much as predicted",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261027063701.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
+        "title": "7 Fire Emblem: Three Houses Replay Ideas to Make Garreg Mach Feel Brand New",
+        "url": "https://www.polygon.com/fire-emblem-three-houses-replay-ideas/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Forgotten 'Peanuts' Characters That Charles Schulz Abandoned in the Comic Strip",
+        "url": "https://www.polygon.com/forgotten-peanuts-characters/",
+        "source": "Polygon"
+      },
+      {
+        "title": "This Underrated 5-Season Fantasy Series Is Basically Harry Potter for Adults",
+        "url": "https://www.polygon.com/the-magicians-fairy-tale-tv-shows/",
+        "source": "Polygon"
+      },
+      {
+        "title": "15 Years Later, the Most Near-Perfect Fast and Furious Movie Is Getting From Netflix",
+        "url": "https://www.polygon.com/fast-furious-five-leaving-netflix-november-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "9 Years Ago, Netflix Released a Rare Sci-Fi Sequel Even Better Than the Original",
+        "url": "https://www.polygon.com/9-years-ago-season-2-of-this-sci-fi-series-proved-the-first-season-wasnt-a-fluke/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Game Awards 2026: All Game of the Year Front-Runners and Predictions",
+        "url": "https://www.polygon.com/game-of-the-year-goty-game-awards-2026-frontrunners/",
+        "source": "Polygon"
+      },
+      {
         "title": "'Slow Horses' Season 7 Confirmed? Release Date, Plot, and Everything You Need to Know",
         "url": "https://www.polygon.com/slow-horses-season-7-release-date-plot/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All ribbon locations in Phantom Blade Zero",
-        "url": "https://www.polygon.com/phantom-blade-zero-ribbon-location-where-to-find-rewards/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Where to find the Flesh Lily in Phantom Blade Zero",
-        "url": "https://www.polygon.com/phantom-blade-zero-flesh-lily-location-where-to-find/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Where to find the Outpost cell key in Phantom Blade Zero",
-        "url": "https://www.polygon.com/phantom-blade-zero-cell-key-location-where-to-find-outpost-courtyard/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'A Healer's Mercy' quest walkthrough in Phantom Blade Zero",
-        "url": "https://www.polygon.com/phantom-blade-zero-a-healers-mercy-quest-walkthrough-wounded-thieves/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All medicine locations for 'Apprentice Healer' in Phantom Blade Zero",
-        "url": "https://www.polygon.com/phantom-blade-zero-medicine-herb-locations-apprentice-healer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Where to find the primal stone for 'A Severed Mindseal' in Phantom Blade Zero",
-        "url": "https://www.polygon.com/phantom-blade-zero-primal-stone-location-severed-mindseal/",
         "source": "Polygon"
       }
     ],
