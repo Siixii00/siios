@@ -1,173 +1,191 @@
 {
   "metadata": {
-    "last_updated": "2026-10-28T22:29:08.543275",
-    "total_items": 62
+    "last_updated": "2026-10-29T02:10:57.009505",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Qwenputer: A functioning, deterministic RISC-V CPU inside Qwen3.5",
+        "url": "https://divagr.com/blog/qwenputer",
+        "source": "Hacker News",
+        "score": 77
+      },
+      {
         "title": "Why is this fingerprinting script creating bioweapons?",
         "url": "https://nullpt.rs/fingerprinting-bioweapons",
         "source": "Hacker News",
-        "score": 567
+        "score": 868
       },
       {
-        "title": "Gemini 4 Carbon",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+        "title": "GitLab Security Incident: Attempted Exploitation of CVE-2026-97229",
+        "url": "https://alpinelinux.org/posts/GitLab-security-incident-CVE-2026-97229.html",
         "source": "Hacker News",
-        "score": 699
+        "score": 80
+      },
+      {
+        "title": "MicroZig to Adopt Strict No LLM / No AI Policy",
+        "url": "https://github.com/ZigEmbeddedGroup/microzig/blob/main/CODE_OF_CONDUCT.md",
+        "source": "Hacker News",
+        "score": 35
+      },
+      {
+        "title": "The first wired XR glasses powered by Android XR",
+        "url": "https://blog.google/products-and-platforms/platforms/android/xreal-aura/",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "A Health Update",
+        "url": "https://furbo.org/2026/10/28/a-health-update/",
+        "source": "Hacker News",
+        "score": 106
       },
       {
         "title": "CNC Stone Carving",
         "url": "https://carmelitegothic.com/cnc-stone-carving/",
         "source": "Hacker News",
-        "score": 353
+        "score": 406
       },
       {
-        "title": "The case of the 9 bit AES key",
-        "url": "https://v12.sh/blog/the-case-of-the-9bit-aes-key",
+        "title": "Gemini 4 Carbon",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
         "source": "Hacker News",
-        "score": 34
-      },
-      {
-        "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
-        "url": "https://surgehq.ai/blog/dayjob-tax",
-        "source": "Hacker News",
-        "score": 168
-      },
-      {
-        "title": "MacBook Pro with PROLED XDR Display and Touch",
-        "url": "https://www.apple.com/macbook-pro/proled-xdr-display/",
-        "source": "Hacker News",
-        "score": 441
-      },
-      {
-        "title": "Leak Exposes 41,000 Homeland Security Workers–Including Undercover ICE Agents",
-        "url": "https://www.wired.com/story/massive-leak-exposes-41000-homeland-security-workers-including-undercover-ice-agents/",
-        "source": "Hacker News",
-        "score": 141
+        "score": 813
       },
       {
         "title": "Formlabs Studio 1 $699 Resin Printer",
         "url": "https://formlabs.com/products/form-studio-1-basic-founders-edition/",
         "source": "Hacker News",
-        "score": 56
-      },
-      {
-        "title": "Nango (YC W23) Is Hiring Across Eng, FDE, Marketing, DevRel",
-        "url": "https://nango.dev/careers",
-        "source": "Hacker News",
-        "score": 1
+        "score": 121
       },
       {
         "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
         "url": "https://www.circuithub.com/post/unveiling-the-grid",
         "source": "Hacker News",
-        "score": 376
+        "score": 427
       },
       {
         "title": "Start Doing Graph Theory",
         "url": "https://vertex.degree/",
         "source": "Hacker News",
-        "score": 532
+        "score": 586
       },
       {
-        "title": "The tragedy of losing your Wikipedia page",
-        "url": "https://www.wired.com/story/the-tragedy-of-losing-your-wikipedia-page/",
+        "title": "MacBook Pro with PROLED XDR Display and Touch",
+        "url": "https://www.apple.com/macbook-pro/proled-xdr-display/",
         "source": "Hacker News",
-        "score": 22
+        "score": 505
+      },
+      {
+        "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
+        "url": "https://surgehq.ai/blog/dayjob-tax",
+        "source": "Hacker News",
+        "score": 203
+      },
+      {
+        "title": "How we made our MMDB files a 33% smaller",
+        "url": "https://ipinfo.io/blog/how-made-mmdb-files-smaller",
+        "source": "Hacker News",
+        "score": 13
       },
       {
         "title": "AlpineBSD",
         "url": "https://wiki.alpinebsd.org",
         "source": "Hacker News",
-        "score": 150
-      },
-      {
-        "title": "Spiders Spin 'Silk Dope' into Nature's Toughest Material",
-        "url": "https://www.quantamagazine.org/how-spiders-spin-silk-dope-into-natures-toughest-material-20261028/",
-        "source": "Hacker News",
-        "score": 30
-      },
-      {
-        "title": "Google AI gets cagey when asked who won the 2020 elections",
-        "url": "https://arstechnica.com/ai/2026/10/google-ai-gets-cagey-when-asked-who-won-the-2020-elections/",
-        "source": "Hacker News",
-        "score": 97
+        "score": 178
       }
     ],
     "ai": [
       {
+        "title": "MicroZig to Adopt Strict No LLM / No AI Policy",
+        "url": "https://github.com/ZigEmbeddedGroup/microzig/blob/main/CODE_OF_CONDUCT.md",
+        "source": "Hacker News AI",
+        "score": 35
+      },
+      {
         "title": "Gemini 4 Carbon",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
         "source": "Hacker News AI",
-        "score": 699
-      },
-      {
-        "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
-        "url": "https://surgehq.ai/blog/dayjob-tax",
-        "source": "Hacker News AI",
-        "score": 168
+        "score": 813
       },
       {
         "title": "The Grid, a factory-scale robot in Massachusetts that builds PCBs on demand",
         "url": "https://www.circuithub.com/post/unveiling-the-grid",
         "source": "Hacker News AI",
-        "score": 376
+        "score": 427
       },
       {
-        "title": "The tragedy of losing your Wikipedia page",
-        "url": "https://www.wired.com/story/the-tragedy-of-losing-your-wikipedia-page/",
+        "title": "Dayjob: Tax – evaluating AI agents on 50 professional tax assignments",
+        "url": "https://surgehq.ai/blog/dayjob-tax",
         "source": "Hacker News AI",
-        "score": 22
+        "score": 203
       },
       {
-        "title": "Google AI gets cagey when asked who won the 2020 elections",
-        "url": "https://arstechnica.com/ai/2026/10/google-ai-gets-cagey-when-asked-who-won-the-2020-elections/",
+        "title": "Image generation has come a long way since August 2022",
+        "url": "https://www.hbrooks.com/writing/image-generation-has-come-a-long-way",
         "source": "Hacker News AI",
-        "score": 97
+        "score": 36
+      },
+      {
+        "title": "Nixpkgs for the Front End Impaired",
+        "url": "https://fzakaria.com/2026/10/12/nixpkgs-for-the-frontend-impaired",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "Oseberg Tapestry Fragments",
         "url": "https://en.wikipedia.org/wiki/Oseberg_tapestry_fragments",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 18
       },
       {
         "title": "Kentucky man becomes the first humanist granted religious exemption from AI",
         "url": "https://religionnews.com/2026/10/26/in-a-first-a-humanist-granted-a-religious-exemption-from-using-ai/",
         "source": "Hacker News AI",
-        "score": 391
+        "score": 436
       },
       {
-        "title": "Meta censored the No Kings Instagram account during a nationwide campaign",
-        "url": "https://paulfwalsh.substack.com/p/meta-censored-the-no-kings-instagram",
+        "title": "New York Times adds more AI features to its Cooking app. Users aren't thrilled",
+        "url": "https://www.niemanlab.org/2026/10/the-new-york-times-is-adding-more-ai-features-to-its-cooking-app-and-users-arent-thrilled/",
         "source": "Hacker News AI",
-        "score": 147
+        "score": 40
       },
       {
         "title": "Ghostty 1.4",
         "url": "https://ghostty.org/docs/install/release-notes/1-4-0",
         "source": "Hacker News AI",
-        "score": 1277
+        "score": 1302
+      },
+      {
+        "title": "AI execs may be too out of touch to build for the general public",
+        "url": "https://techcrunch.com/2026/10/28/ai-execs-may-be-too-out-of-touch-to-build-for-the-general-public/",
+        "source": "Hacker News AI",
+        "score": 22
       },
       {
         "title": "Sleep framework: A new way for LLMs to retain knowledge in continual learning",
         "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
         "source": "Hacker News AI",
-        "score": 25
-      },
-      {
-        "title": "Two high-speed trains collide near Toledo, Spain",
-        "url": "https://www.euronews.com/video/2026/10/28/spain-first-footage-reveals-wreckage-of-deadly-high-speed-train-crash",
-        "source": "Hacker News AI",
-        "score": 169
+        "score": 37
       },
       {
         "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
         "url": "https://www.brangus.io/survival-llm",
         "source": "Hacker News AI",
-        "score": 510
+        "score": 518
+      },
+      {
+        "title": "Two high-speed trains collide near Toledo, Spain",
+        "url": "https://www.euronews.com/video/2026/10/28/spain-first-footage-reveals-wreckage-of-deadly-high-speed-train-crash",
+        "source": "Hacker News AI",
+        "score": 184
+      },
+      {
+        "title": "GitHub saw 7.4B commits in Sep., adding 4M CPU cores+160 PB storage to keep up",
+        "url": "https://thenewstack.io/github-7-4b-commits-september/",
+        "source": "Hacker News AI",
+        "score": 27
       }
     ],
     "news": [
@@ -283,38 +301,38 @@
     ],
     "gaming": [
       {
-        "title": "The best Han 86 build in Modern Warfare 4",
-        "url": "https://www.polygon.com/mw4-modern-warfare-4-han-86-build-loadout-class-best/",
+        "title": "'Slow Horses' Season 7 Confirmed? Release Date, Plot, and Everything You Need to Know",
+        "url": "https://www.polygon.com/slow-horses-season-7-release-date-plot/",
         "source": "Polygon"
       },
       {
-        "title": "The Case Against Larian Saving Dragon Age, No Matter How Tempting It Sounds",
-        "url": "https://www.polygon.com/larian-dragon-age-takeover-bad-idea/",
+        "title": "All ribbon locations in Phantom Blade Zero",
+        "url": "https://www.polygon.com/phantom-blade-zero-ribbon-location-where-to-find-rewards/",
         "source": "Polygon"
       },
       {
-        "title": "BG3 Owes Everything to One Underrated 2009 BioWare RPG",
-        "url": "https://www.polygon.com/dragon-age-origins-baldurs-gate-3-underrated/",
+        "title": "Where to find the Flesh Lily in Phantom Blade Zero",
+        "url": "https://www.polygon.com/phantom-blade-zero-flesh-lily-location-where-to-find/",
         "source": "Polygon"
       },
       {
-        "title": "Backrooms Director Teases Next Dream Projects — Is Portal One of Them?",
-        "url": "https://www.polygon.com/backrooms-director-kane-parsons-portal-movie-valve-rumors/",
+        "title": "Where to find the Outpost cell key in Phantom Blade Zero",
+        "url": "https://www.polygon.com/phantom-blade-zero-cell-key-location-where-to-find-outpost-courtyard/",
         "source": "Polygon"
       },
       {
-        "title": "Resident Evil Lead Teases Series’ ‘Conclusion’ Coming In the Next 10 Years",
-        "url": "https://www.polygon.com/resident-evil-capcom-horror-could-end-soon/",
+        "title": "'A Healer's Mercy' quest walkthrough in Phantom Blade Zero",
+        "url": "https://www.polygon.com/phantom-blade-zero-a-healers-mercy-quest-walkthrough-wounded-thieves/",
         "source": "Polygon"
       },
       {
-        "title": "Modern Warfare 4’s Multiplayer Is the Best Call of Duty Has Been in 7 Years",
-        "url": "https://www.polygon.com/mw4-modern-warfare-4-multiplayer-review/",
+        "title": "All medicine locations for 'Apprentice Healer' in Phantom Blade Zero",
+        "url": "https://www.polygon.com/phantom-blade-zero-medicine-herb-locations-apprentice-healer/",
         "source": "Polygon"
       },
       {
-        "title": "How to get Tifa and Barret's outfits in FFXIV",
-        "url": "https://www.polygon.com/ffxiv-tifa-barret-outfit-glamour-how-to-get-ff7-remake-event/",
+        "title": "Where to find the primal stone for 'A Severed Mindseal' in Phantom Blade Zero",
+        "url": "https://www.polygon.com/phantom-blade-zero-primal-stone-location-severed-mindseal/",
         "source": "Polygon"
       }
     ],
