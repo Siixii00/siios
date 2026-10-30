@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-29T21:35:35.203897",
-    "total_items": 63
+    "last_updated": "2026-10-30T01:38:12.212241",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Binance-hacker-1029 – $5.6B stolen from Binance",
+        "url": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
+        "source": "Hacker News",
+        "score": 700
+      },
+      {
         "title": "We're releasing the weights of Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4-oss/",
         "source": "Hacker News",
-        "score": 1006
+        "score": 1196
       },
       {
-        "title": "Alleged Chinese spy had 'close relationship' with Nvidia boss Jensen Huang",
-        "url": "https://nypost.com/2026/10/29/business/alleged-chinese-spy-had-close-relationship-with-nvidia-boss-jensen-huang-report/",
+        "title": "We ran AI agent swarms in Minecraft and Mindustry",
+        "url": "https://labs.ycombinator.com/projects/games/index.html",
         "source": "Hacker News",
-        "score": 191
+        "score": 151
       },
       {
-        "title": "Patrick Stewart has died",
-        "url": "https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html",
+        "title": "El Niño Is Flooding California's Coasts with the Highest Tides to Come",
+        "url": "https://gizmodo.com/el-nino-is-already-flooding-californias-coasts-and-the-years-highest-tides-havent-arrived-2000832574",
         "source": "Hacker News",
-        "score": 1489
+        "score": 81
       },
       {
         "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
         "url": "https://github.com/SheepSeb/tinyworldformer",
         "source": "Hacker News",
-        "score": 36
+        "score": 123
+      },
+      {
+        "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014)",
+        "url": "https://journal.animationstudies.org/article/id/66/",
+        "source": "Hacker News",
+        "score": 43
+      },
+      {
+        "title": "Show HN: I Turned DOOM into a Transformer",
+        "url": "https://github.com/mottopanikeiku/doomformer",
+        "source": "Hacker News",
+        "score": 31
       },
       {
         "title": "H.264 Is Magic (2016)",
         "url": "https://sidbala.com/h-264-is-magic/",
         "source": "Hacker News",
-        "score": 250
+        "score": 330
       },
       {
-        "title": "Show HN: Auto Dismiss Mac OS \"Allow <app> to find devices on local networks?\"",
-        "url": "https://github.com/johncassil/dontallow",
+        "title": "The Great American Rascal: Tom Sawyer at 150",
+        "url": "https://claremontreviewofbooks.com/the-great-american-rascal/",
         "source": "Hacker News",
-        "score": 54
+        "score": 39
       },
       {
-        "title": "The importance of communities around software",
-        "url": "https://lumi.codeberg.page/blog/software-community.html",
+        "title": "Patrick Stewart has died",
+        "url": "https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html",
         "source": "Hacker News",
-        "score": 62
+        "score": 2386
       },
       {
-        "title": "Claude Duet is the future of chatbot interaction",
-        "url": "https://fig.blue/posts/duet-is-the-future/",
+        "title": "Cormac McCarthy's Library",
+        "url": "https://cormacmccarthy.lib.utk.edu/",
         "source": "Hacker News",
-        "score": 54
+        "score": 8
       },
       {
         "title": "DoorDash to acquire Instacart",
         "url": "https://about.doordash.com/en-us/news/doordash-to-acquire-instacart",
         "source": "Hacker News",
-        "score": 355
+        "score": 419
       },
       {
         "title": "LLM Voice",
         "url": "https://martinfowler.com/bliki/LLM-Voice.html",
         "source": "Hacker News",
-        "score": 272
+        "score": 339
       },
       {
-        "title": "Show HN: A proof-of-concept formalization of the IRS federal tax forms",
-        "url": "https://github.com/emmilco/us-tax-model",
+        "title": "ElementaryUI – Swift, in the Browser",
+        "url": "https://elementary.codes",
         "source": "Hacker News",
-        "score": 36
+        "score": 57
       },
       {
-        "title": "IgE disruptor for food allergy with Claude-enabled antibody design [pdf]",
-        "url": "https://divergencelabs.com/publications/ige-preprint.pdf",
+        "title": "Sylphide OS: a general-purpose OS for microcontroller-based computers",
+        "url": "https://projects.freehackers.org/sylphide-os/",
         "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "Edit an SQLite database in your browser",
-        "url": "https://editsqlite.com/",
-        "source": "Hacker News",
-        "score": 53
-      },
-      {
-        "title": "After 28 years walking across the globe, he's almost home",
-        "url": "https://www.nytimes.com/2026/10/29/world/europe/karl-bushby-walking-globe-uk.html",
-        "source": "Hacker News",
-        "score": 74
-      },
-      {
-        "title": "Chained PHP2Shell exploit roots 25 servers, including US Government servers",
-        "url": "https://dreamgroup.com/blog/chained-php2shell-exploit-roots-25-servers",
-        "source": "Hacker News",
-        "score": 246
+        "score": 38
       }
     ],
     "ai": [
@@ -101,85 +101,107 @@
         "title": "We're releasing the weights of Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4-oss/",
         "source": "Hacker News AI",
-        "score": 1006
+        "score": 1196
       },
       {
-        "title": "Claude Duet is the future of chatbot interaction",
-        "url": "https://fig.blue/posts/duet-is-the-future/",
+        "title": "We ran AI agent swarms in Minecraft and Mindustry",
+        "url": "https://labs.ycombinator.com/projects/games/index.html",
         "source": "Hacker News AI",
-        "score": 54
+        "score": 151
+      },
+      {
+        "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014)",
+        "url": "https://journal.animationstudies.org/article/id/66/",
+        "source": "Hacker News AI",
+        "score": 43
+      },
+      {
+        "title": "Show HN: I Turned DOOM into a Transformer",
+        "url": "https://github.com/mottopanikeiku/doomformer",
+        "source": "Hacker News AI",
+        "score": 31
       },
       {
         "title": "LLM Voice",
         "url": "https://martinfowler.com/bliki/LLM-Voice.html",
         "source": "Hacker News AI",
-        "score": 272
-      },
-      {
-        "title": "IgE disruptor for food allergy with Claude-enabled antibody design [pdf]",
-        "url": "https://divergencelabs.com/publications/ige-preprint.pdf",
-        "source": "Hacker News AI",
-        "score": 23
+        "score": 339
       },
       {
         "title": "Chained PHP2Shell exploit roots 25 servers, including US Government servers",
         "url": "https://dreamgroup.com/blog/chained-php2shell-exploit-roots-25-servers",
         "source": "Hacker News AI",
-        "score": 246
+        "score": 286
       },
       {
-        "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
-        "url": "https://news.ycombinator.com/item?id=50291116",
+        "title": "IgE disruptor for food allergy with Claude-enabled antibody design [pdf]",
+        "url": "https://divergencelabs.com/publications/ige-preprint.pdf",
         "source": "Hacker News AI",
-        "score": 39
+        "score": 38
       },
       {
-        "title": "Zombie stats: Where the numbers AI quotes come from",
-        "url": "https://trakkr.ai/trakkr-research/zombie-stats",
+        "title": "Partitioning my digital life into security domains (2011)",
+        "url": "https://blog.invisiblethings.org/2011/03/13/partitioning-my-digital-life-into.html",
         "source": "Hacker News AI",
-        "score": 121
+        "score": 27
       },
       {
         "title": "What we know so far about Spain train crash",
         "url": "https://www.bbc.com/news/articles/cm8xz7pkd0jjo",
         "source": "Hacker News AI",
-        "score": 118
+        "score": 156
+      },
+      {
+        "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
+        "url": "https://news.ycombinator.com/item?id=50291116",
+        "source": "Hacker News AI",
+        "score": 50
+      },
+      {
+        "title": "Zombie stats: Where the numbers AI quotes come from",
+        "url": "https://trakkr.ai/trakkr-research/zombie-stats",
+        "source": "Hacker News AI",
+        "score": 141
       },
       {
         "title": "The tragedy of losing your Wikipedia page",
         "url": "https://www.wired.com/story/the-tragedy-of-losing-your-wikipedia-page/",
         "source": "Hacker News AI",
-        "score": 47
+        "score": 53
       },
       {
-        "title": "Over $5B drained from Binance in apparent hack",
-        "url": "http://twitter.com/emmettgallic/status/2115916025774723210",
+        "title": "Claude Duet is the first personal-assistant-type harness that feels useful",
+        "url": "https://fig.blue/posts/duet-is-the-future/",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 104
       },
       {
-        "title": "Archive Of Our Own down for maintenance for 2 to 4 weeks",
-        "url": "https://www.otwstatus.org/incidents/g12jnxck9g6h",
+        "title": "Open-weight AI models can exploit the patch gap",
+        "url": "https://epoch.ai/publications/open-weight-models-patch-gap",
         "source": "Hacker News AI",
-        "score": 38
+        "score": 10
       },
       {
-        "title": "Everything Rhymes with Porcelain",
-        "url": "https://worksinprogress.co/issue/everything-rhymes-with-porcelain/",
+        "title": "Google value plunges by $500B as AI fears rattle Wall Street",
+        "url": "https://www.bbc.com/news/articles/cm9qzdqpxy48o",
         "source": "Hacker News AI",
-        "score": 18
-      },
-      {
-        "title": "Polymarket Halted International Trading After Hackers Drained Accounts",
-        "url": "https://www.wired.com/story/polymarket-flagship-platform-hack-traders-lose-money/",
-        "source": "Hacker News AI",
-        "score": 5
+        "score": 33
       }
     ],
     "news": [
       {
+        "title": "Israeli opposition accuses Netanyahu of trying to 'delegitimise' election",
+        "url": "https://www.bbc.co.uk/news/articles/ckdd8qdl9e0eo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Audio reveals exchanges between Spain train operators and drivers moments before deadly crash",
         "url": "https://www.bbc.co.uk/news/articles/cmqxnl312v34o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "'The city is alive': A brief peace in Kherson, but residents fear what comes next",
+        "url": "https://www.bbc.co.uk/news/articles/ck1l393pyrylo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -198,18 +220,8 @@
         "source": "BBC World"
       },
       {
-        "title": "'The city is alive': A brief peace in Kherson, but residents fear what comes next",
-        "url": "https://www.bbc.co.uk/news/articles/ck1l393pyrylo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "EU chief lays out vision for new Canada partnership at Montreal summit",
         "url": "https://www.bbc.co.uk/news/articles/cq8ezj7jylrzo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Netanyahu's bloc leading Israel election but short of majority, partial results show",
-        "url": "https://www.bbc.co.uk/news/articles/cmdx3knq1xexo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
