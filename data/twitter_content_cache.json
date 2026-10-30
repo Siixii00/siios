@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-30T01:38:12.212241",
-    "total_items": 65
+    "last_updated": "2026-10-30T08:12:09.399581",
+    "total_items": 60
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Binance-hacker-1029 – $5.6B stolen from Binance",
         "url": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
         "source": "Hacker News",
-        "score": 700
+        "score": 1217
       },
       {
         "title": "We're releasing the weights of Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4-oss/",
         "source": "Hacker News",
-        "score": 1196
+        "score": 1401
+      },
+      {
+        "title": "Cuis: The Modern Smalltalk-80",
+        "url": "https://cuis.st/",
+        "source": "Hacker News",
+        "score": 89
+      },
+      {
+        "title": "Astroterm: A Planetarium for Your Terminal",
+        "url": "https://github.com/da-luce/astroterm",
+        "source": "Hacker News",
+        "score": 107
+      },
+      {
+        "title": "I'm so bad at billiards that I ended up in the hyperbolic plane [video]",
+        "url": "https://www.youtube.com/watch?v=kL9BTbIGxLg",
+        "source": "Hacker News",
+        "score": 103
+      },
+      {
+        "title": "Herdr has released native app",
+        "url": "https://github.com/herdrdev/herdr-app",
+        "source": "Hacker News",
+        "score": 161
       },
       {
         "title": "We ran AI agent swarms in Minecraft and Mindustry",
         "url": "https://labs.ycombinator.com/projects/games/index.html",
         "source": "Hacker News",
-        "score": 151
+        "score": 262
       },
       {
-        "title": "El Niño Is Flooding California's Coasts with the Highest Tides to Come",
-        "url": "https://gizmodo.com/el-nino-is-already-flooding-californias-coasts-and-the-years-highest-tides-havent-arrived-2000832574",
+        "title": "Wasmer (YC S19) Is Hiring OS/Hypervisor Experts in Europe",
+        "url": "https://www.workatastartup.com/jobs/98722",
         "source": "Hacker News",
-        "score": 81
+        "score": 1
       },
       {
         "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
         "url": "https://github.com/SheepSeb/tinyworldformer",
         "source": "Hacker News",
-        "score": 123
-      },
-      {
-        "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014)",
-        "url": "https://journal.animationstudies.org/article/id/66/",
-        "source": "Hacker News",
-        "score": 43
+        "score": 194
       },
       {
         "title": "Show HN: I Turned DOOM into a Transformer",
         "url": "https://github.com/mottopanikeiku/doomformer",
         "source": "Hacker News",
-        "score": 31
+        "score": 80
       },
       {
         "title": "H.264 Is Magic (2016)",
         "url": "https://sidbala.com/h-264-is-magic/",
         "source": "Hacker News",
-        "score": 330
-      },
-      {
-        "title": "The Great American Rascal: Tom Sawyer at 150",
-        "url": "https://claremontreviewofbooks.com/the-great-american-rascal/",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Patrick Stewart has died",
-        "url": "https://www.nytimes.com/2026/10/29/arts/television/patrick-stewart-dead.html",
-        "source": "Hacker News",
-        "score": 2386
-      },
-      {
-        "title": "Cormac McCarthy's Library",
-        "url": "https://cormacmccarthy.lib.utk.edu/",
-        "source": "Hacker News",
-        "score": 8
-      },
-      {
-        "title": "DoorDash to acquire Instacart",
-        "url": "https://about.doordash.com/en-us/news/doordash-to-acquire-instacart",
-        "source": "Hacker News",
-        "score": 419
+        "score": 403
       },
       {
         "title": "LLM Voice",
         "url": "https://martinfowler.com/bliki/LLM-Voice.html",
         "source": "Hacker News",
-        "score": 339
+        "score": 449
       },
       {
-        "title": "ElementaryUI – Swift, in the Browser",
-        "url": "https://elementary.codes",
+        "title": "Python on My Wrist",
+        "url": "https://tildeweb.nl/~michiel/python-on-my-wrist.html",
         "source": "Hacker News",
-        "score": 57
+        "score": 35
       },
       {
-        "title": "Sylphide OS: a general-purpose OS for microcontroller-based computers",
-        "url": "https://projects.freehackers.org/sylphide-os/",
+        "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014)",
+        "url": "https://journal.animationstudies.org/article/id/66/",
         "source": "Hacker News",
-        "score": 38
+        "score": 111
+      },
+      {
+        "title": "Pico CSS is no longer maintained",
+        "url": "https://github.com/picocss/pico/discussions/754",
+        "source": "Hacker News",
+        "score": 112
       }
     ],
     "ai": [
@@ -101,102 +101,88 @@
         "title": "We're releasing the weights of Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4-oss/",
         "source": "Hacker News AI",
-        "score": 1196
+        "score": 1401
       },
       {
         "title": "We ran AI agent swarms in Minecraft and Mindustry",
         "url": "https://labs.ycombinator.com/projects/games/index.html",
         "source": "Hacker News AI",
-        "score": 151
-      },
-      {
-        "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014)",
-        "url": "https://journal.animationstudies.org/article/id/66/",
-        "source": "Hacker News AI",
-        "score": 43
+        "score": 262
       },
       {
         "title": "Show HN: I Turned DOOM into a Transformer",
         "url": "https://github.com/mottopanikeiku/doomformer",
         "source": "Hacker News AI",
-        "score": 31
+        "score": 80
       },
       {
         "title": "LLM Voice",
         "url": "https://martinfowler.com/bliki/LLM-Voice.html",
         "source": "Hacker News AI",
-        "score": 339
+        "score": 449
       },
       {
-        "title": "Chained PHP2Shell exploit roots 25 servers, including US Government servers",
-        "url": "https://dreamgroup.com/blog/chained-php2shell-exploit-roots-25-servers",
+        "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014)",
+        "url": "https://journal.animationstudies.org/article/id/66/",
         "source": "Hacker News AI",
-        "score": 286
+        "score": 111
       },
       {
-        "title": "IgE disruptor for food allergy with Claude-enabled antibody design [pdf]",
-        "url": "https://divergencelabs.com/publications/ige-preprint.pdf",
+        "title": "Pico CSS is no longer maintained",
+        "url": "https://github.com/picocss/pico/discussions/754",
         "source": "Hacker News AI",
-        "score": 38
-      },
-      {
-        "title": "Partitioning my digital life into security domains (2011)",
-        "url": "https://blog.invisiblethings.org/2011/03/13/partitioning-my-digital-life-into.html",
-        "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "What we know so far about Spain train crash",
-        "url": "https://www.bbc.com/news/articles/cm8xz7pkd0jjo",
-        "source": "Hacker News AI",
-        "score": 156
+        "score": 112
       },
       {
         "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
         "url": "https://news.ycombinator.com/item?id=50291116",
         "source": "Hacker News AI",
-        "score": 50
+        "score": 66
+      },
+      {
+        "title": "What we know so far about Spain train crash",
+        "url": "https://www.bbc.com/news/articles/cm8xz7pkd0jjo",
+        "source": "Hacker News AI",
+        "score": 184
       },
       {
         "title": "Zombie stats: Where the numbers AI quotes come from",
         "url": "https://trakkr.ai/trakkr-research/zombie-stats",
         "source": "Hacker News AI",
-        "score": 141
+        "score": 159
+      },
+      {
+        "title": "IgE disruptor for food allergy with Claude-enabled antibody design [pdf]",
+        "url": "https://divergencelabs.com/publications/ige-preprint.pdf",
+        "source": "Hacker News AI",
+        "score": 46
       },
       {
         "title": "The tragedy of losing your Wikipedia page",
         "url": "https://www.wired.com/story/the-tragedy-of-losing-your-wikipedia-page/",
         "source": "Hacker News AI",
-        "score": 53
-      },
-      {
-        "title": "Claude Duet is the first personal-assistant-type harness that feels useful",
-        "url": "https://fig.blue/posts/duet-is-the-future/",
-        "source": "Hacker News AI",
-        "score": 104
-      },
-      {
-        "title": "Open-weight AI models can exploit the patch gap",
-        "url": "https://epoch.ai/publications/open-weight-models-patch-gap",
-        "source": "Hacker News AI",
-        "score": 10
-      },
-      {
-        "title": "Google value plunges by $500B as AI fears rattle Wall Street",
-        "url": "https://www.bbc.com/news/articles/cm9qzdqpxy48o",
-        "source": "Hacker News AI",
-        "score": 33
+        "score": 57
       }
     ],
     "news": [
       {
-        "title": "Israeli opposition accuses Netanyahu of trying to 'delegitimise' election",
-        "url": "https://www.bbc.co.uk/news/articles/ckdd8qdl9e0eo?at_medium=RSS&at_campaign=rss",
+        "title": "Crypto giant Binance hit by $6.3bn hack suspected to be largest in history",
+        "url": "https://www.bbc.co.uk/news/articles/cwg7xp8kx4v5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Audio reveals exchanges between Spain train operators and drivers moments before deadly crash",
-        "url": "https://www.bbc.co.uk/news/articles/cmqxnl312v34o?at_medium=RSS&at_campaign=rss",
+        "title": "Mushroom murderer fails to overturn convictions in Australian court challenge",
+        "url": "https://www.bbc.co.uk/news/articles/ck8dz8j5n993o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Record number of purges as Xi emphasises 'party discipline' at China political gathering",
+        "url": "https://www.bbc.co.uk/news/articles/cq5ynw94k7kzo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "How Kenyans got caught in $130m US ghost student scam",
+        "url": "https://www.bbc.co.uk/news/articles/cxvgdzpy7241o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -205,27 +191,17 @@
         "source": "BBC World"
       },
       {
-        "title": "Russian drone attack on Ukrainian train station kills at least 14, officials say",
-        "url": "https://www.bbc.co.uk/news/articles/c9p8gdlz1p2ko?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Flávio Bolsonaro calls himself 'leader of Brazil' after election loss",
-        "url": "https://www.bbc.co.uk/news/articles/c3x2w4109pj8o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Philippine police obtain warrant to search Thomas Markle's devices",
-        "url": "https://www.bbc.co.uk/news/articles/cm0j06y3pn75o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "EU chief lays out vision for new Canada partnership at Montreal summit",
-        "url": "https://www.bbc.co.uk/news/articles/cq8ezj7jylrzo?at_medium=RSS&at_campaign=rss",
+        "title": "Hyrox athlete who soiled herself in race tells BBC she put others at risk but backlash was traumatic",
+        "url": "https://www.bbc.co.uk/news/articles/c6gr8l15k744o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The Dunu Vitruvian promises DaVinci’s JM-1 warmth, trading low end for top-end sparkle ",
+        "url": "https://www.creativebloq.com/news/the-dunu-vitruvian-promises-davincis-jm-1-warmth-trading-low-end-for-top-end-sparkle",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Apple’s touchscreen MacBook Pro makes more sense than you might think ",
         "url": "https://www.creativebloq.com/news/apples-touchscreen-macbook-pro-makes-more-sense-than-you-might-think",
@@ -254,11 +230,6 @@
       {
         "title": " Maxon teases another AI tool, and artists aren't happy, despite not knowing what it does yet ",
         "url": "https://www.creativebloq.com/news/maxon-teases-another-ai-tool-and-artists-arent-happy-despite-not-knowing-what-it-does-yet",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple is finally embracing chaos and I’m here for it ",
-        "url": "https://www.creativebloq.com/news/apple-is-finally-embracing-chaos-and-im-here-for-it",
         "source": "Creative Bloq"
       }
     ],
@@ -301,6 +272,16 @@
     ],
     "gaming": [
       {
+        "title": "34 Years Later, Hobbes' Wisest 'Calvin and Hobbes' Line Is Still a Perfect Comic Strip Quote",
+        "url": "https://www.polygon.com/wisdom-hobbes-watterson/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Essential Fantasy Books You Need to Read at Least Once in Your Life",
+        "url": "https://www.polygon.com/fantasy-books-you-need-to-read-at-least-once-in-your-life/",
+        "source": "Polygon"
+      },
+      {
         "title": "Official The Elder Scrolls 6 Announcement Imminent, Report Says",
         "url": "https://www.polygon.com/the-elder-scrolls-6-sentinel-news-tes6-skyrim-anniversary-bethesda/",
         "source": "Polygon"
@@ -323,16 +304,6 @@
       {
         "title": "Square Enix should never make a Final Fantasy game without turn-based combat again",
         "url": "https://www.polygon.com/final-fantasy-resonance-blueprint-for-new-ff-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Star Trek and X-Men Icon Patrick Stewart Dies at 86",
-        "url": "https://www.polygon.com/patrick-stewart-dies-star-trek-x-men/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Whence the Weeping' quest walkthrough in Phantom Blade Zero",
-        "url": "https://www.polygon.com/phantom-blade-zero-whence-the-weeping-quest-walkthrough/",
         "source": "Polygon"
       }
     ],
