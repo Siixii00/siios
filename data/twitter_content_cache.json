@@ -1,202 +1,244 @@
 {
   "metadata": {
-    "last_updated": "2026-10-30T08:12:09.399581",
-    "total_items": 60
+    "last_updated": "2026-10-30T15:38:49.090676",
+    "total_items": 56
   },
   "content": {
     "tech": [
       {
+        "title": "elect.horse",
+        "url": "https://elect.horse/",
+        "source": "Hacker News",
+        "score": 445
+      },
+      {
+        "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+        "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+        "source": "Hacker News",
+        "score": 215
+      },
+      {
+        "title": "Azure's Weakest Link – Five Full Cross-Tenant Compromises",
+        "url": "https://www.binarysecurity.no/posts/2026/10/one-root-case",
+        "source": "Hacker News",
+        "score": 148
+      },
+      {
+        "title": "US Reps Lead Democratic Resolution Opposing A.I. Bubble Bailout for Big Tech",
+        "url": "https://progressives.house.gov/2026/10/reps-casar-waters-lead-democratic-resolution-opposing-a-i-bubble-bailout-for-big-tech-commit-to-protecting-american-people-instead",
+        "source": "Hacker News",
+        "score": 367
+      },
+      {
+        "title": "Northflank Breached",
+        "url": "https://status.northflank.com",
+        "source": "Hacker News",
+        "score": 12
+      },
+      {
+        "title": "Medicare Will Pay $50k for Your Heart Attack. It Should Pay $100 to Prevent It",
+        "url": "https://www.medpagetoday.com/opinion/second-opinions/123553?trw=no",
+        "source": "Hacker News",
+        "score": 63
+      },
+      {
         "title": "Binance-hacker-1029 – $5.6B stolen from Binance",
         "url": "https://arkm.com/explorer/entity/21a94755-f604-45e5-9501-6542e23005e8",
         "source": "Hacker News",
-        "score": 1217
+        "score": 1637
       },
       {
         "title": "We're releasing the weights of Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4-oss/",
         "source": "Hacker News",
-        "score": 1401
+        "score": 1624
       },
       {
-        "title": "Cuis: The Modern Smalltalk-80",
-        "url": "https://cuis.st/",
+        "title": "5-MeO-DMT sometimes cancels the Ebbinghaus illusion",
+        "url": "https://psychotechnology.substack.com/p/5-meo-dmt-sometimes-cancels-the-ebbinghaus",
         "source": "Hacker News",
-        "score": 89
+        "score": 23
       },
       {
-        "title": "Astroterm: A Planetarium for Your Terminal",
-        "url": "https://github.com/da-luce/astroterm",
+        "title": "The $6.3B Binance Hack Was Pulled Off in Just 20 Minutes",
+        "url": "https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/",
         "source": "Hacker News",
-        "score": 107
+        "score": 126
       },
       {
-        "title": "I'm so bad at billiards that I ended up in the hyperbolic plane [video]",
-        "url": "https://www.youtube.com/watch?v=kL9BTbIGxLg",
+        "title": "Finding Panics with Call Graph Analyzer",
+        "url": "https://tweedegolf.nl/en/blog/242/finding-panics-with-call-graph-analyzer/",
         "source": "Hacker News",
-        "score": 103
+        "score": 29
+      },
+      {
+        "title": "Gilgamesh by Simon Armitage review – an ancient epic is brilliantly translated",
+        "url": "https://www.theguardian.com/books/2026/oct/20/gilgamesh-by-simon-armitage-review-an-ancient-epic-is-brilliantly-translated-for-our-times",
+        "source": "Hacker News",
+        "score": 131
+      },
+      {
+        "title": "Why a program doesn't work when run from a batch file, but works when clicked",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20261026-00/?p=112797/",
+        "source": "Hacker News",
+        "score": 77
       },
       {
         "title": "Herdr has released native app",
         "url": "https://github.com/herdrdev/herdr-app",
         "source": "Hacker News",
-        "score": 161
+        "score": 300
       },
       {
-        "title": "We ran AI agent swarms in Minecraft and Mindustry",
-        "url": "https://labs.ycombinator.com/projects/games/index.html",
+        "title": "Commodore 1600 VICmodem",
+        "url": "https://dfarq.homeip.net/commodore-1600-vicmodem/",
         "source": "Hacker News",
-        "score": 262
-      },
-      {
-        "title": "Wasmer (YC S19) Is Hiring OS/Hypervisor Experts in Europe",
-        "url": "https://www.workatastartup.com/jobs/98722",
-        "source": "Hacker News",
-        "score": 1
-      },
-      {
-        "title": "A tiny world model running games on a Raspberry Pi Pico 2 W",
-        "url": "https://github.com/SheepSeb/tinyworldformer",
-        "source": "Hacker News",
-        "score": 194
-      },
-      {
-        "title": "Show HN: I Turned DOOM into a Transformer",
-        "url": "https://github.com/mottopanikeiku/doomformer",
-        "source": "Hacker News",
-        "score": 80
-      },
-      {
-        "title": "H.264 Is Magic (2016)",
-        "url": "https://sidbala.com/h-264-is-magic/",
-        "source": "Hacker News",
-        "score": 403
-      },
-      {
-        "title": "LLM Voice",
-        "url": "https://martinfowler.com/bliki/LLM-Voice.html",
-        "source": "Hacker News",
-        "score": 449
-      },
-      {
-        "title": "Python on My Wrist",
-        "url": "https://tildeweb.nl/~michiel/python-on-my-wrist.html",
-        "source": "Hacker News",
-        "score": 35
-      },
-      {
-        "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014)",
-        "url": "https://journal.animationstudies.org/article/id/66/",
-        "source": "Hacker News",
-        "score": 111
-      },
-      {
-        "title": "Pico CSS is no longer maintained",
-        "url": "https://github.com/picocss/pico/discussions/754",
-        "source": "Hacker News",
-        "score": 112
+        "score": 23
       }
     ],
     "ai": [
       {
+        "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+        "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+        "source": "Hacker News AI",
+        "score": 215
+      },
+      {
+        "title": "US Reps Lead Democratic Resolution Opposing A.I. Bubble Bailout for Big Tech",
+        "url": "https://progressives.house.gov/2026/10/reps-casar-waters-lead-democratic-resolution-opposing-a-i-bubble-bailout-for-big-tech-commit-to-protecting-american-people-instead",
+        "source": "Hacker News AI",
+        "score": 367
+      },
+      {
         "title": "We're releasing the weights of Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4-oss/",
         "source": "Hacker News AI",
-        "score": 1401
+        "score": 1624
       },
       {
         "title": "We ran AI agent swarms in Minecraft and Mindustry",
         "url": "https://labs.ycombinator.com/projects/games/index.html",
         "source": "Hacker News AI",
-        "score": 262
+        "score": 359
       },
       {
-        "title": "Show HN: I Turned DOOM into a Transformer",
-        "url": "https://github.com/mottopanikeiku/doomformer",
+        "title": "Neal Stephenson on AI and What Comes Next [video]",
+        "url": "https://www.youtube.com/watch?v=Ii-aeW5pHPQ",
         "source": "Hacker News AI",
-        "score": 80
+        "score": 16
       },
       {
         "title": "LLM Voice",
         "url": "https://martinfowler.com/bliki/LLM-Voice.html",
         "source": "Hacker News AI",
-        "score": 449
+        "score": 547
       },
       {
-        "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014)",
-        "url": "https://journal.animationstudies.org/article/id/66/",
+        "title": "Show HN: I Turned DOOM into a Transformer",
+        "url": "https://github.com/mottopanikeiku/doomformer",
         "source": "Hacker News AI",
-        "score": 111
-      },
-      {
-        "title": "Pico CSS is no longer maintained",
-        "url": "https://github.com/picocss/pico/discussions/754",
-        "source": "Hacker News AI",
-        "score": 112
+        "score": 120
       },
       {
         "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
         "url": "https://news.ycombinator.com/item?id=50291116",
         "source": "Hacker News AI",
-        "score": 66
+        "score": 75
       },
       {
         "title": "What we know so far about Spain train crash",
         "url": "https://www.bbc.com/news/articles/cm8xz7pkd0jjo",
         "source": "Hacker News AI",
-        "score": 184
+        "score": 235
+      },
+      {
+        "title": "British intelligence misplaced 1000s of storage devices still can't say how many",
+        "url": "https://www.theregister.com/security/2026/10/30/british-intelligence-agency-misplaced-thousands-of-storage-devices-years-later-still-cant-say-how-many/5306605",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "A Pig, the State, and War: Porco Rosso (Kurenai No Buta) (2014)",
+        "url": "https://journal.animationstudies.org/article/id/66/",
+        "source": "Hacker News AI",
+        "score": 137
+      },
+      {
+        "title": "Pico CSS is no longer maintained",
+        "url": "https://github.com/picocss/pico/discussions/754",
+        "source": "Hacker News AI",
+        "score": 177
       },
       {
         "title": "Zombie stats: Where the numbers AI quotes come from",
         "url": "https://trakkr.ai/trakkr-research/zombie-stats",
         "source": "Hacker News AI",
-        "score": 159
-      },
-      {
-        "title": "IgE disruptor for food allergy with Claude-enabled antibody design [pdf]",
-        "url": "https://divergencelabs.com/publications/ige-preprint.pdf",
-        "source": "Hacker News AI",
-        "score": 46
-      },
-      {
-        "title": "The tragedy of losing your Wikipedia page",
-        "url": "https://www.wired.com/story/the-tragedy-of-losing-your-wikipedia-page/",
-        "source": "Hacker News AI",
-        "score": 57
+        "score": 172
       }
     ],
     "news": [
       {
-        "title": "Crypto giant Binance hit by $6.3bn hack suspected to be largest in history",
-        "url": "https://www.bbc.co.uk/news/articles/cwg7xp8kx4v5o?at_medium=RSS&at_campaign=rss",
+        "title": "US inmate Christa Pike says she woke up 'confused and in pain' after failed execution",
+        "url": "https://www.bbc.co.uk/news/articles/ck62ydn7dj9eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Mushroom murderer fails to overturn convictions in Australian court challenge",
-        "url": "https://www.bbc.co.uk/news/articles/ck8dz8j5n993o?at_medium=RSS&at_campaign=rss",
+        "title": "Residents leave devastated Russian-occupied Oleshky as evacuation corridor opens",
+        "url": "https://www.bbc.co.uk/news/articles/c60me298k1yeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Record number of purges as Xi emphasises 'party discipline' at China political gathering",
-        "url": "https://www.bbc.co.uk/news/articles/cq5ynw94k7kzo?at_medium=RSS&at_campaign=rss",
+        "title": "Prominent Russian newspaper shuts down under pressure from authorities",
+        "url": "https://www.bbc.co.uk/news/articles/cmewepdr109do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "How Kenyans got caught in $130m US ghost student scam",
-        "url": "https://www.bbc.co.uk/news/articles/cxvgdzpy7241o?at_medium=RSS&at_campaign=rss",
+        "title": "Spain transport minister says he won't resign over high-speed rail disaster",
+        "url": "https://www.bbc.co.uk/news/articles/c6zxj2e5qlxxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "'The city is alive': A brief peace in Kherson, but residents fear what comes next",
-        "url": "https://www.bbc.co.uk/news/articles/ck1l393pyrylo?at_medium=RSS&at_campaign=rss",
+        "title": "Pope Leo XIV becomes first pontiff to vote in a US election",
+        "url": "https://www.bbc.co.uk/news/articles/ckwyq2509p7xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Hyrox athlete who soiled herself in race tells BBC she put others at risk but backlash was traumatic",
-        "url": "https://www.bbc.co.uk/news/articles/c6gr8l15k744o?at_medium=RSS&at_campaign=rss",
+        "title": "US tech stocks see sharp falls over AI cost fears",
+        "url": "https://www.bbc.co.uk/news/articles/cvwy72e0n72yo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Democratic senator blames Egypt press crackdown on US military aid decision",
+        "url": "https://www.bbc.co.uk/news/articles/c63r529wn2vzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " GTA 6's latest gameplay reveal is filthy, and South Park is helping Rockstar sell it ",
+        "url": "https://www.creativebloq.com/news/gta-6s-latest-gameplay-reveal-is-filthy-and-south-park-is-helping-rockstar-sell-it",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " ‘Its sheer madness is unparalleled’: inside the production design of I Love Boosters ",
+        "url": "https://www.creativebloq.com/features/its-sheer-madness-is-unparalleled-inside-the-production-design-of-i-love-boosters",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Nothing has a secret weapon rival tech brands wish they had ",
+        "url": "https://www.creativebloq.com/features/nothing-has-a-secret-weapon-rival-tech-brands-wish-they-had",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Quote of the Day by Patrick Stewart: \"You will never achieve success by insuring against failure\" ",
+        "url": "https://www.creativebloq.com/inspiration/quote-of-the-day-by-patrick-stewart-you-will-never-achieve-success-by-insuring-against-failure",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Samsung proves it’s king of the folding phones in shady Apple diss ",
+        "url": "https://www.creativebloq.com/news/samsung-proves-its-king-of-the-folding-phones-in-shady-apple-diss",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The Dunu Vitruvian promises DaVinci’s JM-1 warmth, trading low end for top-end sparkle ",
         "url": "https://www.creativebloq.com/news/the-dunu-vitruvian-promises-davincis-jm-1-warmth-trading-low-end-for-top-end-sparkle",
@@ -206,104 +248,43 @@
         "title": " Apple’s touchscreen MacBook Pro makes more sense than you might think ",
         "url": "https://www.creativebloq.com/news/apples-touchscreen-macbook-pro-makes-more-sense-than-you-might-think",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " The new Atelico AI Engine gives game NPCs memories ",
-        "url": "https://www.creativebloq.com/news/the-new-atelico-ai-engine-gives-game-npcs-memories",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The perfect closed-back wired headphones just got a $40 discount ",
-        "url": "https://www.creativebloq.com/deals/the-perfect-closed-back-wired-headphones-just-got-a-usd40-discount",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Mass Effect 5 art director says it's “truly heartbreaking” we'll never play his team's game ",
-        "url": "https://www.creativebloq.com/news/mass-effect-5-art-director-says-its-truly-heartbreaking-well-never-play-his-teams-game",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Croc 2: Kingdom of the Gobbos (Switch) review: this awkward '90s platformer is finally fixed ",
-        "url": "https://www.creativebloq.com/reviews/croc-2-kingdom-of-the-gobbos-switch-review-this-awkward-90s-platformer-is-finally-fixed",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Maxon teases another AI tool, and artists aren't happy, despite not knowing what it does yet ",
-        "url": "https://www.creativebloq.com/news/maxon-teases-another-ai-tool-and-artists-arent-happy-despite-not-knowing-what-it-does-yet",
-        "source": "Creative Bloq"
       }
     ],
-    "science": [
-      {
-        "title": "Six popular sugar substitutes linked to faster brain aging",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261028234238.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Einstein's equations may explain the universe without dark energy",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261028232719.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA discovers Jupiter’s invisible shield is more complex than Earth’s",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261028232715.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "128,000-year-old ice in Tibet could rewrite climate history",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261028232713.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A 700,000-year-old elephant tooth reveals a lost world where early humans lived",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261028232709.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Less than 42 minutes of bright daylight linked to higher dementia risk",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261028232707.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover that cranberry juice may help fight tooth decay",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261028232701.htm",
-        "source": "Science Daily"
-      }
-    ],
+    "science": [],
     "gaming": [
       {
-        "title": "34 Years Later, Hobbes' Wisest 'Calvin and Hobbes' Line Is Still a Perfect Comic Strip Quote",
-        "url": "https://www.polygon.com/wisdom-hobbes-watterson/",
+        "title": "'Star Wars Fate of the Galaxy' Officially Released for Free",
+        "url": "https://www.polygon.com/star-wars-fan-game-fate-of-the-galaxy-free-space-2-mod/",
         "source": "Polygon"
       },
       {
-        "title": "10 Essential Fantasy Books You Need to Read at Least Once in Your Life",
-        "url": "https://www.polygon.com/fantasy-books-you-need-to-read-at-least-once-in-your-life/",
+        "title": "Where to use the coin mining den key in DMZ in Modern Warfare 4",
+        "url": "https://www.polygon.com/mw4-modern-warfare-4-dmz-coin-mining-den-key-location/",
         "source": "Polygon"
       },
       {
-        "title": "Official The Elder Scrolls 6 Announcement Imminent, Report Says",
-        "url": "https://www.polygon.com/the-elder-scrolls-6-sentinel-news-tes6-skyrim-anniversary-bethesda/",
+        "title": "James Gunn Officially Comments on Casting the DCU's New Batman",
+        "url": "https://www.polygon.com/batman-dcu-casting-james-gunn-comment/",
         "source": "Polygon"
       },
       {
-        "title": "Ubisoft Issues Official Update on Fate of Future Assassin's Creed Remakes",
-        "url": "https://www.polygon.com/assassins-creed-remakes-development-update-fall-2026/",
+        "title": "Best Visions to use in Final Fantasy Resonance",
+        "url": "https://www.polygon.com/final-fantasy-resonance-best-visions/",
         "source": "Polygon"
       },
       {
-        "title": "Steam Makes 96% Positive Puzzle Game Completely Free",
-        "url": "https://www.polygon.com/hexologic-free-steam-game-october-2026/",
+        "title": "Marvel, Star Trek Stars Post Heartbreaking Tributes to Patrick Stewart",
+        "url": "https://www.polygon.com/patrick-stewart-death-x-men-star-trek-actors/",
         "source": "Polygon"
       },
       {
-        "title": "Patrick Stewart's Greatest Captain Picard Quote Is Still a Defining Star Trek Moment",
-        "url": "https://www.polygon.com/patrick-stewart-best-star-trek-quote/",
+        "title": "'Star Trek Online' Players Hold Memorial Vigil for Patrick Stewart",
+        "url": "https://www.polygon.com/star-trek-online-memorial-vigil-patrick-stewart-picard/",
         "source": "Polygon"
       },
       {
-        "title": "Square Enix should never make a Final Fantasy game without turn-based combat again",
-        "url": "https://www.polygon.com/final-fantasy-resonance-blueprint-for-new-ff-games/",
+        "title": "The Onion Is Ready For GTA 6: ‘You're Kind of a Dummy For Thinking This Is Gonna Change Everything\"",
+        "url": "https://www.polygon.com/the-onion-gta-6-coverage/",
         "source": "Polygon"
       }
     ],
