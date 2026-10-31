@@ -1,185 +1,183 @@
 {
   "metadata": {
-    "last_updated": "2026-10-31T18:16:59.412003",
-    "total_items": 63
+    "last_updated": "2026-10-31T22:15:30.569139",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
+        "title": "HackerTube: YouTube built from videos recommended by HN",
+        "url": "https://karpathy.bearblog.dev/hacker-tube/",
+        "source": "Hacker News",
+        "score": 319
+      },
+      {
+        "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+        "url": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
+        "source": "Hacker News",
+        "score": 189
+      },
+      {
+        "title": "With 86% of the words, you might understand only 38% of an anime's lines",
+        "url": "https://learnfromx.com/research/anime-word-coverage-vs-lines-understood",
+        "source": "Hacker News",
+        "score": 25
+      },
+      {
+        "title": "It's the Memory Latency, Stupid",
+        "url": "https://pivotlake.io/blog/its-the-memory-latency-stupid/",
+        "source": "Hacker News",
+        "score": 71
+      },
+      {
+        "title": "The Duty of a Scholar",
+        "url": "https://www.daemonology.net/blog/2026-10-31-The-Duty-of-a-Scholar.html",
+        "source": "Hacker News",
+        "score": 64
+      },
+      {
+        "title": "Surviving \"The Graduate\"",
+        "url": "https://www.newyorker.com/culture/the-weekend-essay/dustin-hoffman-on-surviving-the-graduate",
+        "source": "Hacker News",
+        "score": 21
+      },
+      {
+        "title": "Show HN: NES Contra (1987) port (ASM –> C and then C –> WebAssembly)",
+        "url": "https://epoyraz.github.io/nes-contra-us/",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
         "title": "Molly (Signal fork) has not been updated since 3 months and is vulnerable",
         "url": "https://piefed.world/post/1503394",
         "source": "Hacker News",
-        "score": 225
+        "score": 286
       },
       {
-        "title": "We Took over ChatGPT Accounts",
-        "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+        "title": "Much Ado About None: Sentinel Values in Python",
+        "url": "https://florianwilhelm.info/2026/10/sentinel_values/",
         "source": "Hacker News",
-        "score": 237
-      },
-      {
-        "title": "Casio Watches of the 1980s",
-        "url": "https://www.casio.com/us/watches/50th/Heritage/1980s/",
-        "source": "Hacker News",
-        "score": 102
+        "score": 28
       },
       {
         "title": "Jepsen: ParticleDB 1.1.4",
         "url": "https://jepsen.io/analyses/particledb-1.1.4",
         "source": "Hacker News",
-        "score": 53
+        "score": 147
       },
       {
-        "title": "Redox: Ring Buffers Project Summary",
-        "url": "https://www.redox-os.org/news/nlnet-rb-summary/",
+        "title": "Rhind Mathematical Papyrus",
+        "url": "https://en.wikipedia.org/wiki/Rhind_Mathematical_Papyrus",
         "source": "Hacker News",
-        "score": 8
+        "score": 9
       },
       {
-        "title": "Simple circuits can create complex behaviors",
-        "url": "https://aatishb.com/myriad/lets-build-a-brain/",
+        "title": "Show HN: A language model that lives in a boot sector",
+        "url": "https://github.com/kerlenton/bootgpt",
         "source": "Hacker News",
-        "score": 136
+        "score": 35
       },
       {
-        "title": "A/SIDE – Private photo sharing and encrypted messages",
-        "url": "https://a-side.social/",
+        "title": "Do the math: How we took over ChatGPT accounts",
+        "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
         "source": "Hacker News",
-        "score": 17
+        "score": 290
       },
       {
-        "title": "Reading and writing are less symmetric than you (probably) think",
-        "url": "https://fgiesen.wordpress.com/2015/10/25/reading-and-writing-are-less-symmetric-than-you-probably-think/",
+        "title": "Anthropic takes steps to block Claude from reverse-engineering video games",
+        "url": "https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering",
         "source": "Hacker News",
-        "score": 43
+        "score": 54
       },
       {
-        "title": "Switch Lowering in GCC",
-        "url": "https://xoranth.net/gcc-switch/",
+        "title": "William Nordhaus has died",
+        "url": "https://news.yale.edu/2026/10/31/william-nordhaus-nobel-laureate-who-integrated-economics-and-climate-change-devoted-yale",
         "source": "Hacker News",
-        "score": 166
-      },
-      {
-        "title": "UK Green party drops longstanding opposition to nuclear power",
-        "url": "https://www.theguardian.com/politics/2026/oct/05/green-party-nuclear-power-policy",
-        "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Malware uses LLMs to rank victims by how much they're worth",
-        "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
-        "source": "Hacker News",
-        "score": 178
-      },
-      {
-        "title": "Serbia just elected the world's brainiest parliament",
-        "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
-        "source": "Hacker News",
-        "score": 672
-      },
-      {
-        "title": "Digital minimalism",
-        "url": "https://vitalik.eth.limo/general/2026/10/31/digital_minimalism.html",
-        "source": "Hacker News",
-        "score": 232
-      },
-      {
-        "title": "Prospero: A new coding harness for a more civilized age",
-        "url": "https://nullprogram.com/blog/2026/10/31/",
-        "source": "Hacker News",
-        "score": 149
-      },
-      {
-        "title": "Show HN: Ghostman – A fast, keyboard-driven TUI API client and webhook inspector",
-        "url": "https://github.com/4yk5/Ghostman",
-        "source": "Hacker News",
-        "score": 18
+        "score": 38
       }
     ],
     "ai": [
       {
-        "title": "We Took over ChatGPT Accounts",
+        "title": "Do the math: How we took over ChatGPT accounts",
         "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
         "source": "Hacker News AI",
-        "score": 237
+        "score": 290
       },
       {
-        "title": "Malware uses LLMs to rank victims by how much they're worth",
-        "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
+        "title": "Anthropic takes steps to block Claude from reverse-engineering video games",
+        "url": "https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering",
         "source": "Hacker News AI",
-        "score": 178
+        "score": 54
+      },
+      {
+        "title": "GPT-5.6 Sol can beat Factorio on peaceful mode",
+        "url": "https://ryanmadden.net/gpt-56-beats-factorio/",
+        "source": "Hacker News AI",
+        "score": 133
+      },
+      {
+        "title": "5 years of OqtaDrive: Microdrive emulation to Sinclair Network over the internet",
+        "url": "https://oqtadrive.org/10.other/5-years/",
+        "source": "Hacker News AI",
+        "score": 10
+      },
+      {
+        "title": "Anthropic blocks users for anything touching training larger models",
+        "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
+        "source": "Hacker News AI",
+        "score": 72
       },
       {
         "title": "Serbia just elected the world's brainiest parliament",
         "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
         "source": "Hacker News AI",
-        "score": 672
+        "score": 773
       },
       {
         "title": "AI, Lean, and the Future of Formal Verification, with Lean Creator Leo de Moura",
         "url": "https://thedataexchange.media/leo-de-moura-lean-aws/",
         "source": "Hacker News AI",
-        "score": 150
+        "score": 181
       },
       {
-        "title": "Show HN: Jointter – A daily word puzzle using dots and lines",
-        "url": "https://www.jointter.com/",
+        "title": "Malware uses LLMs to rank victims by how much they're worth",
+        "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 222
       },
       {
-        "title": "Cisco gives engineer unlimited AI tokens to rewrite legacy code",
-        "url": "https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/",
+        "title": "The Impact of Generative AI on Critical Thinking: Self-Reported (2025)",
+        "url": "https://dl.acm.org/doi/full/10.1145/3706598.3713778",
         "source": "Hacker News AI",
-        "score": 286
+        "score": 67
       },
       {
         "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
         "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
         "source": "Hacker News AI",
-        "score": 956
+        "score": 965
       },
       {
-        "title": "Anthropic's Claude AI blocks video game cloning and reverse-engineering",
-        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked",
+        "title": "Show HN: Jointter – A daily word puzzle using dots and lines",
+        "url": "https://www.jointter.com/",
         "source": "Hacker News AI",
-        "score": 43
-      },
-      {
-        "title": "Amazon sends chills through its workforce with mixed message memo about AI use",
-        "url": "https://www.theregister.com/ai-and-ml/2026/10/31/amazon-sends-chills-through-its-workforce-with-mixed-message-memo-about-ai-use-corey-quinn/5306804",
-        "source": "Hacker News AI",
-        "score": 7
-      },
-      {
-        "title": "Building an AI-native engineering org",
-        "url": "https://twitter.com/sgondala2/status/2115832070274723875",
-        "source": "Hacker News AI",
-        "score": 175
-      },
-      {
-        "title": "Sleep framework: A new way for LLMs to retain knowledge in continual learning",
-        "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
-        "source": "Hacker News AI",
-        "score": 245
-      },
-      {
-        "title": "We're releasing the weights of Mistral Large 4",
-        "url": "https://mistral.ai/news/mistral-large-4-oss/",
-        "source": "Hacker News AI",
-        "score": 1705
-      },
-      {
-        "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
-        "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
-        "source": "Hacker News AI",
-        "score": 359
+        "score": 9
       }
     ],
     "news": [
       {
+        "title": "'We came back from hell', say Ukrainians after years in Russia-occupied front-line city",
+        "url": "https://www.bbc.co.uk/news/articles/cqglw3k7djp1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Ukrainian evacuees reunite with family after years trapped in Russia-occupied city",
         "url": "https://www.bbc.co.uk/news/articles/cqx2818elrnzo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Thousands demonstrate in Paris as protests spread across Europe",
+        "url": "https://www.bbc.co.uk/news/videos/ck0j0y87j303o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -193,11 +191,6 @@
         "source": "BBC World"
       },
       {
-        "title": "Police deployed during stand-off over control of top Poland court",
-        "url": "https://www.bbc.co.uk/news/articles/crz9824d5e88o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Ethiopian PM puts ministers through military training",
         "url": "https://www.bbc.co.uk/news/articles/cmwyv2y7g9l8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -205,11 +198,6 @@
       {
         "title": "Spain train disaster clouds Sánchez chances of re-election",
         "url": "https://www.bbc.co.uk/news/articles/cmeweppr990qo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Global nature talks reach deal but money remains an issue",
-        "url": "https://www.bbc.co.uk/news/articles/cw1l32qyj8pqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -289,38 +277,38 @@
     ],
     "gaming": [
       {
+        "title": "5 Best Nintendo Switch Games That Desperately Need Switch 2 Upgrades, Ranked",
+        "url": "https://www.polygon.com/nintendo-switch-games-no-switch-2-edition/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Classic '90s RPGs That Have Aged Like Fine Wine, Ranked",
+        "url": "https://www.polygon.com/best-classic-90s-rpgs/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Every Resident Evil Game, Ranked From Worst to Best",
+        "url": "https://www.polygon.com/resident-evil-games-ranked-worst-best/",
+        "source": "Polygon"
+      },
+      {
+        "title": "KPop Demon Hunters Returns In November with Definitive New Release",
+        "url": "https://www.polygon.com/kpop-demon-hunters-criterion-collection-4k-blu-ray-november-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Adolescence' Creator Officially Confirms a Connection Between His Netflix and Apple Shows",
+        "url": "https://www.polygon.com/adolescence-nocturne-stephen-graham-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "6 Essential Activities GTA Needs to Let Players Experience in Vice City",
+        "url": "https://www.polygon.com/gta-6-side-activities/",
+        "source": "Polygon"
+      },
+      {
         "title": "Helen Mirren and Alden Ehrenreich on Playing Tom Ripley and His Creator Patricia Highsmith",
         "url": "https://www.polygon.com/helen-mirren-alden-ehrenreich-interview-a-talent-for-murder/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Peter Jackson's Worst Lord of the Rings Sin Was Forgetting the Story's Fairy Tale Roots",
-        "url": "https://www.polygon.com/the-hobbit-movies-lord-of-the-rings-fairy-tale-roots/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Phantom Blade Zero Just Killed Crimson Desert's Chances At a GOTY",
-        "url": "https://www.polygon.com/phantom-blade-zero-crimson-desert-goty-chances/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Skyblivion's Biggest Legal Challenge Yet Is Not Coming From Bethesda",
-        "url": "https://www.polygon.com/skyblivion-legal-threats-former-volunteer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'No Man's Sky' Players Pay Homage To Star Trek's Patrick Stewart",
-        "url": "https://www.polygon.com/no-mans-sky-players-patrick-stewart-memorial-star-systems/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Austin Abrams Was Grabbed by Tentacles in a 35-Foot Whale Head for the Thriller ‘Whalefall’",
-        "url": "https://www.polygon.com/whalefall-bts-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Warframe officially adds a whole new star system in December",
-        "url": "https://www.polygon.com/warframe-tau-release-window/",
         "source": "Polygon"
       }
     ],
