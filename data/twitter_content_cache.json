@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-30T20:28:46.861670",
-    "total_items": 53
+    "last_updated": "2026-10-31T00:28:58.121775",
+    "total_items": 58
   },
   "content": {
     "tech": [
@@ -9,156 +9,191 @@
         "title": "My favourite PowerMac is a Nintendo Wii",
         "url": "https://virtuallyfun.com/2026/10/29/my-favourite-powermac-is-a-nintendo-wii/",
         "source": "Hacker News",
-        "score": 134
+        "score": 226
+      },
+      {
+        "title": "Fair Use Benefits Everyone",
+        "url": "https://openai.com/index/fair-use-benefits-everyone/",
+        "source": "Hacker News",
+        "score": 19
+      },
+      {
+        "title": "Cloudflare Turnstile solver library (no headless browser required)",
+        "url": "https://github.com/chris124567/cfsolve",
+        "source": "Hacker News",
+        "score": 41
+      },
+      {
+        "title": "Show HN: To Honor Sir Patrick Stewart, Enjoy the TNG Episode Guessing Game",
+        "url": "https://tng.episodle.com/",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+        "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+        "source": "Hacker News",
+        "score": 746
       },
       {
         "title": "Northflank Breached",
         "url": "https://status.northflank.com",
         "source": "Hacker News",
-        "score": 258
+        "score": 346
       },
       {
-        "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
-        "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+        "title": "Infinite Mac: BeOS",
+        "url": "https://blog.persistent.info/2026/10/infinite-mac-beos.html",
         "source": "Hacker News",
-        "score": 603
+        "score": 95
       },
       {
-        "title": "Show HN: A working Nintendo in ~1GB of Qwen weights",
-        "url": "https://github.com/dbreunig/nesformer",
+        "title": "Jules Verne's Lost Novel",
+        "url": "https://blue-continuum.com/verne-paris",
         "source": "Hacker News",
-        "score": 125
+        "score": 69
       },
       {
         "title": "Breaking the open web won't stop the bad bots",
         "url": "https://www.techpolicy.press/breaking-the-open-web-wont-stop-the-bad-bots/",
         "source": "Hacker News",
-        "score": 103
+        "score": 176
       },
       {
-        "title": "Bunny CDN Security Incident",
-        "url": "https://status.bunny.net/incidents/p6gf1by9kr7m",
+        "title": "Show HN: A working Nintendo in ~1GB of Qwen weights",
+        "url": "https://github.com/dbreunig/nesformer",
         "source": "Hacker News",
-        "score": 34
+        "score": 179
+      },
+      {
+        "title": "sanstun: A sans-IO, parallel-friendly WireGuard implementation in Rust",
+        "url": "https://www.firezone.dev/blog/introducing-sanstun",
+        "source": "Hacker News",
+        "score": 47
+      },
+      {
+        "title": "The oldest ice disappears and the Stone Age emerges from it",
+        "url": "https://www.sciencenorway.no/archaeology-climate-culture/the-oldest-ice-is-disappearing-the-stone-age-is-emerging-from-the-melting-ice/2713921",
+        "source": "Hacker News",
+        "score": 77
       },
       {
         "title": "Florilegium: Procedural Flowers in LaTeX",
         "url": "https://github.com/kevinraymond/florilegium",
         "source": "Hacker News",
-        "score": 137
+        "score": 208
       },
       {
         "title": "The federated code forge",
         "url": "https://tangled.org/blog/forge/",
         "source": "Hacker News",
-        "score": 159
+        "score": 220
       },
       {
-        "title": "Building an AI-native engineering org",
-        "url": "https://twitter.com/sgondala2/status/2115832070274723875",
+        "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
+        "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
         "source": "Hacker News",
-        "score": 59
-      },
-      {
-        "title": "Anthropic may not secure investment-grade rating after IPO, Blackstone says",
-        "url": "https://www.ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
-        "source": "Hacker News",
-        "score": 165
-      },
-      {
-        "title": "Programming at Light Speed: Building the Gravity Query Engine",
-        "url": "https://pgrust.com/blog/programming-at-light-speed/",
-        "source": "Hacker News",
-        "score": 3
-      },
-      {
-        "title": "Azure's Weakest Link – Five Full Cross-Tenant Compromises",
-        "url": "https://www.binarysecurity.no/posts/2026/10/one-root-case",
-        "source": "Hacker News",
-        "score": 226
-      },
-      {
-        "title": "AI isn't replacing SREs, it's deskilling them",
-        "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
-        "source": "Hacker News",
-        "score": 379
-      },
-      {
-        "title": "Show HN: Automatic deduction of FlashAttention kernel from ~25 lines of SQL",
-        "url": "https://github.com/xqlsystems/xarray-sql/blob/6debe2495dcb4e8fac20ab97df5b89baae2a31a6/benchmarks/ml/01_attention.py",
-        "source": "Hacker News",
-        "score": 4
-      },
-      {
-        "title": "An Arrogant Way of Killing (2016)",
-        "url": "https://magazine.atavist.com/2016/an-arrogant-way-of-killing",
-        "source": "Hacker News",
-        "score": 4
+        "score": 175
       }
     ],
     "ai": [
       {
+        "title": "Fair Use Benefits Everyone",
+        "url": "https://openai.com/index/fair-use-benefits-everyone/",
+        "source": "Hacker News AI",
+        "score": 19
+      },
+      {
         "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
         "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
         "source": "Hacker News AI",
-        "score": 603
-      },
-      {
-        "title": "Building an AI-native engineering org",
-        "url": "https://twitter.com/sgondala2/status/2115832070274723875",
-        "source": "Hacker News AI",
-        "score": 59
-      },
-      {
-        "title": "Anthropic may not secure investment-grade rating after IPO, Blackstone says",
-        "url": "https://www.ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
-        "source": "Hacker News AI",
-        "score": 165
-      },
-      {
-        "title": "AI isn't replacing SREs, it's deskilling them",
-        "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
-        "source": "Hacker News AI",
-        "score": 379
-      },
-      {
-        "title": "An Arrogant Way of Killing (2016)",
-        "url": "https://magazine.atavist.com/2016/an-arrogant-way-of-killing",
-        "source": "Hacker News AI",
-        "score": 4
-      },
-      {
-        "title": "Sleep framework: A new way for LLMs to retain knowledge in continual learning",
-        "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
-        "source": "Hacker News AI",
-        "score": 105
-      },
-      {
-        "title": "Blockchain intelligence firms link North Korea to $6.3B hack on Binance",
-        "url": "https://www.npr.org/2026/10/30/g-s1-150902/blockchain-intelligence-firms-link-north-korea-to-6-3b-hack-on-binance",
-        "source": "Hacker News AI",
-        "score": 151
-      },
-      {
-        "title": "We ran AI agent swarms in Minecraft and Mindustry",
-        "url": "https://labs.ycombinator.com/projects/games/index.html",
-        "source": "Hacker News AI",
-        "score": 387
-      },
-      {
-        "title": "We're releasing the weights of Mistral Large 4",
-        "url": "https://mistral.ai/news/mistral-large-4-oss/",
-        "source": "Hacker News AI",
-        "score": 1661
+        "score": 746
       },
       {
         "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
         "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 175
+      },
+      {
+        "title": "Wonderful Weather: Floods and Foreboding in 17th-Century Britain",
+        "url": "https://publicdomainreview.org/essay/wonderful-weather/",
+        "source": "Hacker News AI",
+        "score": 4
+      },
+      {
+        "title": "AO3 Down for Maintenance",
+        "url": "https://www.otwstatus.org",
+        "source": "Hacker News AI",
+        "score": 80
+      },
+      {
+        "title": "Building an AI-native engineering org",
+        "url": "https://twitter.com/sgondala2/status/2115832070274723875",
+        "source": "Hacker News AI",
+        "score": 101
+      },
+      {
+        "title": "Anthropic to receive high 'junk' rating from credit agencies following IPO",
+        "url": "https://techcrunch.com/2026/10/30/anthropic-expected-to-receive-high-junk-rating-from-credit-agencies-following-ipo-report-says/",
+        "source": "Hacker News AI",
+        "score": 28
+      },
+      {
+        "title": "Cisco gives engineer unlimited AI tokens to rewrite legacy code",
+        "url": "https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/",
+        "source": "Hacker News AI",
+        "score": 85
+      },
+      {
+        "title": "AI isn't replacing SREs, it's deskilling them",
+        "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
+        "source": "Hacker News AI",
+        "score": 489
+      },
+      {
+        "title": "Sleep framework: A new way for LLMs to retain knowledge in continual learning",
+        "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
+        "source": "Hacker News AI",
+        "score": 155
+      },
+      {
+        "title": "We're releasing the weights of Mistral Large 4",
+        "url": "https://mistral.ai/news/mistral-large-4-oss/",
+        "source": "Hacker News AI",
+        "score": 1675
+      },
+      {
+        "title": "We ran AI agent swarms in Minecraft and Mindustry",
+        "url": "https://labs.ycombinator.com/projects/games/index.html",
+        "source": "Hacker News AI",
+        "score": 395
+      },
+      {
+        "title": "Anthropic may not secure investment-grade rating after IPO, Blackstone says",
+        "url": "https://www.ft.com/content/59383c7f-8d82-493f-bf01-d2e862a1018f",
+        "source": "Hacker News AI",
+        "score": 271
+      },
+      {
+        "title": "Wall Street closes sharply lower as AI cash burn fears spark tech selloff",
+        "url": "https://www.reuters.com/business/nasdaq-futures-tumble-amazon-intel-results-deepen-ai-spending-woes-2026-10-30/",
+        "source": "Hacker News AI",
+        "score": 24
+      },
+      {
+        "title": "An Arrogant Way of Killing (2016)",
+        "url": "https://magazine.atavist.com/2016/an-arrogant-way-of-killing",
+        "source": "Hacker News AI",
+        "score": 22
       }
     ],
     "news": [
+      {
+        "title": "US approves sale of 500 Patriot missiles to Ukraine",
+        "url": "https://www.bbc.co.uk/news/articles/c3vgxznlx7jzo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Crypto giant Binance attempting to recover $6.3bn stolen in hack linked to North Korea",
         "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo?at_medium=RSS&at_campaign=rss",
@@ -175,23 +210,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Prominent Russian newspaper shuts down under pressure from authorities",
+        "title": "Police deployed during stand-off over control of top Poland court",
+        "url": "https://www.bbc.co.uk/news/articles/crz9824d5e88o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "They strangled us, says founder of Russian newspaper shut under pressure from authorities",
         "url": "https://www.bbc.co.uk/news/articles/cmewepdr109do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Spain transport minister says he won't resign over high-speed rail disaster",
         "url": "https://www.bbc.co.uk/news/articles/c6zxj2e5qlxxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Pope Leo XIV becomes first pontiff to vote in a US election",
-        "url": "https://www.bbc.co.uk/news/articles/ckwyq2509p7xo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "US tech stocks see sharp falls as AI spending nears $1tn",
-        "url": "https://www.bbc.co.uk/news/articles/cvwy72e0n72yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -235,38 +265,38 @@
     "science": [],
     "gaming": [
       {
+        "title": "The 10 Best Star Trek: The Next Generation Episodes, Ranked",
+        "url": "https://www.polygon.com/best-star-trek-next-generation-episodes-ranked/",
+        "source": "Polygon"
+      },
+      {
+        "title": "New Pokémon Release Brings Hundreds of New Eeveelutions",
+        "url": "https://www.polygon.com/pokemon-new-eeveelutions-gba-game-download/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Witcher 3’s Fairy Tale-Inspired Quests Are Must-Plays for Any RPG Fan",
+        "url": "https://www.polygon.com/the-witcher-3-fairy-tale-quests/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Worst GTA Game Is One Rockstar Could Never Make Today",
+        "url": "https://www.polygon.com/gta-advance-worst-grand-theft-auto-game/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 New Movies to Watch This Weekend on Prime Video, Prime Video, Paramount, and Peacock (October 30 - November 1)",
+        "url": "https://www.polygon.com/new-movies-streaming-this-weekend-prime-video-october-30-november-1/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Activision Apologizes for 'Modern Warfare 4' Footage After Backlash",
+        "url": "https://www.polygon.com/modern-warfare-4-activision-apologizes-itaewon-tragedy/",
+        "source": "Polygon"
+      },
+      {
         "title": "All Esper locations in Final Fantasy Resonance",
         "url": "https://www.polygon.com/final-fantasy-resonance-esper-locations/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Before 'Crystal Lake', Bryan Fuller Created an Overlooked Fantasy Series You Can Watch for Free",
-        "url": "https://www.polygon.com/dead-like-me-bryan-fuller-streaming-free-tubi/",
-        "source": "Polygon"
-      },
-      {
-        "title": "8 New TV Shows to Watch This Weekend on Netflix, HBO, and Apple TV (October 30 - November 1)",
-        "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-october-30-november-1/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Every Free Game You Can Keep on Steam, Epic and PS Plus This Week (Oct 30–Nov 5)",
-        "url": "https://www.polygon.com/free-games-right-now-steam-epic-ps-plus-oct-30-nov-5/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 new books to read this weekend (October 30-November 1)",
-        "url": "https://www.polygon.com/new-books-to-read-this-weekend-october-30-november-1/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fire Emblem: Fortune’s Weave Cai Actor Was ‘Deeply Afraid’ of the Audience’s Reaction",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-cai-zeno-robinson-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to open the Crimson Manor in Phantom Blade Zero",
-        "url": "https://www.polygon.com/phantom-blade-zero-crimson-manor-how-to-open/",
         "source": "Polygon"
       }
     ],
