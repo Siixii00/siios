@@ -1,184 +1,190 @@
 {
   "metadata": {
-    "last_updated": "2026-10-31T06:43:06.479672",
-    "total_items": 55
+    "last_updated": "2026-10-31T13:23:38.836416",
+    "total_items": 56
   },
   "content": {
     "tech": [
       {
-        "title": "Tools Hacker News keeps asking for",
-        "url": "https://stillunbuilt.shiptiffin.app/",
+        "title": "Serbia just elected the world's brainiest parliament",
+        "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
         "source": "Hacker News",
-        "score": 14
+        "score": 363
       },
       {
-        "title": "Show HN: To Honor Sir Patrick Stewart, Enjoy the TNG Episode Guessing Game",
-        "url": "https://tng.episodle.com/",
+        "title": "Molly(Signal fork) has not been updated since 3 months and is vulnerable",
+        "url": "https://piefed.world/post/1503394",
         "source": "Hacker News",
-        "score": 164
+        "score": 77
+      },
+      {
+        "title": "We Took over ChatGPT Accounts",
+        "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+        "source": "Hacker News",
+        "score": 72
+      },
+      {
+        "title": "Switch Lowering in GCC",
+        "url": "https://xoranth.net/gcc-switch/",
+        "source": "Hacker News",
+        "score": 99
+      },
+      {
+        "title": "Digital Minimalism",
+        "url": "https://vitalik.eth.limo/general/2026/10/31/digital_minimalism.html",
+        "source": "Hacker News",
+        "score": 111
+      },
+      {
+        "title": "Show HN: Marelleo, an open-source story box I built for my kids using ESP32",
+        "url": "https://zebra.rodeo/en/blog/marelleo/",
+        "source": "Hacker News",
+        "score": 101
+      },
+      {
+        "title": "AI, Lean, and the Future of Formal Verification, with Lean Creator Leo de Moura",
+        "url": "https://thedataexchange.media/leo-de-moura-lean-aws/",
+        "source": "Hacker News",
+        "score": 79
       },
       {
         "title": "My favourite PowerMac is a Nintendo Wii",
         "url": "https://virtuallyfun.com/2026/10/29/my-favourite-powermac-is-a-nintendo-wii/",
         "source": "Hacker News",
-        "score": 279
-      },
-      {
-        "title": "Tell HN: Scribd Breached",
-        "url": "https://news.ycombinator.com/item?id=50312756",
-        "source": "Hacker News",
-        "score": 131
-      },
-      {
-        "title": "Cloudflare Turnstile solver library (no headless browser required)",
-        "url": "https://github.com/chris124567/cfsolve",
-        "source": "Hacker News",
-        "score": 155
-      },
-      {
-        "title": "Northflank Breached",
-        "url": "https://status.northflank.com",
-        "source": "Hacker News",
-        "score": 409
+        "score": 331
       },
       {
         "title": "The $6.3B Binance hack was pulled off in just 20 minutes",
         "url": "https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/",
         "source": "Hacker News",
-        "score": 402
+        "score": 493
+      },
+      {
+        "title": "Cloudflare Turnstile solver library (no headless browser required)",
+        "url": "https://github.com/chris124567/cfsolve",
+        "source": "Hacker News",
+        "score": 247
+      },
+      {
+        "title": "Northflank Breached",
+        "url": "https://status.northflank.com",
+        "source": "Hacker News",
+        "score": 451
+      },
+      {
+        "title": "Prospero: A new coding harness for a more civilized age",
+        "url": "https://nullprogram.com/blog/2026/10/31/",
+        "source": "Hacker News",
+        "score": 4
       },
       {
         "title": "Breaking the open web won't stop the bad bots",
         "url": "https://www.techpolicy.press/breaking-the-open-web-wont-stop-the-bad-bots/",
         "source": "Hacker News",
-        "score": 235
+        "score": 283
       },
       {
-        "title": "Longitudinal Changes InWearable-Captured PhysiologyBefore Sudden Cardiac Death",
-        "url": "https://www.jacc.org/doi/epdf/10.1016/j.jaccas.2026.110397",
+        "title": "Tell HN: Scribd Breached",
+        "url": "https://news.ycombinator.com/item?id=50312756",
         "source": "Hacker News",
-        "score": 18
+        "score": 259
       },
       {
-        "title": "Show HN: A working Nintendo in ~1GB of Qwen weights",
-        "url": "https://github.com/dbreunig/nesformer",
+        "title": "Shiny Object Syndrome",
+        "url": "https://en.wikipedia.org/wiki/Shiny_object_syndrome",
         "source": "Hacker News",
-        "score": 232
-      },
-      {
-        "title": "Brief History of PDP Computers",
-        "url": "https://entropicthoughts.com/history-of-pdp-computers",
-        "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "The oldest ice disappears and the Stone Age emerges from it",
-        "url": "https://www.sciencenorway.no/archaeology-climate-culture/the-oldest-ice-is-disappearing-the-stone-age-is-emerging-from-the-melting-ice/2713921",
-        "source": "Hacker News",
-        "score": 124
-      },
-      {
-        "title": "sanstun: A sans-IO, parallel-friendly WireGuard implementation in Rust",
-        "url": "https://www.firezone.dev/blog/introducing-sanstun",
-        "source": "Hacker News",
-        "score": 107
-      },
-      {
-        "title": "Infinite Mac: BeOS",
-        "url": "https://blog.persistent.info/2026/10/infinite-mac-beos.html",
-        "source": "Hacker News",
-        "score": 137
-      },
-      {
-        "title": "Florilegium: Procedural Flowers in LaTeX",
-        "url": "https://github.com/kevinraymond/florilegium",
-        "source": "Hacker News",
-        "score": 246
+        "score": 32
       }
     ],
     "ai": [
       {
+        "title": "Serbia just elected the world's brainiest parliament",
+        "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
+        "source": "Hacker News AI",
+        "score": 363
+      },
+      {
+        "title": "We Took over ChatGPT Accounts",
+        "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+        "source": "Hacker News AI",
+        "score": 72
+      },
+      {
+        "title": "AI, Lean, and the Future of Formal Verification, with Lean Creator Leo de Moura",
+        "url": "https://thedataexchange.media/leo-de-moura-lean-aws/",
+        "source": "Hacker News AI",
+        "score": 79
+      },
+      {
+        "title": "Why Anthropic's Filing Crushed Tech Stocks",
+        "url": "https://www.thebignewsletter.com/p/why-anthropics-filing-crushed-tech",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
         "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
         "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
         "source": "Hacker News AI",
-        "score": 863
+        "score": 923
       },
       {
         "title": "Cisco gives engineer unlimited AI tokens to rewrite legacy code",
         "url": "https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/",
         "source": "Hacker News AI",
-        "score": 151
-      },
-      {
-        "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
-        "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
-        "source": "Hacker News AI",
-        "score": 276
+        "score": 226
       },
       {
         "title": "Building an AI-native engineering org",
         "url": "https://twitter.com/sgondala2/status/2115832070274723875",
         "source": "Hacker News AI",
-        "score": 136
+        "score": 167
+      },
+      {
+        "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
+        "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
+        "source": "Hacker News AI",
+        "score": 335
       },
       {
         "title": "Sleep framework: A new way for LLMs to retain knowledge in continual learning",
         "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
         "source": "Hacker News AI",
-        "score": 205
-      },
-      {
-        "title": "AI isn't replacing SREs, it's deskilling them",
-        "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
-        "source": "Hacker News AI",
-        "score": 560
-      },
-      {
-        "title": "Wonderful Weather: Floods and Foreboding in 17th-Century Britain",
-        "url": "https://publicdomainreview.org/essay/wonderful-weather/",
-        "source": "Hacker News AI",
-        "score": 16
+        "score": 234
       },
       {
         "title": "We're releasing the weights of Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4-oss/",
         "source": "Hacker News AI",
-        "score": 1689
-      },
-      {
-        "title": "AO3 Down for Maintenance",
-        "url": "https://www.otwstatus.org",
-        "source": "Hacker News AI",
-        "score": 119
+        "score": 1696
       },
       {
         "title": "We ran AI agent swarms in Minecraft and Mindustry",
         "url": "https://labs.ycombinator.com/projects/games/index.html",
         "source": "Hacker News AI",
-        "score": 401
+        "score": 403
       },
       {
-        "title": "OpenAI raises less than half of $30B target",
-        "url": "https://www.wsj.com/tech/ai/openai-raises-less-than-half-of-30-billion-target-in-latest-round-91aecdc5",
+        "title": "AI isn't replacing SREs, it's deskilling them",
+        "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
         "source": "Hacker News AI",
-        "score": 133
+        "score": 610
       },
       {
-        "title": "Some Thing is Happening A note from the AI companies",
-        "url": "https://alanbellows.com/some-thing-is-happening/",
+        "title": "Neuroscientists reveal method to train people to have lucid dreams",
+        "url": "https://www.livescience.com/health/neuroscience/neuroscientists-reveal-method-to-train-people-to-have-lucid-dreams-and-it-involves-virtual-reality-and-mediation",
         "source": "Hacker News AI",
-        "score": 36
+        "score": 17
       }
     ],
     "news": [
       {
-        "title": "US approves sale of 500 Patriot missiles to Ukraine",
-        "url": "https://www.bbc.co.uk/news/articles/c3vgxznlx7jzo?at_medium=RSS&at_campaign=rss",
+        "title": "Evacuees from Russia-occupied city where residents ate weeds arrive in Ukraine",
+        "url": "https://www.bbc.co.uk/news/articles/cqx2818elrnzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Crypto giant Binance attempting to recover $6.3bn stolen in hack linked to North Korea",
-        "url": "https://www.bbc.co.uk/news/articles/cwe8lp7zy07zo?at_medium=RSS&at_campaign=rss",
+        "title": "US approves sale of 500 Patriot missiles to Ukraine",
+        "url": "https://www.bbc.co.uk/news/articles/c3vgxznlx7jzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,8 +203,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Hundreds evacuated from Russian-occupied Oleshky during rare Ukraine ceasefire",
-        "url": "https://www.bbc.co.uk/news/articles/c60me298k1yeo?at_medium=RSS&at_campaign=rss",
+        "title": "G20 'family photo' cancelled after protests over presence of Russian minister",
+        "url": "https://www.bbc.co.uk/news/articles/cmd6dp2y576do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -209,6 +215,31 @@
     ],
     "art": [
       {
+        "title": " How a séance shaped this beautiful psychic platform rebrand ",
+        "url": "https://www.creativebloq.com/features/how-a-seance-shaped-this-beautiful-psychic-app-rebrand",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " \"Use their tools against them\": why AI isn't the death of production design ",
+        "url": "https://www.creativebloq.com/features/use-their-tools-against-them-why-ai-isnt-the-death-of-production-design",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How to create your own Inktober-inspired brushes in Procreate ",
+        "url": "https://www.creativebloq.com/how-to/how-to-create-your-own-inktober-inspired-brushes-in-procreate",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " \"Nostalgia is a double-edged sword\": how Dolmio revived its beloved puppet family for a new generation ",
+        "url": "https://www.creativebloq.com/features/nostalgia-is-a-double-edged-sword-how-dolmio-revived-its-beloved-puppet-family-for-a-new-generation",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Rockstar art-directed 600,000 animations, so that GTA 6’s passers-by feel like real people ",
+        "url": "https://www.creativebloq.com/news/rockstar-art-directed-600-000-animations-so-that-gta-6s-passers-by-feel-like-real-people",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Amazon's dropped the price of our favourite laptop for graphic designers by $160 in early Black Friday deal ",
         "url": "https://www.creativebloq.com/deals/amazons-dropped-the-price-of-our-favourite-laptop-for-graphic-designers-by-usd160-in-early-black-friday-deal",
         "source": "Creative Bloq"
@@ -217,68 +248,43 @@
         "title": " How this artist turned childhood nightmares into video game monsters ",
         "url": "https://www.creativebloq.com/features/how-this-artist-turned-childhood-nightmares-into-video-game-monsters",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " GTA 6's latest gameplay reveal is filthy, and South Park is helping Rockstar sell it ",
-        "url": "https://www.creativebloq.com/news/gta-6s-latest-gameplay-reveal-is-filthy-and-south-park-is-helping-rockstar-sell-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " ‘Its sheer madness is unparalleled’: inside the production design of I Love Boosters ",
-        "url": "https://www.creativebloq.com/features/its-sheer-madness-is-unparalleled-inside-the-production-design-of-i-love-boosters",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Nothing has a secret weapon rival tech brands wish they had ",
-        "url": "https://www.creativebloq.com/features/nothing-has-a-secret-weapon-rival-tech-brands-wish-they-had",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Quote of the Day by Patrick Stewart: \"You will never achieve success by insuring against failure\" ",
-        "url": "https://www.creativebloq.com/inspiration/quote-of-the-day-by-patrick-stewart-you-will-never-achieve-success-by-insuring-against-failure",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Samsung proves it’s king of the folding phones in shady Apple diss ",
-        "url": "https://www.creativebloq.com/news/samsung-proves-its-king-of-the-folding-phones-in-shady-apple-diss",
-        "source": "Creative Bloq"
       }
     ],
     "science": [],
     "gaming": [
       {
-        "title": "5 Must-Play New Xbox Games Coming in November, Including GTA 6",
-        "url": "https://www.polygon.com/new-xbox-games-november-2026/",
+        "title": "5 PS5 Games Releasing in November 2026 You Cannot Miss",
+        "url": "https://www.polygon.com/new-ps5-games-november-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Sony's Bringing Back Spider-Man $2.5 Billion Hit With New Footage",
-        "url": "https://www.polygon.com/spider-man-brand-new-day-rerelease-extended-new-footage-cameos/",
+        "title": "12 Years Later, Sofia Coppola's Unmade Epic Fantasy Still Lives Rent Free in My Head",
+        "url": "https://www.polygon.com/sofia-coppola-the-little-mermaid-story/",
         "source": "Polygon"
       },
       {
-        "title": "15 Classic Games That Prove Gameplay Is More Important Than Graphics",
-        "url": "https://www.polygon.com/classic-games-bad-graphics-good-gameplay/",
+        "title": "5 Years Later, a Dropout Star's Breakout Thriller Is Officially Free on Streaming",
+        "url": "https://www.polygon.com/werewolves-within-free/",
         "source": "Polygon"
       },
       {
-        "title": "Top 10 Pokémon Cards Most Likely to Be Fake",
-        "url": "https://www.polygon.com/top-10-pokemon-cards-most-likely-to-be-fake-how-to-tell/",
+        "title": "Logan Paul Just Proved His 'Pokémon' Haters Wrong",
+        "url": "https://www.polygon.com/logan-paul-pokemon-tcg-pikachu-illustrator-money-spent-youtube/",
         "source": "Polygon"
       },
       {
-        "title": "Every Mike Flanagan TV Series, Ranked",
-        "url": "https://www.polygon.com/mike-flanagan-series-ranked/",
+        "title": "20 Years Later, Rockstar’s Best Game Still Doesn’t Have the Sequel It Deserved",
+        "url": "https://www.polygon.com/bully-20-years-later-sequel-retrospective/",
         "source": "Polygon"
       },
       {
-        "title": "10 Free Browser Games That are Actually Fun to Play",
-        "url": "https://www.polygon.com/best-free-browser-games-to-play/",
+        "title": "Star Wars' Secret Writers Quietly Made the Strangest, Scariest Zombie Movies of All Time",
+        "url": "https://www.polygon.com/messiah-of-evil/",
         "source": "Polygon"
       },
       {
-        "title": "Calvin and Hobbes' Final Strip is Still the Perfect Goodbye",
-        "url": "https://www.polygon.com/calvin-and-hobbes-final-comic-strip/",
+        "title": "60 Years Later, the Best 'Peanuts' Quote of All Time Still Doesn't Get the Credit it Deserves",
+        "url": "https://www.polygon.com/best-peanuts-quote-ever-charlie-brown-charles-schulz/",
         "source": "Polygon"
       }
     ],
