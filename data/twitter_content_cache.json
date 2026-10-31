@@ -1,195 +1,195 @@
 {
   "metadata": {
-    "last_updated": "2026-10-31T13:23:38.836416",
-    "total_items": 56
+    "last_updated": "2026-10-31T18:16:59.412003",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
-        "title": "Serbia just elected the world's brainiest parliament",
-        "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
-        "source": "Hacker News",
-        "score": 363
-      },
-      {
-        "title": "Molly(Signal fork) has not been updated since 3 months and is vulnerable",
+        "title": "Molly (Signal fork) has not been updated since 3 months and is vulnerable",
         "url": "https://piefed.world/post/1503394",
         "source": "Hacker News",
-        "score": 77
+        "score": 225
       },
       {
         "title": "We Took over ChatGPT Accounts",
         "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
         "source": "Hacker News",
-        "score": 72
+        "score": 237
+      },
+      {
+        "title": "Casio Watches of the 1980s",
+        "url": "https://www.casio.com/us/watches/50th/Heritage/1980s/",
+        "source": "Hacker News",
+        "score": 102
+      },
+      {
+        "title": "Jepsen: ParticleDB 1.1.4",
+        "url": "https://jepsen.io/analyses/particledb-1.1.4",
+        "source": "Hacker News",
+        "score": 53
+      },
+      {
+        "title": "Redox: Ring Buffers Project Summary",
+        "url": "https://www.redox-os.org/news/nlnet-rb-summary/",
+        "source": "Hacker News",
+        "score": 8
+      },
+      {
+        "title": "Simple circuits can create complex behaviors",
+        "url": "https://aatishb.com/myriad/lets-build-a-brain/",
+        "source": "Hacker News",
+        "score": 136
+      },
+      {
+        "title": "A/SIDE – Private photo sharing and encrypted messages",
+        "url": "https://a-side.social/",
+        "source": "Hacker News",
+        "score": 17
+      },
+      {
+        "title": "Reading and writing are less symmetric than you (probably) think",
+        "url": "https://fgiesen.wordpress.com/2015/10/25/reading-and-writing-are-less-symmetric-than-you-probably-think/",
+        "source": "Hacker News",
+        "score": 43
       },
       {
         "title": "Switch Lowering in GCC",
         "url": "https://xoranth.net/gcc-switch/",
         "source": "Hacker News",
-        "score": 99
+        "score": 166
       },
       {
-        "title": "Digital Minimalism",
+        "title": "UK Green party drops longstanding opposition to nuclear power",
+        "url": "https://www.theguardian.com/politics/2026/oct/05/green-party-nuclear-power-policy",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Malware uses LLMs to rank victims by how much they're worth",
+        "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
+        "source": "Hacker News",
+        "score": 178
+      },
+      {
+        "title": "Serbia just elected the world's brainiest parliament",
+        "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
+        "source": "Hacker News",
+        "score": 672
+      },
+      {
+        "title": "Digital minimalism",
         "url": "https://vitalik.eth.limo/general/2026/10/31/digital_minimalism.html",
         "source": "Hacker News",
-        "score": 111
-      },
-      {
-        "title": "Show HN: Marelleo, an open-source story box I built for my kids using ESP32",
-        "url": "https://zebra.rodeo/en/blog/marelleo/",
-        "source": "Hacker News",
-        "score": 101
-      },
-      {
-        "title": "AI, Lean, and the Future of Formal Verification, with Lean Creator Leo de Moura",
-        "url": "https://thedataexchange.media/leo-de-moura-lean-aws/",
-        "source": "Hacker News",
-        "score": 79
-      },
-      {
-        "title": "My favourite PowerMac is a Nintendo Wii",
-        "url": "https://virtuallyfun.com/2026/10/29/my-favourite-powermac-is-a-nintendo-wii/",
-        "source": "Hacker News",
-        "score": 331
-      },
-      {
-        "title": "The $6.3B Binance hack was pulled off in just 20 minutes",
-        "url": "https://www.wired.com/story/the-dollar63-billion-binance-hack-was-pulled-off-in-just-20-minutes/",
-        "source": "Hacker News",
-        "score": 493
-      },
-      {
-        "title": "Cloudflare Turnstile solver library (no headless browser required)",
-        "url": "https://github.com/chris124567/cfsolve",
-        "source": "Hacker News",
-        "score": 247
-      },
-      {
-        "title": "Northflank Breached",
-        "url": "https://status.northflank.com",
-        "source": "Hacker News",
-        "score": 451
+        "score": 232
       },
       {
         "title": "Prospero: A new coding harness for a more civilized age",
         "url": "https://nullprogram.com/blog/2026/10/31/",
         "source": "Hacker News",
-        "score": 4
+        "score": 149
       },
       {
-        "title": "Breaking the open web won't stop the bad bots",
-        "url": "https://www.techpolicy.press/breaking-the-open-web-wont-stop-the-bad-bots/",
+        "title": "Show HN: Ghostman – A fast, keyboard-driven TUI API client and webhook inspector",
+        "url": "https://github.com/4yk5/Ghostman",
         "source": "Hacker News",
-        "score": 283
-      },
-      {
-        "title": "Tell HN: Scribd Breached",
-        "url": "https://news.ycombinator.com/item?id=50312756",
-        "source": "Hacker News",
-        "score": 259
-      },
-      {
-        "title": "Shiny Object Syndrome",
-        "url": "https://en.wikipedia.org/wiki/Shiny_object_syndrome",
-        "source": "Hacker News",
-        "score": 32
+        "score": 18
       }
     ],
     "ai": [
       {
-        "title": "Serbia just elected the world's brainiest parliament",
-        "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
-        "source": "Hacker News AI",
-        "score": 363
-      },
-      {
         "title": "We Took over ChatGPT Accounts",
         "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
         "source": "Hacker News AI",
-        "score": 72
+        "score": 237
+      },
+      {
+        "title": "Malware uses LLMs to rank victims by how much they're worth",
+        "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
+        "source": "Hacker News AI",
+        "score": 178
+      },
+      {
+        "title": "Serbia just elected the world's brainiest parliament",
+        "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
+        "source": "Hacker News AI",
+        "score": 672
       },
       {
         "title": "AI, Lean, and the Future of Formal Verification, with Lean Creator Leo de Moura",
         "url": "https://thedataexchange.media/leo-de-moura-lean-aws/",
         "source": "Hacker News AI",
-        "score": 79
+        "score": 150
       },
       {
-        "title": "Why Anthropic's Filing Crushed Tech Stocks",
-        "url": "https://www.thebignewsletter.com/p/why-anthropics-filing-crushed-tech",
+        "title": "Show HN: Jointter – A daily word puzzle using dots and lines",
+        "url": "https://www.jointter.com/",
         "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
-        "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
-        "source": "Hacker News AI",
-        "score": 923
+        "score": 8
       },
       {
         "title": "Cisco gives engineer unlimited AI tokens to rewrite legacy code",
         "url": "https://fortune.com/2026/10/30/cisco-president-jeetu-patel-gen-z-27-year-old-unlimited-ai-tokens-rewrite-legacy-code-entry-level-jobs/",
         "source": "Hacker News AI",
-        "score": 226
+        "score": 286
+      },
+      {
+        "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+        "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+        "source": "Hacker News AI",
+        "score": 956
+      },
+      {
+        "title": "Anthropic's Claude AI blocks video game cloning and reverse-engineering",
+        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-ai-model-is-now-blocking-attempts-at-video-game-recreation-and-cloning-users-also-claim-non-malicious-generic-reverse-engineering-tasks-are-blocked",
+        "source": "Hacker News AI",
+        "score": 43
+      },
+      {
+        "title": "Amazon sends chills through its workforce with mixed message memo about AI use",
+        "url": "https://www.theregister.com/ai-and-ml/2026/10/31/amazon-sends-chills-through-its-workforce-with-mixed-message-memo-about-ai-use-corey-quinn/5306804",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Building an AI-native engineering org",
         "url": "https://twitter.com/sgondala2/status/2115832070274723875",
         "source": "Hacker News AI",
-        "score": 167
-      },
-      {
-        "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
-        "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
-        "source": "Hacker News AI",
-        "score": 335
+        "score": 175
       },
       {
         "title": "Sleep framework: A new way for LLMs to retain knowledge in continual learning",
         "url": "https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/",
         "source": "Hacker News AI",
-        "score": 234
+        "score": 245
       },
       {
         "title": "We're releasing the weights of Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4-oss/",
         "source": "Hacker News AI",
-        "score": 1696
+        "score": 1705
       },
       {
-        "title": "We ran AI agent swarms in Minecraft and Mindustry",
-        "url": "https://labs.ycombinator.com/projects/games/index.html",
+        "title": "Through Captain Jean-Luc Picard, Patrick Stewart taught us the measure of a man",
+        "url": "https://www.bostonglobe.com/2026/10/29/metro/patrick-stewart-picard-star-trek-the-next-generation/",
         "source": "Hacker News AI",
-        "score": 403
-      },
-      {
-        "title": "AI isn't replacing SREs, it's deskilling them",
-        "url": "https://newsletter.signoz.io/p/ai-isnt-replacing-sres-its-deskilling",
-        "source": "Hacker News AI",
-        "score": 610
-      },
-      {
-        "title": "Neuroscientists reveal method to train people to have lucid dreams",
-        "url": "https://www.livescience.com/health/neuroscience/neuroscientists-reveal-method-to-train-people-to-have-lucid-dreams-and-it-involves-virtual-reality-and-mediation",
-        "source": "Hacker News AI",
-        "score": 17
+        "score": 359
       }
     ],
     "news": [
       {
-        "title": "Evacuees from Russia-occupied city where residents ate weeds arrive in Ukraine",
+        "title": "Ukrainian evacuees reunite with family after years trapped in Russia-occupied city",
         "url": "https://www.bbc.co.uk/news/articles/cqx2818elrnzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US approves sale of 500 Patriot missiles to Ukraine",
-        "url": "https://www.bbc.co.uk/news/articles/c3vgxznlx7jzo?at_medium=RSS&at_campaign=rss",
+        "title": "Crypto firm Binance covers 90% of losses after $6.3bn hack",
+        "url": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Why North Korea's 'elite' hackers are the prime suspect in major Binance hack",
-        "url": "https://www.bbc.co.uk/news/articles/ck9dz3v7z7v3o?at_medium=RSS&at_campaign=rss",
+        "title": "More than 5,000 die from Ebola in DR Congo's deadliest outbreak",
+        "url": "https://www.bbc.co.uk/news/articles/cj5ynryyep2yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -198,13 +198,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Spain train disaster clouds Sánchez chances of re-election",
-        "url": "https://www.bbc.co.uk/news/articles/cmeweppr990qo?at_medium=RSS&at_campaign=rss",
+        "title": "Ethiopian PM puts ministers through military training",
+        "url": "https://www.bbc.co.uk/news/articles/cmwyv2y7g9l8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "G20 'family photo' cancelled after protests over presence of Russian minister",
-        "url": "https://www.bbc.co.uk/news/articles/cmd6dp2y576do?at_medium=RSS&at_campaign=rss",
+        "title": "Spain train disaster clouds Sánchez chances of re-election",
+        "url": "https://www.bbc.co.uk/news/articles/cmeweppr990qo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -250,41 +250,77 @@
         "source": "Creative Bloq"
       }
     ],
-    "science": [],
+    "science": [
+      {
+        "title": "Scientists finally discover how a common gut bacterium can trigger colon cancer",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261031012912.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A mysterious 4,000-year-old wall is rewriting North Africa’s history",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261030003022.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists smash oxygen nuclei to recreate matter from the Big Bang",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261030002935.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Astronauts just gave the International Space Station a powerful upgrade",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261030002931.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "The asteroid killed the dinosaurs. Why did crocodiles survive?",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261030002922.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A computer scientist breaks through a limit that stood since 1996",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261029072146.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A simple blood test could reveal Alzheimer’s risk 10 years before symptoms",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261029072142.htm",
+        "source": "Science Daily"
+      }
+    ],
     "gaming": [
       {
-        "title": "5 PS5 Games Releasing in November 2026 You Cannot Miss",
-        "url": "https://www.polygon.com/new-ps5-games-november-2026/",
+        "title": "Helen Mirren and Alden Ehrenreich on Playing Tom Ripley and His Creator Patricia Highsmith",
+        "url": "https://www.polygon.com/helen-mirren-alden-ehrenreich-interview-a-talent-for-murder/",
         "source": "Polygon"
       },
       {
-        "title": "12 Years Later, Sofia Coppola's Unmade Epic Fantasy Still Lives Rent Free in My Head",
-        "url": "https://www.polygon.com/sofia-coppola-the-little-mermaid-story/",
+        "title": "Peter Jackson's Worst Lord of the Rings Sin Was Forgetting the Story's Fairy Tale Roots",
+        "url": "https://www.polygon.com/the-hobbit-movies-lord-of-the-rings-fairy-tale-roots/",
         "source": "Polygon"
       },
       {
-        "title": "5 Years Later, a Dropout Star's Breakout Thriller Is Officially Free on Streaming",
-        "url": "https://www.polygon.com/werewolves-within-free/",
+        "title": "Phantom Blade Zero Just Killed Crimson Desert's Chances At a GOTY",
+        "url": "https://www.polygon.com/phantom-blade-zero-crimson-desert-goty-chances/",
         "source": "Polygon"
       },
       {
-        "title": "Logan Paul Just Proved His 'Pokémon' Haters Wrong",
-        "url": "https://www.polygon.com/logan-paul-pokemon-tcg-pikachu-illustrator-money-spent-youtube/",
+        "title": "Skyblivion's Biggest Legal Challenge Yet Is Not Coming From Bethesda",
+        "url": "https://www.polygon.com/skyblivion-legal-threats-former-volunteer/",
         "source": "Polygon"
       },
       {
-        "title": "20 Years Later, Rockstar’s Best Game Still Doesn’t Have the Sequel It Deserved",
-        "url": "https://www.polygon.com/bully-20-years-later-sequel-retrospective/",
+        "title": "'No Man's Sky' Players Pay Homage To Star Trek's Patrick Stewart",
+        "url": "https://www.polygon.com/no-mans-sky-players-patrick-stewart-memorial-star-systems/",
         "source": "Polygon"
       },
       {
-        "title": "Star Wars' Secret Writers Quietly Made the Strangest, Scariest Zombie Movies of All Time",
-        "url": "https://www.polygon.com/messiah-of-evil/",
+        "title": "Austin Abrams Was Grabbed by Tentacles in a 35-Foot Whale Head for the Thriller ‘Whalefall’",
+        "url": "https://www.polygon.com/whalefall-bts-interview/",
         "source": "Polygon"
       },
       {
-        "title": "60 Years Later, the Best 'Peanuts' Quote of All Time Still Doesn't Get the Credit it Deserves",
-        "url": "https://www.polygon.com/best-peanuts-quote-ever-charlie-brown-charles-schulz/",
+        "title": "Warframe officially adds a whole new star system in December",
+        "url": "https://www.polygon.com/warframe-tau-release-window/",
         "source": "Polygon"
       }
     ],
