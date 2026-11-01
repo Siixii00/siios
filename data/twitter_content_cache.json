@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-11-01T01:55:52.842152",
-    "total_items": 61
+    "last_updated": "2026-11-01T08:53:48.050928",
+    "total_items": 62
   },
   "content": {
     "tech": [
@@ -9,162 +9,173 @@
         "title": "HackerTube: YouTube built from videos recommended by HN",
         "url": "https://karpathy.bearblog.dev/hacker-tube/",
         "source": "Hacker News",
-        "score": 722
+        "score": 1225
       },
       {
         "title": "An Italian farmer found some unknown seeds in his attic and planted them",
         "url": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
         "source": "Hacker News",
-        "score": 151
+        "score": 381
+      },
+      {
+        "title": "The AI cost of JavaScript frameworks",
+        "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
+        "source": "Hacker News",
+        "score": 38
+      },
+      {
+        "title": "Running a bootstrapped SaaS for 20 years with my brother",
+        "url": "https://blog.zamzar.com/2026/10/30/20-years-766-million-files-two-chameleons/",
+        "source": "Hacker News",
+        "score": 65
+      },
+      {
+        "title": "Brazilian Court Sanctions Lawyers for Prompt Injection in Court Filing",
+        "url": "https://jetstream.security/insights/brazilian-court-sanctions-prompt-injection-filing/",
+        "source": "Hacker News",
+        "score": 104
       },
       {
         "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
         "url": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
         "source": "Hacker News",
-        "score": 347
+        "score": 491
       },
       {
         "title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
         "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
         "source": "Hacker News",
-        "score": 80
+        "score": 213
       },
       {
-        "title": "When electric cars were for women",
-        "url": "https://spectrum.ieee.org/early-electric-vehicles",
+        "title": "Leaking Secrets from Air-Gap Computers by Spelling Radio Signals from RAM (2024)",
+        "url": "https://arxiv.org/abs/2409.02292",
         "source": "Hacker News",
-        "score": 36
+        "score": 77
+      },
+      {
+        "title": "Pac-Man's Siren Call",
+        "url": "https://unsung.aresluna.org/pac-mans-siren-call/",
+        "source": "Hacker News",
+        "score": 9
       },
       {
         "title": "Altoids Project",
         "url": "https://uvdn7.github.io/altoids-project/",
         "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "It's the memory latency, stupid",
-        "url": "https://pivotlake.io/blog/its-the-memory-latency-stupid/",
-        "source": "Hacker News",
-        "score": 126
-      },
-      {
-        "title": "First response from the Project Suncatcher prototype satellite",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-satellite-response/",
-        "source": "Hacker News",
-        "score": 32
+        "score": 105
       },
       {
         "title": "Zinc creep in cable spelter sockets brought down the Arecibo telescope in 2020",
         "url": "https://maketecheasier.com/arecibo-zinc-creep-collapse/",
         "source": "Hacker News",
-        "score": 27
+        "score": 97
       },
       {
-        "title": "Molly (Signal fork) has not been updated since 3 months and is vulnerable",
-        "url": "https://piefed.world/post/1503394",
+        "title": "It's the memory latency, stupid",
+        "url": "https://pivotlake.io/blog/its-the-memory-latency-stupid/",
         "source": "Hacker News",
-        "score": 304
+        "score": 188
       },
       {
-        "title": "Jepsen: ParticleDB 1.1.4",
-        "url": "https://jepsen.io/analyses/particledb-1.1.4",
+        "title": "ChatGPT and Codex usage limits merging",
+        "url": "https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
         "source": "Hacker News",
-        "score": 199
+        "score": 103
       },
       {
-        "title": "Show HN: NES Contra (1987) port (ASM –> C and then C –> WebAssembly)",
-        "url": "https://epoyraz.github.io/nes-contra-us/",
+        "title": "Pilot-wave hydrodynamics (Quantum phenomena in macroscopic hydrodynamic systems)",
+        "url": "http://thales.mit.edu/bush/index.php/4801-2/",
         "source": "Hacker News",
-        "score": 52
+        "score": 30
       },
       {
-        "title": "Surviving \"The Graduate\"",
-        "url": "https://www.newyorker.com/culture/the-weekend-essay/dustin-hoffman-on-surviving-the-graduate",
+        "title": "A 1580 Map Shows Why Data Visualization Is Never Neutral",
+        "url": "https://thereader.mitpress.mit.edu/a-1580-map-shows-why-data-visualization-is-never-neutral/",
         "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "The Duty of a Scholar",
-        "url": "https://www.daemonology.net/blog/2026-10-31-The-Duty-of-a-Scholar.html",
-        "source": "Hacker News",
-        "score": 89
-      },
-      {
-        "title": "Decode kernel panic from QR Code photo",
-        "url": "https://gist.github.com/skorotkiewicz/c59e591c26661cb52b06afc42d8ac546",
-        "source": "Hacker News",
-        "score": 4
+        "score": 35
       }
     ],
     "ai": [
       {
-        "title": "AI text watermarking and quality loss",
-        "url": "https://blog.keyvan.net/p/ai-text-watermarking-and-quality",
+        "title": "The AI cost of JavaScript frameworks",
+        "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
         "source": "Hacker News AI",
-        "score": 20
+        "score": 38
+      },
+      {
+        "title": "Leaking Secrets from Air-Gap Computers by Spelling Radio Signals from RAM (2024)",
+        "url": "https://arxiv.org/abs/2409.02292",
+        "source": "Hacker News AI",
+        "score": 77
+      },
+      {
+        "title": "ChatGPT and Codex usage limits merging",
+        "url": "https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits",
+        "source": "Hacker News AI",
+        "score": 103
+      },
+      {
+        "title": "Understanding Email Encryption",
+        "url": "https://www.fastmail.com/blog/email-encryption/",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Do the math: How we took over ChatGPT accounts",
         "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
         "source": "Hacker News AI",
-        "score": 303
+        "score": 325
       },
       {
         "title": "Anthropic blocks users for anything touching training larger models",
         "url": "https://twitter.com/jiahaoshao1/status/2116475922190922088",
         "source": "Hacker News AI",
-        "score": 196
+        "score": 334
       },
       {
-        "title": "Serbia just elected the world's brainiest parliament",
-        "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
+        "title": "AI text watermarking and quality loss",
+        "url": "https://blog.keyvan.net/p/ai-text-watermarking-and-quality",
         "source": "Hacker News AI",
-        "score": 812
+        "score": 52
       },
       {
         "title": "AI, Lean, and the Future of Formal Verification, with Lean Creator Leo de Moura",
         "url": "https://thedataexchange.media/leo-de-moura-lean-aws/",
         "source": "Hacker News AI",
-        "score": 189
+        "score": 203
       },
       {
-        "title": "I post trained a model on Demoscenes",
-        "url": "https://datavorous.com/writing/demoscener/",
+        "title": "Serbia just elected the world's brainiest parliament",
+        "url": "https://www.science.org/content/article/serbia-just-elected-world-s-brainiest-parliament",
         "source": "Hacker News AI",
-        "score": 48
-      },
-      {
-        "title": "5 years of OqtaDrive: Microdrive emulation to Sinclair Network over the internet",
-        "url": "https://oqtadrive.org/10.other/5-years/",
-        "source": "Hacker News AI",
-        "score": 18
-      },
-      {
-        "title": "GPT-5.6 Sol can beat Factorio on peaceful mode",
-        "url": "https://ryanmadden.net/gpt-56-beats-factorio/",
-        "source": "Hacker News AI",
-        "score": 157
-      },
-      {
-        "title": "Malware uses LLMs to rank victims by how much they're worth",
-        "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
-        "source": "Hacker News AI",
-        "score": 233
+        "score": 854
       },
       {
         "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
         "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
         "source": "Hacker News AI",
-        "score": 967
+        "score": 976
       },
       {
-        "title": "Smear Campaign Towards GrapheneOS",
-        "url": "https://grapheneos.social/@GrapheneOS/117537776055163844",
+        "title": "Anthropic takes steps to block Claude from reverse-engineering video games",
+        "url": "https://mashable.com/tech/anthropic-takes-steps-to-block-video-game-cloning-and-reverse-engineering",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 140
+      },
+      {
+        "title": "Malware uses LLMs to rank victims by how much they're worth",
+        "url": "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/",
+        "source": "Hacker News AI",
+        "score": 246
       }
     ],
     "news": [
+      {
+        "title": "Shops looted as German cost of living protests turn violent",
+        "url": "https://www.bbc.co.uk/news/articles/cqj34gnd3n30o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "'We came back from hell', say Ukrainians after years in Russia-occupied front-line city",
         "url": "https://www.bbc.co.uk/news/articles/cqglw3k7djp1o?at_medium=RSS&at_campaign=rss",
@@ -176,17 +187,12 @@
         "source": "BBC World"
       },
       {
-        "title": "Thousands demonstrate in Paris as protests spread across Europe",
-        "url": "https://www.bbc.co.uk/news/videos/ck0j0y87j303o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Crypto firm Binance covers 90% of losses after $6.3bn hack",
         "url": "https://www.bbc.co.uk/news/articles/ckpdg3ql4169o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "India's opposition set to hold mega rally seeking election chief's resignation",
+        "title": "India's opposition holds mega rally seeking election chief's resignation",
         "url": "https://www.bbc.co.uk/news/articles/c60qk92dvlwgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -202,6 +208,21 @@
       }
     ],
     "art": [
+      {
+        "title": " This brilliant budget 3D printer is the one I'd buy if I were getting into the hobby ",
+        "url": "https://www.creativebloq.com/deals/this-brilliant-budget-3d-printer-is-the-one-i-would-buy-if-i-were-getting-into-the-hobby",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How to animate your drawings in Procreate the easy way ",
+        "url": "https://www.creativebloq.com/how-to/how-to-animate-your-drawings-in-procreate-the-easy-way",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How to make these easy Halloween crafts with Cricut ",
+        "url": "https://www.creativebloq.com/how-to/how-to-make-these-easy-halloween-crafts-with-cricut",
+        "source": "Creative Bloq"
+      },
       {
         "title": " How a séance shaped this beautiful psychic platform rebrand ",
         "url": "https://www.creativebloq.com/features/how-a-seance-shaped-this-beautiful-psychic-app-rebrand",
@@ -221,24 +242,14 @@
         "title": " \"Nostalgia is a double-edged sword\": how Dolmio revived its beloved puppet family for a new generation ",
         "url": "https://www.creativebloq.com/features/nostalgia-is-a-double-edged-sword-how-dolmio-revived-its-beloved-puppet-family-for-a-new-generation",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Rockstar art-directed 600,000 animations, so that GTA 6’s passers-by feel like real people ",
-        "url": "https://www.creativebloq.com/news/rockstar-art-directed-600-000-animations-so-that-gta-6s-passers-by-feel-like-real-people",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Amazon's dropped the price of our favourite laptop for graphic designers by $160 in early Black Friday deal ",
-        "url": "https://www.creativebloq.com/deals/amazons-dropped-the-price-of-our-favourite-laptop-for-graphic-designers-by-usd160-in-early-black-friday-deal",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How this artist turned childhood nightmares into video game monsters ",
-        "url": "https://www.creativebloq.com/features/how-this-artist-turned-childhood-nightmares-into-video-game-monsters",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Scientists say a forgotten particle may explain why the universe exists",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261031221201.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Scientists finally discover how a common gut bacterium can trigger colon cancer",
         "url": "https://www.sciencedaily.com/releases/2026/10/261031012912.htm",
@@ -250,6 +261,16 @@
         "source": "Science Daily"
       },
       {
+        "title": "Scientists discover the hidden “muscles” trees use to straighten themselves",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261030003006.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists discover a hidden driver of high cholesterol and a way to stop it",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261030003003.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Scientists smash oxygen nuclei to recreate matter from the Big Bang",
         "url": "https://www.sciencedaily.com/releases/2026/10/261030002935.htm",
         "source": "Science Daily"
@@ -258,24 +279,29 @@
         "title": "Astronauts just gave the International Space Station a powerful upgrade",
         "url": "https://www.sciencedaily.com/releases/2026/10/261030002931.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "The asteroid killed the dinosaurs. Why did crocodiles survive?",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261030002922.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A computer scientist breaks through a limit that stood since 1996",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261029072146.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A simple blood test could reveal Alzheimer’s risk 10 years before symptoms",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261029072142.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "9 Years Later, Jon Bernthal’s Action Series Is a Masterpiece From Start to Finish",
+        "url": "https://www.polygon.com/jon-bernthal-punisher-action-masterpiece-marvel-disney-plus/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Ridley Scott's Near-Perfect Sci-Fi Masterpiece is Waiting to Be Rediscovered on Streaming",
+        "url": "https://www.polygon.com/ridley-scott-blade-runner-final-cut-streaming-november-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "All 8 Dungeon Crawler Carl Books Ranked (by Their Goodreads Score)",
+        "url": "https://www.polygon.com/every-dungeon-crawler-carl-book-ranked-by-their-goodreads-score/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Patrick Stewart's Perfect 'Simpsons' Episode Reveals the Beloved Actor's Secret Weapon",
+        "url": "https://www.polygon.com/patrick-stewart-the-simpsons-guest-star/",
+        "source": "Polygon"
+      },
       {
         "title": "10 Video Games With the Best Twist Endings Nobody Saw Coming",
         "url": "https://www.polygon.com/best-video-game-twist-endings/",
@@ -289,26 +315,6 @@
       {
         "title": "5 Must-Play Nintendo Switch 2 Games Coming in November 2026",
         "url": "https://www.polygon.com/new-nintendo-switch-games-november-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Best Nintendo Switch Games That Desperately Need Switch 2 Upgrades, Ranked",
-        "url": "https://www.polygon.com/nintendo-switch-games-no-switch-2-edition/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 Classic '90s RPGs That Have Aged Like Fine Wine, Ranked",
-        "url": "https://www.polygon.com/best-classic-90s-rpgs/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Every Resident Evil Game, Ranked From Worst to Best",
-        "url": "https://www.polygon.com/resident-evil-games-ranked-worst-best/",
-        "source": "Polygon"
-      },
-      {
-        "title": "KPop Demon Hunters Returns In November with Definitive New Release",
-        "url": "https://www.polygon.com/kpop-demon-hunters-criterion-collection-4k-blu-ray-november-2026/",
         "source": "Polygon"
       }
     ],
