@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-02T00:21:43.479506",
+    "last_updated": "2026-11-02T07:22:05.695339",
     "total_items": 59
   },
   "content": {
@@ -9,187 +9,192 @@
         "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
         "url": "https://hackerbooks.org",
         "source": "Hacker News",
-        "score": 847
+        "score": 1249
+      },
+      {
+        "title": "Show HN: Wikihack – HackerTube, but for Wikipedia articles mentioned on HN",
+        "url": "https://wikihack.netlify.app",
+        "source": "Hacker News",
+        "score": 32
+      },
+      {
+        "title": "Postgres 19 is late because so many more bugs are being found now",
+        "url": "http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html",
+        "source": "Hacker News",
+        "score": 291
+      },
+      {
+        "title": "F/OSS Comics #13: BSD Unix, Part 3 – The Beginning of BSD Unix",
+        "url": "https://fosscomics.com/posts/13.%20BSD%20Unix%20Part%203%20-%20The%20Beginning%20of%20BSD%20Unix/",
+        "source": "Hacker News",
+        "score": 82
       },
       {
         "title": "HackerTube: YouTube built from videos recommended by HN",
         "url": "https://karpathy.bearblog.dev/hacker-tube/",
         "source": "Hacker News",
-        "score": 2234
-      },
-      {
-        "title": "Nibnib: Image compression with extreme decompression speed",
-        "url": "https://github.com/raphlinus/nibnib",
-        "source": "Hacker News",
-        "score": 79
-      },
-      {
-        "title": "Tips for more effective fuzz testing with AFL++",
-        "url": "https://nullprogram.com/blog/2025/02/05/",
-        "source": "Hacker News",
-        "score": 67
+        "score": 2467
       },
       {
         "title": "Ask HN: Which TV do you recommend for privacy?",
         "url": "https://news.ycombinator.com/item?id=50328896",
         "source": "Hacker News",
-        "score": 94
+        "score": 284
       },
       {
-        "title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says",
-        "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+        "title": "Mystery of 60-Second Fluctuations in Power Grids Solved",
+        "url": "https://www.fz-juelich.de/en/news/archive/press-release/2026/mystery-of-60-second-fluctuations-in-power-grids-solved",
         "source": "Hacker News",
-        "score": 97
+        "score": 91
       },
       {
-        "title": "Keeping Up Appearances – The women taking over the funeral industry",
-        "url": "https://lareviewofbooks.org/article/death-industry-mortuary-programs-women-andie-eisen-quarterly/",
+        "title": "Trigger.dev customer environment variables exposed",
+        "url": "https://trigger.dev/blog/security-incident-nov-2026",
         "source": "Hacker News",
-        "score": 10
+        "score": 64
       },
       {
-        "title": "New 3D thermal invisibility cloak makes objects disappear from infrared cameras",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261025073051.htm",
+        "title": "Nibnib: Image compression with extreme decompression speed",
+        "url": "https://github.com/raphlinus/nibnib",
         "source": "Hacker News",
-        "score": 34
+        "score": 129
       },
       {
-        "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
-        "url": "https://github.com/ivankovic/omnidiff",
+        "title": "Tips for more effective fuzz testing with AFL++",
+        "url": "https://nullprogram.com/blog/2025/02/05/",
         "source": "Hacker News",
-        "score": 143
+        "score": 109
       },
       {
-        "title": "Mathematics has changed. Let's act like it",
-        "url": "https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/",
+        "title": "Bones may release proteins that slow aging and extend life span",
+        "url": "https://www.science.org/content/article/bones-may-release-proteins-slow-aging-and-extend-life-span",
         "source": "Hacker News",
-        "score": 207
+        "score": 26
       },
       {
         "title": "Copper – A minimal low-level programming language with OOP and generics",
         "url": "https://tibleiz.net/copper/",
         "source": "Hacker News",
-        "score": 118
+        "score": 156
       },
       {
-        "title": "The She-Wolves of Jülich",
-        "url": "https://www.historytoday.com/archive/history-matters/she-wolves-julich",
+        "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
+        "url": "https://github.com/ivankovic/omnidiff",
         "source": "Hacker News",
-        "score": 9
+        "score": 216
+      },
+      {
+        "title": "New 3D thermal invisibility cloak makes objects disappear from infrared cameras",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261025073051.htm",
+        "source": "Hacker News",
+        "score": 71
       },
       {
         "title": "Proving and improving the Platonic Representation Hypothesis with JEPAs",
         "url": "https://arxiv.org/abs/2610.39302",
         "source": "Hacker News",
-        "score": 105
-      },
-      {
-        "title": "Lenovo's 'encrypted' fingerprint USB is just an unencrypted SD card in a case",
-        "url": "https://www.reddit.com/r/technology/comments/1xl2pr3/lenovos_encrypted_fingerprint_usb_drive_is_just/",
-        "source": "Hacker News",
-        "score": 377
-      },
-      {
-        "title": "Bidirectional charging during grid outages",
-        "url": "https://www.jefftk.com/p/bidirectional-charging-during-grid-outages",
-        "source": "Hacker News",
-        "score": 81
+        "score": 131
       }
     ],
     "ai": [
       {
-        "title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says",
-        "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
-        "source": "Hacker News AI",
-        "score": 98
-      },
-      {
         "title": "The AI cost of JavaScript frameworks",
         "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
         "source": "Hacker News AI",
-        "score": 288
+        "score": 347
+      },
+      {
+        "title": "AI fan wikis riddled with errors are muddying the waters of games culture",
+        "url": "https://www.eurogamer.net/ai-fan-wikis-errors-complicating-games-culture",
+        "source": "Hacker News AI",
+        "score": 73
       },
       {
         "title": "Domain hacks with unusual Unicode characters (2018)",
         "url": "https://shkspr.mobi/blog/2018/11/domain-hacks-with-unusual-unicode-characters/",
         "source": "Hacker News AI",
-        "score": 53
-      },
-      {
-        "title": "Frontier Airlines Likely Breached",
-        "url": "https://www.reddit.com/r/frontierairlines/comments/1xl20e8/psa_email_scam/",
-        "source": "Hacker News AI",
-        "score": 167
-      },
-      {
-        "title": "Understanding Email Encryption (2025)",
-        "url": "https://www.fastmail.com/blog/email-encryption/",
-        "source": "Hacker News AI",
-        "score": 123
+        "score": 73
       },
       {
         "title": "Leaking Secrets from Air-Gap Computers by Spelling Radio Signals from RAM (2024)",
         "url": "https://arxiv.org/abs/2409.02292",
         "source": "Hacker News AI",
-        "score": 179
-      },
-      {
-        "title": "AI agent swarms in Minecraft fail to build civilization, drown in bureaucracy",
-        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-agent-swarms-unleashed-in-minecraft-to-build-a-thriving-civilization-50-agent-teams-fail-after-falling-into-paralyzing-bureaucracy",
-        "source": "Hacker News AI",
-        "score": 145
+        "score": 194
       },
       {
         "title": "I Am the Reason OpenAI Is Killing Unlimited Chats",
         "url": "https://chaosmanage.github.io/i-killed-unlimited-chatgpt/",
         "source": "Hacker News AI",
-        "score": 12
+        "score": 42
       },
       {
-        "title": "No AI, 52 min. Build all Linux Files utils in C by Hand [video]",
-        "url": "https://www.youtube.com/watch?v=gQRmSlcTq9c",
+        "title": "Understanding Email Encryption (2025)",
+        "url": "https://www.fastmail.com/blog/email-encryption/",
         "source": "Hacker News AI",
-        "score": 133
+        "score": 131
+      },
+      {
+        "title": "Frontier Airlines Likely Breached",
+        "url": "https://www.reddit.com/r/frontierairlines/comments/1xl20e8/psa_email_scam/",
+        "source": "Hacker News AI",
+        "score": 202
+      },
+      {
+        "title": "Asking my AI teacher how to spell seventeen",
+        "url": "https://twitter.com/huskirl/status/2116941001335947635",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "In LLM era, can software startup survive?",
+        "url": "https://news.ycombinator.com/item?id=50331001",
+        "source": "Hacker News AI",
+        "score": 17
       }
     ],
     "news": [
       {
-        "title": "Ukraine air raid app apparently hacked as users receive false radiation threat, Air Force says",
-        "url": "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo?at_medium=RSS&at_campaign=rss",
+        "title": "How a Democrat in Michigan rocked the party days before the US midterms",
+        "url": "https://www.bbc.co.uk/news/videos/cqvgjljj74n8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire ends",
-        "url": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump makes fevered campaign push in final weekend before election ",
+        "url": "https://www.bbc.co.uk/news/articles/c3j47gjx29vro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Democrat endorses Republican candidate in key Michigan Senate race as party spat erupts",
-        "url": "https://www.bbc.co.uk/news/articles/c95ynzv88n68o?at_medium=RSS&at_campaign=rss",
+        "title": "Nine killed as small jet crashes on Florida street",
+        "url": "https://www.bbc.co.uk/news/articles/cm369yy7lw73o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Binance users withdraw $3.6bn after largest-ever crypto hack",
+        "url": "https://www.bbc.co.uk/news/articles/cwj34gdmnly4o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "France launches attempted murder investigation after petrol bomb thrown at police",
+        "url": "https://www.bbc.co.uk/news/articles/cwvg05z184j0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "China state broadcaster pulls La Liga matches following Mbappé joke",
+        "url": "https://www.bbc.co.uk/news/articles/cq78pypg0800o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Israeli strikes in Gaza kill eight including child, hospitals say",
         "url": "https://www.bbc.co.uk/news/articles/cmqln14rrzxvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "University of Cambridge scientist among those who died in Spanish train crash",
-        "url": "https://www.bbc.co.uk/news/articles/cq5ynzvkn1d8o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Shops looted as German cost-of-living protests turn violent",
-        "url": "https://www.bbc.co.uk/news/articles/cqj34gnd3n30o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Armed police start patrols in Sydney after Bondi Beach attack",
-        "url": "https://www.bbc.co.uk/news/articles/c9kgj7k7ry0ro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Will your digital work still exist in 2046? Here’s why the answer might be no ",
+        "url": "https://www.creativebloq.com/news/will-your-digital-work-still-exist-in-2046-heres-why-the-answer-might-be-no",
+        "source": "Creative Bloq"
+      },
       {
         "title": " If smart glasses take off, I predict a new golden age for the billboard ",
         "url": "https://www.creativebloq.com/news/if-smart-glasses-take-off-i-predict-a-new-golden-age-for-the-billboard",
@@ -218,11 +223,6 @@
       {
         "title": " How to animate your drawings in Procreate the easy way ",
         "url": "https://www.creativebloq.com/how-to/how-to-animate-your-drawings-in-procreate-the-easy-way",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How to make these easy Halloween crafts with Cricut ",
-        "url": "https://www.creativebloq.com/how-to/how-to-make-these-easy-halloween-crafts-with-cricut",
         "source": "Creative Bloq"
       }
     ],
@@ -265,38 +265,38 @@
     ],
     "gaming": [
       {
+        "title": "Luke Skywalker's Single Greatest Star Wars Line Hits Harder Than Any Sci-Fi Quote Since",
+        "url": "https://www.polygon.com/luke-skywalker-best-quote-has-nothing-to-do-with-darth-vader/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Quentin Tarantino’s First New Movie in 7 Years Officially Arrives in Theaters Next Month",
+        "url": "https://www.polygon.com/quentin-tarantino-the-further-mis-adventures-of-cliff-booth-release-date/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Best BG3 NPCs Fans Still Want To Join The Party All These Years Later",
+        "url": "https://www.polygon.com/bg3-best-npcs/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Best Classic Shooters That Are So Good They Never Need A Remake",
+        "url": "https://www.polygon.com/best-classic-shooters/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Penguin Colony was made to 'put the games industry on notice'",
+        "url": "https://www.polygon.com/penguin-colony-interview-development/",
+        "source": "Polygon"
+      },
+      {
+        "title": "8 Years Later, a Buffy Star's Obscure Thriller Is Waiting to Be Discovered on Free Streaming",
+        "url": "https://www.polygon.com/you-might-be-the-killer-free/",
+        "source": "Polygon"
+      },
+      {
         "title": "5 Classic Nintendo Games That Are So Good They Never Need a Remake",
         "url": "https://www.polygon.com/classic-nintendo-games-no-remake-needed/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to get the Pirate Shop Access Token in Fortnite Chapter 7 mini season",
-        "url": "https://www.polygon.com/fortnite-chapter-7-mini-season-pirate-shop-access-token-free-how-to-get/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All map fragment locations in the Fortnite Chapter 7 mini season",
-        "url": "https://www.polygon.com/fortnite-chapter-7-mini-season-c7ms-map-fragment-locations/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokémon Go 'Halloween 2026 Part 2' event guide",
-        "url": "https://www.polygon.com/pokemon-go-halloween-2026-part-2-event-shiny-greavard/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All map and weapon loot pool changes in the Fortnite Chapter 7 mini season",
-        "url": "https://www.polygon.com/fortnite-chapter-7-mini-season-map-weapons-loot-pool-poi/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All sprites in the Fortnite Chapter 7 mini season",
-        "url": "https://www.polygon.com/fortnite-chapter-7-mini-season-all-sprites-list-abilities/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All battle pass skins in the Fortnite Chapter 7 mini season",
-        "url": "https://www.polygon.com/fortnite-chapter-7-mini-season-pirate-battle-pass-skins-outfits/",
         "source": "Polygon"
       }
     ],
