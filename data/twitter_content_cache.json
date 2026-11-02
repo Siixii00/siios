@@ -1,195 +1,232 @@
 {
   "metadata": {
-    "last_updated": "2026-11-02T07:22:05.695339",
-    "total_items": 59
+    "last_updated": "2026-11-02T17:55:20.517790",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
-        "url": "https://hackerbooks.org",
+        "title": "Show HN: Subvocal – Talk to your computer without making noise",
+        "url": "https://subvocal.company/",
         "source": "Hacker News",
-        "score": 1249
+        "score": 67
       },
       {
-        "title": "Show HN: Wikihack – HackerTube, but for Wikipedia articles mentioned on HN",
-        "url": "https://wikihack.netlify.app",
+        "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+        "url": "https://momentic.ai/",
+        "source": "Hacker News",
+        "score": 40
+      },
+      {
+        "title": "Show HN: Warsaw in voxels – an interactive 3D map of the city centre",
+        "url": "https://p.migdal.pl/warsaw-vibe-voxel/",
+        "source": "Hacker News",
+        "score": 66
+      },
+      {
+        "title": "Ask HN: Who is hiring? (November 2026)",
+        "url": "https://news.ycombinator.com/item?id=50338728",
+        "source": "Hacker News",
+        "score": 82
+      },
+      {
+        "title": "My Favourite Laptop",
+        "url": "https://blog.jsbarretto.com/post/laptop",
+        "source": "Hacker News",
+        "score": 36
+      },
+      {
+        "title": "US boy names that became girl names and vice versa",
+        "url": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
         "source": "Hacker News",
         "score": 32
+      },
+      {
+        "title": "If you love a website, back it up",
+        "url": "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
+        "source": "Hacker News",
+        "score": 155
+      },
+      {
+        "title": "Bitmovin (YC S15) Is Hiring Technical Graduates in Denver (Engineering/CS Focus)",
+        "url": "https://bitmovin.com/careers/8660599002/",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "Moving our warehouse off DuckDB",
+        "url": "https://posthog.com/blog/moving-off-duckdb",
+        "source": "Hacker News",
+        "score": 84
+      },
+      {
+        "title": "WTF Ubuntu?",
+        "url": "https://chalmovsky.com/posts/wtf-ubuntu",
+        "source": "Hacker News",
+        "score": 738
+      },
+      {
+        "title": "Anthropic's internal AI use, at retail prices, now exceeds its employee pay",
+        "url": "https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11",
+        "source": "Hacker News",
+        "score": 63
+      },
+      {
+        "title": "We halved DNS build delay and cut memory use by 85%",
+        "url": "https://blog.cloudflare.com/dns-targeted-zone-builds/",
+        "source": "Hacker News",
+        "score": 45
+      },
+      {
+        "title": "GPT-Rosalind-6 System Card Addendum",
+        "url": "https://deploymentsafety.openai.com/gpt-rosalind-6",
+        "source": "Hacker News",
+        "score": 34
+      },
+      {
+        "title": "LongCat-2.5: Native Multimodality for Agentic Tasks",
+        "url": "https://longcat.ai/blog/longcat-2.5/",
+        "source": "Hacker News",
+        "score": 44
       },
       {
         "title": "Postgres 19 is late because so many more bugs are being found now",
         "url": "http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html",
         "source": "Hacker News",
-        "score": 291
-      },
-      {
-        "title": "F/OSS Comics #13: BSD Unix, Part 3 – The Beginning of BSD Unix",
-        "url": "https://fosscomics.com/posts/13.%20BSD%20Unix%20Part%203%20-%20The%20Beginning%20of%20BSD%20Unix/",
-        "source": "Hacker News",
-        "score": 82
-      },
-      {
-        "title": "HackerTube: YouTube built from videos recommended by HN",
-        "url": "https://karpathy.bearblog.dev/hacker-tube/",
-        "source": "Hacker News",
-        "score": 2467
-      },
-      {
-        "title": "Ask HN: Which TV do you recommend for privacy?",
-        "url": "https://news.ycombinator.com/item?id=50328896",
-        "source": "Hacker News",
-        "score": 284
-      },
-      {
-        "title": "Mystery of 60-Second Fluctuations in Power Grids Solved",
-        "url": "https://www.fz-juelich.de/en/news/archive/press-release/2026/mystery-of-60-second-fluctuations-in-power-grids-solved",
-        "source": "Hacker News",
-        "score": 91
-      },
-      {
-        "title": "Trigger.dev customer environment variables exposed",
-        "url": "https://trigger.dev/blog/security-incident-nov-2026",
-        "source": "Hacker News",
-        "score": 64
-      },
-      {
-        "title": "Nibnib: Image compression with extreme decompression speed",
-        "url": "https://github.com/raphlinus/nibnib",
-        "source": "Hacker News",
-        "score": 129
-      },
-      {
-        "title": "Tips for more effective fuzz testing with AFL++",
-        "url": "https://nullprogram.com/blog/2025/02/05/",
-        "source": "Hacker News",
-        "score": 109
-      },
-      {
-        "title": "Bones may release proteins that slow aging and extend life span",
-        "url": "https://www.science.org/content/article/bones-may-release-proteins-slow-aging-and-extend-life-span",
-        "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "Copper – A minimal low-level programming language with OOP and generics",
-        "url": "https://tibleiz.net/copper/",
-        "source": "Hacker News",
-        "score": 156
-      },
-      {
-        "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
-        "url": "https://github.com/ivankovic/omnidiff",
-        "source": "Hacker News",
-        "score": 216
-      },
-      {
-        "title": "New 3D thermal invisibility cloak makes objects disappear from infrared cameras",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261025073051.htm",
-        "source": "Hacker News",
-        "score": 71
-      },
-      {
-        "title": "Proving and improving the Platonic Representation Hypothesis with JEPAs",
-        "url": "https://arxiv.org/abs/2610.39302",
-        "source": "Hacker News",
-        "score": 131
+        "score": 769
       }
     ],
     "ai": [
       {
+        "title": "Anthropic's internal AI use, at retail prices, now exceeds its employee pay",
+        "url": "https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11",
+        "source": "Hacker News AI",
+        "score": 64
+      },
+      {
+        "title": "GPT-Rosalind-6 System Card Addendum",
+        "url": "https://deploymentsafety.openai.com/gpt-rosalind-6",
+        "source": "Hacker News AI",
+        "score": 34
+      },
+      {
+        "title": "LongCat-2.5: Native Multimodality for Agentic Tasks",
+        "url": "https://longcat.ai/blog/longcat-2.5/",
+        "source": "Hacker News AI",
+        "score": 44
+      },
+      {
+        "title": "C64 Basic Dungeon Crawler: Stairs, Levels and Levelling Up (Part 11)",
+        "url": "https://retrogamecoders.com/c64-basic-dungeon-part11/",
+        "source": "Hacker News AI",
+        "score": 10
+      },
+      {
+        "title": "Jobless tech workers are being left out of San Francisco's AI boom",
+        "url": "https://www.bloomberg.com/news/features/2026-09-17/san-francisco-s-ai-wealth-boom-skirts-engineers-as-openai-anthropic-ipos-near",
+        "source": "Hacker News AI",
+        "score": 63
+      },
+      {
+        "title": "Last night an AI agent performed brain surgery on a mouse",
+        "url": "https://twitter.com/OcanaSantero/status/2115442964574908902",
+        "source": "Hacker News AI",
+        "score": 85
+      },
+      {
+        "title": "Claude Opus 5.5 Can Draw Permit-Level Architectural Drawings",
+        "url": "https://stephenjgallagher.substack.com/p/ai-can-draw-blueprints-now",
+        "source": "Hacker News AI",
+        "score": 13
+      },
+      {
+        "title": "Anthropic reports $17B in Q3 revenue, commitments of $895B in revised S-1",
+        "url": "https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html",
+        "source": "Hacker News AI",
+        "score": 192
+      },
+      {
+        "title": "China's First Frontier AI Export Controls: Mofcom Announcement No. 48",
+        "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-china-ai-export-controls-announcement-48-2/",
+        "source": "Hacker News AI",
+        "score": 146
+      },
+      {
+        "title": "Never Complain, Never Explain",
+        "url": "https://en.wikipedia.org/wiki/Never_complain,_never_explain",
+        "source": "Hacker News AI",
+        "score": 128
+      },
+      {
         "title": "The AI cost of JavaScript frameworks",
         "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
         "source": "Hacker News AI",
-        "score": 347
-      },
-      {
-        "title": "AI fan wikis riddled with errors are muddying the waters of games culture",
-        "url": "https://www.eurogamer.net/ai-fan-wikis-errors-complicating-games-culture",
-        "source": "Hacker News AI",
-        "score": 73
-      },
-      {
-        "title": "Domain hacks with unusual Unicode characters (2018)",
-        "url": "https://shkspr.mobi/blog/2018/11/domain-hacks-with-unusual-unicode-characters/",
-        "source": "Hacker News AI",
-        "score": 73
-      },
-      {
-        "title": "Leaking Secrets from Air-Gap Computers by Spelling Radio Signals from RAM (2024)",
-        "url": "https://arxiv.org/abs/2409.02292",
-        "source": "Hacker News AI",
-        "score": 194
-      },
-      {
-        "title": "I Am the Reason OpenAI Is Killing Unlimited Chats",
-        "url": "https://chaosmanage.github.io/i-killed-unlimited-chatgpt/",
-        "source": "Hacker News AI",
-        "score": 42
-      },
-      {
-        "title": "Understanding Email Encryption (2025)",
-        "url": "https://www.fastmail.com/blog/email-encryption/",
-        "source": "Hacker News AI",
-        "score": 131
-      },
-      {
-        "title": "Frontier Airlines Likely Breached",
-        "url": "https://www.reddit.com/r/frontierairlines/comments/1xl20e8/psa_email_scam/",
-        "source": "Hacker News AI",
-        "score": 202
-      },
-      {
-        "title": "Asking my AI teacher how to spell seventeen",
-        "url": "https://twitter.com/huskirl/status/2116941001335947635",
-        "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "In LLM era, can software startup survive?",
-        "url": "https://news.ycombinator.com/item?id=50331001",
-        "source": "Hacker News AI",
-        "score": 17
+        "score": 456
       }
     ],
     "news": [
       {
-        "title": "How a Democrat in Michigan rocked the party days before the US midterms",
-        "url": "https://www.bbc.co.uk/news/videos/cqvgjljj74n8o?at_medium=RSS&at_campaign=rss",
+        "title": "Shop freezers in seven European countries hit by cyber-attack",
+        "url": "https://www.bbc.co.uk/news/articles/cq1kd1nee80eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump makes fevered campaign push in final weekend before election ",
-        "url": "https://www.bbc.co.uk/news/articles/c3j47gjx29vro?at_medium=RSS&at_campaign=rss",
+        "title": "Fighting returns to Kherson region after longest Ukraine war ceasefire",
+        "url": "https://www.bbc.co.uk/news/articles/ckg5jlyp66jzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Nine killed as small jet crashes on Florida street",
-        "url": "https://www.bbc.co.uk/news/articles/cm369yy7lw73o?at_medium=RSS&at_campaign=rss",
+        "title": "Dutch police offer record €2m reward in hunt for drug lord",
+        "url": "https://www.bbc.co.uk/news/articles/ckly0v2q2yxlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Binance users withdraw $3.6bn after largest-ever crypto hack",
-        "url": "https://www.bbc.co.uk/news/articles/cwj34gdmnly4o?at_medium=RSS&at_campaign=rss",
+        "title": "Fake nuclear warnings issued after Ukrainian and Russian air alert apps hacked",
+        "url": "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "France launches attempted murder investigation after petrol bomb thrown at police",
-        "url": "https://www.bbc.co.uk/news/articles/cwvg05z184j0o?at_medium=RSS&at_campaign=rss",
+        "title": "Five arrested after South African farmer shot and tortured",
+        "url": "https://www.bbc.co.uk/news/articles/cv4g13z0px8yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "China state broadcaster pulls La Liga matches following Mbappé joke",
-        "url": "https://www.bbc.co.uk/news/articles/cq78pypg0800o?at_medium=RSS&at_campaign=rss",
+        "title": "Wizz Air flight from Luton in emergency landing after bomb threat",
+        "url": "https://www.bbc.co.uk/news/articles/c6rryvwre0p5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Israeli strikes in Gaza kill eight including child, hospitals say",
-        "url": "https://www.bbc.co.uk/news/articles/cmqln14rrzxvo?at_medium=RSS&at_campaign=rss",
+        "title": "Ryanair says it may freeze workers' pay and raise airfares",
+        "url": "https://www.bbc.co.uk/news/articles/cr0qkve1x224o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " 6 of my favourite earphones are on sale in the annual HiFiGo early Black Friday sale ",
+        "url": "https://www.creativebloq.com/deals/6-of-my-favourite-earphones-are-on-sale-in-the-annual-hifigo-early-black-friday-sale",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How Helldivers 2 uses Blender to build its gritty sci-fi hardware ",
+        "url": "https://www.creativebloq.com/news/how-helldivers-2-uses-blender-to-build-its-gritty-sci-fi-hardware",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This 'black' horse optical illusion is even more baffling than the colour changing dress ",
+        "url": "https://www.creativebloq.com/inspiration/this-black-horse-optical-illusion-is-even-more-baffling-than-the-colour-changing-dress",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " iPad users finally have the free Adobe alternative they've been asking for ",
+        "url": "https://www.creativebloq.com/news/affinity-for-ipad-just-made-the-free-adobe-alternative-even-more-complete",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The real star of the new MacBook Pro is the Apple logo ",
+        "url": "https://www.creativebloq.com/news/the-real-star-of-the-new-macbook-pro-is-the-apple-logo",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Will your digital work still exist in 2046? Here’s why the answer might be no ",
         "url": "https://www.creativebloq.com/news/will-your-digital-work-still-exist-in-2046-heres-why-the-answer-might-be-no",
@@ -199,34 +236,34 @@
         "title": " If smart glasses take off, I predict a new golden age for the billboard ",
         "url": "https://www.creativebloq.com/news/if-smart-glasses-take-off-i-predict-a-new-golden-age-for-the-billboard",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " From Pepsi Man to WendyQuest, why are brands making video games again? ",
-        "url": "https://www.creativebloq.com/news/from-pepsi-man-to-wendyquest-why-are-brands-making-video-games-again",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " \"I’ve ignored most advice and learned by fire\": 5 Questions with Christopher Glass ",
-        "url": "https://www.creativebloq.com/features/ive-ignored-most-advice-and-learned-by-fire-5-questions-with-christopher-glass",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Are you team Apple or Samsung in the folding phone era? ",
-        "url": "https://www.creativebloq.com/news/are-you-team-apple-or-samsung-in-the-folding-phone-era",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This brilliant budget 3D printer is the one I'd buy if I were getting into the hobby ",
-        "url": "https://www.creativebloq.com/deals/this-brilliant-budget-3d-printer-is-the-one-i-would-buy-if-i-were-getting-into-the-hobby",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How to animate your drawings in Procreate the easy way ",
-        "url": "https://www.creativebloq.com/how-to/how-to-animate-your-drawings-in-procreate-the-easy-way",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Experts say high blood pressure guidelines are missing half the equation",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261102075553.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA reveals a haunting skull hidden in Antarctica’s ice",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261101010538.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA’s Perseverance Mars rover breaks historic record after traveling 28 miles",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261101010536.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "IceCube detects ghost particles with 10 billion times the energy of solar neutrinos",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261101010533.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA's Hubble and Webb discover ancient worlds that remember their past",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261031221209.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Drinking tea may help protect your heart, but there’s a surprising catch",
         "url": "https://www.sciencedaily.com/releases/2026/10/261031221203.htm",
@@ -236,67 +273,42 @@
         "title": "Scientists say a forgotten particle may explain why the universe exists",
         "url": "https://www.sciencedaily.com/releases/2026/10/261031221201.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "Common pesticide linked to 2.5 times the risk of Parkinson’s disease",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261031013035.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists finally discover how a common gut bacterium can trigger colon cancer",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261031012912.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Ancient ape fossil in Egypt could rewrite the story of human origins",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261031011638.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A mysterious 4,000-year-old wall is rewriting North Africa’s history",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261030003022.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists use sound waves to deliver a new attack on deadly brain cancer",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261030003017.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Luke Skywalker's Single Greatest Star Wars Line Hits Harder Than Any Sci-Fi Quote Since",
-        "url": "https://www.polygon.com/luke-skywalker-best-quote-has-nothing-to-do-with-darth-vader/",
+        "title": "The Legend of Zelda: Ocarina of Time Remake Studio Officially Revealed",
+        "url": "https://www.polygon.com/legend-of-zelda-ocarina-of-time-remake-studio-revealed/",
         "source": "Polygon"
       },
       {
-        "title": "Quentin Tarantino’s First New Movie in 7 Years Officially Arrives in Theaters Next Month",
-        "url": "https://www.polygon.com/quentin-tarantino-the-further-mis-adventures-of-cliff-booth-release-date/",
+        "title": "FF14’s New Expansion Officially Addresses Dawntrail’s Biggest Problem",
+        "url": "https://www.polygon.com/final-fantasy-14-evercold-fixing-dawntrails-pacing-issues/",
         "source": "Polygon"
       },
       {
-        "title": "10 Best BG3 NPCs Fans Still Want To Join The Party All These Years Later",
-        "url": "https://www.polygon.com/bg3-best-npcs/",
+        "title": "Dune Officially Returns With New Release This Week Ahead of Denis Villeneuve's Next Movie",
+        "url": "https://www.polygon.com/dune-messiah-graphic-novel-excerpt/",
         "source": "Polygon"
       },
       {
-        "title": "10 Best Classic Shooters That Are So Good They Never Need A Remake",
-        "url": "https://www.polygon.com/best-classic-shooters/",
+        "title": "FBI Issues Surprise Official 'Pokémon' Trading Card Warning",
+        "url": "https://www.polygon.com/pokemon-tcg-fbi-warning-scam-theft-credit-card-fraud-fakes/",
         "source": "Polygon"
       },
       {
-        "title": "Penguin Colony was made to 'put the games industry on notice'",
-        "url": "https://www.polygon.com/penguin-colony-interview-development/",
+        "title": "Critical Role Just Made One of D&D’s Most Popular Classes Even More Broken",
+        "url": "https://www.polygon.com/critical-role-warlocks-campaign-4/",
         "source": "Polygon"
       },
       {
-        "title": "8 Years Later, a Buffy Star's Obscure Thriller Is Waiting to Be Discovered on Free Streaming",
-        "url": "https://www.polygon.com/you-might-be-the-killer-free/",
+        "title": "The Pokémon Company Is Counting Down to a Surprise Reveal This Month",
+        "url": "https://www.polygon.com/pokemon-logo-tease-november-2026-announcement/",
         "source": "Polygon"
       },
       {
-        "title": "5 Classic Nintendo Games That Are So Good They Never Need a Remake",
-        "url": "https://www.polygon.com/classic-nintendo-games-no-remake-needed/",
+        "title": "Ahsoka Cast Drops Big Hints About Season 2",
+        "url": "https://www.polygon.com/ahsoka-season-2-thrawn-hints-reveals/",
         "source": "Polygon"
       }
     ],
