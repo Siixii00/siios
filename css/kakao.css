@@ -219,7 +219,7 @@ body.desktop-mode .kakao-bottom-nav {
 }
 
 .kakao-chat-bg {
-    background-color: var(--kakao-chat-bg);
+    background: var(--kakao-chat-bg);
     min-height: 100%;
 }
 
@@ -802,4 +802,16 @@ body.desktop-mode .kakao-bottom-nav {
 .kakao-bubble-gift-icon {
     font-size: 48px;
     line-height: 1.1;
+}
+
+/* 商店主題是深色漸層時：氣泡外面的文字（名字、日期）要用淺色，不然看不見 */
+.kakao-chat-bg[data-chat-tone="dark"] .kakao-message-name.has-name,
+.kakao-chat-bg[data-chat-tone="dark"] .kakao-message-name {
+    color: rgba(255, 255, 255, 0.85);
+}
+.kakao-chat-bg[data-chat-tone="dark"] .kakao-message-name:not(.has-name) {
+    color: transparent;
+}
+.kakao-chat-bg[data-chat-tone="dark"] .kakao-date-divider span {
+    background-color: rgba(255, 255, 255, 0.18);
 }

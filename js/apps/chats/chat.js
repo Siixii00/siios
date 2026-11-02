@@ -4,6 +4,7 @@ import { ChatsDB, MessagesDB, SettingsDB, MemoryDB, CharactersDB, UsersDB } from
 import APIClient, { describeMessageForAI } from '../../api.js';
 import { EMOJIS as STICKERS } from './shop.js';
 import { THEMES as CHAT_THEMES } from './chat-settings.js';
+import { getChatShopTheme } from '../../core/wallpapers.js';
 import { pickFile, prepareImage, prepareVideo, prepareFile, getLocationMessage, openRecorderSheet, openAlbumPicker } from './chat-media.js';
 import { openImageGenerator, openVideoChoice, openMusicChoice, synthesizeSpeechForMessage } from './chat-synth.js';
 import {askForm, askConfirm } from '../../core/dialogs.js';
@@ -41,6 +42,7 @@ function getModeLabel(mode) {
 const FONT_SIZES = { small: '13px', medium: '15px', large: '18px' };
 
 async function applyCustomTheme() {
+    document.documentElement.style.removeProperty('--kakao-chat-bg'); // 先清掉上一次的背景（可能是商店主題的漸層）
     const savedFont = await SettingsDB.get('appearance_font_size');
     document.documentElement.style.setProperty('--kakao-bubble-font-size', FONT_SIZES[savedFont] || FONT_SIZES.medium);
     const savedTheme = await SettingsDB.get('appearance_theme');
@@ -58,6 +60,14 @@ async function applyCustomTheme() {
         root.style.setProperty('--kakao-input-bg', theme.inputBg);
         root.style.setProperty('--kakao-input-text', theme.inputText || '#000000');
     }
+
+    // 商店主題（在聊天的商店套用的）：背景換成主題的漸層
+    const shop = await getChatShopTheme();
+    if (shop) {
+        document.documentElement.style.setProperty('--kakao-chat-bg', shop.css);
+        return shop.tone || 'dark';
+    }
+    return null;
 }
 
 async function renderChat(params) {
@@ -66,7 +76,7 @@ async function renderChat(params) {
         console.log('[Chat] 開始渲染聊天:', chatId);
         
         console.log('[Chat] 應用自定義主題...');
-        await applyCustomTheme();
+        const shopTone = await applyCustomTheme();
         
         console.log('[Chat] 載入聊天數據...');
         currentChat = await ChatsDB.getById(chatId);
@@ -88,6 +98,7 @@ async function renderChat(params) {
         awaitingResponse = !!lastMsg && lastMsg.role === 'user';
         
         const container = createElement('div', 'app-container kakao-chat-bg');
+        if (shopTone) container.dataset.chatTone = shopTone;
         
         const header = createElement('header', 'kakao-header');
         header.style.paddingTop = 'env(safe-area-inset-top, 0px)';

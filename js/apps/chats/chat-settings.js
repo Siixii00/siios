@@ -140,6 +140,7 @@ async function renderChatSettings() {
             currentTheme = t.id;
             customTheme = null;
             await SettingsDB.set('appearance_theme', currentTheme);
+            await SettingsDB.set('chat_shop_theme', null); // 改用一般的聊天主題
             await SettingsDB.set('chat_custom_theme', null);
             applyThemeToRoot(t.vars);
             
@@ -182,6 +183,7 @@ async function renderChatSettings() {
     customCard.onclick = async () => {
         currentTheme = 'custom';
         await SettingsDB.set('appearance_theme', 'custom');
+        await SettingsDB.set('chat_shop_theme', null);
         
         // 更新視覺狀態
         themeGrid.querySelectorAll('.theme-card').forEach(c => {

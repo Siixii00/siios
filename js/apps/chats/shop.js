@@ -2,7 +2,7 @@ import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBottomNav, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
-import { setWallpaperTheme } from '../../core/wallpapers.js';
+import { setWallpaperTheme, setChatShopTheme } from '../../core/wallpapers.js';
 import { CHATS_TABS } from './chats-nav.js';
 import { askConfirm } from '../../core/dialogs.js';
 
@@ -100,7 +100,8 @@ async function renderShop() {
                 try {
                     if (ownedThemes.has(t.id)) {
                         await setWallpaperTheme(t.id);
-                        createToast('已套用「' + t.name + '」桌布');
+                        await setChatShopTheme(t.id);
+                        createToast('已套用「' + t.name + '」：聊天室與桌布都換了');
                         return;
                     }
                     if (t.price > 0) {
