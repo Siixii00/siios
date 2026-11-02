@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-01T20:17:42.248331",
+    "last_updated": "2026-11-02T00:21:43.479506",
     "total_items": 59
   },
   "content": {
@@ -9,153 +9,163 @@
         "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN",
         "url": "https://hackerbooks.org",
         "source": "Hacker News",
-        "score": 502
-      },
-      {
-        "title": "It wasn't AI that flipped Proton's charge",
-        "url": "https://blog.raed.dev/posts/proton-loser-thinking/",
-        "source": "Hacker News",
-        "score": 49
+        "score": 847
       },
       {
         "title": "HackerTube: YouTube built from videos recommended by HN",
         "url": "https://karpathy.bearblog.dev/hacker-tube/",
         "source": "Hacker News",
-        "score": 1993
+        "score": 2234
       },
       {
-        "title": "Copper – A minimal low-level programming language with OOP and generics",
-        "url": "https://tibleiz.net/copper/",
+        "title": "Nibnib: Image compression with extreme decompression speed",
+        "url": "https://github.com/raphlinus/nibnib",
         "source": "Hacker News",
-        "score": 78
-      },
-      {
-        "title": "Police chief unplugs Flock cameras after company ignores contract cancellation",
-        "url": "https://www.tomshardware.com/tech-industry/big-tech/police-chief-physically-unplugs-flock-cameras-after-the-company-ignores-contract-cancellation-city-takes-matters-into-its-own-hands-amid-privacy-controversies",
-        "source": "Hacker News",
-        "score": 368
-      },
-      {
-        "title": "Mathematics has changed. Let's act like it",
-        "url": "https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/",
-        "source": "Hacker News",
-        "score": 80
-      },
-      {
-        "title": "Proving and improving the Platonic Representation Hypothesis with JEPAs",
-        "url": "https://arxiv.org/abs/2610.39302",
-        "source": "Hacker News",
-        "score": 84
-      },
-      {
-        "title": "Bidirectional charging during grid outages",
-        "url": "https://www.jefftk.com/p/bidirectional-charging-during-grid-outages",
-        "source": "Hacker News",
-        "score": 59
-      },
-      {
-        "title": "An Italian farmer found some unknown seeds in his attic and planted them",
-        "url": "https://www.smithsonianmag.com/science-nature/italian-farmer-found-unknown-seeds-attic-with-nothing-lose-planted-them-result-biblical-180989644/",
-        "source": "Hacker News",
-        "score": 702
-      },
-      {
-        "title": "Novellas with Groff",
-        "url": "https://movq.de/blog/postings/2026-10-31/0/POSTING-en.html",
-        "source": "Hacker News",
-        "score": 81
-      },
-      {
-        "title": "Lenovo's 'encrypted' fingerprint USB is just an unencrypted SD card in a case",
-        "url": "https://www.reddit.com/r/technology/comments/1xl2pr3/lenovos_encrypted_fingerprint_usb_drive_is_just/",
-        "source": "Hacker News",
-        "score": 274
+        "score": 79
       },
       {
         "title": "Tips for more effective fuzz testing with AFL++",
         "url": "https://nullprogram.com/blog/2025/02/05/",
         "source": "Hacker News",
-        "score": 8
+        "score": 67
       },
       {
-        "title": "One-minute frequency disturbances from synchronization in power systems",
-        "url": "https://www.nature.com/articles/s41560-026-02144-0",
-        "source": "Hacker News",
-        "score": 89
-      },
-      {
-        "title": "Seoul Viosys begins production of rare-earth-free white light emitter",
-        "url": "https://www.semiconductor-today.com/news_items/2026/oct/seoul-291026.shtml",
+        "title": "Ask HN: Which TV do you recommend for privacy?",
+        "url": "https://news.ycombinator.com/item?id=50328896",
         "source": "Hacker News",
         "score": 94
       },
       {
-        "title": "Nurses Sound Alarm as 'Uber for Nursing' Apps Push to Deregulate Healthcare",
-        "url": "https://nurse.org/news/uber-for-nursing-gig-apps-report/",
+        "title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says",
+        "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
         "source": "Hacker News",
-        "score": 104
+        "score": 97
+      },
+      {
+        "title": "Keeping Up Appearances – The women taking over the funeral industry",
+        "url": "https://lareviewofbooks.org/article/death-industry-mortuary-programs-women-andie-eisen-quarterly/",
+        "source": "Hacker News",
+        "score": 10
+      },
+      {
+        "title": "New 3D thermal invisibility cloak makes objects disappear from infrared cameras",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261025073051.htm",
+        "source": "Hacker News",
+        "score": 34
+      },
+      {
+        "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust",
+        "url": "https://github.com/ivankovic/omnidiff",
+        "source": "Hacker News",
+        "score": 143
+      },
+      {
+        "title": "Mathematics has changed. Let's act like it",
+        "url": "https://terrytao.wordpress.com/2026/11/01/mathematics-has-changed-lets-act-like-it/",
+        "source": "Hacker News",
+        "score": 207
+      },
+      {
+        "title": "Copper – A minimal low-level programming language with OOP and generics",
+        "url": "https://tibleiz.net/copper/",
+        "source": "Hacker News",
+        "score": 118
+      },
+      {
+        "title": "The She-Wolves of Jülich",
+        "url": "https://www.historytoday.com/archive/history-matters/she-wolves-julich",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "Proving and improving the Platonic Representation Hypothesis with JEPAs",
+        "url": "https://arxiv.org/abs/2610.39302",
+        "source": "Hacker News",
+        "score": 105
+      },
+      {
+        "title": "Lenovo's 'encrypted' fingerprint USB is just an unencrypted SD card in a case",
+        "url": "https://www.reddit.com/r/technology/comments/1xl2pr3/lenovos_encrypted_fingerprint_usb_drive_is_just/",
+        "source": "Hacker News",
+        "score": 377
+      },
+      {
+        "title": "Bidirectional charging during grid outages",
+        "url": "https://www.jefftk.com/p/bidirectional-charging-during-grid-outages",
+        "source": "Hacker News",
+        "score": 81
       }
     ],
     "ai": [
       {
-        "title": "It wasn't AI that flipped Proton's charge",
-        "url": "https://blog.raed.dev/posts/proton-loser-thinking/",
+        "title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says",
+        "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
         "source": "Hacker News AI",
-        "score": 49
-      },
-      {
-        "title": "Frontier Airlines Likely Breached",
-        "url": "https://www.reddit.com/r/frontierairlines/comments/1xl20e8/psa_email_scam/",
-        "source": "Hacker News AI",
-        "score": 117
+        "score": 98
       },
       {
         "title": "The AI cost of JavaScript frameworks",
         "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
         "source": "Hacker News AI",
-        "score": 248
+        "score": 288
       },
       {
-        "title": "US Jobs Pickup May Keep Fed on Track to Hike Rates Again",
-        "url": "https://www.bloomberg.com/news/articles/2026-10-31/us-jobs-pickup-may-keep-fed-on-track-to-hike-rates-again",
+        "title": "Domain hacks with unusual Unicode characters (2018)",
+        "url": "https://shkspr.mobi/blog/2018/11/domain-hacks-with-unusual-unicode-characters/",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 53
       },
       {
-        "title": "Understanding Email Encryption",
+        "title": "Frontier Airlines Likely Breached",
+        "url": "https://www.reddit.com/r/frontierairlines/comments/1xl20e8/psa_email_scam/",
+        "source": "Hacker News AI",
+        "score": 167
+      },
+      {
+        "title": "Understanding Email Encryption (2025)",
         "url": "https://www.fastmail.com/blog/email-encryption/",
         "source": "Hacker News AI",
-        "score": 105
+        "score": 123
       },
       {
         "title": "Leaking Secrets from Air-Gap Computers by Spelling Radio Signals from RAM (2024)",
         "url": "https://arxiv.org/abs/2409.02292",
         "source": "Hacker News AI",
-        "score": 167
+        "score": 179
       },
       {
         "title": "AI agent swarms in Minecraft fail to build civilization, drown in bureaucracy",
         "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-agent-swarms-unleashed-in-minecraft-to-build-a-thriving-civilization-50-agent-teams-fail-after-falling-into-paralyzing-bureaucracy",
         "source": "Hacker News AI",
-        "score": 125
+        "score": 145
       },
       {
-        "title": "Heretic 2.0 Released: Training-free language model modification",
-        "url": "https://news.ycombinator.com/item?id=50328567",
+        "title": "I Am the Reason OpenAI Is Killing Unlimited Chats",
+        "url": "https://chaosmanage.github.io/i-killed-unlimited-chatgpt/",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 12
       },
       {
         "title": "No AI, 52 min. Build all Linux Files utils in C by Hand [video]",
         "url": "https://www.youtube.com/watch?v=gQRmSlcTq9c",
         "source": "Hacker News AI",
-        "score": 121
+        "score": 133
       }
     ],
     "news": [
       {
-        "title": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire to end",
+        "title": "Ukraine air raid app apparently hacked as users receive false radiation threat, Air Force says",
+        "url": "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Russian strikes cut power to thousands in Ukraine as Kherson ceasefire ends",
         "url": "https://www.bbc.co.uk/news/articles/c64g1y90p71eo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Democrat endorses Republican candidate in key Michigan Senate race as party spat erupts",
+        "url": "https://www.bbc.co.uk/news/articles/c95ynzv88n68o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -176,16 +186,6 @@
       {
         "title": "Armed police start patrols in Sydney after Bondi Beach attack",
         "url": "https://www.bbc.co.uk/news/articles/c9kgj7k7ry0ro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Democrat endorses Republican candidate in key Michigan Senate race as party spat escalates",
-        "url": "https://www.bbc.co.uk/news/articles/c95ynzv88n68o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "India's opposition holds mega rally seeking election chief's resignation",
-        "url": "https://www.bbc.co.uk/news/articles/c60qk92dvlwgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -265,6 +265,16 @@
     ],
     "gaming": [
       {
+        "title": "5 Classic Nintendo Games That Are So Good They Never Need a Remake",
+        "url": "https://www.polygon.com/classic-nintendo-games-no-remake-needed/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How to get the Pirate Shop Access Token in Fortnite Chapter 7 mini season",
+        "url": "https://www.polygon.com/fortnite-chapter-7-mini-season-pirate-shop-access-token-free-how-to-get/",
+        "source": "Polygon"
+      },
+      {
         "title": "All map fragment locations in the Fortnite Chapter 7 mini season",
         "url": "https://www.polygon.com/fortnite-chapter-7-mini-season-c7ms-map-fragment-locations/",
         "source": "Polygon"
@@ -288,20 +298,15 @@
         "title": "All battle pass skins in the Fortnite Chapter 7 mini season",
         "url": "https://www.polygon.com/fortnite-chapter-7-mini-season-pirate-battle-pass-skins-outfits/",
         "source": "Polygon"
-      },
-      {
-        "title": "Fable Is Ditching the One Feature That Made Fable 3 An Instant Classic",
-        "url": "https://www.polygon.com/fable-reboot-no-co-op/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The best local co-op games to play in 2026",
-        "url": "https://www.polygon.com/best-local-coop-games/",
-        "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "Game Off 2026: The theme is SHIFT",
+        "url": "https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "GitHub Universe 2026: Evolving every layer of the stack",
         "url": "https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/",
@@ -330,11 +335,6 @@
       {
         "title": "How to continue a GitHub Copilot app session in VS Code",
         "url": "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "The next developer interface is ambient intelligence",
-        "url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
         "source": "GitHub Blog"
       }
     ]
