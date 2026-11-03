@@ -1,170 +1,197 @@
 {
   "metadata": {
-    "last_updated": "2026-11-02T17:55:20.517790",
-    "total_items": 61
+    "last_updated": "2026-11-03T00:40:13.202436",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
-        "title": "Show HN: Subvocal – Talk to your computer without making noise",
-        "url": "https://subvocal.company/",
+        "title": "Astra can read and write weights to improve Qwen",
+        "url": "https://rikiyat.github.io/blog/weight-space-programming/",
         "source": "Hacker News",
-        "score": 67
+        "score": 1809
       },
       {
-        "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
-        "url": "https://momentic.ai/",
+        "title": "Show HN: Subvocal – Talk to your computer without making noise",
+        "url": "https://news.ycombinator.com/item?id=50340088",
         "source": "Hacker News",
-        "score": 40
-      },
-      {
-        "title": "Show HN: Warsaw in voxels – an interactive 3D map of the city centre",
-        "url": "https://p.migdal.pl/warsaw-vibe-voxel/",
-        "source": "Hacker News",
-        "score": 66
-      },
-      {
-        "title": "Ask HN: Who is hiring? (November 2026)",
-        "url": "https://news.ycombinator.com/item?id=50338728",
-        "source": "Hacker News",
-        "score": 82
-      },
-      {
-        "title": "My Favourite Laptop",
-        "url": "https://blog.jsbarretto.com/post/laptop",
-        "source": "Hacker News",
-        "score": 36
+        "score": 520
       },
       {
         "title": "US boy names that became girl names and vice versa",
         "url": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
         "source": "Hacker News",
-        "score": 32
+        "score": 275
       },
       {
         "title": "If you love a website, back it up",
         "url": "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
         "source": "Hacker News",
-        "score": 155
+        "score": 379
       },
       {
-        "title": "Bitmovin (YC S15) Is Hiring Technical Graduates in Denver (Engineering/CS Focus)",
-        "url": "https://bitmovin.com/careers/8660599002/",
+        "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
+        "url": "https://momentic.ai/",
         "source": "Hacker News",
-        "score": 1
+        "score": 117
       },
       {
-        "title": "Moving our warehouse off DuckDB",
-        "url": "https://posthog.com/blog/moving-off-duckdb",
+        "title": "Show HN: Warsaw in voxels – An interactive 3D map of the city centre",
+        "url": "https://p.migdal.pl/warsaw-vibe-voxel/",
         "source": "Hacker News",
-        "score": 84
+        "score": 204
       },
       {
-        "title": "WTF Ubuntu?",
-        "url": "https://chalmovsky.com/posts/wtf-ubuntu",
+        "title": "The SEC Should Block Anthropic's IPO to Protect the Public",
+        "url": "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/",
         "source": "Hacker News",
-        "score": 738
+        "score": 136
       },
       {
-        "title": "Anthropic's internal AI use, at retail prices, now exceeds its employee pay",
-        "url": "https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11",
+        "title": "The Ford Privacy Promise: You're in Control of Your Data",
+        "url": "https://www.fromtheroad.ford.com/us/en/articles/2026/introducing-the-ford-privacy-promise",
         "source": "Hacker News",
-        "score": 63
+        "score": 23
       },
       {
-        "title": "We halved DNS build delay and cut memory use by 85%",
-        "url": "https://blog.cloudflare.com/dns-targeted-zone-builds/",
+        "title": "Ask HN: Who is hiring? (November 2026)",
+        "url": "https://news.ycombinator.com/item?id=50338728",
         "source": "Hacker News",
-        "score": 45
+        "score": 168
       },
       {
-        "title": "GPT-Rosalind-6 System Card Addendum",
-        "url": "https://deploymentsafety.openai.com/gpt-rosalind-6",
+        "title": "Egoless Mathematics in the AI Era",
+        "url": "https://terrytao.wordpress.com/2026/11/02/egoless-mathematics-in-the-ai-era/",
         "source": "Hacker News",
-        "score": 34
+        "score": 101
       },
       {
-        "title": "LongCat-2.5: Native Multimodality for Agentic Tasks",
-        "url": "https://longcat.ai/blog/longcat-2.5/",
+        "title": "Sneaking into the auditorium for the Windows 2000 launch rehearsal",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20261102-00/?p=112818/",
         "source": "Hacker News",
-        "score": 44
+        "score": 96
       },
       {
-        "title": "Postgres 19 is late because so many more bugs are being found now",
-        "url": "http://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html",
+        "title": "Self-Employed? Solopreneur? NIST Has a Cybersecurity Guide Just for You",
+        "url": "https://www.nist.gov/news-events/news/2026/11/self-employed-solopreneur-nist-has-cybersecurity-guide-just-you",
         "source": "Hacker News",
-        "score": 769
+        "score": 70
+      },
+      {
+        "title": "Why are car keys so expensive to replace?",
+        "url": "https://thehustle.co/originals/why-are-car-keys-so-expensive-to-replace",
+        "source": "Hacker News",
+        "score": 8
+      },
+      {
+        "title": "Ubuntu still has not released patch for Linux 0day RCE in almost 3 weeks",
+        "url": "https://freenode.net/article/ubuntu-lts-kernels-still-unfixed-for-critical-cve-2026-98432",
+        "source": "Hacker News",
+        "score": 296
+      },
+      {
+        "title": "SLAC researchers find proof of altermagnetism, a new magnetic phase",
+        "url": "https://www6.slac.stanford.edu/news/2026-10-29-slac-researchers-find-proof-altermagnetism-new-magnetic-phase",
+        "source": "Hacker News",
+        "score": 14
       }
     ],
     "ai": [
       {
-        "title": "Anthropic's internal AI use, at retail prices, now exceeds its employee pay",
-        "url": "https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11",
+        "title": "The SEC Should Block Anthropic's IPO to Protect the Public",
+        "url": "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/",
         "source": "Hacker News AI",
-        "score": 64
+        "score": 136
       },
       {
-        "title": "GPT-Rosalind-6 System Card Addendum",
-        "url": "https://deploymentsafety.openai.com/gpt-rosalind-6",
+        "title": "Egoless Mathematics in the AI Era",
+        "url": "https://terrytao.wordpress.com/2026/11/02/egoless-mathematics-in-the-ai-era/",
         "source": "Hacker News AI",
-        "score": 34
+        "score": 101
       },
       {
-        "title": "LongCat-2.5: Native Multimodality for Agentic Tasks",
-        "url": "https://longcat.ai/blog/longcat-2.5/",
+        "title": "Anthropic's growth just flattened",
+        "url": "https://www.regenerator1.com/p/anthropics-growth-just-flattened",
         "source": "Hacker News AI",
-        "score": 44
+        "score": 138
+      },
+      {
+        "title": "Oracle files to sell $20B in new stock, bonds to finance AI buildout",
+        "url": "https://www.cnbc.com/2026/11/02/oracle-files-to-sell-20-billion-in-new-stock-bonds-to-finance-ai-buildout.html",
+        "source": "Hacker News AI",
+        "score": 146
       },
       {
         "title": "C64 Basic Dungeon Crawler: Stairs, Levels and Levelling Up (Part 11)",
         "url": "https://retrogamecoders.com/c64-basic-dungeon-part11/",
         "source": "Hacker News AI",
-        "score": 10
+        "score": 59
+      },
+      {
+        "title": "LongCat-2.5: Native Multimodality for Agentic Tasks",
+        "url": "https://longcat.ai/blog/longcat-2.5/",
+        "source": "Hacker News AI",
+        "score": 77
+      },
+      {
+        "title": "When Modernization Breaks Working Code: A Study of LLMs on Legacy PHP",
+        "url": "https://arxiv.org/abs/2610.40269",
+        "source": "Hacker News AI",
+        "score": 16
+      },
+      {
+        "title": "Agentic backdoors via pretraining poisoning",
+        "url": "https://arxiv.org/abs/2610.37741",
+        "source": "Hacker News AI",
+        "score": 87
+      },
+      {
+        "title": "LLMs are not superhuman at reading and writing neural network weights",
+        "url": "https://www.seangoedecke.com/llms-are-not-superhuman-at-reading-and-writing-neural-network-weights/",
+        "source": "Hacker News AI",
+        "score": 18
+      },
+      {
+        "title": "Anthropic's internal AI use, at retail prices, now exceeds its employee pay",
+        "url": "https://www.businessinsider.com/anthropic-claude-internal-ai-use-exceeds-employee-pay-tokens-2026-11",
+        "source": "Hacker News AI",
+        "score": 283
+      },
+      {
+        "title": "Ballot Rejections Have Soared in Rural Counties as USPS Reduces Mail Service",
+        "url": "https://www.propublica.org/article/mail-ballot-delays-postal-service-midterms",
+        "source": "Hacker News AI",
+        "score": 74
+      },
+      {
+        "title": "GPT-Rosalind-6 System Card Addendum",
+        "url": "https://deploymentsafety.openai.com/gpt-rosalind-6",
+        "source": "Hacker News AI",
+        "score": 65
       },
       {
         "title": "Jobless tech workers are being left out of San Francisco's AI boom",
         "url": "https://www.bloomberg.com/news/features/2026-09-17/san-francisco-s-ai-wealth-boom-skirts-engineers-as-openai-anthropic-ipos-near",
         "source": "Hacker News AI",
-        "score": 63
-      },
-      {
-        "title": "Last night an AI agent performed brain surgery on a mouse",
-        "url": "https://twitter.com/OcanaSantero/status/2115442964574908902",
-        "source": "Hacker News AI",
-        "score": 85
-      },
-      {
-        "title": "Claude Opus 5.5 Can Draw Permit-Level Architectural Drawings",
-        "url": "https://stephenjgallagher.substack.com/p/ai-can-draw-blueprints-now",
-        "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Anthropic reports $17B in Q3 revenue, commitments of $895B in revised S-1",
-        "url": "https://www.cnbc.com/2026/11/02/anthropic-ant-s-1-quarter-financials.html",
-        "source": "Hacker News AI",
-        "score": 192
-      },
-      {
-        "title": "China's First Frontier AI Export Controls: Mofcom Announcement No. 48",
-        "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-china-ai-export-controls-announcement-48-2/",
-        "source": "Hacker News AI",
-        "score": 146
-      },
-      {
-        "title": "Never Complain, Never Explain",
-        "url": "https://en.wikipedia.org/wiki/Never_complain,_never_explain",
-        "source": "Hacker News AI",
-        "score": 128
-      },
-      {
-        "title": "The AI cost of JavaScript frameworks",
-        "url": "https://nolanlawson.com/2026/10/28/the-ai-cost-of-javascript-frameworks/",
-        "source": "Hacker News AI",
-        "score": 456
+        "score": 156
       }
     ],
     "news": [
+      {
+        "title": "Russian bombing kills 26 people at Ukraine aid centre, Kyiv says",
+        "url": "https://www.bbc.co.uk/news/articles/cjy56dndlyz0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Thousands of European troops to rehearse Ukraine deployment in event of peace",
+        "url": "https://www.bbc.co.uk/news/articles/cm3wv085ne6po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Plane may have broken apart ahead of deadly Florida jet crash, say investigators ",
+        "url": "https://www.bbc.co.uk/news/articles/cm369yy7lw73o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Shop freezers in seven European countries hit by cyber-attack",
         "url": "https://www.bbc.co.uk/news/articles/cq1kd1nee80eo?at_medium=RSS&at_campaign=rss",
@@ -176,32 +203,22 @@
         "source": "BBC World"
       },
       {
-        "title": "Dutch police offer record €2m reward in hunt for drug lord",
-        "url": "https://www.bbc.co.uk/news/articles/ckly0v2q2yxlo?at_medium=RSS&at_campaign=rss",
+        "title": "Legal challenge to Australia's social media ban to start in High Court",
+        "url": "https://www.bbc.co.uk/news/articles/ck79py02p1jlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Fake nuclear warnings issued after Ukrainian and Russian air alert apps hacked",
-        "url": "https://www.bbc.co.uk/news/articles/c51kdy1ew7zvo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Five arrested after South African farmer shot and tortured",
-        "url": "https://www.bbc.co.uk/news/articles/cv4g13z0px8yo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Wizz Air flight from Luton in emergency landing after bomb threat",
-        "url": "https://www.bbc.co.uk/news/articles/c6rryvwre0p5o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Ryanair says it may freeze workers' pay and raise airfares",
-        "url": "https://www.bbc.co.uk/news/articles/cr0qkve1x224o?at_medium=RSS&at_campaign=rss",
+        "title": "Man guilty of stealing cash from farm owned by South African president",
+        "url": "https://www.bbc.co.uk/news/articles/c9vgrvpk4l6eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Nintendo's Zelda Ocarina of Time could have been very different ",
+        "url": "https://www.creativebloq.com/news/nintendos-zelda-ocarina-of-time-remake-was-almost-very-different",
+        "source": "Creative Bloq"
+      },
       {
         "title": " 6 of my favourite earphones are on sale in the annual HiFiGo early Black Friday sale ",
         "url": "https://www.creativebloq.com/deals/6-of-my-favourite-earphones-are-on-sale-in-the-annual-hifigo-early-black-friday-sale",
@@ -230,11 +247,6 @@
       {
         "title": " Will your digital work still exist in 2046? Here’s why the answer might be no ",
         "url": "https://www.creativebloq.com/news/will-your-digital-work-still-exist-in-2046-heres-why-the-answer-might-be-no",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " If smart glasses take off, I predict a new golden age for the billboard ",
-        "url": "https://www.creativebloq.com/news/if-smart-glasses-take-off-i-predict-a-new-golden-age-for-the-billboard",
         "source": "Creative Bloq"
       }
     ],
@@ -277,38 +289,38 @@
     ],
     "gaming": [
       {
-        "title": "The Legend of Zelda: Ocarina of Time Remake Studio Officially Revealed",
-        "url": "https://www.polygon.com/legend-of-zelda-ocarina-of-time-remake-studio-revealed/",
+        "title": "World of Warcraft Forever release time in your time zone",
+        "url": "https://www.polygon.com/world-of-warcraft-forever-wow-release-time-est-pst/",
         "source": "Polygon"
       },
       {
-        "title": "FF14’s New Expansion Officially Addresses Dawntrail’s Biggest Problem",
-        "url": "https://www.polygon.com/final-fantasy-14-evercold-fixing-dawntrails-pacing-issues/",
+        "title": "Nintendo Officially Comments on Zelda Remake's Divisive Graphics",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-art-style-link-zelda-puppets/",
         "source": "Polygon"
       },
       {
-        "title": "Dune Officially Returns With New Release This Week Ahead of Denis Villeneuve's Next Movie",
-        "url": "https://www.polygon.com/dune-messiah-graphic-novel-excerpt/",
+        "title": "Dead by Daylight Fans Are Uninstalling the Game in Protest",
+        "url": "https://www.polygon.com/dead-by-daylight-theburntpeanut-controversy-explained/",
         "source": "Polygon"
       },
       {
-        "title": "FBI Issues Surprise Official 'Pokémon' Trading Card Warning",
-        "url": "https://www.polygon.com/pokemon-tcg-fbi-warning-scam-theft-credit-card-fraud-fakes/",
+        "title": "2024's Best Action Game Is (Mostly) Just as Good in Stunning Switch 2 Port",
+        "url": "https://www.polygon.com/stellar-blade-nintendo-switch-2-impressions/",
         "source": "Polygon"
       },
       {
-        "title": "Critical Role Just Made One of D&D’s Most Popular Classes Even More Broken",
-        "url": "https://www.polygon.com/critical-role-warlocks-campaign-4/",
+        "title": "Daniel Craig's Taut 92-minute Thriller Is Blowing Up on Streaming",
+        "url": "https://www.polygon.com/daniel-craig-dream-house-streaming-success-hbo-max-november-2026/",
         "source": "Polygon"
       },
       {
-        "title": "The Pokémon Company Is Counting Down to a Surprise Reveal This Month",
-        "url": "https://www.polygon.com/pokemon-logo-tease-november-2026-announcement/",
+        "title": "Jurassic Park Meets Outlast in Terrifying Steam Game Coming Next Week",
+        "url": "https://www.polygon.com/wilderdark-survival-horror-jurassic-park-steam-release/",
         "source": "Polygon"
       },
       {
-        "title": "Ahsoka Cast Drops Big Hints About Season 2",
-        "url": "https://www.polygon.com/ahsoka-season-2-thrawn-hints-reveals/",
+        "title": "One of the GameCube’s Great Cult Classics Gets the Remaster It Deserves",
+        "url": "https://www.polygon.com/godzilla-destroy-all-monsters-melee-remastered-review/",
         "source": "Polygon"
       }
     ],
