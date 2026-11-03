@@ -1,284 +1,296 @@
 {
   "metadata": {
-    "last_updated": "2026-11-03T07:39:40.638139",
-    "total_items": 56
+    "last_updated": "2026-11-03T15:55:04.959396",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Astra can read and write weights to improve Qwen",
-        "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+        "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
+        "url": "https://honnibal.dev/blog/astra-read-write-misleading",
         "source": "Hacker News",
-        "score": 2444
+        "score": 533
       },
       {
-        "title": "uBlock Origin filter to block autoplay videos in TechCrunch",
-        "url": "https://cornfieldlabs.github.io/posts/ublock-stop-techcrunch-autoplay-video/post.html",
+        "title": "Just a little AI resistance, as a treat",
+        "url": "https://shkspr.mobi/blog/2026/11/just-a-little-ai-resistance-as-a-treat/",
+        "source": "Hacker News",
+        "score": 129
+      },
+      {
+        "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
+        "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
+        "source": "Hacker News",
+        "score": 96
+      },
+      {
+        "title": "Octomind – open-source AI harness that saves your tokens, static rust",
+        "url": "https://github.com/Muvon/octomind",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "AI is destroying my CS degree",
+        "url": "https://lordtoots.bearblog.dev/ai-is-destroying-my-cs-degree/",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "The AI Bubble Monitor",
+        "url": "https://cepr.net/publications/ai-bubble-monitor/",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Are the Fridges Ok?",
+        "url": "https://arethefridgesok.org/",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "Charles Tandy, the mastermind behind Radio Shack",
+        "url": "https://dfarq.homeip.net/charles-tandy-the-mastermind-behind-radio-shack/",
+        "source": "Hacker News",
+        "score": 59
+      },
+      {
+        "title": "Quili AI",
+        "url": "https://www.quili.ai/",
         "source": "Hacker News",
         "score": 4
       },
       {
-        "title": "DiscImageStudio: burn visible artwork onto CDs, DVDs and Blu-ray discs",
-        "url": "https://github.com/JiaFeiMiao-K-Cat/DiscImageStudio",
+        "title": "Writing seen in PHerc. 306B, for the first time in 2000 years",
+        "url": "https://scrollprize.substack.com/p/writing-seen-in-pherc-306b-for-the",
         "source": "Hacker News",
-        "score": 151
+        "score": 29
       },
       {
-        "title": "Show HN: Hacker Times, a New York Times-inspired version of Hacker News",
-        "url": "https://hackertimes.ca/",
+        "title": "No Brother of Mine Will Play the Flute",
+        "url": "https://homosabiens.substack.com/p/no-brother-of-mine-will-play-the",
         "source": "Hacker News",
-        "score": 197
+        "score": 4
       },
       {
-        "title": "European RISC-V Industrial Computing Initiative",
-        "url": "https://erici.eu",
+        "title": "The State of Longevity: The healthmaxxing economy is here",
+        "url": "https://www.a16z.news/p/the-state-of-longevity",
         "source": "Hacker News",
-        "score": 55
+        "score": 3
       },
       {
-        "title": "Show HN: Subvocal – Talk to your computer without making noise",
-        "url": "https://news.ycombinator.com/item?id=50340088",
-        "source": "Hacker News",
-        "score": 657
-      },
-      {
-        "title": "Scaling Git at OpenAI",
-        "url": "https://openai.com/index/scaling-git-at-openai/",
-        "source": "Hacker News",
-        "score": 183
-      },
-      {
-        "title": "Resisting Cognitive Surrender",
-        "url": "https://knlb.dev/essays/surrender",
-        "source": "Hacker News",
-        "score": 116
-      },
-      {
-        "title": "US boy names that became girl names and vice versa",
-        "url": "https://namedaisy.com/blog/boy-names-that-became-girl-names",
-        "source": "Hacker News",
-        "score": 364
-      },
-      {
-        "title": "If you love a website, back it up",
-        "url": "https://blog.mistys-internet.website/post/2026/10/29/if-you-love-a-website-back-it-up/",
-        "source": "Hacker News",
-        "score": 510
-      },
-      {
-        "title": "Show HN: ReBirth 338 in Browser",
-        "url": "https://margeux.com/rb338.html",
+        "title": "Antimony: CAD Software Evolved from Lisp Machines and Not Drafting Tables",
+        "url": "https://www.mattkeeter.com/projects/antimony/3/",
         "source": "Hacker News",
         "score": 12
       },
       {
-        "title": "Efficient algorithms, the Exponential Time Hypothesis, and losing the plot",
-        "url": "https://www.argmin.net/p/galactus-the-devourer",
+        "title": "Sava Trust (YC F25) Is Hiring a Founding Engineer in NYC",
+        "url": "https://www.ycombinator.com/companies/sava-trust-company/jobs",
         "source": "Hacker News",
-        "score": 12
+        "score": 1
       },
       {
-        "title": "Self-Employed? Solopreneur? NIST Has a Cybersecurity Guide Just for You",
-        "url": "https://www.nist.gov/news-events/news/2026/11/self-employed-solopreneur-nist-has-cybersecurity-guide-just-you",
+        "title": "Tiny Basic for Arduino",
+        "url": "https://dilshan.github.io/tiny-basic/",
         "source": "Hacker News",
-        "score": 192
-      },
-      {
-        "title": "Launch HN: Momentic (YC W24) – Agents that catch bugs by using your app",
-        "url": "https://momentic.ai/",
-        "source": "Hacker News",
-        "score": 141
-      },
-      {
-        "title": "Show HN: Warsaw in voxels – An interactive 3D map of the city centre",
-        "url": "https://p.migdal.pl/warsaw-vibe-voxel/",
-        "source": "Hacker News",
-        "score": 254
+        "score": 7
       }
     ],
     "ai": [
       {
-        "title": "Scaling Git at OpenAI",
-        "url": "https://openai.com/index/scaling-git-at-openai/",
+        "title": "Just a little AI resistance, as a treat",
+        "url": "https://shkspr.mobi/blog/2026/11/just-a-little-ai-resistance-as-a-treat/",
         "source": "Hacker News AI",
-        "score": 183
+        "score": 129
       },
       {
-        "title": "Egoless Mathematics in the AI Era",
-        "url": "https://terrytao.wordpress.com/2026/11/02/egoless-mathematics-in-the-ai-era/",
+        "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
+        "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
         "source": "Hacker News AI",
-        "score": 153
+        "score": 96
       },
       {
-        "title": "The SEC Should Block Anthropic's IPO to Protect the Public",
-        "url": "https://www.techpolicy.press/the-sec-should-block-anthropics-ipo-to-protect-the-public/",
+        "title": "Octomind – open-source AI harness that saves your tokens, static rust",
+        "url": "https://github.com/Muvon/octomind",
         "source": "Hacker News AI",
-        "score": 309
+        "score": 23
       },
       {
-        "title": "C64 Basic Dungeon Crawler: Stairs, Levels and Levelling Up (Part 11)",
-        "url": "https://retrogamecoders.com/c64-basic-dungeon-part11/",
+        "title": "AI is destroying my CS degree",
+        "url": "https://lordtoots.bearblog.dev/ai-is-destroying-my-cs-degree/",
         "source": "Hacker News AI",
-        "score": 73
+        "score": 16
       },
       {
-        "title": "How AI is creating a lopsided US economy",
-        "url": "https://www.abc.net.au/news/2026-10-19/ai-stock-market-concentration-data/107261078",
+        "title": "The AI Bubble Monitor",
+        "url": "https://cepr.net/publications/ai-bubble-monitor/",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 27
       },
       {
-        "title": "Mass attempted replication of old findings of LLMs with new models",
-        "url": "https://zou-group.github.io/llm-claims-shelf-life/",
+        "title": "Quili AI",
+        "url": "https://www.quili.ai/",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 4
+      },
+      {
+        "title": "Jailbreaking my car's navigation system just so I can change the time",
+        "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
+        "source": "Hacker News AI",
+        "score": 8
+      },
+      {
+        "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
+        "url": "https://news.ycombinator.com/item?id=50352757",
+        "source": "Hacker News AI",
+        "score": 25
       }
     ],
     "news": [
       {
-        "title": "US strikes Iran ahead of midterm elections",
+        "title": "US strikes Iranian island ahead of midterm elections",
         "url": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Supreme Court rejects Trump's request to stop California counting disputed votes",
-        "url": "https://www.bbc.co.uk/news/articles/cm5ynekkn5qko?at_medium=RSS&at_campaign=rss",
+        "title": "Tenerife striker De Miguel dies after on-field collision ",
+        "url": "https://www.bbc.co.uk/sport/football/articles/ck62yvz046pjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Russian bombing kills 29 people at Ukraine aid centre, Kyiv says",
-        "url": "https://www.bbc.co.uk/news/articles/cjy56dndlyz0o?at_medium=RSS&at_campaign=rss",
+        "title": "Libya's top religious authority rules against wearing Nike clothes",
+        "url": "https://www.bbc.co.uk/news/articles/c5djv0p0re2no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Thousands of European troops to rehearse Ukraine deployment in event of peace",
-        "url": "https://www.bbc.co.uk/news/articles/cm3wv085ne6po?at_medium=RSS&at_campaign=rss",
+        "title": "Indian tourist killed after two helicopters collide near Everest base camp",
+        "url": "https://www.bbc.co.uk/news/articles/cmqlnx7z1549o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Plane may have broken apart ahead of deadly Florida jet crash, say investigators ",
-        "url": "https://www.bbc.co.uk/news/articles/cm369yy7lw73o?at_medium=RSS&at_campaign=rss",
+        "title": "Europe on alert after supermarket freezers hit by cyber-attacks in 10 countries",
+        "url": "https://www.bbc.co.uk/news/articles/cwy8lm1m59mvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Shop freezers in seven European countries hit by cyber-attack",
-        "url": "https://www.bbc.co.uk/news/articles/cq1kd1nee80eo?at_medium=RSS&at_campaign=rss",
+        "title": "US urges Venezuela to release remaining political prisoners",
+        "url": "https://www.bbc.co.uk/news/articles/cxg5jln586pno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Fighting returns to Kherson region after longest Ukraine war ceasefire",
-        "url": "https://www.bbc.co.uk/news/articles/ckg5jlyp66jzo?at_medium=RSS&at_campaign=rss",
+        "title": "Asian Cup postponed in wake of attacks on Saudi Arabia",
+        "url": "https://www.bbc.co.uk/sport/football/articles/c6y0e79yjg44o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " The new Airbnb logo was mocked in 2014. Here's how the brand had the last laugh ",
-        "url": "https://www.creativebloq.com/news/the-new-airbnb-logo-was-widely-mocked-in-2014-heres-how-the-brand-had-the-last-laugh",
+        "title": " Is this the most controversial font since Comic Sans? ",
+        "url": "https://www.creativebloq.com/news/is-this-the-most-controversial-font-since-comic-sans",
         "source": "Creative Bloq"
       },
       {
-        "title": " Nintendo's Zelda Ocarina of Time could have been very different ",
-        "url": "https://www.creativebloq.com/news/nintendos-zelda-ocarina-of-time-remake-was-almost-very-different",
+        "title": " The most popular 3D printer of 2026 just got a record low price for early Black Friday ",
+        "url": "https://www.creativebloq.com/deals/the-most-popular-3d-printer-of-2026-just-got-a-record-low-price-for-early-black-friday",
         "source": "Creative Bloq"
       },
       {
-        "title": " 6 of my favourite earphones are on sale in the annual HiFiGo early Black Friday sale ",
-        "url": "https://www.creativebloq.com/deals/6-of-my-favourite-earphones-are-on-sale-in-the-annual-hifigo-early-black-friday-sale",
+        "title": " I'm blown away by the new Bambu Lab H3C - is this the best 3D printer of all time? ",
+        "url": "https://www.creativebloq.com/news/im-blown-away-by-the-new-bambu-lab-h3c-is-this-the-best-3d-printer-of-all-time",
         "source": "Creative Bloq"
       },
       {
-        "title": " How Helldivers 2 uses Blender to build its gritty sci-fi hardware ",
-        "url": "https://www.creativebloq.com/news/how-helldivers-2-uses-blender-to-build-its-gritty-sci-fi-hardware",
+        "title": " 10 top email newsletter tools to build your subscriber list ",
+        "url": "https://www.creativebloq.com/buying-guides/10-top-email-newsletter-tools-to-build-your-subscriber-list",
         "source": "Creative Bloq"
       },
       {
-        "title": " This 'black' horse optical illusion is even more baffling than the colour changing dress ",
-        "url": "https://www.creativebloq.com/inspiration/this-black-horse-optical-illusion-is-even-more-baffling-than-the-colour-changing-dress",
+        "title": " Wacom MovinkPad Pro 14 vs XPPen Magic Pro 13: Which is the best Android drawing tablet? ",
+        "url": "https://www.creativebloq.com/advice/wacom-movinkpad-pro-14-vs-xppen-magic-pro-13-which-is-the-best-android-drawing-tablet",
         "source": "Creative Bloq"
       },
       {
-        "title": " iPad users finally have the free Adobe alternative they've been asking for ",
-        "url": "https://www.creativebloq.com/news/affinity-for-ipad-just-made-the-free-adobe-alternative-even-more-complete",
+        "title": " This clever logo design has been electrifying the internet since 2008 ",
+        "url": "https://www.creativebloq.com/news/this-clever-logo-design-has-electrifying-the-internet-since-2008",
         "source": "Creative Bloq"
       },
       {
-        "title": " The real star of the new MacBook Pro is the Apple logo ",
-        "url": "https://www.creativebloq.com/news/the-real-star-of-the-new-macbook-pro-is-the-apple-logo",
+        "title": " How Jonathan Blow’s team made a thousand-puzzle game that’s gorgeous and still readable ",
+        "url": "https://www.creativebloq.com/features/how-jonathan-blows-team-made-a-thousand-puzzle-game-thats-gorgeous-and-readable",
         "source": "Creative Bloq"
       }
     ],
     "science": [
       {
-        "title": "Scientists discover new Alzheimer’s drug that repairs DNA damage and reduces brain inflammation",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261102075806.htm",
+        "title": "NASA smashed into an asteroid. Now Hera is closing in to see what happened",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261103003154.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Experts say high blood pressure guidelines are missing half the equation",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261102075553.htm",
+        "title": "NASA’s Voyager 1 is about to reach a historic one-light-day milestone",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261103003152.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Extra weight may be aging your brain faster than you think",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261101010559.htm",
+        "title": "Scientists identify two overlooked skills that predict reading success",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261102202845.htm",
         "source": "Science Daily"
       },
       {
-        "title": "NASA reveals a haunting skull hidden in Antarctica’s ice",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261101010538.htm",
+        "title": "A 50-year-old mystery of vanishing frogs reveals a hidden killer",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261102202838.htm",
         "source": "Science Daily"
       },
       {
-        "title": "NASA’s Perseverance Mars rover breaks historic record after traveling 28 miles",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261101010536.htm",
+        "title": "The brain’s hidden fear mechanism may explain anxiety and PTSD",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261102202833.htm",
         "source": "Science Daily"
       },
       {
-        "title": "IceCube detects ghost particles with 10 billion times the energy of solar neutrinos",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261101010533.htm",
+        "title": "Scientists discover a surprising clue to autism's origins hidden in the placenta",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261102202824.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists just found a loophole that could let black holes split in two",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261101010525.htm",
+        "title": "All 5 genetic “letters” of DNA and RNA discovered in a 4.5-billion-year-old asteroid",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261102075903.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Zelda Ocarina of Time release time in your time zone",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-release-time-est-pst-pre-orders/",
+        "title": "'GTA 6' Early Preload Times And File Size Confirmed By Rockstar ",
+        "url": "https://www.polygon.com/gta-6-preload-when-is-ps5-xbox-times-file-size-gb-poster-map-rockstar/",
         "source": "Polygon"
       },
       {
-        "title": "20 Years Later, Uncle Iroh's Wisest 'Avatar: The Last Airbender Quote' Is Still Undefeated",
-        "url": "https://www.polygon.com/avatar-the-last-airbenders-best-quote/",
+        "title": "Bethesda Officially Confirms The Elder Scrolls 6 Name",
+        "url": "https://www.polygon.com/elder-scrolls-6-sentinel-bethesda-name-announced/",
         "source": "Polygon"
       },
       {
-        "title": "New Star Wars Book Reveals the Surprising '90s Inspiration for an Iconic New Character",
-        "url": "https://www.polygon.com/exclusive-look-the-art-of-the-mandalorian-and-grogu/",
+        "title": "Scream Star Confirms She’s Returning for Sequel",
+        "url": "https://www.polygon.com/scream-8-neve-campbell-returning/",
         "source": "Polygon"
       },
       {
-        "title": "World of Warcraft Forever release time in your time zone",
-        "url": "https://www.polygon.com/world-of-warcraft-forever-wow-release-time-est-pst/",
+        "title": "Netflix Officially Reveals Blue Eye Samurai Season 2 Premiere Date and Episode Count",
+        "url": "https://www.polygon.com/netflix-blue-eye-samurai-season-2-release-date-episode-count-announced/",
         "source": "Polygon"
       },
       {
-        "title": "Nintendo Officially Comments on Zelda Remake's Divisive Graphics",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-art-style-link-zelda-puppets/",
+        "title": "Xbox Game Pass’ Newest Addition Is a Near-Perfect Couch Co-Op Game",
+        "url": "https://www.polygon.com/escape-academy-2-back-2-school-impressions/",
         "source": "Polygon"
       },
       {
-        "title": "Dead by Daylight Fans Are Uninstalling the Game in Protest",
-        "url": "https://www.polygon.com/dead-by-daylight-theburntpeanut-controversy-explained/",
+        "title": "Fire Emblem Fortune’s Weave Leak Reveals New Characters, Including a Shocking Pick",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-leaks-upcoming-characters/",
         "source": "Polygon"
       },
       {
-        "title": "2024's Best Action Game Is (Mostly) Just as Good in Stunning Switch 2 Port",
-        "url": "https://www.polygon.com/stellar-blade-nintendo-switch-2-impressions/",
+        "title": "Lego Reveals First Official Look at Huge $450 Godzilla Set",
+        "url": "https://www.polygon.com/lego-godzilla-set-images-release-date-price/",
         "source": "Polygon"
       }
     ],
