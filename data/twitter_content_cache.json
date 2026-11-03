@@ -1,160 +1,194 @@
 {
   "metadata": {
-    "last_updated": "2026-11-03T15:55:04.959396",
-    "total_items": 58
+    "last_updated": "2026-11-03T21:33:43.583926",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
-        "url": "https://honnibal.dev/blog/astra-read-write-misleading",
+        "title": "Jailbreaking my car's navigation system just so I can change the time",
+        "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
         "source": "Hacker News",
-        "score": 533
+        "score": 477
       },
       {
-        "title": "Just a little AI resistance, as a treat",
-        "url": "https://shkspr.mobi/blog/2026/11/just-a-little-ai-resistance-as-a-treat/",
+        "title": "Stringman, an $800 open-source room scale gripper robot",
+        "url": "https://neufangled.com/",
         "source": "Hacker News",
-        "score": 129
+        "score": 191
+      },
+      {
+        "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+        "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+        "source": "Hacker News",
+        "score": 364
+      },
+      {
+        "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+        "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+        "source": "Hacker News",
+        "score": 791
       },
       {
         "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
         "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
         "source": "Hacker News",
-        "score": 96
+        "score": 318
       },
       {
-        "title": "Octomind – open-source AI harness that saves your tokens, static rust",
-        "url": "https://github.com/Muvon/octomind",
+        "title": "Show HN: HackerTV – HN's most-recommended Youtube videos as 24/7 TV channels",
+        "url": "https://hackertv.org",
         "source": "Hacker News",
-        "score": 23
+        "score": 31
       },
       {
-        "title": "AI is destroying my CS degree",
-        "url": "https://lordtoots.bearblog.dev/ai-is-destroying-my-cs-degree/",
+        "title": "Introduction to Programming in ATS",
+        "url": "https://ats-lang.sourceforge.net/DOCUMENT/INT2PROGINATS/HTML/book1.html",
         "source": "Hacker News",
-        "score": 16
+        "score": 30
       },
       {
-        "title": "The AI Bubble Monitor",
-        "url": "https://cepr.net/publications/ai-bubble-monitor/",
+        "title": "Preparing for the Flipper One Kickstarter and opening pre-orders",
+        "url": "https://flipper.net/pages/flipper-one",
         "source": "Hacker News",
-        "score": 27
+        "score": 115
       },
       {
-        "title": "Are the Fridges Ok?",
-        "url": "https://arethefridgesok.org/",
+        "title": "macOS 27 does not support CoreStorage volumes",
+        "url": "https://wadetregaskis.com/macos-27-golden-gate-does-not-actually-support-corestorage-or-hfs-volumes/",
+        "source": "Hacker News",
+        "score": 21
+      },
+      {
+        "title": "How McDonald's first got its start",
+        "url": "https://www.smithsonianmag.com/history/story-how-mcdonalds-first-got-its-start-180960931/",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "We're Training a Figma-Fluent Editing Model",
+        "url": "https://www.figma.com/blog/training-a-figma-fluent-editing-model/",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
+        "title": "I dumped Apple’s word list",
+        "url": "https://helgesver.re/articles/macos-vulgar-word-flags",
+        "source": "Hacker News",
+        "score": 99
+      },
+      {
+        "title": "Show HN: Kairos – Open-source risk and fraud decisioning platform",
+        "url": "https://github.com/finic-ai/kairos",
         "source": "Hacker News",
         "score": 9
       },
       {
-        "title": "Charles Tandy, the mastermind behind Radio Shack",
-        "url": "https://dfarq.homeip.net/charles-tandy-the-mastermind-behind-radio-shack/",
+        "title": "Japan's Jimi 'Mundane' Halloween Costumes of 2026",
+        "url": "https://spoon-tamago.com/japan-jimi-mundane-halloween-costumes-2026/",
         "source": "Hacker News",
-        "score": 59
+        "score": 19
       },
       {
-        "title": "Quili AI",
-        "url": "https://www.quili.ai/",
-        "source": "Hacker News",
-        "score": 4
-      },
-      {
-        "title": "Writing seen in PHerc. 306B, for the first time in 2000 years",
-        "url": "https://scrollprize.substack.com/p/writing-seen-in-pherc-306b-for-the",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "No Brother of Mine Will Play the Flute",
-        "url": "https://homosabiens.substack.com/p/no-brother-of-mine-will-play-the",
-        "source": "Hacker News",
-        "score": 4
-      },
-      {
-        "title": "The State of Longevity: The healthmaxxing economy is here",
-        "url": "https://www.a16z.news/p/the-state-of-longevity",
-        "source": "Hacker News",
-        "score": 3
-      },
-      {
-        "title": "Antimony: CAD Software Evolved from Lisp Machines and Not Drafting Tables",
-        "url": "https://www.mattkeeter.com/projects/antimony/3/",
-        "source": "Hacker News",
-        "score": 12
-      },
-      {
-        "title": "Sava Trust (YC F25) Is Hiring a Founding Engineer in NYC",
-        "url": "https://www.ycombinator.com/companies/sava-trust-company/jobs",
+        "title": "Ashby (YC W19) Is Hiring EMs",
+        "url": "https://www.ashbyhq.com/careers?ashby_jid=695b1ce6-c375-4fad-94ef-61b50a3fbd28&utm_source=hn",
         "source": "Hacker News",
         "score": 1
-      },
-      {
-        "title": "Tiny Basic for Arduino",
-        "url": "https://dilshan.github.io/tiny-basic/",
-        "source": "Hacker News",
-        "score": 7
       }
     ],
     "ai": [
       {
-        "title": "Just a little AI resistance, as a treat",
-        "url": "https://shkspr.mobi/blog/2026/11/just-a-little-ai-resistance-as-a-treat/",
+        "title": "Jailbreaking my car's navigation system just so I can change the time",
+        "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
         "source": "Hacker News AI",
-        "score": 129
+        "score": 477
+      },
+      {
+        "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+        "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+        "source": "Hacker News AI",
+        "score": 791
       },
       {
         "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
         "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
         "source": "Hacker News AI",
-        "score": 96
+        "score": 318
       },
       {
-        "title": "Octomind – open-source AI harness that saves your tokens, static rust",
-        "url": "https://github.com/Muvon/octomind",
+        "title": "macOS 27 does not support CoreStorage volumes",
+        "url": "https://wadetregaskis.com/macos-27-golden-gate-does-not-actually-support-corestorage-or-hfs-volumes/",
         "source": "Hacker News AI",
-        "score": 23
+        "score": 21
       },
       {
-        "title": "AI is destroying my CS degree",
-        "url": "https://lordtoots.bearblog.dev/ai-is-destroying-my-cs-degree/",
+        "title": "We're Training a Figma-Fluent Editing Model",
+        "url": "https://www.figma.com/blog/training-a-figma-fluent-editing-model/",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 22
       },
       {
-        "title": "The AI Bubble Monitor",
-        "url": "https://cepr.net/publications/ai-bubble-monitor/",
+        "title": "Show HN: Kairos – Open-source risk and fraud decisioning platform",
+        "url": "https://github.com/finic-ai/kairos",
         "source": "Hacker News AI",
-        "score": 27
+        "score": 9
       },
       {
-        "title": "Quili AI",
-        "url": "https://www.quili.ai/",
+        "title": "USDB: Scaling Storage for Next-Generation Recommender Systems at ByteDance",
+        "url": "https://arxiv.org/abs/2611.02618",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 34
       },
       {
-        "title": "Jailbreaking my car's navigation system just so I can change the time",
-        "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
+        "title": "Google will turn off search for schools that reject AI",
+        "url": "https://www.nytimes.com/2026/11/03/us/google-search-schools-restrict-ai.html",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 443
+      },
+      {
+        "title": "How I use AI (Oct 2026)",
+        "url": "https://ben.stolovitz.com/posts/how-use-ai-oct-2026/",
+        "source": "Hacker News AI",
+        "score": 32
       },
       {
         "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
         "url": "https://news.ycombinator.com/item?id=50352757",
         "source": "Hacker News AI",
-        "score": 25
+        "score": 389
+      },
+      {
+        "title": "Embedding boolean circuits in a neural network",
+        "url": "https://edwardbenson.com/2026/10/embedding-boolean-circuits-in-a-neural-network",
+        "source": "Hacker News AI",
+        "score": 21
+      },
+      {
+        "title": "Show HN: Interactive notes on RLHF, attention, LoRA and LLM evals",
+        "url": "https://concepts.laxmena.com/",
+        "source": "Hacker News AI",
+        "score": 36
       }
     ],
     "news": [
       {
-        "title": "US strikes Iranian island ahead of midterm elections",
-        "url": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo?at_medium=RSS&at_campaign=rss",
+        "title": "Spanish transport minister resigns days after deadly train crash",
+        "url": "https://www.bbc.co.uk/news/articles/c6wydqd4yxdyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Tenerife striker De Miguel dies after on-field collision ",
-        "url": "https://www.bbc.co.uk/sport/football/articles/ck62yvz046pjo?at_medium=RSS&at_campaign=rss",
+        "title": "Seven flights across Europe targeted by suspected bomb threats",
+        "url": "https://www.bbc.co.uk/news/articles/c6x2wd4v04eeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Binance says fake job interviews used as part of $6.3bn crypto hack",
+        "url": "https://www.bbc.co.uk/news/articles/ck5ynwz9gy67o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Death toll rises in Ukraine after Russia attacks aid centre, hospice and hospital",
+        "url": "https://www.bbc.co.uk/news/articles/c65ynez5y599o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -163,27 +197,32 @@
         "source": "BBC World"
       },
       {
-        "title": "Indian tourist killed after two helicopters collide near Everest base camp",
-        "url": "https://www.bbc.co.uk/news/articles/cmqlnx7z1549o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Europe on alert after supermarket freezers hit by cyber-attacks in 10 countries",
         "url": "https://www.bbc.co.uk/news/articles/cwy8lm1m59mvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US urges Venezuela to release remaining political prisoners",
-        "url": "https://www.bbc.co.uk/news/articles/cxg5jln586pno?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Asian Cup postponed in wake of attacks on Saudi Arabia",
-        "url": "https://www.bbc.co.uk/sport/football/articles/c6y0e79yjg44o?at_medium=RSS&at_campaign=rss",
+        "title": "US strikes Iranian island ahead of midterm elections",
+        "url": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Bambu Lab’s early Black Friday deals cut up to $300 off its best 3D printers ",
+        "url": "https://www.creativebloq.com/deals/bambu-labs-early-black-friday-deals-cut-up-to-usd300-off-its-best-3d-printers",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Alexander Skarsgård has made wicker this season's must-have interior design trend – here's how to get the look for less ",
+        "url": "https://www.creativebloq.com/news/alexander-skarsgard-has-made-wicker-this-seasons-must-have-interior-design-trend-heres-how-to-get-the-look-for-less",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This $580-off Black Friday laptop deal is great for content creators and artists as well as gamers ",
+        "url": "https://www.creativebloq.com/deals/this-usd580-off-black-friday-laptop-deal-is-great-for-content-creators-and-artists-as-well-as-gamers",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Is this the most controversial font since Comic Sans? ",
         "url": "https://www.creativebloq.com/news/is-this-the-most-controversial-font-since-comic-sans",
@@ -202,21 +241,6 @@
       {
         "title": " 10 top email newsletter tools to build your subscriber list ",
         "url": "https://www.creativebloq.com/buying-guides/10-top-email-newsletter-tools-to-build-your-subscriber-list",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Wacom MovinkPad Pro 14 vs XPPen Magic Pro 13: Which is the best Android drawing tablet? ",
-        "url": "https://www.creativebloq.com/advice/wacom-movinkpad-pro-14-vs-xppen-magic-pro-13-which-is-the-best-android-drawing-tablet",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This clever logo design has been electrifying the internet since 2008 ",
-        "url": "https://www.creativebloq.com/news/this-clever-logo-design-has-electrifying-the-internet-since-2008",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How Jonathan Blow’s team made a thousand-puzzle game that’s gorgeous and still readable ",
-        "url": "https://www.creativebloq.com/features/how-jonathan-blows-team-made-a-thousand-puzzle-game-thats-gorgeous-and-readable",
         "source": "Creative Bloq"
       }
     ],
@@ -259,43 +283,48 @@
     ],
     "gaming": [
       {
-        "title": "'GTA 6' Early Preload Times And File Size Confirmed By Rockstar ",
-        "url": "https://www.polygon.com/gta-6-preload-when-is-ps5-xbox-times-file-size-gb-poster-map-rockstar/",
+        "title": "DC Studios Has Officially Cast Its New Robin",
+        "url": "https://www.polygon.com/dc-studios-cast-robin-dynamic-duo-movie/",
         "source": "Polygon"
       },
       {
-        "title": "Bethesda Officially Confirms The Elder Scrolls 6 Name",
-        "url": "https://www.polygon.com/elder-scrolls-6-sentinel-bethesda-name-announced/",
+        "title": "WoW: Forever's Beta Was Pure Magic. No One Knows What Happens Next",
+        "url": "https://www.polygon.com/wow-world-of-warcraft-forever-beta-review/",
         "source": "Polygon"
       },
       {
-        "title": "Scream Star Confirms She’s Returning for Sequel",
-        "url": "https://www.polygon.com/scream-8-neve-campbell-returning/",
+        "title": "Magic: The Gathering Is Reprinting a Powerful $30 Sword With Perfect Pixel Art",
+        "url": "https://www.polygon.com/magic-the-gathering-sword-truth-justice-secret-lair-extra-life-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Netflix Officially Reveals Blue Eye Samurai Season 2 Premiere Date and Episode Count",
-        "url": "https://www.polygon.com/netflix-blue-eye-samurai-season-2-release-date-episode-count-announced/",
+        "title": "Phantom Blade Zero Meets God of War Ragnarök in Upcoming Steam Action Game Hit",
+        "url": "https://www.polygon.com/tides-of-annihilation-preview-gamescom-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Xbox Game Pass’ Newest Addition Is a Near-Perfect Couch Co-Op Game",
-        "url": "https://www.polygon.com/escape-academy-2-back-2-school-impressions/",
+        "title": "Sony Pushes PS5 Owners To Trade In Consoles Amid Unprecedented Price Hikes",
+        "url": "https://www.polygon.com/ps5-trade-in-sony-offer-how-much-pro-digital-model-refurbished-used/",
         "source": "Polygon"
       },
       {
-        "title": "Fire Emblem Fortune’s Weave Leak Reveals New Characters, Including a Shocking Pick",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-leaks-upcoming-characters/",
+        "title": "For GTA 6, Xbox Put an Xbox Series X in an Alligator",
+        "url": "https://www.polygon.com/xbox-alligator-console-giveaway-november-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Lego Reveals First Official Look at Huge $450 Godzilla Set",
-        "url": "https://www.polygon.com/lego-godzilla-set-images-release-date-price/",
+        "title": "'Overwatch’s New Mythic Skin Shows Blizzard Is Finally Shaking Things Up",
+        "url": "https://www.polygon.com/overwatch-mid-season-update-stellar-blade-roadhog-mythic/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "Arnis turns any place on Earth into a Minecraft world",
+        "url": "https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "Game Off 2026: The theme is SHIFT",
         "url": "https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift/",
@@ -324,11 +353,6 @@
       {
         "title": "How 3 Java Champions are using GitHub Copilot for increased productivity",
         "url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "How to continue a GitHub Copilot app session in VS Code",
-        "url": "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/",
         "source": "GitHub Blog"
       }
     ]
