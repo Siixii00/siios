@@ -1,179 +1,197 @@
 {
   "metadata": {
-    "last_updated": "2026-11-04T08:51:48.927016",
-    "total_items": 62
+    "last_updated": "2026-11-04T16:54:54.614011",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
-        "title": "Jelly Sheet",
-        "url": "https://mrdoob.github.io/codevember-2026/01/",
+        "title": "AI is forcing us to pay off 40 years of technical debt",
+        "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
         "source": "Hacker News",
-        "score": 216
+        "score": 591
       },
       {
-        "title": "C++26 Disapproved",
-        "url": "https://andreasfertig.com/blog/2026/11/cpp26-dis-failed-how-does-cpp-survive/",
+        "title": "Guerrilla Bike Lanes: San Francisco Makes Illicit Infrastructure Permanent (2016)",
+        "url": "https://99percentinvisible.org/article/guerrilla-bike-lanes-san-francisco-makes-illicit-infrastructure-permanent/",
         "source": "Hacker News",
-        "score": 272
+        "score": 86
       },
       {
-        "title": "Jailbreaking my car's navigation system just so I can change the time",
-        "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
+        "title": "Nvidia RTX Spark encrypted firmware slows inference speed to 35% on Linux",
+        "url": "https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop",
         "source": "Hacker News",
-        "score": 786
+        "score": 413
       },
       {
-        "title": "Stringman, an $800 open-source room scale gripper robot",
-        "url": "https://neufangled.com/",
+        "title": "Evergreen: A Provably Safe Systems Language",
+        "url": "https://evergreenlang.net",
         "source": "Hacker News",
-        "score": 571
+        "score": 34
       },
       {
-        "title": "The Internals of PostgreSQL",
-        "url": "https://www.interdb.jp/pg/index.html",
+        "title": "North Korean fake job interview led to $6.3B Binance heist",
+        "url": "https://www.theregister.com/security/2026/11/03/north-korean-fake-job-interview-led-to-63b-binance-heist/5307398",
         "source": "Hacker News",
-        "score": 260
+        "score": 270
       },
       {
-        "title": "The lost malloc()",
-        "url": "https://napcakes.nekoweb.org/posts/malloc/",
+        "title": "Verification Is Not Knowledge: Science needs more than answers",
+        "url": "https://blog.cosmos-institute.org/p/verification-is-not-knowledge",
+        "source": "Hacker News",
+        "score": 169
+      },
+      {
+        "title": "Incident with Pull Requests, Git Operations and Issues",
+        "url": "https://www.githubstatus.com/incidents/smtdswd1h2w4",
+        "source": "Hacker News",
+        "score": 197
+      },
+      {
+        "title": "AMD expects to outsell Intel in Q4 for the first time in history",
+        "url": "https://www.tomshardware.com/pc-components/cpus/amd-expects-to-outsell-intel-in-q4-for-the-first-time-in-history-usd17b-guidance-would-exceed-intels-projections",
+        "source": "Hacker News",
+        "score": 76
+      },
+      {
+        "title": "Letting users trust their own MCP clients, without opening a phishing hole",
+        "url": "https://streamvessel.com/blog/mcp-trusted-redirect-uris",
         "source": "Hacker News",
         "score": 15
       },
       {
-        "title": "Show HN: Uncracked City, detective game where you question LLM suspects that lie",
-        "url": "https://uncracked.city",
+        "title": "Tell HN: Gemini trains on chat history, even for subscribers (personal accounts)",
+        "url": "https://news.ycombinator.com/item?id=50363461",
         "source": "Hacker News",
-        "score": 50
+        "score": 412
       },
       {
-        "title": "Distinct cellular and genetic differences in colorectal cancer in young patients",
-        "url": "https://www.dana-farber.org/newsroom/news-releases/2026/study-reveals-distinct-cellular-and-genetic-differences-in-colorectal-cancer-in-younger-patients",
+        "title": "Adding Window Functions to a Spreadsheet",
+        "url": "https://www.getgrist.com/blog/running-totals-you-dont-have-to-chase/",
         "source": "Hacker News",
-        "score": 65
+        "score": 17
       },
       {
-        "title": "Giant canyon on Mars is still tectonically active",
-        "url": "https://lamont.columbia.edu/news/giant-canyon-mars-still-tectonically-active-today",
+        "title": "Kimi K3.1 Pro model weights are out",
+        "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
         "source": "Hacker News",
-        "score": 77
+        "score": 53
       },
       {
-        "title": "Show HN: HackerTV – HN's most-recommended Youtube videos as 24/7 TV channels",
-        "url": "https://hackertv.org",
+        "title": "Show HN: I built a tool that prices a prebuilt PC part by part",
+        "url": "https://pcdealcheck.com/",
         "source": "Hacker News",
-        "score": 318
+        "score": 12
       },
       {
-        "title": "Arrows to arrows, categories to queries (2025)",
-        "url": "https://reasonablypolymorphic.com/blog/arrows-to-arrows/",
+        "title": "Jelly Sheet",
+        "url": "https://mrdoob.github.io/codevember-2026/01/",
         "source": "Hacker News",
-        "score": 43
+        "score": 379
       },
       {
-        "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
-        "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
+        "title": "Show HN: Codemap – one-page interactive map of any Go repository",
+        "url": "https://github.com/peterretief/codemap",
         "source": "Hacker News",
-        "score": 464
-      },
-      {
-        "title": "Japan's Jimi 'Mundane' Halloween Costumes of 2026",
-        "url": "https://spoon-tamago.com/japan-jimi-mundane-halloween-costumes-2026/",
-        "source": "Hacker News",
-        "score": 186
-      },
-      {
-        "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
-        "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
-        "source": "Hacker News",
-        "score": 607
-      },
-      {
-        "title": "Safari introduces Adaptive Dark Mode in 27.3",
-        "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
-        "source": "Hacker News",
-        "score": 419
+        "score": 20
       }
     ],
     "ai": [
       {
-        "title": "Jailbreaking my car's navigation system just so I can change the time",
-        "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
+        "title": "AI is forcing us to pay off 40 years of technical debt",
+        "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
         "source": "Hacker News AI",
-        "score": 786
+        "score": 591
+      },
+      {
+        "title": "Tell HN: Gemini trains on chat history, even for subscribers (personal accounts)",
+        "url": "https://news.ycombinator.com/item?id=50363461",
+        "source": "Hacker News AI",
+        "score": 412
+      },
+      {
+        "title": "YC's Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
+        "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
+        "source": "Hacker News AI",
+        "score": 39
+      },
+      {
+        "title": "'It's just vape, nail, charity shops': Can anything save UK high street?",
+        "url": "https://www.theguardian.com/business/2026/nov/04/what-can-save-the-british-high-street-rotherham",
+        "source": "Hacker News AI",
+        "score": 39
+      },
+      {
+        "title": "Pierre Computer is being acquired by OpenAI",
+        "url": "https://twitter.com/pierrecomputer/status/2117999036175188183",
+        "source": "Hacker News AI",
+        "score": 34
       },
       {
         "title": "Show HN: Uncracked City, detective game where you question LLM suspects that lie",
         "url": "https://uncracked.city",
         "source": "Hacker News AI",
-        "score": 50
+        "score": 110
       },
       {
-        "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
-        "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
+        "title": "Geoffrey Hinton: it might turn out we were better off without AI",
+        "url": "https://www.theguardian.com/uk-news/2026/nov/03/ai-godfather-geoffrey-hinton-better-off-without-ai",
         "source": "Hacker News AI",
-        "score": 464
+        "score": 264
       },
       {
-        "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
-        "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+        "title": "Jaron Lanier on parallels between AI and social media",
+        "url": "https://www.youtube.com/watch?v=WxaRn8kX2eI",
         "source": "Hacker News AI",
-        "score": 1247
+        "score": 36
       },
       {
         "title": "How I use AI (Oct 2026)",
         "url": "https://ben.stolovitz.com/posts/how-use-ai-oct-2026/",
         "source": "Hacker News AI",
-        "score": 165
+        "score": 236
       },
       {
-        "title": "We're training a Figma-fluent editing model",
-        "url": "https://www.figma.com/blog/training-a-figma-fluent-editing-model/",
+        "title": "Jailbreaking my car's navigation system just so I can change the time",
+        "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
         "source": "Hacker News AI",
-        "score": 115
+        "score": 909
+      },
+      {
+        "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+        "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+        "source": "Hacker News AI",
+        "score": 1439
       },
       {
         "title": "There is no posttraining data commons",
         "url": "https://openathena.ai/blog/there-is-no-posttraining-data-commons/",
         "source": "Hacker News AI",
-        "score": 67
+        "score": 109
       },
       {
-        "title": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
-        "url": "https://arxiv.org/abs/2605.29713",
+        "title": "We're training a Figma-fluent editing model",
+        "url": "https://www.figma.com/blog/training-a-figma-fluent-editing-model/",
         "source": "Hacker News AI",
-        "score": 331
+        "score": 141
       },
       {
-        "title": "Show HN: Kairos – Open-source risk and fraud decisioning platform",
-        "url": "https://github.com/finic-ai/kairos",
+        "title": "GDPx: Measuring Frontier Model Capabilities Across the Most Valuable Domains",
+        "url": "https://newsletter.semianalysis.com/p/gdpx-measuring-frontier-model-capabilities",
         "source": "Hacker News AI",
-        "score": 91
+        "score": 4
       },
       {
-        "title": "AI stocks slide as Texas governor result raises data center risks",
-        "url": "https://www.cnbc.com/2026/11/04/ai-stocks-texas-governor-data-centers.html",
+        "title": "AI data centers comprehensively defeated at US midterm elections",
+        "url": "https://www.tomshardware.com/tech-industry/data-centers/ai-data-centers-comprehensively-defeated-at-us-midterm-elections-45-measures-put-on-the-ballot-as-americans-overwhelmingly-vote-against-developments",
         "source": "Hacker News AI",
-        "score": 17
-      },
-      {
-        "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
-        "url": "https://news.ycombinator.com/item?id=50352757",
-        "source": "Hacker News AI",
-        "score": 475
-      },
-      {
-        "title": "USDB: Scaling Storage for Next-Generation Recommender Systems at ByteDance",
-        "url": "https://arxiv.org/abs/2611.02618",
-        "source": "Hacker News AI",
-        "score": 47
+        "score": 6
       }
     ],
     "news": [
       {
-        "title": "South Carolina elects Democratic senator for first time in almost three decades",
-        "url": "https://www.bbc.co.uk/news/articles/cjy56z440nl9o?at_medium=RSS&at_campaign=rss",
+        "title": "'This is a disaster': Angry Republicans blame Trump for midterms defeat",
+        "url": "https://www.bbc.co.uk/news/articles/c6x29rr8djy3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -182,139 +200,139 @@
         "source": "BBC World"
       },
       {
-        "title": "Florida Republicans fend off Democrats as state elects first black governor",
-        "url": "https://www.bbc.co.uk/news/articles/c9146d88pl32o?at_medium=RSS&at_campaign=rss",
+        "title": "Left-wing Democrat Abdul El-Sayed wins in Michigan to become first Muslim senator",
+        "url": "https://www.bbc.co.uk/news/articles/c893z55pxrewo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Israel's president begins consultations with parties after election deadlock",
+        "url": "https://www.bbc.co.uk/news/articles/c6z98z5z91ppo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Zelensky gives Melania Trump Ukraine's highest award after Oleshky ceasefire",
+        "url": "https://www.bbc.co.uk/news/articles/cm87zvpzwq0no?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Iran's chief negotiator says Americans voted 'no to war'",
+        "url": "https://www.bbc.co.uk/news/articles/c6d934npl9y8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Delhi air quality worsens ahead of Diwali as firework restrictions enter force",
         "url": "https://www.bbc.co.uk/news/articles/c699z8792n7ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "ANC under pressure to reverse South Africa decline",
-        "url": "https://www.bbc.co.uk/news/articles/cr4g1x6l77xyo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Killer who escaped Tennessee prison captured after week-long manhunt",
-        "url": "https://www.bbc.co.uk/news/articles/cmq8nj23v8qqo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Weapon or wine bottle? China disputes reports of artillery shell in Papua New Guinea",
-        "url": "https://www.bbc.co.uk/news/articles/cm0qkxzv3j99o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " Levi's stop-motion masterpiece is a lesson in Christmas advertising ",
-        "url": "https://www.creativebloq.com/news/levis-stop-motion-masterpiece-is-a-lesson-in-christmas-advertising",
+        "title": " The Legend of Zelda: Ocarina of Time reviews are in, and critics agree on one thing ",
+        "url": "https://www.creativebloq.com/news/the-legend-of-zelda-ocarina-of-time-switch-2-reviews-are-in-and-critics-agree-on-one-thing",
         "source": "Creative Bloq"
       },
       {
-        "title": " The Spotify AI remixing controversy is about more than just music ",
-        "url": "https://www.creativebloq.com/news/the-spotify-ai-remixing-controversy-is-about-more-than-just-music",
+        "title": " Canva's mass layoffs are a warning sign for creative tech ",
+        "url": "https://www.creativebloq.com/news/canvas-mass-layoffs-are-a-warning-sign-for-creative-tech",
         "source": "Creative Bloq"
       },
       {
-        "title": " These classic design fails are still making us laugh ",
-        "url": "https://www.creativebloq.com/features/these-classic-design-fails-are-still-making-us-laugh",
+        "title": " World of Warcraft: Forever is bringing Azeroth back to life, \"as it lives in our heads\", without losing what made it special ",
+        "url": "https://www.creativebloq.com/features/world-of-warcraft-forever-is-bringing-azeroth-back-to-life-as-it-lives-in-our-heads-without-losing-what-made-it-special",
         "source": "Creative Bloq"
       },
       {
-        "title": " Bambu Lab’s early Black Friday deals cut up to $300 off its best 3D printers ",
-        "url": "https://www.creativebloq.com/deals/bambu-labs-early-black-friday-deals-cut-up-to-usd300-off-its-best-3d-printers",
+        "title": " These 4 SAD lamp deals will brighten up your winter ",
+        "url": "https://www.creativebloq.com/deals/these-4-sad-lamp-deals-will-brighten-up-your-winter",
         "source": "Creative Bloq"
       },
       {
-        "title": " Alexander Skarsgård has made wicker this season's must-have interior design trend – here's how to get the look for less ",
-        "url": "https://www.creativebloq.com/news/alexander-skarsgard-has-made-wicker-this-seasons-must-have-interior-design-trend-heres-how-to-get-the-look-for-less",
+        "title": " Xbox built a working Series X inside an alligator for GTA 6 ",
+        "url": "https://www.creativebloq.com/news/xbox-built-a-working-series-x-inside-an-alligator-for-gta-6",
         "source": "Creative Bloq"
       },
       {
-        "title": " This $580-off Black Friday laptop deal is great for content creators and artists as well as gamers ",
-        "url": "https://www.creativebloq.com/deals/this-usd580-off-black-friday-laptop-deal-is-great-for-content-creators-and-artists-as-well-as-gamers",
+        "title": " 'Puddles' is the gorgeous British Airways poster series I needed on this grey, wintery day ",
+        "url": "https://www.creativebloq.com/news/puddles-is-the-gorgeous-british-airways-poster-campaign-that-will-make-you-book-a-holiday-right-now",
         "source": "Creative Bloq"
       },
       {
-        "title": " Is this the most controversial font since Comic Sans? ",
-        "url": "https://www.creativebloq.com/news/is-this-the-most-controversial-font-since-comic-sans",
+        "title": " This tabletop console brings family game night back, and it just got $60 cheaper ",
+        "url": "https://www.creativebloq.com/deals/this-tabletop-console-brings-family-game-night-back-and-it-just-got-usd60-cheaper",
         "source": "Creative Bloq"
       }
     ],
     "science": [
       {
+        "title": "SLAC scientists find conclusive proof of a mysterious third type of magnetism",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261104012256.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA is racing against time to save the Hubble Space Telescope",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261104012254.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "MIT scientists break a 20-year rule and unlock never-before-seen crystal structures",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261104012248.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A surprising discovery could help aging muscles repair themselves",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261104005226.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "AI helps Stanford scientists discover a “natural Ozempic” with a surprising advantage",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261104004909.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Permanent daylight saving time has a dark side, scientists warn",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261103003157.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "NASA smashed into an asteroid. Now Hera is closing in to see what happened",
         "url": "https://www.sciencedaily.com/releases/2026/11/261103003154.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA’s Voyager 1 is about to reach a historic one-light-day milestone",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261103003152.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A hidden star is plowing through Betelgeuse’s atmosphere, new evidence suggests",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261103003149.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists identify two overlooked skills that predict reading success",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261102202845.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A 50-year-old mystery of vanishing frogs reveals a hidden killer",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261102202838.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "The brain’s hidden fear mechanism may explain anxiety and PTSD",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261102202833.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Gene editing could replace a lifetime of medication, but there's a catch",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261102202829.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "GTA 5’s Unsolvable Mystery Broke Fans for Over a Decade, and GTA 6 Should Do It Again",
-        "url": "https://www.polygon.com/gta-5-mount-chiliad-mystery-unsolvable-broke-fans/",
+        "title": "Sonic the Hedgehog Officially Returns to Movie Theaters this Christmas",
+        "url": "https://www.polygon.com/sonic-the-hedgehog-2026-movie-angry-birds-3/",
         "source": "Polygon"
       },
       {
-        "title": "'It Follows' Star Officially Addresses Her Return to Another Iconic 2010s Thriller Franchise",
-        "url": "https://www.polygon.com/the-guest-2-maika-monroe-interview/",
+        "title": "Phantom Blade Zero’s Toughest Early Boss Gets Big Nerf in New Update",
+        "url": "https://www.polygon.com/phantom-blade-zero-early-game-boss-nerf-hua/",
         "source": "Polygon"
       },
       {
-        "title": "The Wendy’s JRPG Is a Searing Anti-Capitalist Screed About Humans Making Real Art",
-        "url": "https://www.polygon.com/wendyquest-81monkeys-interview-wendys-jrpg/",
+        "title": "Charlie Brown Is Getting a Brand-New Christmas Special, 60 Years After the Original",
+        "url": "https://www.polygon.com/snoopy-charlie-brown-apple-tv-new-christmas-special-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Xbox Game Pass November 2026 Lineup Announced",
-        "url": "https://www.polygon.com/xbox-game-pass-escape-academy-2-warhammer-survivors-november-2026/",
+        "title": "Prime Video Is Officially Rewriting the Most Important Moment in Lord of the Rings Canon",
+        "url": "https://www.polygon.com/rings-of-power-season-3-sauron-interview/",
         "source": "Polygon"
       },
       {
-        "title": "Ubisoft Makes Bid to Purchase Xbox Studio on the Brink of Closure",
-        "url": "https://www.polygon.com/ubisoft-xbox-arkane-studios-dishonored-blade/",
+        "title": "New Avengers: Doomsday Promo Shows Off Unexpected Team-up",
+        "url": "https://www.polygon.com/avengers-doomsday-gambit-herbie-dunkin-donuts/",
         "source": "Polygon"
       },
       {
-        "title": "Mass Effect Fans Are Trying to Make This N7 Day the Biggest One Ever",
-        "url": "https://www.polygon.com/mass-effect-n7-day-fans-play-together/",
+        "title": "Modern Warfare 4 season 1 release time in your time zone",
+        "url": "https://www.polygon.com/mw4-modern-warfare-4-season-1-release-time-dmz-warzone-est-pst/",
         "source": "Polygon"
       },
       {
-        "title": "DC Studios Has Officially Cast Its New Robin",
-        "url": "https://www.polygon.com/dc-studios-cast-robin-dynamic-duo-movie/",
+        "title": "Bethesda’s Big Elder Scrolls Tease Quietly Reveals New Xbox Strategy",
+        "url": "https://www.polygon.com/elder-scrolls-6-sentinel-reveal-xbox-bethesda-blizzard/",
         "source": "Polygon"
       }
     ],
