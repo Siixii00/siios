@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-11-03T21:33:43.583926",
-    "total_items": 62
+    "last_updated": "2026-11-04T01:57:00.401988",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
-        "title": "Jailbreaking my car's navigation system just so I can change the time",
-        "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
+        "title": "The Internals of PostgreSQL",
+        "url": "https://www.interdb.jp/pg/index.html",
         "source": "Hacker News",
-        "score": 477
+        "score": 112
       },
       {
         "title": "Stringman, an $800 open-source room scale gripper robot",
         "url": "https://neufangled.com/",
         "source": "Hacker News",
-        "score": 191
+        "score": 385
       },
       {
-        "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
-        "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+        "title": "Jailbreaking my car's navigation system just so I can change the time",
+        "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
         "source": "Hacker News",
-        "score": 364
+        "score": 617
       },
       {
-        "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
-        "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+        "title": "Safari introduces Adaptive Dark Mode in 27.3",
+        "url": "https://webkit.org/blog/18541/introducing-adaptive-dark-mode/",
         "source": "Hacker News",
-        "score": 791
-      },
-      {
-        "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
-        "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
-        "source": "Hacker News",
-        "score": 318
+        "score": 291
       },
       {
         "title": "Show HN: HackerTV – HN's most-recommended Youtube videos as 24/7 TV channels",
         "url": "https://hackertv.org",
         "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "Introduction to Programming in ATS",
-        "url": "https://ats-lang.sourceforge.net/DOCUMENT/INT2PROGINATS/HTML/book1.html",
-        "source": "Hacker News",
-        "score": 30
-      },
-      {
-        "title": "Preparing for the Flipper One Kickstarter and opening pre-orders",
-        "url": "https://flipper.net/pages/flipper-one",
-        "source": "Hacker News",
-        "score": 115
-      },
-      {
-        "title": "macOS 27 does not support CoreStorage volumes",
-        "url": "https://wadetregaskis.com/macos-27-golden-gate-does-not-actually-support-corestorage-or-hfs-volumes/",
-        "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "How McDonald's first got its start",
-        "url": "https://www.smithsonianmag.com/history/story-how-mcdonalds-first-got-its-start-180960931/",
-        "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "We're Training a Figma-Fluent Editing Model",
-        "url": "https://www.figma.com/blog/training-a-figma-fluent-editing-model/",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "I dumped Apple’s word list",
-        "url": "https://helgesver.re/articles/macos-vulgar-word-flags",
-        "source": "Hacker News",
-        "score": 99
-      },
-      {
-        "title": "Show HN: Kairos – Open-source risk and fraud decisioning platform",
-        "url": "https://github.com/finic-ai/kairos",
-        "source": "Hacker News",
-        "score": 9
+        "score": 173
       },
       {
         "title": "Japan's Jimi 'Mundane' Halloween Costumes of 2026",
         "url": "https://spoon-tamago.com/japan-jimi-mundane-halloween-costumes-2026/",
         "source": "Hacker News",
-        "score": 19
+        "score": 107
       },
       {
-        "title": "Ashby (YC W19) Is Hiring EMs",
-        "url": "https://www.ashbyhq.com/careers?ashby_jid=695b1ce6-c375-4fad-94ef-61b50a3fbd28&utm_source=hn",
+        "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+        "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
         "source": "Hacker News",
-        "score": 1
+        "score": 492
+      },
+      {
+        "title": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
+        "url": "https://arxiv.org/abs/2605.29713",
+        "source": "Hacker News",
+        "score": 232
+      },
+      {
+        "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
+        "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
+        "source": "Hacker News",
+        "score": 379
+      },
+      {
+        "title": "Show HN: Kairos – Open-source risk and fraud decisioning platform",
+        "url": "https://github.com/finic-ai/kairos",
+        "source": "Hacker News",
+        "score": 61
+      },
+      {
+        "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+        "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+        "source": "Hacker News",
+        "score": 1027
+      },
+      {
+        "title": "There is no posttraining data commons",
+        "url": "https://openathena.ai/blog/there-is-no-posttraining-data-commons/",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "We're Training a Figma-Fluent Editing Model",
+        "url": "https://www.figma.com/blog/training-a-figma-fluent-editing-model/",
+        "source": "Hacker News",
+        "score": 71
+      },
+      {
+        "title": "Introduction to Programming in ATS",
+        "url": "https://ats-lang.sourceforge.net/DOCUMENT/INT2PROGINATS/HTML/book1.html",
+        "source": "Hacker News",
+        "score": 57
+      },
+      {
+        "title": "macOS 27 does not support CoreStorage volumes",
+        "url": "https://wadetregaskis.com/macos-27-golden-gate-does-not-actually-support-corestorage-or-hfs-volumes/",
+        "source": "Hacker News",
+        "score": 113
       }
     ],
     "ai": [
@@ -101,73 +101,79 @@
         "title": "Jailbreaking my car's navigation system just so I can change the time",
         "url": "https://blog.nns.ee/2026/11/02/renault-hack/",
         "source": "Hacker News AI",
-        "score": 477
+        "score": 617
       },
       {
-        "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
-        "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+        "title": "The Little Book of Generative AI Foundations: An Intuitive Mathematical Primer",
+        "url": "https://arxiv.org/abs/2605.29713",
         "source": "Hacker News AI",
-        "score": 791
+        "score": 232
       },
       {
         "title": "Fujifilm to boost tape production 5x as AI fuels archiving demand",
         "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
         "source": "Hacker News AI",
-        "score": 318
-      },
-      {
-        "title": "macOS 27 does not support CoreStorage volumes",
-        "url": "https://wadetregaskis.com/macos-27-golden-gate-does-not-actually-support-corestorage-or-hfs-volumes/",
-        "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "We're Training a Figma-Fluent Editing Model",
-        "url": "https://www.figma.com/blog/training-a-figma-fluent-editing-model/",
-        "source": "Hacker News AI",
-        "score": 22
+        "score": 379
       },
       {
         "title": "Show HN: Kairos – Open-source risk and fraud decisioning platform",
         "url": "https://github.com/finic-ai/kairos",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 61
       },
       {
-        "title": "USDB: Scaling Storage for Next-Generation Recommender Systems at ByteDance",
-        "url": "https://arxiv.org/abs/2611.02618",
+        "title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+        "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
         "source": "Hacker News AI",
-        "score": 34
+        "score": 1027
       },
       {
-        "title": "Google will turn off search for schools that reject AI",
-        "url": "https://www.nytimes.com/2026/11/03/us/google-search-schools-restrict-ai.html",
+        "title": "There is no posttraining data commons",
+        "url": "https://openathena.ai/blog/there-is-no-posttraining-data-commons/",
         "source": "Hacker News AI",
-        "score": 443
+        "score": 29
+      },
+      {
+        "title": "We're Training a Figma-Fluent Editing Model",
+        "url": "https://www.figma.com/blog/training-a-figma-fluent-editing-model/",
+        "source": "Hacker News AI",
+        "score": 71
+      },
+      {
+        "title": "macOS 27 does not support CoreStorage volumes",
+        "url": "https://wadetregaskis.com/macos-27-golden-gate-does-not-actually-support-corestorage-or-hfs-volumes/",
+        "source": "Hacker News AI",
+        "score": 113
+      },
+      {
+        "title": "US tech giants' hidden AI debt swells 90% to $3.2T in 6 months",
+        "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/us-tech-giants-hidden-ai-debt-swells-90-to-3.2tn-in-6-months",
+        "source": "Hacker News AI",
+        "score": 240
       },
       {
         "title": "How I use AI (Oct 2026)",
         "url": "https://ben.stolovitz.com/posts/how-use-ai-oct-2026/",
         "source": "Hacker News AI",
-        "score": 32
+        "score": 85
+      },
+      {
+        "title": "USDB: Scaling Storage for Next-Generation Recommender Systems at ByteDance",
+        "url": "https://arxiv.org/abs/2611.02618",
+        "source": "Hacker News AI",
+        "score": 47
       },
       {
         "title": "OpenAI seems to be silently re-enabling model training on Codex chats",
         "url": "https://news.ycombinator.com/item?id=50352757",
         "source": "Hacker News AI",
-        "score": 389
+        "score": 434
       },
       {
-        "title": "Embedding boolean circuits in a neural network",
-        "url": "https://edwardbenson.com/2026/10/embedding-boolean-circuits-in-a-neural-network",
+        "title": "Google will turn off search for schools that reject AI",
+        "url": "https://www.nytimes.com/2026/11/03/us/google-search-schools-restrict-ai.html",
         "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "Show HN: Interactive notes on RLHF, attention, LoRA and LLM evals",
-        "url": "https://concepts.laxmena.com/",
-        "source": "Hacker News AI",
-        "score": 36
+        "score": 558
       }
     ],
     "news": [
@@ -187,8 +193,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Death toll rises in Ukraine after Russia attacks aid centre, hospice and hospital",
-        "url": "https://www.bbc.co.uk/news/articles/c65ynez5y599o?at_medium=RSS&at_campaign=rss",
+        "title": "NTSB says crucial plane parts found three miles from Florida crash site",
+        "url": "https://www.bbc.co.uk/news/articles/c9e8lk5dpj7no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -202,8 +208,8 @@
         "source": "BBC World"
       },
       {
-        "title": "US strikes Iranian island ahead of midterm elections",
-        "url": "https://www.bbc.co.uk/news/articles/cx240mrm3g8vo?at_medium=RSS&at_campaign=rss",
+        "title": "Death toll rises in Ukraine after Russia attacks aid centre, hospice and hospital",
+        "url": "https://www.bbc.co.uk/news/articles/c65ynez5y599o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -283,6 +289,31 @@
     ],
     "gaming": [
       {
+        "title": "'It Follows' Star Officially Addresses Her Return to Another Iconic 2010s Thriller Franchise",
+        "url": "https://www.polygon.com/the-guest-2-maika-monroe-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Wendy’s JRPG Is a Searing Anti-Capitalist Screed About Humans Making Real Art",
+        "url": "https://www.polygon.com/wendyquest-81monkeys-interview-wendys-jrpg/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Xbox Game Pass November 2026 Lineup Announced",
+        "url": "https://www.polygon.com/xbox-game-pass-escape-academy-2-warhammer-survivors-november-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Ubisoft Makes Bid to Purchase Xbox Studio on the Brink of Closure",
+        "url": "https://www.polygon.com/ubisoft-xbox-arkane-studios-dishonored-blade/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Mass Effect Fans Are Trying to Make This N7 Day the Biggest One Ever",
+        "url": "https://www.polygon.com/mass-effect-n7-day-fans-play-together/",
+        "source": "Polygon"
+      },
+      {
         "title": "DC Studios Has Officially Cast Its New Robin",
         "url": "https://www.polygon.com/dc-studios-cast-robin-dynamic-duo-movie/",
         "source": "Polygon"
@@ -290,31 +321,6 @@
       {
         "title": "WoW: Forever's Beta Was Pure Magic. No One Knows What Happens Next",
         "url": "https://www.polygon.com/wow-world-of-warcraft-forever-beta-review/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Magic: The Gathering Is Reprinting a Powerful $30 Sword With Perfect Pixel Art",
-        "url": "https://www.polygon.com/magic-the-gathering-sword-truth-justice-secret-lair-extra-life-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Phantom Blade Zero Meets God of War Ragnarök in Upcoming Steam Action Game Hit",
-        "url": "https://www.polygon.com/tides-of-annihilation-preview-gamescom-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Sony Pushes PS5 Owners To Trade In Consoles Amid Unprecedented Price Hikes",
-        "url": "https://www.polygon.com/ps5-trade-in-sony-offer-how-much-pro-digital-model-refurbished-used/",
-        "source": "Polygon"
-      },
-      {
-        "title": "For GTA 6, Xbox Put an Xbox Series X in an Alligator",
-        "url": "https://www.polygon.com/xbox-alligator-console-giveaway-november-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Overwatch’s New Mythic Skin Shows Blizzard Is Finally Shaking Things Up",
-        "url": "https://www.polygon.com/overwatch-mid-season-update-stellar-blade-roadhog-mythic/",
         "source": "Polygon"
       }
     ],
