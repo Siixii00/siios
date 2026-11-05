@@ -1,246 +1,252 @@
 {
   "metadata": {
-    "last_updated": "2026-11-05T11:56:38.546876",
-    "total_items": 62
+    "last_updated": "2026-11-05T19:44:19.470841",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
-        "title": "Baidu released ERNIE 5.5 Flash Base",
-        "url": "https://ernie.baidu.com/release/ernie-5-5-flash-base/",
+        "title": "sshole",
+        "url": "https://sshhole.com",
         "source": "Hacker News",
-        "score": 55
+        "score": 1779
       },
       {
-        "title": "Residential proxies detected on White House network",
-        "url": "https://layer3intel.com/blog/residential-proxies-white-house-network",
+        "title": "Alpine Linux Security Advisory: OpenSSH-server password authentication bypass",
+        "url": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
         "source": "Hacker News",
-        "score": 1106
+        "score": 410
       },
       {
-        "title": "Lemmings CSS Animation",
-        "url": "https://markblah.github.io/lemmings/",
+        "title": "Motorola Signature 27 with GrapheneOS support",
+        "url": "https://motorolanews.com/motorola-signature-27-2/",
         "source": "Hacker News",
-        "score": 222
+        "score": 242
       },
       {
-        "title": "Awesome repositories are no longer awesome",
-        "url": "https://erikgahner.github.io/posts/2026/awesome-repositories-are-no-longer-awesome/",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "A thousand fewer paths to root",
-        "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
-        "source": "Hacker News",
-        "score": 372
-      },
-      {
-        "title": "Images 2.6",
-        "url": "https://openai.com/index/introducing-images-2-6/",
-        "source": "Hacker News",
-        "score": 320
-      },
-      {
-        "title": "Replacing homepage demo media with looping HTML and CSS",
-        "url": "https://stepshots.com/css-feature-clips",
-        "source": "Hacker News",
-        "score": 14
-      },
-      {
-        "title": "Partial Operator Precedence",
-        "url": "https://ziglang.org/devlog/2026/#2026-10-24",
-        "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "Kimi K3.1 Pro model weights are out",
-        "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
-        "source": "Hacker News",
-        "score": 551
-      },
-      {
-        "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
-        "url": "https://www.ricursive.com/ripple",
-        "source": "Hacker News",
-        "score": 304
-      },
-      {
-        "title": "TextEdit vs. Pages",
-        "url": "https://leancrew.com/all-this/2026/10/textedit-vs-pages/",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "Altera Announces Agilex 2X, a Complete FPGA and SoC Portfolio",
-        "url": "https://www.altera.com/newsroom/agilex-2x",
-        "source": "Hacker News",
-        "score": 38
-      },
-      {
-        "title": "A new Go API for JSON",
-        "url": "https://go.dev/blog/jsonv2",
-        "source": "Hacker News",
-        "score": 331
-      },
-      {
-        "title": "Moment of Ruby: An Argument for Nothing",
-        "url": "https://www.aha.io/engineering/articles/moment-of-ruby-an-argument-for-nothing",
+        "title": "How to Lie With Statistics (1954) [pdf]",
+        "url": "https://www.horace.org/blog/wp-content/uploads/2012/05/How-to-Lie-With-Statistics-1954-Huff.pdf",
         "source": "Hacker News",
         "score": 26
       },
       {
-        "title": "Spreading Liquid with Three.js",
-        "url": "https://mofu-dev.com/en/blog/fluid-foundation/",
+        "title": "Window Sweaters",
+        "url": "https://github.com/saragordic/window-sweaters",
         "source": "Hacker News",
-        "score": 124
+        "score": 89
+      },
+      {
+        "title": "The Lisp curse, now coming to your ecosystem",
+        "url": "https://javahippie.net/programming/llm/2026/03/05/the-lisp-curse-coming-to-your-ecosystem.html",
+        "source": "Hacker News",
+        "score": 134
+      },
+      {
+        "title": "September in Servo: <progress>, rounded rectangles, and more",
+        "url": "https://servo.org/blog/2026/11/05/september-in-servo/",
+        "source": "Hacker News",
+        "score": 133
+      },
+      {
+        "title": "Launch HN: Rivet (YC W23) – Scale and Orchestrate Agents on S3",
+        "url": "https://github.com/rivet-dev/rivet",
+        "source": "Hacker News",
+        "score": 32
+      },
+      {
+        "title": "My psychophysics as a bilateral cochlear implant user",
+        "url": "https://claude.ai/artifact/L8qsMc3SorytGW3LA81nYf",
+        "source": "Hacker News",
+        "score": 107
+      },
+      {
+        "title": "I wish tech companies knew more about me",
+        "url": "https://rakhim.exotext.com/i-wish-tech-companies-knew-more-about-me",
+        "source": "Hacker News",
+        "score": 163
+      },
+      {
+        "title": "Bild AI (YC W25) Is Hiring Founding Product Engineers",
+        "url": "https://www.ycombinator.com/companies/bild-ai/jobs",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "Download your favourite YouTube videos",
+        "url": "https://criminallyvulgar.dev/you-should-absolutely-download-your-favourite-youtube-videos/",
+        "source": "Hacker News",
+        "score": 194
+      },
+      {
+        "title": "OpenSSH 10.6p2 Critical workaround for alpine without PAM",
+        "url": "https://www.openssh.org/releasenotes.html#10.6p2",
+        "source": "Hacker News",
+        "score": 199
+      },
+      {
+        "title": "The Stacks Project, Formalized in Lean",
+        "url": "https://axiommath.ai/research/the-stacks-project-formalized/",
+        "source": "Hacker News",
+        "score": 40
+      },
+      {
+        "title": "Obscure audio codec is a perfect fit for the N64",
+        "url": "https://phoboslab.org/log/2026/11/n64-ulc-codec",
+        "source": "Hacker News",
+        "score": 139
       }
     ],
     "ai": [
       {
-        "title": "Baidu released ERNIE 5.5 Flash Base",
-        "url": "https://ernie.baidu.com/release/ernie-5-5-flash-base/",
+        "title": "Bild AI (YC W25) Is Hiring Founding Product Engineers",
+        "url": "https://www.ycombinator.com/companies/bild-ai/jobs",
         "source": "Hacker News AI",
-        "score": 55
+        "score": 1
       },
       {
-        "title": "Ask HN: What's your current AI agentic setup?",
-        "url": "https://news.ycombinator.com/item?id=50366117",
+        "title": "Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights)",
+        "url": "https://www.linum.ai/field-notes/pjit-21k",
         "source": "Hacker News AI",
-        "score": 362
+        "score": 69
       },
       {
-        "title": "AI is forcing us to pay off 40 years of technical debt",
-        "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+        "title": "MCP Explained",
+        "url": "https://mcp-explained.com/",
         "source": "Hacker News AI",
-        "score": 1206
-      },
-      {
-        "title": "Future Maintenance of Mbed TLS",
-        "url": "https://lists.trustedfirmware.org/archives/list/mbed-tls@lists.trustedfirmware.org/thread/YPIGCB7WN6GCHOGEGKOJXUYAP7OK527W/",
-        "source": "Hacker News AI",
-        "score": 53
-      },
-      {
-        "title": "Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s",
-        "url": "https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra",
-        "source": "Hacker News AI",
-        "score": 158
-      },
-      {
-        "title": "Launch HN: Kino AI (YC S23) – AI media manager and video editor",
-        "url": "https://news.ycombinator.com/item?id=50368804",
-        "source": "Hacker News AI",
-        "score": 89
-      },
-      {
-        "title": "OpenAI to acquire Pierre Computer Company",
-        "url": "https://openai.com/index/openai-to-acquire-pierre/",
-        "source": "Hacker News AI",
-        "score": 247
-      },
-      {
-        "title": "'It's just vape, nail, charity shops': Can anything save UK high street?",
-        "url": "https://www.theguardian.com/business/2026/nov/04/what-can-save-the-british-high-street-rotherham",
-        "source": "Hacker News AI",
-        "score": 134
-      },
-      {
-        "title": "Basically no one is using AI agents for their DoorDash orders",
-        "url": "https://arstechnica.com/ai/2026/10/doordash-says-outside-ai-agents-have-only-led-to-hundreds-of-orders-so-far/",
-        "source": "Hacker News AI",
-        "score": 144
-      },
-      {
-        "title": "Tell HN: Gemini trains on chat history, even for subscribers (personal accounts)",
-        "url": "https://news.ycombinator.com/item?id=50363461",
-        "source": "Hacker News AI",
-        "score": 673
-      },
-      {
-        "title": "YC's Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
-        "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
-        "source": "Hacker News AI",
-        "score": 87
+        "score": 176
       },
       {
         "title": "GPT-6 Astra covertly underperforms on safety research",
         "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 213
+      },
+      {
+        "title": "Baidu released ERNIE 5.5 Flash Base",
+        "url": "https://ernie.baidu.com/release/ernie-5-5-flash-base/",
+        "source": "Hacker News AI",
+        "score": 150
+      },
+      {
+        "title": "Nasdaq Sinks 5% as Investors Retreat from AI Trade After Election",
+        "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-05-2026",
+        "source": "Hacker News AI",
+        "score": 117
+      },
+      {
+        "title": "An updated Model Spec for more capable and beneficial AI",
+        "url": "https://openai.com/index/updated-model-spec/",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+        "url": "https://openai.com/index/introducing-gpt-6-cyber/",
+        "source": "Hacker News AI",
+        "score": 32
+      },
+      {
+        "title": "Offline survival assistant – local LLM and Kiwix, runs from a USB stick",
+        "url": "https://github.com/sdalberto/ia-da-sobrevivencia/blob/main/README.en.md",
+        "source": "Hacker News AI",
+        "score": 14
+      },
+      {
+        "title": "AI is forcing us to pay off 40 years of technical debt",
+        "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+        "source": "Hacker News AI",
+        "score": 1248
+      },
+      {
+        "title": "Paraguay bank collapses with half of population's savings",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/11/5/paraguay-bank-collapses-with-half-of-populations-savings",
+        "source": "Hacker News AI",
+        "score": 46
+      },
+      {
+        "title": "GPT-6 Cyber",
+        "url": "https://twitter.com/OpenAI/status/2118390190246879554",
+        "source": "Hacker News AI",
+        "score": 16
+      },
+      {
+        "title": "80k Hops per Second Measurement Confirm Starlink Up/Downlink Channel Pairing",
+        "url": "https://sdr-x.github.io/starlink-ul-dl-pair-80k-hop-ad9361/",
+        "source": "Hacker News AI",
+        "score": 8
       }
     ],
     "news": [
       {
-        "title": "Vance walks Trump tightrope with scathing election critique blaming Iran war",
-        "url": "https://www.bbc.co.uk/news/articles/crz98zqkz7z0o?at_medium=RSS&at_campaign=rss",
+        "title": "Hoax bomb threats target European airlines and airports for second time in a week",
+        "url": "https://www.bbc.co.uk/news/articles/cmpqg08nz3pqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "What Democrats can and can't do with their new power after taking Congress",
-        "url": "https://www.bbc.co.uk/news/articles/cq1kdgnn2xdeo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "France gears up for strikes and protests as unions promise national mobilisation",
+        "title": "French protests see numbers surge as unions join strikes over high cost of living",
         "url": "https://www.bbc.co.uk/news/articles/ckx2qzv835pgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ronaldo retires from Portugal duty",
-        "url": "https://www.bbc.co.uk/sport/football/articles/cme8rxx2e1w9o?at_medium=RSS&at_campaign=rss",
+        "title": "Paraguay President Santiago Peña resigns after bank collapse",
+        "url": "https://www.bbc.co.uk/news/articles/c6p9g39vln3yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Joshua Wong, face of Hong Kong's pro-democracy protests, jailed for 10 years",
-        "url": "https://www.bbc.co.uk/news/articles/cwp9g3rlp8jlo?at_medium=RSS&at_campaign=rss",
+        "title": "Eight killed in series of shootings in western Turkey",
+        "url": "https://www.bbc.co.uk/news/articles/cvj6jj21pd2ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Typhoons batter East Asia as El Niño makes Pacific 'burn with fever'",
-        "url": "https://www.bbc.co.uk/news/articles/cw33kgj7nkemo?at_medium=RSS&at_campaign=rss",
+        "title": "Melania Trump calls for lasting Ukraine truce as she hosts Russian and Ukrainian officials",
+        "url": "https://www.bbc.co.uk/news/articles/c9p8g085mz07o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Pope Leo hosts Bob Dylan at official residence in Rome ",
-        "url": "https://www.bbc.co.uk/news/articles/cm0e035n13ylo?at_medium=RSS&at_campaign=rss",
+        "title": "The Pitt and ER are similar enough for lawsuit to proceed, judge rules",
+        "url": "https://www.bbc.co.uk/news/articles/cq4g1r42jx00o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Russell Brand is being investigated over two new rape complaints, police say",
+        "url": "https://www.bbc.co.uk/news/articles/c6vgx8q09gg4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " Cassette Beasts 2002 is Pokemon in a Zone 6 suburb, with no Paddington and not a wizard in sight ",
-        "url": "https://www.creativebloq.com/features/cassette-beasts-2002-is-pokemon-in-a-zone-6-suburb-with-no-paddington-and-not-a-wizard-in-sight",
+        "title": " Some of the best-rated markers for art are reduced by up to 26% for Black Friday ",
+        "url": "https://www.creativebloq.com/deals/some-of-the-best-rated-markers-for-art-are-reduced-by-up-to-26-percent-for-black-friday",
         "source": "Creative Bloq"
       },
       {
-        "title": " 40 years after Andy Warhol and Keith Haring, Montreux Jazz Festival's new poster is a dream creative double act ",
-        "url": "https://www.creativebloq.com/news/40-years-after-andy-warhol-and-keith-haring-montreux-jazz-festivals-new-poster-is-a-dream-creative-double-act",
+        "title": " “If we loved him, we had a movie”: the directors who had to make the Cat in the Hat likeable ",
+        "url": "https://www.creativebloq.com/news/the-cat-in-the-hat-2026-warner-bros-animation-3d-look",
         "source": "Creative Bloq"
       },
       {
-        "title": " The John Lewis Christmas advert is getting a mauling ",
-        "url": "https://www.creativebloq.com/news/the-john-lewis-christmas-advert-is-getting-a-mauling",
+        "title": " Dior's Christmas ad is the opposite to Prada's classy animation ",
+        "url": "https://www.creativebloq.com/news/diors-christmas-ad-is-the-opposite-to-pradas-classy-animation",
         "source": "Creative Bloq"
       },
       {
-        "title": " Wake up and smell the Black Friday coffee machine deals – there's up to £250 off ",
-        "url": "https://www.creativebloq.com/deals/wake-up-and-smell-these-black-friday-coffee-machine-deals-theres-up-to-gbp250-off",
+        "title": " Nvidia DLSS 5 AI in Hogwarts Legacy is the opposite of what everyone expected ",
+        "url": "https://www.creativebloq.com/news/nvidia-dlss-5-in-hogwarts-legacy-has-sparked-a-whole-different-controversy",
         "source": "Creative Bloq"
       },
       {
-        "title": " This super-comfy higher-end budget ergonomic office chair has $90 off for Black Friday ",
-        "url": "https://www.creativebloq.com/deals/this-super-comfy-higher-end-budget-ergonomic-office-chair-has-usd70-off-for-black-friday",
+        "title": " Get 87% off Hostinger web builder with this exclusive Black Friday code ",
+        "url": "https://www.creativebloq.com/deals/get-87-percent-off-hostinger-web-builder-with-this-exclusive-black-friday-code",
         "source": "Creative Bloq"
       },
       {
-        "title": " The Legend of Zelda: Ocarina of Time reviews are in, and critics agree on one thing ",
-        "url": "https://www.creativebloq.com/news/the-legend-of-zelda-ocarina-of-time-switch-2-reviews-are-in-and-critics-agree-on-one-thing",
+        "title": " MacBook Pro PROLED hands-on review plus all the LIVE reactions: The best feature ISN'T the touchscreen ",
+        "url": "https://www.creativebloq.com/live/news/macbook-pro-proled-xdr-first-impressions",
         "source": "Creative Bloq"
       },
       {
-        "title": " Canva's mass layoffs are a warning sign for creative tech ",
-        "url": "https://www.creativebloq.com/news/canvas-mass-layoffs-are-a-warning-sign-for-creative-tech",
+        "title": " Gillette finally confirms its logo hides a hidden design ",
+        "url": "https://www.creativebloq.com/news/gillette-finally-confirms-its-logo-hides-a-hidden-design",
         "source": "Creative Bloq"
       }
     ],
@@ -266,60 +272,65 @@
         "source": "Science Daily"
       },
       {
+        "title": "Goodbye, cavities? Scientists create gel that could regrow tooth enamel",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261104005059.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "AI helps Stanford scientists discover a “natural Ozempic” with a surprising advantage",
         "url": "https://www.sciencedaily.com/releases/2026/11/261104004909.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Permanent daylight saving time has a dark side, scientists warn",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261103003157.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA smashed into an asteroid. Now Hera is closing in to see what happened",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261103003154.htm",
+        "title": "Scientists discover that a clogged filter could revolutionize oil refining",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261103003207.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "The Legend of Zelda: Ocarina of Time’s Changes to the Infamous Water Temple Are Actually Brilliant",
-        "url": "https://www.polygon.com/the-legend-of-zelda-ocarina-of-time-remake-water-temple-change/",
+        "title": "Pokémon's 30th Anniversary UPC Release: Target vs. Best Buy",
+        "url": "https://www.polygon.com/pokemon-30th-anniversary-tcg-upc-target-best-buy-stock-locations-release-day/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon Pokopia Celebrates Fall with Apple-Themed Event",
-        "url": "https://www.polygon.com/pokemon-pokopia-apples-for-applin-event-announced/",
+        "title": "Rust Premium Officially Confirmed and It’s Not What Players Feared",
+        "url": "https://www.polygon.com/facepunch-rust-premium-announcement-november-update-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Star Wars Actor Officially Confirms the Hunt for Ben Solo Is Dead — and That's a Good Thing.",
-        "url": "https://www.polygon.com/star-wars-adam-driver-the-hunt-for-ben-solo-dead/",
+        "title": "Major Pokémon Center TCG Orders Delayed At The Last Minute",
+        "url": "https://www.polygon.com/pokemon-center-track-check-order-delta-reign-etb-delay-release-date/",
         "source": "Polygon"
       },
       {
-        "title": "Dragon Ball Composer Is Elected Texas Attorney General",
-        "url": "https://www.polygon.com/dragon-ball-composer-texas-attorney-general-nathan-johnson/",
+        "title": "D&D’s World of Warcraft Designer Hid a Personal Easter Egg in Plain Sight",
+        "url": "https://www.polygon.com/dnd-dungeons-dragons-world-warcraft-art-interview/",
         "source": "Polygon"
       },
       {
-        "title": "3 Near-Perfect Prime Video Series to Binge This Weekend (November 6 – 8)",
-        "url": "https://www.polygon.com/prime-video-series-binge-weekend-november-6-8/",
+        "title": "How to change the time of day in Zelda Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-change-time-day-night-how-to/",
         "source": "Polygon"
       },
       {
-        "title": "39 Years Later, Calvin And Hobbes' Best Quote On Grief Is Still a Heartbreaking Classic",
-        "url": "https://www.polygon.com/calvin-hobbes-grief-quote/",
+        "title": "'What!?': Ocarina of Time Producer Admits Even the Zelda Team Was Shocked At Art Changes",
+        "url": "https://www.polygon.com/eiji-aonuma-zelda-ocarina-of-time-remake-art-interview/",
         "source": "Polygon"
       },
       {
-        "title": "11 Years Later, Patrick Stewart's Near-Perfect Siege Thriller Is Officially Free on Streaming",
-        "url": "https://www.polygon.com/green-room-free-tubi-streaming-november-2026/",
+        "title": "Amazon Prime Makes 14 Games Free to Play in November, Including Madden NFL 27",
+        "url": "https://www.polygon.com/amazon-prime-free-games-luna-november-2026-madden-27/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "Accessibility statements now have a home on GitHub",
+        "url": "https://github.blog/open-source/maintainers/accessibility-statements-now-have-a-home-on-github/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "Arnis turns any place on Earth into a Minecraft world",
         "url": "https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/",
@@ -348,11 +359,6 @@
       {
         "title": "The bridge to agent-scale Git infrastructure",
         "url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "How 3 Java Champions are using GitHub Copilot for increased productivity",
-        "url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
         "source": "GitHub Blog"
       }
     ]
