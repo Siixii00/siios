@@ -1,221 +1,235 @@
 {
   "metadata": {
-    "last_updated": "2026-11-05T03:15:51.184157",
-    "total_items": 63
+    "last_updated": "2026-11-05T11:56:38.546876",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "Baidu released ERNIE 5.5 Flash Base",
+        "url": "https://ernie.baidu.com/release/ernie-5-5-flash-base/",
+        "source": "Hacker News",
+        "score": 55
+      },
+      {
         "title": "Residential proxies detected on White House network",
         "url": "https://layer3intel.com/blog/residential-proxies-white-house-network",
         "source": "Hacker News",
-        "score": 723
+        "score": 1106
       },
       {
-        "title": "Images 2.6",
-        "url": "https://openai.com/index/introducing-images-2-6/",
+        "title": "Lemmings CSS Animation",
+        "url": "https://markblah.github.io/lemmings/",
         "source": "Hacker News",
-        "score": 145
+        "score": 222
+      },
+      {
+        "title": "Awesome repositories are no longer awesome",
+        "url": "https://erikgahner.github.io/posts/2026/awesome-repositories-are-no-longer-awesome/",
+        "source": "Hacker News",
+        "score": 22
       },
       {
         "title": "A thousand fewer paths to root",
         "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
         "source": "Hacker News",
-        "score": 166
+        "score": 372
       },
       {
-        "title": "Starfall – Affordable, routine access to microgravity",
-        "url": "https://www.spacex.com/starfall",
+        "title": "Images 2.6",
+        "url": "https://openai.com/index/introducing-images-2-6/",
         "source": "Hacker News",
-        "score": 104
+        "score": 320
       },
       {
-        "title": "AI is forcing us to pay off 40 years of technical debt",
-        "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+        "title": "Replacing homepage demo media with looping HTML and CSS",
+        "url": "https://stepshots.com/css-feature-clips",
         "source": "Hacker News",
-        "score": 1103
+        "score": 14
       },
       {
-        "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
-        "url": "https://www.ricursive.com/ripple",
+        "title": "Partial Operator Precedence",
+        "url": "https://ziglang.org/devlog/2026/#2026-10-24",
         "source": "Hacker News",
-        "score": 238
-      },
-      {
-        "title": "Frustrated Ranchers Want People to Quit 'Rescuing' Their Working Guardian Dogs",
-        "url": "https://cowboystatedaily.com/2026/10/15/frustrated-ranchers-want-people-to-quit-rescuing-their-working-guardian-dogs/",
-        "source": "Hacker News",
-        "score": 34
+        "score": 60
       },
       {
         "title": "Kimi K3.1 Pro model weights are out",
         "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
         "source": "Hacker News",
-        "score": 406
+        "score": 551
       },
       {
-        "title": "Insects don't swarm at LED lights",
-        "url": "https://www.birdsoutsidemywindow.org/2026/11/03/insects-dont-swarm-at-led-lights/",
+        "title": "Ripple-65B Preview: U.S. Open-Weight SOTA on Agentic Coding",
+        "url": "https://www.ricursive.com/ripple",
         "source": "Hacker News",
-        "score": 174
+        "score": 304
+      },
+      {
+        "title": "TextEdit vs. Pages",
+        "url": "https://leancrew.com/all-this/2026/10/textedit-vs-pages/",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "Altera Announces Agilex 2X, a Complete FPGA and SoC Portfolio",
+        "url": "https://www.altera.com/newsroom/agilex-2x",
+        "source": "Hacker News",
+        "score": 38
       },
       {
         "title": "A new Go API for JSON",
         "url": "https://go.dev/blog/jsonv2",
         "source": "Hacker News",
-        "score": 245
+        "score": 331
       },
       {
-        "title": "Hacking the Xbox 360 Hypervisor Part 3: Bad Update Improvements",
-        "url": "https://icode4.coffee/?p=1746",
+        "title": "Moment of Ruby: An Argument for Nothing",
+        "url": "https://www.aha.io/engineering/articles/moment-of-ruby-an-argument-for-nothing",
         "source": "Hacker News",
-        "score": 69
+        "score": 26
       },
       {
-        "title": "Conductor is joining Meta",
-        "url": "https://www.conductor.build/announcement",
+        "title": "Spreading Liquid with Three.js",
+        "url": "https://mofu-dev.com/en/blog/fluid-foundation/",
         "source": "Hacker News",
-        "score": 132
-      },
-      {
-        "title": "Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s",
-        "url": "https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra",
-        "source": "Hacker News",
-        "score": 109
-      },
-      {
-        "title": "Launch HN: Kino AI (YC S23) – AI media manager and video editor",
-        "url": "https://news.ycombinator.com/item?id=50368804",
-        "source": "Hacker News",
-        "score": 73
-      },
-      {
-        "title": "Progress on provable inference for large language models",
-        "url": "https://www.anthropic.com/research/provable-inference",
-        "source": "Hacker News",
-        "score": 181
+        "score": 124
       }
     ],
     "ai": [
       {
-        "title": "AI is forcing us to pay off 40 years of technical debt",
-        "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+        "title": "Baidu released ERNIE 5.5 Flash Base",
+        "url": "https://ernie.baidu.com/release/ernie-5-5-flash-base/",
         "source": "Hacker News AI",
-        "score": 1103
-      },
-      {
-        "title": "Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s",
-        "url": "https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra",
-        "source": "Hacker News AI",
-        "score": 109
-      },
-      {
-        "title": "Launch HN: Kino AI (YC S23) – AI media manager and video editor",
-        "url": "https://news.ycombinator.com/item?id=50368804",
-        "source": "Hacker News AI",
-        "score": 73
-      },
-      {
-        "title": "OpenAI to acquire Pierre Computer Company",
-        "url": "https://openai.com/index/openai-to-acquire-pierre/",
-        "source": "Hacker News AI",
-        "score": 202
-      },
-      {
-        "title": "Basically no one is using AI agents for their DoorDash orders",
-        "url": "https://arstechnica.com/ai/2026/10/doordash-says-outside-ai-agents-have-only-led-to-hundreds-of-orders-so-far/",
-        "source": "Hacker News AI",
-        "score": 82
+        "score": 55
       },
       {
         "title": "Ask HN: What's your current AI agentic setup?",
         "url": "https://news.ycombinator.com/item?id=50366117",
         "source": "Hacker News AI",
-        "score": 151
+        "score": 362
+      },
+      {
+        "title": "AI is forcing us to pay off 40 years of technical debt",
+        "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
+        "source": "Hacker News AI",
+        "score": 1206
+      },
+      {
+        "title": "Future Maintenance of Mbed TLS",
+        "url": "https://lists.trustedfirmware.org/archives/list/mbed-tls@lists.trustedfirmware.org/thread/YPIGCB7WN6GCHOGEGKOJXUYAP7OK527W/",
+        "source": "Hacker News AI",
+        "score": 53
+      },
+      {
+        "title": "Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator Card with 128GB at 548GB/s",
+        "url": "https://www.qualcomm.com/data-center/products/cloud-ai-100-ultra",
+        "source": "Hacker News AI",
+        "score": 158
+      },
+      {
+        "title": "Launch HN: Kino AI (YC S23) – AI media manager and video editor",
+        "url": "https://news.ycombinator.com/item?id=50368804",
+        "source": "Hacker News AI",
+        "score": 89
+      },
+      {
+        "title": "OpenAI to acquire Pierre Computer Company",
+        "url": "https://openai.com/index/openai-to-acquire-pierre/",
+        "source": "Hacker News AI",
+        "score": 247
       },
       {
         "title": "'It's just vape, nail, charity shops': Can anything save UK high street?",
         "url": "https://www.theguardian.com/business/2026/nov/04/what-can-save-the-british-high-street-rotherham",
         "source": "Hacker News AI",
-        "score": 72
+        "score": 134
+      },
+      {
+        "title": "Basically no one is using AI agents for their DoorDash orders",
+        "url": "https://arstechnica.com/ai/2026/10/doordash-says-outside-ai-agents-have-only-led-to-hundreds-of-orders-so-far/",
+        "source": "Hacker News AI",
+        "score": 144
       },
       {
         "title": "Tell HN: Gemini trains on chat history, even for subscribers (personal accounts)",
         "url": "https://news.ycombinator.com/item?id=50363461",
         "source": "Hacker News AI",
-        "score": 631
+        "score": 673
       },
       {
         "title": "YC's Garry Tan uses AI agents so much, he spends up to $200K a year on tokens",
         "url": "https://techcrunch.com/2026/11/02/y-combinators-garry-tan-uses-ai-agents-so-much-he-spends-up-to-200k-a-year-on-tokens/",
         "source": "Hacker News AI",
-        "score": 69
+        "score": 87
       },
       {
-        "title": "American Voters Overwhelmingly Reject AI Data Centers",
-        "url": "https://www.404media.co/american-voters-overwhelmingly-reject-ai-data-centers/",
+        "title": "GPT-6 Astra covertly underperforms on safety research",
+        "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/",
         "source": "Hacker News AI",
-        "score": 22
-      },
-      {
-        "title": "From wild to mild: Friendly foxes show changes in brain region",
-        "url": "https://news.cornell.edu/stories/2026/11/wild-mild-friendly-foxes-show-changes-brain-region",
-        "source": "Hacker News AI",
-        "score": 37
-      },
-      {
-        "title": "You'll need nerves of steel to work with AI agents",
-        "url": "https://orchidfiles.com/youll-need-nerves-of-steel-to-work-with-ai-agents/",
-        "source": "Hacker News AI",
-        "score": 41
-      },
-      {
-        "title": "Harmony: Chat like Discord. Federated like email",
-        "url": "https://mony.lol/",
-        "source": "Hacker News AI",
-        "score": 11
+        "score": 6
       }
     ],
     "news": [
       {
-        "title": "'This is a disaster': Angry Republicans blame Trump for midterms defeat",
-        "url": "https://www.bbc.co.uk/news/articles/c6x29rr8djy3o?at_medium=RSS&at_campaign=rss",
+        "title": "Vance walks Trump tightrope with scathing election critique blaming Iran war",
+        "url": "https://www.bbc.co.uk/news/articles/crz98zqkz7z0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US midterm results a 'victory' for Canadians hopeful of tariff relief",
-        "url": "https://www.bbc.co.uk/news/articles/cqev3mw3e0kdo?at_medium=RSS&at_campaign=rss",
+        "title": "What Democrats can and can't do with their new power after taking Congress",
+        "url": "https://www.bbc.co.uk/news/articles/cq1kdgnn2xdeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ukraine says bodycam video shows deadly Russian double-tap bombing",
-        "url": "https://www.bbc.co.uk/news/articles/c98rz6penv86o?at_medium=RSS&at_campaign=rss",
+        "title": "France gears up for strikes and protests as unions promise national mobilisation",
+        "url": "https://www.bbc.co.uk/news/articles/ckx2qzv835pgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "French blood storage impacted by freezer hacks as theories swirl about culprits",
-        "url": "https://www.bbc.co.uk/news/articles/c8vgxyvz6y9ro?at_medium=RSS&at_campaign=rss",
+        "title": "Ronaldo retires from Portugal duty",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cme8rxx2e1w9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "'Most difficult days of my life' for keeper Owono",
-        "url": "https://www.bbc.co.uk/sport/football/articles/c6zxjz40l280o?at_medium=RSS&at_campaign=rss",
+        "title": "Joshua Wong, face of Hong Kong's pro-democracy protests, jailed for 10 years",
+        "url": "https://www.bbc.co.uk/news/articles/cwp9g3rlp8jlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Israel's president begins consultations with parties after election deadlock",
-        "url": "https://www.bbc.co.uk/news/articles/c6z98z5z91ppo?at_medium=RSS&at_campaign=rss",
+        "title": "Typhoons batter East Asia as El Niño makes Pacific 'burn with fever'",
+        "url": "https://www.bbc.co.uk/news/articles/cw33kgj7nkemo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Delhi air quality worsens ahead of Diwali as firework restrictions enter force",
-        "url": "https://www.bbc.co.uk/news/articles/c699z8792n7ro?at_medium=RSS&at_campaign=rss",
+        "title": "Pope Leo hosts Bob Dylan at official residence in Rome ",
+        "url": "https://www.bbc.co.uk/news/articles/cm0e035n13ylo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " This super-comfy higher-end budget ergonomic office chair has $70 off for Black Friday ",
+        "title": " Cassette Beasts 2002 is Pokemon in a Zone 6 suburb, with no Paddington and not a wizard in sight ",
+        "url": "https://www.creativebloq.com/features/cassette-beasts-2002-is-pokemon-in-a-zone-6-suburb-with-no-paddington-and-not-a-wizard-in-sight",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " 40 years after Andy Warhol and Keith Haring, Montreux Jazz Festival's new poster is a dream creative double act ",
+        "url": "https://www.creativebloq.com/news/40-years-after-andy-warhol-and-keith-haring-montreux-jazz-festivals-new-poster-is-a-dream-creative-double-act",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The John Lewis Christmas advert is getting a mauling ",
+        "url": "https://www.creativebloq.com/news/the-john-lewis-christmas-advert-is-getting-a-mauling",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Wake up and smell the Black Friday coffee machine deals – there's up to £250 off ",
+        "url": "https://www.creativebloq.com/deals/wake-up-and-smell-these-black-friday-coffee-machine-deals-theres-up-to-gbp250-off",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This super-comfy higher-end budget ergonomic office chair has $90 off for Black Friday ",
         "url": "https://www.creativebloq.com/deals/this-super-comfy-higher-end-budget-ergonomic-office-chair-has-usd70-off-for-black-friday",
         "source": "Creative Bloq"
       },
@@ -227,26 +241,6 @@
       {
         "title": " Canva's mass layoffs are a warning sign for creative tech ",
         "url": "https://www.creativebloq.com/news/canvas-mass-layoffs-are-a-warning-sign-for-creative-tech",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " World of Warcraft: Forever is bringing Azeroth back to life, \"as it lives in our heads\", without losing what made it special ",
-        "url": "https://www.creativebloq.com/features/world-of-warcraft-forever-is-bringing-azeroth-back-to-life-as-it-lives-in-our-heads-without-losing-what-made-it-special",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These 4 SAD lamp deals will brighten up your winter ",
-        "url": "https://www.creativebloq.com/deals/these-4-sad-lamp-deals-will-brighten-up-your-winter",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Xbox built a working Series X inside an alligator for GTA 6 ",
-        "url": "https://www.creativebloq.com/news/xbox-built-a-working-series-x-inside-an-alligator-for-gta-6",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " 'Puddles' is the gorgeous British Airways poster series I needed on this grey, wintery day ",
-        "url": "https://www.creativebloq.com/news/puddles-is-the-gorgeous-british-airways-poster-campaign-that-will-make-you-book-a-holiday-right-now",
         "source": "Creative Bloq"
       }
     ],
@@ -289,38 +283,38 @@
     ],
     "gaming": [
       {
-        "title": "Escape From Tarkov Creator Reveals New Hardcore Sci-Fi Shooter",
-        "url": "https://www.polygon.com/fragmentary-order-escape-from-tarkov-creator-new-sci-fi-shooter/",
+        "title": "The Legend of Zelda: Ocarina of Time’s Changes to the Infamous Water Temple Are Actually Brilliant",
+        "url": "https://www.polygon.com/the-legend-of-zelda-ocarina-of-time-remake-water-temple-change/",
         "source": "Polygon"
       },
       {
-        "title": "Best Buy's Midnight 'Zelda' Switch 2 Console Release Is Already Intense",
-        "url": "https://www.polygon.com/best-buy-zelda-switch-2-preorder-midnight-launch-store-locator/",
+        "title": "Pokémon Pokopia Celebrates Fall with Apple-Themed Event",
+        "url": "https://www.polygon.com/pokemon-pokopia-apples-for-applin-event-announced/",
         "source": "Polygon"
       },
       {
-        "title": "Magic: The Gathering Casts Stranger Things Star as Female Lead",
-        "url": "https://www.polygon.com/magic-the-gathering-movie-cast-maya-hawke-hasbro/",
+        "title": "Star Wars Actor Officially Confirms the Hunt for Ben Solo Is Dead — and That's a Good Thing.",
+        "url": "https://www.polygon.com/star-wars-adam-driver-the-hunt-for-ben-solo-dead/",
         "source": "Polygon"
       },
       {
-        "title": "New D&D Book Introduces Some of the Most Terrifying Boss Fights in the Game’s History",
-        "url": "https://www.polygon.com/dnd-world-of-warcraft-npc-stat-blocks-powerful-bosses/",
+        "title": "Dragon Ball Composer Is Elected Texas Attorney General",
+        "url": "https://www.polygon.com/dragon-ball-composer-texas-attorney-general-nathan-johnson/",
         "source": "Polygon"
       },
       {
-        "title": "Brandon Sanderson’s Mistborn TTRPG Lays the Groundwork for His Next Series",
-        "url": "https://www.polygon.com/brandon-sanderson-mistborn-ttrpg-interview/",
+        "title": "3 Near-Perfect Prime Video Series to Binge This Weekend (November 6 – 8)",
+        "url": "https://www.polygon.com/prime-video-series-binge-weekend-november-6-8/",
         "source": "Polygon"
       },
       {
-        "title": "PS Plus Makes James Bond’s New Game Free for Just One Hour",
-        "url": "https://www.polygon.com/007-first-light-one-hour-free-trial-ps-plus/",
+        "title": "39 Years Later, Calvin And Hobbes' Best Quote On Grief Is Still a Heartbreaking Classic",
+        "url": "https://www.polygon.com/calvin-hobbes-grief-quote/",
         "source": "Polygon"
       },
       {
-        "title": "GTA 6 Sells Nearly 8 Million Copies Before It Even Launches, Report Says",
-        "url": "https://www.polygon.com/gta-6-preorders-sales-8-million-copies-before-release-date/",
+        "title": "11 Years Later, Patrick Stewart's Near-Perfect Siege Thriller Is Officially Free on Streaming",
+        "url": "https://www.polygon.com/green-room-free-tubi-streaming-november-2026/",
         "source": "Polygon"
       }
     ],
