@@ -1,185 +1,191 @@
 {
   "metadata": {
-    "last_updated": "2026-11-06T07:44:13.980199",
-    "total_items": 64
+    "last_updated": "2026-11-06T15:44:05.429748",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Gemini Omni 1.2 Flash",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+        "source": "Hacker News",
+        "score": 134
+      },
+      {
+        "title": "Dutch 'idealist' bank ASN blocks non-Google Android, including GrapheneOS",
+        "url": "https://github.com/PrivSec-dev/banking-apps-compat-report/issues/105",
+        "source": "Hacker News",
+        "score": 445
+      },
+      {
+        "title": "Blender's UI and Runtime: Much Faster Than GPUI",
+        "url": "https://github.com/ppmpreetham/BUI",
+        "source": "Hacker News",
+        "score": 461
+      },
+      {
+        "title": "FAA Begins Retiring Decades Old Floppy Disks from Air Traffic Control",
+        "url": "https://www.faa.gov/newsroom/trumps-transportation-secretary-sean-p-duffy-begins-retiring-decades-old-floppy-disks-air",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
         "title": "Claude Code sends your email address to websites",
         "url": "https://github.com/anthropics/claude-code/issues/107757",
         "source": "Hacker News",
-        "score": 954
+        "score": 1408
+      },
+      {
+        "title": "Living beyond the limits of survival: wood ants trapped in a gigantic pitfall (2016)",
+        "url": "https://jhr.pensoft.net/articles.php?id=9096",
+        "source": "Hacker News",
+        "score": 106
       },
       {
         "title": "sshole",
         "url": "https://sshhole.com",
         "source": "Hacker News",
-        "score": 2597
+        "score": 2847
+      },
+      {
+        "title": "Zero Hour: Telling time was a matter of survival and strategy during WWI (2014)",
+        "url": "https://www.laphamsquarterly.org/roundtable/zero-hour",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "RIP Cybertruck. You Were Unloved, Unwanted, and Utterly Absurd",
+        "url": "https://www.wired.com/story/rip-cybertruck-you-were-unloved-unwanted-and-utterly-absurd/",
+        "source": "Hacker News",
+        "score": 55
+      },
+      {
+        "title": "Kugelblitz – Mac-Native Google Earth Alternative",
+        "url": "https://apps.metaebene.me/en/kugelblitz",
+        "source": "Hacker News",
+        "score": 173
+      },
+      {
+        "title": "We've built an open-source feature flag server for 11 years",
+        "url": "https://github.com/Unleash/unleash",
+        "source": "Hacker News",
+        "score": 79
       },
       {
         "title": "MS Paint Remote Code Execution Vulnerability",
         "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
         "source": "Hacker News",
-        "score": 480
+        "score": 642
       },
       {
-        "title": "Pwn.college",
-        "url": "https://pwn.college/",
+        "title": "Mbodi AI (YC P25) Is Hiring Research and Robotic Engineers",
+        "url": "https://www.ycombinator.com/companies/mbodi-ai/jobs",
         "source": "Hacker News",
-        "score": 111
+        "score": 1
       },
       {
-        "title": "Nvidia Kubernetes Engine (NVKE)",
-        "url": "https://github.com/dsx-ai-factory/nvke",
+        "title": "University libraries are being swarmed by AI bots, putting public access at risk",
+        "url": "https://www.cbc.ca/news/world/university-libraries-ai-data-scraping-bots-9.7408287",
         "source": "Hacker News",
-        "score": 65
+        "score": 47
       },
       {
-        "title": "I struggle to believe that AI R&D is ingenious",
-        "url": "https://www.lesswrong.com/posts/DALNiKBjMGMF8grme/arjun-panickssery-s-shortform?commentId=fJtaHHHfx45tD7BSL",
+        "title": "Multiplayer tanks that demolish real buildings from OpenStreetMap",
+        "url": "https://worldstrike.fun/",
         "source": "Hacker News",
-        "score": 42
-      },
-      {
-        "title": "From Linux to Wikipedia: How Volunteers Build the Internet",
-        "url": "https://thereader.mitpress.mit.edu/from-linux-to-wikipedia-how-volunteers-build-the-internet/",
-        "source": "Hacker News",
-        "score": 43
-      },
-      {
-        "title": "Inkling 2 Small",
-        "url": "https://thinkingmachines.ai/news/inkling-2-small/",
-        "source": "Hacker News",
-        "score": 174
-      },
-      {
-        "title": "The Hackintosh Reborn",
-        "url": "https://www.naut.ca/blog/2026/11/05/the-hackintosh-reborn-with-ai/",
-        "source": "Hacker News",
-        "score": 291
-      },
-      {
-        "title": "Window Sweaters",
-        "url": "https://github.com/saragordic/window-sweaters",
-        "source": "Hacker News",
-        "score": 313
-      },
-      {
-        "title": "Show HN: Firenook – Firebase emulators in Rust: 40× faster writes, 10× less RAM",
-        "url": "https://firenook.dev/",
-        "source": "Hacker News",
-        "score": 100
-      },
-      {
-        "title": "MoofTCP – A modern replacement for MacTCP on 68k Macs",
-        "url": "https://github.com/matthewmrichter/mooftcp",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Launch HN: Rivet (YC W23) – Scale and Orchestrate Agents on S3",
-        "url": "https://github.com/rivet-dev/rivet",
-        "source": "Hacker News",
-        "score": 92
-      },
-      {
-        "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
-        "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
-        "source": "Hacker News",
-        "score": 279
-      },
-      {
-        "title": "Britain to make salary disclosure in job ads mandatory",
-        "url": "https://www.reuters.com/business/world-at-work/britain-make-salary-disclosure-job-ads-mandatory-2026-11-05/",
-        "source": "Hacker News",
-        "score": 9
+        "score": 124
       }
     ],
     "ai": [
       {
+        "title": "Gemini Omni 1.2 Flash",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+        "source": "Hacker News AI",
+        "score": 134
+      },
+      {
+        "title": "FAA Begins Retiring Decades Old Floppy Disks from Air Traffic Control",
+        "url": "https://www.faa.gov/newsroom/trumps-transportation-secretary-sean-p-duffy-begins-retiring-decades-old-floppy-disks-air",
+        "source": "Hacker News AI",
+        "score": 16
+      },
+      {
         "title": "Claude Code sends your email address to websites",
         "url": "https://github.com/anthropics/claude-code/issues/107757",
         "source": "Hacker News AI",
-        "score": 954
+        "score": 1408
+      },
+      {
+        "title": "Living beyond the limits of survival: wood ants trapped in a gigantic pitfall (2016)",
+        "url": "https://jhr.pensoft.net/articles.php?id=9096",
+        "source": "Hacker News AI",
+        "score": 106
+      },
+      {
+        "title": "RIP Cybertruck. You Were Unloved, Unwanted, and Utterly Absurd",
+        "url": "https://www.wired.com/story/rip-cybertruck-you-were-unloved-unwanted-and-utterly-absurd/",
+        "source": "Hacker News AI",
+        "score": 55
       },
       {
         "title": "MS Paint Remote Code Execution Vulnerability",
         "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
         "source": "Hacker News AI",
-        "score": 480
+        "score": 642
       },
       {
-        "title": "I struggle to believe that AI R&D is ingenious",
-        "url": "https://www.lesswrong.com/posts/DALNiKBjMGMF8grme/arjun-panickssery-s-shortform?commentId=fJtaHHHfx45tD7BSL",
+        "title": "Mbodi AI (YC P25) Is Hiring Research and Robotic Engineers",
+        "url": "https://www.ycombinator.com/companies/mbodi-ai/jobs",
         "source": "Hacker News AI",
-        "score": 42
+        "score": 1
       },
       {
-        "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
-        "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
+        "title": "University libraries are being swarmed by AI bots, putting public access at risk",
+        "url": "https://www.cbc.ca/news/world/university-libraries-ai-data-scraping-bots-9.7408287",
         "source": "Hacker News AI",
-        "score": 279
+        "score": 47
       },
       {
         "title": "Britain to make salary disclosure in job ads mandatory",
         "url": "https://www.reuters.com/business/world-at-work/britain-make-salary-disclosure-job-ads-mandatory-2026-11-05/",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 450
+      },
+      {
+        "title": "AI for scientific discovery: How researchers use Claude",
+        "url": "https://www.anthropic.com/research/how-researchers-use-claude",
+        "source": "Hacker News AI",
+        "score": 28
       },
       {
         "title": "Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights)",
         "url": "https://www.linum.ai/field-notes/pjit-21k",
         "source": "Hacker News AI",
-        "score": 206
+        "score": 264
+      },
+      {
+        "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
+        "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
+        "source": "Hacker News AI",
+        "score": 456
       },
       {
         "title": "MCP Explained",
         "url": "https://mcp-explained.com/",
         "source": "Hacker News AI",
-        "score": 287
+        "score": 320
       },
       {
-        "title": "Closed AI models dominate the price-performance frontier",
-        "url": "https://village.dev/blog/closed-ai-models-now-dominate-the-price-performance-frontier/",
+        "title": "OpenAI Finds 948 Local Privilege Escalation Bugs in the Linux Kernel",
+        "url": "https://www.phoronix.com/news/OpenAI-948-Linux-LPE-Bugs",
         "source": "Hacker News AI",
-        "score": 66
-      },
-      {
-        "title": "Hugging Face's CEO Says His P(Doom) Is 'Close to Zero'",
-        "url": "https://www.wired.com/story/wired-world-fair-2026-clement-delangue-hugging-face/",
-        "source": "Hacker News AI",
-        "score": 13
+        "score": 21
       },
       {
         "title": "Baidu released ERNIE 5.5 Flash Base",
         "url": "https://ernie.baidu.com/release/ernie-5-5-flash-base/",
         "source": "Hacker News AI",
-        "score": 175
-      },
-      {
-        "title": "Bild AI (YC W25) Is Hiring Founding Product Engineers",
-        "url": "https://www.ycombinator.com/companies/bild-ai/jobs",
-        "source": "Hacker News AI",
-        "score": 1
-      },
-      {
-        "title": "AI is forcing us to pay off 40 years of technical debt",
-        "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
-        "source": "Hacker News AI",
-        "score": 1271
-      },
-      {
-        "title": "GPT-6 Astra covertly underperforms on safety research",
-        "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/",
-        "source": "Hacker News AI",
-        "score": 320
-      },
-      {
-        "title": "ING Said to Be Seller of $500M Data Center Loan Portfolio",
-        "url": "https://www.bloomberg.com/news/articles/2026-11-05/mystery-seller-puts-up-500-million-data-center-loans-backing-stargate-cyrusone",
-        "source": "Hacker News AI",
-        "score": 4
+        "score": 183
       }
     ],
     "news": [
@@ -189,144 +195,144 @@
         "source": "BBC World"
       },
       {
+        "title": "Trump signs order to preserve Oval Office as national monument",
+        "url": "https://www.bbc.co.uk/news/articles/cmy0eeg101djo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Two dead after bus crashes in France, officials say",
+        "url": "https://www.bbc.co.uk/news/articles/cmly00l4p3lwo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Kenyan doomsday cult leader given life sentence for murdering 191 people",
+        "url": "https://www.bbc.co.uk/news/articles/cm5yne5984l0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Hoax bomb threats target European airlines and airports for second time in a week",
+        "url": "https://www.bbc.co.uk/news/articles/cmpqg08nz3pqo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Pope begins lengthy trip to Latin America weeks after lung cancer surgery",
         "url": "https://www.bbc.co.uk/news/articles/cqn06j0y61k6o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump signs order preventing future presidents from changing Oval Office ",
-        "url": "https://www.bbc.co.uk/news/articles/cmy0eeg101djo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Major construction ongoing near Iran missile bases, satellite images suggest",
-        "url": "https://www.bbc.co.uk/news/articles/ckjrwx1r2d5ro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "California governor commutes sentences for state's 548 death row inmates",
-        "url": "https://www.bbc.co.uk/news/articles/cqrkyyd2j8mvo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Macau jails pro-democracy campaigner in city's first national security case",
-        "url": "https://www.bbc.co.uk/news/articles/cmdx33v9vvr2o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Paraguay President Santiago Peña resigns after bank collapse",
-        "url": "https://www.bbc.co.uk/news/articles/c6p9g39vln3yo?at_medium=RSS&at_campaign=rss",
+        "title": "Tanzanian opposition leader found guilty of inciting unrest but acquitted of treason",
+        "url": "https://www.bbc.co.uk/news/articles/ckp8g4pm0y4lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " Google's 'Design Fails' Easter egg just made my day ",
-        "url": "https://www.creativebloq.com/news/googles-design-fails-easter-egg-just-made-my-day",
+        "title": " Which is the best iPad to buy right now? After 16 years of using them, this is our take ",
+        "url": "https://www.creativebloq.com/buying-guides/which-is-the-best-ipad-to-buy-right-now-after-16-years-of-using-them-this-is-our-take",
         "source": "Creative Bloq"
       },
       {
-        "title": " Some of the best-rated markers for art are reduced by up to 26% for Black Friday ",
-        "url": "https://www.creativebloq.com/deals/some-of-the-best-rated-markers-for-art-are-reduced-by-up-to-26-percent-for-black-friday",
+        "title": " These early Black Friday iPad deals have changed my go-to iPad recommendation ",
+        "url": "https://www.creativebloq.com/deals/these-early-black-friday-ipad-deals-have-changed-my-go-to-ipad-recommendation",
         "source": "Creative Bloq"
       },
       {
-        "title": " “If we loved him, we had a movie”: the directors who had to make the Cat in the Hat likeable ",
-        "url": "https://www.creativebloq.com/news/the-cat-in-the-hat-2026-warner-bros-animation-3d-look",
+        "title": " e.l.f.’s stop-motion Christmas ad is a win for human creativity ",
+        "url": "https://www.creativebloq.com/features/e-l-f-s-stop-motion-christmas-ad-is-a-win-for-human-creativity",
         "source": "Creative Bloq"
       },
       {
-        "title": " Dior's Christmas ad is the opposite to Prada's classy animation ",
-        "url": "https://www.creativebloq.com/news/diors-christmas-ad-is-the-opposite-to-pradas-classy-animation",
+        "title": " \"More than an absence of colour\": 4 artists reveal the keys to working in black and white ",
+        "url": "https://www.creativebloq.com/features/more-than-an-absence-of-colour-4-artists-reveal-how-to-work-in-black-and-white",
         "source": "Creative Bloq"
       },
       {
-        "title": " Nvidia DLSS 5 AI in Hogwarts Legacy is the opposite of what people expected ",
-        "url": "https://www.creativebloq.com/news/nvidia-dlss-5-in-hogwarts-legacy-has-sparked-a-whole-different-controversy",
+        "title": " Get 78% off Bluehost AI website builder and hosting ",
+        "url": "https://www.creativebloq.com/deals/get-78-percent-off-bluehost-ai-website-builder-and-hosting",
         "source": "Creative Bloq"
       },
       {
-        "title": " Get 87% off Hostinger web builder with this exclusive Black Friday code ",
-        "url": "https://www.creativebloq.com/deals/get-87-percent-off-hostinger-web-builder-with-this-exclusive-black-friday-code",
+        "title": " Finally, a CD player that doesn’t look like a plastic Y2K nightmare ",
+        "url": "https://www.creativebloq.com/deals/finally-a-cd-player-that-doesnt-look-like-a-plastic-y2k-nightmare",
         "source": "Creative Bloq"
       },
       {
-        "title": " MacBook Pro PROLED hands-on review plus all the LIVE reactions: The best feature ISN'T the touchscreen ",
-        "url": "https://www.creativebloq.com/live/news/macbook-pro-proled-xdr-first-impressions",
+        "title": " Evercade Nexus review: Banjo-Kazooie and Doom make this retro handheld a must-have ",
+        "url": "https://www.creativebloq.com/reviews/evercade-nexus-review-banjo-kazooie-makes-this-retro-handheld-a-must-have",
         "source": "Creative Bloq"
       }
     ],
     "science": [
       {
+        "title": "Major trial challenges how doctors decide who really needs statins",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261105224604.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Don't miss: Meteor showers, fireballs, and a supermoon light up November's night sky",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261105224547.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA’s Swift telescope falls to Earth after nearly 22 years in space",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261105224545.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists just found dinosaur blood that survived 115 million years",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261105224542.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "For decades, we were told to avoid full-fat dairy. New research says otherwise",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261105081000.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "An anti-aging drug may help protect the brain before Alzheimer's symptoms begin",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261104084017.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "SLAC scientists find conclusive proof of a mysterious third type of magnetism",
         "url": "https://www.sciencedaily.com/releases/2026/11/261104012256.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA is racing against time to save the Hubble Space Telescope",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261104012254.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "MIT scientists break a 20-year rule and unlock never-before-seen crystal structures",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261104012248.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A surprising discovery could help aging muscles repair themselves",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261104005226.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Goodbye, cavities? Scientists create gel that could regrow tooth enamel",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261104005059.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "AI helps Stanford scientists discover a “natural Ozempic” with a surprising advantage",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261104004909.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover that a clogged filter could revolutionize oil refining",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261103003207.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "49 Years Later, Steven Spielberg’s Sci-Fi Thriller Masterpiece Is Officially Free on YouTube",
-        "url": "https://www.polygon.com/steven-spielberg-clouse-encounters-directors-cut-streaming-free-youtube/",
+        "title": "How to get Poké Ball Pattern Vivillon in Pokémon Legends: Z-A",
+        "url": "https://www.polygon.com/pokemon-legends-za-poke-ball-pattern-vivillon-how-to-get/",
         "source": "Polygon"
       },
       {
-        "title": "Classic Halo Trilogy Gets Brand-New Release on Nov. 10",
-        "url": "https://www.polygon.com/halo-master-chief-omnibus-book-november-2026/",
+        "title": "6 Upcoming Steam Games That Look Too Good to Ignore",
+        "url": "https://www.polygon.com/upcoming-steam-games-wishlister-nov-6/",
         "source": "Polygon"
       },
       {
-        "title": "The brutal reality of making video games in 2026 | Point It Out!",
-        "url": "https://www.polygon.com/video/the-brutal-reality-of-making-video-games-in-2026-point-it-out/",
+        "title": "'Godzilla Minus Zero’s Final Trailer Reveals Legendary Monster Villain",
+        "url": "https://www.polygon.com/godzilla-minus-zero-final-trailer-king-ghidorah/",
         "source": "Polygon"
       },
       {
-        "title": "All Great Fairy's Fountain locations in Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-great-fairy-fountain-locations-rewards/",
+        "title": "DMZ key and locations in Modern Warfare 4",
+        "url": "https://www.polygon.com/mw4-modern-warfare-4-dmz-keys-locations-all-list/",
         "source": "Polygon"
       },
       {
-        "title": "How to find Richard the dog in Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-richard-dog-location-how-to-find/",
+        "title": "Keanu Reeves Officially Returning as John Wick in New Movie",
+        "url": "https://www.polygon.com/keanu-reeves-return-john-wick-animated-prequel/",
         "source": "Polygon"
       },
       {
-        "title": "Nintendo Hints the Switch 2 Will Keep Getting Classic Remakes",
-        "url": "https://www.polygon.com/nintendo-nate-bihldorff-ocarina-of-time-interview/",
+        "title": "Stranger Things Officially Returns in 2028 With New Series",
+        "url": "https://www.polygon.com/stranger-things-day-new-series-other-worlds-netflix/",
         "source": "Polygon"
       },
       {
-        "title": "3 Near-Perfect Sci-Fi Movies You Can Stream For Free This Weekend (Novemeber 6 - 8)",
-        "url": "https://www.polygon.com/sci-fi-films-streaming-free-november-5-2026/",
+        "title": "Magic's Star Trek Already Feels a Lot More Frustrating than Reality Fracture",
+        "url": "https://www.polygon.com/mtg-star-trek-prerelease-guide-limited-draft-sealed-frustrating/",
         "source": "Polygon"
       }
     ],
