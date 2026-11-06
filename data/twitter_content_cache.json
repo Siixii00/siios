@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-11-06T00:50:09.205900",
-    "total_items": 55
+    "last_updated": "2026-11-06T07:44:13.980199",
+    "total_items": 64
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Claude Code sends your email address to websites",
         "url": "https://github.com/anthropics/claude-code/issues/107757",
         "source": "Hacker News",
-        "score": 405
-      },
-      {
-        "title": "Search for everyone",
-        "url": "https://kagi.com/changelog#11820",
-        "source": "Hacker News",
-        "score": 471
-      },
-      {
-        "title": "MS Paint Remote Code Execution Vulnerability",
-        "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
-        "source": "Hacker News",
-        "score": 278
+        "score": 954
       },
       {
         "title": "sshole",
         "url": "https://sshhole.com",
         "source": "Hacker News",
-        "score": 2270
+        "score": 2597
       },
       {
-        "title": "Alpine Linux Security Advisory: OpenSSH-server password authentication bypass",
-        "url": "https://alpinelinux.org/posts/2026-11-05-openssh-password-authentication-bypass/",
+        "title": "MS Paint Remote Code Execution Vulnerability",
+        "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
         "source": "Hacker News",
-        "score": 574
+        "score": 480
       },
       {
-        "title": "The Hackintosh Reborn",
-        "url": "https://www.naut.ca/blog/2026/11/05/the-hackintosh-reborn-with-ai/",
+        "title": "Pwn.college",
+        "url": "https://pwn.college/",
         "source": "Hacker News",
-        "score": 184
+        "score": 111
+      },
+      {
+        "title": "Nvidia Kubernetes Engine (NVKE)",
+        "url": "https://github.com/dsx-ai-factory/nvke",
+        "source": "Hacker News",
+        "score": 65
+      },
+      {
+        "title": "I struggle to believe that AI R&D is ingenious",
+        "url": "https://www.lesswrong.com/posts/DALNiKBjMGMF8grme/arjun-panickssery-s-shortform?commentId=fJtaHHHfx45tD7BSL",
+        "source": "Hacker News",
+        "score": 42
+      },
+      {
+        "title": "From Linux to Wikipedia: How Volunteers Build the Internet",
+        "url": "https://thereader.mitpress.mit.edu/from-linux-to-wikipedia-how-volunteers-build-the-internet/",
+        "source": "Hacker News",
+        "score": 43
       },
       {
         "title": "Inkling 2 Small",
         "url": "https://thinkingmachines.ai/news/inkling-2-small/",
         "source": "Hacker News",
-        "score": 19
+        "score": 174
       },
       {
-        "title": "Tencent Launches Hy4, One of the Leading Open-Source AI Models",
-        "url": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/",
+        "title": "The Hackintosh Reborn",
+        "url": "https://www.naut.ca/blog/2026/11/05/the-hackintosh-reborn-with-ai/",
         "source": "Hacker News",
-        "score": 74
+        "score": 291
       },
       {
         "title": "Window Sweaters",
         "url": "https://github.com/saragordic/window-sweaters",
         "source": "Hacker News",
-        "score": 229
+        "score": 313
+      },
+      {
+        "title": "Show HN: Firenook – Firebase emulators in Rust: 40× faster writes, 10× less RAM",
+        "url": "https://firenook.dev/",
+        "source": "Hacker News",
+        "score": 100
+      },
+      {
+        "title": "MoofTCP – A modern replacement for MacTCP on 68k Macs",
+        "url": "https://github.com/matthewmrichter/mooftcp",
+        "source": "Hacker News",
+        "score": 39
       },
       {
         "title": "Launch HN: Rivet (YC W23) – Scale and Orchestrate Agents on S3",
         "url": "https://github.com/rivet-dev/rivet",
         "source": "Hacker News",
-        "score": 71
+        "score": 92
       },
       {
-        "title": "Goodbye from Salon",
-        "url": "https://www.salon.com/2026/11/05/goodbye-from-salon/",
+        "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
+        "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
         "source": "Hacker News",
-        "score": 392
+        "score": 279
       },
       {
-        "title": "Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights)",
-        "url": "https://www.linum.ai/field-notes/pjit-21k",
+        "title": "Britain to make salary disclosure in job ads mandatory",
+        "url": "https://www.reuters.com/business/world-at-work/britain-make-salary-disclosure-job-ads-mandatory-2026-11-05/",
         "source": "Hacker News",
-        "score": 141
-      },
-      {
-        "title": "Brazilian Credit Guarantor Fund Data Breach Affecting PII and Payout Data",
-        "url": "https://www.fgc.org.br/comunicado",
-        "source": "Hacker News",
-        "score": 8
-      },
-      {
-        "title": "Motorola Signature 27 with GrapheneOS support",
-        "url": "https://motorolanews.com/motorola-signature-27-2/",
-        "source": "Hacker News",
-        "score": 389
-      },
-      {
-        "title": "September in Servo: <progress>, rounded rectangles, and more",
-        "url": "https://servo.org/blog/2026/11/05/september-in-servo/",
-        "source": "Hacker News",
-        "score": 180
+        "score": 9
       }
     ],
     "ai": [
@@ -101,31 +101,61 @@
         "title": "Claude Code sends your email address to websites",
         "url": "https://github.com/anthropics/claude-code/issues/107757",
         "source": "Hacker News AI",
-        "score": 405
+        "score": 954
       },
       {
         "title": "MS Paint Remote Code Execution Vulnerability",
         "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
         "source": "Hacker News AI",
-        "score": 278
+        "score": 480
       },
       {
-        "title": "Tencent Launches Hy4, One of the Leading Open-Source AI Models",
-        "url": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/",
+        "title": "I struggle to believe that AI R&D is ingenious",
+        "url": "https://www.lesswrong.com/posts/DALNiKBjMGMF8grme/arjun-panickssery-s-shortform?commentId=fJtaHHHfx45tD7BSL",
         "source": "Hacker News AI",
-        "score": 74
-      },
-      {
-        "title": "Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights)",
-        "url": "https://www.linum.ai/field-notes/pjit-21k",
-        "source": "Hacker News AI",
-        "score": 141
+        "score": 42
       },
       {
         "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
         "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
         "source": "Hacker News AI",
-        "score": 50
+        "score": 279
+      },
+      {
+        "title": "Britain to make salary disclosure in job ads mandatory",
+        "url": "https://www.reuters.com/business/world-at-work/britain-make-salary-disclosure-job-ads-mandatory-2026-11-05/",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights)",
+        "url": "https://www.linum.ai/field-notes/pjit-21k",
+        "source": "Hacker News AI",
+        "score": 206
+      },
+      {
+        "title": "MCP Explained",
+        "url": "https://mcp-explained.com/",
+        "source": "Hacker News AI",
+        "score": 287
+      },
+      {
+        "title": "Closed AI models dominate the price-performance frontier",
+        "url": "https://village.dev/blog/closed-ai-models-now-dominate-the-price-performance-frontier/",
+        "source": "Hacker News AI",
+        "score": 66
+      },
+      {
+        "title": "Hugging Face's CEO Says His P(Doom) Is 'Close to Zero'",
+        "url": "https://www.wired.com/story/wired-world-fair-2026-clement-delangue-hugging-face/",
+        "source": "Hacker News AI",
+        "score": 13
+      },
+      {
+        "title": "Baidu released ERNIE 5.5 Flash Base",
+        "url": "https://ernie.baidu.com/release/ernie-5-5-flash-base/",
+        "source": "Hacker News AI",
+        "score": 175
       },
       {
         "title": "Bild AI (YC W25) Is Hiring Founding Product Engineers",
@@ -134,51 +164,28 @@
         "score": 1
       },
       {
-        "title": "GPT-6 Astra covertly underperforms on safety research",
-        "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/",
-        "source": "Hacker News AI",
-        "score": 287
-      },
-      {
-        "title": "MCP Explained",
-        "url": "https://mcp-explained.com/",
-        "source": "Hacker News AI",
-        "score": 234
-      },
-      {
-        "title": "Baidu released ERNIE 5.5 Flash Base",
-        "url": "https://ernie.baidu.com/release/ernie-5-5-flash-base/",
-        "source": "Hacker News AI",
-        "score": 164
-      },
-      {
-        "title": "Major Investors Are Skeptical Anthropic IPO Can Achieve $1.5T Valuation",
-        "url": "https://www.wsj.com/finance/major-investors-are-skeptical-anthropic-ipo-can-achieve-1-5-trillion-valuation-ca965d8b’",
-        "source": "Hacker News AI",
-        "score": 5
-      },
-      {
         "title": "AI is forcing us to pay off 40 years of technical debt",
         "url": "https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability",
         "source": "Hacker News AI",
-        "score": 1262
+        "score": 1271
       },
       {
-        "title": "80k Hops per Second Measurement Confirm Starlink Up/Downlink Channel Pairing",
-        "url": "https://sdr-x.github.io/starlink-ul-dl-pair-80k-hop-ad9361/",
+        "title": "GPT-6 Astra covertly underperforms on safety research",
+        "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/",
         "source": "Hacker News AI",
-        "score": 18
+        "score": 320
+      },
+      {
+        "title": "ING Said to Be Seller of $500M Data Center Loan Portfolio",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-05/mystery-seller-puts-up-500-million-data-center-loans-backing-stargate-cyrusone",
+        "source": "Hacker News AI",
+        "score": 4
       }
     ],
     "news": [
       {
-        "title": "Major tech stocks plunge as US midterms add to fears of AI slowdown",
-        "url": "https://www.bbc.co.uk/news/articles/cmn04705rd8jo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Democratic socialist defeats incumbent Karen Bass in Los Angeles mayor's race",
-        "url": "https://www.bbc.co.uk/news/articles/c6e3xxwk3k11o?at_medium=RSS&at_campaign=rss",
+        "title": "White House denies Hegseth and Rubio to leave jobs after Republican election losses",
+        "url": "https://www.bbc.co.uk/news/articles/cqg7xxg4jdv5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -187,8 +194,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Hoax bomb threats target European airlines and airports for second time in a week",
-        "url": "https://www.bbc.co.uk/news/articles/cmpqg08nz3pqo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump signs order preventing future presidents from changing Oval Office ",
+        "url": "https://www.bbc.co.uk/news/articles/cmy0eeg101djo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Major construction ongoing near Iran missile bases, satellite images suggest",
+        "url": "https://www.bbc.co.uk/news/articles/ckjrwx1r2d5ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,8 +209,8 @@
         "source": "BBC World"
       },
       {
-        "title": "French protests see numbers surge as unions join strikes over high cost of living",
-        "url": "https://www.bbc.co.uk/news/articles/ckx2qzv835pgo?at_medium=RSS&at_campaign=rss",
+        "title": "Macau jails pro-democracy campaigner in city's first national security case",
+        "url": "https://www.bbc.co.uk/news/articles/cmdx33v9vvr2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -208,6 +220,11 @@
       }
     ],
     "art": [
+      {
+        "title": " Google's 'Design Fails' Easter egg just made my day ",
+        "url": "https://www.creativebloq.com/news/googles-design-fails-easter-egg-just-made-my-day",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Some of the best-rated markers for art are reduced by up to 26% for Black Friday ",
         "url": "https://www.creativebloq.com/deals/some-of-the-best-rated-markers-for-art-are-reduced-by-up-to-26-percent-for-black-friday",
@@ -236,11 +253,6 @@
       {
         "title": " MacBook Pro PROLED hands-on review plus all the LIVE reactions: The best feature ISN'T the touchscreen ",
         "url": "https://www.creativebloq.com/live/news/macbook-pro-proled-xdr-first-impressions",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Gillette finally confirms its logo hides a hidden design ",
-        "url": "https://www.creativebloq.com/news/gillette-finally-confirms-its-logo-hides-a-hidden-design",
         "source": "Creative Bloq"
       }
     ],
@@ -281,7 +293,43 @@
         "source": "Science Daily"
       }
     ],
-    "gaming": [],
+    "gaming": [
+      {
+        "title": "49 Years Later, Steven Spielberg’s Sci-Fi Thriller Masterpiece Is Officially Free on YouTube",
+        "url": "https://www.polygon.com/steven-spielberg-clouse-encounters-directors-cut-streaming-free-youtube/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Classic Halo Trilogy Gets Brand-New Release on Nov. 10",
+        "url": "https://www.polygon.com/halo-master-chief-omnibus-book-november-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The brutal reality of making video games in 2026 | Point It Out!",
+        "url": "https://www.polygon.com/video/the-brutal-reality-of-making-video-games-in-2026-point-it-out/",
+        "source": "Polygon"
+      },
+      {
+        "title": "All Great Fairy's Fountain locations in Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-great-fairy-fountain-locations-rewards/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How to find Richard the dog in Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-richard-dog-location-how-to-find/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Nintendo Hints the Switch 2 Will Keep Getting Classic Remakes",
+        "url": "https://www.polygon.com/nintendo-nate-bihldorff-ocarina-of-time-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "3 Near-Perfect Sci-Fi Movies You Can Stream For Free This Weekend (Novemeber 6 - 8)",
+        "url": "https://www.polygon.com/sci-fi-films-streaming-free-november-5-2026/",
+        "source": "Polygon"
+      }
+    ],
     "steam": [],
     "github": [
       {
