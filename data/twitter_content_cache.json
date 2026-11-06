@@ -1,202 +1,202 @@
 {
   "metadata": {
-    "last_updated": "2026-11-06T15:44:05.429748",
+    "last_updated": "2026-11-06T21:20:40.695333",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
-        "title": "Gemini Omni 1.2 Flash",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+        "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+        "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
         "source": "Hacker News",
-        "score": 134
+        "score": 116
       },
       {
-        "title": "Dutch 'idealist' bank ASN blocks non-Google Android, including GrapheneOS",
-        "url": "https://github.com/PrivSec-dev/banking-apps-compat-report/issues/105",
+        "title": "Firecracker VM Escape: PwnEscape Part 2",
+        "url": "https://pwn.ai/blog/firecracker-escape",
         "source": "Hacker News",
-        "score": 445
+        "score": 89
+      },
+      {
+        "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
+        "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
+        "source": "Hacker News",
+        "score": 202
+      },
+      {
+        "title": "Tesla to wind down Cybertruck production",
+        "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+        "source": "Hacker News",
+        "score": 670
+      },
+      {
+        "title": "AI is dramatically accelerating AI research",
+        "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+        "source": "Hacker News",
+        "score": 19
+      },
+      {
+        "title": "First steps in bare-metal programming using UEFI",
+        "url": "https://kevinboone.me/efitest_index.html",
+        "source": "Hacker News",
+        "score": 136
       },
       {
         "title": "Blender's UI and Runtime: Much Faster Than GPUI",
         "url": "https://github.com/ppmpreetham/BUI",
         "source": "Hacker News",
-        "score": 461
+        "score": 638
       },
       {
-        "title": "FAA Begins Retiring Decades Old Floppy Disks from Air Traffic Control",
-        "url": "https://www.faa.gov/newsroom/trumps-transportation-secretary-sean-p-duffy-begins-retiring-decades-old-floppy-disks-air",
+        "title": "Restaurant Delivery Payment-Skimming Campaign",
+        "url": "https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming",
         "source": "Hacker News",
-        "score": 16
+        "score": 30
       },
       {
-        "title": "Claude Code sends your email address to websites",
-        "url": "https://github.com/anthropics/claude-code/issues/107757",
+        "title": "The Valley Bubble Breaks",
+        "url": "https://quirksmode.org/quirksblog/2026/1106-valley-bubble.html",
         "source": "Hacker News",
-        "score": 1408
+        "score": 9
       },
       {
-        "title": "Living beyond the limits of survival: wood ants trapped in a gigantic pitfall (2016)",
-        "url": "https://jhr.pensoft.net/articles.php?id=9096",
+        "title": "My first and last telegram was from Rebecca West",
+        "url": "https://thelampmagazine.com/blog/rebecca-wests-nightingale",
         "source": "Hacker News",
-        "score": 106
+        "score": 21
       },
       {
-        "title": "sshole",
-        "url": "https://sshhole.com",
+        "title": "Replit rebuilt its sandbox engine with microVMs",
+        "url": "https://frontier.replit.com/sandbox-engine-microvms-part-1/",
         "source": "Hacker News",
-        "score": 2847
+        "score": 18
       },
       {
-        "title": "Zero Hour: Telling time was a matter of survival and strategy during WWI (2014)",
-        "url": "https://www.laphamsquarterly.org/roundtable/zero-hour",
-        "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "RIP Cybertruck. You Were Unloved, Unwanted, and Utterly Absurd",
-        "url": "https://www.wired.com/story/rip-cybertruck-you-were-unloved-unwanted-and-utterly-absurd/",
-        "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Kugelblitz – Mac-Native Google Earth Alternative",
-        "url": "https://apps.metaebene.me/en/kugelblitz",
-        "source": "Hacker News",
-        "score": 173
-      },
-      {
-        "title": "We've built an open-source feature flag server for 11 years",
-        "url": "https://github.com/Unleash/unleash",
-        "source": "Hacker News",
-        "score": 79
-      },
-      {
-        "title": "MS Paint Remote Code Execution Vulnerability",
-        "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
-        "source": "Hacker News",
-        "score": 642
-      },
-      {
-        "title": "Mbodi AI (YC P25) Is Hiring Research and Robotic Engineers",
-        "url": "https://www.ycombinator.com/companies/mbodi-ai/jobs",
-        "source": "Hacker News",
-        "score": 1
-      },
-      {
-        "title": "University libraries are being swarmed by AI bots, putting public access at risk",
-        "url": "https://www.cbc.ca/news/world/university-libraries-ai-data-scraping-bots-9.7408287",
+        "title": "Memorilla: Latent Semantic Memory for LLMs",
+        "url": "https://arxiv.org/abs/2610.21375",
         "source": "Hacker News",
         "score": 47
       },
       {
-        "title": "Multiplayer tanks that demolish real buildings from OpenStreetMap",
-        "url": "https://worldstrike.fun/",
+        "title": "Size-It-Up (Game)",
+        "url": "https://magnitudle.com/size-it-up",
         "source": "Hacker News",
-        "score": 124
+        "score": 44
+      },
+      {
+        "title": "Show HN: Waymark – A workflow engine that compiles jobs instead of replaying",
+        "url": "https://github.com/piercefreeman/waymark",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "UpCodes (YC S17) is hiring SDR's to sell AI compliance software",
+        "url": "https://up.codes/careers?utm_source=HN",
+        "source": "Hacker News",
+        "score": 1
       }
     ],
     "ai": [
       {
+        "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
+        "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
+        "source": "Hacker News AI",
+        "score": 202
+      },
+      {
+        "title": "Tesla to wind down Cybertruck production",
+        "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+        "source": "Hacker News AI",
+        "score": 670
+      },
+      {
+        "title": "AI is dramatically accelerating AI research",
+        "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+        "source": "Hacker News AI",
+        "score": 19
+      },
+      {
+        "title": "Restaurant Delivery Payment-Skimming Campaign",
+        "url": "https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming",
+        "source": "Hacker News AI",
+        "score": 30
+      },
+      {
+        "title": "Memorilla: Latent Semantic Memory for LLMs",
+        "url": "https://arxiv.org/abs/2610.21375",
+        "source": "Hacker News AI",
+        "score": 47
+      },
+      {
+        "title": "UpCodes (YC S17) is hiring SDR's to sell AI compliance software",
+        "url": "https://up.codes/careers?utm_source=HN",
+        "source": "Hacker News AI",
+        "score": 1
+      },
+      {
         "title": "Gemini Omni 1.2 Flash",
         "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
         "source": "Hacker News AI",
-        "score": 134
+        "score": 260
       },
       {
-        "title": "FAA Begins Retiring Decades Old Floppy Disks from Air Traffic Control",
-        "url": "https://www.faa.gov/newsroom/trumps-transportation-secretary-sean-p-duffy-begins-retiring-decades-old-floppy-disks-air",
+        "title": "40C3 halfnarp – Submit talk preferences to aid scheduling",
+        "url": "https://halfnarp.events.ccc.de",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 24
       },
       {
-        "title": "Claude Code sends your email address to websites",
-        "url": "https://github.com/anthropics/claude-code/issues/107757",
+        "title": "Anthropic IPO buyers see valuation as low as $1.1T",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
         "source": "Hacker News AI",
-        "score": 1408
+        "score": 130
+      },
+      {
+        "title": "SketchAgentBench – evaluate LLMs on 3D spatial reasoning",
+        "url": "https://sketchagent.dev/",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "Living beyond the limits of survival: wood ants trapped in a gigantic pitfall (2016)",
         "url": "https://jhr.pensoft.net/articles.php?id=9096",
         "source": "Hacker News AI",
-        "score": 106
+        "score": 154
       },
       {
-        "title": "RIP Cybertruck. You Were Unloved, Unwanted, and Utterly Absurd",
-        "url": "https://www.wired.com/story/rip-cybertruck-you-were-unloved-unwanted-and-utterly-absurd/",
+        "title": "Microsoft is winding down Oracle deal to rent AI cloud capacity",
+        "url": "https://www.reuters.com/business/microsoft-is-winding-down-oracle-deal-rent-ai-cloud-capacity-bloomberg-news-2026-11-06/",
         "source": "Hacker News AI",
-        "score": 55
+        "score": 68
       },
       {
-        "title": "MS Paint Remote Code Execution Vulnerability",
-        "url": "https://www.cve.org/CVERecord?id=CVE-2026-83844",
+        "title": "Ozempic-style drugs now in trials for heart failure, addiction and even aging",
+        "url": "https://maccus.fr/en/ozempic-drugs-trials-beyond-diabetes/",
         "source": "Hacker News AI",
-        "score": 642
+        "score": 23
       },
       {
-        "title": "Mbodi AI (YC P25) Is Hiring Research and Robotic Engineers",
-        "url": "https://www.ycombinator.com/companies/mbodi-ai/jobs",
+        "title": "Claude Code sends your email address to websites",
+        "url": "https://github.com/anthropics/claude-code/issues/107757",
         "source": "Hacker News AI",
-        "score": 1
+        "score": 1532
       },
       {
-        "title": "University libraries are being swarmed by AI bots, putting public access at risk",
-        "url": "https://www.cbc.ca/news/world/university-libraries-ai-data-scraping-bots-9.7408287",
+        "title": "Reading the Anthropic S-1, with Zvi Mowshowitz",
+        "url": "https://www.complexsystemspodcast.com/episodes/reading-the-anthropic-s-1-with-zvi-mowshowitz/",
         "source": "Hacker News AI",
-        "score": 47
-      },
-      {
-        "title": "Britain to make salary disclosure in job ads mandatory",
-        "url": "https://www.reuters.com/business/world-at-work/britain-make-salary-disclosure-job-ads-mandatory-2026-11-05/",
-        "source": "Hacker News AI",
-        "score": 450
-      },
-      {
-        "title": "AI for scientific discovery: How researchers use Claude",
-        "url": "https://www.anthropic.com/research/how-researchers-use-claude",
-        "source": "Hacker News AI",
-        "score": 28
-      },
-      {
-        "title": "Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights)",
-        "url": "https://www.linum.ai/field-notes/pjit-21k",
-        "source": "Hacker News AI",
-        "score": 264
-      },
-      {
-        "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
-        "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
-        "source": "Hacker News AI",
-        "score": 456
-      },
-      {
-        "title": "MCP Explained",
-        "url": "https://mcp-explained.com/",
-        "source": "Hacker News AI",
-        "score": 320
-      },
-      {
-        "title": "OpenAI Finds 948 Local Privilege Escalation Bugs in the Linux Kernel",
-        "url": "https://www.phoronix.com/news/OpenAI-948-Linux-LPE-Bugs",
-        "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "Baidu released ERNIE 5.5 Flash Base",
-        "url": "https://ernie.baidu.com/release/ernie-5-5-flash-base/",
-        "source": "Hacker News AI",
-        "score": 183
+        "score": 19
       }
     ],
     "news": [
       {
-        "title": "White House denies Hegseth and Rubio to leave jobs after Republican election losses",
-        "url": "https://www.bbc.co.uk/news/articles/cqg7xxg4jdv5o?at_medium=RSS&at_campaign=rss",
+        "title": "AI stocks climb after trillions wiped from market values",
+        "url": "https://www.bbc.co.uk/news/articles/c35ynnpzdq51o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump signs order to preserve Oval Office as national monument",
-        "url": "https://www.bbc.co.uk/news/articles/cmy0eeg101djo?at_medium=RSS&at_campaign=rss",
+        "title": "Four midterms takeaways for 2028 White House race",
+        "url": "https://www.bbc.co.uk/news/articles/cq1m41n3v7mmo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -205,27 +205,37 @@
         "source": "BBC World"
       },
       {
+        "title": "New wave of bomb threats hit European airlines",
+        "url": "https://www.bbc.co.uk/news/articles/cq62yy064vjpo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Kenyan doomsday cult leader given life sentence for murdering 191 people",
         "url": "https://www.bbc.co.uk/news/articles/cm5yne5984l0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Hoax bomb threats target European airlines and airports for second time in a week",
-        "url": "https://www.bbc.co.uk/news/articles/cmpqg08nz3pqo?at_medium=RSS&at_campaign=rss",
+        "title": "Judge blocks construction of Trump's massive arch after federal agency approval",
+        "url": "https://www.bbc.co.uk/news/articles/cq99zd93ryvko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Pope begins lengthy trip to Latin America weeks after lung cancer surgery",
-        "url": "https://www.bbc.co.uk/news/articles/cqn06j0y61k6o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Tanzanian opposition leader found guilty of inciting unrest but acquitted of treason",
-        "url": "https://www.bbc.co.uk/news/articles/ckp8g4pm0y4lo?at_medium=RSS&at_campaign=rss",
+        "title": "Russian extremist group denies sending hoax bomb threats",
+        "url": "https://www.bbc.co.uk/news/articles/cm2d66n0lx1yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Maxon aims to make 3D creation feel more natural with ZBrush and Cinema4D for the PROLED XDR MacBook and Apple Vision pro ",
+        "url": "https://www.creativebloq.com/news/maxon-aims-to-make-3d-creation-feel-more-natural-with-zbrush-and-cinema4d-for-the-proled-xdr-macbook-and-apple-vision-pro",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Cybertruck is dead – what went wrong? ",
+        "url": "https://www.creativebloq.com/news/its-over-babe-the-cybertruck-era-is-dead",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Which is the best iPad to buy right now? After 16 years of using them, this is our take ",
         "url": "https://www.creativebloq.com/buying-guides/which-is-the-best-ipad-to-buy-right-now-after-16-years-of-using-them-this-is-our-take",
@@ -249,16 +259,6 @@
       {
         "title": " Get 78% off Bluehost AI website builder and hosting ",
         "url": "https://www.creativebloq.com/deals/get-78-percent-off-bluehost-ai-website-builder-and-hosting",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Finally, a CD player that doesn’t look like a plastic Y2K nightmare ",
-        "url": "https://www.creativebloq.com/deals/finally-a-cd-player-that-doesnt-look-like-a-plastic-y2k-nightmare",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Evercade Nexus review: Banjo-Kazooie and Doom make this retro handheld a must-have ",
-        "url": "https://www.creativebloq.com/reviews/evercade-nexus-review-banjo-kazooie-makes-this-retro-handheld-a-must-have",
         "source": "Creative Bloq"
       }
     ],
@@ -301,38 +301,38 @@
     ],
     "gaming": [
       {
-        "title": "How to get Poké Ball Pattern Vivillon in Pokémon Legends: Z-A",
-        "url": "https://www.polygon.com/pokemon-legends-za-poke-ball-pattern-vivillon-how-to-get/",
+        "title": "Critical Role Officially Returns to Its Roots for New Campaign with Hololive",
+        "url": "https://www.polygon.com/critical-role-new-campaign-shattered-legends-hololive/",
         "source": "Polygon"
       },
       {
-        "title": "6 Upcoming Steam Games That Look Too Good to Ignore",
-        "url": "https://www.polygon.com/upcoming-steam-games-wishlister-nov-6/",
+        "title": "8 New TV Shows to Watch This Weekend on Netflix, HBO, and Apple TV (November 6 - 8)",
+        "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-november-6-8/",
         "source": "Polygon"
       },
       {
-        "title": "'Godzilla Minus Zero’s Final Trailer Reveals Legendary Monster Villain",
-        "url": "https://www.polygon.com/godzilla-minus-zero-final-trailer-king-ghidorah/",
+        "title": "All songs in Zelda Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-songs-list/",
         "source": "Polygon"
       },
       {
-        "title": "DMZ key and locations in Modern Warfare 4",
-        "url": "https://www.polygon.com/mw4-modern-warfare-4-dmz-keys-locations-all-list/",
+        "title": "Where to find Princess Ruto in Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-oot-princess-ruto-location/",
         "source": "Polygon"
       },
       {
-        "title": "Keanu Reeves Officially Returning as John Wick in New Movie",
-        "url": "https://www.polygon.com/keanu-reeves-return-john-wick-animated-prequel/",
+        "title": "All soft soil and Magic Bean planting locations in Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-soft-soil-fresh-magic-bean-location/",
         "source": "Polygon"
       },
       {
-        "title": "Stranger Things Officially Returns in 2028 With New Series",
-        "url": "https://www.polygon.com/stranger-things-day-new-series-other-worlds-netflix/",
+        "title": "All Gold Skulltula locations in Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-gold-skulltula-token-locations-where-to-find/",
         "source": "Polygon"
       },
       {
-        "title": "Magic's Star Trek Already Feels a Lot More Frustrating than Reality Fracture",
-        "url": "https://www.polygon.com/mtg-star-trek-prerelease-guide-limited-draft-sealed-frustrating/",
+        "title": "Anne Hathaway and JJ Abrams Sci-Fi Thriller Sets Official HBO Max Streaming Date",
+        "url": "https://www.polygon.com/end-of-oak-street-anne-hathaway-hbo-max-streaming-date/",
         "source": "Polygon"
       }
     ],
