@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-11-07T19:57:18.457150",
-    "total_items": 59
+    "last_updated": "2026-11-07T23:32:58.106794",
+    "total_items": 62
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "The end of Microsoft Research's AI Frontiers group",
         "url": "https://hunch.net/?p=13764006",
         "source": "Hacker News",
-        "score": 148
+        "score": 318
       },
       {
         "title": "What I run on my $10 USD OpenStick homelab",
         "url": "https://blog.bosscher.ch/posts/openstick/",
         "source": "Hacker News",
-        "score": 91
+        "score": 265
       },
       {
         "title": "Apple’s grey list: Words and phrases your iPhone won’t help you spell",
         "url": "https://www.theguardian.com/technology/2026/nov/06/struggling-to-spell-male-chauvinist-pig-apple-grey-list-means-your-iphone-wont-help-you",
         "source": "Hacker News",
-        "score": 117
+        "score": 299
+      },
+      {
+        "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+        "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+        "source": "Hacker News",
+        "score": 83
       },
       {
         "title": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller",
         "url": "https://github.com/hedgerow-dev/coldframe",
         "source": "Hacker News",
-        "score": 102
+        "score": 172
       },
       {
         "title": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
         "url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
         "source": "Hacker News",
-        "score": 79
-      },
-      {
-        "title": "The $8 Linux Computer (2022)",
-        "url": "http://thelittleengineerthatcould.blogspot.com/2022/12/the-8-linux-computer.html",
-        "source": "Hacker News",
-        "score": 165
-      },
-      {
-        "title": "Five memorable books about programming (2008)",
-        "url": "https://prog21.dadgum.com/19.html",
-        "source": "Hacker News",
-        "score": 34
+        "score": 162
       },
       {
         "title": "Need for Speed Underground 2 online in the browser",
         "url": "https://nfsu2.xyz/",
         "source": "Hacker News",
-        "score": 620
+        "score": 761
       },
       {
-        "title": "The Typo Generation Is Damaging Literature",
-        "url": "https://www.metropolitanreview.org/p/the-typo-generation-is-damaging-literature",
+        "title": "Uranium cubes reveal why the German nuclear project failed",
+        "url": "https://arstechnica.com/science/2026/11/uranium-cubes-reveal-why-the-german-nuclear-project-failed/",
         "source": "Hacker News",
-        "score": 21
+        "score": 34
       },
       {
-        "title": "How Long Can Life Wait?",
-        "url": "https://mceglowski.substack.com/p/how-long-can-life-wait",
+        "title": "Making any integer with four 2s (2025)",
+        "url": "https://eli.thegreenplace.net/2025/making-any-integer-with-four-2s/",
         "source": "Hacker News",
-        "score": 77
+        "score": 12
+      },
+      {
+        "title": "Turning Every Radio into a Radar",
+        "url": "https://tiaminetworks.com/turning-every-radio-into-a-radar/",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "Retro Song Bird: Plug in any Game Boy cartridge to hear the soundtrack",
+        "url": "https://www.retrosongbird.com/",
+        "source": "Hacker News",
+        "score": 24
+      },
+      {
+        "title": "Five memorable books about programming (2008)",
+        "url": "https://prog21.dadgum.com/19.html",
+        "source": "Hacker News",
+        "score": 72
       },
       {
         "title": "Every Mac comes with an (undocumented) family member classifier",
         "url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
         "source": "Hacker News",
-        "score": 483
+        "score": 560
       },
       {
-        "title": "Every processor die anyone has photographed and given away",
-        "url": "https://sheets.works/data-viz/cpu-dies",
+        "title": "The $8 Linux Computer (2022)",
+        "url": "http://thelittleengineerthatcould.blogspot.com/2022/12/the-8-linux-computer.html",
         "source": "Hacker News",
-        "score": 36
+        "score": 191
       },
       {
-        "title": "Libghostty 1.0",
-        "url": "https://mitchellh.com/writing/libghostty-1-0",
+        "title": "Show HN: An offline desktop companion to help maintain a healthy blink rhythm",
+        "url": "https://eyesrhythm.com/",
         "source": "Hacker News",
-        "score": 965
-      },
-      {
-        "title": "Text.js: Build full-stack React apps that render inside console.log",
-        "url": "https://textjs.org/",
-        "source": "Hacker News",
-        "score": 59
-      },
-      {
-        "title": "Running a law firm on Free software",
-        "url": "https://decoded.legal/blog/2026/11/running-a-law-firm-on-free-software-2026-edition/",
-        "source": "Hacker News",
-        "score": 189
+        "score": 13
       }
     ],
     "ai": [
@@ -101,61 +101,84 @@
         "title": "The end of Microsoft Research's AI Frontiers group",
         "url": "https://hunch.net/?p=13764006",
         "source": "Hacker News AI",
-        "score": 148
+        "score": 318
+      },
+      {
+        "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+        "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+        "source": "Hacker News AI",
+        "score": 83
+      },
+      {
+        "title": "Uranium cubes reveal why the German nuclear project failed",
+        "url": "https://arstechnica.com/science/2026/11/uranium-cubes-reveal-why-the-german-nuclear-project-failed/",
+        "source": "Hacker News AI",
+        "score": 34
+      },
+      {
+        "title": "Retro Song Bird: Plug in any Game Boy cartridge to hear the soundtrack",
+        "url": "https://www.retrosongbird.com/",
+        "source": "Hacker News AI",
+        "score": 24
+      },
+      {
+        "title": "Show HN: An offline desktop companion to help maintain a healthy blink rhythm",
+        "url": "https://eyesrhythm.com/",
+        "source": "Hacker News AI",
+        "score": 13
       },
       {
         "title": "How Long Can Life Wait?",
         "url": "https://mceglowski.substack.com/p/how-long-can-life-wait",
         "source": "Hacker News AI",
-        "score": 77
-      },
-      {
-        "title": "Libghostty 1.0",
-        "url": "https://mitchellh.com/writing/libghostty-1-0",
-        "source": "Hacker News AI",
-        "score": 965
+        "score": 114
       },
       {
         "title": "Show HN: We compressed a 31B video+audio diffusion model to 14B, 6 steps, INT8",
         "url": "https://github.com/Video-Rebirth/hyperflow-h3-flash",
         "source": "Hacker News AI",
-        "score": 31
+        "score": 52
       },
       {
-        "title": "Optimising the Rail Cube",
-        "url": "https://owenlacey.dev/railcube-optimisation/post",
+        "title": "Libghostty 1.0",
+        "url": "https://mitchellh.com/writing/libghostty-1-0",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 1016
+      },
+      {
+        "title": "Good Riddance to the Cybertruck, the Chariot of the Dumbest Gods",
+        "url": "https://www.rollingstone.com/culture/culture-commentary/good-riddance-elon-musk-cybertruck-1235654079/",
+        "source": "Hacker News AI",
+        "score": 24
       },
       {
         "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
         "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
         "source": "Hacker News AI",
-        "score": 399
+        "score": 402
       },
       {
-        "title": "Air holes turn silicon wafers into flat UV focusing mirrors for compact optics",
-        "url": "https://phys.org/news/2026-11-air-holes-silicon-wafers-flat.html",
+        "title": "Optimising the Rail Cube",
+        "url": "https://owenlacey.dev/railcube-optimisation/post",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 31
       },
       {
-        "title": "GitHub's new Git storage architecture",
-        "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
+        "title": "Ex-PlayStation boss says \"true innovation\" would be making a $300 console again",
+        "url": "https://www.gamesradar.com/platforms/playstation/ps6-doesnt-need-more-power-ex-playstation-boss-says-because-true-innovation-would-be-making-a-usd300-console-again/",
         "source": "Hacker News AI",
-        "score": 210
-      },
-      {
-        "title": "UpCodes (YC S17) is hiring SDR's to sell AI compliance software",
-        "url": "https://up.codes/careers?utm_source=HN",
-        "source": "Hacker News AI",
-        "score": 1
+        "score": 12
       }
     ],
     "news": [
       {
-        "title": "What we know so far after Polish gunman in military clothing opens fire in Krakow",
+        "title": "What we know so far after Krakow gun attack",
         "url": "https://www.bbc.co.uk/news/articles/cmd7q15drwgeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Israel's president tasks opposition leader Eisenkot with forming government",
+        "url": "https://www.bbc.co.uk/news/articles/cmy8367lj5xlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -181,11 +204,6 @@
       {
         "title": "With Stephen Miller pick, Trump readies for a battle",
         "url": "https://www.bbc.co.uk/news/articles/crp3gg2z171go?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Paraguay's former president charged after bank collapse",
-        "url": "https://www.bbc.co.uk/news/articles/c68jzzvjgdy9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -265,6 +283,26 @@
     ],
     "gaming": [
       {
+        "title": "All Gold Skulltula locations in Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-gold-skulltula-token-locations-where-to-find/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Incredible Anime Arcs That Are 10/10, No Notes",
+        "url": "https://www.polygon.com/perfect-anime-arcs-everyone-needs-to-watch/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Commander Shepard’s Actor Accidentally Immortalized One Mass Effect Race as Steve Buscemi",
+        "url": "https://www.polygon.com/mass-effect-commander-shepard-mark-meer-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The No. 1 Horror Movie of 2026 Is Officially Leaving Peacock",
+        "url": "https://www.polygon.com/obsession-horror-hit-streaming-peacock-november-2026/",
+        "source": "Polygon"
+      },
+      {
         "title": "Dropout’s Vic Michaelis Wants to Toss Their Star Wars Character Out a Window",
         "url": "https://www.polygon.com/dropout-vic-michaelis-interview-star-wars-zero-company/",
         "source": "Polygon"
@@ -277,26 +315,6 @@
       {
         "title": "Grand Theft Auto 6 Physical Copies Are Officially in the Wild",
         "url": "https://www.polygon.com/gta-6-grand-theft-auto-physical-copies-retail/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Commander Shepard’s Actors Are ‘Wildly Hopeful’ for Mass Effect, Despite Everything",
-        "url": "https://www.polygon.com/mass-effect-commander-shepard-jennifer-hale-mark-meer-interview-n7-day-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Wardogs Season 3 Will Add A Mode That Limits What Weapons Players Can Use",
-        "url": "https://www.polygon.com/wardogs-season-3-reveal/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Path of Exile 2 Sets The Stage For Massive Update Alongside December Launch",
-        "url": "https://www.polygon.com/path-of-exile-2-launch-update/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GI Joe and Paranormal Activity Get New Official Release Dates from Paramount",
-        "url": "https://www.polygon.com/paramount-gi-joe-release-date-paranormal-activity-delay/",
         "source": "Polygon"
       }
     ],
