@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-11-07T01:41:23.621677",
-    "total_items": 65
+    "last_updated": "2026-11-07T08:27:30.100711",
+    "total_items": 62
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Libghostty 1.0",
         "url": "https://mitchellh.com/writing/libghostty-1-0",
         "source": "Hacker News",
-        "score": 153
+        "score": 546
+      },
+      {
+        "title": "A barbarian tribe's mythic origin story is true, ancient DNA reveals",
+        "url": "https://www.science.org/content/article/barbarian-tribe-s-mythic-origin-story-true-ancient-dna-reveals",
+        "source": "Hacker News",
+        "score": 69
+      },
+      {
+        "title": "Asahi Linux Progress Linux 7.3",
+        "url": "https://asahilinux.org/2026/11/progress-report-7-3/",
+        "source": "Hacker News",
+        "score": 127
       },
       {
         "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
         "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
         "source": "Hacker News",
-        "score": 326
+        "score": 449
       },
       {
         "title": "Tesla to wind down Cybertruck production",
         "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
         "source": "Hacker News",
-        "score": 837
+        "score": 984
       },
       {
-        "title": "Firecracker VM Escape: PwnEscape Part 2",
-        "url": "https://pwn.ai/blog/firecracker-escape",
+        "title": "The Components of Agent Memory",
+        "url": "https://www.anthropic.com/research/components-of-agent-memory",
         "source": "Hacker News",
-        "score": 170
+        "score": 15
+      },
+      {
+        "title": "RealPage rent-pricing case wraps with nearly $360M to renters",
+        "url": "https://www.multifamilydive.com/news/realpage-rent-pricing-case-360m-renters/873553/",
+        "source": "Hacker News",
+        "score": 113
       },
       {
         "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
         "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
         "source": "Hacker News",
-        "score": 275
+        "score": 328
+      },
+      {
+        "title": "Firecracker VM Escape: PwnEscape Part 2",
+        "url": "https://pwn.ai/blog/firecracker-escape",
+        "source": "Hacker News",
+        "score": 222
+      },
+      {
+        "title": "Greece has its own Pompeii: Thera buried Akrotiri in ash 17th-16th century BCE",
+        "url": "https://www.smithsonianmag.com/history/greece-has-its-own-pompeii-and-the-ruins-tell-a-captivating-story-of-a-sophisticated-seafaring-bronze-age-society-180989747/",
+        "source": "Hacker News",
+        "score": 83
+      },
+      {
+        "title": "The Flash C Compiler",
+        "url": "https://blog.adafruit.com/2026/10/31/flash-c-compiler/",
+        "source": "Hacker News",
+        "score": 36
+      },
+      {
+        "title": "Notes on San Marino",
+        "url": "https://mattlakeman.org/2026/11/05/notes-on-san-marino/",
+        "source": "Hacker News",
+        "score": 55
       },
       {
         "title": "AI is dramatically accelerating AI research",
         "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
         "source": "Hacker News",
-        "score": 197
-      },
-      {
-        "title": "I Toured Unitree's Factory. I'm More Bullish on the West",
-        "url": "https://josef.cn/blog/unitree",
-        "source": "Hacker News",
-        "score": 4
-      },
-      {
-        "title": "Outbound SIP calling is now available to all organizations",
-        "url": "https://developers.openai.com/api/docs/guides/voice-sip",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "Sodium-ion batteries approach cost parity with LFP",
-        "url": "https://www.pv-magazine.com/2026/11/06/sodium-ion-batteries-approach-cost-parity-with-lfp-with-70-gwh-covered-by-supply-agreements/",
-        "source": "Hacker News",
-        "score": 118
+        "score": 284
       },
       {
         "title": "First steps in bare-metal programming using UEFI",
         "url": "https://kevinboone.me/efitest_index.html",
         "source": "Hacker News",
-        "score": 188
+        "score": 218
       },
       {
         "title": "Can GROUP BY still be optimized after all these years?",
         "url": "https://pivotlake.io/blog/know-your-limit-faster-top-k-aggregation/",
         "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "Restaurant Delivery Payment-Skimming Campaign",
-        "url": "https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming",
-        "source": "Hacker News",
-        "score": 89
-      },
-      {
-        "title": "Devvm.dev: One VM for every project",
-        "url": "https://devvm.dev/",
-        "source": "Hacker News",
-        "score": 114
-      },
-      {
-        "title": "Google has acquired Crusoe's data center site in southeast Wyoming",
-        "url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update",
-        "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "ChatGPT silently passes data between connectors and the bounty wants an ID card",
-        "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053",
-        "source": "Hacker News",
-        "score": 69
+        "score": 78
       }
     ],
     "ai": [
@@ -101,67 +101,61 @@
         "title": "Libghostty 1.0",
         "url": "https://mitchellh.com/writing/libghostty-1-0",
         "source": "Hacker News AI",
-        "score": 153
+        "score": 546
       },
       {
         "title": "Tesla to wind down Cybertruck production",
         "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
         "source": "Hacker News AI",
-        "score": 837
+        "score": 984
       },
       {
         "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
         "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
         "source": "Hacker News AI",
-        "score": 275
+        "score": 328
       },
       {
         "title": "AI is dramatically accelerating AI research",
         "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
         "source": "Hacker News AI",
-        "score": 197
-      },
-      {
-        "title": "Outbound SIP calling is now available to all organizations",
-        "url": "https://developers.openai.com/api/docs/guides/voice-sip",
-        "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "Restaurant Delivery Payment-Skimming Campaign",
-        "url": "https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming",
-        "source": "Hacker News AI",
-        "score": 89
-      },
-      {
-        "title": "ChatGPT silently passes data between connectors and the bounty wants an ID card",
-        "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053",
-        "source": "Hacker News AI",
-        "score": 69
-      },
-      {
-        "title": "Gemini Omni 1.2 Flash",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-        "source": "Hacker News AI",
-        "score": 295
-      },
-      {
-        "title": "Memorilla: Latent Semantic Memory for LLMs",
-        "url": "https://arxiv.org/abs/2610.21375",
-        "source": "Hacker News AI",
-        "score": 86
+        "score": 284
       },
       {
         "title": "GitHub's new Git storage architecture",
         "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
         "source": "Hacker News AI",
-        "score": 56
+        "score": 130
+      },
+      {
+        "title": "Gemini Omni 1.2 Flash",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+        "source": "Hacker News AI",
+        "score": 325
+      },
+      {
+        "title": "Restaurant Delivery Payment-Skimming Campaign",
+        "url": "https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming",
+        "source": "Hacker News AI",
+        "score": 118
       },
       {
         "title": "Anthropic IPO buyers see valuation as low as $1.1T",
         "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
         "source": "Hacker News AI",
-        "score": 227
+        "score": 274
+      },
+      {
+        "title": "Claude Code sends your email address to websites",
+        "url": "https://github.com/anthropics/claude-code/issues/107757",
+        "source": "Hacker News AI",
+        "score": 1569
+      },
+      {
+        "title": "Memorilla: Latent Semantic Memory for LLMs",
+        "url": "https://arxiv.org/abs/2610.21375",
+        "source": "Hacker News AI",
+        "score": 104
       },
       {
         "title": "UpCodes (YC S17) is hiring SDR's to sell AI compliance software",
@@ -170,22 +164,16 @@
         "score": 1
       },
       {
-        "title": "40C3 halfnarp – Submit talk preferences to aid scheduling",
-        "url": "https://halfnarp.events.ccc.de",
+        "title": "Ozempic-style drugs now in trials for heart failure, addiction and even aging",
+        "url": "https://maccus.fr/en/ozempic-drugs-trials-beyond-diabetes/",
         "source": "Hacker News AI",
-        "score": 44
+        "score": 69
       },
       {
         "title": "Living beyond the limits of survival: wood ants trapped in a gigantic pitfall (2016)",
         "url": "https://jhr.pensoft.net/articles.php?id=9096",
         "source": "Hacker News AI",
-        "score": 161
-      },
-      {
-        "title": "Ozempic-style drugs now in trials for heart failure, addiction and even aging",
-        "url": "https://maccus.fr/en/ozempic-drugs-trials-beyond-diabetes/",
-        "source": "Hacker News AI",
-        "score": 47
+        "score": 171
       }
     ],
     "news": [
@@ -200,8 +188,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Two dead after bus crashes in France, officials say",
-        "url": "https://www.bbc.co.uk/news/articles/cmly00l4p3lwo?at_medium=RSS&at_campaign=rss",
+        "title": "Pope in 'pretty good health' as he starts Latin America tour",
+        "url": "https://www.bbc.co.uk/news/articles/c60e0001ve9wo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -218,14 +206,14 @@
         "title": "Spain's rail authorities face European fraud probe after Urda rail disaster",
         "url": "https://www.bbc.co.uk/news/articles/c6x2wwnz5445o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Judge blocks construction of Trump's massive arch after federal agency approval",
-        "url": "https://www.bbc.co.uk/news/articles/cq99zd93ryvko?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The \"ruined\" GTA VI advert controversy is pretty ironic ",
+        "url": "https://www.creativebloq.com/news/the-tagged-gta-vi-advert-controversy-is-pretty-ironic",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Maxon aims to make 3D creation feel more natural with ZBrush and Cinema4D for the PROLED XDR MacBook and Apple Vision pro ",
         "url": "https://www.creativebloq.com/news/maxon-aims-to-make-3d-creation-feel-more-natural-with-zbrush-and-cinema4d-for-the-proled-xdr-macbook-and-apple-vision-pro",
@@ -254,11 +242,6 @@
       {
         "title": " \"More than an absence of colour\": 4 artists reveal the keys to working in black and white ",
         "url": "https://www.creativebloq.com/features/more-than-an-absence-of-colour-4-artists-reveal-how-to-work-in-black-and-white",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Get 78% off Bluehost AI website builder and hosting ",
-        "url": "https://www.creativebloq.com/deals/get-78-percent-off-bluehost-ai-website-builder-and-hosting",
         "source": "Creative Bloq"
       }
     ],
@@ -301,6 +284,26 @@
     ],
     "gaming": [
       {
+        "title": "The 8 Best Castlevania Games Of All Time, Ranked",
+        "url": "https://www.polygon.com/best-castlevania-games/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Essential GBA Games Still Disappointingly Missing From Nintendo Switch Online",
+        "url": "https://www.polygon.com/game-boy-advance-games-missing-nintendo-switch-online/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Devastating Game Cancellations That Are Still Disappointing Years Later",
+        "url": "https://www.polygon.com/game-cancellations/",
+        "source": "Polygon"
+      },
+      {
+        "title": "GTA 6's Biggest Competition Officially Arrives on PC in 2027",
+        "url": "https://www.polygon.com/ananta-anime-gta-pc-ps5-release-date-2027-netease-games/",
+        "source": "Polygon"
+      },
+      {
         "title": "Ryan Gosling is Officially Reviving The Flintstones for New Project",
         "url": "https://www.polygon.com/ryan-gosling-flintstones-bamm-bamm-movie/",
         "source": "Polygon"
@@ -313,26 +316,6 @@
       {
         "title": "All Happy Mask Shop buyer locations in Zelda Ocarina of Time",
         "url": "https://www.polygon.com/zelda-ocarina-of-time-happy-mask-shop-spooky-skull-bunny-hood/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Where to get Epona in Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-epona-horse-how-to-get/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 New Movies to Watch This Weekend on Netflix, Prime Video, and Peacock (November 6 - 8)",
-        "url": "https://www.polygon.com/new-movies-streaming-this-weekend-netflix-november-6-8/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All Big Poe locations in Zelda Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-big-poe-locations-rewards/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Where to get an offering fish for Jabu-Jabu in Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-jabu-jabu-fish-offering-where-to-get/",
         "source": "Polygon"
       }
     ],
