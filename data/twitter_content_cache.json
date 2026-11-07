@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-11-07T08:27:30.100711",
+    "last_updated": "2026-11-07T15:29:27.412103",
     "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "The $8 Linux Computer (2022)",
+        "url": "http://thelittleengineerthatcould.blogspot.com/2022/12/the-8-linux-computer.html",
+        "source": "Hacker News",
+        "score": 36
+      },
+      {
+        "title": "Need for Speed Underground 2 online in the browser",
+        "url": "https://nfsu2.xyz/",
+        "source": "Hacker News",
+        "score": 345
+      },
+      {
         "title": "Libghostty 1.0",
         "url": "https://mitchellh.com/writing/libghostty-1-0",
         "source": "Hacker News",
-        "score": 546
+        "score": 847
       },
       {
-        "title": "A barbarian tribe's mythic origin story is true, ancient DNA reveals",
-        "url": "https://www.science.org/content/article/barbarian-tribe-s-mythic-origin-story-true-ancient-dna-reveals",
+        "title": "Every Mac comes with an (undocumented) family member classifier",
+        "url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
         "source": "Hacker News",
-        "score": 69
+        "score": 324
       },
       {
-        "title": "Asahi Linux Progress Linux 7.3",
-        "url": "https://asahilinux.org/2026/11/progress-report-7-3/",
+        "title": "Running a law firm on Free software",
+        "url": "https://decoded.legal/blog/2026/11/running-a-law-firm-on-free-software-2026-edition/",
         "source": "Hacker News",
-        "score": 127
-      },
-      {
-        "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
-        "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
-        "source": "Hacker News",
-        "score": 449
+        "score": 79
       },
       {
         "title": "Tesla to wind down Cybertruck production",
         "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
         "source": "Hacker News",
-        "score": 984
+        "score": 1078
       },
       {
-        "title": "The Components of Agent Memory",
-        "url": "https://www.anthropic.com/research/components-of-agent-memory",
+        "title": "British Library Legal deposit and web archiving",
+        "url": "https://www.bl.uk/services/legal-deposit/web-archiving",
         "source": "Hacker News",
-        "score": 15
+        "score": 13
       },
       {
-        "title": "RealPage rent-pricing case wraps with nearly $360M to renters",
-        "url": "https://www.multifamilydive.com/news/realpage-rent-pricing-case-360m-renters/873553/",
+        "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
+        "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
         "source": "Hacker News",
-        "score": 113
+        "score": 531
       },
       {
-        "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
-        "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
+        "title": "Building the NBC News Big Board",
+        "url": "https://ejfox.com/projects/nbc-big-board",
         "source": "Hacker News",
-        "score": 328
+        "score": 26
       },
       {
-        "title": "Firecracker VM Escape: PwnEscape Part 2",
-        "url": "https://pwn.ai/blog/firecracker-escape",
+        "title": "ToothPaste",
+        "url": "https://brisk4t.github.io/blog/toothpaste/",
         "source": "Hacker News",
-        "score": 222
+        "score": 42
+      },
+      {
+        "title": "Show HN: Spindle – a full-featured, type-safe web framework for OCaml 5",
+        "url": "https://github.com/hyphatech/spindle",
+        "source": "Hacker News",
+        "score": 25
       },
       {
         "title": "Greece has its own Pompeii: Thera buried Akrotiri in ash 17th-16th century BCE",
         "url": "https://www.smithsonianmag.com/history/greece-has-its-own-pompeii-and-the-ruins-tell-a-captivating-story-of-a-sophisticated-seafaring-bronze-age-society-180989747/",
         "source": "Hacker News",
-        "score": 83
+        "score": 156
       },
       {
-        "title": "The Flash C Compiler",
-        "url": "https://blog.adafruit.com/2026/10/31/flash-c-compiler/",
+        "title": "The Components of Agent Memory",
+        "url": "https://www.anthropic.com/research/components-of-agent-memory",
         "source": "Hacker News",
-        "score": 36
+        "score": 91
       },
       {
-        "title": "Notes on San Marino",
-        "url": "https://mattlakeman.org/2026/11/05/notes-on-san-marino/",
+        "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
+        "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
         "source": "Hacker News",
-        "score": 55
+        "score": 367
       },
       {
-        "title": "AI is dramatically accelerating AI research",
-        "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+        "title": "RealPage rent-pricing case wraps with nearly $360M to renters",
+        "url": "https://www.multifamilydive.com/news/realpage-rent-pricing-case-360m-renters/873553/",
         "source": "Hacker News",
-        "score": 284
-      },
-      {
-        "title": "First steps in bare-metal programming using UEFI",
-        "url": "https://kevinboone.me/efitest_index.html",
-        "source": "Hacker News",
-        "score": 218
-      },
-      {
-        "title": "Can GROUP BY still be optimized after all these years?",
-        "url": "https://pivotlake.io/blog/know-your-limit-faster-top-k-aggregation/",
-        "source": "Hacker News",
-        "score": 78
+        "score": 148
       }
     ],
     "ai": [
@@ -101,61 +101,43 @@
         "title": "Libghostty 1.0",
         "url": "https://mitchellh.com/writing/libghostty-1-0",
         "source": "Hacker News AI",
-        "score": 546
+        "score": 847
       },
       {
         "title": "Tesla to wind down Cybertruck production",
         "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
         "source": "Hacker News AI",
-        "score": 984
+        "score": 1078
       },
       {
         "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
         "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
         "source": "Hacker News AI",
-        "score": 328
-      },
-      {
-        "title": "AI is dramatically accelerating AI research",
-        "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
-        "source": "Hacker News AI",
-        "score": 284
+        "score": 367
       },
       {
         "title": "GitHub's new Git storage architecture",
         "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
         "source": "Hacker News AI",
-        "score": 130
+        "score": 179
       },
       {
         "title": "Gemini Omni 1.2 Flash",
         "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
         "source": "Hacker News AI",
-        "score": 325
+        "score": 352
       },
       {
         "title": "Restaurant Delivery Payment-Skimming Campaign",
         "url": "https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming",
         "source": "Hacker News AI",
-        "score": 118
-      },
-      {
-        "title": "Anthropic IPO buyers see valuation as low as $1.1T",
-        "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
-        "source": "Hacker News AI",
-        "score": 274
+        "score": 149
       },
       {
         "title": "Claude Code sends your email address to websites",
         "url": "https://github.com/anthropics/claude-code/issues/107757",
         "source": "Hacker News AI",
-        "score": 1569
-      },
-      {
-        "title": "Memorilla: Latent Semantic Memory for LLMs",
-        "url": "https://arxiv.org/abs/2610.21375",
-        "source": "Hacker News AI",
-        "score": 104
+        "score": 1581
       },
       {
         "title": "UpCodes (YC S17) is hiring SDR's to sell AI compliance software",
@@ -164,27 +146,50 @@
         "score": 1
       },
       {
+        "title": "AI is dramatically accelerating AI research",
+        "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+        "source": "Hacker News AI",
+        "score": 340
+      },
+      {
         "title": "Ozempic-style drugs now in trials for heart failure, addiction and even aging",
         "url": "https://maccus.fr/en/ozempic-drugs-trials-beyond-diabetes/",
         "source": "Hacker News AI",
-        "score": 69
+        "score": 91
       },
       {
         "title": "Living beyond the limits of survival: wood ants trapped in a gigantic pitfall (2016)",
         "url": "https://jhr.pensoft.net/articles.php?id=9096",
         "source": "Hacker News AI",
-        "score": 171
+        "score": 175
+      },
+      {
+        "title": "Memorilla: Latent Semantic Memory for LLMs",
+        "url": "https://arxiv.org/abs/2610.21375",
+        "source": "Hacker News AI",
+        "score": 112
+      },
+      {
+        "title": "Anthropic IPO buyers see valuation as low as $1.1T",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
+        "source": "Hacker News AI",
+        "score": 292
       }
     ],
     "news": [
       {
-        "title": "AI stocks climb after trillions wiped from market values",
-        "url": "https://www.bbc.co.uk/news/articles/c35ynnpzdq51o?at_medium=RSS&at_campaign=rss",
+        "title": "No clear winner after tight New Zealand general election",
+        "url": "https://www.bbc.co.uk/news/articles/c3ewev11g1e0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Four midterms takeaways for 2028 White House race",
-        "url": "https://www.bbc.co.uk/news/articles/cq1m41n3v7mmo?at_medium=RSS&at_campaign=rss",
+        "title": "With Stephen Miller pick, Trump readies for a battle",
+        "url": "https://www.bbc.co.uk/news/articles/crp3gg2z171go?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Russian strikes wound nine and damage Ukraine's power network ahead of talks",
+        "url": "https://www.bbc.co.uk/news/articles/cm4g1nq8158po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -193,55 +198,50 @@
         "source": "BBC World"
       },
       {
-        "title": "New wave of bomb threats hit European airlines",
-        "url": "https://www.bbc.co.uk/news/articles/cq62yy064vjpo?at_medium=RSS&at_campaign=rss",
+        "title": "Meghan's father Thomas Markle under house arrest after child sex abuse material charge",
+        "url": "https://www.bbc.co.uk/news/articles/cqgkvv8m8pgyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Kenyan doomsday cult leader given life sentence for murdering 191 people",
-        "url": "https://www.bbc.co.uk/news/articles/cm5yne5984l0o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Spain's rail authorities face European fraud probe after Urda rail disaster",
-        "url": "https://www.bbc.co.uk/news/articles/c6x2wwnz5445o?at_medium=RSS&at_campaign=rss",
+        "title": "AI stocks climb after trillions wiped from market values",
+        "url": "https://www.bbc.co.uk/news/articles/c35ynnpzdq51o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
+        "title": " The world's biggest library of scanned 3D assets is now free – and it seems that this time it's for good ",
+        "url": "https://www.creativebloq.com/news/the-worlds-biggest-library-of-scanned-assets-for-3d-artists-is-now-free-and-it-seems-that-this-time-its-for-good",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Apple sit down, Sony just won the wired headphone trend ",
+        "url": "https://www.creativebloq.com/news/apple-sit-down-sony-just-won-the-wired-headphone-trend",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Wacom’s iPad alternative just got cheaper, and the case is thrown in ",
+        "url": "https://www.creativebloq.com/deals/wacoms-ipad-alternative-just-got-cheaper-and-the-case-is-thrown-in",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The new MacBook Pro's touchscreen isn't even it's best feature ",
+        "url": "https://www.creativebloq.com/news/lets-stop-obsessing-over-the-new-macbook-pros-touchscreen-it-isnt-even-the-best-new-feature",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The volleyball World Cup logo looks... wrong ",
+        "url": "https://www.creativebloq.com/news/the-volleyball-world-cup-logo-looks-wrong",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " 2026 is the year of the majestic movie title card ",
+        "url": "https://www.creativebloq.com/features/2026-is-the-year-of-the-majestic-movie-title-card",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " The \"ruined\" GTA VI advert controversy is pretty ironic ",
         "url": "https://www.creativebloq.com/news/the-tagged-gta-vi-advert-controversy-is-pretty-ironic",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Maxon aims to make 3D creation feel more natural with ZBrush and Cinema4D for the PROLED XDR MacBook and Apple Vision pro ",
-        "url": "https://www.creativebloq.com/news/maxon-aims-to-make-3d-creation-feel-more-natural-with-zbrush-and-cinema4d-for-the-proled-xdr-macbook-and-apple-vision-pro",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Cybertruck is dead – what went wrong? ",
-        "url": "https://www.creativebloq.com/news/its-over-babe-the-cybertruck-era-is-dead",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Which is the best iPad to buy right now? After 16 years of using them, this is our take ",
-        "url": "https://www.creativebloq.com/buying-guides/which-is-the-best-ipad-to-buy-right-now-after-16-years-of-using-them-this-is-our-take",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These early Black Friday iPad deals have changed my go-to iPad recommendation ",
-        "url": "https://www.creativebloq.com/deals/these-early-black-friday-ipad-deals-have-changed-my-go-to-ipad-recommendation",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " e.l.f.’s stop-motion Christmas ad is a win for human creativity ",
-        "url": "https://www.creativebloq.com/features/e-l-f-s-stop-motion-christmas-ad-is-a-win-for-human-creativity",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " \"More than an absence of colour\": 4 artists reveal the keys to working in black and white ",
-        "url": "https://www.creativebloq.com/features/more-than-an-absence-of-colour-4-artists-reveal-how-to-work-in-black-and-white",
         "source": "Creative Bloq"
       }
     ],
@@ -249,6 +249,11 @@
       {
         "title": "Major trial challenges how doctors decide who really needs statins",
         "url": "https://www.sciencedaily.com/releases/2026/11/261105224604.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Drinking 2–3 cups of coffee a day linked to dramatically lower dementia risk",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261105224550.htm",
         "source": "Science Daily"
       },
       {
@@ -275,47 +280,42 @@
         "title": "An anti-aging drug may help protect the brain before Alzheimer's symptoms begin",
         "url": "https://www.sciencedaily.com/releases/2026/11/261104084017.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "SLAC scientists find conclusive proof of a mysterious third type of magnetism",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261104012256.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "The 8 Best Castlevania Games Of All Time, Ranked",
-        "url": "https://www.polygon.com/best-castlevania-games/",
+        "title": "World of Warcraft Forever Officially Breaks Records For The 22-Year-Old MMO",
+        "url": "https://www.polygon.com/world-of-warcraft-forever-record-breaking-launch/",
         "source": "Polygon"
       },
       {
-        "title": "10 Essential GBA Games Still Disappointingly Missing From Nintendo Switch Online",
-        "url": "https://www.polygon.com/game-boy-advance-games-missing-nintendo-switch-online/",
+        "title": "One Of Hollywood's Biggest Stars Just Auditioned For James Bond",
+        "url": "https://www.polygon.com/james-bond-robert-pattinson/",
         "source": "Polygon"
       },
       {
-        "title": "10 Devastating Game Cancellations That Are Still Disappointing Years Later",
-        "url": "https://www.polygon.com/game-cancellations/",
+        "title": "Ridley Scott’s R-Rated Sci-Fi Masterpiece is Officially Being Cut From Netflix",
+        "url": "https://www.polygon.com/alien-ridley-scott-sci-fi-movie-streaming-december-2026/",
         "source": "Polygon"
       },
       {
-        "title": "GTA 6's Biggest Competition Officially Arrives on PC in 2027",
-        "url": "https://www.polygon.com/ananta-anime-gta-pc-ps5-release-date-2027-netease-games/",
+        "title": "10 Funniest 'Far Side' Comics About Cows",
+        "url": "https://www.polygon.com/funniest-far-side-comics-cows/",
         "source": "Polygon"
       },
       {
-        "title": "Ryan Gosling is Officially Reviving The Flintstones for New Project",
-        "url": "https://www.polygon.com/ryan-gosling-flintstones-bamm-bamm-movie/",
+        "title": "Mass Effect’s Cruelest Moral Choice Remains Gaming's Most Haunting Mission 19 Years Later",
+        "url": "https://www.polygon.com/mass-effect-homecoming-samesh-bhatia-choice/",
         "source": "Polygon"
       },
       {
-        "title": "Every GTA Game, Ranked by Metacritic Score",
-        "url": "https://www.polygon.com/gta-games-ranked-metacritic-scores/",
+        "title": "Sydney Sweeney's New Netflix Sci-Fi Epic Is Mandatory Viewing For Transformers Fans",
+        "url": "https://www.polygon.com/sydney-sweeney-gundam-netflix-transformers-sci-fi-epic/",
         "source": "Polygon"
       },
       {
-        "title": "All Happy Mask Shop buyer locations in Zelda Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-happy-mask-shop-spooky-skull-bunny-hood/",
+        "title": "Magic: The Gathering Star Trek Perfectly Captures the Sci-Fi Show’s Most Brutal Running Joke",
+        "url": "https://www.polygon.com/star-trek-redshirts-tokens-explainer/",
         "source": "Polygon"
       }
     ],
