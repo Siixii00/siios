@@ -1,185 +1,181 @@
 {
   "metadata": {
-    "last_updated": "2026-11-07T15:29:27.412103",
-    "total_items": 62
+    "last_updated": "2026-11-07T19:57:18.457150",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
+        "title": "The end of Microsoft Research's AI Frontiers group",
+        "url": "https://hunch.net/?p=13764006",
+        "source": "Hacker News",
+        "score": 148
+      },
+      {
+        "title": "What I run on my $10 USD OpenStick homelab",
+        "url": "https://blog.bosscher.ch/posts/openstick/",
+        "source": "Hacker News",
+        "score": 91
+      },
+      {
+        "title": "Apple’s grey list: Words and phrases your iPhone won’t help you spell",
+        "url": "https://www.theguardian.com/technology/2026/nov/06/struggling-to-spell-male-chauvinist-pig-apple-grey-list-means-your-iphone-wont-help-you",
+        "source": "Hacker News",
+        "score": 117
+      },
+      {
+        "title": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller",
+        "url": "https://github.com/hedgerow-dev/coldframe",
+        "source": "Hacker News",
+        "score": 102
+      },
+      {
+        "title": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
+        "url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
+        "source": "Hacker News",
+        "score": 79
+      },
+      {
         "title": "The $8 Linux Computer (2022)",
         "url": "http://thelittleengineerthatcould.blogspot.com/2022/12/the-8-linux-computer.html",
         "source": "Hacker News",
-        "score": 36
+        "score": 165
+      },
+      {
+        "title": "Five memorable books about programming (2008)",
+        "url": "https://prog21.dadgum.com/19.html",
+        "source": "Hacker News",
+        "score": 34
       },
       {
         "title": "Need for Speed Underground 2 online in the browser",
         "url": "https://nfsu2.xyz/",
         "source": "Hacker News",
-        "score": 345
+        "score": 620
       },
       {
-        "title": "Libghostty 1.0",
-        "url": "https://mitchellh.com/writing/libghostty-1-0",
+        "title": "The Typo Generation Is Damaging Literature",
+        "url": "https://www.metropolitanreview.org/p/the-typo-generation-is-damaging-literature",
         "source": "Hacker News",
-        "score": 847
+        "score": 21
+      },
+      {
+        "title": "How Long Can Life Wait?",
+        "url": "https://mceglowski.substack.com/p/how-long-can-life-wait",
+        "source": "Hacker News",
+        "score": 77
       },
       {
         "title": "Every Mac comes with an (undocumented) family member classifier",
         "url": "https://8rank.ai/game/apple-intelligence-personal-knowledge-graph",
         "source": "Hacker News",
-        "score": 324
+        "score": 483
+      },
+      {
+        "title": "Every processor die anyone has photographed and given away",
+        "url": "https://sheets.works/data-viz/cpu-dies",
+        "source": "Hacker News",
+        "score": 36
+      },
+      {
+        "title": "Libghostty 1.0",
+        "url": "https://mitchellh.com/writing/libghostty-1-0",
+        "source": "Hacker News",
+        "score": 965
+      },
+      {
+        "title": "Text.js: Build full-stack React apps that render inside console.log",
+        "url": "https://textjs.org/",
+        "source": "Hacker News",
+        "score": 59
       },
       {
         "title": "Running a law firm on Free software",
         "url": "https://decoded.legal/blog/2026/11/running-a-law-firm-on-free-software-2026-edition/",
         "source": "Hacker News",
-        "score": 79
-      },
-      {
-        "title": "Tesla to wind down Cybertruck production",
-        "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
-        "source": "Hacker News",
-        "score": 1078
-      },
-      {
-        "title": "British Library Legal deposit and web archiving",
-        "url": "https://www.bl.uk/services/legal-deposit/web-archiving",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
-        "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
-        "source": "Hacker News",
-        "score": 531
-      },
-      {
-        "title": "Building the NBC News Big Board",
-        "url": "https://ejfox.com/projects/nbc-big-board",
-        "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "ToothPaste",
-        "url": "https://brisk4t.github.io/blog/toothpaste/",
-        "source": "Hacker News",
-        "score": 42
-      },
-      {
-        "title": "Show HN: Spindle – a full-featured, type-safe web framework for OCaml 5",
-        "url": "https://github.com/hyphatech/spindle",
-        "source": "Hacker News",
-        "score": 25
-      },
-      {
-        "title": "Greece has its own Pompeii: Thera buried Akrotiri in ash 17th-16th century BCE",
-        "url": "https://www.smithsonianmag.com/history/greece-has-its-own-pompeii-and-the-ruins-tell-a-captivating-story-of-a-sophisticated-seafaring-bronze-age-society-180989747/",
-        "source": "Hacker News",
-        "score": 156
-      },
-      {
-        "title": "The Components of Agent Memory",
-        "url": "https://www.anthropic.com/research/components-of-agent-memory",
-        "source": "Hacker News",
-        "score": 91
-      },
-      {
-        "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
-        "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
-        "source": "Hacker News",
-        "score": 367
-      },
-      {
-        "title": "RealPage rent-pricing case wraps with nearly $360M to renters",
-        "url": "https://www.multifamilydive.com/news/realpage-rent-pricing-case-360m-renters/873553/",
-        "source": "Hacker News",
-        "score": 148
+        "score": 189
       }
     ],
     "ai": [
       {
+        "title": "The end of Microsoft Research's AI Frontiers group",
+        "url": "https://hunch.net/?p=13764006",
+        "source": "Hacker News AI",
+        "score": 148
+      },
+      {
+        "title": "How Long Can Life Wait?",
+        "url": "https://mceglowski.substack.com/p/how-long-can-life-wait",
+        "source": "Hacker News AI",
+        "score": 77
+      },
+      {
         "title": "Libghostty 1.0",
         "url": "https://mitchellh.com/writing/libghostty-1-0",
         "source": "Hacker News AI",
-        "score": 847
+        "score": 965
       },
       {
-        "title": "Tesla to wind down Cybertruck production",
-        "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+        "title": "Show HN: We compressed a 31B video+audio diffusion model to 14B, 6 steps, INT8",
+        "url": "https://github.com/Video-Rebirth/hyperflow-h3-flash",
         "source": "Hacker News AI",
-        "score": 1078
+        "score": 31
+      },
+      {
+        "title": "Optimising the Rail Cube",
+        "url": "https://owenlacey.dev/railcube-optimisation/post",
+        "source": "Hacker News AI",
+        "score": 19
       },
       {
         "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
         "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
         "source": "Hacker News AI",
-        "score": 367
+        "score": 399
+      },
+      {
+        "title": "Air holes turn silicon wafers into flat UV focusing mirrors for compact optics",
+        "url": "https://phys.org/news/2026-11-air-holes-silicon-wafers-flat.html",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "GitHub's new Git storage architecture",
         "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
         "source": "Hacker News AI",
-        "score": 179
-      },
-      {
-        "title": "Gemini Omni 1.2 Flash",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-        "source": "Hacker News AI",
-        "score": 352
-      },
-      {
-        "title": "Restaurant Delivery Payment-Skimming Campaign",
-        "url": "https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming",
-        "source": "Hacker News AI",
-        "score": 149
-      },
-      {
-        "title": "Claude Code sends your email address to websites",
-        "url": "https://github.com/anthropics/claude-code/issues/107757",
-        "source": "Hacker News AI",
-        "score": 1581
+        "score": 210
       },
       {
         "title": "UpCodes (YC S17) is hiring SDR's to sell AI compliance software",
         "url": "https://up.codes/careers?utm_source=HN",
         "source": "Hacker News AI",
         "score": 1
-      },
-      {
-        "title": "AI is dramatically accelerating AI research",
-        "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
-        "source": "Hacker News AI",
-        "score": 340
-      },
-      {
-        "title": "Ozempic-style drugs now in trials for heart failure, addiction and even aging",
-        "url": "https://maccus.fr/en/ozempic-drugs-trials-beyond-diabetes/",
-        "source": "Hacker News AI",
-        "score": 91
-      },
-      {
-        "title": "Living beyond the limits of survival: wood ants trapped in a gigantic pitfall (2016)",
-        "url": "https://jhr.pensoft.net/articles.php?id=9096",
-        "source": "Hacker News AI",
-        "score": 175
-      },
-      {
-        "title": "Memorilla: Latent Semantic Memory for LLMs",
-        "url": "https://arxiv.org/abs/2610.21375",
-        "source": "Hacker News AI",
-        "score": 112
-      },
-      {
-        "title": "Anthropic IPO buyers see valuation as low as $1.1T",
-        "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
-        "source": "Hacker News AI",
-        "score": 292
       }
     ],
     "news": [
       {
+        "title": "What we know so far after Polish gunman in military clothing opens fire in Krakow",
+        "url": "https://www.bbc.co.uk/news/articles/cmd7q15drwgeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "No clear winner after tight New Zealand general election",
         "url": "https://www.bbc.co.uk/news/articles/c3ewev11g1e0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "US offers $20m reward for information about Iran's nuclear programme",
+        "url": "https://www.bbc.co.uk/news/articles/c6d091ev3p0jo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Houthis say at least 25 killed in Saudi air strike",
+        "url": "https://www.bbc.co.uk/news/articles/c65yn1v99ypmo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "UK cannot 'cherry pick' EU single market deal, Barnier tells BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c9kgjj206nzpo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -188,23 +184,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Russian strikes wound nine and damage Ukraine's power network ahead of talks",
-        "url": "https://www.bbc.co.uk/news/articles/cm4g1nq8158po?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Pope in 'pretty good health' as he starts Latin America tour",
-        "url": "https://www.bbc.co.uk/news/articles/c60e0001ve9wo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Meghan's father Thomas Markle under house arrest after child sex abuse material charge",
-        "url": "https://www.bbc.co.uk/news/articles/cqgkvv8m8pgyo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "AI stocks climb after trillions wiped from market values",
-        "url": "https://www.bbc.co.uk/news/articles/c35ynnpzdq51o?at_medium=RSS&at_campaign=rss",
+        "title": "Paraguay's former president charged after bank collapse",
+        "url": "https://www.bbc.co.uk/news/articles/c68jzzvjgdy9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -284,38 +265,38 @@
     ],
     "gaming": [
       {
-        "title": "World of Warcraft Forever Officially Breaks Records For The 22-Year-Old MMO",
-        "url": "https://www.polygon.com/world-of-warcraft-forever-record-breaking-launch/",
+        "title": "Dropout’s Vic Michaelis Wants to Toss Their Star Wars Character Out a Window",
+        "url": "https://www.polygon.com/dropout-vic-michaelis-interview-star-wars-zero-company/",
         "source": "Polygon"
       },
       {
-        "title": "One Of Hollywood's Biggest Stars Just Auditioned For James Bond",
-        "url": "https://www.polygon.com/james-bond-robert-pattinson/",
+        "title": "I Wouldn’t Dream of Playing the Zelda: Ocarina of Time Remake Right Now",
+        "url": "https://www.polygon.com/switchboard-zelda-ocarina-of-time-switch-2-remake/",
         "source": "Polygon"
       },
       {
-        "title": "Ridley Scott’s R-Rated Sci-Fi Masterpiece is Officially Being Cut From Netflix",
-        "url": "https://www.polygon.com/alien-ridley-scott-sci-fi-movie-streaming-december-2026/",
+        "title": "Grand Theft Auto 6 Physical Copies Are Officially in the Wild",
+        "url": "https://www.polygon.com/gta-6-grand-theft-auto-physical-copies-retail/",
         "source": "Polygon"
       },
       {
-        "title": "10 Funniest 'Far Side' Comics About Cows",
-        "url": "https://www.polygon.com/funniest-far-side-comics-cows/",
+        "title": "Commander Shepard’s Actors Are ‘Wildly Hopeful’ for Mass Effect, Despite Everything",
+        "url": "https://www.polygon.com/mass-effect-commander-shepard-jennifer-hale-mark-meer-interview-n7-day-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Mass Effect’s Cruelest Moral Choice Remains Gaming's Most Haunting Mission 19 Years Later",
-        "url": "https://www.polygon.com/mass-effect-homecoming-samesh-bhatia-choice/",
+        "title": "Wardogs Season 3 Will Add A Mode That Limits What Weapons Players Can Use",
+        "url": "https://www.polygon.com/wardogs-season-3-reveal/",
         "source": "Polygon"
       },
       {
-        "title": "Sydney Sweeney's New Netflix Sci-Fi Epic Is Mandatory Viewing For Transformers Fans",
-        "url": "https://www.polygon.com/sydney-sweeney-gundam-netflix-transformers-sci-fi-epic/",
+        "title": "Path of Exile 2 Sets The Stage For Massive Update Alongside December Launch",
+        "url": "https://www.polygon.com/path-of-exile-2-launch-update/",
         "source": "Polygon"
       },
       {
-        "title": "Magic: The Gathering Star Trek Perfectly Captures the Sci-Fi Show’s Most Brutal Running Joke",
-        "url": "https://www.polygon.com/star-trek-redshirts-tokens-explainer/",
+        "title": "GI Joe and Paranormal Activity Get New Official Release Dates from Paramount",
+        "url": "https://www.polygon.com/paramount-gi-joe-release-date-paranormal-activity-delay/",
         "source": "Polygon"
       }
     ],
