@@ -1,131 +1,167 @@
 {
   "metadata": {
-    "last_updated": "2026-11-06T21:20:40.695333",
+    "last_updated": "2026-11-07T01:41:23.621677",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Libghostty 1.0",
+        "url": "https://mitchellh.com/writing/libghostty-1-0",
+        "source": "Hacker News",
+        "score": 153
+      },
+      {
         "title": "A Jev that can ask Opus for help gives Opus accuracy at 4x lower cost",
         "url": "https://hightouch.com/blog/llm-judges-identity-resolution",
         "source": "Hacker News",
-        "score": 116
+        "score": 326
+      },
+      {
+        "title": "Tesla to wind down Cybertruck production",
+        "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
+        "source": "Hacker News",
+        "score": 837
       },
       {
         "title": "Firecracker VM Escape: PwnEscape Part 2",
         "url": "https://pwn.ai/blog/firecracker-escape",
         "source": "Hacker News",
-        "score": 89
+        "score": 170
       },
       {
         "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
         "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
         "source": "Hacker News",
-        "score": 202
-      },
-      {
-        "title": "Tesla to wind down Cybertruck production",
-        "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
-        "source": "Hacker News",
-        "score": 670
+        "score": 275
       },
       {
         "title": "AI is dramatically accelerating AI research",
         "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
         "source": "Hacker News",
-        "score": 19
+        "score": 197
+      },
+      {
+        "title": "I Toured Unitree's Factory. I'm More Bullish on the West",
+        "url": "https://josef.cn/blog/unitree",
+        "source": "Hacker News",
+        "score": 4
+      },
+      {
+        "title": "Outbound SIP calling is now available to all organizations",
+        "url": "https://developers.openai.com/api/docs/guides/voice-sip",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "Sodium-ion batteries approach cost parity with LFP",
+        "url": "https://www.pv-magazine.com/2026/11/06/sodium-ion-batteries-approach-cost-parity-with-lfp-with-70-gwh-covered-by-supply-agreements/",
+        "source": "Hacker News",
+        "score": 118
       },
       {
         "title": "First steps in bare-metal programming using UEFI",
         "url": "https://kevinboone.me/efitest_index.html",
         "source": "Hacker News",
-        "score": 136
+        "score": 188
       },
       {
-        "title": "Blender's UI and Runtime: Much Faster Than GPUI",
-        "url": "https://github.com/ppmpreetham/BUI",
+        "title": "Can GROUP BY still be optimized after all these years?",
+        "url": "https://pivotlake.io/blog/know-your-limit-faster-top-k-aggregation/",
         "source": "Hacker News",
-        "score": 638
+        "score": 24
       },
       {
         "title": "Restaurant Delivery Payment-Skimming Campaign",
         "url": "https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming",
         "source": "Hacker News",
-        "score": 30
+        "score": 89
       },
       {
-        "title": "The Valley Bubble Breaks",
-        "url": "https://quirksmode.org/quirksblog/2026/1106-valley-bubble.html",
+        "title": "Devvm.dev: One VM for every project",
+        "url": "https://devvm.dev/",
         "source": "Hacker News",
-        "score": 9
+        "score": 114
       },
       {
-        "title": "My first and last telegram was from Rebecca West",
-        "url": "https://thelampmagazine.com/blog/rebecca-wests-nightingale",
+        "title": "Google has acquired Crusoe's data center site in southeast Wyoming",
+        "url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update",
         "source": "Hacker News",
-        "score": 21
+        "score": 37
       },
       {
-        "title": "Replit rebuilt its sandbox engine with microVMs",
-        "url": "https://frontier.replit.com/sandbox-engine-microvms-part-1/",
+        "title": "ChatGPT silently passes data between connectors and the bounty wants an ID card",
+        "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053",
         "source": "Hacker News",
-        "score": 18
-      },
-      {
-        "title": "Memorilla: Latent Semantic Memory for LLMs",
-        "url": "https://arxiv.org/abs/2610.21375",
-        "source": "Hacker News",
-        "score": 47
-      },
-      {
-        "title": "Size-It-Up (Game)",
-        "url": "https://magnitudle.com/size-it-up",
-        "source": "Hacker News",
-        "score": 44
-      },
-      {
-        "title": "Show HN: Waymark – A workflow engine that compiles jobs instead of replaying",
-        "url": "https://github.com/piercefreeman/waymark",
-        "source": "Hacker News",
-        "score": 9
-      },
-      {
-        "title": "UpCodes (YC S17) is hiring SDR's to sell AI compliance software",
-        "url": "https://up.codes/careers?utm_source=HN",
-        "source": "Hacker News",
-        "score": 1
+        "score": 69
       }
     ],
     "ai": [
       {
-        "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
-        "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
+        "title": "Libghostty 1.0",
+        "url": "https://mitchellh.com/writing/libghostty-1-0",
         "source": "Hacker News AI",
-        "score": 202
+        "score": 153
       },
       {
         "title": "Tesla to wind down Cybertruck production",
         "url": "https://www.nbcnews.com/tech/tech-news/tesla-wind-cybertruck-production-years-poor-sales-markets-rcna607817",
         "source": "Hacker News AI",
-        "score": 670
+        "score": 837
+      },
+      {
+        "title": "US FAA says it will phase out floppy disks from air traffic control by 2028",
+        "url": "https://www.reuters.com/world/us/us-faa-says-it-will-phase-out-floppy-disks-air-traffic-control-by-2028-2026-11-05/",
+        "source": "Hacker News AI",
+        "score": 275
       },
       {
         "title": "AI is dramatically accelerating AI research",
         "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 197
+      },
+      {
+        "title": "Outbound SIP calling is now available to all organizations",
+        "url": "https://developers.openai.com/api/docs/guides/voice-sip",
+        "source": "Hacker News AI",
+        "score": 29
       },
       {
         "title": "Restaurant Delivery Payment-Skimming Campaign",
         "url": "https://www.infohawk.com/news/2026-11-05-scamwich-restaurant-skimming",
         "source": "Hacker News AI",
-        "score": 30
+        "score": 89
+      },
+      {
+        "title": "ChatGPT silently passes data between connectors and the bounty wants an ID card",
+        "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053",
+        "source": "Hacker News AI",
+        "score": 69
+      },
+      {
+        "title": "Gemini Omni 1.2 Flash",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+        "source": "Hacker News AI",
+        "score": 295
       },
       {
         "title": "Memorilla: Latent Semantic Memory for LLMs",
         "url": "https://arxiv.org/abs/2610.21375",
         "source": "Hacker News AI",
-        "score": 47
+        "score": 86
+      },
+      {
+        "title": "GitHub's new Git storage architecture",
+        "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
+        "source": "Hacker News AI",
+        "score": 56
+      },
+      {
+        "title": "Anthropic IPO buyers see valuation as low as $1.1T",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
+        "source": "Hacker News AI",
+        "score": 227
       },
       {
         "title": "UpCodes (YC S17) is hiring SDR's to sell AI compliance software",
@@ -134,58 +170,22 @@
         "score": 1
       },
       {
-        "title": "Gemini Omni 1.2 Flash",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-        "source": "Hacker News AI",
-        "score": 260
-      },
-      {
         "title": "40C3 halfnarp – Submit talk preferences to aid scheduling",
         "url": "https://halfnarp.events.ccc.de",
         "source": "Hacker News AI",
-        "score": 24
-      },
-      {
-        "title": "Anthropic IPO buyers see valuation as low as $1.1T",
-        "url": "https://www.bloomberg.com/news/articles/2026-11-06/anthropic-ipo-valuation-expectations-pressured-after-ai-rout",
-        "source": "Hacker News AI",
-        "score": 130
-      },
-      {
-        "title": "SketchAgentBench – evaluate LLMs on 3D spatial reasoning",
-        "url": "https://sketchagent.dev/",
-        "source": "Hacker News AI",
-        "score": 5
+        "score": 44
       },
       {
         "title": "Living beyond the limits of survival: wood ants trapped in a gigantic pitfall (2016)",
         "url": "https://jhr.pensoft.net/articles.php?id=9096",
         "source": "Hacker News AI",
-        "score": 154
-      },
-      {
-        "title": "Microsoft is winding down Oracle deal to rent AI cloud capacity",
-        "url": "https://www.reuters.com/business/microsoft-is-winding-down-oracle-deal-rent-ai-cloud-capacity-bloomberg-news-2026-11-06/",
-        "source": "Hacker News AI",
-        "score": 68
+        "score": 161
       },
       {
         "title": "Ozempic-style drugs now in trials for heart failure, addiction and even aging",
         "url": "https://maccus.fr/en/ozempic-drugs-trials-beyond-diabetes/",
         "source": "Hacker News AI",
-        "score": 23
-      },
-      {
-        "title": "Claude Code sends your email address to websites",
-        "url": "https://github.com/anthropics/claude-code/issues/107757",
-        "source": "Hacker News AI",
-        "score": 1532
-      },
-      {
-        "title": "Reading the Anthropic S-1, with Zvi Mowshowitz",
-        "url": "https://www.complexsystemspodcast.com/episodes/reading-the-anthropic-s-1-with-zvi-mowshowitz/",
-        "source": "Hacker News AI",
-        "score": 19
+        "score": 47
       }
     ],
     "news": [
@@ -215,13 +215,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Judge blocks construction of Trump's massive arch after federal agency approval",
-        "url": "https://www.bbc.co.uk/news/articles/cq99zd93ryvko?at_medium=RSS&at_campaign=rss",
+        "title": "Spain's rail authorities face European fraud probe after Urda rail disaster",
+        "url": "https://www.bbc.co.uk/news/articles/c6x2wwnz5445o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Russian extremist group denies sending hoax bomb threats",
-        "url": "https://www.bbc.co.uk/news/articles/cm2d66n0lx1yo?at_medium=RSS&at_campaign=rss",
+        "title": "Judge blocks construction of Trump's massive arch after federal agency approval",
+        "url": "https://www.bbc.co.uk/news/articles/cq99zd93ryvko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -301,43 +301,48 @@
     ],
     "gaming": [
       {
-        "title": "Critical Role Officially Returns to Its Roots for New Campaign with Hololive",
-        "url": "https://www.polygon.com/critical-role-new-campaign-shattered-legends-hololive/",
+        "title": "Ryan Gosling is Officially Reviving The Flintstones for New Project",
+        "url": "https://www.polygon.com/ryan-gosling-flintstones-bamm-bamm-movie/",
         "source": "Polygon"
       },
       {
-        "title": "8 New TV Shows to Watch This Weekend on Netflix, HBO, and Apple TV (November 6 - 8)",
-        "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-november-6-8/",
+        "title": "Every GTA Game, Ranked by Metacritic Score",
+        "url": "https://www.polygon.com/gta-games-ranked-metacritic-scores/",
         "source": "Polygon"
       },
       {
-        "title": "All songs in Zelda Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-songs-list/",
+        "title": "All Happy Mask Shop buyer locations in Zelda Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-happy-mask-shop-spooky-skull-bunny-hood/",
         "source": "Polygon"
       },
       {
-        "title": "Where to find Princess Ruto in Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-oot-princess-ruto-location/",
+        "title": "Where to get Epona in Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-epona-horse-how-to-get/",
         "source": "Polygon"
       },
       {
-        "title": "All soft soil and Magic Bean planting locations in Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-soft-soil-fresh-magic-bean-location/",
+        "title": "10 New Movies to Watch This Weekend on Netflix, Prime Video, and Peacock (November 6 - 8)",
+        "url": "https://www.polygon.com/new-movies-streaming-this-weekend-netflix-november-6-8/",
         "source": "Polygon"
       },
       {
-        "title": "All Gold Skulltula locations in Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-gold-skulltula-token-locations-where-to-find/",
+        "title": "All Big Poe locations in Zelda Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-big-poe-locations-rewards/",
         "source": "Polygon"
       },
       {
-        "title": "Anne Hathaway and JJ Abrams Sci-Fi Thriller Sets Official HBO Max Streaming Date",
-        "url": "https://www.polygon.com/end-of-oak-street-anne-hathaway-hbo-max-streaming-date/",
+        "title": "Where to get an offering fish for Jabu-Jabu in Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-jabu-jabu-fish-offering-where-to-get/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "Beyond code generation: A developer’s guide to agentic engineering",
+        "url": "https://github.blog/ai-and-ml/github-copilot/beyond-code-generation-a-developers-guide-to-agentic-engineering/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "Inside GitHub’s new Git storage architecture",
         "url": "https://github.blog/engineering/architecture-optimization/inside-githubs-new-git-storage-architecture/",
@@ -366,11 +371,6 @@
       {
         "title": "Octoverse: Commits, pushes, reach new highs in 2026 as developers build with agents",
         "url": "https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "How bug bounty sharpens one researcher’s security skills",
-        "url": "https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/",
         "source": "GitHub Blog"
       }
     ]
