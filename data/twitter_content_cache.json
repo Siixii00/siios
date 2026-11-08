@@ -1,161 +1,165 @@
 {
   "metadata": {
-    "last_updated": "2026-11-08T11:45:12.656773",
-    "total_items": 59
+    "last_updated": "2026-11-08T17:42:59.790600",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Person of Interest",
-        "url": "https://krthr.co/person-of-interest/",
+        "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+        "url": "https://github.com/synchopate/llama-modchip",
         "source": "Hacker News",
-        "score": 23
+        "score": 204
       },
       {
-        "title": "Petered (what happens after the Peter Principle)",
-        "url": "https://aworkinglibrary.com/writing/petered",
+        "title": "The Reconstruction of Torn Documents",
+        "url": "https://www.bundesarchiv.de/en/stasi-records-archive/the-reconstruction-of-torn-documents/",
         "source": "Hacker News",
-        "score": 17
+        "score": 39
       },
       {
-        "title": "Goodbye Claude, Hello Pi",
+        "title": "Writing as a thinking tool",
+        "url": "http://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html",
+        "source": "Hacker News",
+        "score": 115
+      },
+      {
+        "title": "I'm not a fan of Deno's security model (2024)",
+        "url": "https://goldstein.lol/posts/deno-security/",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "Goodbye Claude, hello Pi",
         "url": "https://caleb.software/posts/claude-to-pi.html",
         "source": "Hacker News",
-        "score": 360
+        "score": 564
       },
       {
-        "title": "Agent memory needs its OpenTelemetry moment",
-        "url": "https://www.lorekit.io/blog/open-agent-memory-format",
+        "title": "Porting Android 16 to my blind mother's keypad phone",
+        "url": "https://z1x.us/blog/four-hundred-bucks-of-e-waste",
         "source": "Hacker News",
-        "score": 59
+        "score": 90
       },
       {
-        "title": "Clj.rs – a Clojure dialect implemented in Rust",
-        "url": "https://clj.rs/",
+        "title": "Show HN: Vegetable Gardening for Engineers",
+        "url": "https://jrcpl.us/contrib/2020/gardening-for-engineers/",
         "source": "Hacker News",
-        "score": 71
+        "score": 28
       },
       {
-        "title": "What I run on my $10 USD OpenStick homelab",
-        "url": "https://blog.bosscher.ch/posts/openstick/",
+        "title": "OpenAI raises $11B at a $1.25T valuation",
+        "url": "https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought/",
         "source": "Hacker News",
-        "score": 609
+        "score": 133
       },
       {
         "title": "JIT bitmap text rendering for microcontrollers",
         "url": "https://linebender.org/blog/jit-bitmap-text/",
         "source": "Hacker News",
-        "score": 5
+        "score": 67
+      },
+      {
+        "title": "What I run on my $10 USD OpenStick homelab",
+        "url": "https://blog.bosscher.ch/posts/openstick/",
+        "source": "Hacker News",
+        "score": 701
+      },
+      {
+        "title": "Clj.rs – a Clojure dialect implemented in Rust",
+        "url": "https://clj.rs/",
+        "source": "Hacker News",
+        "score": 125
       },
       {
         "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
         "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
         "source": "Hacker News",
-        "score": 427
+        "score": 506
       },
       {
-        "title": "Finding Xanadu: Inside a JRPG classic translation 15 years in the making",
-        "url": "https://readonlymemo.com/legend-of-xanadu-pc-engine-fan-translation-interview-making-of/",
+        "title": "Agent memory needs its OpenTelemetry moment",
+        "url": "https://www.lorekit.io/blog/open-agent-memory-format",
         "source": "Hacker News",
-        "score": 26
+        "score": 126
       },
       {
-        "title": "New typeface using intricate designs from Shakespeare's First Folio (2023)",
-        "url": "https://www.itsnicethat.com/news/typeland-shakespeares-globe-amifer-folio-graphic-design-090323",
+        "title": "How to prove equations using diagrams, part 1",
+        "url": "https://www.epatters.org/post/e-graphs-1/",
         "source": "Hacker News",
-        "score": 10
+        "score": 15
       },
       {
-        "title": "I'm Rewriting IBM SPSS Statistics in 100% Safe Rust, Alone",
-        "url": "https://github.com/kobaltgit/StatCraft",
+        "title": "Person of Interest",
+        "url": "https://krthr.co/person-of-interest/",
         "source": "Hacker News",
-        "score": 17
-      },
-      {
-        "title": "Kirlian Photography: Building Your Own Equipment",
-        "url": "https://imagesco.com/articles/kirlian/kirlian-photography.html",
-        "source": "Hacker News",
-        "score": 53
-      },
-      {
-        "title": "ISponsorBlockTV: SponsorBlock client for all YouTube TV clients",
-        "url": "https://github.com/dmunozv04/isponsorblocktv",
-        "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Need for Speed Underground 2 online in the browser",
-        "url": "https://nfsu2.xyz/",
-        "source": "Hacker News",
-        "score": 1007
-      },
-      {
-        "title": "Earliest evidence of cannabis use found in ancient Siberian tomb",
-        "url": "https://www.cnn.com/2026/11/05/science/ancient-cannabis-siberia-scli-intl",
-        "source": "Hacker News",
-        "score": 8
+        "score": 240
       }
     ],
     "ai": [
       {
-        "title": "Goodbye Claude, Hello Pi",
+        "title": "Goodbye Claude, hello Pi",
         "url": "https://caleb.software/posts/claude-to-pi.html",
         "source": "Hacker News AI",
-        "score": 360
+        "score": 564
+      },
+      {
+        "title": "OpenAI raises $11B at a $1.25T valuation",
+        "url": "https://247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought/",
+        "source": "Hacker News AI",
+        "score": 133
       },
       {
         "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
         "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
         "source": "Hacker News AI",
-        "score": 427
+        "score": 506
       },
       {
-        "title": "Consumer brain wave headsets threaten privacy",
-        "url": "https://www.science.org/content/article/wearable-device-makers-are-harvesting-brain-data-train-ai-without-telling-users?referrer=https%3A%2F%2Fwww.google.com%2F",
+        "title": "Drones built to look like birds evaded detection at Air Force tech exercise",
+        "url": "https://taskandpurpose.com/news/drone-mimicking-bird-test/",
         "source": "Hacker News AI",
-        "score": 68
+        "score": 32
       },
       {
-        "title": "GitHub Down Again?",
-        "url": "https://github.com/torvalds/linux",
+        "title": "Quadrillion-parameter transformers and how to train them",
+        "url": "https://qlabs.sh/research/parameters",
         "source": "Hacker News AI",
-        "score": 95
+        "score": 55
       },
       {
         "title": "Uranium cubes reveal why the German nuclear project failed",
         "url": "https://arstechnica.com/science/2026/11/uranium-cubes-reveal-why-the-german-nuclear-project-failed/",
         "source": "Hacker News AI",
-        "score": 147
+        "score": 194
+      },
+      {
+        "title": "Consumer brain wave headsets threaten privacy",
+        "url": "https://www.science.org/content/article/wearable-device-makers-are-harvesting-brain-data-train-ai-without-telling-users?referrer=https%3A%2F%2Fwww.google.com%2F",
+        "source": "Hacker News AI",
+        "score": 103
       },
       {
         "title": "The end of Microsoft Research's AI Frontiers group",
         "url": "https://hunch.net/?p=13764006",
         "source": "Hacker News AI",
-        "score": 466
-      },
-      {
-        "title": "How Long Can Life Wait?",
-        "url": "https://mceglowski.substack.com/p/how-long-can-life-wait",
-        "source": "Hacker News AI",
-        "score": 138
-      },
-      {
-        "title": "Retro Song Bird: Plug in any Game Boy cartridge to hear the soundtrack",
-        "url": "https://www.retrosongbird.com/",
-        "source": "Hacker News AI",
-        "score": 74
-      },
-      {
-        "title": "Libghostty 1.0",
-        "url": "https://mitchellh.com/writing/libghostty-1-0",
-        "source": "Hacker News AI",
-        "score": 1048
+        "score": 482
       }
     ],
     "news": [
       {
-        "title": "What we know so far after Krakow gun attack",
-        "url": "https://www.bbc.co.uk/news/articles/cmd7q15drwgeo?at_medium=RSS&at_campaign=rss",
+        "title": "Surgeon having lunch near Krakow shooting undoubtedly saved officer's life, colleague says",
+        "url": "https://www.bbc.co.uk/news/articles/c5x2vw4e1gx1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Homes and temples glow across India to mark Diwali",
+        "url": "https://www.bbc.co.uk/news/articles/cm70pdwz122ro?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Iran executes three men for 'armed unrest' after January protests",
+        "url": "https://www.bbc.co.uk/news/articles/ckly0ex633ydo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -169,27 +173,27 @@
         "source": "BBC World"
       },
       {
-        "title": "Israel's president tasks opposition leader Eisenkot with forming government",
-        "url": "https://www.bbc.co.uk/news/articles/cmy8367lj5xlo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "US offers $20m reward for information about Iran's nuclear programme",
-        "url": "https://www.bbc.co.uk/news/articles/c6d091ev3p0jo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "UK cannot 'cherry pick' EU single market deal, Barnier tells BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c9kgjj206nzpo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Paraguay's former president charged after bank collapse",
         "url": "https://www.bbc.co.uk/news/articles/c68jzzvjgdy9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Pope in 'pretty good health' as he starts Latin America tour",
+        "url": "https://www.bbc.co.uk/news/articles/c60e0001ve9wo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The ergonomic chair that got a rare 5-star Creative Bloq review is 10% cheaper for Black Friday ",
+        "url": "https://www.creativebloq.com/deals/the-ergonomic-chair-that-got-a-rare-5-star-creative-bloq-review-is-10-percent-cheaper-for-black-friday",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How to make a detailed 3D landscape using Photoshop, Cinema 4D and ZBrush ",
+        "url": "https://www.creativebloq.com/how-to/how-to-make-a-detailed-3d-landscape-using-photoshop-with-cinema-4d-and-zbrush",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The cleverest GTA VI adverts don't even show the game ",
         "url": "https://www.creativebloq.com/news/the-cleverest-gta-vi-adverts-dont-even-show-the-game",
@@ -213,16 +217,6 @@
       {
         "title": " The world's biggest library of scanned 3D assets is now free – and it seems that this time it's for good ",
         "url": "https://www.creativebloq.com/news/the-worlds-biggest-library-of-scanned-assets-for-3d-artists-is-now-free-and-it-seems-that-this-time-its-for-good",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple sit down, Sony just won the wired headphone trend ",
-        "url": "https://www.creativebloq.com/news/apple-sit-down-sony-just-won-the-wired-headphone-trend",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Wacom’s iPad alternative just got cheaper, and the case is thrown in ",
-        "url": "https://www.creativebloq.com/deals/wacoms-ipad-alternative-just-got-cheaper-and-the-case-is-thrown-in",
         "source": "Creative Bloq"
       }
     ],
@@ -265,38 +259,38 @@
     ],
     "gaming": [
       {
-        "title": "Matt Mercer's Best Critical Role Quote Is Still the Most Inspiring Line in D&D History",
-        "url": "https://www.polygon.com/matthew-mercer-dungeon-master-advice-dungeons-and-dragons/",
+        "title": "All map fragment locations in the Fortnite Chapter 7 mini season",
+        "url": "https://www.polygon.com/fortnite-chapter-7-mini-season-c7ms-map-fragment-locations/",
         "source": "Polygon"
       },
       {
-        "title": "68 Years Later, Peanuts’ Most Mysterious Character Is Finally Making Her Official Debut — But There's a Catch",
-        "url": "https://www.polygon.com/charlie-brown-pencil-pal-history-peanuts/",
+        "title": "All sprites in the Fortnite Chapter 7 mini season",
+        "url": "https://www.polygon.com/fortnite-chapter-7-mini-season-all-sprites-list-abilities/",
         "source": "Polygon"
       },
       {
-        "title": "Bethesda's Most Reviled Game Becomes a 10/10 If You Ignore the Story",
-        "url": "https://www.polygon.com/starfield-retrospective-bethesda-story/",
+        "title": "Godzilla Minus Zero Opening Weekend Box Office Breaks A Foreign-Language Film Records",
+        "url": "https://www.polygon.com/godzilla-minus-zero-opening-weekend-box-office/",
         "source": "Polygon"
       },
       {
-        "title": "Anya Taylor-Joy's Billion-Dollar Sci-Fi Epic Officially Sets New Streaming Home on Netflix",
-        "url": "https://www.polygon.com/anya-taylor-joy-sci-fi-netflix-super-mario-galaxy-movie/",
+        "title": "The Legend of Zelda: Ocarina of Time Thankfully Resists FromSoftware’s Influence",
+        "url": "https://www.polygon.com/the-legend-of-zelda-ocarina-of-time-parrying/",
         "source": "Polygon"
       },
       {
-        "title": "Sydney Sweeney’s Extremely R-Rated 131-Minute Thriller Is Officially Streaming on HBO",
-        "url": "https://www.polygon.com/sydney-sweeney-erotic-thriller-the-housemaid-hbo-max/",
+        "title": "Speedrunners Already Breaking The Legend of Zelda: Ocarina of Time's Remake",
+        "url": "https://www.polygon.com/ocarina-of-time-remake-speedrunning-actor-jumping/",
         "source": "Polygon"
       },
       {
-        "title": "10 Perfectly Designed Final Fantasy Magic Cards That Are 10/10, No Notes",
-        "url": "https://www.polygon.com/best-final-fantasy-magic-the-gathering-card-designs/",
+        "title": "Zelda: Ocarina of Time Is Guaranteed a GOTY Nomination. It Will Never Win",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-switch-2-remake-goty-game-awards/",
         "source": "Polygon"
       },
       {
-        "title": "Paramount’s 4-Part Action Fantasy Epic Has One of the Best Seasons in TV History",
-        "url": "https://www.polygon.com/the-legend-of-korra-season-3-best-season/",
+        "title": "The Legend Of Zelda: Ocarina of Time For Switch 2 Could Bring Back A Classic Mode",
+        "url": "https://www.polygon.com/ocarina-of-time-master-quest-switch-2/",
         "source": "Polygon"
       }
     ],
