@@ -1,231 +1,234 @@
 {
   "metadata": {
-    "last_updated": "2026-11-09T09:18:40.267712",
-    "total_items": 65
+    "last_updated": "2026-11-09T20:29:26.693253",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation",
-        "url": "https://arxiv.org/abs/2610.14162",
+        "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
+        "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
         "source": "Hacker News",
-        "score": 54
+        "score": 363
       },
       {
-        "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
-        "url": "https://ketchup3d.github.io/app/",
+        "title": "Claude Fable 5.2 and Mythos 5.2",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
         "source": "Hacker News",
-        "score": 469
+        "score": 529
       },
       {
-        "title": "Unlocking any car from X brand in most of the world",
-        "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
+        "title": "CUI – Native UI components for C",
+        "url": "https://yappologistic.github.io/CUI/",
         "source": "Hacker News",
-        "score": 328
+        "score": 40
       },
       {
-        "title": "I'm not convinced the AI bubble exists",
-        "url": "https://matteoraso.github.io/im-not-convinced-the-ai-bubble-exists.html#im-not-convinced-the-ai-bubble-exists",
+        "title": "Our Smallest, Most Efficient Model: Muse Ember",
+        "url": "https://research.meta.ai/blog/muse-ember",
         "source": "Hacker News",
-        "score": 262
+        "score": 138
       },
       {
-        "title": "Chimera Vocal Synth",
-        "url": "https://chimera-vocal-synth.vercel.app/",
+        "title": "E-means: 10x faster k-means at equal loss",
+        "url": "https://e-means.github.io/",
         "source": "Hacker News",
-        "score": 214
+        "score": 65
       },
       {
-        "title": "Declarative Dragging",
-        "url": "https://declarative-dragging.github.io/",
+        "title": "USPS now offers official ZIP Code boundary polygons",
+        "url": "https://postalpro.usps.com/zcb",
         "source": "Hacker News",
-        "score": 533
+        "score": 23
       },
       {
-        "title": "Outlook.com is rejecting email from domains without DMARC",
-        "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
+        "title": "DeepX claims inference up to 100B parameters at less than 5 W",
+        "url": "https://www.eetimes.com/deepx-tapes-out-second-gen-chip-projects-6-7x-performance-gain-with-lpddr5x-pim/",
         "source": "Hacker News",
-        "score": 397
+        "score": 79
+      },
+      {
+        "title": "Infineon marks innovation milestone with 300mm power silicon carbide wafer",
+        "url": "https://www.infineon.com/press-release/2026/infpr202611-028",
+        "source": "Hacker News",
+        "score": 51
+      },
+      {
+        "title": "Fold Epic Paper Airplanes",
+        "url": "https://www.foldableflight.com",
+        "source": "Hacker News",
+        "score": 689
+      },
+      {
+        "title": "Magenta solar panels may be agrivoltaics' cleverest trick yet",
+        "url": "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/",
+        "source": "Hacker News",
+        "score": 182
+      },
+      {
+        "title": "Show HN: MeowDisplay Is iPhone Mirroring, but in Reverse",
+        "url": "https://meowdisplay.app/",
+        "source": "Hacker News",
+        "score": 39
+      },
+      {
+        "title": "A primer on GPUs and kernel optimization",
+        "url": "https://www.nabo.dev/blogs/kernel-primer",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "Y/N (YC S23) is hiring a growth lead to distribute superhuman A.I. storytelling",
+        "url": "https://www.ycombinator.com/companies/yn/jobs/TjDn3YZ-founding-growth-marketer",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "Show HN: Every satellite that passed over any place this week, and its photos",
+        "url": "https://www.watched.earth",
+        "source": "Hacker News",
+        "score": 78
       },
       {
         "title": "Is Opus 5.5 nerfed? Thinking patterns changed on November 3",
         "url": "https://twitter.com/shanemelaugh/status/2119192075505893695",
         "source": "Hacker News",
-        "score": 77
-      },
-      {
-        "title": "Dux: Free, open-source Wayland desktop shell with file manager and theming",
-        "url": "https://duxlabs.dev/",
-        "source": "Hacker News",
-        "score": 280
-      },
-      {
-        "title": "Quasi-Logarithmic Kitchen Timer",
-        "url": "https://blog.coredump.cx/p/quasi-logarithmic-kitchen-timer",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Ask HN: What are you working on? (November 2026)",
-        "url": "https://news.ycombinator.com/item?id=50417407",
-        "source": "Hacker News",
-        "score": 208
-      },
-      {
-        "title": "PixelOS",
-        "url": "https://pixelos.net/",
-        "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
-        "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company",
-        "source": "Hacker News",
-        "score": 646
-      },
-      {
-        "title": "Ur-Nammu Founder of the Sumerian Renaissance",
-        "url": "https://www.worldhistory.org/Ur-Nammu/",
-        "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "Show HN: Flide: Make Jev-like decision models up to 9.5x faster",
-        "url": "https://github.com/OmniJev/Flide",
-        "source": "Hacker News",
-        "score": 25
+        "score": 579
       }
     ],
     "ai": [
       {
-        "title": "I'm not convinced the AI bubble exists",
-        "url": "https://matteoraso.github.io/im-not-convinced-the-ai-bubble-exists.html#im-not-convinced-the-ai-bubble-exists",
+        "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
+        "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
         "source": "Hacker News AI",
-        "score": 262
+        "score": 363
       },
       {
-        "title": "Declarative Dragging",
-        "url": "https://declarative-dragging.github.io/",
+        "title": "Claude Fable 5.2 and Mythos 5.2",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
         "source": "Hacker News AI",
-        "score": 533
+        "score": 529
       },
       {
-        "title": "Outlook.com is rejecting email from domains without DMARC",
-        "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
+        "title": "DeepX claims inference up to 100B parameters at less than 5 W",
+        "url": "https://www.eetimes.com/deepx-tapes-out-second-gen-chip-projects-6-7x-performance-gain-with-lpddr5x-pim/",
         "source": "Hacker News AI",
-        "score": 397
+        "score": 79
       },
       {
-        "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
-        "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company",
+        "title": "Fold Epic Paper Airplanes",
+        "url": "https://www.foldableflight.com",
         "source": "Hacker News AI",
-        "score": 646
+        "score": 689
       },
       {
-        "title": "Ur-Nammu Founder of the Sumerian Renaissance",
-        "url": "https://www.worldhistory.org/Ur-Nammu/",
+        "title": "Magenta solar panels may be agrivoltaics' cleverest trick yet",
+        "url": "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 182
       },
       {
-        "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
-        "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+        "title": "Show HN: Recalc – Spreadsheet where cells can be Claude Code or Codex terminals",
+        "url": "https://github.com/sshah03/recalc",
         "source": "Hacker News AI",
-        "score": 762
+        "score": 13
       },
       {
-        "title": "How I Fight AI Brain Fry",
-        "url": "https://sergeykuhne.com/blog/fighting-ai-brain-fry",
+        "title": "Google Gemini routes personal Drive files and emails to human annotators",
+        "url": "https://github.com/thisisme6598/gemini_files/",
         "source": "Hacker News AI",
-        "score": 242
+        "score": 14
       },
       {
-        "title": "Goodbye Claude, hello Pi",
-        "url": "https://caleb.software/posts/claude-to-pi.html",
+        "title": "Show HN: My daily word puzzle Jointter revisited",
+        "url": "https://news.ycombinator.com/item?id=50426593",
         "source": "Hacker News AI",
-        "score": 755
+        "score": 5
       },
       {
-        "title": "ChatGPT Desktop forwards your SSH agent to remote machines",
-        "url": "https://news.ycombinator.com/item?id=50422628",
+        "title": "Show HN: STE80 Humanizer – de-AI text by writing 80% of the way to ASD-STE100",
+        "url": "https://github.com/Dodaios/ste80-humanizer",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 10
       },
       {
-        "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
-        "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+        "title": "Drones built to look like birds evaded detection at Air Force tech exercise",
+        "url": "https://taskandpurpose.com/news/drone-mimicking-bird-test/",
         "source": "Hacker News AI",
-        "score": 602
+        "score": 72
       },
       {
-        "title": "A Bit about Email",
-        "url": "https://maurycyz.com/misc/email/",
+        "title": "Claude Fable 5.2",
+        "url": "https://twitter.com/claudeai/status/2119867114450268322",
         "source": "Hacker News AI",
-        "score": 35
+        "score": 21
       },
       {
-        "title": "Air holes turn silicon wafers into flat UV focusing mirrors for compact optics",
-        "url": "https://phys.org/news/2026-11-air-holes-silicon-wafers-flat.html",
+        "title": "RAM-Altman reports unused RAM on your machine, one email a day",
+        "url": "https://github.com/IainKay/ram-altman",
         "source": "Hacker News AI",
-        "score": 51
+        "score": 28
       },
       {
-        "title": "Edward Hopper's Iconic Painting, \"Nighthawks",
-        "url": "https://lithub.com/the-story-behind-edward-hoppers-iconic-painting-nighthawks/",
+        "title": "Sleep wearables are training AI on your brainwaves without explicit consent",
+        "url": "https://www.tomshardware.com/peripherals/wearable-tech/wearable-sleep-trackers-are-using-your-brainwaves-to-train-ai-models-without-explicit-user-consent-tens-of-millions-of-hours-of-eeg-data-harvested",
         "source": "Hacker News AI",
-        "score": 89
-      },
-      {
-        "title": "Uranium cubes reveal why the German nuclear project failed",
-        "url": "https://arstechnica.com/science/2026/11/uranium-cubes-reveal-why-the-german-nuclear-project-failed/",
-        "source": "Hacker News AI",
-        "score": 213
-      },
-      {
-        "title": "Asahi Linux Drops MIT, Goes Full GPL After AI Used to Steal Unreleased Code",
-        "url": "https://itsfoss.com/news/asahi-linux-drops-mit-for-gpl/",
-        "source": "Hacker News AI",
-        "score": 31
+        "score": 18
       }
     ],
     "news": [
       {
-        "title": "Krakow shooting suspect has died in hospital, police say",
-        "url": "https://www.bbc.co.uk/news/articles/c6y434dw8319o?at_medium=RSS&at_campaign=rss",
+        "title": "France accuses Iran of supermarket fridge hacking",
+        "url": "https://www.bbc.co.uk/news/articles/cmg474vk6dyqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Inside the French drug gangs recruiting children to kill",
-        "url": "https://www.bbc.co.uk/news/articles/cq62y01r2313o?at_medium=RSS&at_campaign=rss",
+        "title": "Nvidia shares tumble over investigation into Huang's affair with alleged Chinese spy",
+        "url": "https://www.bbc.co.uk/news/articles/c6zxjx01vyleo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump says he was 'kidding' about Dana White press secretary offer",
-        "url": "https://www.bbc.co.uk/news/articles/ck0j0j87959eo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump questions midterm elections integrity after previously accepting results",
+        "url": "https://www.bbc.co.uk/news/articles/ck79p9350zp9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "At least 34 dead after Europe-bound migrant boat sinks off Senegal ",
-        "url": "https://www.bbc.co.uk/news/articles/cv2d6dpge65go?at_medium=RSS&at_campaign=rss",
+        "title": "Turkey steel factory blast kills at least 16 people",
+        "url": "https://www.bbc.co.uk/news/articles/cq2d6d5z9y5jo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Pope delivers veiled rebuke of Milei's austerity measures",
-        "url": "https://www.bbc.co.uk/news/articles/ckj0l082jqzvo?at_medium=RSS&at_campaign=rss",
+        "title": "Nine Zimbabweans caught allegedly trying to leave South Africa to fight in Ukraine",
+        "url": "https://www.bbc.co.uk/news/articles/cm93z3lp5lnpo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Cruise ship pianist rescued from sea after nine hours in Pacific Ocean",
-        "url": "https://www.bbc.co.uk/news/articles/ck1wvrrgln13o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Seven dead and more than 100 injured after trains collide in Egypt",
-        "url": "https://www.bbc.co.uk/news/articles/cwvgr20mmmevo?at_medium=RSS&at_campaign=rss",
+        "title": "Russia's leading independent newspaper closes after eviction",
+        "url": "https://www.bbc.co.uk/news/videos/cvrlylj9r11go?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Disney's AI deal with Adobe is raising eyebrows ",
+        "url": "https://www.creativebloq.com/news/disneys-ai-deal-with-adobe-is-raising-eyebrows",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Castlebound devs explain a unique Unity technique behind its Paper Mario-like visuals ",
+        "url": "https://www.creativebloq.com/features/castlebound-devs-explain-a-unique-unity-technique-behind-its-paper-mario-like-visuals",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Disney just dropped a magical festive film, and people can't stop crying ",
+        "url": "https://www.creativebloq.com/news/disney-just-dropped-a-magical-festive-short-and-people-cant-stop-crying",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Kim Kardashian's shocking advent calendar is the perfect metaphor for 2026 ",
+        "url": "https://www.creativebloq.com/news/kim-kardashians-shocking-advent-calendar-is-the-perfect-metaphor-for-2026",
+        "source": "Creative Bloq"
+      },
       {
         "title": " 10 must-try techniques for creating environment art that drives visual storytelling ",
         "url": "https://www.creativebloq.com/how-to/10-key-techniques-for-creating-environment-art-that-drives-visual-storytelling",
@@ -240,29 +243,34 @@
         "title": " The ergonomic chair that got a rare 5-star Creative Bloq review is 10% cheaper for Black Friday ",
         "url": "https://www.creativebloq.com/deals/the-ergonomic-chair-that-got-a-rare-5-star-creative-bloq-review-is-10-percent-cheaper-for-black-friday",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " How to make a detailed 3D landscape using Photoshop, Cinema 4D and ZBrush ",
-        "url": "https://www.creativebloq.com/how-to/how-to-make-a-detailed-3d-landscape-using-photoshop-with-cinema-4d-and-zbrush",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The cleverest GTA VI adverts don't even show the game ",
-        "url": "https://www.creativebloq.com/news/the-cleverest-gta-vi-adverts-dont-even-show-the-game",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple’s plan to scrap the Action Button makes me anxious ",
-        "url": "https://www.creativebloq.com/news/apples-plan-to-scrap-the-action-button-makes-me-anxious",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These are the best laptops to buy right now, whether you're a professional or student ",
-        "url": "https://www.creativebloq.com/buying-guides/these-are-the-best-laptops-to-buy-right-now-wether-youre-a-professional-or-student",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Common supplement could help fight psoriasis, scientists discover",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261108233057.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA reveals bold new plan to return astronauts to the Moon in 2028",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261108233054.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Caltech robot makes history by building a structure in space",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261108233043.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Common osteoporosis drugs linked to 24% lower dementia risk in major study",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261108233037.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "DNA on the Shroud of Turin reveals centuries of hidden secrets",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261108202703.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "A little-known protein could be a major culprit in type 2 diabetes",
         "url": "https://www.sciencedaily.com/releases/2026/11/261106174543.htm",
@@ -272,67 +280,42 @@
         "title": "A hidden limit of space and time could unlock electronics 100,000 times faster",
         "url": "https://www.sciencedaily.com/releases/2026/11/261106174537.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "An ancient ocean full of giant predators reveals a surprising twist in evolution",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261106174535.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A nuclear blast could save Earth from an asteroid, but there's a catch",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261106174532.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Ancient Siberian tomb reveals surprising secrets of cannabis use 2,800 years ago",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261106174528.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Mysterious gas leaks suggest Mars may still be volcanically alive",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261106174525.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover a hidden warning sign of cannabis addiction",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261106174520.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "6 Modern Fantasy Books That Rival The Lord of the Rings",
-        "url": "https://www.polygon.com/modern-fantasy-books-like-lord-of-the-rings/",
+        "title": "Zelda: Ocarina of Time’s Best Replacement Has 11,000+ ‘Very Positive’ Reviews on Steam",
+        "url": "https://www.polygon.com/deaths-door-five-year-anniversary-retrospective/",
         "source": "Polygon"
       },
       {
-        "title": "19 Years Later, Avatar’s Most Terrifying Episode Changed the Franchise Forever",
-        "url": "https://www.polygon.com/avatar-the-last-airbender-the-puppetmaster-bloodbending-19th-anniversary/",
+        "title": "Every Legend of Zelda Game, Ranked",
+        "url": "https://www.polygon.com/zelda-games-all-ranked/",
         "source": "Polygon"
       },
       {
-        "title": "27 Years Later, Science-Fiction's Groundbreaking 4-Part Saga Is Free to Watch on Streaming",
-        "url": "https://www.polygon.com/the-matrix-movies-streaming-free-pluto-tv-november-2026/",
+        "title": "What is the Business Scrub password in Zelda Ocarina of Time?",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-business-scrub-password/",
         "source": "Polygon"
       },
       {
-        "title": "Mike Flanagan’s 10-Episode Netflix Thriller Masterpiece Is Everything ‘Carrie’ Should Have Been",
-        "url": "https://www.polygon.com/mike-flanagan-netflix-the-haunting-of-hill-house-carrie/",
+        "title": "Even More Free DLC for Hollow Knight: Silksong Might Be on the Way",
+        "url": "https://www.polygon.com/hollow-knight-silksong-free-dlc-rumor/",
         "source": "Polygon"
       },
       {
-        "title": "Zelda: Ocarina of Time and WoW: Forever Are the Good Kind of Remakes",
-        "url": "https://www.polygon.com/patch-notes-remakes-zelda-ocarina-of-time-wow-forever/",
+        "title": "A Major 2027 Pokémon TCG Change Could Be Bad News For Everyone",
+        "url": "https://www.polygon.com/pokemon-tcg-price-increase-packs-cost-tpc-ex-set-release-date/",
         "source": "Polygon"
       },
       {
-        "title": "Sega’s Most Influential Platformer Deserves Its Big Remake Moment Next",
-        "url": "https://www.polygon.com/super-monkey-ball-retrospective-25-years-sega/",
+        "title": "James Gunn's DCU Is Officially Dead, and That's Good News for Superman Fans",
+        "url": "https://www.polygon.com/james-gunns-dcu-canceled/",
         "source": "Polygon"
       },
       {
-        "title": "25 Years Later, ‘Buffy the Vampire Slayer’s Best Quote Is Still the Most Inspiring Line in TV History",
-        "url": "https://www.polygon.com/buffy-the-vampire-slayer-best-buffy-quote/",
+        "title": "Warhammer’s Brutal Fantasy Football Game Just Suffered Another Setback",
+        "url": "https://www.polygon.com/warhammer-blood-bowl-delayed-2027/",
         "source": "Polygon"
       }
     ],
