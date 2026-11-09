@@ -1,201 +1,241 @@
 {
   "metadata": {
-    "last_updated": "2026-11-09T01:29:04.465833",
-    "total_items": 60
+    "last_updated": "2026-11-09T09:18:40.267712",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Next-Concept Modeling: Fast, Parallel Coarse-to-Fine Text Generation",
+        "url": "https://arxiv.org/abs/2610.14162",
+        "source": "Hacker News",
+        "score": 54
+      },
+      {
         "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
         "url": "https://ketchup3d.github.io/app/",
         "source": "Hacker News",
-        "score": 176
-      },
-      {
-        "title": "Herb Sutter: When a language's creator and its owners strongly disagree [pdf]",
-        "url": "https://isocpp.org/files/papers/P4454R0.pdf",
-        "source": "Hacker News",
-        "score": 52
+        "score": 469
       },
       {
         "title": "Unlocking any car from X brand in most of the world",
         "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
         "source": "Hacker News",
-        "score": 27
+        "score": 328
+      },
+      {
+        "title": "I'm not convinced the AI bubble exists",
+        "url": "https://matteoraso.github.io/im-not-convinced-the-ai-bubble-exists.html#im-not-convinced-the-ai-bubble-exists",
+        "source": "Hacker News",
+        "score": 262
       },
       {
         "title": "Chimera Vocal Synth",
         "url": "https://chimera-vocal-synth.vercel.app/",
         "source": "Hacker News",
-        "score": 76
+        "score": 214
       },
       {
-        "title": "Ask HN: What are you working on? (November 2026)",
-        "url": "https://news.ycombinator.com/item?id=50417407",
+        "title": "Declarative Dragging",
+        "url": "https://declarative-dragging.github.io/",
         "source": "Hacker News",
-        "score": 117
+        "score": 533
+      },
+      {
+        "title": "Outlook.com is rejecting email from domains without DMARC",
+        "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
+        "source": "Hacker News",
+        "score": 397
+      },
+      {
+        "title": "Is Opus 5.5 nerfed? Thinking patterns changed on November 3",
+        "url": "https://twitter.com/shanemelaugh/status/2119192075505893695",
+        "source": "Hacker News",
+        "score": 77
       },
       {
         "title": "Dux: Free, open-source Wayland desktop shell with file manager and theming",
         "url": "https://duxlabs.dev/",
         "source": "Hacker News",
-        "score": 195
+        "score": 280
       },
       {
-        "title": "Declarative Dragging",
-        "url": "https://declarative-dragging.github.io/",
+        "title": "Quasi-Logarithmic Kitchen Timer",
+        "url": "https://blog.coredump.cx/p/quasi-logarithmic-kitchen-timer",
         "source": "Hacker News",
-        "score": 337
+        "score": 22
       },
       {
-        "title": "Outlook.com Is Quietly Rejecting Email from Domains Without DMARC",
-        "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
+        "title": "Ask HN: What are you working on? (November 2026)",
+        "url": "https://news.ycombinator.com/item?id=50417407",
         "source": "Hacker News",
-        "score": 235
+        "score": 208
       },
       {
-        "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
-        "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+        "title": "PixelOS",
+        "url": "https://pixelos.net/",
         "source": "Hacker News",
-        "score": 590
+        "score": 7
       },
       {
-        "title": "The Web Is More Than Enough, by Paul Ford",
-        "url": "https://ftrain.com/aboard-the-web-is-more-than-enough",
+        "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+        "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company",
         "source": "Hacker News",
-        "score": 70
+        "score": 646
       },
       {
-        "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
-        "url": "https://github.com/synchopate/llama-modchip",
+        "title": "Ur-Nammu Founder of the Sumerian Renaissance",
+        "url": "https://www.worldhistory.org/Ur-Nammu/",
         "source": "Hacker News",
-        "score": 362
+        "score": 24
       },
       {
-        "title": "The History of Djgpp (1998)",
-        "url": "https://www.delorie.com/djgpp/history.html",
+        "title": "Show HN: Flide: Make Jev-like decision models up to 9.5x faster",
+        "url": "https://github.com/OmniJev/Flide",
         "source": "Hacker News",
-        "score": 43
-      },
-      {
-        "title": "Edward Hopper's Iconic Painting, \"Nighthawks",
-        "url": "https://lithub.com/the-story-behind-edward-hoppers-iconic-painting-nighthawks/",
-        "source": "Hacker News",
-        "score": 68
-      },
-      {
-        "title": "Writing as a thinking tool",
-        "url": "http://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html",
-        "source": "Hacker News",
-        "score": 277
-      },
-      {
-        "title": "Playing with the STM32MP2",
-        "url": "https://serd.es/2026/11/08/playing-with-stm32mp2.html",
-        "source": "Hacker News",
-        "score": 35
+        "score": 25
       }
     ],
     "ai": [
       {
+        "title": "I'm not convinced the AI bubble exists",
+        "url": "https://matteoraso.github.io/im-not-convinced-the-ai-bubble-exists.html#im-not-convinced-the-ai-bubble-exists",
+        "source": "Hacker News AI",
+        "score": 262
+      },
+      {
         "title": "Declarative Dragging",
         "url": "https://declarative-dragging.github.io/",
         "source": "Hacker News AI",
-        "score": 337
+        "score": 533
       },
       {
-        "title": "Outlook.com Is Quietly Rejecting Email from Domains Without DMARC",
+        "title": "Outlook.com is rejecting email from domains without DMARC",
         "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
         "source": "Hacker News AI",
-        "score": 235
+        "score": 397
+      },
+      {
+        "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+        "url": "https://nvidianews.nvidia.com/news/a-message-to-our-company",
+        "source": "Hacker News AI",
+        "score": 646
+      },
+      {
+        "title": "Ur-Nammu Founder of the Sumerian Renaissance",
+        "url": "https://www.worldhistory.org/Ur-Nammu/",
+        "source": "Hacker News AI",
+        "score": 24
       },
       {
         "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
         "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
         "source": "Hacker News AI",
-        "score": 590
-      },
-      {
-        "title": "Edward Hopper's Iconic Painting, \"Nighthawks",
-        "url": "https://lithub.com/the-story-behind-edward-hoppers-iconic-painting-nighthawks/",
-        "source": "Hacker News AI",
-        "score": 68
-      },
-      {
-        "title": "Air holes turn silicon wafers into flat UV focusing mirrors for compact optics",
-        "url": "https://phys.org/news/2026-11-air-holes-silicon-wafers-flat.html",
-        "source": "Hacker News AI",
-        "score": 16
-      },
-      {
-        "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
-        "url": "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-affair-email-to-company",
-        "source": "Hacker News AI",
-        "score": 330
-      },
-      {
-        "title": "Goodbye Claude, hello Pi",
-        "url": "https://caleb.software/posts/claude-to-pi.html",
-        "source": "Hacker News AI",
-        "score": 698
+        "score": 762
       },
       {
         "title": "How I Fight AI Brain Fry",
         "url": "https://sergeykuhne.com/blog/fighting-ai-brain-fry",
         "source": "Hacker News AI",
-        "score": 147
+        "score": 242
+      },
+      {
+        "title": "Goodbye Claude, hello Pi",
+        "url": "https://caleb.software/posts/claude-to-pi.html",
+        "source": "Hacker News AI",
+        "score": 755
+      },
+      {
+        "title": "ChatGPT Desktop forwards your SSH agent to remote machines",
+        "url": "https://news.ycombinator.com/item?id=50422628",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
         "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
         "source": "Hacker News AI",
-        "score": 584
+        "score": 602
+      },
+      {
+        "title": "A Bit about Email",
+        "url": "https://maurycyz.com/misc/email/",
+        "source": "Hacker News AI",
+        "score": 35
+      },
+      {
+        "title": "Air holes turn silicon wafers into flat UV focusing mirrors for compact optics",
+        "url": "https://phys.org/news/2026-11-air-holes-silicon-wafers-flat.html",
+        "source": "Hacker News AI",
+        "score": 51
+      },
+      {
+        "title": "Edward Hopper's Iconic Painting, \"Nighthawks",
+        "url": "https://lithub.com/the-story-behind-edward-hoppers-iconic-painting-nighthawks/",
+        "source": "Hacker News AI",
+        "score": 89
       },
       {
         "title": "Uranium cubes reveal why the German nuclear project failed",
         "url": "https://arstechnica.com/science/2026/11/uranium-cubes-reveal-why-the-german-nuclear-project-failed/",
         "source": "Hacker News AI",
-        "score": 205
+        "score": 213
+      },
+      {
+        "title": "Asahi Linux Drops MIT, Goes Full GPL After AI Used to Steal Unreleased Code",
+        "url": "https://itsfoss.com/news/asahi-linux-drops-mit-for-gpl/",
+        "source": "Hacker News AI",
+        "score": 31
       }
     ],
     "news": [
       {
-        "title": "Surgeon having lunch near Krakow shooting undoubtedly saved officer's life, colleague says",
-        "url": "https://www.bbc.co.uk/news/articles/c5x2vw4e1gx1o?at_medium=RSS&at_campaign=rss",
+        "title": "Krakow shooting suspect has died in hospital, police say",
+        "url": "https://www.bbc.co.uk/news/articles/c6y434dw8319o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Inside the French drug gangs recruiting children to kill",
+        "url": "https://www.bbc.co.uk/news/articles/cq62y01r2313o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Trump says he was 'kidding' about Dana White press secretary offer",
+        "url": "https://www.bbc.co.uk/news/articles/ck0j0j87959eo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "At least 34 dead after Europe-bound migrant boat sinks off Senegal ",
+        "url": "https://www.bbc.co.uk/news/articles/cv2d6dpge65go?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Pope delivers veiled rebuke of Milei's austerity measures",
+        "url": "https://www.bbc.co.uk/news/articles/ckj0l082jqzvo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Cruise ship pianist rescued from sea after nine hours in Pacific Ocean",
+        "url": "https://www.bbc.co.uk/news/articles/ck1wvrrgln13o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Seven dead and more than 100 injured after trains collide in Egypt",
         "url": "https://www.bbc.co.uk/news/articles/cwvgr20mmmevo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Homes and temples glow across India to mark Diwali",
-        "url": "https://www.bbc.co.uk/news/articles/cm70pdwz122ro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Iran executes three men for 'armed unrest' after January protests",
-        "url": "https://www.bbc.co.uk/news/articles/ckly0ex633ydo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Aramco Tower hit in heart of Saudi capital as Houthis launch fresh strikes",
-        "url": "https://www.bbc.co.uk/news/articles/c6ly3mjx958eo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "'Flat', 'tired', 'cynical': Unusually gloomy Kiwis deliver New Zealand's tightest election in years",
-        "url": "https://www.bbc.co.uk/news/articles/cxr5yyg2nj9eo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Paraguay's former president charged after bank collapse",
-        "url": "https://www.bbc.co.uk/news/articles/c68jzzvjgdy9o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " 10 must-try techniques for creating environment art that drives visual storytelling ",
+        "url": "https://www.creativebloq.com/how-to/10-key-techniques-for-creating-environment-art-that-drives-visual-storytelling",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " An anti-AI indie game about keeping hand-drawn fish has become a surprise viral hit ",
+        "url": "https://www.creativebloq.com/news/an-anti-ai-indie-game-about-keeping-hand-drawn-fish-has-become-a-surprise-viral-hit",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The ergonomic chair that got a rare 5-star Creative Bloq review is 10% cheaper for Black Friday ",
         "url": "https://www.creativebloq.com/deals/the-ergonomic-chair-that-got-a-rare-5-star-creative-bloq-review-is-10-percent-cheaper-for-black-friday",
@@ -220,22 +260,22 @@
         "title": " These are the best laptops to buy right now, whether you're a professional or student ",
         "url": "https://www.creativebloq.com/buying-guides/these-are-the-best-laptops-to-buy-right-now-wether-youre-a-professional-or-student",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " The optical illusion of the year proves that our eyes can deceive us ",
-        "url": "https://www.creativebloq.com/news/the-optical-illusion-of-the-year-proves-that-our-eyes-can-deceive-us",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The world's biggest library of scanned 3D assets is now free – and it seems that this time it's for good ",
-        "url": "https://www.creativebloq.com/news/the-worlds-biggest-library-of-scanned-assets-for-3d-artists-is-now-free-and-it-seems-that-this-time-its-for-good",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
+        "title": "A little-known protein could be a major culprit in type 2 diabetes",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261106174543.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "A hidden limit of space and time could unlock electronics 100,000 times faster",
         "url": "https://www.sciencedaily.com/releases/2026/11/261106174537.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "An ancient ocean full of giant predators reveals a surprising twist in evolution",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261106174535.htm",
         "source": "Science Daily"
       },
       {
@@ -257,19 +297,29 @@
         "title": "Scientists discover a hidden warning sign of cannabis addiction",
         "url": "https://www.sciencedaily.com/releases/2026/11/261106174520.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "Stronger flu shot linked to nearly 55% lower Alzheimer's risk",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261105224609.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Major trial challenges how doctors decide who really needs statins",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261105224604.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "6 Modern Fantasy Books That Rival The Lord of the Rings",
+        "url": "https://www.polygon.com/modern-fantasy-books-like-lord-of-the-rings/",
+        "source": "Polygon"
+      },
+      {
+        "title": "19 Years Later, Avatar’s Most Terrifying Episode Changed the Franchise Forever",
+        "url": "https://www.polygon.com/avatar-the-last-airbender-the-puppetmaster-bloodbending-19th-anniversary/",
+        "source": "Polygon"
+      },
+      {
+        "title": "27 Years Later, Science-Fiction's Groundbreaking 4-Part Saga Is Free to Watch on Streaming",
+        "url": "https://www.polygon.com/the-matrix-movies-streaming-free-pluto-tv-november-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Mike Flanagan’s 10-Episode Netflix Thriller Masterpiece Is Everything ‘Carrie’ Should Have Been",
+        "url": "https://www.polygon.com/mike-flanagan-netflix-the-haunting-of-hill-house-carrie/",
+        "source": "Polygon"
+      },
       {
         "title": "Zelda: Ocarina of Time and WoW: Forever Are the Good Kind of Remakes",
         "url": "https://www.polygon.com/patch-notes-remakes-zelda-ocarina-of-time-wow-forever/",
@@ -283,26 +333,6 @@
       {
         "title": "25 Years Later, ‘Buffy the Vampire Slayer’s Best Quote Is Still the Most Inspiring Line in TV History",
         "url": "https://www.polygon.com/buffy-the-vampire-slayer-best-buffy-quote/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All vault locations in the Fortnite Chapter 7 mini season",
-        "url": "https://www.polygon.com/fortnite-chapter-7-vault-locations-c7ms/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All map fragment locations in the Fortnite Chapter 7 mini season",
-        "url": "https://www.polygon.com/fortnite-chapter-7-mini-season-c7ms-map-fragment-locations/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All sprites in the Fortnite Chapter 7 mini season",
-        "url": "https://www.polygon.com/fortnite-chapter-7-mini-season-all-sprites-list-abilities/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Godzilla Minus Zero Opening Weekend Box Office Breaks A Foreign-Language Film Records",
-        "url": "https://www.polygon.com/godzilla-minus-zero-opening-weekend-box-office/",
         "source": "Polygon"
       }
     ],
