@@ -1,167 +1,161 @@
 {
   "metadata": {
-    "last_updated": "2026-11-08T21:46:45.105495",
-    "total_items": 61
+    "last_updated": "2026-11-09T01:29:04.465833",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders",
-        "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
+        "title": "KetchUp – Open-source SketchUp alternative built with Rust and WebGPU",
+        "url": "https://ketchup3d.github.io/app/",
         "source": "Hacker News",
-        "score": 424
+        "score": 176
+      },
+      {
+        "title": "Herb Sutter: When a language's creator and its owners strongly disagree [pdf]",
+        "url": "https://isocpp.org/files/papers/P4454R0.pdf",
+        "source": "Hacker News",
+        "score": 52
+      },
+      {
+        "title": "Unlocking any car from X brand in most of the world",
+        "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Chimera Vocal Synth",
+        "url": "https://chimera-vocal-synth.vercel.app/",
+        "source": "Hacker News",
+        "score": 76
+      },
+      {
+        "title": "Ask HN: What are you working on? (November 2026)",
+        "url": "https://news.ycombinator.com/item?id=50417407",
+        "source": "Hacker News",
+        "score": 117
       },
       {
         "title": "Dux: Free, open-source Wayland desktop shell with file manager and theming",
         "url": "https://duxlabs.dev/",
         "source": "Hacker News",
-        "score": 85
-      },
-      {
-        "title": "RAM Altman: Linux Script Emails Sam Altman Daily How Much Unused RAM in Your PC",
-        "url": "https://respawnfirst.com/linux-script-emails-sam-altman-unused-ram-ram-altman/",
-        "source": "Hacker News",
-        "score": 156
+        "score": 195
       },
       {
         "title": "Declarative Dragging",
         "url": "https://declarative-dragging.github.io/",
         "source": "Hacker News",
-        "score": 166
+        "score": 337
       },
       {
         "title": "Outlook.com Is Quietly Rejecting Email from Domains Without DMARC",
         "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
         "source": "Hacker News",
-        "score": 115
+        "score": 235
       },
       {
-        "title": "How I Fight AI Brain Fry",
-        "url": "https://sergeykuhne.com/blog/fighting-ai-brain-fry",
+        "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+        "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
         "source": "Hacker News",
-        "score": 89
-      },
-      {
-        "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
-        "url": "https://github.com/synchopate/llama-modchip",
-        "source": "Hacker News",
-        "score": 311
-      },
-      {
-        "title": "Edward Hopper's Iconic Painting, \"Nighthawks",
-        "url": "https://lithub.com/the-story-behind-edward-hoppers-iconic-painting-nighthawks/",
-        "source": "Hacker News",
-        "score": 37
+        "score": 590
       },
       {
         "title": "The Web Is More Than Enough, by Paul Ford",
         "url": "https://ftrain.com/aboard-the-web-is-more-than-enough",
         "source": "Hacker News",
-        "score": 12
+        "score": 70
+      },
+      {
+        "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+        "url": "https://github.com/synchopate/llama-modchip",
+        "source": "Hacker News",
+        "score": 362
+      },
+      {
+        "title": "The History of Djgpp (1998)",
+        "url": "https://www.delorie.com/djgpp/history.html",
+        "source": "Hacker News",
+        "score": 43
+      },
+      {
+        "title": "Edward Hopper's Iconic Painting, \"Nighthawks",
+        "url": "https://lithub.com/the-story-behind-edward-hoppers-iconic-painting-nighthawks/",
+        "source": "Hacker News",
+        "score": 68
       },
       {
         "title": "Writing as a thinking tool",
         "url": "http://muratbuffalo.blogspot.com/2026/11/writing-as-thinking-tool.html",
         "source": "Hacker News",
-        "score": 229
+        "score": 277
       },
       {
-        "title": "A Little Snitch for Windows",
-        "url": "https://packethound.app/",
+        "title": "Playing with the STM32MP2",
+        "url": "https://serd.es/2026/11/08/playing-with-stm32mp2.html",
         "source": "Hacker News",
-        "score": 65
-      },
-      {
-        "title": "Show HN: Vegetable Gardening for Engineers",
-        "url": "https://jrcpl.us/contrib/2020/gardening-for-engineers/",
-        "source": "Hacker News",
-        "score": 117
-      },
-      {
-        "title": "I'm not a fan of Deno's security model (2024)",
-        "url": "https://goldstein.lol/posts/deno-security/",
-        "source": "Hacker News",
-        "score": 72
-      },
-      {
-        "title": "Nvidia Board of Directors Is Investigating Jensen Huang",
-        "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
-        "source": "Hacker News",
-        "score": 180
-      },
-      {
-        "title": "The Reconstruction of Torn Documents",
-        "url": "https://www.bundesarchiv.de/en/stasi-records-archive/the-reconstruction-of-torn-documents/",
-        "source": "Hacker News",
-        "score": 80
+        "score": 35
       }
     ],
     "ai": [
       {
-        "title": "Goldman Sachs Is Pulling Claude Code from Its Bankers and Traders",
-        "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
-        "source": "Hacker News AI",
-        "score": 424
-      },
-      {
-        "title": "RAM Altman: Linux Script Emails Sam Altman Daily How Much Unused RAM in Your PC",
-        "url": "https://respawnfirst.com/linux-script-emails-sam-altman-unused-ram-ram-altman/",
-        "source": "Hacker News AI",
-        "score": 156
-      },
-      {
         "title": "Declarative Dragging",
         "url": "https://declarative-dragging.github.io/",
         "source": "Hacker News AI",
-        "score": 166
+        "score": 337
       },
       {
         "title": "Outlook.com Is Quietly Rejecting Email from Domains Without DMARC",
         "url": "https://mailroute.net/blog/outlook-rejecting-email-without-dmarc",
         "source": "Hacker News AI",
-        "score": 115
+        "score": 235
       },
       {
-        "title": "How I Fight AI Brain Fry",
-        "url": "https://sergeykuhne.com/blog/fighting-ai-brain-fry",
+        "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
+        "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
         "source": "Hacker News AI",
-        "score": 90
+        "score": 590
       },
       {
         "title": "Edward Hopper's Iconic Painting, \"Nighthawks",
         "url": "https://lithub.com/the-story-behind-edward-hoppers-iconic-painting-nighthawks/",
         "source": "Hacker News AI",
-        "score": 37
+        "score": 68
+      },
+      {
+        "title": "Air holes turn silicon wafers into flat UV focusing mirrors for compact optics",
+        "url": "https://phys.org/news/2026-11-air-holes-silicon-wafers-flat.html",
+        "source": "Hacker News AI",
+        "score": 16
+      },
+      {
+        "title": "Nvidia CEO Jensen Huang's letter to staff about affair",
+        "url": "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-affair-email-to-company",
+        "source": "Hacker News AI",
+        "score": 330
       },
       {
         "title": "Goodbye Claude, hello Pi",
         "url": "https://caleb.software/posts/claude-to-pi.html",
         "source": "Hacker News AI",
-        "score": 640
+        "score": 698
+      },
+      {
+        "title": "How I Fight AI Brain Fry",
+        "url": "https://sergeykuhne.com/blog/fighting-ai-brain-fry",
+        "source": "Hacker News AI",
+        "score": 147
       },
       {
         "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
         "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
         "source": "Hacker News AI",
-        "score": 554
-      },
-      {
-        "title": "Silicon Valley Promises AI Will Cure Disease. Drugmaker CEOs Aren't Buying It",
-        "url": "https://www.wsj.com/tech/ai/silicon-valley-promises-ai-will-cure-disease-drugmaker-ceos-arent-buying-it-5218511c",
-        "source": "Hacker News AI",
-        "score": 77
+        "score": 584
       },
       {
         "title": "Uranium cubes reveal why the German nuclear project failed",
         "url": "https://arstechnica.com/science/2026/11/uranium-cubes-reveal-why-the-german-nuclear-project-failed/",
         "source": "Hacker News AI",
-        "score": 201
-      },
-      {
-        "title": "Consumer brain wave headsets threaten privacy",
-        "url": "https://www.science.org/content/article/wearable-device-makers-are-harvesting-brain-data-train-ai-without-telling-users?referrer=https%3A%2F%2Fwww.google.com%2F",
-        "source": "Hacker News AI",
-        "score": 114
+        "score": 205
       }
     ],
     "news": [
@@ -186,8 +180,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Houthis say at least 33 killed in Saudi air strike",
-        "url": "https://www.bbc.co.uk/news/articles/c65yn1v99ypmo?at_medium=RSS&at_campaign=rss",
+        "title": "Aramco Tower hit in heart of Saudi capital as Houthis launch fresh strikes",
+        "url": "https://www.bbc.co.uk/news/articles/c6ly3mjx958eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -277,6 +271,16 @@
     ],
     "gaming": [
       {
+        "title": "Zelda: Ocarina of Time and WoW: Forever Are the Good Kind of Remakes",
+        "url": "https://www.polygon.com/patch-notes-remakes-zelda-ocarina-of-time-wow-forever/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Sega’s Most Influential Platformer Deserves Its Big Remake Moment Next",
+        "url": "https://www.polygon.com/super-monkey-ball-retrospective-25-years-sega/",
+        "source": "Polygon"
+      },
+      {
         "title": "25 Years Later, ‘Buffy the Vampire Slayer’s Best Quote Is Still the Most Inspiring Line in TV History",
         "url": "https://www.polygon.com/buffy-the-vampire-slayer-best-buffy-quote/",
         "source": "Polygon"
@@ -299,16 +303,6 @@
       {
         "title": "Godzilla Minus Zero Opening Weekend Box Office Breaks A Foreign-Language Film Records",
         "url": "https://www.polygon.com/godzilla-minus-zero-opening-weekend-box-office/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Legend of Zelda: Ocarina of Time Thankfully Resists FromSoftware’s Influence",
-        "url": "https://www.polygon.com/the-legend-of-zelda-ocarina-of-time-parrying/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Speedrunners Already Breaking The Legend of Zelda: Ocarina of Time's Remake",
-        "url": "https://www.polygon.com/ocarina-of-time-remake-speedrunning-actor-jumping/",
         "source": "Polygon"
       }
     ],
