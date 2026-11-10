@@ -1,185 +1,191 @@
 {
   "metadata": {
-    "last_updated": "2026-11-09T20:29:26.693253",
-    "total_items": 62
+    "last_updated": "2026-11-10T03:15:16.087110",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
-        "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
-        "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
-        "source": "Hacker News",
-        "score": 363
-      },
-      {
         "title": "Claude Fable 5.2 and Mythos 5.2",
         "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
         "source": "Hacker News",
-        "score": 529
-      },
-      {
-        "title": "CUI – Native UI components for C",
-        "url": "https://yappologistic.github.io/CUI/",
-        "source": "Hacker News",
-        "score": 40
-      },
-      {
-        "title": "Our Smallest, Most Efficient Model: Muse Ember",
-        "url": "https://research.meta.ai/blog/muse-ember",
-        "source": "Hacker News",
-        "score": 138
-      },
-      {
-        "title": "E-means: 10x faster k-means at equal loss",
-        "url": "https://e-means.github.io/",
-        "source": "Hacker News",
-        "score": 65
+        "score": 231
       },
       {
         "title": "USPS now offers official ZIP Code boundary polygons",
         "url": "https://postalpro.usps.com/zcb",
         "source": "Hacker News",
-        "score": 23
+        "score": 507
       },
       {
-        "title": "DeepX claims inference up to 100B parameters at less than 5 W",
-        "url": "https://www.eetimes.com/deepx-tapes-out-second-gen-chip-projects-6-7x-performance-gain-with-lpddr5x-pim/",
+        "title": "E-means: Outperforming k-means in one-tenth the epochs",
+        "url": "https://e-means.github.io/",
         "source": "Hacker News",
-        "score": 79
+        "score": 287
       },
       {
-        "title": "Infineon marks innovation milestone with 300mm power silicon carbide wafer",
-        "url": "https://www.infineon.com/press-release/2026/infpr202611-028",
+        "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
+        "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
         "source": "Hacker News",
-        "score": 51
+        "score": 482
       },
       {
-        "title": "Fold Epic Paper Airplanes",
+        "title": "Horible public key tricks",
+        "url": "https://maurycyz.com/projects/badcert/",
+        "source": "Hacker News",
+        "score": 48
+      },
+      {
+        "title": "Foldable Flight: The Best Paper Airplanes",
         "url": "https://www.foldableflight.com",
         "source": "Hacker News",
-        "score": 689
+        "score": 871
       },
       {
-        "title": "Magenta solar panels may be agrivoltaics' cleverest trick yet",
+        "title": "Locating the source of a mysterious beep",
+        "url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "Exact – a new cross platform UI framework",
+        "url": "https://github.com/expo/exact",
+        "source": "Hacker News",
+        "score": 67
+      },
+      {
+        "title": "Semi-transparent, colored cadmium telluride photovoltaic panels in agrivoltaics",
         "url": "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/",
         "source": "Hacker News",
-        "score": 182
+        "score": 286
       },
       {
-        "title": "Show HN: MeowDisplay Is iPhone Mirroring, but in Reverse",
-        "url": "https://meowdisplay.app/",
+        "title": "The first 300-millimeter power silicon carbide (SiC) wafer",
+        "url": "https://www.infineon.com/press-release/2026/infpr202611-028",
         "source": "Hacker News",
-        "score": 39
+        "score": 108
+      },
+      {
+        "title": "Never Gonna Print You Up",
+        "url": "https://dixken.de/blog/never-gonna-print-you-up",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Fable 5.2 one-shotted my nephew's dream game",
+        "url": "https://notesbylex.com/fable-5-2-one-shotted-my-nephews-dream-game",
+        "source": "Hacker News",
+        "score": 216
       },
       {
         "title": "A primer on GPUs and kernel optimization",
         "url": "https://www.nabo.dev/blogs/kernel-primer",
         "source": "Hacker News",
-        "score": 29
+        "score": 100
       },
       {
-        "title": "Y/N (YC S23) is hiring a growth lead to distribute superhuman A.I. storytelling",
-        "url": "https://www.ycombinator.com/companies/yn/jobs/TjDn3YZ-founding-growth-marketer",
+        "title": "TPU 8tx and TPU 8i Max",
+        "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
         "source": "Hacker News",
-        "score": 1
+        "score": 221
       },
       {
-        "title": "Show HN: Every satellite that passed over any place this week, and its photos",
-        "url": "https://www.watched.earth",
+        "title": "Muse Ember: Our smallest, most efficient model",
+        "url": "https://research.meta.ai/blog/muse-ember",
         "source": "Hacker News",
-        "score": 78
-      },
-      {
-        "title": "Is Opus 5.5 nerfed? Thinking patterns changed on November 3",
-        "url": "https://twitter.com/shanemelaugh/status/2119192075505893695",
-        "source": "Hacker News",
-        "score": 579
+        "score": 259
       }
     ],
     "ai": [
       {
-        "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
-        "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
-        "source": "Hacker News AI",
-        "score": 363
-      },
-      {
         "title": "Claude Fable 5.2 and Mythos 5.2",
         "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
         "source": "Hacker News AI",
-        "score": 529
+        "score": 231
       },
       {
-        "title": "DeepX claims inference up to 100B parameters at less than 5 W",
-        "url": "https://www.eetimes.com/deepx-tapes-out-second-gen-chip-projects-6-7x-performance-gain-with-lpddr5x-pim/",
+        "title": "Payments Canada announces launch of Canada's Real-Time Rail (RTR) payment system",
+        "url": "https://www.payments.ca/canada-launches-real-time-rail-bringing-247-payment-infrastructure-national-economy",
         "source": "Hacker News AI",
-        "score": 79
+        "score": 482
       },
       {
-        "title": "Fold Epic Paper Airplanes",
+        "title": "Foldable Flight: The Best Paper Airplanes",
         "url": "https://www.foldableflight.com",
         "source": "Hacker News AI",
-        "score": 689
+        "score": 871
       },
       {
-        "title": "Magenta solar panels may be agrivoltaics' cleverest trick yet",
+        "title": "Semi-transparent, colored cadmium telluride photovoltaic panels in agrivoltaics",
         "url": "https://www.anthropocenemagazine.org/2026/10/magenta-solar-panels-may-be-agrivoltaics-cleverest-trick-yet/",
         "source": "Hacker News AI",
-        "score": 182
-      },
-      {
-        "title": "Show HN: Recalc – Spreadsheet where cells can be Claude Code or Codex terminals",
-        "url": "https://github.com/sshah03/recalc",
-        "source": "Hacker News AI",
-        "score": 13
+        "score": 286
       },
       {
         "title": "Google Gemini routes personal Drive files and emails to human annotators",
         "url": "https://github.com/thisisme6598/gemini_files/",
         "source": "Hacker News AI",
-        "score": 14
+        "score": 455
       },
       {
-        "title": "Show HN: My daily word puzzle Jointter revisited",
-        "url": "https://news.ycombinator.com/item?id=50426593",
+        "title": "Claude Fable 5.2 scores 65 on Artificial Analysis, highest so far",
+        "url": "https://artificialanalysis.ai/models/claude-fable-5-2",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 300
+      },
+      {
+        "title": "The Race to Build a \"Find My\" for AI Chips",
+        "url": "https://spectrum.ieee.org/find-my-ai-chip",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "Show HN: STE80 Humanizer – de-AI text by writing 80% of the way to ASD-STE100",
         "url": "https://github.com/Dodaios/ste80-humanizer",
         "source": "Hacker News AI",
-        "score": 10
+        "score": 62
+      },
+      {
+        "title": "DeepX claims inference up to 100B parameters at less than 5 W",
+        "url": "https://www.eetimes.com/deepx-tapes-out-second-gen-chip-projects-6-7x-performance-gain-with-lpddr5x-pim/",
+        "source": "Hacker News AI",
+        "score": 139
       },
       {
         "title": "Drones built to look like birds evaded detection at Air Force tech exercise",
         "url": "https://taskandpurpose.com/news/drone-mimicking-bird-test/",
         "source": "Hacker News AI",
-        "score": 72
+        "score": 92
       },
       {
-        "title": "Claude Fable 5.2",
-        "url": "https://twitter.com/claudeai/status/2119867114450268322",
-        "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "RAM-Altman reports unused RAM on your machine, one email a day",
-        "url": "https://github.com/IainKay/ram-altman",
+        "title": "Show HN: Recalc – Spreadsheet where cells can be Claude Code or Codex terminals",
+        "url": "https://github.com/sshah03/recalc",
         "source": "Hacker News AI",
         "score": 28
       },
       {
-        "title": "Sleep wearables are training AI on your brainwaves without explicit consent",
-        "url": "https://www.tomshardware.com/peripherals/wearable-tech/wearable-sleep-trackers-are-using-your-brainwaves-to-train-ai-models-without-explicit-user-consent-tens-of-millions-of-hours-of-eeg-data-harvested",
+        "title": "Claude Fable 5.2 launch offers",
+        "url": "https://support.claude.com/en/articles/17506494-claude-fable-5-2-launch-offers",
         "source": "Hacker News AI",
-        "score": 18
+        "score": 17
+      },
+      {
+        "title": "Indie Game Development with AI",
+        "url": "https://www.sandromaglione.com/articles/indie-game-development-with-ai",
+        "source": "Hacker News AI",
+        "score": 14
+      },
+      {
+        "title": "Supply chain attack on Qubole customers",
+        "url": "https://sentra.io/blog/breaches/inside-the-qubole-supply-chain-attack",
+        "source": "Hacker News AI",
+        "score": 16
       }
     ],
     "news": [
       {
-        "title": "France accuses Iran of supermarket fridge hacking",
-        "url": "https://www.bbc.co.uk/news/articles/cmg474vk6dyqo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump says FBI investigating Nvidia boss's affair with alleged Chinese spy",
+        "url": "https://www.bbc.co.uk/news/articles/cqg7x7dpvym8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -188,27 +194,32 @@
         "source": "BBC World"
       },
       {
-        "title": "Trump questions midterm elections integrity after previously accepting results",
-        "url": "https://www.bbc.co.uk/news/articles/ck79p9350zp9o?at_medium=RSS&at_campaign=rss",
+        "title": "Ukraine peace talks resume with 'some flexibility' by warring sides, US officials say",
+        "url": "https://www.bbc.co.uk/news/articles/cqpvgvrpjvv8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Turkey steel factory blast kills at least 16 people",
-        "url": "https://www.bbc.co.uk/news/articles/cq2d6d5z9y5jo?at_medium=RSS&at_campaign=rss",
+        "title": "Epstein associate who still runs model agency 'put me in danger' says abuse survivor",
+        "url": "https://www.bbc.co.uk/news/articles/cm86z6w59gggo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Nine Zimbabweans caught allegedly trying to leave South Africa to fight in Ukraine",
-        "url": "https://www.bbc.co.uk/news/articles/cm93z3lp5lnpo?at_medium=RSS&at_campaign=rss",
+        "title": "France accuses Iran of supermarket fridge hacking",
+        "url": "https://www.bbc.co.uk/news/articles/cmg474vk6dyqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Russia's leading independent newspaper closes after eviction",
-        "url": "https://www.bbc.co.uk/news/videos/cvrlylj9r11go?at_medium=RSS&at_campaign=rss",
+        "title": "Qantas to outsource 850 local jobs with most roles moving to India ",
+        "url": "https://www.bbc.co.uk/news/articles/cry838v4qzvyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The best multicolour 3D printer for beginners is at a record low price for Black Friday ",
+        "url": "https://www.creativebloq.com/deals/the-best-multicolour-3d-printer-for-beginners-is-at-a-record-low-price-for-black-friday",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Disney's AI deal with Adobe is raising eyebrows ",
         "url": "https://www.creativebloq.com/news/disneys-ai-deal-with-adobe-is-raising-eyebrows",
@@ -238,14 +249,19 @@
         "title": " An anti-AI indie game about keeping hand-drawn fish has become a surprise viral hit ",
         "url": "https://www.creativebloq.com/news/an-anti-ai-indie-game-about-keeping-hand-drawn-fish-has-become-a-surprise-viral-hit",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " The ergonomic chair that got a rare 5-star Creative Bloq review is 10% cheaper for Black Friday ",
-        "url": "https://www.creativebloq.com/deals/the-ergonomic-chair-that-got-a-rare-5-star-creative-bloq-review-is-10-percent-cheaper-for-black-friday",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Alzheimer’s may have early warning signs outside the brain",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261108233103.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists finally discover why we learn to love bitter coffee",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261108233100.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Common supplement could help fight psoriasis, scientists discover",
         "url": "https://www.sciencedaily.com/releases/2026/11/261108233057.htm",
@@ -257,6 +273,11 @@
         "source": "Science Daily"
       },
       {
+        "title": "After 40 years, CERN finds evidence of a one-in-10-billion particle decay",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261108233047.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Caltech robot makes history by building a structure in space",
         "url": "https://www.sciencedaily.com/releases/2026/11/261108233043.htm",
         "source": "Science Daily"
@@ -265,57 +286,42 @@
         "title": "Common osteoporosis drugs linked to 24% lower dementia risk in major study",
         "url": "https://www.sciencedaily.com/releases/2026/11/261108233037.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "DNA on the Shroud of Turin reveals centuries of hidden secrets",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261108202703.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A little-known protein could be a major culprit in type 2 diabetes",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261106174543.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A hidden limit of space and time could unlock electronics 100,000 times faster",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261106174537.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Zelda: Ocarina of Time’s Best Replacement Has 11,000+ ‘Very Positive’ Reviews on Steam",
-        "url": "https://www.polygon.com/deaths-door-five-year-anniversary-retrospective/",
+        "title": "The Settlers of Catan Movie Has Finally Found Its Directors",
+        "url": "https://www.polygon.com/settlers-of-catan-movie-netflix-directors/",
         "source": "Polygon"
       },
       {
-        "title": "Every Legend of Zelda Game, Ranked",
-        "url": "https://www.polygon.com/zelda-games-all-ranked/",
+        "title": "M. Night Shyamalan's The Visit: Now Free on YouTube",
+        "url": "https://www.polygon.com/the-visit-free-on-youtube/",
         "source": "Polygon"
       },
       {
-        "title": "What is the Business Scrub password in Zelda Ocarina of Time?",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-business-scrub-password/",
+        "title": "Zelda: Ocarina of Time Remake Gives Its Best Boy the Happy Ending He Deserved Decades Ago",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-richard-lives/",
         "source": "Polygon"
       },
       {
-        "title": "Even More Free DLC for Hollow Knight: Silksong Might Be on the Way",
-        "url": "https://www.polygon.com/hollow-knight-silksong-free-dlc-rumor/",
+        "title": "Game Awards 2026: All Game of the Year Front-Runners and Predictions",
+        "url": "https://www.polygon.com/game-of-the-year-goty-game-awards-2026-frontrunners/",
         "source": "Polygon"
       },
       {
-        "title": "A Major 2027 Pokémon TCG Change Could Be Bad News For Everyone",
-        "url": "https://www.polygon.com/pokemon-tcg-price-increase-packs-cost-tpc-ex-set-release-date/",
+        "title": "How to get the Biggoron Sword in Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-biggorons-sword-how-to-get/",
         "source": "Polygon"
       },
       {
-        "title": "James Gunn's DCU Is Officially Dead, and That's Good News for Superman Fans",
-        "url": "https://www.polygon.com/james-gunns-dcu-canceled/",
+        "title": "HBO Max-Paramount Plus Bundle Officially Confirmed for 2027",
+        "url": "https://www.polygon.com/hbo-max-paramount-plus-streaming-bundle-launching-2027/",
         "source": "Polygon"
       },
       {
-        "title": "Warhammer’s Brutal Fantasy Football Game Just Suffered Another Setback",
-        "url": "https://www.polygon.com/warhammer-blood-bowl-delayed-2027/",
+        "title": "The Best New Video Games of 2026 (So Far)",
+        "url": "https://www.polygon.com/best-2026-games-so-far/",
         "source": "Polygon"
       }
     ],
