@@ -1,185 +1,167 @@
 {
   "metadata": {
-    "last_updated": "2026-11-11T01:04:21.342060",
-    "total_items": 63
+    "last_updated": "2026-11-11T08:56:59.019537",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "After 7 months, Glasswing overwelms maintainers with underwhelming findings",
-        "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+        "title": "Protecting SSH Keys with macOS Secure Enclave",
+        "url": "https://gatezh.com/posts/macos-secure-enclave-ssh-keys/",
         "source": "Hacker News",
-        "score": 165
-      },
-      {
-        "title": "Scion is back and is going to sell a kei truck in America",
-        "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
-        "source": "Hacker News",
-        "score": 310
-      },
-      {
-        "title": ".name Grandfathered",
-        "url": "https://neil.fraser.name/news/2026/11/10/",
-        "source": "Hacker News",
-        "score": 670
+        "score": 162
       },
       {
         "title": "Smart home devices should work without the internet",
         "url": "https://docodethatmatters.com/home-automation-overnight-success/",
         "source": "Hacker News",
-        "score": 685
+        "score": 905
       },
       {
-        "title": "Six Math Essentials by Terence Tao",
+        "title": ".name Grandfathered",
+        "url": "https://neil.fraser.name/news/2026/11/10/",
+        "source": "Hacker News",
+        "score": 812
+      },
+      {
+        "title": "Scion is back and is going to sell a kei truck in America",
+        "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
+        "source": "Hacker News",
+        "score": 460
+      },
+      {
+        "title": "Greg Kurtzer's Ginux is now a userspace kernel",
+        "url": "https://github.com/gmkurtzer/ginux",
+        "source": "Hacker News",
+        "score": 54
+      },
+      {
+        "title": "A great old-timey game-programming hack (2013)",
+        "url": "https://blog.moertel.com/posts/2013-12-14-great-old-timey-game-programming-hack.html",
+        "source": "Hacker News",
+        "score": 138
+      },
+      {
+        "title": "A Compendium of Abandoned Greenhouses",
+        "url": "https://www.messynessychic.com/2015/01/15/a-compendium-of-abandoned-greenhouses/",
+        "source": "Hacker News",
+        "score": 36
+      },
+      {
+        "title": "Six Math Essentials",
         "url": "https://teorth.github.io/tao-web/six-math-essentials.html",
         "source": "Hacker News",
-        "score": 113
+        "score": 234
+      },
+      {
+        "title": "Apple has new Mac app coming to make running local AI models easy",
+        "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
+        "source": "Hacker News",
+        "score": 204
+      },
+      {
+        "title": "Why I wrote the BEAM book (2025)",
+        "url": "https://happihacking.com/blog/posts/2025/why_I_wrote_theBEAMBook/",
+        "source": "Hacker News",
+        "score": 73
       },
       {
         "title": "Synaptics patent claims stop work on DisplayLink drivers",
         "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
         "source": "Hacker News",
-        "score": 285
+        "score": 389
       },
       {
         "title": "Starlink Mini 2",
         "url": "https://starlink.com/mini-2",
         "source": "Hacker News",
-        "score": 217
-      },
-      {
-        "title": "Val Town is winding down",
-        "url": "https://blog.val.town/winding-down",
-        "source": "Hacker News",
-        "score": 299
-      },
-      {
-        "title": "Pinot Noir: inside the criminal gangs making fake wine",
-        "url": "https://www.economist.com/interactive/2026/11/06/pinot-noir-inside-the-criminal-gangs-making-fake-wine",
-        "source": "Hacker News",
-        "score": 25
+        "score": 397
       },
       {
         "title": "AlphaProof Code",
         "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
         "source": "Hacker News",
-        "score": 574
+        "score": 624
       },
       {
-        "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
-        "url": "https://github.com/GoogleChrome/modern-web-guidance",
+        "title": "A ZIP-style Prolog VM for trilog",
+        "url": "https://github.com/no382001/zipc",
         "source": "Hacker News",
-        "score": 252
-      },
-      {
-        "title": "Hacking the meta ray-ban smartglasses",
-        "url": "https://p0pcycle.com/2026/11/06/hacking-the-meta-ray-ban-smartglasses/",
-        "source": "Hacker News",
-        "score": 28
-      },
-      {
-        "title": "AMD's Zen 6 Family: Feeding the Beast",
-        "url": "https://chipsandcheese.com/p/amds-zen-6-family-feeding-the-beast",
-        "source": "Hacker News",
-        "score": 180
-      },
-      {
-        "title": "Research taste in history: the importance of learning Babylonian math",
-        "url": "https://resobscura.substack.com/p/research-taste-in-history-the-importance",
-        "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "What objective is reasoning solving?",
-        "url": "https://alexwang.ai/posts/reasoning-as-pathfinding/",
-        "source": "Hacker News",
-        "score": 97
+        "score": 10
       }
     ],
     "ai": [
       {
-        "title": "After 7 months, Glasswing overwelms maintainers with underwhelming findings",
-        "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+        "title": "Apple has new Mac app coming to make running local AI models easy",
+        "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
         "source": "Hacker News AI",
-        "score": 165
+        "score": 204
       },
       {
         "title": "Synaptics patent claims stop work on DisplayLink drivers",
         "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
         "source": "Hacker News AI",
-        "score": 285
+        "score": 389
       },
       {
-        "title": "Pinot Noir: inside the criminal gangs making fake wine",
-        "url": "https://www.economist.com/interactive/2026/11/06/pinot-noir-inside-the-criminal-gangs-making-fake-wine",
+        "title": "Tracking Anthropic-discovered vulnerabilities",
+        "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
         "source": "Hacker News AI",
-        "score": 25
-      },
-      {
-        "title": "Show HN: Valencia, Spain in Sim City/Isometric View",
-        "url": "https://tinyvalencia.com/",
-        "source": "Hacker News AI",
-        "score": 189
-      },
-      {
-        "title": "AI usage generates a fragile codebase",
-        "url": "https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/",
-        "source": "Hacker News AI",
-        "score": 363
-      },
-      {
-        "title": "$30M Raised to Redo the CPU",
-        "url": "https://tendrils.co/blog/2026-11-10/30m-raised",
-        "source": "Hacker News AI",
-        "score": 17
-      },
-      {
-        "title": "Show HN: Aircad – Professional drafting and 3D modeling in the browser",
-        "url": "https://aircad.com",
-        "source": "Hacker News AI",
-        "score": 7
-      },
-      {
-        "title": "Apple has new Mac app coming to make running local AI models easy",
-        "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
-        "source": "Hacker News AI",
-        "score": 101
+        "score": 393
       },
       {
         "title": "Claude Whiteboards, Claude Sheets, and Claude Data",
         "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
         "source": "Hacker News AI",
-        "score": 157
+        "score": 211
+      },
+      {
+        "title": "$30M Raised to Redo the CPU",
+        "url": "https://tendrils.co/blog/2026-11-10/30m-raised",
+        "source": "Hacker News AI",
+        "score": 91
+      },
+      {
+        "title": "AI usage generates a fragile codebase",
+        "url": "https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/",
+        "source": "Hacker News AI",
+        "score": 527
+      },
+      {
+        "title": "LLMs Play Zachtronics' TIS-100",
+        "url": "https://tis-100.wincon.dev/",
+        "source": "Hacker News AI",
+        "score": 59
+      },
+      {
+        "title": "Show HN: Valencia, Spain in Sim City/Isometric View",
+        "url": "https://tinyvalencia.com/",
+        "source": "Hacker News AI",
+        "score": 227
+      },
+      {
+        "title": "Pinot Noir: inside the criminal gangs making fake wine",
+        "url": "https://www.economist.com/interactive/2026/11/06/pinot-noir-inside-the-criminal-gangs-making-fake-wine",
+        "source": "Hacker News AI",
+        "score": 56
+      },
+      {
+        "title": "Ukraine Pivots to Israeli-Italian Satellite Tech to Bypass Starlink Restrictions",
+        "url": "https://policy-wire.com/ukraine-pivots-to-israeli-italian-satellite-tech-to-bypass-starlink-restrictions/",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "Foldable Flight: The Best Paper Airplanes",
         "url": "https://www.foldableflight.com",
         "source": "Hacker News AI",
-        "score": 1197
-      },
-      {
-        "title": "Billion Watts in the Speaker [video]",
-        "url": "https://www.youtube.com/watch?v=PHOcTXYaMfg",
-        "source": "Hacker News AI",
-        "score": 99
+        "score": 1218
       },
       {
         "title": "Life on Claude Nine",
         "url": "https://babuschk.in/posts/2026-01-25-life-on-claude-nine.html",
         "source": "Hacker News AI",
-        "score": 79
-      },
-      {
-        "title": "A failed experiment in laptop cooling (2025)",
-        "url": "https://kevinboone.me/failed_cooling.html",
-        "source": "Hacker News AI",
-        "score": 55
-      },
-      {
-        "title": "Businesses in ChatGPT – OpenAI",
-        "url": "https://openai.com/index/introducing-businesses-chatgpt/",
-        "source": "Hacker News AI",
-        "score": 23
+        "score": 104
       }
     ],
     "news": [
@@ -199,22 +181,32 @@
         "source": "BBC World"
       },
       {
-        "title": "'It can kill us': Kenyans fear impact of El Niño with floods predicted",
-        "url": "https://www.bbc.co.uk/news/articles/c8wy9y37z30vo?at_medium=RSS&at_campaign=rss",
+        "title": "Real Madrid's Vinícius Jr sends surprise message to boy who lost his legs in Sudan's war",
+        "url": "https://www.bbc.co.uk/news/articles/cqm26mmpp2p1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Violence erupts in Bangladesh as ousted PM's supporters stage protest",
-        "url": "https://www.bbc.co.uk/news/articles/cwkg5g5pjpyko?at_medium=RSS&at_campaign=rss",
+        "title": "Headquarters of Haitian gang destroyed, El Salvador's president says ",
+        "url": "https://www.bbc.co.uk/news/articles/cmvg2xdwnwezo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Anti-homosexuality laws in Trinidad and Tobago overturned",
-        "url": "https://www.bbc.co.uk/news/articles/cm0e0evlpp87o?at_medium=RSS&at_campaign=rss",
+        "title": "Kennedys sue to block Trump's arch, arguing it would cast shadow on JFK's grave",
+        "url": "https://www.bbc.co.uk/news/articles/cw8dvpmzp2p4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The Legend of Zelda: Ocarina of Time review: A sublime remake that enhances and enchants in equal measure ",
+        "url": "https://www.creativebloq.com/reviews/the-legend-of-zelda-ocarina-of-time-review-a-sublime-remake-that-enhances-and-enchants-in-equal-measure",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This bank's vibrant new logo design ticks all the boxes ",
+        "url": "https://www.creativebloq.com/news/this-banks-vibrant-new-logo-design-ticks-all-the-boxes",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Adobe's approach to AI has pleasantly surprised me ",
         "url": "https://www.creativebloq.com/features/adobes-approach-to-ai-has-pleasantly-surprised-me",
@@ -226,7 +218,7 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " With £700 off, this LG soundbar is now the perfect upgrade for a home entertainment setup ",
+        "title": " With 64% (£700) off, this LG soundbar is now the perfect upgrade for a home entertainment setup ",
         "url": "https://www.creativebloq.com/deals/with-gbp700-off-this-lg-soundbar-is-now-the-perfect-upgrade-for-a-home-entertainment-setup",
         "source": "Creative Bloq"
       },
@@ -239,56 +231,66 @@
         "title": " Adobe's Google partnership hints at a radically different future for Photoshop ",
         "url": "https://www.creativebloq.com/news/adobes-google-partnership-hints-at-a-radically-different-future-for-photoshop",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Adobe unveils Photoshop 2027 with a host of new AI features ",
-        "url": "https://www.creativebloq.com/news/adobe-unveils-photoshop-2027-with-a-host-of-new-ai-features",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Adobe Premiere Pro is getting an AI agent to do the boring editing jobs ",
-        "url": "https://www.creativebloq.com/news/adobe-premiere-pro-is-getting-an-ai-agent-to-do-the-boring-editing-jobs",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
+        "title": "Scientists discover a giant 66-pound rodent that lived 34 million years ago",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261110042532.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Why heart attacks can still happen even when bad cholesterol is low",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261109205415.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "237-million-year-old fossils reveal a bizarre armored sea amphibian",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261109205409.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA’s CHAPEA Mars crew finally emerges after more than a year in isolation",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261109205406.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA offers $500,000 to develop next-generation electric rocket engines",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261109205404.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Global fossil fuel emissions set to fall in 2026, but total CO2 keeps rising",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261109205358.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Alzheimer’s may have early warning signs outside the brain",
         "url": "https://www.sciencedaily.com/releases/2026/11/261108233103.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists finally discover why we learn to love bitter coffee",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261108233100.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Common supplement could help fight psoriasis, scientists discover",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261108233057.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA reveals bold new plan to return astronauts to the Moon in 2028",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261108233054.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "After 40 years, CERN finds evidence of a one-in-10-billion particle decay",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261108233047.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Caltech robot makes history by building a structure in space",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261108233043.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Common osteoporosis drugs linked to 24% lower dementia risk in major study",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261108233037.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "Netflix's New \"Carrie Meets Mean Girls\" Thriller Is a Near-Perfect 8-Episode Binge",
+        "url": "https://www.polygon.com/the-body-review-netflix/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Disney's Legendary 218-Episode Sci-Fi Series Is the Perfect Anti-'Lanterns' Binge",
+        "url": "https://www.polygon.com/lanterns-x-files-binge/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Funniest Quotes from 'Calvin and Hobbes’ Babysitter Rosalyn",
+        "url": "https://www.polygon.com/calvin-and-hobbes-5-best-rosalyn-babysitter-quotes/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Years Later, 'VisionQuest' Officially Fixes 'WandaVision's Disappointing Ending",
+        "url": "https://www.polygon.com/visionquest-fixes-wandavision-ending/",
+        "source": "Polygon"
+      },
       {
         "title": "Christopher Nolan's The Odyssey Officially Sets Home Release Date",
         "url": "https://www.polygon.com/the-odyssey-christopher-nolan-home-release-date/",
@@ -302,26 +304,6 @@
       {
         "title": "PlayStation Officially Cancels Live-service Shooter Fairgames",
         "url": "https://www.polygon.com/sony-cancels-fairgames-live-service-shooter-ps5/",
-        "source": "Polygon"
-      },
-      {
-        "title": "4 Upcoming Fantasy RPGs Better Than Waiting for a New Dragon Age",
-        "url": "https://www.polygon.com/dragon-age-alternatives-upcoming-rpgs/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to get the Sinking Lure in Zelda Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-oot-remake-sinking-lure-location/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Big Walk AI Controversy Is a GOTY Awards Twist Sparking a Bigger Debate",
-        "url": "https://www.polygon.com/big-walks-ai-controversy-goty-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Nobody Said The Legend of Zelda: Ocarina of Time Was This Funny",
-        "url": "https://www.polygon.com/zelda-ocarina-time-remake-funny-moments/",
         "source": "Polygon"
       }
     ],
