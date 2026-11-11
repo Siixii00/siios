@@ -1,202 +1,215 @@
 {
   "metadata": {
-    "last_updated": "2026-11-11T08:56:59.019537",
-    "total_items": 60
+    "last_updated": "2026-11-11T16:59:33.280885",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Protecting SSH Keys with macOS Secure Enclave",
-        "url": "https://gatezh.com/posts/macos-secure-enclave-ssh-keys/",
+        "title": "Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyramid in 72h",
+        "url": "https://pietromiotti.com/latest/maya-site/?maya",
+        "source": "Hacker News",
+        "score": 683
+      },
+      {
+        "title": "Why aren't we shipping faster now?",
+        "url": "https://cabird.com/talks/shipping-faster/",
+        "source": "Hacker News",
+        "score": 24
+      },
+      {
+        "title": "Pharo in the Browser with WebAssembly",
+        "url": "https://massimo-nocentini.github.io/pharo-vm/world.html",
+        "source": "Hacker News",
+        "score": 77
+      },
+      {
+        "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
+        "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Atuin Threads: All your agent sessions on every machine",
+        "url": "https://blog.atuin.sh/threads-agent-sessions/",
+        "source": "Hacker News",
+        "score": 84
+      },
+      {
+        "title": "Can a Linear Program Do Weight-Space Programming?",
+        "url": "https://nathan.rs/posts/weight-space-lp/",
+        "source": "Hacker News",
+        "score": 154
+      },
+      {
+        "title": "Hyper-Realistic Sand with WebGL2",
+        "url": "https://av.github.io/safe-sand/",
+        "source": "Hacker News",
+        "score": 105
+      },
+      {
+        "title": "Using voltage glitching to unleash the A100 in my mining card",
+        "url": "https://blog.kate.land/posts/using-voltage-glitching-to-unlock-the-a100/",
         "source": "Hacker News",
         "score": 162
       },
       {
-        "title": "Smart home devices should work without the internet",
-        "url": "https://docodethatmatters.com/home-automation-overnight-success/",
+        "title": "Show HN: Godbolt-in-a-floating-window for Neovim (C, C++, Rust)",
+        "url": "https://github.com/0xdeadf1sh/AssemblyForNeovim",
         "source": "Hacker News",
-        "score": 905
+        "score": 45
       },
       {
-        "title": ".name Grandfathered",
-        "url": "https://neil.fraser.name/news/2026/11/10/",
+        "title": "Show HN: Klad, a paint app your coding agent can drive (source-available)",
+        "url": "https://github.com/klad-app/klad",
         "source": "Hacker News",
-        "score": 812
+        "score": 9
       },
       {
-        "title": "Scion is back and is going to sell a kei truck in America",
-        "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
+        "title": "We need more goat sacrifices",
+        "url": "https://www.experimental-history.com/p/we-need-more-goat-sacrifices",
         "source": "Hacker News",
-        "score": 460
+        "score": 90
       },
       {
-        "title": "Greg Kurtzer's Ginux is now a userspace kernel",
-        "url": "https://github.com/gmkurtzer/ginux",
+        "title": "I asked every TV manufacturer 17 questions about how they spy on you",
+        "url": "https://www.theverge.com/tech/1012372/tv-privacy-acr-questions",
         "source": "Hacker News",
-        "score": 54
+        "score": 197
       },
       {
-        "title": "A great old-timey game-programming hack (2013)",
-        "url": "https://blog.moertel.com/posts/2013-12-14-great-old-timey-game-programming-hack.html",
+        "title": "Protecting SSH Keys with macOS Secure Enclave",
+        "url": "https://gatezh.com/posts/macos-secure-enclave-ssh-keys/",
         "source": "Hacker News",
-        "score": 138
+        "score": 346
       },
       {
-        "title": "A Compendium of Abandoned Greenhouses",
-        "url": "https://www.messynessychic.com/2015/01/15/a-compendium-of-abandoned-greenhouses/",
+        "title": "Apple is killing its Support Community forum next week",
+        "url": "https://www.theverge.com/tech/1031507/apple-community-support-forum-shutting-down",
         "source": "Hacker News",
-        "score": 36
+        "score": 145
       },
       {
-        "title": "Six Math Essentials",
-        "url": "https://teorth.github.io/tao-web/six-math-essentials.html",
+        "title": "EventSourcingDB 1.3.0 Is Available",
+        "url": "https://www.eventfoundation.io/resources/blog/eventsourcingdb-1-3-0-is-available",
         "source": "Hacker News",
-        "score": 234
-      },
-      {
-        "title": "Apple has new Mac app coming to make running local AI models easy",
-        "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
-        "source": "Hacker News",
-        "score": 204
-      },
-      {
-        "title": "Why I wrote the BEAM book (2025)",
-        "url": "https://happihacking.com/blog/posts/2025/why_I_wrote_theBEAMBook/",
-        "source": "Hacker News",
-        "score": 73
-      },
-      {
-        "title": "Synaptics patent claims stop work on DisplayLink drivers",
-        "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
-        "source": "Hacker News",
-        "score": 389
-      },
-      {
-        "title": "Starlink Mini 2",
-        "url": "https://starlink.com/mini-2",
-        "source": "Hacker News",
-        "score": 397
-      },
-      {
-        "title": "AlphaProof Code",
-        "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
-        "source": "Hacker News",
-        "score": 624
-      },
-      {
-        "title": "A ZIP-style Prolog VM for trilog",
-        "url": "https://github.com/no382001/zipc",
-        "source": "Hacker News",
-        "score": 10
+        "score": 24
       }
     ],
     "ai": [
       {
+        "title": "Google SWE points 48 AI agents at NASA Lidar, finds unmapped Maya pyramid in 72h",
+        "url": "https://pietromiotti.com/latest/maya-site/?maya",
+        "source": "Hacker News AI",
+        "score": 683
+      },
+      {
+        "title": "Show HN: Klad, a paint app your coding agent can drive (source-available)",
+        "url": "https://github.com/klad-app/klad",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "EventSourcingDB 1.3.0 Is Available",
+        "url": "https://www.eventfoundation.io/resources/blog/eventsourcingdb-1-3-0-is-available",
+        "source": "Hacker News AI",
+        "score": 24
+      },
+      {
+        "title": "Tinfoil (YC P25) is hiring an applied AI security engineer in San Francisco",
+        "url": "https://news.ycombinator.com/item?id=50452404",
+        "source": "Hacker News AI",
+        "score": 1
+      },
+      {
         "title": "Apple has new Mac app coming to make running local AI models easy",
         "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
         "source": "Hacker News AI",
-        "score": 204
+        "score": 445
+      },
+      {
+        "title": "A Brain Teaser of an Obituary",
+        "url": "https://www.nytimes.com/2026/11/10/obituaries/steve-selvin-dead.html",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "Synaptics patent claims stop work on DisplayLink drivers",
         "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
         "source": "Hacker News AI",
-        "score": 389
-      },
-      {
-        "title": "Tracking Anthropic-discovered vulnerabilities",
-        "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
-        "source": "Hacker News AI",
-        "score": 393
+        "score": 463
       },
       {
         "title": "Claude Whiteboards, Claude Sheets, and Claude Data",
         "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
         "source": "Hacker News AI",
-        "score": 211
+        "score": 271
       },
       {
-        "title": "$30M Raised to Redo the CPU",
-        "url": "https://tendrils.co/blog/2026-11-10/30m-raised",
+        "title": "Tracking Anthropic-discovered vulnerabilities",
+        "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
         "source": "Hacker News AI",
-        "score": 91
-      },
-      {
-        "title": "AI usage generates a fragile codebase",
-        "url": "https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/",
-        "source": "Hacker News AI",
-        "score": 527
-      },
-      {
-        "title": "LLMs Play Zachtronics' TIS-100",
-        "url": "https://tis-100.wincon.dev/",
-        "source": "Hacker News AI",
-        "score": 59
-      },
-      {
-        "title": "Show HN: Valencia, Spain in Sim City/Isometric View",
-        "url": "https://tinyvalencia.com/",
-        "source": "Hacker News AI",
-        "score": 227
-      },
-      {
-        "title": "Pinot Noir: inside the criminal gangs making fake wine",
-        "url": "https://www.economist.com/interactive/2026/11/06/pinot-noir-inside-the-criminal-gangs-making-fake-wine",
-        "source": "Hacker News AI",
-        "score": 56
-      },
-      {
-        "title": "Ukraine Pivots to Israeli-Italian Satellite Tech to Bypass Starlink Restrictions",
-        "url": "https://policy-wire.com/ukraine-pivots-to-israeli-italian-satellite-tech-to-bypass-starlink-restrictions/",
-        "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "Foldable Flight: The Best Paper Airplanes",
-        "url": "https://www.foldableflight.com",
-        "source": "Hacker News AI",
-        "score": 1218
-      },
-      {
-        "title": "Life on Claude Nine",
-        "url": "https://babuschk.in/posts/2026-01-25-life-on-claude-nine.html",
-        "source": "Hacker News AI",
-        "score": 104
+        "score": 438
       }
     ],
     "news": [
+      {
+        "title": "Spain sees widespread disruption in first general strike for 14 years",
+        "url": "https://www.bbc.co.uk/news/articles/cwvg25nypmrvo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Russia-Ukraine talks turn to post-war security but end without breakthrough",
+        "url": "https://www.bbc.co.uk/news/articles/ck792we7zrz4o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "US Treasury Secretary Scott Bessent relocated after alleged Iranian threats",
+        "url": "https://www.bbc.co.uk/news/articles/cqr7gr0010r2o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Six thousand Italian schools hit by threats in suspected bomb hoax",
+        "url": "https://www.bbc.co.uk/news/articles/cwz0k79pr8z2o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Three Iran-backed suspects plotted attacks including RAF Fairford incident, US says",
         "url": "https://www.bbc.co.uk/news/articles/c3rryrryk59zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US Army soldier suspected of spying for Russia arrested in UK",
-        "url": "https://www.bbc.co.uk/news/articles/c6d7q77xgw0vo?at_medium=RSS&at_campaign=rss",
+        "title": "Kidnapper, 74, escapes from house arrest in Argentina by abseiling from balcony",
+        "url": "https://www.bbc.co.uk/news/articles/c933gn6710lyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Meghan's father Thomas Markle back in federal custody after allegedly removing ankle monitor",
-        "url": "https://www.bbc.co.uk/news/articles/c9j3433zy4vro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Real Madrid's Vinícius Jr sends surprise message to boy who lost his legs in Sudan's war",
-        "url": "https://www.bbc.co.uk/news/articles/cqm26mmpp2p1o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Headquarters of Haitian gang destroyed, El Salvador's president says ",
-        "url": "https://www.bbc.co.uk/news/articles/cmvg2xdwnwezo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Kennedys sue to block Trump's arch, arguing it would cast shadow on JFK's grave",
-        "url": "https://www.bbc.co.uk/news/articles/cw8dvpmzp2p4o?at_medium=RSS&at_campaign=rss",
+        "title": "Four grizzly bears killed in Canada after fatal attack on mother and daughter",
+        "url": "https://www.bbc.co.uk/news/articles/cwg5r8zrm11mo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " This coffee machine won two design awards and now has £150 off for Black Friday ",
+        "url": "https://www.creativebloq.com/deals/this-coffee-machine-won-two-design-awards-and-now-has-gbp150-off-for-black-friday",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Space Invaders vs Mega Man: Which My Play Watch puts more nostalgia on your wrist? ",
+        "url": "https://www.creativebloq.com/news/space-invaders-vs-mega-man-which-my-play-watch-puts-more-nostalgia-on-your-wrist",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The best CNC machines: The crafting revolution starts here ",
+        "url": "https://www.creativebloq.com/buying-guides/the-best-cnc-machines-the-crafting-revolution-starts-here",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This artist specialises in creating an epic sense of scale in 3D scenes ",
+        "url": "https://www.creativebloq.com/how-to/this-artist-specialises-in-creating-an-epic-sense-of-scale-in-3d-scenes",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The Legend of Zelda: Ocarina of Time review: A sublime remake that enhances and enchants in equal measure ",
         "url": "https://www.creativebloq.com/reviews/the-legend-of-zelda-ocarina-of-time-review-a-sublime-remake-that-enhances-and-enchants-in-equal-measure",
@@ -206,34 +219,29 @@
         "title": " This bank's vibrant new logo design ticks all the boxes ",
         "url": "https://www.creativebloq.com/news/this-banks-vibrant-new-logo-design-ticks-all-the-boxes",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Adobe's approach to AI has pleasantly surprised me ",
-        "url": "https://www.creativebloq.com/features/adobes-approach-to-ai-has-pleasantly-surprised-me",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " £568 off makes this a great budget PC for creatives as well as gamers ",
-        "url": "https://www.creativebloq.com/deals/gbp568-off-makes-this-a-great-budget-pc-for-creatives-as-well-as-gamers",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " With 64% (£700) off, this LG soundbar is now the perfect upgrade for a home entertainment setup ",
-        "url": "https://www.creativebloq.com/deals/with-gbp700-off-this-lg-soundbar-is-now-the-perfect-upgrade-for-a-home-entertainment-setup",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Is ArtStation's new AI art policy good enough? ",
-        "url": "https://www.creativebloq.com/news/is-artstations-new-ai-art-policy-good-enough",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Adobe's Google partnership hints at a radically different future for Photoshop ",
-        "url": "https://www.creativebloq.com/news/adobes-google-partnership-hints-at-a-radically-different-future-for-photoshop",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Where are all the males? Ancient human fossils reveal a startling mystery",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261110042558.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA reveals Earth's ozone hole has grown to a size not seen in a decade",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261110042546.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Energy drinks linked to 11 times more reports of cardiac arrest",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261110042543.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Even occasional marijuana use linked to 40% higher odds of stroke",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261110042539.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Scientists discover a giant 66-pound rodent that lived 34 million years ago",
         "url": "https://www.sciencedaily.com/releases/2026/11/261110042532.htm",
@@ -245,65 +253,45 @@
         "source": "Science Daily"
       },
       {
-        "title": "237-million-year-old fossils reveal a bizarre armored sea amphibian",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261109205409.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA’s CHAPEA Mars crew finally emerges after more than a year in isolation",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261109205406.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA offers $500,000 to develop next-generation electric rocket engines",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261109205404.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Global fossil fuel emissions set to fall in 2026, but total CO2 keeps rising",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261109205358.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Alzheimer’s may have early warning signs outside the brain",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261108233103.htm",
+        "title": "The mystery of how hair knows where to grow may finally be solved",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261109205413.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Netflix's New \"Carrie Meets Mean Girls\" Thriller Is a Near-Perfect 8-Episode Binge",
-        "url": "https://www.polygon.com/the-body-review-netflix/",
+        "title": "Bethesda Officially Shuts Down Elder Scrolls 6 Fan Theory on Skyrim Anniversary",
+        "url": "https://www.polygon.com/elder-scrolls-6-sentinel-bethesda-skyrim-anniversary-announcement/",
         "source": "Polygon"
       },
       {
-        "title": "Disney's Legendary 218-Episode Sci-Fi Series Is the Perfect Anti-'Lanterns' Binge",
-        "url": "https://www.polygon.com/lanterns-x-files-binge/",
+        "title": "Forgotten Elder Scrolls Game Gets Surprise Re-Release",
+        "url": "https://www.polygon.com/the-elder-scrolls-shadowkey-ngage-fan-remaster/",
         "source": "Polygon"
       },
       {
-        "title": "5 Funniest Quotes from 'Calvin and Hobbes’ Babysitter Rosalyn",
-        "url": "https://www.polygon.com/calvin-and-hobbes-5-best-rosalyn-babysitter-quotes/",
+        "title": "How to get the Zora Tunic in Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-zora-tunic-how-to-get/",
         "source": "Polygon"
       },
       {
-        "title": "5 Years Later, 'VisionQuest' Officially Fixes 'WandaVision's Disappointing Ending",
-        "url": "https://www.polygon.com/visionquest-fixes-wandavision-ending/",
+        "title": "'VisionQuest' Star Officially Comments Status in 'Avengers: Doomsday' and 'Secret Wars'",
+        "url": "https://www.polygon.com/tnia-miller-visionquest-finale-interview-james-spader-rhinstone-cowboy/",
         "source": "Polygon"
       },
       {
-        "title": "Christopher Nolan's The Odyssey Officially Sets Home Release Date",
-        "url": "https://www.polygon.com/the-odyssey-christopher-nolan-home-release-date/",
+        "title": "Patrick Stewart Made Anthony Mackie ‘Freak Out’ on Avengers: Doomsday Set",
+        "url": "https://www.polygon.com/avengers-doomsday-anthony-mackie-patrick-stewart-interview/",
         "source": "Polygon"
       },
       {
-        "title": "10 Best Fire Emblem: Fortune's Weave Replacements",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-best-games-replacements/",
+        "title": "Avengers Endgame: Encore Officially Gets Disney Plus Streaming Date",
+        "url": "https://www.polygon.com/avengers-endgame-encore-streaming-date-disney-plus-november-2026/",
         "source": "Polygon"
       },
       {
-        "title": "PlayStation Officially Cancels Live-service Shooter Fairgames",
-        "url": "https://www.polygon.com/sony-cancels-fairgames-live-service-shooter-ps5/",
+        "title": "My Grandma Got Me Through the Water Temple. She Would’ve Loved the Ocarina of Time Remake",
+        "url": "https://www.polygon.com/ocarina-of-time-remake-remembering-grandma/",
         "source": "Polygon"
       }
     ],
