@@ -1,227 +1,216 @@
 {
   "metadata": {
-    "last_updated": "2026-11-10T20:17:33.545392",
-    "total_items": 65
+    "last_updated": "2026-11-11T01:04:21.342060",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
+        "title": "After 7 months, Glasswing overwelms maintainers with underwhelming findings",
+        "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+        "source": "Hacker News",
+        "score": 165
+      },
+      {
+        "title": "Scion is back and is going to sell a kei truck in America",
+        "url": "https://www.theautopian.com/scion-is-back-and-its-going-to-sell-a-freaking-kei-truck-in-america/",
+        "source": "Hacker News",
+        "score": 310
+      },
+      {
         "title": ".name Grandfathered",
         "url": "https://neil.fraser.name/news/2026/11/10/",
         "source": "Hacker News",
-        "score": 437
+        "score": 670
       },
       {
         "title": "Smart home devices should work without the internet",
         "url": "https://docodethatmatters.com/home-automation-overnight-success/",
         "source": "Hacker News",
-        "score": 387
+        "score": 685
+      },
+      {
+        "title": "Six Math Essentials by Terence Tao",
+        "url": "https://teorth.github.io/tao-web/six-math-essentials.html",
+        "source": "Hacker News",
+        "score": 113
       },
       {
         "title": "Synaptics patent claims stop work on DisplayLink drivers",
         "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
         "source": "Hacker News",
-        "score": 126
-      },
-      {
-        "title": "Val Town is winding down",
-        "url": "https://blog.val.town/winding-down",
-        "source": "Hacker News",
-        "score": 158
-      },
-      {
-        "title": "AlphaProof Code",
-        "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
-        "source": "Hacker News",
-        "score": 512
-      },
-      {
-        "title": "Claude Whiteboards, Claude Sheets, and Claude Data",
-        "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
-        "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
-        "url": "https://github.com/GoogleChrome/modern-web-guidance",
-        "source": "Hacker News",
-        "score": 100
-      },
-      {
-        "title": "AMD's Zen 6 Family: Feeding the Beast",
-        "url": "https://chipsandcheese.com/p/amds-zen-6-family-feeding-the-beast",
-        "source": "Hacker News",
-        "score": 107
-      },
-      {
-        "title": "What objective is reasoning solving?",
-        "url": "https://alexwang.ai/posts/reasoning-as-pathfinding/",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "A comprehensive study of how fingerprintable users are",
-        "url": "https://fingerprinting.study/",
-        "source": "Hacker News",
-        "score": 14
+        "score": 285
       },
       {
         "title": "Starlink Mini 2",
         "url": "https://starlink.com/mini-2",
         "source": "Hacker News",
-        "score": 133
+        "score": 217
       },
       {
-        "title": "I deleted all my SSH keys",
-        "url": "https://blog.infected.systems/posts/2026-11-03-i-deleted-all-my-ssh-keys/",
+        "title": "Val Town is winding down",
+        "url": "https://blog.val.town/winding-down",
         "source": "Hacker News",
-        "score": 142
+        "score": 299
       },
       {
-        "title": "Blender 5.3 released with Gaussian Splat support",
-        "url": "https://www.blender.org/download/releases/5-3/",
+        "title": "Pinot Noir: inside the criminal gangs making fake wine",
+        "url": "https://www.economist.com/interactive/2026/11/06/pinot-noir-inside-the-criminal-gangs-making-fake-wine",
         "source": "Hacker News",
-        "score": 324
+        "score": 25
       },
       {
-        "title": "Ableton Live 13",
-        "url": "https://www.ableton.com/en/live/",
+        "title": "AlphaProof Code",
+        "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
         "source": "Hacker News",
-        "score": 209
+        "score": 574
       },
       {
-        "title": "Saltline: First-person shooter built by Fable 5.2",
-        "url": "https://claude.ai/artifact/BGY1SztrAYcJQHSsnHHGmp",
+        "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives",
+        "url": "https://github.com/GoogleChrome/modern-web-guidance",
         "source": "Hacker News",
-        "score": 10
+        "score": 252
+      },
+      {
+        "title": "Hacking the meta ray-ban smartglasses",
+        "url": "https://p0pcycle.com/2026/11/06/hacking-the-meta-ray-ban-smartglasses/",
+        "source": "Hacker News",
+        "score": 28
+      },
+      {
+        "title": "AMD's Zen 6 Family: Feeding the Beast",
+        "url": "https://chipsandcheese.com/p/amds-zen-6-family-feeding-the-beast",
+        "source": "Hacker News",
+        "score": 180
+      },
+      {
+        "title": "Research taste in history: the importance of learning Babylonian math",
+        "url": "https://resobscura.substack.com/p/research-taste-in-history-the-importance",
+        "source": "Hacker News",
+        "score": 7
+      },
+      {
+        "title": "What objective is reasoning solving?",
+        "url": "https://alexwang.ai/posts/reasoning-as-pathfinding/",
+        "source": "Hacker News",
+        "score": 97
       }
     ],
     "ai": [
       {
+        "title": "After 7 months, Glasswing overwelms maintainers with underwhelming findings",
+        "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+        "source": "Hacker News AI",
+        "score": 165
+      },
+      {
         "title": "Synaptics patent claims stop work on DisplayLink drivers",
         "url": "https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f/",
         "source": "Hacker News AI",
-        "score": 126
+        "score": 285
       },
       {
-        "title": "Claude Whiteboards, Claude Sheets, and Claude Data",
-        "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
+        "title": "Pinot Noir: inside the criminal gangs making fake wine",
+        "url": "https://www.economist.com/interactive/2026/11/06/pinot-noir-inside-the-criminal-gangs-making-fake-wine",
         "source": "Hacker News AI",
-        "score": 60
+        "score": 25
       },
       {
         "title": "Show HN: Valencia, Spain in Sim City/Isometric View",
         "url": "https://tinyvalencia.com/",
         "source": "Hacker News AI",
-        "score": 114
+        "score": 189
       },
       {
         "title": "AI usage generates a fragile codebase",
         "url": "https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/",
         "source": "Hacker News AI",
-        "score": 244
+        "score": 363
       },
       {
-        "title": "Life on Claude Nine",
-        "url": "https://babuschk.in/posts/2026-01-25-life-on-claude-nine.html",
+        "title": "$30M Raised to Redo the CPU",
+        "url": "https://tendrils.co/blog/2026-11-10/30m-raised",
         "source": "Hacker News AI",
-        "score": 15
+        "score": 17
       },
       {
-        "title": "Businesses in ChatGPT – OpenAI",
-        "url": "https://openai.com/index/introducing-businesses-chatgpt/",
+        "title": "Show HN: Aircad – Professional drafting and 3D modeling in the browser",
+        "url": "https://aircad.com",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 7
       },
       {
-        "title": "Work at the Frontier: AI's effect on freelance work",
-        "url": "https://openai.com/index/ai-effect-on-freelance-work",
+        "title": "Apple has new Mac app coming to make running local AI models easy",
+        "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
         "source": "Hacker News AI",
-        "score": 22
+        "score": 101
       },
       {
-        "title": "Billion Watts in the Speaker [video]",
-        "url": "https://www.youtube.com/watch?v=PHOcTXYaMfg",
+        "title": "Claude Whiteboards, Claude Sheets, and Claude Data",
+        "url": "https://claude.com/resources/articles/sheets-whiteboards-data",
         "source": "Hacker News AI",
-        "score": 91
-      },
-      {
-        "title": "A failed experiment in laptop cooling (2025)",
-        "url": "https://kevinboone.me/failed_cooling.html",
-        "source": "Hacker News AI",
-        "score": 52
-      },
-      {
-        "title": "Tailscale's DNS IPv6 spells out \"Tailscale\"",
-        "url": "https://www.reddit.com/r/Tailscale/comments/1xsr24r/tailscales_dns_ipv6_spells_out_tailscale_easter/",
-        "source": "Hacker News AI",
-        "score": 112
-      },
-      {
-        "title": "Show HN: Ghanaian street games you can play in the browser",
-        "url": "https://www.ghanastreetgames.com/",
-        "source": "Hacker News AI",
-        "score": 98
-      },
-      {
-        "title": "Show HN: TheoremSmith: Mass-Producing Hard Proof Problems to Train LLMs",
-        "url": "https://charleshuang.me/2026/09/27/theoremsmith/",
-        "source": "Hacker News AI",
-        "score": 6
-      },
-      {
-        "title": "Show HN: I have trained 15 blood glucose forecasting models on my own data",
-        "url": "https://github.com/0xdeadf1sh/T1DMAI",
-        "source": "Hacker News AI",
-        "score": 4
-      },
-      {
-        "title": "Show HN: WolveKafka – Consume Kafka with a plain HTTP endpoint",
-        "url": "https://github.com/wolveflake/wolvekafka",
-        "source": "Hacker News AI",
-        "score": 6
+        "score": 157
       },
       {
         "title": "Foldable Flight: The Best Paper Airplanes",
         "url": "https://www.foldableflight.com",
         "source": "Hacker News AI",
-        "score": 1172
+        "score": 1197
+      },
+      {
+        "title": "Billion Watts in the Speaker [video]",
+        "url": "https://www.youtube.com/watch?v=PHOcTXYaMfg",
+        "source": "Hacker News AI",
+        "score": 99
+      },
+      {
+        "title": "Life on Claude Nine",
+        "url": "https://babuschk.in/posts/2026-01-25-life-on-claude-nine.html",
+        "source": "Hacker News AI",
+        "score": 79
+      },
+      {
+        "title": "A failed experiment in laptop cooling (2025)",
+        "url": "https://kevinboone.me/failed_cooling.html",
+        "source": "Hacker News AI",
+        "score": 55
+      },
+      {
+        "title": "Businesses in ChatGPT – OpenAI",
+        "url": "https://openai.com/index/introducing-businesses-chatgpt/",
+        "source": "Hacker News AI",
+        "score": 23
       }
     ],
     "news": [
       {
-        "title": "First day of Ukraine peace talks constructive, Zelensky says",
-        "url": "https://www.bbc.co.uk/news/articles/cqpvgvrpjvv8o?at_medium=RSS&at_campaign=rss",
+        "title": "Three Iran-backed suspects plotted attacks including RAF Fairford incident, US says",
+        "url": "https://www.bbc.co.uk/news/articles/c3rryrryk59zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Malaysia's disgraced former PM leaves jail for house arrest after embezzling millions",
-        "url": "https://www.bbc.co.uk/news/articles/cxnv0v4yln7do?at_medium=RSS&at_campaign=rss",
+        "title": "US Army soldier suspected of spying for Russia arrested in UK",
+        "url": "https://www.bbc.co.uk/news/articles/c6d7q77xgw0vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Israel's new parliament sworn in as leaders compete to form government",
-        "url": "https://www.bbc.co.uk/news/articles/crd939lpzjp9o?at_medium=RSS&at_campaign=rss",
+        "title": "Meghan's father Thomas Markle back in federal custody after allegedly removing ankle monitor",
+        "url": "https://www.bbc.co.uk/news/articles/c9j3433zy4vro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Board of Peace says Israel's aid response after Gaza floods 'insufficent'",
-        "url": "https://www.bbc.co.uk/news/articles/cw4g1g4ll5m1o?at_medium=RSS&at_campaign=rss",
+        "title": "'It can kill us': Kenyans fear impact of El Niño with floods predicted",
+        "url": "https://www.bbc.co.uk/news/articles/c8wy9y37z30vo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Violence erupts in Bangladesh as ousted PM's supporters stage protest",
+        "url": "https://www.bbc.co.uk/news/articles/cwkg5g5pjpyko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Anti-homosexuality laws in Trinidad and Tobago overturned",
         "url": "https://www.bbc.co.uk/news/articles/cm0e0evlpp87o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "French wartime resistance heroine Solange Alexandre dies aged 104",
-        "url": "https://www.bbc.co.uk/news/articles/cjdx3x7wg941o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Board of Peace says Israel's aid response after Gaza floods 'insufficent'",
-        "url": "https://www.bbc.co.uk/news/articles/cw4g1g4ll5m1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -301,6 +290,31 @@
     ],
     "gaming": [
       {
+        "title": "Christopher Nolan's The Odyssey Officially Sets Home Release Date",
+        "url": "https://www.polygon.com/the-odyssey-christopher-nolan-home-release-date/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Best Fire Emblem: Fortune's Weave Replacements",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-best-games-replacements/",
+        "source": "Polygon"
+      },
+      {
+        "title": "PlayStation Officially Cancels Live-service Shooter Fairgames",
+        "url": "https://www.polygon.com/sony-cancels-fairgames-live-service-shooter-ps5/",
+        "source": "Polygon"
+      },
+      {
+        "title": "4 Upcoming Fantasy RPGs Better Than Waiting for a New Dragon Age",
+        "url": "https://www.polygon.com/dragon-age-alternatives-upcoming-rpgs/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How to get the Sinking Lure in Zelda Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-oot-remake-sinking-lure-location/",
+        "source": "Polygon"
+      },
+      {
         "title": "Big Walk AI Controversy Is a GOTY Awards Twist Sparking a Bigger Debate",
         "url": "https://www.polygon.com/big-walks-ai-controversy-goty-2026/",
         "source": "Polygon"
@@ -308,31 +322,6 @@
       {
         "title": "Nobody Said The Legend of Zelda: Ocarina of Time Was This Funny",
         "url": "https://www.polygon.com/zelda-ocarina-time-remake-funny-moments/",
-        "source": "Polygon"
-      },
-      {
-        "title": "2027's Most Stylish Action Game Looks Spectacular in First Official Gameplay",
-        "url": "https://www.polygon.com/tsarevna-official-gameplay-trailer-dancer-slasher-game/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Batman Just Officially Saved DC Comics From a Terrible Fate",
-        "url": "https://www.polygon.com/absolute-batman-saves-dc-comics-skydance-shakeup-james-gunn-fired/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to unlock Fire Arrows in Zelda Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-fire-arrow-how-to-unlock/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Target's New 'Pokémon' 30th Anniversary Drawing Is A Must-See For TCG Fans",
-        "url": "https://www.polygon.com/target-pokemon-drawing-30th-anniversary-booster-bundle-tcg-how-to-enter/",
-        "source": "Polygon"
-      },
-      {
-        "title": "PlayStation Plus November Games Lineup Officially Announced, Includes Death Stranding 2",
-        "url": "https://www.polygon.com/ps-plus-game-catalog-november-2026-update-death-stranding-2/",
         "source": "Polygon"
       }
     ],
