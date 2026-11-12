@@ -1,172 +1,154 @@
 {
   "metadata": {
-    "last_updated": "2026-11-12T15:49:53.560231",
-    "total_items": 60
+    "last_updated": "2026-11-12T22:05:53.941259",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
-        "title": "NVIDIA Announces CEO Transition",
-        "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+        "title": "Jensen Huang resigns",
+        "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
         "source": "Hacker News",
-        "score": 1006
+        "score": 2507
+      },
+      {
+        "title": "Rust 1.100",
+        "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+        "source": "Hacker News",
+        "score": 182
+      },
+      {
+        "title": "Gemini 4 Hydrogen and Orchestrator",
+        "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+        "source": "Hacker News",
+        "score": 181
+      },
+      {
+        "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
+        "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/",
+        "source": "Hacker News",
+        "score": 120
+      },
+      {
+        "title": "Foundation Models Framework (macOS)",
+        "url": "https://developer.apple.com/foundation-models-framework/",
+        "source": "Hacker News",
+        "score": 30
+      },
+      {
+        "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
+        "url": "https://github.com/simpsoka/zigzag",
+        "source": "Hacker News",
+        "score": 202
+      },
+      {
+        "title": "Service degradation on Microsoft 365",
+        "url": "https://status.cloud.microsoft/",
+        "source": "Hacker News",
+        "score": 302
+      },
+      {
+        "title": "Anthropic IPO",
+        "url": "https://ipo.anthropic.com/us/",
+        "source": "Hacker News",
+        "score": 738
+      },
+      {
+        "title": "22-Year-Old PostgreSQL Bug Turned into Remote Code Execution",
+        "url": "https://mehmetince.net/part-3-6-how-i-ended-up-turning-a-22-year-old-postgresql-type-confusion-primitive-into-rce-cve-2026-6460/",
+        "source": "Hacker News",
+        "score": 84
+      },
+      {
+        "title": "I'm making LLMs work on small and old devices",
+        "url": "https://github.com/hyperionaidev/smolmaxxing/",
+        "source": "Hacker News",
+        "score": 230
       },
       {
         "title": "Abandoned Quake 4 expansion finished by modders and now playable",
         "url": "https://www.moddb.com/mods/openq4/downloads/openq4-0141-windows-x64",
         "source": "Hacker News",
-        "score": 61
+        "score": 214
+      },
+      {
+        "title": "Relax: JIT compiler for Rust to reduce build times",
+        "url": "https://makepad.github.io/relax/",
+        "source": "Hacker News",
+        "score": 75
+      },
+      {
+        "title": "Gemini 4 Hydrogen",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+        "source": "Hacker News",
+        "score": 387
+      },
+      {
+        "title": "Data centers need power – lower income, rural residents pay the price",
+        "url": "https://news.cornell.edu/stories/2026/11/data-centers-need-power-lower-income-rural-residents-pay-price",
+        "source": "Hacker News",
+        "score": 122
       },
       {
         "title": "Talking Zen 6 with Mike Clark at AMD In-Depth",
         "url": "https://chipsandcheese.com/p/talking-zen-6-with-mike-clark-at",
         "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "Why Writing Correct Software Is Hard",
-        "url": "https://pron.github.io/posts/correctness-and-complexity",
-        "source": "Hacker News",
-        "score": 221
-      },
-      {
-        "title": "Jane Street – Our software engineering interviews are changing (a little)",
-        "url": "https://blog.janestreet.com/software-engineering-interviews-are-changing-a-little/",
-        "source": "Hacker News",
-        "score": 50
-      },
-      {
-        "title": "Libreagi – Save OSS Models",
-        "url": "https://libreagi.com/",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "Jane Street: Socratic Tutor",
-        "url": "https://github.com/janestreet/agent_skills/blob/master/socratic-tutor/SKILL.md",
-        "source": "Hacker News",
-        "score": 501
-      },
-      {
-        "title": "A live tree of systemd jobs on the boot console",
-        "url": "https://codeberg.org/wvhulle/bootvine",
-        "source": "Hacker News",
-        "score": 240
-      },
-      {
-        "title": "Researchers discover rare star system that emits radio signals every 8 minutes",
-        "url": "https://www.curtin.edu.au/news/media-release/researchers-discover-rare-star-system-that-emits-radio-signals-every-eight-minutes/",
-        "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "Electric Ship Batteries Promise Compact, Cooler Power",
-        "url": "https://spectrum.ieee.org/electric-ship-batteries",
-        "source": "Hacker News",
-        "score": 18
-      },
-      {
-        "title": "Tim Peters has died",
-        "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
-        "source": "Hacker News",
-        "score": 1335
-      },
-      {
-        "title": "Anthropic IPO",
-        "url": "https://ipo.anthropic.com/us/",
-        "source": "Hacker News",
-        "score": 328
-      },
-      {
-        "title": "93% of paint splatters are valid Perl programs (2019)",
-        "url": "https://www.mcmillen.dev/sigbovik/",
-        "source": "Hacker News",
-        "score": 528
-      },
-      {
-        "title": "Critical RCE Vulnerability in Apache HTTP Server",
-        "url": "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability",
-        "source": "Hacker News",
-        "score": 313
-      },
-      {
-        "title": "AWS emulator",
-        "url": "https://github.com/aws/aws-emulator",
-        "source": "Hacker News",
-        "score": 921
+        "score": 160
       }
     ],
     "ai": [
       {
+        "title": "Gemini 4 Hydrogen and Orchestrator",
+        "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+        "source": "Hacker News AI",
+        "score": 181
+      },
+      {
         "title": "Anthropic IPO",
         "url": "https://ipo.anthropic.com/us/",
         "source": "Hacker News AI",
-        "score": 328
+        "score": 738
       },
       {
-        "title": "93% of paint splatters are valid Perl programs (2019)",
-        "url": "https://www.mcmillen.dev/sigbovik/",
+        "title": "I'm making LLMs work on small and old devices",
+        "url": "https://github.com/hyperionaidev/smolmaxxing/",
         "source": "Hacker News AI",
-        "score": 528
+        "score": 230
       },
       {
-        "title": "Gemini Decisions API",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+        "title": "Gemini 4 Hydrogen",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
         "source": "Hacker News AI",
-        "score": 515
+        "score": 387
       },
       {
-        "title": "Show HN: Aircad – Professional drafting and 3D modeling in the browser",
-        "url": "https://aircad.com",
+        "title": "Vibes Don't Maintain",
+        "url": "https://roll.bybacon.com/2026/10/14/vibes-dont-maintain.html",
         "source": "Hacker News AI",
-        "score": 76
+        "score": 19
       },
       {
-        "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
-        "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+        "title": "Jensen Huang Third Affair Allegations Revealed",
+        "url": "https://www.forbes.com/sites/alisondurkee/2026/11/12/jensen-huang-had-a-third-affair-with-another-nvidia-employee-report-says/",
         "source": "Hacker News AI",
-        "score": 632
+        "score": 24
       },
       {
-        "title": "My AI agents found an unmapped Maya site?",
-        "url": "https://pietromiotti.com/latest/maya-site",
+        "title": "Decoding REXPaint Files in Odin",
+        "url": "https://tylerelton.com/posts/decoding-rexpaint-files-in-odin/",
         "source": "Hacker News AI",
-        "score": 1022
-      },
-      {
-        "title": "Tinfoil (YC P25) is hiring an applied AI security engineer in San Francisco",
-        "url": "https://news.ycombinator.com/item?id=50452404",
-        "source": "Hacker News AI",
-        "score": 1
-      },
-      {
-        "title": "Faster Retrieval for Better, More Efficient RAG",
-        "url": "https://machinelearning.apple.com/research/faster-retrieval",
-        "source": "Hacker News AI",
-        "score": 225
-      },
-      {
-        "title": "Apple has new Mac app coming to make running local AI models easy",
-        "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
-        "source": "Hacker News AI",
-        "score": 545
-      },
-      {
-        "title": "Jensen Huang Resigns as Nvidia CEO After Affairs",
-        "url": "https://www.nytimes.com/live/2026/11/12/business/nvidia-jensen-huang-resigns",
-        "source": "Hacker News AI",
-        "score": 18
+        "score": 17
       }
     ],
     "news": [
       {
-        "title": "Ukraine says military Starlink disrupted again as US envoys meet Putin in Moscow",
+        "title": "US envoys head to meet Zelensky after talks with Putin in Moscow",
         "url": "https://www.bbc.co.uk/news/articles/cwrkgmymk55zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "'We've got to run': Inside ruined Ukraine power plant under constant drone threat",
-        "url": "https://www.bbc.co.uk/news/videos/cm93rp3gxn6qo?at_medium=RSS&at_campaign=rss",
+        "title": "Russian warship hit by Ukrainian drone in Gulf of Finland",
+        "url": "https://www.bbc.co.uk/news/articles/cmn0d33zz34zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -180,6 +162,11 @@
         "source": "BBC World"
       },
       {
+        "title": "Hegseth awards medal to war memorial guard who reprimanded him and group",
+        "url": "https://www.bbc.co.uk/news/articles/cmvg2r3dq7xno?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Millions of Ebola dollars missing with staff unpaid while virus spreads, charity says",
         "url": "https://www.bbc.co.uk/news/articles/cx98757ymm6zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -188,14 +175,19 @@
         "title": "Israeli strike on Gaza hospital kills six Palestinians, health ministry says",
         "url": "https://www.bbc.co.uk/news/articles/ckzd9p7e4eqeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Oranges investigated after four girls die in suspected Uganda school poisoning",
-        "url": "https://www.bbc.co.uk/news/articles/ck9d71wyn7wwo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " These are 13 of the best earphones on the market – and they’re all discounted for early Black Friday ",
+        "url": "https://www.creativebloq.com/deals/these-are-13-of-the-best-earphones-on-the-market-and-theyre-all-discounted-for-early-black-friday",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Don’t go anywhere without these 8 essential creative travel gadgets ",
+        "url": "https://www.creativebloq.com/deals/dont-go-anywhere-without-these-8-essential-creative-travel-gadgets",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Switch 2 gets a rare discount to $469, just in time to play The Legend of Zelda: Ocarina of Time ",
         "url": "https://www.creativebloq.com/deals/switch-2-gets-a-rare-discount-to-usd469-just-in-time-to-play-the-legend-of-zelda-ocarina-of-time",
@@ -219,16 +211,6 @@
       {
         "title": " The toy company Tomy has a new logo, and people are baffled ",
         "url": "https://www.creativebloq.com/news/the-toy-company-tomy-has-a-new-logo-and-people-are-baffled",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Adobe MAX 2026 Sneaks: Project Link Up is making design playful again ",
-        "url": "https://www.creativebloq.com/features/adobe-max-2026-sneaks-project-link-up-is-making-design-playful-again",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " So, what are the best AI video generators, and how do they compare on price? ",
-        "url": "https://www.creativebloq.com/features/so-what-are-the-best-ai-video-generators-and-how-do-they-compare-on-price",
         "source": "Creative Bloq"
       }
     ],
@@ -271,38 +253,38 @@
     ],
     "gaming": [
       {
-        "title": "Pokémon Legends: Z-A Is Giving Away 2 Free Shiny Legendaries",
-        "url": "https://www.polygon.com/pokemon-legends-z-a-free-shiny-xerneas-yveltal-mystery-gift/",
+        "title": "How to farm rupees in Zelda Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-rupee-farming-methods/",
         "source": "Polygon"
       },
       {
-        "title": "James Gunn’s DC Exit Has ‘Renewed Hope’ for a Cult-Favorite Superhero Sequel",
-        "url": "https://www.polygon.com/dc-james-gunn-exit-constantine-2-more-likely-keanu-reeves/",
+        "title": "DMZ key and locations in Modern Warfare 4",
+        "url": "https://www.polygon.com/mw4-modern-warfare-4-dmz-keys-locations-all-list/",
         "source": "Polygon"
       },
       {
-        "title": "What if the games children love were designed to help them thrive?",
-        "url": "https://www.polygon.com/unicef-ritec-game-design-help-children-thrive/",
+        "title": "Marvel’s Kevin Feige Breaks Silence on MCU Doctor Doom Being a Tony Stark Variant",
+        "url": "https://www.polygon.com/avengers-doomsday-doctor-doom-tony-start-variant-theory/",
         "source": "Polygon"
       },
       {
-        "title": "Nintendo Officially Announces Black Friday 2026 Deals on Switch 2 Hardware and Games",
-        "url": "https://www.polygon.com/nintendo-black-friday-deals-2026-switch-2-mario-kart-world/",
+        "title": "Cursed treasure hours schedule in the Fortnite Chapter 7 mini season",
+        "url": "https://www.polygon.com/fornite-treasure-hours-chapter-7-mini-season-c7ms/",
         "source": "Polygon"
       },
       {
-        "title": "Marvel’s WWII Game Not Canceled, but Sounds Like a Mess, Insiders Say",
-        "url": "https://www.polygon.com/marvel-1943-rise-of-hydra-still-alive/",
+        "title": "Xbox CEO Hints Its Studios Will Heavily Use AI to Make Future Games",
+        "url": "https://www.polygon.com/xbox-ceo-asha-sharma-ai-use-games/",
         "source": "Polygon"
       },
       {
-        "title": "Nvidia CEO Jensen Huang Resigns Amid Alleged Spying Scandal",
-        "url": "https://www.polygon.com/nvidia-ceo-jensen-huang-resigned-who-is-collette-kress-price-stock/",
+        "title": "All 22 Call of Duty Campaigns, Ranked From Worst to Best",
+        "url": "https://www.polygon.com/call-of-duty-campaigns-ranked/",
         "source": "Polygon"
       },
       {
-        "title": "Sega Almost Had a Legit Madden Competitor — Until EA 'Sabotaged' It",
-        "url": "https://www.polygon.com/madden-movie-trip-hawkins-ea-sega-genesis/",
+        "title": "Disney Plus Is Officially the New Streaming Home of the Game Awards",
+        "url": "https://www.polygon.com/game-awards-2026-disney-plus-streaming-announced-geoff-keighley-goty/",
         "source": "Polygon"
       }
     ],
