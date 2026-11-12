@@ -1,131 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-11-11T23:24:49.102473",
-    "total_items": 61
+    "last_updated": "2026-11-12T06:08:50.064927",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "AWS emulator",
-        "url": "https://github.com/aws/aws-emulator",
+        "title": "93% of paint splatters are valid Perl programs (2019)",
+        "url": "https://www.mcmillen.dev/sigbovik/",
         "source": "Hacker News",
-        "score": 560
+        "score": 316
       },
       {
         "title": "Tim Peters has died",
         "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028",
         "source": "Hacker News",
-        "score": 749
+        "score": 1039
       },
       {
-        "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
-        "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+        "title": "AWS emulator",
+        "url": "https://github.com/aws/aws-emulator",
         "source": "Hacker News",
-        "score": 218
+        "score": 772
       },
       {
-        "title": "93% of Paint Splatters Are Valid Perl Programs (2019)",
-        "url": "https://www.mcmillen.dev/sigbovik/",
+        "title": "Critical RCE Vulnerability in Apache HTTP Server",
+        "url": "https://www.wiz.io/blog/cve-2026-119618-rce-apache-http-server-vulnerability",
         "source": "Hacker News",
-        "score": 29
+        "score": 88
+      },
+      {
+        "title": "Nvidia is preparing to oust Jensen Huang",
+        "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
+        "source": "Hacker News",
+        "score": 805
+      },
+      {
+        "title": "Gemini Decisions API",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+        "source": "Hacker News",
+        "score": 355
       },
       {
         "title": "A false smoke alarm almost drowned Jane Street's only NYC datacenter",
         "url": "https://michael.bacarella.com/2026/11/10/false-smoke-alarm-jane-street-datacenter/",
         "source": "Hacker News",
-        "score": 372
+        "score": 455
+      },
+      {
+        "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+        "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+        "source": "Hacker News",
+        "score": 500
       },
       {
         "title": "Lock Your GitHub Actions",
         "url": "https://hugovk.dev/blog/2026/lock-github-actions/",
         "source": "Hacker News",
-        "score": 45
+        "score": 195
       },
       {
-        "title": "Gemini Decisions API",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+        "title": "Darling Development Update – Q4 2026",
+        "url": "https://blog.darlinghq.org/2026/11/08/development-update-q4-2026/",
         "source": "Hacker News",
-        "score": 195
+        "score": 9
+      },
+      {
+        "title": "Did Life Begin in an RNA World?",
+        "url": "https://www.quantamagazine.org/did-life-begin-in-an-rna-world-20261109/",
+        "source": "Hacker News",
+        "score": 43
       },
       {
         "title": "Emacs in the Age of Magic",
         "url": "https://commandlinesystems.com/magic.txt",
         "source": "Hacker News",
-        "score": 103
+        "score": 191
       },
       {
-        "title": "Show HN: I recreated Papers Please but you're deciding which YC startups to fund",
-        "url": "https://termsheetplease.com/",
+        "title": "Lean Grimoire",
+        "url": "https://terrytao.wordpress.com/2026/11/11/lean-grimoire/",
         "source": "Hacker News",
-        "score": 142
-      },
-      {
-        "title": "Huawei releases MACaQ, its internal quantizer for local inference",
-        "url": "https://github.com/huawei-csl/MACaQ",
-        "source": "Hacker News",
-        "score": 40
+        "score": 27
       },
       {
         "title": "The Utah Teapot",
         "url": "https://graphics.cs.utah.edu/teapot/",
         "source": "Hacker News",
-        "score": 40
+        "score": 117
       },
       {
-        "title": "Faster Retrieval for Better, More Efficient RAG",
-        "url": "https://machinelearning.apple.com/research/faster-retrieval",
+        "title": "Stingray Fish Laser",
+        "url": "https://www.stingray.no/en/technology/",
         "source": "Hacker News",
-        "score": 128
-      },
-      {
-        "title": "My AI agents found an unmapped Maya site",
-        "url": "https://pietromiotti.com/latest/maya-site",
-        "source": "Hacker News",
-        "score": 903
-      },
-      {
-        "title": "Flying on Green: Why Farmers Are Turning to Drones for Cover Crop Seeding",
-        "url": "https://www.agweb.com/news/machinery/flying-green-why-farmers-are-turning-drones-cover-crop-seeding",
-        "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "Nvidia Is Preparing to Oust Nvidia CEO Jensen Huang",
-        "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
-        "source": "Hacker News",
-        "score": 208
+        "score": 23
       }
     ],
     "ai": [
       {
-        "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
-        "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
-        "source": "Hacker News AI",
-        "score": 218
-      },
-      {
-        "title": "93% of Paint Splatters Are Valid Perl Programs (2019)",
+        "title": "93% of paint splatters are valid Perl programs (2019)",
         "url": "https://www.mcmillen.dev/sigbovik/",
         "source": "Hacker News AI",
-        "score": 29
+        "score": 316
       },
       {
         "title": "Gemini Decisions API",
         "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
         "source": "Hacker News AI",
-        "score": 195
+        "score": 355
+      },
+      {
+        "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+        "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+        "source": "Hacker News AI",
+        "score": 500
+      },
+      {
+        "title": "My AI agents found an unmapped Maya site?",
+        "url": "https://pietromiotti.com/latest/maya-site",
+        "source": "Hacker News AI",
+        "score": 959
       },
       {
         "title": "Faster Retrieval for Better, More Efficient RAG",
         "url": "https://machinelearning.apple.com/research/faster-retrieval",
         "source": "Hacker News AI",
-        "score": 128
+        "score": 187
       },
       {
-        "title": "My AI agents found an unmapped Maya site",
-        "url": "https://pietromiotti.com/latest/maya-site",
+        "title": "Jensen Huang said to have had relationship with executive who reports to him",
+        "url": "https://www.nytimes.com/2026/11/11/technology/jensen-huang-nvidia-affair.html",
         "source": "Hacker News AI",
-        "score": 903
+        "score": 329
+      },
+      {
+        "title": "Slavdom Unearthed: Marian Wawrzeniecki's Neopagan Paintings (1891–1923)",
+        "url": "https://publicdomainreview.org/collection/marian-wawrzeniecki/",
+        "source": "Hacker News AI",
+        "score": 6
+      },
+      {
+        "title": "Show HN: Ramasite, a Self-Contained Laravel/Filament/SQLite CMS",
+        "url": "https://github.com/DaleFranks/ramasite",
+        "source": "Hacker News AI",
+        "score": 6
+      },
+      {
+        "title": "Apple has new Mac app coming to make running local AI models easy",
+        "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
+        "source": "Hacker News AI",
+        "score": 526
       },
       {
         "title": "Tinfoil (YC P25) is hiring an applied AI security engineer in San Francisco",
@@ -134,76 +158,46 @@
         "score": 1
       },
       {
-        "title": "Retirement Savings Are Fueling the AI Bubble",
-        "url": "https://lpeproject.org/blog/your-retirement-savings-are-fueling-the-ai-bubble/",
-        "source": "Hacker News AI",
-        "score": 127
-      },
-      {
-        "title": "Apple has new Mac app coming to make running local AI models easy",
-        "url": "https://9to5mac.com/2026/11/10/apple-has-new-mac-app-coming-to-make-running-local-ai-models-easy/",
-        "source": "Hacker News AI",
-        "score": 512
-      },
-      {
         "title": "AI, activity, and outcomes in software engineering",
         "url": "https://cabird.com/talks/shipping-faster/",
         "source": "Hacker News AI",
-        "score": 102
-      },
-      {
-        "title": "Show HN: Klad, a paint app your coding agent can drive (source-available)",
-        "url": "https://github.com/klad-app/klad",
-        "source": "Hacker News AI",
-        "score": 68
-      },
-      {
-        "title": "Jensen Huang had a second affair – with an employee",
-        "url": "https://www.cnbc.com/2026/11/11/nvidia-jensen-huang-affair-employee.html",
-        "source": "Hacker News AI",
-        "score": 11
-      },
-      {
-        "title": "EventSourcingDB 1.3.0 Is Available",
-        "url": "https://www.eventfoundation.io/resources/blog/eventsourcingdb-1-3-0-is-available",
-        "source": "Hacker News AI",
-        "score": 40
+        "score": 112
       }
     ],
     "news": [
+      {
+        "title": "Ukraine's power supply close to critical as Russian strikes bring darkness and cold ",
+        "url": "https://www.bbc.co.uk/news/articles/cr1ewpd95d21o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Democrat Scott Colom seals historic win in Mississippi Senate race",
+        "url": "https://www.bbc.co.uk/news/articles/cw7vppyr80eeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Israeli strike on hospital kills at least five Palestinians, Gaza civil defence agency says",
+        "url": "https://www.bbc.co.uk/news/articles/ckzd9p7e4eqeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "New York building collapse kills at least two, officials say",
+        "url": "https://www.bbc.co.uk/news/articles/c8zx964glvwxo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Clashes erupt in Barcelona after thousands join Spain general strike",
         "url": "https://www.bbc.co.uk/news/articles/cwvg25nypmrvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Democrat Scott Colom wins Mississippi Senate race in surprise victory for party",
-        "url": "https://www.bbc.co.uk/news/articles/cw7vppyr80eeo?at_medium=RSS&at_campaign=rss",
+        "title": "Australian teen missing in bush for six days rescued alive",
+        "url": "https://www.bbc.co.uk/news/articles/ckvg25zmppglo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Russia-Ukraine talks turn to post-war security but end without breakthrough",
         "url": "https://www.bbc.co.uk/news/articles/ck792we7zrz4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Schools in Italy, Scotland and Northern Ireland hit by threats in suspected bomb hoax",
-        "url": "https://www.bbc.co.uk/news/articles/cwz0k79pr8z2o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Indonesia's vice president resigns amid signs ruling alliance is fraying",
-        "url": "https://www.bbc.co.uk/news/articles/cmvgxgz87qqro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Kidnapper, 74, escapes from house arrest in Argentina by abseiling from balcony",
-        "url": "https://www.bbc.co.uk/news/articles/c933gn6710lyo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Missing 11-month-old baby rescued after being buried alive in a crate in South Carolina",
-        "url": "https://www.bbc.co.uk/news/articles/c8e391xzg6z2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -241,6 +235,16 @@
     ],
     "science": [
       {
+        "title": "Scientists discover a common sugar may help cancer cells break free and spread",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261111221501.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Walking and weight training may not be enough to keep your bones strong",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261110042601.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Where are all the males? Ancient human fossils reveal a startling mystery",
         "url": "https://www.sciencedaily.com/releases/2026/11/261110042558.htm",
         "source": "Science Daily"
@@ -261,22 +265,22 @@
         "source": "Science Daily"
       },
       {
-        "title": "Scientists discover a giant 66-pound rodent that lived 34 million years ago",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261110042532.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Why heart attacks can still happen even when bad cholesterol is low",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261109205415.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "The mystery of how hair knows where to grow may finally be solved",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261109205413.htm",
+        "title": "A massive new simulation reveals how the universe emerged from darkness",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261110042534.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "What We Know About Every Assassin’s Creed Project in Active Development",
+        "url": "https://www.polygon.com/assassins-creed-games-all-updates/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Queen’s Domain Review: The Perfect Skyrim Replacement for Right Now",
+        "url": "https://www.polygon.com/queens-domain-review/",
+        "source": "Polygon"
+      },
       {
         "title": "Netflix's Hit Spy Thriller Returns and Takes Over Streaming Charts",
         "url": "https://www.polygon.com/keira-knightley-black-doves-netflix-streaming-hit-season-2/",
@@ -300,16 +304,6 @@
       {
         "title": "Diablo Meets Hades in New Conan the Barbarian Game",
         "url": "https://www.polygon.com/conan-black-pyramid-2027-announcement/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to get the Goron Tunic in Zelda Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-goron-tunic-how-to-get/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All Deku-Seed Bag upgrade locations in Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-deku-seed-bag-upgrade-slingshot-ammo/",
         "source": "Polygon"
       }
     ],
