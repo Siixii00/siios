@@ -1,148 +1,188 @@
 {
   "metadata": {
-    "last_updated": "2026-11-13T03:12:33.649996",
-    "total_items": 57
+    "last_updated": "2026-11-13T11:55:41.450969",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+        "url": "https://status.claude.com/incidents/nn11wk485zfn",
+        "source": "Hacker News",
+        "score": 224
+      },
+      {
         "title": "Jensen Huang resigns",
         "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
         "source": "Hacker News",
-        "score": 3075
+        "score": 3638
       },
       {
-        "title": "Africa's solar revolution is vast and speedy",
-        "url": "https://www.economist.com/middle-east-and-africa/2026/11/12/africas-solar-revolution-is-vast-and-speedy",
+        "title": "IceWM",
+        "url": "https://ice-wm.org/",
         "source": "Hacker News",
-        "score": 43
+        "score": 213
+      },
+      {
+        "title": "The Dawn of the Data Intelligence Engineer",
+        "url": "https://motherduck.com/blog/the-data-intelligence-engineer/",
+        "source": "Hacker News",
+        "score": 49
       },
       {
         "title": "Rust 1.100",
         "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
         "source": "Hacker News",
-        "score": 469
+        "score": 719
       },
       {
-        "title": "Gemini 4 Hydrogen and Orchestrator",
-        "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+        "title": "Brave Search API now accepts agentic payments via the x402 protocol",
+        "url": "https://brave.com/blog/search-api-agentic-payments/",
         "source": "Hacker News",
-        "score": 331
+        "score": 127
       },
       {
         "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
         "url": "https://github.com/simpsoka/zigzag",
         "source": "Hacker News",
-        "score": 369
+        "score": 556
+      },
+      {
+        "title": "Gemini 4 Hydrogen and Orchestrator",
+        "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+        "source": "Hacker News",
+        "score": 426
+      },
+      {
+        "title": "Claude Is Down",
+        "url": "https://status.claude.com/history",
+        "source": "Hacker News",
+        "score": 114
       },
       {
         "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
         "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/",
         "source": "Hacker News",
-        "score": 218
+        "score": 325
       },
       {
         "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
         "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
         "source": "Hacker News",
-        "score": 84
+        "score": 273
       },
       {
-        "title": "Foundation Models framework",
-        "url": "https://developer.apple.com/foundation-models-framework/",
+        "title": "Europe's electric car sales jump 49% as global EV sales grow",
+        "url": "https://electrek.co/2026/11/11/europes-electric-car-sales-jump-49-as-global-ev-sales-grow/",
         "source": "Hacker News",
-        "score": 145
-      },
-      {
-        "title": "Nvidia employees petition to bring back Jensen Huang",
-        "url": "https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/",
-        "source": "Hacker News",
-        "score": 84
-      },
-      {
-        "title": "Service degradation on Microsoft 365",
-        "url": "https://status.cloud.microsoft/",
-        "source": "Hacker News",
-        "score": 564
-      },
-      {
-        "title": "Turning a 22-year-old Postgres type-confusion primitive into RCE",
-        "url": "https://mehmetince.net/part-3-6-how-i-ended-up-turning-a-22-year-old-postgresql-type-confusion-primitive-into-rce-cve-2026-6460/",
-        "source": "Hacker News",
-        "score": 152
+        "score": 16
       },
       {
         "title": "Former Nvidia CEO Huang had a relationship with a second employee, sources say",
         "url": "https://www.reuters.com/technology/former-nvidia-ceo-huang-had-relationship-with-second-employee-sources-say-2026-11-12/",
         "source": "Hacker News",
-        "score": 120
+        "score": 301
       },
       {
         "title": "I'm making LLMs work on small and old devices",
         "url": "https://github.com/hyperionaidev/smolmaxxing/",
         "source": "Hacker News",
-        "score": 289
+        "score": 390
       },
       {
-        "title": "Abandoned Quake 4 expansion finished by modders and now playable",
-        "url": "https://www.moddb.com/mods/openq4/downloads/openq4-0141-windows-x64",
+        "title": "Service degradation on Microsoft 365",
+        "url": "https://status.cloud.microsoft/",
         "source": "Hacker News",
-        "score": 247
-      },
-      {
-        "title": "Sift: LSP, Lint, Format Lisp, Scheme and Emacs Lisp",
-        "url": "https://github.com/jjba23/sift",
-        "source": "Hacker News",
-        "score": 23
+        "score": 958
       }
     ],
     "ai": [
       {
+        "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+        "url": "https://status.claude.com/incidents/nn11wk485zfn",
+        "source": "Hacker News AI",
+        "score": 224
+      },
+      {
         "title": "Gemini 4 Hydrogen and Orchestrator",
         "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
         "source": "Hacker News AI",
-        "score": 331
+        "score": 426
+      },
+      {
+        "title": "Claude Is Down",
+        "url": "https://status.claude.com/history",
+        "source": "Hacker News AI",
+        "score": 114
       },
       {
         "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
         "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
         "source": "Hacker News AI",
-        "score": 84
+        "score": 273
       },
       {
         "title": "I'm making LLMs work on small and old devices",
         "url": "https://github.com/hyperionaidev/smolmaxxing/",
         "source": "Hacker News AI",
-        "score": 289
-      },
-      {
-        "title": "AI is turning Apple's app review process into a nightmare for synth developers",
-        "url": "https://synthanatomy.com/2026/11/ai-is-turning-apples-app-review-process-into-a-nightmare-for-developers.html",
-        "source": "Hacker News AI",
-        "score": 116
-      },
-      {
-        "title": "Gemini 4 Hydrogen",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
-        "source": "Hacker News AI",
-        "score": 478
+        "score": 390
       },
       {
         "title": "Anthropic IPO",
         "url": "https://ipo.anthropic.com/us/",
         "source": "Hacker News AI",
-        "score": 842
+        "score": 951
+      },
+      {
+        "title": "Is there a 'right amount' of AI?",
+        "url": "https://coyotetracks.org/blog/right-amount-of-ai/",
+        "source": "Hacker News AI",
+        "score": 3
+      },
+      {
+        "title": "Gemini 4 Hydrogen",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+        "source": "Hacker News AI",
+        "score": 536
       },
       {
         "title": "Chinese frontier AI models carry the fingerprint of export-controlled GPUs",
         "url": "https://unemploymentlabs.com/checkpoint-forensics",
         "source": "Hacker News AI",
-        "score": 191
+        "score": 307
+      },
+      {
+        "title": "Scientists claim the universe is twice as old as believed",
+        "url": "https://geekspin.co/scientists-claim-the-universe-is-twice-as-old-as-believed/",
+        "source": "Hacker News AI",
+        "score": 88
+      },
+      {
+        "title": "AI is turning Apple's app review process into a nightmare for synth developers",
+        "url": "https://synthanatomy.com/2026/11/ai-is-turning-apples-app-review-process-into-a-nightmare-for-developers.html",
+        "source": "Hacker News AI",
+        "score": 180
+      },
+      {
+        "title": "Vibes Don't Maintain",
+        "url": "https://roll.bybacon.com/2026/10/14/vibes-dont-maintain.html",
+        "source": "Hacker News AI",
+        "score": 86
       }
     ],
     "news": [
       {
-        "title": "Scandal-hit Nvidia CEO Jensen Huang quits, plunging AI chipmaking giant into turmoil",
+        "title": "What we know about the global Microsoft outage",
+        "url": "https://www.bbc.co.uk/news/articles/cwvg238zrnm5o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Watch: How Microsoft services went down around the world",
+        "url": "https://www.bbc.co.uk/news/videos/cwm2591k27e2o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ex-Nvidia CEO Jensen Huang summoned to testify before Congress about affair with alleged Chinese spy",
         "url": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -157,60 +197,50 @@
         "source": "BBC World"
       },
       {
-        "title": "Russian warship hit by Ukrainian drone in Gulf of Finland",
-        "url": "https://www.bbc.co.uk/news/articles/cmn0d33zz34zo?at_medium=RSS&at_campaign=rss",
+        "title": "African Miss Universe beauty queens in limbo as US visa restrictions bite",
+        "url": "https://www.bbc.co.uk/news/articles/cklyw3neqg2wo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Neither war nor peace in Tigray - is Ethiopia's latest conflict really over?",
-        "url": "https://www.bbc.co.uk/news/articles/cm3egjgvp794o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Suspected bomb hoax threats force fresh evacuations of Italian schools",
-        "url": "https://www.bbc.co.uk/news/articles/cr894w453e90o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Australian footballers will not be charged after hotel incident, police say",
-        "url": "https://www.bbc.co.uk/news/articles/ckregjwr7njqo?at_medium=RSS&at_campaign=rss",
+        "title": "Hegseth awards medal to war memorial guard who reprimanded him and group",
+        "url": "https://www.bbc.co.uk/news/articles/cmvg2r3dq7xno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " These are 13 of the best earphones on the market – and they’re all discounted for early Black Friday ",
+        "title": " How do you redesign a cult kids’ product? I asked Yoto’s new designers ",
+        "url": "https://www.creativebloq.com/inspiration/how-do-you-redesign-a-cult-kids-product-i-asked-yotos-new-designers",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Nvidia chaos and why the AI industry is suddenly on the back foot ",
+        "url": "https://www.creativebloq.com/news/nvidia-chaos-and-why-the-ai-industry-is-suddenly-on-the-back-foot",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Prusa CORE One+ review: Built to last and grow with you ",
+        "url": "https://www.creativebloq.com/reviews/prusa-core-one-review-built-to-last-and-grow-with-you",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This approach to 3D art in Unreal Engine 5 helped me minimise unnecessary iterations ",
+        "url": "https://www.creativebloq.com/features/this-approach-to-3d-art-in-unreal-engine-5-helped-me-minimise-unnecessary-iterations",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Does Nvidia need a new logo as well as a new CEO? ",
+        "url": "https://www.creativebloq.com/news/does-nvidia-need-a-new-logo-as-well-as-a-new-ceo",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " These are 13 of the best wired earphones – and they’re all on sale for early Black Friday ",
         "url": "https://www.creativebloq.com/deals/these-are-13-of-the-best-earphones-on-the-market-and-theyre-all-discounted-for-early-black-friday",
         "source": "Creative Bloq"
       },
       {
         "title": " Don’t go anywhere without these 8 essential creative travel gadgets ",
         "url": "https://www.creativebloq.com/deals/dont-go-anywhere-without-these-8-essential-creative-travel-gadgets",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Switch 2 gets a rare discount to $469, just in time to play The Legend of Zelda: Ocarina of Time ",
-        "url": "https://www.creativebloq.com/deals/switch-2-gets-a-rare-discount-to-usd469-just-in-time-to-play-the-legend-of-zelda-ocarina-of-time",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Four video tracks and a doughnut shop – how Dispatch got its start ",
-        "url": "https://www.creativebloq.com/features/four-video-tracks-and-a-doughnut-shop-how-dispatch-got-its-start",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Logitech MX Master 4 Special Edition review: Still the productivity mouse to beat, but should you upgrade? ",
-        "url": "https://www.creativebloq.com/reviews/logitech-mx-master-4-special-edition-review-still-the-productivity-mouse-to-beat-but-should-you-upgrade",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How I created this ninja puppet scene inspired by Naruto ",
-        "url": "https://www.creativebloq.com/how-to/how-i-created-this-ninja-puppet-scene-inspired-by-naruto",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The toy company Tomy has a new logo, and people are baffled ",
-        "url": "https://www.creativebloq.com/news/the-toy-company-tomy-has-a-new-logo-and-people-are-baffled",
         "source": "Creative Bloq"
       }
     ],
@@ -253,38 +283,38 @@
     ],
     "gaming": [
       {
-        "title": "44 Years Later, Star Trek’s Best Quote About Grief Is Still a Near-Perfect Sci-Fi Moment",
-        "url": "https://www.polygon.com/star-trek-wrath-of-khan-best-quote-grief/",
+        "title": "Pixar's New Movie Gatto Gets First In-Depth Look in Official Trailer",
+        "url": "https://www.polygon.com/pixar-gatto-trailer/",
         "source": "Polygon"
       },
       {
-        "title": "The 25 Best Nintendo Switch 2 Games in 2026",
-        "url": "https://www.polygon.com/best-nintendo-switch-2-games/",
+        "title": "Leaked Dune Magic Secret Lair Has Amazing Value Reprints and 9 New Cards",
+        "url": "https://www.polygon.com/mtg-dune-magic-secret-lair-drop-leaks/",
         "source": "Polygon"
       },
       {
-        "title": "Steam Makes Popular World War II Strategy Game Free to Play This Weekend",
-        "url": "https://www.polygon.com/company-of-heroes-3-free-steam-weekend-sale-november-2026/",
+        "title": "6 Nintendo Switch Special Editions With the Best Designs, Ranked",
+        "url": "https://www.polygon.com/best-nintendo-switch-special-edition-designs/",
         "source": "Polygon"
       },
       {
-        "title": "Sony's Bringing Back Spider-Man $2.5 Billion Hit With New Footage",
-        "url": "https://www.polygon.com/spider-man-brand-new-day-rerelease-extended-new-footage-cameos/",
+        "title": "5 Sci-Fi Book Trilogies Where Every Entry Is Perfect",
+        "url": "https://www.polygon.com/sci-fi-trilogy-perfect-entries/",
         "source": "Polygon"
       },
       {
-        "title": "'Avatar: Seven Havens’ Season 2 Release Date Announcement Includes Some Shocking Good News",
-        "url": "https://www.polygon.com/avatar-seven-havens-season-2-release-date-announcement-season-3/",
+        "title": "Tim Burton's Forgotten Dark Fantasy Magnum Opus Is Officially Free on Youtube",
+        "url": "https://www.polygon.com/corpse-bride-streaming-free-youtube-november-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Daniel Craig's Most Disappointing Bond Film Quietly Exits Streaming This Month",
-        "url": "https://www.polygon.com/james-bond-quantum-of-solace-leaving-paramount-plus/",
+        "title": "Netflix's Disappointing New Western Thriller Wastes Its Brilliant Concept",
+        "url": "https://www.polygon.com/heartland-netflix-review/",
         "source": "Polygon"
       },
       {
-        "title": "Ghost Rider Star Says He's Down to Return for Marvel's 2028 Reboot",
-        "url": "https://www.polygon.com/ghost-rider-ryan-reynolds-gabriel-luna-marvel-movie/",
+        "title": "26 Years Later, Charles Schulz' Final Comic Strip Is Still an All-Time Peanuts Classic",
+        "url": "https://www.polygon.com/peanuts-final-comic-strip-charlie-brown/",
         "source": "Polygon"
       }
     ],
