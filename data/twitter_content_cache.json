@@ -1,213 +1,234 @@
 {
   "metadata": {
-    "last_updated": "2026-11-13T11:55:41.450969",
-    "total_items": 62
+    "last_updated": "2026-11-13T19:21:33.492752",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
-        "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
-        "url": "https://status.claude.com/incidents/nn11wk485zfn",
+        "title": "After 600 experiments, here's what I discovered about JEPA world models",
+        "url": "https://haddyalchaer.com/jepa",
         "source": "Hacker News",
-        "score": 224
+        "score": 77
       },
       {
-        "title": "Jensen Huang resigns",
-        "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
+        "title": "Reverse engineering my Coway air purifier to ditch the cloud",
+        "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
         "source": "Hacker News",
-        "score": 3638
+        "score": 544
       },
       {
-        "title": "IceWM",
-        "url": "https://ice-wm.org/",
+        "title": "Models can now transmit viruses in weight-space",
+        "url": "https://www.alphaxiv.org/abs/2611.weight-space-misfolding",
         "source": "Hacker News",
-        "score": 213
+        "score": 30
       },
       {
-        "title": "The Dawn of the Data Intelligence Engineer",
-        "url": "https://motherduck.com/blog/the-data-intelligence-engineer/",
+        "title": "Doomsday: Friday, 13 November, A.D. 2026 (1960)",
+        "url": "https://www.science.org/doi/10.1126/science.132.3436.1291",
         "source": "Hacker News",
-        "score": 49
+        "score": 375
       },
       {
-        "title": "Rust 1.100",
-        "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
+        "title": "Show HN: Isometric SF – A pixel-art map of the SF Bay Area",
+        "url": "https://isometricsf.com/",
         "source": "Hacker News",
-        "score": 719
+        "score": 37
       },
       {
-        "title": "Brave Search API now accepts agentic payments via the x402 protocol",
-        "url": "https://brave.com/blog/search-api-agentic-payments/",
+        "title": "A technical vision for the Haskell ecosystem",
+        "url": "https://discourse.haskell.org/t/a-technical-vision-for-the-haskell-ecosystem/15078",
         "source": "Hacker News",
-        "score": 127
+        "score": 129
       },
       {
-        "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
-        "url": "https://github.com/simpsoka/zigzag",
+        "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
+        "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
         "source": "Hacker News",
-        "score": 556
+        "score": 167
       },
       {
-        "title": "Gemini 4 Hydrogen and Orchestrator",
-        "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
+        "title": "Lonewolf 0.3 – A standalone XMPP server written in Rust",
+        "url": "https://github.com/lonewolf-im/lonewolf/releases/tag/v0.3.0",
         "source": "Hacker News",
-        "score": 426
+        "score": 98
       },
       {
-        "title": "Claude Is Down",
-        "url": "https://status.claude.com/history",
+        "title": "Ctrl+C, Ctrl+v, Ctrl+cve: Bypassing Android's Clipboard Read Security Measures",
+        "url": "https://toninoble.com/post/ctrlc-ctrlv-ctrlcve",
         "source": "Hacker News",
-        "score": 114
+        "score": 10
       },
       {
-        "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
-        "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/",
+        "title": "The avalanche that hit math is coming for AI development",
+        "url": "https://www.dwarkesh.com/p/rsi",
         "source": "Hacker News",
-        "score": 325
+        "score": 8
       },
       {
-        "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
-        "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+        "title": "Gnomon. Git for Postgres data, built for agents",
+        "url": "https://github.com/bitsinfra/gnomon",
         "source": "Hacker News",
-        "score": 273
+        "score": 19
       },
       {
-        "title": "Europe's electric car sales jump 49% as global EV sales grow",
-        "url": "https://electrek.co/2026/11/11/europes-electric-car-sales-jump-49-as-global-ev-sales-grow/",
+        "title": "It Takes 16 Clicks for a Student to Open a PowerPoint on an iPad",
+        "url": "https://www.reddit.com/r/Teachers/comments/1xuup7a/technology_sucks_it_literally_takes_16_clicks_for/",
         "source": "Hacker News",
-        "score": 16
+        "score": 55
       },
       {
-        "title": "Former Nvidia CEO Huang had a relationship with a second employee, sources say",
-        "url": "https://www.reuters.com/technology/former-nvidia-ceo-huang-had-relationship-with-second-employee-sources-say-2026-11-12/",
+        "title": "Minnesota guitarist's \"palmfrets\" invention strikes a new chord",
+        "url": "https://www.echopress.com/business/minnesota-guitarists-invention-strikes-a-new-chord",
         "source": "Hacker News",
-        "score": 301
+        "score": 59
       },
       {
-        "title": "I'm making LLMs work on small and old devices",
-        "url": "https://github.com/hyperionaidev/smolmaxxing/",
+        "title": "LibreOffice actually works 365 days a year",
+        "url": "https://twitter.com/LibreOffice/status/2121205272479998268",
         "source": "Hacker News",
-        "score": 390
+        "score": 511
       },
       {
-        "title": "Service degradation on Microsoft 365",
-        "url": "https://status.cloud.microsoft/",
+        "title": "CERN Built the Large Hadron Collider's Next-Gen Magnets",
+        "url": "https://spectrum.ieee.org/large-hadron-collider-superconducting-magnets",
         "source": "Hacker News",
-        "score": 958
+        "score": 40
       }
     ],
     "ai": [
       {
+        "title": "Reverse engineering my Coway air purifier to ditch the cloud",
+        "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
+        "source": "Hacker News AI",
+        "score": 544
+      },
+      {
+        "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
+        "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+        "source": "Hacker News AI",
+        "score": 167
+      },
+      {
+        "title": "The avalanche that hit math is coming for AI development",
+        "url": "https://www.dwarkesh.com/p/rsi",
+        "source": "Hacker News AI",
+        "score": 8
+      },
+      {
+        "title": "Brazil's Caixa insurer breach exposes names and tax IDs of all 7.6M customers",
+        "url": "https://filemanager-cdn.mziq.com/published/3972906b-e50b-4f74-ab74-4d0d32125d11/9567a559-d20a-486e-a7ae-5c6bbc030c5e",
+        "source": "Hacker News AI",
+        "score": 142
+      },
+      {
+        "title": "OpenAI disbands its robotics team as its general models start running robots",
+        "url": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/",
+        "source": "Hacker News AI",
+        "score": 35
+      },
+      {
         "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
         "url": "https://status.claude.com/incidents/nn11wk485zfn",
         "source": "Hacker News AI",
-        "score": 224
+        "score": 459
+      },
+      {
+        "title": "Why is Google cutting off Search from AI-free schools? Here are some theories",
+        "url": "https://text.npr.org/nx-s1-6029408",
+        "source": "Hacker News AI",
+        "score": 99
+      },
+      {
+        "title": "AI is destroying the trust between writers and readers",
+        "url": "https://www.theatlantic.com/books/2026/11/ai-literary-scams-amazon/689391/",
+        "source": "Hacker News AI",
+        "score": 257
       },
       {
         "title": "Gemini 4 Hydrogen and Orchestrator",
         "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
         "source": "Hacker News AI",
-        "score": 426
+        "score": 490
       },
       {
-        "title": "Claude Is Down",
-        "url": "https://status.claude.com/history",
+        "title": "Show HN: Log every LLM call with tokens, cost, latency, and time to first token",
+        "url": "https://github.com/garritfra/llmtee",
         "source": "Hacker News AI",
-        "score": 114
+        "score": 5
       },
       {
         "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
         "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
         "source": "Hacker News AI",
-        "score": 273
+        "score": 328
       },
       {
         "title": "I'm making LLMs work on small and old devices",
         "url": "https://github.com/hyperionaidev/smolmaxxing/",
         "source": "Hacker News AI",
-        "score": 390
+        "score": 462
       },
       {
-        "title": "Anthropic IPO",
-        "url": "https://ipo.anthropic.com/us/",
+        "title": "Jonathan Blow – If AI Solved Coding, Why Is My Software Still the Same? [video]",
+        "url": "https://www.youtube.com/watch?v=IRK8h67ol7Q",
         "source": "Hacker News AI",
-        "score": 951
-      },
-      {
-        "title": "Is there a 'right amount' of AI?",
-        "url": "https://coyotetracks.org/blog/right-amount-of-ai/",
-        "source": "Hacker News AI",
-        "score": 3
-      },
-      {
-        "title": "Gemini 4 Hydrogen",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
-        "source": "Hacker News AI",
-        "score": 536
-      },
-      {
-        "title": "Chinese frontier AI models carry the fingerprint of export-controlled GPUs",
-        "url": "https://unemploymentlabs.com/checkpoint-forensics",
-        "source": "Hacker News AI",
-        "score": 307
-      },
-      {
-        "title": "Scientists claim the universe is twice as old as believed",
-        "url": "https://geekspin.co/scientists-claim-the-universe-is-twice-as-old-as-believed/",
-        "source": "Hacker News AI",
-        "score": 88
-      },
-      {
-        "title": "AI is turning Apple's app review process into a nightmare for synth developers",
-        "url": "https://synthanatomy.com/2026/11/ai-is-turning-apples-app-review-process-into-a-nightmare-for-developers.html",
-        "source": "Hacker News AI",
-        "score": 180
-      },
-      {
-        "title": "Vibes Don't Maintain",
-        "url": "https://roll.bybacon.com/2026/10/14/vibes-dont-maintain.html",
-        "source": "Hacker News AI",
-        "score": 86
+        "score": 133
       }
     ],
     "news": [
       {
-        "title": "What we know about the global Microsoft outage",
+        "title": "Why is Microsoft's outage lasting so long and will emails be lost?",
         "url": "https://www.bbc.co.uk/news/articles/cwvg238zrnm5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Watch: How Microsoft services went down around the world",
-        "url": "https://www.bbc.co.uk/news/videos/cwm2591k27e2o?at_medium=RSS&at_campaign=rss",
+        "title": "Watch: How a server outage took down Microsoft Teams and Outlook",
+        "url": "https://www.bbc.co.uk/news/videos/cqzjr903n01po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ex-Nvidia CEO Jensen Huang summoned to testify before Congress about affair with alleged Chinese spy",
-        "url": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o?at_medium=RSS&at_campaign=rss",
+        "title": "Rosenberg: Uncompromising Putin ups demands for peace with Ukraine",
+        "url": "https://www.bbc.co.uk/news/articles/cq39glwprknjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Zelensky welcomes US bringing Europe into Russia-Ukraine peace talks",
-        "url": "https://www.bbc.co.uk/news/articles/ckn80j9jv3jxo?at_medium=RSS&at_campaign=rss",
+        "title": "Nvidia scandal fallout widens as Trump's treasury secretary blames cabinet colleague",
+        "url": "https://www.bbc.co.uk/news/articles/cqvg2d1eg7zro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "North Korean hackers used fake video calls in $400m crypto hack, says FBI",
-        "url": "https://www.bbc.co.uk/news/articles/cqdj1ellpd70o?at_medium=RSS&at_campaign=rss",
+        "title": "German spies handed new powers to tackle 'hybrid threats' from abroad",
+        "url": "https://www.bbc.co.uk/news/articles/c6jre3z03w4go?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "African Miss Universe beauty queens in limbo as US visa restrictions bite",
-        "url": "https://www.bbc.co.uk/news/articles/cklyw3neqg2wo?at_medium=RSS&at_campaign=rss",
+        "title": "The Peruvian city that has embraced Pope Leo as one of its own",
+        "url": "https://www.bbc.co.uk/news/articles/cwg7l8n7dx5mo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Hegseth awards medal to war memorial guard who reprimanded him and group",
-        "url": "https://www.bbc.co.uk/news/articles/cmvg2r3dq7xno?at_medium=RSS&at_campaign=rss",
+        "title": "Democratic Senate leader Schumer set to face leadership challenge",
+        "url": "https://www.bbc.co.uk/news/articles/cmy4930jq749o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " These IEMs get the Most Beautiful Earphones Award for 2026, but will their crowd-pleasing tuning win you over? ",
+        "url": "https://www.creativebloq.com/reviews/these-iems-get-the-most-beautiful-earphones-award-for-2026-but-will-their-crowd-pleasing-tuning-win-you-over",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Adobe's Black Friday deal is its biggest in years, with 57% off Creative Cloud Pro ",
+        "url": "https://www.creativebloq.com/deals/adobes-black-friday-deal-is-its-biggest-in-years-with-57-percent-off-creative-cloud-pro",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " You know that butter bot from Rick and Morty? You can buy that now ",
+        "url": "https://www.creativebloq.com/news/you-know-that-butter-bot-from-rick-and-morty-you-can-buy-that-now",
+        "source": "Creative Bloq"
+      },
       {
         "title": " How do you redesign a cult kids’ product? I asked Yoto’s new designers ",
         "url": "https://www.creativebloq.com/inspiration/how-do-you-redesign-a-cult-kids-product-i-asked-yotos-new-designers",
@@ -227,27 +248,22 @@
         "title": " This approach to 3D art in Unreal Engine 5 helped me minimise unnecessary iterations ",
         "url": "https://www.creativebloq.com/features/this-approach-to-3d-art-in-unreal-engine-5-helped-me-minimise-unnecessary-iterations",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Does Nvidia need a new logo as well as a new CEO? ",
-        "url": "https://www.creativebloq.com/news/does-nvidia-need-a-new-logo-as-well-as-a-new-ceo",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These are 13 of the best wired earphones – and they’re all on sale for early Black Friday ",
-        "url": "https://www.creativebloq.com/deals/these-are-13-of-the-best-earphones-on-the-market-and-theyre-all-discounted-for-early-black-friday",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Don’t go anywhere without these 8 essential creative travel gadgets ",
-        "url": "https://www.creativebloq.com/deals/dont-go-anywhere-without-these-8-essential-creative-travel-gadgets",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
         "title": "A surprising brain difference may explain why some kids struggle with math",
         "url": "https://www.sciencedaily.com/releases/2026/11/261112025542.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Stopping statins after 70 may be safer than expected, but there's a catch",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261112025534.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists discover a hidden danger of viral infections that vaccines may prevent",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261112025531.htm",
         "source": "Science Daily"
       },
       {
@@ -261,60 +277,50 @@
         "source": "Science Daily"
       },
       {
+        "title": "Superheated magma could fuel towering lava fountains",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261111221811.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Without this protein, damaged muscle fills with fat and scar tissue",
         "url": "https://www.sciencedaily.com/releases/2026/11/261111221643.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover a common sugar may help cancer cells break free and spread",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261111221501.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA’s Perseverance confirms a key ingredient for life hidden in ancient Mars rocks",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261111005908.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A breakthrough in magnetism could make AI chips use dramatically less energy",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261111005853.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Pixar's New Movie Gatto Gets First In-Depth Look in Official Trailer",
-        "url": "https://www.polygon.com/pixar-gatto-trailer/",
+        "title": "Magic Just Revealed 19 New Cards From 2027’s First Set — Including a $30 Reprint With Stunning Art",
+        "url": "https://www.polygon.com/mtg-nauctis-the-sunken-realm-magiccon-reveals-spoilers/",
         "source": "Polygon"
       },
       {
-        "title": "Leaked Dune Magic Secret Lair Has Amazing Value Reprints and 9 New Cards",
-        "url": "https://www.polygon.com/mtg-dune-magic-secret-lair-drop-leaks/",
+        "title": "How Queen's Domain's 2-Person Team Remade Elden Ring's Legacy in a Basement",
+        "url": "https://www.polygon.com/queens-domain-fromsoftware-interview/",
         "source": "Polygon"
       },
       {
-        "title": "6 Nintendo Switch Special Editions With the Best Designs, Ranked",
-        "url": "https://www.polygon.com/best-nintendo-switch-special-edition-designs/",
+        "title": "Magic: The Gathering Animated Series Officially Gets First Trailer",
+        "url": "https://www.polygon.com/magic-the-gathering-animated-series-planeswalker-first-trailer/",
         "source": "Polygon"
       },
       {
-        "title": "5 Sci-Fi Book Trilogies Where Every Entry Is Perfect",
-        "url": "https://www.polygon.com/sci-fi-trilogy-perfect-entries/",
+        "title": "VisionQuest’s Wild Post-Credits Cameo Almost Didn’t Happen",
+        "url": "https://www.polygon.com/marvel-visionquest-post-credits-scene-cameo/",
         "source": "Polygon"
       },
       {
-        "title": "Tim Burton's Forgotten Dark Fantasy Magnum Opus Is Officially Free on Youtube",
-        "url": "https://www.polygon.com/corpse-bride-streaming-free-youtube-november-2026/",
+        "title": "All rupee wallet upgrade locations in Zelda Ocarina of Time",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-rupee-wallet-upgrade-locations/",
         "source": "Polygon"
       },
       {
-        "title": "Netflix's Disappointing New Western Thriller Wastes Its Brilliant Concept",
-        "url": "https://www.polygon.com/heartland-netflix-review/",
+        "title": "Dragon Age Modders Are Rushing to Save the Series’ Most Iconic Feature",
+        "url": "https://www.polygon.com/dragon-age-modders-import-save-states/",
         "source": "Polygon"
       },
       {
-        "title": "26 Years Later, Charles Schulz' Final Comic Strip Is Still an All-Time Peanuts Classic",
-        "url": "https://www.polygon.com/peanuts-final-comic-strip-charlie-brown/",
+        "title": "Walmart's Black Friday Deals: 'Pokémon' 30th Anniversary and TCG Surprises",
+        "url": "https://www.polygon.com/walmart-black-friday-2026-pokemon-30th-anniversary-tcg-event-2-near-me/",
         "source": "Polygon"
       }
     ],
