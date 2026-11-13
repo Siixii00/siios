@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-11-12T22:05:53.941259",
+    "last_updated": "2026-11-13T03:12:33.649996",
     "total_items": 57
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "Jensen Huang resigns",
         "url": "https://apnews.com/article/nvidia-megaspeed-china-singapore-huang-5403f152a601cf82ce939f1d24fffa0f",
         "source": "Hacker News",
-        "score": 2507
+        "score": 3075
+      },
+      {
+        "title": "Africa's solar revolution is vast and speedy",
+        "url": "https://www.economist.com/middle-east-and-africa/2026/11/12/africas-solar-revolution-is-vast-and-speedy",
+        "source": "Hacker News",
+        "score": 43
       },
       {
         "title": "Rust 1.100",
         "url": "https://blog.rust-lang.org/2026/11/12/Rust-1.100.0/",
         "source": "Hacker News",
-        "score": 182
+        "score": 469
       },
       {
         "title": "Gemini 4 Hydrogen and Orchestrator",
         "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
         "source": "Hacker News",
-        "score": 181
-      },
-      {
-        "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
-        "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/",
-        "source": "Hacker News",
-        "score": 120
-      },
-      {
-        "title": "Foundation Models Framework (macOS)",
-        "url": "https://developer.apple.com/foundation-models-framework/",
-        "source": "Hacker News",
-        "score": 30
+        "score": 331
       },
       {
         "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app",
         "url": "https://github.com/simpsoka/zigzag",
         "source": "Hacker News",
-        "score": 202
+        "score": 369
+      },
+      {
+        "title": "Dwarf planet candidate appears which takes roughly 280 years to orbit our sun",
+        "url": "https://www.smithsonianmag.com/smart-news/astronomers-found-a-mysterious-object-orbiting-far-beyond-pluto-it-could-be-a-new-dwarf-planet-hidden-in-our-solar-system-180989857/",
+        "source": "Hacker News",
+        "score": 218
+      },
+      {
+        "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
+        "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+        "source": "Hacker News",
+        "score": 84
+      },
+      {
+        "title": "Foundation Models framework",
+        "url": "https://developer.apple.com/foundation-models-framework/",
+        "source": "Hacker News",
+        "score": 145
+      },
+      {
+        "title": "Nvidia employees petition to bring back Jensen Huang",
+        "url": "https://www.wired.com/story/nvidia-employees-petition-for-jensen-huangs-return/",
+        "source": "Hacker News",
+        "score": 84
       },
       {
         "title": "Service degradation on Microsoft 365",
         "url": "https://status.cloud.microsoft/",
         "source": "Hacker News",
-        "score": 302
+        "score": 564
       },
       {
-        "title": "Anthropic IPO",
-        "url": "https://ipo.anthropic.com/us/",
-        "source": "Hacker News",
-        "score": 738
-      },
-      {
-        "title": "22-Year-Old PostgreSQL Bug Turned into Remote Code Execution",
+        "title": "Turning a 22-year-old Postgres type-confusion primitive into RCE",
         "url": "https://mehmetince.net/part-3-6-how-i-ended-up-turning-a-22-year-old-postgresql-type-confusion-primitive-into-rce-cve-2026-6460/",
         "source": "Hacker News",
-        "score": 84
+        "score": 152
+      },
+      {
+        "title": "Former Nvidia CEO Huang had a relationship with a second employee, sources say",
+        "url": "https://www.reuters.com/technology/former-nvidia-ceo-huang-had-relationship-with-second-employee-sources-say-2026-11-12/",
+        "source": "Hacker News",
+        "score": 120
       },
       {
         "title": "I'm making LLMs work on small and old devices",
         "url": "https://github.com/hyperionaidev/smolmaxxing/",
         "source": "Hacker News",
-        "score": 230
+        "score": 289
       },
       {
         "title": "Abandoned Quake 4 expansion finished by modders and now playable",
         "url": "https://www.moddb.com/mods/openq4/downloads/openq4-0141-windows-x64",
         "source": "Hacker News",
-        "score": 214
+        "score": 247
       },
       {
-        "title": "Relax: JIT compiler for Rust to reduce build times",
-        "url": "https://makepad.github.io/relax/",
+        "title": "Sift: LSP, Lint, Format Lisp, Scheme and Emacs Lisp",
+        "url": "https://github.com/jjba23/sift",
         "source": "Hacker News",
-        "score": 75
-      },
-      {
-        "title": "Gemini 4 Hydrogen",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
-        "source": "Hacker News",
-        "score": 387
-      },
-      {
-        "title": "Data centers need power – lower income, rural residents pay the price",
-        "url": "https://news.cornell.edu/stories/2026/11/data-centers-need-power-lower-income-rural-residents-pay-price",
-        "source": "Hacker News",
-        "score": 122
-      },
-      {
-        "title": "Talking Zen 6 with Mike Clark at AMD In-Depth",
-        "url": "https://chipsandcheese.com/p/talking-zen-6-with-mike-clark-at",
-        "source": "Hacker News",
-        "score": 160
+        "score": 23
       }
     ],
     "ai": [
@@ -101,49 +101,59 @@
         "title": "Gemini 4 Hydrogen and Orchestrator",
         "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
         "source": "Hacker News AI",
-        "score": 181
+        "score": 331
       },
       {
-        "title": "Anthropic IPO",
-        "url": "https://ipo.anthropic.com/us/",
+        "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
+        "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
         "source": "Hacker News AI",
-        "score": 738
+        "score": 84
       },
       {
         "title": "I'm making LLMs work on small and old devices",
         "url": "https://github.com/hyperionaidev/smolmaxxing/",
         "source": "Hacker News AI",
-        "score": 230
+        "score": 289
+      },
+      {
+        "title": "AI is turning Apple's app review process into a nightmare for synth developers",
+        "url": "https://synthanatomy.com/2026/11/ai-is-turning-apples-app-review-process-into-a-nightmare-for-developers.html",
+        "source": "Hacker News AI",
+        "score": 116
       },
       {
         "title": "Gemini 4 Hydrogen",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
         "source": "Hacker News AI",
-        "score": 387
+        "score": 478
       },
       {
-        "title": "Vibes Don't Maintain",
-        "url": "https://roll.bybacon.com/2026/10/14/vibes-dont-maintain.html",
+        "title": "Anthropic IPO",
+        "url": "https://ipo.anthropic.com/us/",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 842
       },
       {
-        "title": "Jensen Huang Third Affair Allegations Revealed",
-        "url": "https://www.forbes.com/sites/alisondurkee/2026/11/12/jensen-huang-had-a-third-affair-with-another-nvidia-employee-report-says/",
+        "title": "Chinese frontier AI models carry the fingerprint of export-controlled GPUs",
+        "url": "https://unemploymentlabs.com/checkpoint-forensics",
         "source": "Hacker News AI",
-        "score": 24
-      },
-      {
-        "title": "Decoding REXPaint Files in Odin",
-        "url": "https://tylerelton.com/posts/decoding-rexpaint-files-in-odin/",
-        "source": "Hacker News AI",
-        "score": 17
+        "score": 191
       }
     ],
     "news": [
       {
-        "title": "US envoys head to meet Zelensky after talks with Putin in Moscow",
-        "url": "https://www.bbc.co.uk/news/articles/cwrkgmymk55zo?at_medium=RSS&at_campaign=rss",
+        "title": "Scandal-hit Nvidia CEO Jensen Huang quits, plunging AI chipmaking giant into turmoil",
+        "url": "https://www.bbc.co.uk/news/articles/cmq5vd1wdgz6o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Zelensky welcomes US bringing Europe into Russia-Ukraine peace talks",
+        "url": "https://www.bbc.co.uk/news/articles/ckn80j9jv3jxo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "North Korean hackers used fake video calls in $400m crypto hack, says FBI",
+        "url": "https://www.bbc.co.uk/news/articles/cqdj1ellpd70o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -152,28 +162,18 @@
         "source": "BBC World"
       },
       {
+        "title": "Neither war nor peace in Tigray - is Ethiopia's latest conflict really over?",
+        "url": "https://www.bbc.co.uk/news/articles/cm3egjgvp794o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Suspected bomb hoax threats force fresh evacuations of Italian schools",
         "url": "https://www.bbc.co.uk/news/articles/cr894w453e90o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Democrat Scott Colom makes history as Mississippi's first black senator since 19th Century",
-        "url": "https://www.bbc.co.uk/news/articles/cw7vppyr80eeo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Hegseth awards medal to war memorial guard who reprimanded him and group",
-        "url": "https://www.bbc.co.uk/news/articles/cmvg2r3dq7xno?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Millions of Ebola dollars missing with staff unpaid while virus spreads, charity says",
-        "url": "https://www.bbc.co.uk/news/articles/cx98757ymm6zo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Israeli strike on Gaza hospital kills six Palestinians, health ministry says",
-        "url": "https://www.bbc.co.uk/news/articles/ckzd9p7e4eqeo?at_medium=RSS&at_campaign=rss",
+        "title": "Australian footballers will not be charged after hotel incident, police say",
+        "url": "https://www.bbc.co.uk/news/articles/ckregjwr7njqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -216,8 +216,23 @@
     ],
     "science": [
       {
+        "title": "A surprising brain difference may explain why some kids struggle with math",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261112025542.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A new treasure map reveals where Earth's lost prehistoric life may be hiding",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261112025529.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Common forever chemicals linked to nearly double the rate of aggressive breast cancer",
         "url": "https://www.sciencedaily.com/releases/2026/11/261112025527.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Without this protein, damaged muscle fills with fat and scar tissue",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261111221643.htm",
         "source": "Science Daily"
       },
       {
@@ -226,70 +241,65 @@
         "source": "Science Daily"
       },
       {
-        "title": "Walking and weight training may not be enough to keep your bones strong",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261110042601.htm",
+        "title": "NASA’s Perseverance confirms a key ingredient for life hidden in ancient Mars rocks",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261111005908.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Where are all the males? Ancient human fossils reveal a startling mystery",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261110042558.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Earth's fiery birth may have created hundreds of oceans' worth of water",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261110042549.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA reveals Earth's ozone hole has grown to a size not seen in a decade",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261110042546.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Energy drinks linked to 11 times more reports of cardiac arrest",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261110042543.htm",
+        "title": "A breakthrough in magnetism could make AI chips use dramatically less energy",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261111005853.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "How to farm rupees in Zelda Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-rupee-farming-methods/",
+        "title": "44 Years Later, Star Trek’s Best Quote About Grief Is Still a Near-Perfect Sci-Fi Moment",
+        "url": "https://www.polygon.com/star-trek-wrath-of-khan-best-quote-grief/",
         "source": "Polygon"
       },
       {
-        "title": "DMZ key and locations in Modern Warfare 4",
-        "url": "https://www.polygon.com/mw4-modern-warfare-4-dmz-keys-locations-all-list/",
+        "title": "The 25 Best Nintendo Switch 2 Games in 2026",
+        "url": "https://www.polygon.com/best-nintendo-switch-2-games/",
         "source": "Polygon"
       },
       {
-        "title": "Marvel’s Kevin Feige Breaks Silence on MCU Doctor Doom Being a Tony Stark Variant",
-        "url": "https://www.polygon.com/avengers-doomsday-doctor-doom-tony-start-variant-theory/",
+        "title": "Steam Makes Popular World War II Strategy Game Free to Play This Weekend",
+        "url": "https://www.polygon.com/company-of-heroes-3-free-steam-weekend-sale-november-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Cursed treasure hours schedule in the Fortnite Chapter 7 mini season",
-        "url": "https://www.polygon.com/fornite-treasure-hours-chapter-7-mini-season-c7ms/",
+        "title": "Sony's Bringing Back Spider-Man $2.5 Billion Hit With New Footage",
+        "url": "https://www.polygon.com/spider-man-brand-new-day-rerelease-extended-new-footage-cameos/",
         "source": "Polygon"
       },
       {
-        "title": "Xbox CEO Hints Its Studios Will Heavily Use AI to Make Future Games",
-        "url": "https://www.polygon.com/xbox-ceo-asha-sharma-ai-use-games/",
+        "title": "'Avatar: Seven Havens’ Season 2 Release Date Announcement Includes Some Shocking Good News",
+        "url": "https://www.polygon.com/avatar-seven-havens-season-2-release-date-announcement-season-3/",
         "source": "Polygon"
       },
       {
-        "title": "All 22 Call of Duty Campaigns, Ranked From Worst to Best",
-        "url": "https://www.polygon.com/call-of-duty-campaigns-ranked/",
+        "title": "Daniel Craig's Most Disappointing Bond Film Quietly Exits Streaming This Month",
+        "url": "https://www.polygon.com/james-bond-quantum-of-solace-leaving-paramount-plus/",
         "source": "Polygon"
       },
       {
-        "title": "Disney Plus Is Officially the New Streaming Home of the Game Awards",
-        "url": "https://www.polygon.com/game-awards-2026-disney-plus-streaming-announced-geoff-keighley-goty/",
+        "title": "Ghost Rider Star Says He's Down to Return for Marvel's 2028 Reboot",
+        "url": "https://www.polygon.com/ghost-rider-ryan-reynolds-gabriel-luna-marvel-movie/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "GitHub availability report: October 2026",
+        "url": "https://github.blog/news-insights/company-news/github-availability-report-october-2026/",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "Build once, run on any agent: A practical guide to agent skills",
+        "url": "https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "Git security vulnerabilities announced",
         "url": "https://github.blog/open-source/git/git-security-vulnerabilities-announced-7/",
@@ -313,16 +323,6 @@
       {
         "title": "Arnis turns any place on Earth into a Minecraft world",
         "url": "https://github.blog/open-source/maintainers/arnis-turns-any-place-on-earth-into-a-minecraft-world/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Game Off 2026: The theme is SHIFT",
-        "url": "https://github.blog/open-source/gaming/game-off-2026-the-theme-is-shift/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "GitHub Universe 2026: Evolving every layer of the stack",
-        "url": "https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/",
         "source": "GitHub Blog"
       }
     ]
