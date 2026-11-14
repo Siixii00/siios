@@ -1,182 +1,198 @@
 {
   "metadata": {
-    "last_updated": "2026-11-13T19:21:33.492752",
-    "total_items": 63
+    "last_updated": "2026-11-14T00:43:45.136377",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
-        "title": "After 600 experiments, here's what I discovered about JEPA world models",
-        "url": "https://haddyalchaer.com/jepa",
+        "title": "FAA issues national ground stop",
+        "url": "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
         "source": "Hacker News",
-        "score": 77
+        "score": 1225
+      },
+      {
+        "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
+        "url": "https://orcasairband.com/",
+        "source": "Hacker News",
+        "score": 155
+      },
+      {
+        "title": "First Strike",
+        "url": "https://geohot.github.io//blog/jekyll/update/2026/11/13/first-strike.html",
+        "source": "Hacker News",
+        "score": 42
+      },
+      {
+        "title": "FM-1 Workbench",
+        "url": "https://open.m-vave.com/fm1-workbench",
+        "source": "Hacker News",
+        "score": 175
+      },
+      {
+        "title": "What Happened to 3Com?",
+        "url": "https://dfarq.homeip.net/what-happened-to-3com/",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "Found: A protein that drives ageing without unleashing inflammation",
+        "url": "https://www.nature.com/articles/d41586-026-03638-3",
+        "source": "Hacker News",
+        "score": 114
       },
       {
         "title": "Reverse engineering my Coway air purifier to ditch the cloud",
         "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
         "source": "Hacker News",
-        "score": 544
+        "score": 666
       },
       {
-        "title": "Models can now transmit viruses in weight-space",
-        "url": "https://www.alphaxiv.org/abs/2611.weight-space-misfolding",
+        "title": "After 600 experiments, here's what I discovered about JEPA world models",
+        "url": "https://haddyalchaer.com/jepa",
         "source": "Hacker News",
-        "score": 30
+        "score": 206
+      },
+      {
+        "title": "Terminal borders that don't cost a cell",
+        "url": "https://www.joshka.net/cell-borders/",
+        "source": "Hacker News",
+        "score": 34
+      },
+      {
+        "title": "Perplexity Decider v1.3: Training, eval, and use cases",
+        "url": "https://www.perplexity.ai/hub/blog/perplexity-decider",
+        "source": "Hacker News",
+        "score": 92
       },
       {
         "title": "Doomsday: Friday, 13 November, A.D. 2026 (1960)",
         "url": "https://www.science.org/doi/10.1126/science.132.3436.1291",
         "source": "Hacker News",
-        "score": 375
+        "score": 441
+      },
+      {
+        "title": "Autonomous (YC F25) is hiring MTS to build AI agents that manage your wealth",
+        "url": "https://atg.science/careers",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "Live-migration support in FreeBSD and bhyve coming",
+        "url": "https://gyptazy.com/blog/freebsd-bhyve-live-migration-support-rfc/",
+        "source": "Hacker News",
+        "score": 63
       },
       {
         "title": "Show HN: Isometric SF – A pixel-art map of the SF Bay Area",
         "url": "https://isometricsf.com/",
         "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "A technical vision for the Haskell ecosystem",
-        "url": "https://discourse.haskell.org/t/a-technical-vision-for-the-haskell-ecosystem/15078",
-        "source": "Hacker News",
-        "score": 129
-      },
-      {
-        "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
-        "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
-        "source": "Hacker News",
-        "score": 167
-      },
-      {
-        "title": "Lonewolf 0.3 – A standalone XMPP server written in Rust",
-        "url": "https://github.com/lonewolf-im/lonewolf/releases/tag/v0.3.0",
-        "source": "Hacker News",
-        "score": 98
+        "score": 144
       },
       {
         "title": "Ctrl+C, Ctrl+v, Ctrl+cve: Bypassing Android's Clipboard Read Security Measures",
         "url": "https://toninoble.com/post/ctrlc-ctrlv-ctrlcve",
         "source": "Hacker News",
-        "score": 10
-      },
-      {
-        "title": "The avalanche that hit math is coming for AI development",
-        "url": "https://www.dwarkesh.com/p/rsi",
-        "source": "Hacker News",
-        "score": 8
-      },
-      {
-        "title": "Gnomon. Git for Postgres data, built for agents",
-        "url": "https://github.com/bitsinfra/gnomon",
-        "source": "Hacker News",
-        "score": 19
-      },
-      {
-        "title": "It Takes 16 Clicks for a Student to Open a PowerPoint on an iPad",
-        "url": "https://www.reddit.com/r/Teachers/comments/1xuup7a/technology_sucks_it_literally_takes_16_clicks_for/",
-        "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Minnesota guitarist's \"palmfrets\" invention strikes a new chord",
-        "url": "https://www.echopress.com/business/minnesota-guitarists-invention-strikes-a-new-chord",
-        "source": "Hacker News",
-        "score": 59
-      },
-      {
-        "title": "LibreOffice actually works 365 days a year",
-        "url": "https://twitter.com/LibreOffice/status/2121205272479998268",
-        "source": "Hacker News",
-        "score": 511
-      },
-      {
-        "title": "CERN Built the Large Hadron Collider's Next-Gen Magnets",
-        "url": "https://spectrum.ieee.org/large-hadron-collider-superconducting-magnets",
-        "source": "Hacker News",
-        "score": 40
+        "score": 66
       }
     ],
     "ai": [
       {
+        "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
+        "url": "https://orcasairband.com/",
+        "source": "Hacker News AI",
+        "score": 155
+      },
+      {
         "title": "Reverse engineering my Coway air purifier to ditch the cloud",
         "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
         "source": "Hacker News AI",
-        "score": 544
+        "score": 666
+      },
+      {
+        "title": "Perplexity Decider v1.3: Training, eval, and use cases",
+        "url": "https://www.perplexity.ai/hub/blog/perplexity-decider",
+        "source": "Hacker News AI",
+        "score": 92
+      },
+      {
+        "title": "Autonomous (YC F25) is hiring MTS to build AI agents that manage your wealth",
+        "url": "https://atg.science/careers",
+        "source": "Hacker News AI",
+        "score": 1
+      },
+      {
+        "title": "All US airports are currently ground stopped",
+        "url": "https://twitter.com/flightradar24/status/2121347654714077605",
+        "source": "Hacker News AI",
+        "score": 152
+      },
+      {
+        "title": "Doc-foundry – AI writes Security detection rules, then proves they work",
+        "url": "https://github.com/mjha-arya/DOC-foundry",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
         "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
         "source": "Hacker News AI",
-        "score": 167
-      },
-      {
-        "title": "The avalanche that hit math is coming for AI development",
-        "url": "https://www.dwarkesh.com/p/rsi",
-        "source": "Hacker News AI",
-        "score": 8
-      },
-      {
-        "title": "Brazil's Caixa insurer breach exposes names and tax IDs of all 7.6M customers",
-        "url": "https://filemanager-cdn.mziq.com/published/3972906b-e50b-4f74-ab74-4d0d32125d11/9567a559-d20a-486e-a7ae-5c6bbc030c5e",
-        "source": "Hacker News AI",
-        "score": 142
+        "score": 316
       },
       {
         "title": "OpenAI disbands its robotics team as its general models start running robots",
         "url": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/",
         "source": "Hacker News AI",
-        "score": 35
+        "score": 140
       },
       {
         "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
         "url": "https://status.claude.com/incidents/nn11wk485zfn",
         "source": "Hacker News AI",
-        "score": 459
+        "score": 484
       },
       {
         "title": "Why is Google cutting off Search from AI-free schools? Here are some theories",
         "url": "https://text.npr.org/nx-s1-6029408",
         "source": "Hacker News AI",
-        "score": 99
+        "score": 162
+      },
+      {
+        "title": "0.5B base model trained on 60B tokens rivals Qwen3.5-2B trained on 30T+ tokens",
+        "url": "https://huggingface.co/ArsalanZ/Nenya-2.5B-A0.5B-Base",
+        "source": "Hacker News AI",
+        "score": 6
+      },
+      {
+        "title": "Brazil's Caixa insurer breach exposes names and tax IDs of all 7.6M customers",
+        "url": "https://filemanager-cdn.mziq.com/published/3972906b-e50b-4f74-ab74-4d0d32125d11/9567a559-d20a-486e-a7ae-5c6bbc030c5e",
+        "source": "Hacker News AI",
+        "score": 161
+      },
+      {
+        "title": "Claude Meetings",
+        "url": "https://claude.com/resources/articles/claude-meetings",
+        "source": "Hacker News AI",
+        "score": 64
       },
       {
         "title": "AI is destroying the trust between writers and readers",
         "url": "https://www.theatlantic.com/books/2026/11/ai-literary-scams-amazon/689391/",
         "source": "Hacker News AI",
-        "score": 257
-      },
-      {
-        "title": "Gemini 4 Hydrogen and Orchestrator",
-        "url": "https://antigravity.google/blog/gemini-4-hydrogen-in-google-antigravity/",
-        "source": "Hacker News AI",
-        "score": 490
-      },
-      {
-        "title": "Show HN: Log every LLM call with tokens, cost, latency, and time to first token",
-        "url": "https://github.com/garritfra/llmtee",
-        "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
-        "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
-        "source": "Hacker News AI",
-        "score": 328
-      },
-      {
-        "title": "I'm making LLMs work on small and old devices",
-        "url": "https://github.com/hyperionaidev/smolmaxxing/",
-        "source": "Hacker News AI",
-        "score": 462
-      },
-      {
-        "title": "Jonathan Blow – If AI Solved Coding, Why Is My Software Still the Same? [video]",
-        "url": "https://www.youtube.com/watch?v=IRK8h67ol7Q",
-        "source": "Hacker News AI",
-        "score": 133
+        "score": 309
       }
     ],
     "news": [
+      {
+        "title": "'Miracle on Mississippi' - All rescued after cruise ship hit by tanker in New Orleans",
+        "url": "https://www.bbc.co.uk/news/articles/cw20xmy0m5yyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Microsoft 'deeply sorry' for global outage after almost 24 hours of disruption",
+        "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Why is Microsoft's outage lasting so long and will emails be lost?",
         "url": "https://www.bbc.co.uk/news/articles/cwvg238zrnm5o?at_medium=RSS&at_campaign=rss",
@@ -188,6 +204,11 @@
         "source": "BBC World"
       },
       {
+        "title": "Setback for SpaceX Starship rocket's double-catch test",
+        "url": "https://www.bbc.co.uk/news/articles/ckregdgnl0xpo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Rosenberg: Uncompromising Putin ups demands for peace with Ukraine",
         "url": "https://www.bbc.co.uk/news/articles/cq39glwprknjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -195,21 +216,6 @@
       {
         "title": "Nvidia scandal fallout widens as Trump's treasury secretary blames cabinet colleague",
         "url": "https://www.bbc.co.uk/news/articles/cqvg2d1eg7zro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "German spies handed new powers to tackle 'hybrid threats' from abroad",
-        "url": "https://www.bbc.co.uk/news/articles/c6jre3z03w4go?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "The Peruvian city that has embraced Pope Leo as one of its own",
-        "url": "https://www.bbc.co.uk/news/articles/cwg7l8n7dx5mo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Democratic Senate leader Schumer set to face leadership challenge",
-        "url": "https://www.bbc.co.uk/news/articles/cmy4930jq749o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -289,38 +295,38 @@
     ],
     "gaming": [
       {
-        "title": "Magic Just Revealed 19 New Cards From 2027’s First Set — Including a $30 Reprint With Stunning Art",
-        "url": "https://www.polygon.com/mtg-nauctis-the-sunken-realm-magiccon-reveals-spoilers/",
+        "title": "HBO’s 5-Part Crime Drama Has One of the Best Seasons in TV History",
+        "url": "https://www.polygon.com/the-wire-season-4-recommendation/",
         "source": "Polygon"
       },
       {
-        "title": "How Queen's Domain's 2-Person Team Remade Elden Ring's Legacy in a Basement",
-        "url": "https://www.polygon.com/queens-domain-fromsoftware-interview/",
+        "title": "Fallout 5 and Fallout Remasters Officially Announced",
+        "url": "https://www.polygon.com/fallout-5-fo3-remaster-new-games-bethesda-softworks/",
         "source": "Polygon"
       },
       {
-        "title": "Magic: The Gathering Animated Series Officially Gets First Trailer",
-        "url": "https://www.polygon.com/magic-the-gathering-animated-series-planeswalker-first-trailer/",
+        "title": "Blizzard Officially Responds to Disappointed Overwatch Fans Over Hero 55",
+        "url": "https://www.polygon.com/overwatch-new-hero-55-hudson-damage-dps-blizzard/",
         "source": "Polygon"
       },
       {
-        "title": "VisionQuest’s Wild Post-Credits Cameo Almost Didn’t Happen",
-        "url": "https://www.polygon.com/marvel-visionquest-post-credits-scene-cameo/",
+        "title": "10 New Movies to Watch This Weekend on Netflix, Prime Video, and HBO Max (November 13 - 15)",
+        "url": "https://www.polygon.com/new-movies-streaming-this-weekend-netflix-november-13-15/",
         "source": "Polygon"
       },
       {
-        "title": "All rupee wallet upgrade locations in Zelda Ocarina of Time",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-oot-rupee-wallet-upgrade-locations/",
+        "title": "6 Most-Anticipated Steam Games You Should Add to Your Wishlist Right Now",
+        "url": "https://www.polygon.com/wishlister-nov-13/",
         "source": "Polygon"
       },
       {
-        "title": "Dragon Age Modders Are Rushing to Save the Series’ Most Iconic Feature",
-        "url": "https://www.polygon.com/dragon-age-modders-import-save-states/",
+        "title": "Marvel Officially Confirms New Avengers Team for Doomsday",
+        "url": "https://www.polygon.com/avengers-doomsday-marvel-confirms-new-team-lineup/",
         "source": "Polygon"
       },
       {
-        "title": "Walmart's Black Friday Deals: 'Pokémon' 30th Anniversary and TCG Surprises",
-        "url": "https://www.polygon.com/walmart-black-friday-2026-pokemon-30th-anniversary-tcg-event-2-near-me/",
+        "title": "Cities: Skylines' Best Replacement Is Finally Here and Better than Expected",
+        "url": "https://www.polygon.com/transport-fever-3-logistics-city-builder-game/",
         "source": "Polygon"
       }
     ],
