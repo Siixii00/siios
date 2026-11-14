@@ -1,149 +1,149 @@
 {
   "metadata": {
-    "last_updated": "2026-11-14T14:50:21.409299",
-    "total_items": 62
+    "last_updated": "2026-11-14T19:46:11.370010",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
+        "title": "Lovable apps expose passport details and more than 200K private messages",
+        "url": "https://www.crissyfield.de/research/lovable-en/",
+        "source": "Hacker News",
+        "score": 250
+      },
+      {
+        "title": "PyPI's redesigned project pages with clearer security signals are now live",
+        "url": "https://blog.pypi.org/posts/2026-11-06-ui-updates-complete/",
+        "source": "Hacker News",
+        "score": 143
+      },
+      {
+        "title": "A Family Tree of Software Job Titles",
+        "url": "https://zwischenzugs.com/2026/11/03/a-family-tree-of-software-job-titles/",
+        "source": "Hacker News",
+        "score": 62
+      },
+      {
+        "title": "KDE: The documentary [video]",
+        "url": "https://tube.kockatoo.org/w/fFinNHfanLT7aBEb2B8y4c",
+        "source": "Hacker News",
+        "score": 257
+      },
+      {
+        "title": "US IRS free online tax filing open source repo",
+        "url": "https://github.com/IRS-Public/direct-file",
+        "source": "Hacker News",
+        "score": 43
+      },
+      {
         "title": "Why get an expensive Pi when I have an old phone?",
         "url": "https://so.long.thanks.fish/why-pi-when-i-have-an-old-phone/",
         "source": "Hacker News",
-        "score": 245
+        "score": 421
       },
       {
-        "title": "Generative AI uses more energy on non-English text",
-        "url": "https://news.umich.edu/generative-ai-uses-more-energy-on-non-english-text/",
+        "title": "Seagate's new hybrid drive raises some old questions",
+        "url": "https://arstechnica.com/gadgets/2026/11/seagate-resurrects-the-ssd-hdd-hybrid-drive/",
         "source": "Hacker News",
-        "score": 39
+        "score": 22
       },
       {
         "title": "Advancing science and engineering with Antigravity's /teamwork",
         "url": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature/",
         "source": "Hacker News",
-        "score": 18
+        "score": 104
       },
       {
-        "title": "The Claude Delusion",
-        "url": "https://www.netmeister.org/blog/claude-delusion.html",
+        "title": "Reverse engineering a vintage diode-transistor logic chip",
+        "url": "https://www.righto.com/2026/11/signetics-st680a-dtl-nand.html",
+        "source": "Hacker News",
+        "score": 49
+      },
+      {
+        "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax",
+        "url": "https://github.com/Vaibhaav-Tiwari/deepseek-v3-jax",
         "source": "Hacker News",
         "score": 74
-      },
-      {
-        "title": "Tech Companies Are Trying to Shift the Concept of Privacy (Again)",
-        "url": "https://www.eff.org/deeplinks/2026/11/tech-companies-are-trying-shift-entire-concept-privacy-again",
-        "source": "Hacker News",
-        "score": 99
-      },
-      {
-        "title": "Ggml v1.0.0",
-        "url": "https://github.com/ggml-org/ggml/releases/tag/v1.0.0",
-        "source": "Hacker News",
-        "score": 338
-      },
-      {
-        "title": "Show HN: Lampka – a Windows PDF reader whose dark mode keeps figures in colour",
-        "url": "https://lampka.app/",
-        "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "Show HN: Fursoy – Out-of-order RV64IMAFDV core in SystemVerilog (Linux 6.6)",
-        "url": "https://github.com/FURSOY/fursoy-cpu",
-        "source": "Hacker News",
-        "score": 5
       },
       {
         "title": "Show HN: A terminal-native idle factory game, written in Rust with ratatui",
         "url": "https://gitlab.com/snipedbywifi/terminactory",
         "source": "Hacker News",
-        "score": 9
+        "score": 105
       },
       {
-        "title": "Monkey Island: all 13 versions side by side",
-        "url": "https://monkeyisland.pages.dev/",
-        "source": "Hacker News",
-        "score": 285
-      },
-      {
-        "title": "Testing a Trash Can Faraday Cage",
-        "url": "https://www.jefftk.com/p/testing-a-trash-can-faraday-cage",
+        "title": "A QR code that says who made it",
+        "url": "https://qrsig.org/",
         "source": "Hacker News",
         "score": 10
       },
       {
-        "title": "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM",
-        "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Show HN: Agweb – a browser for agents that stays out of your way",
-        "url": "https://github.com/paul-nameless/agweb",
-        "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "Let's Write a PostScript Interpreter",
-        "url": "https://beyondloom.com/blog/postscript.html",
+        "title": "LinkedIn, Monster take down over 1000 fake job postings after CBC investigation",
+        "url": "https://www.cbc.ca/news/canada/linkedin-monster-take-down-over-1-000-fake-job-postings-after-cbc-investigation-9.7415379",
         "source": "Hacker News",
         "score": 34
       },
       {
-        "title": "Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs",
-        "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+        "title": "Generative AI uses more energy on non-English text",
+        "url": "https://news.umich.edu/generative-ai-uses-more-energy-on-non-english-text/",
         "source": "Hacker News",
-        "score": 819
+        "score": 134
+      },
+      {
+        "title": "Show HN: Fursoy – Out-of-order RV64IMAFDV core in SystemVerilog (Linux 6.6)",
+        "url": "https://github.com/FURSOY/fursoy-cpu",
+        "source": "Hacker News",
+        "score": 48
       }
     ],
     "ai": [
       {
+        "title": "Lovable apps expose passport details and more than 200K private messages",
+        "url": "https://www.crissyfield.de/research/lovable-en/",
+        "source": "Hacker News AI",
+        "score": 250
+      },
+      {
+        "title": "Seagate's new hybrid drive raises some old questions",
+        "url": "https://arstechnica.com/gadgets/2026/11/seagate-resurrects-the-ssd-hdd-hybrid-drive/",
+        "source": "Hacker News AI",
+        "score": 22
+      },
+      {
         "title": "Generative AI uses more energy on non-English text",
         "url": "https://news.umich.edu/generative-ai-uses-more-energy-on-non-english-text/",
         "source": "Hacker News AI",
-        "score": 39
-      },
-      {
-        "title": "The Claude Delusion",
-        "url": "https://www.netmeister.org/blog/claude-delusion.html",
-        "source": "Hacker News AI",
-        "score": 74
+        "score": 134
       },
       {
         "title": "Tech Companies Are Trying to Shift the Concept of Privacy (Again)",
         "url": "https://www.eff.org/deeplinks/2026/11/tech-companies-are-trying-shift-entire-concept-privacy-again",
         "source": "Hacker News AI",
-        "score": 99
+        "score": 317
+      },
+      {
+        "title": "A visual explanation of reinforcement learning",
+        "url": "https://aatishb.com/myriad/how-brains-learn/",
+        "source": "Hacker News AI",
+        "score": 67
       },
       {
         "title": "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM",
         "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/",
         "source": "Hacker News AI",
-        "score": 22
-      },
-      {
-        "title": "Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs",
-        "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
-        "source": "Hacker News AI",
-        "score": 819
-      },
-      {
-        "title": "Jonathan Blow – If AI solved coding, why is my software still the same? [video]",
-        "url": "https://www.youtube.com/watch?v=IRK8h67ol7Q",
-        "source": "Hacker News AI",
-        "score": 381
+        "score": 104
       },
       {
         "title": "Show HN: I have trained 15 blood glucose forecasting models on my own data",
         "url": "https://github.com/0xdeadf1sh/T1DMAI",
         "source": "Hacker News AI",
-        "score": 59
+        "score": 92
       },
       {
-        "title": "Live airband on all frequencies from KORS. Victoria, CA also ground stopped",
-        "url": "https://orcasairband.com/",
+        "title": "Smuggling of 1.5M AI GPUs could be the cause of Huang's departure",
+        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/mass-smuggling-of-nvidia-ai-gpus-could-be-the-underlying-cause-of-jensen-huangs-departure-analysts-claim-more-than-1-5-gigawatts-of-banned-chips-tracked-to-china-despite-export-controls",
         "source": "Hacker News AI",
-        "score": 281
+        "score": 24
       },
       {
         "title": "Autonomous (YC F25) is hiring MTS to build AI agents that manage your wealth",
@@ -152,28 +152,40 @@
         "score": 1
       },
       {
-        "title": "Perplexity Decider v1.3: Training, eval, and use cases",
-        "url": "https://www.perplexity.ai/hub/blog/perplexity-decider",
+        "title": "Why platform teams fail (and AI makes it worse)",
+        "url": "https://willdady.com/why-platform-teams-fail",
         "source": "Hacker News AI",
-        "score": 140
+        "score": 11
+      },
+      {
+        "title": "Claude asked to renumber pages deletes professor's syllabus, year of notes",
+        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/rogue-claude-ai-tasked-with-renumbering-pages-accidentally-deletes-law-professors-entire-syllabus-one-year-of-lecture-notes-youre-right-to-be-angry-i-deleted-your-files-through-my-own-carelessness-humbled-agent-admits",
+        "source": "Hacker News AI",
+        "score": 31
+      },
+      {
+        "title": "Nvidia allegedly engineered scarcity by funding AI startups to buy its GPUs",
+        "url": "https://www.techpowerup.com/354814/nvidia-allegedly-engineered-scarcity-by-funding-ai-startups-to-buy-its-gpus",
+        "source": "Hacker News AI",
+        "score": 991
       },
       {
         "title": "Reverse engineering my Coway air purifier to ditch the cloud",
         "url": "https://scottjg.com/posts/2026-11-11-reverse-engineering-my-coway-air-purifier-to-ditch-the-cloud/",
         "source": "Hacker News AI",
-        "score": 771
+        "score": 780
       },
       {
-        "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
-        "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+        "title": "Jonathan Blow – If AI solved coding, why is my software still the same? [video]",
+        "url": "https://www.youtube.com/watch?v=IRK8h67ol7Q",
         "source": "Hacker News AI",
-        "score": 405
+        "score": 443
       }
     ],
     "news": [
       {
-        "title": "What we know about the ground stop and what to do if you're affected",
-        "url": "https://www.bbc.co.uk/news/articles/cqx2wyvyr3zzo?at_medium=RSS&at_campaign=rss",
+        "title": "Copper wire upgrade caused nationwide flight suspension, US transport secretary says",
+        "url": "https://www.bbc.co.uk/news/articles/c6wy9lynq4qno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -182,13 +194,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
-        "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do?at_medium=RSS&at_campaign=rss",
+        "title": "Italy fines Meta €805m over accessing users' photos",
+        "url": "https://www.bbc.co.uk/news/articles/cwn83gxemk35o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "'Miracle on Mississippi' - All passengers rescued after New Orleans cruise ship collision",
-        "url": "https://www.bbc.co.uk/news/articles/cw20xmy0m5yyo?at_medium=RSS&at_campaign=rss",
+        "title": "Philippines wins first Eurovision Song Contest Asia ",
+        "url": "https://www.bbc.co.uk/news/articles/cqrlgnx9dx6eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,17 +209,22 @@
         "source": "BBC World"
       },
       {
-        "title": "Microsoft says services fully restored after day-long global outage",
-        "url": "https://www.bbc.co.uk/news/articles/c6rrg51rkz09o?at_medium=RSS&at_campaign=rss",
+        "title": "Sotheby's auction of $180m Van Gogh challenged over claims it was 'sold under duress'",
+        "url": "https://www.bbc.co.uk/news/articles/cmwy05gg75lvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Hungarian authorities uncover $20m during probe of Orbán-era minister",
-        "url": "https://www.bbc.co.uk/news/articles/ckjwj03w4w0qo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump, Putin and Xi plan historic joint meeting in China next week, White House says",
+        "url": "https://www.bbc.co.uk/news/articles/ckz74jzpy18do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " There’s only one Black Friday iPad deal I’d consider so far ",
+        "url": "https://www.creativebloq.com/deals/theres-only-one-black-friday-ipad-deal-id-consider-so-far",
+        "source": "Creative Bloq"
+      },
       {
         "title": " How AdHoc made Dispatch feel like an animated TV series ",
         "url": "https://www.creativebloq.com/features/how-adhoc-made-dispatch-feel-like-an-animated-tv-series",
@@ -236,11 +253,6 @@
       {
         "title": " Adobe's Black Friday deal is its biggest in years, with 57% off Creative Cloud Pro ",
         "url": "https://www.creativebloq.com/deals/adobes-black-friday-deal-is-its-biggest-in-years-with-57-percent-off-creative-cloud-pro",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " You know that butter bot from Rick and Morty? You can buy that now ",
-        "url": "https://www.creativebloq.com/news/you-know-that-butter-bot-from-rick-and-morty-you-can-buy-that-now",
         "source": "Creative Bloq"
       }
     ],
@@ -283,38 +295,38 @@
     ],
     "gaming": [
       {
-        "title": "Big Walk's AI Controversy Overshadows a Remarkable Creative Achievement",
-        "url": "https://www.polygon.com/big-walk-house-house-interview/",
+        "title": "'The Body' Ending Explained: Is Grace Possessed? Netflix Showrunners Talk Season 2",
+        "url": "https://www.polygon.com/the-body-ending-explained/",
         "source": "Polygon"
       },
       {
-        "title": "Pluribus Season 2 Makes One Of Its Best Characters A Series Regular",
-        "url": "https://www.polygon.com/pluribus-season-2-new-series-regular/",
+        "title": "26 Years Later, Charlie Brown's Final Quote Is Still a Comic Strip Classic",
+        "url": "https://www.polygon.com/charlie-brown-final-peanuts-line/",
         "source": "Polygon"
       },
       {
-        "title": "The McElroys take sibling rivalry to a new level | Shelf Quest",
-        "url": "https://www.polygon.com/video/the-mcelroys-take-sibling-rivalry-to-a-new-level-shelf-quest/",
+        "title": "Magic Is Bringing Back Its Most Controversial Creature Type",
+        "url": "https://www.polygon.com/magic-the-gathering-new-sliver-cards-tease/",
         "source": "Polygon"
       },
       {
-        "title": "Every GTA 6 Actor Rumored and Confirmed by Rockstar Ahead of Launch",
-        "url": "https://www.polygon.com/gta-6-cast-rumors-speculation-confirmed-actors/",
+        "title": "35 Years Later, Tim Burton’s Greatest Love Story Is Officially on Streaming",
+        "url": "https://www.polygon.com/tim-burton-edward-scissorhands-love-story/",
         "source": "Polygon"
       },
       {
-        "title": "Rings of Power Just Changed the Nazgul in 1 Terrifying Way: ‘They Still Have a Human Side’",
-        "url": "https://www.polygon.com/rings-of-power-season-3-nazgnagol-vs-nazgul-explained/",
+        "title": "12 Classic Wii Games That Nintendo Should Add to Switch Online",
+        "url": "https://www.polygon.com/switch-online-missing-wii-games/",
         "source": "Polygon"
       },
       {
-        "title": "GTA 6 Release Day: Everything To Know To Be Ready On Day One",
-        "url": "https://www.polygon.com/gta-6-when-does-it-come-out-ps5-pro-crossplay-countdown-preorder-preload/",
+        "title": "Blade Runner Is Officially Getting The AAA Game Treatment",
+        "url": "https://www.polygon.com/blade-runner-is-officially-getting-the-aaa-game-treatment/",
         "source": "Polygon"
       },
       {
-        "title": "This 3D Pet SIM You Never Played Has Over 12,000 ‘Overwhelmingly Positive’ Reviews",
-        "url": "https://www.polygon.com/wobbledogs-3d-pet-sim-steam-overwhelmingly-positive/",
+        "title": "The Zelda: Ocarina of Time Remake Is an Event Even if You’re Not Playing It",
+        "url": "https://www.polygon.com/switchboard-zelda-ocarina-of-time-reception/",
         "source": "Polygon"
       }
     ],
