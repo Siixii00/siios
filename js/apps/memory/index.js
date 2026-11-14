@@ -1,6 +1,9 @@
 ﻿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
-import { MemoryDB, WikiRecordsDB, SettingsDB } from '../../db.js';
+import { MemoryDB, WikiRecordsDB, SettingsDB, CharactersDB } from '../../db.js';
+import { SensoryExtractor } from '../../core/memory-system/sensory-extractor.js';
+import { EmotionTagger } from '../../core/memory-system/emotion-tagger.js';
+import { SpatiotemporalTagger } from '../../core/memory-system/spatiotemporal-tagger.js';
 import { askConfirm } from '../../core/dialogs.js';
 
 const TYPE_TABS = ['全部', '動態', '永久', '情感', '計畫', '書信', '自我', '備份'];
@@ -9,6 +12,8 @@ const TYPE_LABELS = { dynamic: '動態', permanent: '永久', feel: '情感', pl
 
 const SOURCE_LABELS = {
     'chat': '對話',
+    'import': '匯入的舊紀錄',
+    'manual': '手動新增',
     'youtube': 'YouTube',
     'instagram': 'Instagram',
     'facebook': 'Facebook',
@@ -597,6 +602,93 @@ function importFromJSON() {
     input.click();
 }
 
+// 手動新增一筆記憶：選角色、寫內容、選類型／領域／重要度（五感、情緒、時空標記由本機規則自動加上）
+const NEW_DOMAINS = ['日常', '人際', '成長', '身心', '興趣', '數字', '事務', '內心'];
+async function renderMemoryNew() {
+    const container = createElement('div', 'app-container memory-app bg-ios-bg');
+    container.appendChild(createIOSNavBar({ title: '新增記憶', backPath: '/memory' }));
+    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-8 px-4');
+    main.style.marginTop = 'calc(44px + env(safe-area-inset-top, 0px))';
+    main.style.paddingTop = '16px';
+    container.appendChild(main);
+
+    const characters = await CharactersDB.getAll();
+    const FIELD = 'width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;box-sizing:border-box;font-size:15px;background:#fff;';
+    const label = t => { const l = createElement('div', 'text-sm text-ios-muted', { textContent: t }); l.style.margin = '14px 0 6px'; return l; };
+
+    if (!characters.length) {
+        main.appendChild(createElement('p', 'text-ios-muted', { textContent: '還沒有角色，先到「設定 → Char 設定」建立角色，才能替他新增記憶。' }));
+        return { element: container, cleanup: null };
+    }
+
+    main.appendChild(label('這是哪個角色的記憶'));
+    const charSel = createElement('select', 'ios-input');
+    charSel.style.cssText = FIELD;
+    characters.forEach(c => charSel.appendChild(createElement('option', '', { value: c.id, textContent: c.name || '未命名' })));
+    main.appendChild(charSel);
+
+    main.appendChild(label('內容'));
+    const content = createElement('textarea', 'ios-input', { placeholder: '例如：他說最喜歡下雨天的咖啡店，而且不吃香菜。' });
+    content.rows = 5;
+    content.style.cssText = FIELD + 'resize:vertical;';
+    main.appendChild(content);
+
+    main.appendChild(label('類型'));
+    const typeSel = createElement('select', 'ios-input');
+    typeSel.style.cssText = FIELD;
+    Object.entries(TYPE_LABELS).filter(([k]) => k !== 'archive').forEach(([k, v]) => typeSel.appendChild(createElement('option', '', { value: k, textContent: v })));
+    main.appendChild(typeSel);
+
+    main.appendChild(label('領域'));
+    const domSel = createElement('select', 'ios-input');
+    domSel.style.cssText = FIELD;
+    NEW_DOMAINS.forEach(d => domSel.appendChild(createElement('option', '', { value: d, textContent: d })));
+    main.appendChild(domSel);
+
+    const impLabel = label('重要度：5');
+    const imp = createElement('input', '', { type: 'range' });
+    imp.min = '1'; imp.max = '10'; imp.value = '5';
+    imp.style.width = '100%';
+    imp.oninput = () => { impLabel.textContent = '重要度：' + imp.value; };
+    main.append(impLabel, imp);
+
+    const save = createElement('button', 'ios-btn ios-btn-primary', { textContent: '儲存這筆記憶' });
+    save.style.cssText = 'width:100%;margin-top:20px;padding:12px;font-size:16px;';
+    save.onclick = async () => {
+        const text = content.value.trim();
+        if (!text) { createToast('請先寫下記憶內容', 'error'); return; }
+        save.disabled = true;
+        try {
+            const emotion = new EmotionTagger().tag(text);
+            await MemoryDB.create({
+                chat_id: '',
+                character_id: charSel.value,
+                characterId: charSel.value,
+                content: text,
+                full_content: text,
+                meta_content: text.length > 40 ? text.slice(0, 40) + '…' : text,
+                memory_level: 'full',
+                source_app: 'manual',
+                source_type: 'interaction',
+                source_subtype: 'manual',
+                sensory: new SensoryExtractor().extract(text),
+                emotional: emotion,
+                spatiotemporal: new SpatiotemporalTagger().tag(text),
+                importance: Number(imp.value) / 10,
+                memory_type: typeSel.value,
+                domain: domSel.value
+            });
+            createToast('已新增記憶', 'success');
+            Router.navigate('/memory');
+        } catch (e) {
+            createToast('儲存失敗：' + (e?.message || e), 'error');
+            save.disabled = false;
+        }
+    };
+    main.appendChild(save);
+    return { element: container, cleanup: null };
+}
+
 async function renderMemoryDetail(params) {
     const { id } = params;
     const memory = await MemoryDB.access(id);
@@ -700,6 +792,7 @@ export default {
     icon: 'psychology',
     routes: [
         { path: '/memory', render: renderMemoryList },
+        { path: '/memory/new', render: renderMemoryNew },
         { path: '/memory/:id', render: renderMemoryDetail }
     ],
     navItem: {

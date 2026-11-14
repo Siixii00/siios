@@ -341,20 +341,7 @@ async function bindPostInteractions(article, post) {
             heartOverlay.classList.add('active');
         }
     };
-    // 針對 Like 動作寫入互動記錄
-        if (typeof saveInteractionMemory === 'function') {
-            try {
-                const likesInfo = {
-                    type: 'like',
-                    postId: article.dataset.postId,
-                    liked: post.liked,
-                    timestamp: Date.now()
-                };
-                saveInteractionMemory(likesInfo);
-            } catch (e) {
-                console.warn('[Instagram] Like 互動寫入失敗', e);
-            }
-        }
+    likeBtn.addEventListener('click', () => toggleLike(false));
     image.addEventListener('dblclick', () => {
         if (!post.liked) toggleLike(true);
         else {

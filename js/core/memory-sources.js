@@ -3,6 +3,7 @@
 export const MEMORY_SOURCES = [
     { id: 'chat', name: '對話', icon: 'chat' },
     { id: 'import', name: '匯入的舊紀錄', icon: 'move_to_inbox' },
+    { id: 'manual', name: '手動新增', icon: 'edit_note' },
     { id: 'discord', name: 'Discord', icon: 'forum' },
     { id: 'youtube', name: 'YouTube', icon: 'play_circle' },
     { id: 'instagram', name: 'Instagram', icon: 'camera_alt' },
