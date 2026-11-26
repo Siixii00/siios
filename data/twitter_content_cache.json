@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-11-26T11:58:34.971329",
-    "total_items": 61
+    "last_updated": "2026-11-26T21:22:24.758362",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Intel One Mono font",
+        "title": "AMD Specific Patches for Llama.cpp",
+        "url": "https://devnull.land/amd-specific-llama-cpp",
+        "source": "Hacker News",
+        "score": 195
+      },
+      {
+        "title": "CTO of 'RansomwareHelp' Indicted for Wire Fraud",
+        "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+        "source": "Hacker News",
+        "score": 140
+      },
+      {
+        "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
+        "url": "https://github.com/antonpictures/youtube-punisher",
+        "source": "Hacker News",
+        "score": 133
+      },
+      {
+        "title": "Show HN: Fuck_data_brokers.py",
+        "url": "https://github.com/gary23w/f-ck_data_brokers",
+        "source": "Hacker News",
+        "score": 106
+      },
+      {
+        "title": "Rvoip 0.5 the complete VoIP stack in Rust",
+        "url": "https://github.com/eisenzopf/rvoip",
+        "source": "Hacker News",
+        "score": 20
+      },
+      {
+        "title": "Intel One Mono font (2023)",
         "url": "https://github.com/intel/intel-one-mono",
         "source": "Hacker News",
-        "score": 89
+        "score": 414
       },
       {
-        "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
-        "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+        "title": "The USA as a Civilizations-esque map",
+        "url": "https://karpathy.ai/usaciv/",
         "source": "Hacker News",
-        "score": 51
+        "score": 60
       },
       {
-        "title": "Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening",
-        "url": "https://scottaaronson.blog/?p=10379",
+        "title": "Show HN: Olumino, a Markdown notes and spaced repetition app",
+        "url": "https://olumino.app",
         "source": "Hacker News",
-        "score": 1624
+        "score": 24
       },
       {
-        "title": "1Password Security Incident",
-        "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
+        "title": "George Whitesides, 1939-2026",
+        "url": "https://www.science.org/content/blog-post/george-whitesides-1939-2026",
         "source": "Hacker News",
-        "score": 1470
+        "score": 24
+      },
+      {
+        "title": "Curiosity Is No Solo Act",
+        "url": "https://thereader.mitpress.mit.edu/curiosity-is-no-solo-act/",
+        "source": "Hacker News",
+        "score": 105
+      },
+      {
+        "title": "Show HN: Three Linux VMs in a browser tab, each running a different browser",
+        "url": "https://michidk.github.io/sidebyside/",
+        "source": "Hacker News",
+        "score": 87
+      },
+      {
+        "title": "Show HN: SimDrop – Running iOS simulators in the macOS Finder sidebar",
+        "url": "https://github.com/rxliuli/sim-drop",
+        "source": "Hacker News",
+        "score": 24
       },
       {
         "title": "Lions' Commentary on Unix: Why It Was Secretly Copied for 20 Years",
         "url": "https://fosscomics.com/posts/17.%20Lions%27%20Commentary%20on%20Unix/",
         "source": "Hacker News",
-        "score": 118
+        "score": 257
       },
       {
-        "title": "Moat: Your OpenRouter Replacement",
-        "url": "https://commandcode.ai/moat",
+        "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+        "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
         "source": "Hacker News",
-        "score": 99
+        "score": 148
       },
       {
-        "title": "The New York Times warns photographers not to update Photoshop over AI features",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+        "title": "Nextcloud Office Desktop app",
+        "url": "https://nextcloud.com/blog/euro-office-comes-to-your-desktop-with-the-nextcloud-office-desktop-app/",
         "source": "Hacker News",
-        "score": 421
-      },
-      {
-        "title": "Much shorter version of GRH Lean verification from Anthropic",
-        "url": "https://github.com/lsernau/grh-lean",
-        "source": "Hacker News",
-        "score": 472
-      },
-      {
-        "title": "Minipg: PostgreSQL as a Single Executable",
-        "url": "https://progrium.github.io/minipg/",
-        "source": "Hacker News",
-        "score": 156
-      },
-      {
-        "title": "Collection of preserved UI style guides",
-        "url": "https://aresluna.org/ui-style-guides/",
-        "source": "Hacker News",
-        "score": 233
-      },
-      {
-        "title": "Tell HN: Lots of Ask HNs again",
-        "url": "https://news.ycombinator.com/item?id=50649864",
-        "source": "Hacker News",
-        "score": 286
-      },
-      {
-        "title": "Show HN: Synth Patch Hero",
-        "url": "https://swarkentin.github.io/synth-patch-hero/",
-        "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "Slow Ubuntu security response times",
-        "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
-        "source": "Hacker News",
-        "score": 322
-      },
-      {
-        "title": "GPT-6.2 Astra is the first model to beat Googlers' code golf records",
-        "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard",
-        "source": "Hacker News",
-        "score": 396
-      },
-      {
-        "title": "What VP ≠ VNP Means (In 3 Minutes)",
-        "url": "https://www.friedgil.com/vpvnp",
-        "source": "Hacker News",
-        "score": 147
+        "score": 371
       }
     ],
     "ai": [
@@ -101,70 +101,63 @@
         "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
         "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
         "source": "Hacker News AI",
-        "score": 51
-      },
-      {
-        "title": "The New York Times warns photographers not to update Photoshop over AI features",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
-        "source": "Hacker News AI",
-        "score": 421
+        "score": 148
       },
       {
         "title": "Much shorter version of GRH Lean verification from Anthropic",
         "url": "https://github.com/lsernau/grh-lean",
         "source": "Hacker News AI",
-        "score": 472
-      },
-      {
-        "title": "Tell HN: Lots of Ask HNs again",
-        "url": "https://news.ycombinator.com/item?id=50649864",
-        "source": "Hacker News AI",
-        "score": 286
-      },
-      {
-        "title": "GPT-6.2 Astra is the first model to beat Googlers' code golf records",
-        "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard",
-        "source": "Hacker News AI",
-        "score": 396
-      },
-      {
-        "title": "Training on Documents About Monitoring Leads to Cot Obfuscation",
-        "url": "https://arxiv.org/abs/2605.15257",
-        "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
-        "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
-        "source": "Hacker News AI",
-        "score": 297
+        "score": 540
       },
       {
         "title": "An algebraic quantization of gravity from the null cone",
         "url": "https://arxiv.org/abs/2611.34924",
         "source": "Hacker News AI",
-        "score": 46
+        "score": 173
       },
       {
-        "title": "Porting Rockbox to an undocumented $9 Aliexpress 'YP3' MP3 Player with LLMs",
-        "url": "https://jayd.ml/2026/11/14/rockbox-on-yp3.html",
+        "title": "OpenAI may be in cost control mode",
+        "url": "https://micjm.com/blog/openai-is-in-cost-control-mode/",
         "source": "Hacker News AI",
-        "score": 257
+        "score": 105
       },
       {
-        "title": "The short age of dragon riders",
-        "url": "https://atilloy.com/2026/11/16/the-short-age-of-dragon-riders/",
+        "title": "Tell HN: Lots of Ask HNs again",
+        "url": "https://news.ycombinator.com/item?id=50649864",
         "source": "Hacker News AI",
-        "score": 279
+        "score": 386
       },
       {
-        "title": "Britain's ghost stations",
-        "url": "https://spectator.com/article/britains-ghost-stations-are-fascinating/",
+        "title": "An Introduction to Uncertainty in Machine Learning",
+        "url": "https://chrhenning.com/blog/2026/introduction-to-uncertainty/",
         "source": "Hacker News AI",
-        "score": 123
+        "score": 4
+      },
+      {
+        "title": "Banks look to dump AI debt",
+        "url": "https://www.semafor.com/article/11/26/2026/banks-look-to-dump-ai-debt",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
+        "title": "Testers think they're hitting Claude Opus 5.6 through an Opus 5.5 Extra route",
+        "url": "https://www.testingcatalog.com/testers-share-early-results-possible-claude-opus-5-6/",
+        "source": "Hacker News AI",
+        "score": 24
+      },
+      {
+        "title": "The New York Times warns photographers not to update Photoshop over AI features",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+        "source": "Hacker News AI",
+        "score": 635
       }
     ],
     "news": [
+      {
+        "title": "Watch: Roofs torn off and streets under water as severe weather hits US",
+        "url": "https://www.bbc.co.uk/news/videos/cq808d704m22o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "German boat dealer suspected of supplying Channel smuggling gangs, BBC finds",
         "url": "https://www.bbc.co.uk/news/articles/cqlymky8kpzjo?at_medium=RSS&at_campaign=rss",
@@ -176,65 +169,60 @@
         "source": "BBC World"
       },
       {
-        "title": "Desperate appeals from women on death row in Iran after protests",
-        "url": "https://www.bbc.co.uk/news/articles/cm8x0ve4yd7wo?at_medium=RSS&at_campaign=rss",
+        "title": "Diesel tanker carrying up to 7,000 tonnes capsizes near Ibiza, killing one",
+        "url": "https://www.bbc.co.uk/news/articles/c9gklryvj24do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "New UK-EU treaty has 10-year termination clause",
-        "url": "https://www.bbc.co.uk/news/articles/c98r7p65edvgo?at_medium=RSS&at_campaign=rss",
+        "title": "Gérard Depardieu to stand trial for alleged rape of actress in 2018, court rules",
+        "url": "https://www.bbc.co.uk/news/articles/cmlyd76kyx44o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Musk's plan to send a million SpaceX data satellites into space approved",
-        "url": "https://www.bbc.co.uk/news/articles/cwp836l8n1jgo?at_medium=RSS&at_campaign=rss",
+        "title": "Pregnant US inmate escapes in prison vehicle after medical appointment",
+        "url": "https://www.bbc.co.uk/news/articles/c9m2jke85xzxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "DR Congo demands answers over Ugandan general's threats",
-        "url": "https://www.bbc.co.uk/news/articles/cwz0k90rgpm8o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Duran Duran guitarist Andy Taylor dies aged 65",
-        "url": "https://www.bbc.co.uk/news/articles/cmp3vk6vr44po?at_medium=RSS&at_campaign=rss",
+        "title": "Two Italians killed in strike in Kuwait, as Iran denies responsibility",
+        "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " I tested Nothing's headphones and loved them – now they're up to 45% off ",
-        "url": "https://www.creativebloq.com/deals/i-tested-nothings-headphones-and-loved-them-now-theyre-up-to-45-percent-off",
+        "title": " The brilliant new iPad mini is $100 off for Black Friday ",
+        "url": "https://www.creativebloq.com/news/the-brilliant-new-ipad-mini-is-usd100-off-for-black-friday",
         "source": "Creative Bloq"
       },
       {
-        "title": " This stop-motion horror game proves there's something deeply unsettling about handmade art ",
-        "url": "https://www.creativebloq.com/features/this-stop-motion-horror-game-proves-theres-something-deeply-unsettling-about-handmade-art",
+        "title": " Stranger Than Heaven could be RGG Studio's answer to prestige TV's multilingual period epics ",
+        "url": "https://www.creativebloq.com/features/stranger-than-heaven-could-be-rgg-studios-answer-to-prestige-tvs-multilingual-period-epics",
         "source": "Creative Bloq"
       },
       {
-        "title": " LIVE: iPad Black Friday deals on every model start here ",
-        "url": "https://www.creativebloq.com/live/news/best-ipad-black-friday-deals-day-1",
+        "title": " Earphones Black Friday deals: 14 brilliant IEMs that punch far above their price ",
+        "url": "https://www.creativebloq.com/deals/earphones-black-friday-deals-14-brilliant-iems-that-punch-far-above-their-price",
         "source": "Creative Bloq"
       },
       {
-        "title": " LIVE: Eek! Nintendo Switch deals up to 57% off – including rare Switch 2 discount, bundles and games ",
-        "url": "https://www.creativebloq.com/live/news/nintendo-switch-black-friday-day-two",
+        "title": " The most gorgeous advent calendars are up to 50% off this Black Friday ",
+        "url": "https://www.creativebloq.com/deals/the-most-gorgeous-advent-calendars-are-up-to-50-percent-off-this-black-friday",
         "source": "Creative Bloq"
       },
       {
-        "title": " Adobe isn’t \"just ticking a box\" – how diversity is shaping its products ",
-        "url": "https://www.creativebloq.com/features/adobe-isnt-just-ticking-a-box-how-diversity-is-shaping-its-products",
+        "title": " Kids’ tech is a minefield – here's what I’d actually recommend as a parent, design editor and qualified teacher ",
+        "url": "https://www.creativebloq.com/inspiration/kids-tech-is-a-minefield-heres-what-id-actually-recommend-as-a-parent-design-editor-and-qualified-teacher",
         "source": "Creative Bloq"
       },
       {
-        "title": " Black Friday 3D scanner deals: Five ultimate scanners from just $384 ",
-        "url": "https://www.creativebloq.com/deals/black-friday-3d-scanner-deals-five-ultimate-scanners-from-just-usd384",
+        "title": " I reviewed the Wacom MovinkPad Pro 14 and gave it 9/10 – now it's $100 off ",
+        "url": "https://www.creativebloq.com/deals/i-reviewed-the-wacom-movinkpad-pro-14-and-gave-it-9-10-now-its-usd100-off",
         "source": "Creative Bloq"
       },
       {
-        "title": " Yes, the GTA logo is based on a free font inspired by a game show – here's where to get it ",
-        "url": "https://www.creativebloq.com/news/yes-the-gta-logo-is-based-on-a-free-font-inspired-by-a-game-show-heres-where-to-get-it",
+        "title": " My beautiful, beloved coffee maker is 33% off for Black Friday ",
+        "url": "https://www.creativebloq.com/news/my-beautiful-beloved-coffee-maker-is-33-percent-off-for-black-friday",
         "source": "Creative Bloq"
       }
     ],
@@ -277,38 +265,38 @@
     ],
     "gaming": [
       {
-        "title": "20 Years Ago, The Sopranos PS2 Game Sank So GTA 6 Could Swim",
-        "url": "https://www.polygon.com/sopranos-road-to-respect-anniversary/",
+        "title": "GTA: Boston Would Go Wicked Hard, Kid",
+        "url": "https://www.polygon.com/gta-6-boston-massachussetts/",
         "source": "Polygon"
       },
       {
-        "title": "'Alien' Meets 'Vikings' in a 2008 Sci-Fi Spin on Beowulf That Deserves Redemption",
-        "url": "https://www.polygon.com/outlander-2008-defense-turkey-day/",
+        "title": "The Sims 4 Officially Makes 13 DLCs Free for a Limited Time",
+        "url": "https://www.polygon.com/the-sims-4-free-maker-pack-holiday-giveaway-2026/",
         "source": "Polygon"
       },
       {
-        "title": "51 Years Later, One of Peanuts’ Best Sally Brown Strips Is Still a Perfect School Joke",
-        "url": "https://www.polygon.com/sally-brown-rock-snakes-peanuts/",
+        "title": "32 Years Later, Disney's Most Notorious Cash-Grab Sequel Is Better Than You Remember",
+        "url": "https://www.polygon.com/in-defense-of-the-return-of-jafar/",
         "source": "Polygon"
       },
       {
-        "title": "The Lord of the Rings’ Next Movie Officially Wraps Production, but Now the Hard Part Begins",
-        "url": "https://www.polygon.com/the-lord-of-the-rings-hunt-for-gollum-production-end/",
+        "title": "7 Years Later, Hollywood’s Most Notorious Fantasy Flop Deserves Another Shot",
+        "url": "https://www.polygon.com/cats-movie-retrospective/",
         "source": "Polygon"
       },
       {
-        "title": "20 Years Later, One of TV’s Greatest Sci-Fi Franchises Still Hasn’t Topped Its Riskiest Spin-Off",
-        "url": "https://www.polygon.com/torchwood-remains-the-best-doctor-who-spin-off/",
+        "title": "The 14 Best Star Wars Games of All Time, Ranked",
+        "url": "https://www.polygon.com/best-star-wars-games/",
         "source": "Polygon"
       },
       {
-        "title": "10 Classic Books Worth Reading Over and Over",
-        "url": "https://www.polygon.com/10-classic-books-worth-reading-over-and-over/",
+        "title": "Sorry Jason And Lucia, These 5 GTA 6 Side Characters Steal Every Scene They're In",
+        "url": "https://www.polygon.com/gta-6-best-side-characters/",
         "source": "Polygon"
       },
       {
-        "title": "6 Fantasy Books Better Than Harry Potter",
-        "url": "https://www.polygon.com/fantasy-books-better-than-harry-potter/",
+        "title": "GTA 6 Developers Have Voted Against Unionization by 75% to 25%",
+        "url": "https://www.polygon.com/rockstar-game-workers-union-vote-gta-6/",
         "source": "Polygon"
       }
     ],
