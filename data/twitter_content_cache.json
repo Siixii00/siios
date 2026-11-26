@@ -1,326 +1,314 @@
 {
   "metadata": {
-    "last_updated": "2026-11-26T02:04:00.303863",
-    "total_items": 63
+    "last_updated": "2026-11-26T11:58:34.971329",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "1Password Security Incident",
-        "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
+        "title": "Intel One Mono font",
+        "url": "https://github.com/intel/intel-one-mono",
         "source": "Hacker News",
-        "score": 1159
+        "score": 89
       },
       {
-        "title": "Much shorter version of GRH Lean verification from Anthropic",
-        "url": "https://github.com/lsernau/grh-lean",
+        "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+        "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
         "source": "Hacker News",
-        "score": 281
+        "score": 51
       },
       {
         "title": "Holy shit holy shit holy shit holy shit: The magnitude of what’s now happening",
         "url": "https://scottaaronson.blog/?p=10379",
         "source": "Hacker News",
-        "score": 908
+        "score": 1624
+      },
+      {
+        "title": "1Password Security Incident",
+        "url": "https://1password.com/blog/update-on-nov-2026-security-incident",
+        "source": "Hacker News",
+        "score": 1470
+      },
+      {
+        "title": "Lions' Commentary on Unix: Why It Was Secretly Copied for 20 Years",
+        "url": "https://fosscomics.com/posts/17.%20Lions%27%20Commentary%20on%20Unix/",
+        "source": "Hacker News",
+        "score": 118
+      },
+      {
+        "title": "Moat: Your OpenRouter Replacement",
+        "url": "https://commandcode.ai/moat",
+        "source": "Hacker News",
+        "score": 99
+      },
+      {
+        "title": "The New York Times warns photographers not to update Photoshop over AI features",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+        "source": "Hacker News",
+        "score": 421
+      },
+      {
+        "title": "Much shorter version of GRH Lean verification from Anthropic",
+        "url": "https://github.com/lsernau/grh-lean",
+        "source": "Hacker News",
+        "score": 472
+      },
+      {
+        "title": "Minipg: PostgreSQL as a Single Executable",
+        "url": "https://progrium.github.io/minipg/",
+        "source": "Hacker News",
+        "score": 156
+      },
+      {
+        "title": "Collection of preserved UI style guides",
+        "url": "https://aresluna.org/ui-style-guides/",
+        "source": "Hacker News",
+        "score": 233
       },
       {
         "title": "Tell HN: Lots of Ask HNs again",
         "url": "https://news.ycombinator.com/item?id=50649864",
         "source": "Hacker News",
-        "score": 64
+        "score": 286
       },
       {
-        "title": "GPT-6.2 Astra is the first model to beat Googlers' code golf records",
-        "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard",
+        "title": "Show HN: Synth Patch Hero",
+        "url": "https://swarkentin.github.io/synth-patch-hero/",
         "source": "Hacker News",
-        "score": 250
+        "score": 63
       },
       {
         "title": "Slow Ubuntu security response times",
         "url": "https://www.openwall.com/lists/oss-security/2026/11/25/9",
         "source": "Hacker News",
-        "score": 143
+        "score": 322
       },
       {
-        "title": "The New York Times warns photographers not to update Photoshop over AI features",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+        "title": "GPT-6.2 Astra is the first model to beat Googlers' code golf records",
+        "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard",
         "source": "Hacker News",
-        "score": 200
+        "score": 396
       },
       {
-        "title": "A few questions for the guy who went snorkeling in a Home Depot retention pond",
-        "url": "https://www.vox.com/down-to-earth/511999/home-depot-retention-pond-snorkel-joseph-ricketts",
+        "title": "What VP ≠ VNP Means (In 3 Minutes)",
+        "url": "https://www.friedgil.com/vpvnp",
         "source": "Hacker News",
-        "score": 440
-      },
-      {
-        "title": "Multiagent coding is the future",
-        "url": "https://www.kalzumeus.com/2026/11/25/multiagent-coding-is-the-future/",
-        "source": "Hacker News",
-        "score": 36
-      },
-      {
-        "title": "Nfs2root: A 12-year-old pre-auth remote root in the Linux kernel's NFS server",
-        "url": "https://opensec.in/blog/nfs2root-cve-2026-99362",
-        "source": "Hacker News",
-        "score": 85
-      },
-      {
-        "title": "Bare Metal Qwen",
-        "url": "https://github.com/alesha-pro/llm.asm/tree/main/02-baremetal-os",
-        "source": "Hacker News",
-        "score": 62
-      },
-      {
-        "title": "Deploying a payphone on a tiny Pacific Island",
-        "url": "https://nickvsnetworking.com/deploying-a-payphone-on-a-tiny-pacific-island-for-fun-and-zero-profit/",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "SSH is a GUI framework",
-        "url": "https://zydra.sh/articles/ssh-is-a-gui-framework/",
-        "source": "Hacker News",
-        "score": 135
-      },
-      {
-        "title": "Jev is probably Qwen3.5-35B-A3B",
-        "url": "https://modaic.dev/blog/latency-doesnt-lie",
-        "source": "Hacker News",
-        "score": 221
-      },
-      {
-        "title": "The polynomial Hirsch conjecture is false [pdf]",
-        "url": "https://github.com/openai/math/blob/main/preprints/Superpolynomial-graph-diameter-of-simple-polytopes-November-24-2026/paper.pdf",
-        "source": "Hacker News",
-        "score": 122
+        "score": 147
       }
     ],
     "ai": [
       {
+        "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+        "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+        "source": "Hacker News AI",
+        "score": 51
+      },
+      {
+        "title": "The New York Times warns photographers not to update Photoshop over AI features",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+        "source": "Hacker News AI",
+        "score": 421
+      },
+      {
         "title": "Much shorter version of GRH Lean verification from Anthropic",
         "url": "https://github.com/lsernau/grh-lean",
         "source": "Hacker News AI",
-        "score": 281
+        "score": 472
       },
       {
         "title": "Tell HN: Lots of Ask HNs again",
         "url": "https://news.ycombinator.com/item?id=50649864",
         "source": "Hacker News AI",
-        "score": 64
+        "score": 286
       },
       {
         "title": "GPT-6.2 Astra is the first model to beat Googlers' code golf records",
         "url": "https://bjin.github.io/go-codegolf-benchmark/#leaderboard",
         "source": "Hacker News AI",
-        "score": 250
+        "score": 396
       },
       {
-        "title": "The New York Times warns photographers not to update Photoshop over AI features",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
+        "title": "Training on Documents About Monitoring Leads to Cot Obfuscation",
+        "url": "https://arxiv.org/abs/2605.15257",
         "source": "Hacker News AI",
-        "score": 200
+        "score": 13
       },
       {
-        "title": "Britain's ghost stations",
-        "url": "https://spectator.com/article/britains-ghost-stations-are-fascinating/",
+        "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
+        "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
         "source": "Hacker News AI",
-        "score": 99
+        "score": 297
       },
       {
-        "title": "Porting Rockbox to an undocumented $9 AliExpress 'YP3' MP3 player with LLMs",
+        "title": "An algebraic quantization of gravity from the null cone",
+        "url": "https://arxiv.org/abs/2611.34924",
+        "source": "Hacker News AI",
+        "score": 46
+      },
+      {
+        "title": "Porting Rockbox to an undocumented $9 Aliexpress 'YP3' MP3 Player with LLMs",
         "url": "https://jayd.ml/2026/11/14/rockbox-on-yp3.html",
         "source": "Hacker News AI",
-        "score": 227
-      },
-      {
-        "title": "Show HN: Old Nvidia and ATI tech demos, running again in the browser",
-        "url": "https://gpu-demo-gallery.pages.dev/",
-        "source": "Hacker News AI",
-        "score": 339
-      },
-      {
-        "title": "PenGPT: A Generative Transformer for Handwriting and Sketches",
-        "url": "https://greydanus.github.io/2026/11/12/pengpt/",
-        "source": "Hacker News AI",
-        "score": 392
-      },
-      {
-        "title": "Taking over US Treasury subdomains for $3 each",
-        "url": "https://www.intruder.io/research/taking-over-us-treasury-subdomains-for-3-each",
-        "source": "Hacker News AI",
-        "score": 230
-      },
-      {
-        "title": "Getting old Java phones online again",
-        "url": "https://antcating.github.io/2026/11/23/getting-old-java-phones-online-again.html",
-        "source": "Hacker News AI",
-        "score": 162
+        "score": 257
       },
       {
         "title": "The short age of dragon riders",
         "url": "https://atilloy.com/2026/11/16/the-short-age-of-dragon-riders/",
         "source": "Hacker News AI",
-        "score": 271
+        "score": 279
       },
       {
-        "title": "Ask HN: Nobel Prizes for OpenAI and Anthropic: When?",
-        "url": "https://news.ycombinator.com/item?id=50647893",
+        "title": "Britain's ghost stations",
+        "url": "https://spectator.com/article/britains-ghost-stations-are-fascinating/",
         "source": "Hacker News AI",
-        "score": 7
-      },
-      {
-        "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
-        "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
-        "source": "Hacker News AI",
-        "score": 352
+        "score": 123
       }
     ],
     "news": [
       {
-        "title": "US announces new tariffs on host of countries including China",
-        "url": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
+        "title": "German boat dealer suspected of supplying Channel smuggling gangs, BBC finds",
+        "url": "https://www.bbc.co.uk/news/articles/cqlymky8kpzjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Images of asteroid targeted to test Earth's defences reveal stadium-sized crater",
-        "url": "https://www.bbc.co.uk/news/articles/cw8dv112r5gmo?at_medium=RSS&at_campaign=rss",
+        "title": "Watch: BBC confronts German man suspected of supplying migrant gangs with small boats",
+        "url": "https://www.bbc.co.uk/news/videos/cvglrz5yr79go?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Thirty-one killed in massive fire as fuel tanker crashes on Cairo highway",
-        "url": "https://www.bbc.co.uk/news/articles/cqy7rn30v314o?at_medium=RSS&at_campaign=rss",
+        "title": "Desperate appeals from women on death row in Iran after protests",
+        "url": "https://www.bbc.co.uk/news/articles/cm8x0ve4yd7wo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Israeli judges recommend dropping most serious charges against Netanyahu",
-        "url": "https://www.bbc.co.uk/news/articles/cxj05mv723r2o?at_medium=RSS&at_campaign=rss",
+        "title": "New UK-EU treaty has 10-year termination clause",
+        "url": "https://www.bbc.co.uk/news/articles/c98r7p65edvgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US stocks fall further as fears over AI intensify",
-        "url": "https://www.bbc.co.uk/news/articles/cq0md8g14zryo?at_medium=RSS&at_campaign=rss",
+        "title": "Musk's plan to send a million SpaceX data satellites into space approved",
+        "url": "https://www.bbc.co.uk/news/articles/cwp836l8n1jgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US Army says controlled blast of explosives in Iowa was 'huge success'",
-        "url": "https://www.bbc.co.uk/news/articles/cwg7l5ve251ko?at_medium=RSS&at_campaign=rss",
+        "title": "DR Congo demands answers over Ugandan general's threats",
+        "url": "https://www.bbc.co.uk/news/articles/cwz0k90rgpm8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "California warns of flooding as king tides peak over Thanksgiving",
-        "url": "https://www.bbc.co.uk/news/articles/ckn806qq760po?at_medium=RSS&at_campaign=rss",
+        "title": "Duran Duran guitarist Andy Taylor dies aged 65",
+        "url": "https://www.bbc.co.uk/news/articles/cmp3vk6vr44po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " The huge Elegoo Black Friday sale includes $80 off the 3D printer we most recommend for beginners ",
-        "url": "https://www.creativebloq.com/deals/the-huge-elegoo-black-friday-sale-includes-usd80-off-the-3d-printer-we-most-recommend-for-beginners",
+        "title": " I tested Nothing's headphones and loved them – now they're up to 45% off ",
+        "url": "https://www.creativebloq.com/deals/i-tested-nothings-headphones-and-loved-them-now-theyre-up-to-45-percent-off",
         "source": "Creative Bloq"
       },
       {
-        "title": " From $125 to $1,000, the best ergonomic office chair Black Friday deals all tested by our reviewers ",
-        "url": "https://www.creativebloq.com/deals/from-usd125-to-usd1-000-the-best-ergonomic-office-chair-black-friday-prices-include-record-deals",
+        "title": " This stop-motion horror game proves there's something deeply unsettling about handmade art ",
+        "url": "https://www.creativebloq.com/features/this-stop-motion-horror-game-proves-theres-something-deeply-unsettling-about-handmade-art",
         "source": "Creative Bloq"
       },
       {
-        "title": " Crystal Palace tried to get away with posting AI and fans tore it to shreds ",
-        "url": "https://www.creativebloq.com/news/crystal-palace-tried-to-get-away-with-posting-ai-and-fans-tore-it-to-shreds",
+        "title": " LIVE: iPad Black Friday deals on every model start here ",
+        "url": "https://www.creativebloq.com/live/news/best-ipad-black-friday-deals-day-1",
         "source": "Creative Bloq"
       },
       {
-        "title": " Alien Breed 35th Anniversary Collection review: A brilliant slice of gaming history ",
-        "url": "https://www.creativebloq.com/reviews/alien-breed-35th-anniversary-collection-review-a-brilliant-slice-of-gaming-history",
+        "title": " LIVE: Eek! Nintendo Switch deals up to 57% off – including rare Switch 2 discount, bundles and games ",
+        "url": "https://www.creativebloq.com/live/news/nintendo-switch-black-friday-day-two",
         "source": "Creative Bloq"
       },
       {
-        "title": " Get $220 off the Liene PixCut S1 for Black Friday – it's the sticker printer I'd buy over Cricut ",
-        "url": "https://www.creativebloq.com/deals/get-usd220-off-the-liene-pixcut-s1-for-black-friday-its-the-sticker-printer-id-buy-over-cricut",
+        "title": " Adobe isn’t \"just ticking a box\" – how diversity is shaping its products ",
+        "url": "https://www.creativebloq.com/features/adobe-isnt-just-ticking-a-box-how-diversity-is-shaping-its-products",
         "source": "Creative Bloq"
       },
       {
-        "title": " Want an oak table that doubles as a creative workspace? Save up to £521 this Black Friday on these incredible deals ",
-        "url": "https://www.creativebloq.com/deals/want-an-oak-table-that-doubles-as-a-creative-workspace-save-up-to-gbp521-this-black-friday-on-these-incredible-deals",
+        "title": " Black Friday 3D scanner deals: Five ultimate scanners from just $384 ",
+        "url": "https://www.creativebloq.com/deals/black-friday-3d-scanner-deals-five-ultimate-scanners-from-just-usd384",
         "source": "Creative Bloq"
       },
       {
-        "title": " This optical illusion has stumped scientists for decades, and things just got weirder ",
-        "url": "https://www.creativebloq.com/news/this-optical-illusion-has-stumped-scientists-for-decades-and-things-just-got-weirder",
+        "title": " Yes, the GTA logo is based on a free font inspired by a game show – here's where to get it ",
+        "url": "https://www.creativebloq.com/news/yes-the-gta-logo-is-based-on-a-free-font-inspired-by-a-game-show-heres-where-to-get-it",
         "source": "Creative Bloq"
       }
     ],
     "science": [
       {
-        "title": "Common sleep and anxiety drugs could be harming aging brains",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261124055854.htm",
+        "title": "Common supplements rival antibiotics in treating severe gum disease",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261126033031.htm",
         "source": "Science Daily"
       },
       {
-        "title": "A space telescope hunting for dark matter just discovered something unexpected",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261124055852.htm",
+        "title": "This 345-million-year-old fossil had scientists fooled for decades",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261125045307.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Physicists trap antimatter in a breakthrough that could explain why the universe exists",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261124055849.htm",
+        "title": "The surprising reason women seem better at multitasking than men",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261125045306.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Stanford scientists discover 3 hidden brain types behind ADHD and anxiety",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261124055713.htm",
+        "title": "Scientists discover mysterious lakes more than a mile beneath the Red Sea",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261125045259.htm",
         "source": "Science Daily"
       },
       {
-        "title": "What is a thought made of? Why human consciousness may be beyond AI’s reach",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261124055712.htm",
+        "title": "Loneliness is making us sick, but we may be treating it all wrong",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261124055906.htm",
         "source": "Science Daily"
       },
       {
-        "title": "2,200-year-old Roman shipwreck reveals an ingenious waterproofing trick",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261123232342.htm",
+        "title": "World’s largest trial of robotic knee replacement reveals surprising results",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261124055904.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Peppermint oil significantly lowers blood pressure in just 20 days",
-        "url": "https://www.sciencedaily.com/releases/2026/11/261123231553.htm",
+        "title": "Deep beneath Australia, hidden caves could unlock the secrets of alien worlds",
+        "url": "https://www.sciencedaily.com/releases/2026/11/261124055901.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Ridley Scott’s Sci-Fi Thriller Masterpiece Is Officially Being Removed From Netflix",
-        "url": "https://www.polygon.com/ridley-scott-alien-leaving-netflix/",
+        "title": "20 Years Ago, The Sopranos PS2 Game Sank So GTA 6 Could Swim",
+        "url": "https://www.polygon.com/sopranos-road-to-respect-anniversary/",
         "source": "Polygon"
       },
       {
-        "title": "How to get adrenaline in GTA 6",
-        "url": "https://www.polygon.com/gta-6-adrenaline-how-to-get/",
+        "title": "'Alien' Meets 'Vikings' in a 2008 Sci-Fi Spin on Beowulf That Deserves Redemption",
+        "url": "https://www.polygon.com/outlander-2008-defense-turkey-day/",
         "source": "Polygon"
       },
       {
-        "title": "Capcom Is Officially Killing Its 'Jurassic World Meets Overwatch' Shooter",
-        "url": "https://www.polygon.com/exoprimal-capcom-shutting-down-2027/",
+        "title": "51 Years Later, One of Peanuts’ Best Sally Brown Strips Is Still a Perfect School Joke",
+        "url": "https://www.polygon.com/sally-brown-rock-snakes-peanuts/",
         "source": "Polygon"
       },
       {
-        "title": "All Peewees Billboard locations in GTA 6",
-        "url": "https://www.polygon.com/gta-6-peewees-billboard-location-challenge-waink/",
+        "title": "The Lord of the Rings’ Next Movie Officially Wraps Production, but Now the Hard Part Begins",
+        "url": "https://www.polygon.com/the-lord-of-the-rings-hunt-for-gollum-production-end/",
         "source": "Polygon"
       },
       {
-        "title": "'Avengers: Doomsday' Is Making Sure Patrick Stewart Gets a Proper Sendoff",
-        "url": "https://www.polygon.com/avengers-doomsday-patrick-stewart-tribute/",
+        "title": "20 Years Later, One of TV’s Greatest Sci-Fi Franchises Still Hasn’t Topped Its Riskiest Spin-Off",
+        "url": "https://www.polygon.com/torchwood-remains-the-best-doctor-who-spin-off/",
         "source": "Polygon"
       },
       {
-        "title": "The 25 Best PS5 Games in 2026",
-        "url": "https://www.polygon.com/best-ps5-playstation-5-games/",
+        "title": "10 Classic Books Worth Reading Over and Over",
+        "url": "https://www.polygon.com/10-classic-books-worth-reading-over-and-over/",
         "source": "Polygon"
       },
       {
-        "title": "Fortnite Cracks Down on Pirate Shop Token Cheaters and Teammates",
-        "url": "https://www.polygon.com/fortnite-pirate-shop-access-token-cheaters-crack-down/",
+        "title": "6 Fantasy Books Better Than Harry Potter",
+        "url": "https://www.polygon.com/fantasy-books-better-than-harry-potter/",
         "source": "Polygon"
       }
     ],
