@@ -1,18 +1,20 @@
 import { createElement } from '../components.js';
 import { SettingsDB } from '../db.js';
 import Router from '../router.js';
+import { normalizePrefs, sizeOf } from './widget-layout.js';
 
 export const WIDGETS = [
-    { id: 'w1', name: '天氣', icon: '☁️', size: 'small', path: '/weather' },
-    { id: 'w2', name: '時鐘', icon: '🕐', size: 'small', path: null },
-    { id: 'w3', name: '行事曆', icon: '📅', size: 'medium', path: '/timetree' },
-    { id: 'w4', name: '音樂', icon: '🎵', size: 'medium', path: '/music' },
-    { id: 'w5', name: '備忘錄', icon: '📝', size: 'small', path: null },
-    { id: 'w6', name: '健康', icon: '❤️', size: 'large', path: '/health' }
+    { id: 'w1', name: '天氣', icon: '☁️', size: 'small', sizes: ['small', 'medium'], path: '/weather' },
+    { id: 'w2', name: '時鐘', icon: '🕐', size: 'small', sizes: ['small', 'medium'], path: null },
+    { id: 'w3', name: '行事曆', icon: '📅', size: 'medium', sizes: ['medium', 'large'], path: '/timetree' },
+    { id: 'w4', name: '音樂', icon: '🎵', size: 'medium', sizes: ['small', 'medium'], path: '/music' },
+    { id: 'w5', name: '備忘錄', icon: '📝', size: 'small', sizes: ['small', 'medium', 'large'], path: null },
+    { id: 'w6', name: '健康', icon: '❤️', size: 'large', sizes: ['medium', 'large'], path: '/health' }
 ];
 
 const ACTIVE_KEY = 'widget_active';
 const MEMO_KEY = 'widget_memo';
+const PREFS_KEY = 'widget_prefs';
 
 export async function getActiveWidgetIds() {
     const saved = await SettingsDB.get(ACTIVE_KEY);
@@ -20,6 +22,12 @@ export async function getActiveWidgetIds() {
 }
 
 export const setActiveWidgetIds = ids => SettingsDB.set(ACTIVE_KEY, ids);
+
+// 排版設定：風格與每個小工具的尺寸（沒設定過就是預設的「紙」風格與各自的預設尺寸）
+export async function getWidgetPrefs() {
+    return normalizePrefs(await SettingsDB.get(PREFS_KEY), WIDGETS);
+}
+export const setWidgetPrefs = prefs => SettingsDB.set(PREFS_KEY, prefs);
 
 const pad = n => String(n).padStart(2, '0');
 
@@ -112,12 +120,14 @@ function healthBody(body) {
 
 const BODIES = { w1: weatherBody, w2: clockBody, w3: calendarBody, w4: musicBody, w5: memoBody, w6: healthBody };
 
-export async function createWidgetElement(id) {
+export async function createWidgetElement(id, prefs = null) {
     const w = WIDGETS.find(x => x.id === id);
     if (!w) return null;
-    const card = createElement('div', 'home-widget hw-' + w.size);
+    const card = createElement('div', 'home-widget hw-' + (prefs ? sizeOf(prefs, w) : w.size));
     card.dataset.widget = w.id;
-    card.appendChild(createElement('div', 'hw-title', { textContent: w.icon + ' ' + w.name }));
+    const title = createElement('div', 'hw-title');
+    title.append(createElement('span', 'hw-ico', { textContent: w.icon + ' ' }), w.name); // 圖示在「紙」「墨」風格會被藏起來
+    card.appendChild(title);
     const body = createElement('div', 'hw-body');
     card.appendChild(body);
     await BODIES[w.id](body);
@@ -131,10 +141,12 @@ export async function createWidgetElement(id) {
 export async function createWidgetsSection() {
     const ids = await getActiveWidgetIds();
     if (ids.length === 0) return null;
+    const prefs = await getWidgetPrefs();
     const section = createElement('div', 'home-widgets');
+    section.dataset.wstyle = prefs.style;
     for (const id of ids) {
         try {
-            const el = await createWidgetElement(id);
+            const el = await createWidgetElement(id, prefs);
             if (el) section.appendChild(el);
         } catch { /* 單一小工具失敗不影響主畫面 */ }
     }

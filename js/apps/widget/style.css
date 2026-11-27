@@ -1,19 +1,37 @@
-.widget-app { --widget-bg: #1c1c1e; --widget-card: #2c2c2e; --widget-text: #fff; --widget-muted: #8e8e93; --widget-accent: #0a84ff; }
-:where(body[data-app="widget"]) .widget-app .page { background: var(--widget-bg); min-height: calc(var(--app-h, 100vh) - 96px); padding: 16px; }
-.widget-preview { background: var(--widget-card); border-radius: 20px; padding: 16px; margin-bottom: 20px; min-height: 120px; max-height: none; overflow: visible; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; align-content: start; }
-.widget-card { background: #3a3a3c; border-radius: 12px; padding: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.widget-card.small { width: 60px; height: 60px; }
-.widget-card.medium { width: 130px; height: 60px; }
-.widget-card.large { width: 130px; height: 130px; }
-.w-icon { font-size: 24px; }
-.widget-card.medium .w-icon, .widget-card.large .w-icon { font-size: 32px; }
-.w-name { font-size: 10px; color: var(--widget-muted); margin-top: 4px; }
-.empty-preview { grid-column: 1 / -1; text-align: center; color: var(--widget-muted); padding: 40px; }
-:where(body[data-app="widget"]) .section-title { font-size: 14px; color: var(--widget-muted); margin-bottom: 12px; }
-.widget-list { display: flex; flex-direction: column; gap: 8px; }
-.widget-item { background: var(--widget-card); padding: 12px 16px; border-radius: 12px; display: flex; align-items: center; gap: 12px; cursor: pointer; }
-.widget-item.active { background: var(--widget-accent); }
-.widget-item .w-icon { font-size: 24px; }
-.widget-item .w-name { flex: 1; color: var(--widget-text); }
-.w-size { font-size: 11px; color: var(--widget-muted); background: #3a3a3c; padding: 4px 8px; border-radius: 6px; }
-.widget-item.active .w-size { background: rgba(255,255,255,0.2); }
+/* 小工具編輯頁：和風設計語言（顏色、圓角、轉場都用 css/shared.css 的 --wa-* 變數） */
+:where(body[data-app="widget"]) .widget-app .page { background: var(--wa-paper); color: var(--wa-ink); min-height: calc(var(--app-h, 100vh) - 96px); padding: 4px 20px 48px; }
+:where(body[data-app="widget"]) .wg-sec { margin-top: 28px; }
+:where(body[data-app="widget"]) .wg-sec h3 { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; color: var(--wa-ink-soft); }
+:where(body[data-app="widget"]) .wg-sec h3 small { font-size: 11px; letter-spacing: 0.04em; }
+
+:where(body[data-app="widget"]) .wg-styles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+:where(body[data-app="widget"]) .wg-style { padding: 12px 6px; border: 1px solid var(--wa-line); border-radius: var(--wa-radius); background: transparent; color: var(--wa-ink); text-align: center; transition: border-color var(--wa-dur) var(--wa-ease), background var(--wa-dur) var(--wa-ease); }
+:where(body[data-app="widget"]) .wg-style b { display: block; font-size: 15px; font-weight: 500; }
+:where(body[data-app="widget"]) .wg-style small { display: block; margin-top: 4px; font-size: 10px; color: var(--wa-ink-soft); }
+:where(body[data-app="widget"]) .wg-style.on { border-color: var(--wa-ink); background: var(--wa-paper-deep); }
+
+/* 預覽的底：用一片安靜的灰藍代替桌布，「玻璃」風格才看得出透明感 */
+:where(body[data-app="widget"]) .wg-stage { padding: 14px; border-radius: var(--wa-radius); background: linear-gradient(160deg, #c9d3d6, #8fa3ad); }
+:where(body[data-app="widget"]) .wg-stage .home-widgets { max-height: none; overflow: visible; margin: 0; }
+:where(body[data-app="widget"]) .wg-empty { grid-column: 1 / -1; padding: 28px 0; text-align: center; font-size: 13px; color: #fff; }
+
+:where(body[data-app="widget"]) .wg-list { border-top: 1px solid var(--wa-line); }
+:where(body[data-app="widget"]) .wg-none { padding: 18px 2px; font-size: 13px; color: var(--wa-ink-soft); }
+:where(body[data-app="widget"]) .wg-row { position: relative; display: flex; align-items: center; gap: 10px; width: 100%; min-height: 52px; padding: 4px 2px; border: none; border-bottom: 1px solid var(--wa-line); background: transparent; color: var(--wa-ink); font: inherit; text-align: left; }
+:where(body[data-app="widget"]) .wg-row.dragging { z-index: 2; border-radius: 10px; background: var(--wa-paper-deep); box-shadow: 0 6px 20px rgba(42, 38, 34, 0.18); }
+:where(body[data-app="widget"]) .wg-handle { display: grid; place-items: center; width: 40px; height: 40px; touch-action: none; cursor: grab; user-select: none; font-size: 18px; color: var(--wa-ink-soft); }
+:where(body[data-app="widget"]) .wg-name { flex: 1; font-size: 15px; }
+:where(body[data-app="widget"]) .wg-sizes { display: flex; gap: 4px; }
+:where(body[data-app="widget"]) .wg-size { min-width: 36px; height: 34px; border: 1px solid var(--wa-line); border-radius: 8px; background: transparent; font-size: 12px; color: var(--wa-ink-soft); transition: border-color var(--wa-dur) var(--wa-ease); }
+:where(body[data-app="widget"]) .wg-size.on { border-color: var(--wa-ink); color: var(--wa-ink); }
+:where(body[data-app="widget"]) .wg-x { width: 40px; height: 40px; border: none; background: transparent; font-size: 15px; color: var(--wa-ink-soft); }
+:where(body[data-app="widget"]) .wg-add { cursor: pointer; }
+:where(body[data-app="widget"]) .wg-plus { width: 40px; text-align: center; color: var(--wa-accent); }
+:where(body[data-app="widget"]) .wg-meta { padding-right: 8px; font-size: 12px; color: var(--wa-ink-soft); }
+
+:where(body[data-app="widget"]) .wg-adv { margin-top: 28px; padding-top: 14px; border-top: 1px solid var(--wa-line); font-size: 13px; color: var(--wa-ink-soft); }
+:where(body[data-app="widget"]) .wg-adv summary { display: flex; align-items: center; min-height: 36px; cursor: pointer; font-size: 12px; letter-spacing: 0.14em; }
+:where(body[data-app="widget"]) .wg-adv summary::after { content: '＋'; margin-left: 10px; }
+:where(body[data-app="widget"]) .wg-adv[open] summary::after { content: '－'; }
+:where(body[data-app="widget"]) .wg-adv p { margin: 6px 0 10px; }
+:where(body[data-app="widget"]) .wg-link { min-height: 40px; padding: 10px 14px; border: 1px solid var(--wa-line); border-radius: 10px; background: transparent; color: var(--wa-ink); }
