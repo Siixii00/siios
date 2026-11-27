@@ -9,6 +9,7 @@ import { askConfirm } from '../../core/dialogs.js';
 const TYPE_TABS = ['全部', '動態', '永久', '情感', '計畫', '書信', '自我', '備份'];
 const TYPE_MAP = { 1: 'dynamic', 2: 'permanent', 3: 'feel', 4: 'plan', 5: 'letter', 6: 'i', 7: 'archive' };
 const TYPE_LABELS = { dynamic: '動態', permanent: '永久', feel: '情感', plan: '計畫', letter: '書信', i: '自我', archive: '歸檔' };
+const PAGE_SIZE = 50; // 清單一次畫幾張卡片；記憶很多時全畫會卡，其餘按「顯示更多」再畫
 
 const SOURCE_LABELS = {
     'chat': '對話',
@@ -96,7 +97,12 @@ async function renderMemoryList() {
         textContent: '搜尋',
         onClick: async () => {
             await SettingsDB.set('memory_filter', currentFilter);
-            Router.navigate('/memory');
+            // 已經在 /memory 時網址不會變，navigate 不會重新渲染，要直接重跑路由（下拉篩選也是這樣處理）
+            if (window.location.hash === '#/memory') {
+                await Router.handleRoute();
+            } else {
+                Router.navigate('/memory');
+            }
         }
     });
     searchBtn.style.cssText = 'white-space:nowrap;flex-shrink:0;margin-left:8px;';
@@ -341,7 +347,9 @@ async function renderMemoryList() {
         emptyState.appendChild(createElement('p', 'text-sm text-ios-muted', { textContent: '記憶將在對話中自動產生' }));
         listContainer.appendChild(emptyState);
     } else {
-        filtered.forEach(memory => {
+        const cardsHost = createElement('div', '');
+        listContainer.appendChild(cardsHost);
+        const renderCard = memory => {
             const stage = getDecayStage(memory);
             const card = createElement('div', 'bg-white rounded-lg p-4 mb-3 shadow-sm cursor-pointer hover:shadow-md transition-shadow', {
                 onClick: () => Router.navigate('/memory/' + memory.id)
@@ -376,8 +384,20 @@ async function renderMemoryList() {
                 card.appendChild(tagsRow);
             }
 
-            listContainer.appendChild(card);
-        });
+            cardsHost.appendChild(card);
+        };
+
+        let shown = 0;
+        const moreBtn = createElement('button', 'w-full py-3 mb-3 bg-white rounded-lg shadow-sm text-sm text-ios-muted');
+        const showMore = () => {
+            filtered.slice(shown, shown + PAGE_SIZE).forEach(renderCard);
+            shown = Math.min(shown + PAGE_SIZE, filtered.length);
+            if (shown >= filtered.length) moreBtn.remove();
+            else moreBtn.textContent = '顯示更多（還有 ' + (filtered.length - shown) + ' 則）';
+        };
+        moreBtn.addEventListener('click', showMore);
+        listContainer.appendChild(moreBtn);
+        showMore();
     }
 
     return { element: container, cleanup: null };
