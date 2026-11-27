@@ -31,6 +31,9 @@
 .furn, .shop-spr { display: grid; grid-template-columns: repeat(var(--w), var(--t)); }
 .furn { position: absolute; left: calc(var(--t) * var(--x)); top: calc(var(--t) * var(--y)); pointer-events: none; }
 .furn.on { outline: 2px dashed var(--home-accent); outline-offset: -1px; }
+.h-chips { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 4px; }
+.h-chip { padding: 4px 12px; border-radius: 100px; background: var(--home-card); color: var(--home-text); font-size: 12px; font-weight: 700; }
+.h-chips small { font-size: 11px; color: #a0506f; }
 .r-bar { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 40px; margin: 10px 0 4px; font-size: 13px; color: var(--home-text); }
 .r-pill { padding: 6px 14px; border-radius: 100px; background: var(--home-card); color: var(--home-muted); font-size: 12px; font-weight: 700; }
 .h-btn.ghost { background: var(--home-card); color: var(--home-muted); }

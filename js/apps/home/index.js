@@ -5,7 +5,7 @@ import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { getBalance, charge, credit, formatMoney, WalletError } from '../../core/wallet.js';
-import { COLS, ROWS, ART, canPlace, autoPlace, normalize, itemAt, snap } from './room.js';
+import { COLS, ROWS, ART, TEA_AT, canPlace, autoPlace, normalize, itemAt, snap, waOf } from './room.js';
 
 // 宅家：佈置房間（家具從錢包購買）、做活動恢復精力、邀請角色來家裡、每日任務。
 // 精力值也會被聊天讀取，精力太低時角色會適度關心你。
@@ -40,7 +40,8 @@ const ACTIVITIES = [
   { id: 'a7', name: '窩沙發放空', icon: '🛋️', energy: 2, need: 'sofa' },
   { id: 'a8', name: '照顧植物', icon: '🪴', energy: 1, need: 'plant' },
   { id: 'a9', name: '做瑜珈', icon: '🧘', energy: 2, need: 'rug' },
-  { id: 'a10', name: '泡茶', icon: '🍵', energy: 1, need: 'lamp' }
+  { id: 'a10', name: '泡茶', icon: '🍵', energy: 1, need: 'lamp' },
+  { id: 'a11', name: '茶室品茶', icon: '🍵', energy: 3, wa: TEA_AT } // 和風度到 TEA_AT 才解鎖
 ];
 
 const TASKS = [
@@ -97,13 +98,14 @@ async function renderHome() {
   if (s.energy < 60) s.tasks.lowSeen = true; // 「恢復到 60 以上」要先低於 60 才算
   const save = () => SettingsDB.set(STATE_KEY, s);
   await save();
-  const available = a => !a.need || !!s.placed[a.need];
+  const available = a => (!a.need || !!s.placed[a.need]) && (!a.wa || waOf(s.placed) >= a.wa);
   const bump = (taskId, n = 1) => { s.tasks.progress[taskId] = (s.tasks.progress[taskId] || 0) + n; };
 
   function status() {
-    const c = comfortOf(s);
+    const c = comfortOf(s), wa = waOf(s.placed);
     return `<div class="energy-bar"><span class="energy-label">精力值</span><div class="energy-track"><div class="energy-fill" style="width:${s.energy}%"></div></div><span class="energy-value">${s.energy}%</span></div>
-      <div class="status-msg">${s.energy > 70 ? '精神飽滿！' : s.energy > 30 ? '還行，繼續宅吧～' : '該休息了...'}　·　舒適度 ${c}（每 ${Math.round(regenMs(s) / 60000 * 10) / 10} 分鐘恢復 1 點）</div>`;
+      <div class="h-chips"><span class="h-chip">舒適度 ${c}</span><span class="h-chip">和風度 ${wa}</span><small>${wa >= TEA_AT ? '茶室已解鎖' : '再 +' + (TEA_AT - wa) + ' 解鎖茶室'}</small></div>
+      <div class="status-msg">${s.energy > 70 ? '精神飽滿！' : s.energy > 30 ? '還行，繼續宅吧～' : '該休息了...'}　·　每 ${Math.round(regenMs(s) / 60000 * 10) / 10} 分鐘恢復 1 點</div>`;
   }
 
   // 素材表上 (c, r) 開始、w×h 塊的圖塊；每塊分開畫，避免素材的 1px 間隙出現在家具中間
@@ -139,8 +141,8 @@ async function renderHome() {
   function activitiesHtml() {
     return `<div class="activity-grid">${ACTIVITIES.map(a => {
       const ok = available(a), left = (s.cooldowns[a.id] || 0) + COOLDOWN_MS - Date.now();
-      const need = a.need ? SLOTS.find(x => x.id === a.need).name : '';
-      return `<button class="activity-btn ${ok ? '' : 'locked'}" data-act="do" data-id="${a.id}" ${ok && left <= 0 ? '' : 'disabled'}><span class="activity-icon">${a.icon}</span><span class="activity-name">${a.name}（${a.energy > 0 ? '+' : ''}${a.energy}）</span>${!ok ? `<small>需要${need}</small>` : left > 0 ? `<small>${fmtLeft(left)}後可再做</small>` : ''}</button>`;
+      const need = a.need && !s.placed[a.need] ? '需要' + SLOTS.find(x => x.id === a.need).name : '需要和風度 ' + a.wa;
+      return `<button class="activity-btn ${ok ? '' : 'locked'}" data-act="do" data-id="${a.id}" ${ok && left <= 0 ? '' : 'disabled'}><span class="activity-icon">${a.icon}</span><span class="activity-name">${a.name}（${a.energy > 0 ? '+' : ''}${a.energy}）</span>${!ok ? `<small>${need}</small>` : left > 0 ? `<small>${fmtLeft(left)}後可再做</small>` : ''}</button>`;
     }).join('')}</div>
     <div class="home-history"><h3>最近活動</h3>${s.activities.slice(-6).reverse().map(h => `<div class="history-row">${esc(h.icon || '')} ${esc(h.text || (ACTIVITIES.find(x => x.id === h.id)?.name || ''))}　${fmtTime(h.time)}</div>`).join('') || '<div class="empty-history">還沒有活動紀錄</div>'}</div>`;
   }
