@@ -5,6 +5,7 @@ import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { getBalance, charge, credit, formatMoney, WalletError } from '../../core/wallet.js';
+import { COLS, ROWS, ART, canPlace, autoPlace, normalize, itemAt, snap } from './room.js';
 
 // 宅家：佈置房間（家具從錢包購買）、做活動恢復精力、邀請角色來家裡、每日任務。
 // 精力值也會被聊天讀取，精力太低時角色會適度關心你。
@@ -66,6 +67,7 @@ async function loadState() {
     visits: saved.visits || {},
     tasks: saved.tasks && saved.tasks.date === today() ? saved.tasks : { date: today(), progress: {}, claimed: {} }
   };
+  s.pos = normalize(s.placed, saved.pos); // 家具在房間格子上的位置（舊存檔沒有就自動排好）
   return s;
 }
 
@@ -86,6 +88,9 @@ async function renderHome() {
   let tab = 'room';
   let sheet = null;
   let busy = false;
+  let sel = null; // 房間裡目前選取的家具（格子 id）
+  let drag = null;
+  let lastDrag = 0;
   let balance = await getBalance();
   const s = await loadState();
   applyRegen(s);
@@ -101,11 +106,34 @@ async function renderHome() {
       <div class="status-msg">${s.energy > 70 ? '精神飽滿！' : s.energy > 30 ? '還行，繼續宅吧～' : '該休息了...'}　·　舒適度 ${c}（每 ${Math.round(regenMs(s) / 60000 * 10) / 10} 分鐘恢復 1 點）</div>`;
   }
 
+  // 素材表上 (c, r) 開始、w×h 塊的圖塊；每塊分開畫，避免素材的 1px 間隙出現在家具中間
+  const tiles = (c, r, w, h) => Array.from({ length: w * h }, (_, i) => `<i class="tl" style="--c:${c + i % w};--r:${r + Math.floor(i / w)}"></i>`).join('');
+  const piece = (c, r, w, h, style, cls = '', attrs = '') => `<div class="furn ${cls}" ${attrs} style="--w:${w};${style}">${tiles(c, r, w, h)}</div>`;
+  const cellOf = (fl, e) => { const r = fl.getBoundingClientRect(), t = r.width / COLS; return [Math.floor((e.clientX - r.left) / t), Math.floor((e.clientY - r.top) / t)]; };
+
+  function moveTo(slot, x, y) {
+    const p = snap(s.placed[slot], x, y);
+    if (!canPlace(s.placed, s.pos, slot, p.x, p.y)) return false;
+    s.pos[slot] = p;
+    return true;
+  }
+
   function roomHtml() {
-    return `<div class="room">${SLOTS.map(sl => {
-      const it = itemById(s.placed[sl.id]);
-      return `<button class="slot ${it ? '' : 'empty'}" data-act="slot" data-id="${sl.id}"><span class="slot-icon">${it ? it.icon : '＋'}</span><span class="slot-name">${it ? it.name : sl.name}</span></button>`;
-    }).join('')}</div><p class="hint">點格子更換或購買家具；家具越好，舒適度越高、精力恢復越快，也能解鎖更多活動。</p>`;
+    const floor = Array.from({ length: ROWS * COLS }, (_, i) => tiles(24, 4 + (i % COLS + Math.floor(i / COLS)) % 2, 1, 1)).join('');
+    const furniture = Object.keys(s.placed).map(slot => {
+      const a = ART[s.placed[slot]], p = s.pos[slot];
+      return piece(a.tile[0], a.tile[1], a.w, a.h, `--x:${p.x};--y:${p.y};z-index:${a.flat ? 1 : 2 + p.y}`, `${a.flat ? 'flat' : ''} ${sel === slot ? 'on' : ''}`, `data-slot="${slot}"`);
+    }).join('');
+    const bar = sel
+      ? `<div class="r-bar"><b>${itemById(s.placed[sel]).name}</b><button class="h-btn" data-act="slot" data-id="${sel}">更換</button>${['bed', 'desk'].includes(sel) ? '' : '<button class="h-btn ghost" data-act="remove">收起</button>'}<button class="h-btn ghost" data-act="unsel">完成</button></div>`
+      : '<div class="r-bar"><span class="r-pill">佈置中 · 點家具</span></div>';
+    const shop = ALL_ITEMS.filter(i => s.placed[i.slot] !== i.id).sort((a, b) => a.price - b.price).map(it => {
+      const a = ART[it.id], owned = it.price === 0 || s.owned.includes(it.id);
+      return `<button class="shop-card" data-act="place" data-id="${it.id}"><span class="shop-spr" style="--w:${a.w}">${tiles(a.tile[0], a.tile[1], a.w, a.h)}</span><span class="shop-name">${it.name}</span><small>舒適 ${it.comfort}</small><b>${owned ? '放置' : formatMoney(it.price)}</b></button>`;
+    }).join('');
+    return `<div class="r-board"><div class="r-wall">${piece(20, 12, 2, 1, '--x:1.5;--y:.4', 'deco')}${piece(19, 12, 1, 1, '--x:5;--y:.4', 'deco')}</div><div class="r-floor ${sel ? 'sel' : ''}" data-act="floor">${floor}${furniture}</div></div>${bar}
+      <h3 class="shop-title">家具商店</h3><div class="shop-strip">${shop}</div>
+      <p class="hint">點家具選取，再拖曳或點空格移動；家具越好，舒適度越高、精力恢復越快，也能解鎖更多活動。</p>`;
   }
 
   function activitiesHtml() {
@@ -191,14 +219,26 @@ async function renderHome() {
     if (act === 'tab') { tab = el.dataset.tab; return draw(); }
     if (act === 'closesheet') { sheet = null; return draw(); }
     if (act === 'slot') { sheet = { slot: id }; return draw(); }
+    if (act === 'unsel') { sel = null; return draw(); }
+    if (act === 'floor') {
+      if (Date.now() - lastDrag < 300) return; // 剛拖曳完，後面接著來的 click 不算
+      const [cx, cy] = cellOf(el, e), hit = itemAt(s.placed, s.pos, cx, cy);
+      if (hit && !ART[s.placed[hit]].flat) sel = hit === sel ? null : hit;
+      else if (sel && moveTo(sel, cx, cy)) return run(async () => {});
+      else sel = hit === sel ? null : hit;
+      return draw();
+    }
     if (act === 'place') return run(async () => {
       const it = itemById(id);
       if (it.price > 0 && !s.owned.includes(id)) { await charge(it.price, '宅家家具：' + it.name, { category: 'home' }); s.owned.push(id); }
+      const old = s.pos[it.slot];
       s.placed[it.slot] = id;
+      s.pos[it.slot] = old && canPlace(s.placed, s.pos, it.slot, old.x, old.y) ? old : autoPlace(s.placed, s.pos, it.slot);
+      sel = it.slot;
       createToast('已放置 ' + it.icon + it.name, 'success');
       sheet = null;
     });
-    if (act === 'remove') return run(async () => { delete s.placed[sheet.slot]; sheet = null; });
+    if (act === 'remove') return run(async () => { const slot = sheet?.slot || sel; delete s.placed[slot]; delete s.pos[slot]; sel = null; sheet = null; });
     if (act === 'do') return run(async () => {
       const a = ACTIVITIES.find(x => x.id === id);
       if (!available(a) || (s.cooldowns[id] || 0) + COOLDOWN_MS > Date.now()) return;
@@ -226,9 +266,33 @@ async function renderHome() {
 
   chars = await CharactersDB.getAll();
   container.addEventListener('click', onClick);
+  // 拖曳：先點選家具，再按住它移動（沒選取時不攔截，頁面照常能捲動）
+  container.addEventListener('pointerdown', e => {
+    const fl = e.target.closest('.r-floor');
+    if (!fl || !sel || busy || itemAt(s.placed, s.pos, ...cellOf(fl, e)) !== sel) return;
+    drag = { fl, id: e.pointerId, x0: e.clientX, y0: e.clientY, moved: false };
+    fl.setPointerCapture(e.pointerId);
+  });
+  container.addEventListener('pointermove', e => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const dx = e.clientX - drag.x0, dy = e.clientY - drag.y0;
+    if (!drag.moved && Math.hypot(dx, dy) < 6) return;
+    drag.moved = true;
+    drag.fl.querySelector('.furn.on').style.transform = `translate(${dx}px,${dy}px)`;
+  });
+  container.addEventListener('pointerup', e => {
+    if (!drag || e.pointerId !== drag.id) return;
+    const d = drag;
+    drag = null;
+    if (!d.moved) return;
+    lastDrag = Date.now();
+    const t = d.fl.getBoundingClientRect().width / COLS, p = s.pos[sel];
+    run(async () => { moveTo(sel, p.x + Math.round((e.clientX - d.x0) / t), p.y + Math.round((e.clientY - d.y0) / t)); });
+  });
+  container.addEventListener('pointercancel', () => { if (drag) { drag = null; draw(); } });
   draw();
   const timer = setInterval(() => {
-    if (sheet || busy) return;
+    if (sheet || busy || drag) return;
     applyRegen(s);
     if (s.tasks.date !== today()) { // 跨過午夜：換新的一天的任務
       s.tasks = { date: today(), progress: {}, claimed: {}, lowSeen: s.energy < 60 };
