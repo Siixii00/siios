@@ -12,7 +12,7 @@
     color: var(--ao3-text);
 }
 
-.ao3-header {
+:where(body[data-app="ao3"]) .ao3-header {
     position: sticky;
     top: 0;
     z-index: 20;
@@ -26,7 +26,7 @@
     backdrop-filter: blur(10px);
 }
 
-.ao3-header h1 {
+:where(body[data-app="ao3"]) .ao3-header h1 {
     text-align: center;
     font-size: 18px;
     letter-spacing: 0.2px;
@@ -37,7 +37,7 @@
     justify-content: flex-end;
 }
 
-.header-action {
+:where(body[data-app="ao3"]) .header-action {
     border: none;
     background: transparent;
     color: var(--ao3-text);
@@ -46,7 +46,7 @@
     padding: 8px;
 }
 
-.menu-dropdown {
+:where(body[data-app="ao3"]) .menu-dropdown {
     position: absolute;
     top: 60px;
     right: 16px;
@@ -59,7 +59,7 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
-.menu-dropdown.hidden {
+:where(body[data-app="ao3"]) .menu-dropdown.hidden {
     display: none;
 }
 
@@ -85,13 +85,13 @@
     opacity: 0.7;
 }
 
-.menu-divider {
+:where(body[data-app="ao3"]) .menu-divider {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin: 4px 0;
 }
 
-.ao3-main {
+:where(body[data-app="ao3"]) .ao3-main {
     overflow-y: auto;
     overflow-x: hidden;
     display: flex;
@@ -103,7 +103,7 @@
     overscroll-behavior: contain;
 }
 
-.ao3-main::-webkit-scrollbar {
+:where(body[data-app="ao3"]) .ao3-main::-webkit-scrollbar {
     display: none;
 }
 
@@ -127,23 +127,23 @@
     font-weight: 600;
 }
 
-.field {
+:where(body[data-app="ao3"]) .field {
     display: flex;
     flex-direction: column;
     gap: 6px;
     margin-bottom: 14px;
 }
 
-.field label,
-.tag-field label {
+:where(body[data-app="ao3"]) .field label,
+:where(body[data-app="ao3"]) .tag-field label {
     font-weight: 600;
     color: rgba(255, 255, 255, 0.8);
     font-size: 13px;
 }
 
-.field input,
-.field textarea,
-.field select {
+:where(body[data-app="ao3"]) .field input,
+:where(body[data-app="ao3"]) .field textarea,
+:where(body[data-app="ao3"]) .field select {
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.12);
     background: rgba(0, 0, 0, 0.35);
@@ -154,36 +154,36 @@
     font-family: inherit;
 }
 
-.field textarea {
+:where(body[data-app="ao3"]) .field textarea {
     resize: vertical;
 }
 
-.field-grid {
+:where(body[data-app="ao3"]) .field-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 12px;
     margin-bottom: 12px;
 }
 
-.field-grid label {
+:where(body[data-app="ao3"]) .field-grid label {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-.field-grid span {
+:where(body[data-app="ao3"]) .field-grid span {
     font-size: 13px;
     font-weight: 600;
     color: rgba(255, 255, 255, 0.8);
 }
 
-.language-grid {
+:where(body[data-app="ao3"]) .language-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-.language-chip {
+:where(body[data-app="ao3"]) .language-chip {
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.15);
     padding: 6px 12px;
@@ -194,17 +194,17 @@
     color: #f5e9e4;
 }
 
-.language-chip.active {
+:where(body[data-app="ao3"]) .language-chip.active {
     border-color: rgba(255, 255, 255, 0.35);
     color: #fff;
     background: rgba(155, 44, 44, 0.4);
 }
 
-.tag-field {
+:where(body[data-app="ao3"]) .tag-field {
     margin-top: 12px;
 }
 
-.tag-field-header {
+:where(body[data-app="ao3"]) .tag-field-header {
     display: flex;
     justify-content: space-between;
     color: rgba(255, 255, 255, 0.65);
@@ -212,14 +212,14 @@
     margin-bottom: 6px;
 }
 
-.tag-input {
+:where(body[data-app="ao3"]) .tag-input {
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 10px;
     background: rgba(0, 0, 0, 0.25);
 }
 
-.tag-input input {
+:where(body[data-app="ao3"]) .tag-input input {
     width: 100%;
     border: none;
     background: transparent;
@@ -228,14 +228,14 @@
     outline: none;
 }
 
-.tag-chip-list {
+:where(body[data-app="ao3"]) .tag-chip-list {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 8px;
 }
 
-.tag-chip {
+:where(body[data-app="ao3"]) .tag-chip {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -246,7 +246,7 @@
     font-size: 13px;
 }
 
-.tag-chip button {
+:where(body[data-app="ao3"]) .tag-chip button {
     border: none;
     background: transparent;
     color: inherit;
@@ -256,13 +256,13 @@
     line-height: 1;
 }
 
-.toolbar {
+:where(body[data-app="ao3"]) .toolbar {
     display: flex;
     gap: 8px;
     margin-bottom: 12px;
 }
 
-.toolbar button {
+:where(body[data-app="ao3"]) .toolbar button {
     border: 1px solid rgba(155, 44, 44, 0.3);
     background: rgba(255, 255, 255, 0.08);
     border-radius: 10px;
@@ -273,11 +273,11 @@
     font-size: 14px;
 }
 
-.toolbar button:hover {
+:where(body[data-app="ao3"]) .toolbar button:hover {
     background: rgba(155, 44, 44, 0.2);
 }
 
-#work-body {
+:where(body[data-app="ao3"]) #work-body {
     width: 100%;
     border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -291,26 +291,26 @@
     resize: vertical;
 }
 
-.editor-footer {
+:where(body[data-app="ao3"]) .editor-footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 12px;
 }
 
-#body-stats {
+:where(body[data-app="ao3"]) #body-stats {
     font-size: 12px;
     color: var(--ao3-muted);
 }
 
-.generator-controls {
+:where(body[data-app="ao3"]) .generator-controls {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     align-items: center;
 }
 
-.generator-controls label {
+:where(body[data-app="ao3"]) .generator-controls label {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -318,7 +318,7 @@
     color: var(--ao3-muted);
 }
 
-.generator-controls select {
+:where(body[data-app="ao3"]) .generator-controls select {
     border: 1px solid rgba(255, 255, 255, 0.12);
     background: rgba(0, 0, 0, 0.35);
     color: #f7f0ec;
@@ -327,7 +327,7 @@
     font-size: 13px;
 }
 
-.generator-controls button {
+:where(body[data-app="ao3"]) .generator-controls button {
     border: none;
     border-radius: 999px;
     padding: 8px 14px;
@@ -335,18 +335,18 @@
     cursor: pointer;
 }
 
-#generate-snippet {
+:where(body[data-app="ao3"]) #generate-snippet {
     background: var(--ao3-wine);
     color: #fff9f5;
 }
 
-#save-draft {
+:where(body[data-app="ao3"]) #save-draft {
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.15);
     color: #fff;
 }
 
-.ai-controls {
+:where(body[data-app="ao3"]) .ai-controls {
     margin-top: 8px;
 }
 
@@ -370,29 +370,29 @@
     box-shadow: 0 4px 12px rgba(155, 44, 44, 0.4);
 }
 
-.composer-status {
+:where(body[data-app="ao3"]) .composer-status {
     font-size: 13px;
     color: var(--ao3-wine);
     margin-left: 8px;
 }
 
-.preview-card {
+:where(body[data-app="ao3"]) .preview-card {
     background: rgba(250, 244, 241, 0.05);
 }
 
-.preview-header h3 {
+:where(body[data-app="ao3"]) .preview-header h3 {
     margin: 0 0 4px;
     font-size: 20px;
     color: #fdf3ee;
 }
 
-.preview-header p {
+:where(body[data-app="ao3"]) .preview-header p {
     margin: 0;
     font-size: 13px;
     color: var(--ao3-muted);
 }
 
-.preview-summary {
+:where(body[data-app="ao3"]) .preview-summary {
     font-style: italic;
     color: var(--ao3-muted);
     margin: 12px 0;
@@ -400,13 +400,13 @@
     line-height: 1.5;
 }
 
-.preview-notes {
+:where(body[data-app="ao3"]) .preview-notes {
     color: var(--ao3-muted);
     margin: 8px 0;
     font-size: 13px;
 }
 
-.preview-body {
+:where(body[data-app="ao3"]) .preview-body {
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 12px;
     line-height: 1.6;
@@ -414,16 +414,16 @@
     color: var(--ao3-text);
 }
 
-.preview-body h3 {
+:where(body[data-app="ao3"]) .preview-body h3 {
     color: #fdf3ee;
     margin: 16px 0 8px;
 }
 
-.preview-body p {
+:where(body[data-app="ao3"]) .preview-body p {
     margin: 8px 0;
 }
 
-.preview-body blockquote {
+:where(body[data-app="ao3"]) .preview-body blockquote {
     border-left: 3px solid var(--ao3-wine);
     margin: 12px 0;
     padding-left: 12px;
@@ -431,20 +431,20 @@
     font-style: italic;
 }
 
-.preview-body mark {
+:where(body[data-app="ao3"]) .preview-body mark {
     background: rgba(155, 44, 44, 0.3);
     padding: 2px 4px;
     border-radius: 4px;
 }
 
-.preview-body code {
+:where(body[data-app="ao3"]) .preview-body code {
     background: rgba(0, 0, 0, 0.4);
     padding: 2px 6px;
     border-radius: 4px;
     font-size: 13px;
 }
 
-.draft-header {
+:where(body[data-app="ao3"]) .draft-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -465,7 +465,7 @@
     background: rgba(155, 44, 44, 0.15);
 }
 
-.draft-list {
+:where(body[data-app="ao3"]) .draft-list {
     list-style: none;
     padding: 0;
     margin: 12px 0 0;
@@ -474,7 +474,7 @@
     gap: 10px;
 }
 
-.draft-item {
+:where(body[data-app="ao3"]) .draft-item {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 12px;
@@ -485,23 +485,23 @@
     align-items: center;
 }
 
-.draft-item strong {
+:where(body[data-app="ao3"]) .draft-item strong {
     display: block;
     color: var(--ao3-text);
     margin-bottom: 4px;
 }
 
-.draft-item div div {
+:where(body[data-app="ao3"]) .draft-item div div {
     font-size: 12px;
     color: var(--ao3-muted);
 }
 
-.draft-actions {
+:where(body[data-app="ao3"]) .draft-actions {
     display: flex;
     gap: 6px;
 }
 
-.draft-actions button {
+:where(body[data-app="ao3"]) .draft-actions button {
     border: none;
     border-radius: 8px;
     padding: 6px 10px;
@@ -509,28 +509,28 @@
     font-size: 13px;
 }
 
-.draft-actions button:first-child {
+:where(body[data-app="ao3"]) .draft-actions button:first-child {
     background: rgba(155, 44, 44, 0.5);
     color: #fff;
 }
 
-.draft-actions button:last-child {
+:where(body[data-app="ao3"]) .draft-actions button:last-child {
     background: rgba(255, 255, 255, 0.12);
     color: #f1e3dc;
 }
 
-.inspiration-card {
+:where(body[data-app="ao3"]) .inspiration-card {
     background: rgba(30, 20, 22, 0.85);
     border: 1px solid rgba(155, 44, 44, 0.3);
 }
 
-.inspiration-tabs {
+:where(body[data-app="ao3"]) .inspiration-tabs {
     display: flex;
     gap: 8px;
     margin-bottom: 16px;
 }
 
-.inspiration-tab {
+:where(body[data-app="ao3"]) .inspiration-tab {
     background: transparent;
     border: 1px solid rgba(155, 44, 44, 0.4);
     border-radius: 6px;
@@ -541,36 +541,36 @@
     transition: all 0.2s;
 }
 
-.inspiration-tab.active {
+:where(body[data-app="ao3"]) .inspiration-tab.active {
     background: var(--ao3-wine);
     border-color: var(--ao3-wine);
 }
 
-.inspiration-tab:hover {
+:where(body[data-app="ao3"]) .inspiration-tab:hover {
     background: rgba(155, 44, 44, 0.3);
 }
 
-.inspiration-content {
+:where(body[data-app="ao3"]) .inspiration-content {
     min-height: 180px;
 }
 
-.inspiration-panel {
+:where(body[data-app="ao3"]) .inspiration-panel {
     display: none;
 }
 
-.inspiration-panel.active {
+:where(body[data-app="ao3"]) .inspiration-panel.active {
     display: block;
 }
 
-.panel-header {
+:where(body[data-app="ao3"]) .panel-header {
     font-size: 13px;
     color: var(--ao3-muted);
     margin-bottom: 12px;
 }
 
-.tropes-list,
-.characters-list,
-.worldsettings-list {
+:where(body[data-app="ao3"]) .tropes-list,
+:where(body[data-app="ao3"]) .characters-list,
+:where(body[data-app="ao3"]) .worldsettings-list {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -578,14 +578,14 @@
     overflow-y: auto;
 }
 
-.tropes-list::-webkit-scrollbar,
-.characters-list::-webkit-scrollbar,
-.worldsettings-list::-webkit-scrollbar {
+:where(body[data-app="ao3"]) .tropes-list::-webkit-scrollbar,
+:where(body[data-app="ao3"]) .characters-list::-webkit-scrollbar,
+:where(body[data-app="ao3"]) .worldsettings-list::-webkit-scrollbar {
     display: none;
 }
 
-.trope-item,
-.worldsetting-item {
+:where(body[data-app="ao3"]) .trope-item,
+:where(body[data-app="ao3"]) .worldsetting-item {
     background: rgba(50, 35, 38, 0.6);
     border: 1px solid rgba(155, 44, 44, 0.3);
     border-radius: 6px;
@@ -596,46 +596,46 @@
     box-sizing: border-box;
 }
 
-.trope-item.selected,
-.worldsetting-item.selected {
+:where(body[data-app="ao3"]) .trope-item.selected,
+:where(body[data-app="ao3"]) .worldsetting-item.selected {
     background: rgba(155, 44, 44, 0.5);
     border-color: var(--ao3-wine);
 }
 
-.trope-item:hover,
-.worldsetting-item:hover {
+:where(body[data-app="ao3"]) .trope-item:hover,
+:where(body[data-app="ao3"]) .worldsetting-item:hover {
     border-color: var(--ao3-wine);
 }
 
-.trope-header,
-.worldsetting-header {
+:where(body[data-app="ao3"]) .trope-header,
+:where(body[data-app="ao3"]) .worldsetting-header {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-.trope-title,
-.worldsetting-title {
+:where(body[data-app="ao3"]) .trope-title,
+:where(body[data-app="ao3"]) .worldsetting-title {
     font-weight: 600;
     font-size: 14px;
     color: #f5e9e4;
 }
 
-.trope-tags,
-.worldsetting-tags {
+:where(body[data-app="ao3"]) .trope-tags,
+:where(body[data-app="ao3"]) .worldsetting-tags {
     font-size: 11px;
     color: rgba(155, 44, 44, 0.8);
 }
 
-.trope-desc,
-.worldsetting-desc {
+:where(body[data-app="ao3"]) .trope-desc,
+:where(body[data-app="ao3"]) .worldsetting-desc {
     font-size: 12px;
     color: rgba(245, 233, 228, 0.6);
     margin-top: 6px;
     line-height: 1.4;
 }
 
-.char-item {
+:where(body[data-app="ao3"]) .char-item {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -649,16 +649,16 @@
     box-sizing: border-box;
 }
 
-.char-item.selected {
+:where(body[data-app="ao3"]) .char-item.selected {
     background: rgba(155, 44, 44, 0.5);
     border-color: var(--ao3-wine);
 }
 
-.char-item:hover {
+:where(body[data-app="ao3"]) .char-item:hover {
     border-color: var(--ao3-wine);
 }
 
-.char-avatar {
+:where(body[data-app="ao3"]) .char-avatar {
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -670,19 +670,19 @@
     flex-shrink: 0;
 }
 
-.char-avatar img {
+:where(body[data-app="ao3"]) .char-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.char-avatar span {
+:where(body[data-app="ao3"]) .char-avatar span {
     font-size: 14px;
     font-weight: 600;
     color: #f5e9e4;
 }
 
-.char-info {
+:where(body[data-app="ao3"]) .char-info {
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -690,7 +690,7 @@
     flex: 1;
 }
 
-.char-name {
+:where(body[data-app="ao3"]) .char-name {
     font-size: 14px;
     font-weight: 600;
     color: #f5e9e4;
@@ -707,7 +707,7 @@
     text-overflow: ellipsis;
 }
 
-.empty-hint {
+:where(body[data-app="ao3"]) .empty-hint {
     text-align: center;
     padding: 24px;
     color: rgba(245, 233, 228, 0.5);
@@ -715,18 +715,18 @@
 }
 
 @media (max-width: 540px) {
-    .generator-controls {
+    :where(body[data-app="ao3"]) .generator-controls {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .trope-item,
-    .char-item,
-    .worldsetting-item {
+    :where(body[data-app="ao3"]) .trope-item,
+    :where(body[data-app="ao3"]) .char-item,
+    :where(body[data-app="ao3"]) .worldsetting-item {
         width: 100%;
     }
 
-    .field-grid {
+    :where(body[data-app="ao3"]) .field-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -747,7 +747,7 @@ body.desktop-mode .field-grid {
     }
 
 /* 標題列文字：這裡是深色底，要明確指定淺色 */
-.ao3-header .menu-title,
-.ao3-header .ios-back-btn {
+:where(body[data-app="ao3"]) .ao3-header .menu-title,
+:where(body[data-app="ao3"]) .ao3-header .ios-back-btn {
     color: var(--ao3-text) !important;
 }

@@ -19,7 +19,7 @@
     --twitter-accent-strong: #1487d4;
 }
 
-.top-bar {
+:where(body[data-app="twitter"]) .top-bar {
     display: grid;
     grid-template-columns: 44px 1fr 44px;
     align-items: center;
@@ -33,7 +33,7 @@
     z-index: 10;
 }
 
-.logo {
+:where(body[data-app="twitter"]) .logo {
     display: flex;
     justify-content: center;
     font-size: 24px;
@@ -63,7 +63,7 @@
     transform: scale(0.95);
 }
 
-.content {
+:where(body[data-app="twitter"]) .content {
     flex: 1;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -75,7 +75,7 @@
     position: relative;
 }
 
-.content::-webkit-scrollbar {
+:where(body[data-app="twitter"]) .content::-webkit-scrollbar {
     display: none;
 }
 
@@ -86,7 +86,7 @@
     padding: 12px;
 }
 
-.tabs {
+:where(body[data-app="twitter"]) .tabs {
     display: grid;
     grid-template-columns: repeat(2, 1fr) 44px;
     gap: 6px;
@@ -115,7 +115,7 @@
     gap: 12px;
 }
 
-.tweet {
+:where(body[data-app="twitter"]) .tweet {
     background: var(--twitter-card);
     border: 1px solid var(--twitter-border);
     border-radius: 16px;
@@ -125,14 +125,14 @@
     gap: 10px;
 }
 
-.tweet .avatar {
+:where(body[data-app="twitter"]) .tweet .avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background: linear-gradient(135deg, #2d89ef, #8ec5ff);
 }
 
-.tweet-header {
+:where(body[data-app="twitter"]) .tweet-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -140,33 +140,33 @@
     color: var(--twitter-muted);
 }
 
-.tweet-author {
+:where(body[data-app="twitter"]) .tweet-author {
     color: var(--twitter-text);
     font-weight: 700;
     margin-right: 6px;
 }
 
-.tweet-meta {
+:where(body[data-app="twitter"]) .tweet-meta {
     color: var(--twitter-muted);
 }
 
-.tweet-menu-btn {
+:where(body[data-app="twitter"]) .tweet-menu-btn {
     opacity: 0;
     transition: opacity 0.15s ease;
 }
 
-.tweet:hover .tweet-menu-btn {
+:where(body[data-app="twitter"]) .tweet:hover .tweet-menu-btn {
     opacity: 1;
 }
 
-.tweet-body {
+:where(body[data-app="twitter"]) .tweet-body {
     font-size: 15px;
     line-height: 1.5;
     margin: 6px 0;
     color: var(--twitter-text);
 }
 
-.tweet-actions {
+:where(body[data-app="twitter"]) .tweet-actions {
     display: flex;
     justify-content: space-between;
     margin-top: 8px;
@@ -174,7 +174,7 @@
     font-size: 13px;
 }
 
-.tweet-actions button {
+:where(body[data-app="twitter"]) .tweet-actions button {
     background: transparent;
     border: none;
     color: inherit;
@@ -187,42 +187,42 @@
     transition: all 0.15s ease;
 }
 
-.tweet-actions button:hover {
+:where(body[data-app="twitter"]) .tweet-actions button:hover {
     background: rgba(29, 155, 240, 0.1);
 }
 
-.tweet-actions button[data-action="like"]:hover {
+:where(body[data-app="twitter"]) .tweet-actions button[data-action="like"]:hover {
     color: #f91880;
 }
 
-.tweet-actions button[data-action="retweet"]:hover {
+:where(body[data-app="twitter"]) .tweet-actions button[data-action="retweet"]:hover {
     color: #00ba7c;
 }
 
-.tweet-actions .bookmarked {
+:where(body[data-app="twitter"]) .tweet-actions .bookmarked {
     color: var(--twitter-accent);
 }
 
-.tweet-actions .bookmarked i {
+:where(body[data-app="twitter"]) .tweet-actions .bookmarked i {
     color: var(--twitter-accent);
 }
 
-.notification-card {
+:where(body[data-app="twitter"]) .notification-card {
     display: flex;
     gap: 12px;
     cursor: pointer;
     transition: background 0.15s ease;
 }
 
-.notification-card:hover {
+:where(body[data-app="twitter"]) .notification-card:hover {
     background: rgba(29, 155, 240, 0.08);
 }
 
-.notification-card.unread {
+:where(body[data-app="twitter"]) .notification-card.unread {
     background: rgba(29, 155, 240, 0.12);
 }
 
-.notification-icon {
+:where(body[data-app="twitter"]) .notification-icon {
     width: 40px;
     height: 40px;
     display: flex;
@@ -232,26 +232,26 @@
     flex-shrink: 0;
 }
 
-.notification-content {
+:where(body[data-app="twitter"]) .notification-content {
     flex: 1;
     min-width: 0;
 }
 
-.notification-header {
+:where(body[data-app="twitter"]) .notification-header {
     font-size: 14px;
     margin-bottom: 4px;
 }
 
-.notification-author {
+:where(body[data-app="twitter"]) .notification-author {
     font-weight: 700;
     color: var(--twitter-text);
 }
 
-.notification-action {
+:where(body[data-app="twitter"]) .notification-action {
     color: var(--twitter-muted);
 }
 
-.notification-tweet {
+:where(body[data-app="twitter"]) .notification-tweet {
     font-size: 13px;
     color: var(--twitter-muted);
     margin-bottom: 4px;
@@ -260,7 +260,7 @@
     border-radius: 8px;
 }
 
-.notification-reply {
+:where(body[data-app="twitter"]) .notification-reply {
     font-size: 14px;
     color: var(--twitter-text);
     margin-top: 6px;
@@ -269,13 +269,13 @@
     border-radius: 8px;
 }
 
-.notification-time {
+:where(body[data-app="twitter"]) .notification-time {
     font-size: 12px;
     color: var(--twitter-muted);
     margin-top: 6px;
 }
 
-.fab-btn {
+:where(body[data-app="twitter"]) .fab-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -295,20 +295,20 @@
     transition: transform 0.15s ease, background 0.15s ease;
 }
 
-.fab-btn:hover {
+:where(body[data-app="twitter"]) .fab-btn:hover {
     background: var(--twitter-accent-strong);
     transform: scale(1.05);
 }
 
-.fab-btn:active {
+:where(body[data-app="twitter"]) .fab-btn:active {
     transform: scale(0.95);
 }
 
-.fab-btn.open {
+:where(body[data-app="twitter"]) .fab-btn.open {
     transform: rotate(45deg);
 }
 
-.fab-menu {
+:where(body[data-app="twitter"]) .fab-menu {
     position: fixed;
     bottom: 88px;
     right: 20px;
@@ -322,13 +322,13 @@
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.fab-menu.show {
+:where(body[data-app="twitter"]) .fab-menu.show {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
 }
 
-.fab-menu-item {
+:where(body[data-app="twitter"]) .fab-menu-item {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -345,16 +345,16 @@
     transition: background 0.15s ease;
 }
 
-.fab-menu-item:hover {
+:where(body[data-app="twitter"]) .fab-menu-item:hover {
     background: rgba(29, 155, 240, 0.15);
 }
 
-.fab-menu-item i {
+:where(body[data-app="twitter"]) .fab-menu-item i {
     font-size: 16px;
     color: var(--twitter-accent);
 }
 
-.compose-modal-overlay {
+:where(body[data-app="twitter"]) .compose-modal-overlay {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.7);
@@ -365,14 +365,14 @@
     padding: 20px;
 }
 
-.compose-modal {
+:where(body[data-app="twitter"]) .compose-modal {
     width: 100%;
     max-width: 500px;
     max-height: 80vh;
     overflow: hidden;
 }
 
-.compose-header {
+:where(body[data-app="twitter"]) .compose-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -381,24 +381,24 @@
     margin-bottom: 12px;
 }
 
-.compose-header h3 {
+:where(body[data-app="twitter"]) .compose-header h3 {
     font-size: 18px;
     font-weight: 700;
 }
 
-.compose-body {
+:where(body[data-app="twitter"]) .compose-body {
     display: flex;
     gap: 12px;
 }
 
-.compose-body .avatar {
+:where(body[data-app="twitter"]) .compose-body .avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     flex-shrink: 0;
 }
 
-.compose-textarea {
+:where(body[data-app="twitter"]) .compose-textarea {
     flex: 1;
     background: transparent;
     border: none;
@@ -409,11 +409,11 @@
     min-height: 100px;
 }
 
-.compose-textarea:focus {
+:where(body[data-app="twitter"]) .compose-textarea:focus {
     outline: none;
 }
 
-.compose-textarea::placeholder {
+:where(body[data-app="twitter"]) .compose-textarea::placeholder {
     color: var(--twitter-muted);
 }
 
@@ -437,15 +437,15 @@
     cursor: not-allowed;
 }
 
-.loading-state,
-.error-state,
+:where(body[data-app="twitter"]) .loading-state,
+:where(body[data-app="twitter"]) .error-state,
 :where(body[data-app="twitter"]) .empty-state {
     text-align: center;
     color: var(--twitter-muted);
     padding: 40px 20px;
 }
 
-.error-state button {
+:where(body[data-app="twitter"]) .error-state button {
     margin-top: 12px;
 }
 
@@ -453,25 +453,25 @@
     padding: 60px 20px;
 }
 
-.empty-state-icon {
+:where(body[data-app="twitter"]) .empty-state-icon {
     font-size: 48px;
     color: var(--twitter-muted);
     margin-bottom: 16px;
 }
 
-.empty-state-title {
+:where(body[data-app="twitter"]) .empty-state-title {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 8px;
     color: var(--twitter-text);
 }
 
-.empty-state-text {
+:where(body[data-app="twitter"]) .empty-state-text {
     font-size: 14px;
     color: var(--twitter-muted);
 }
 
-.feed-container {
+:where(body[data-app="twitter"]) .feed-container {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -483,7 +483,7 @@
     gap: 12px;
 }
 
-.pull-indicator {
+:where(body[data-app="twitter"]) .pull-indicator {
     position: fixed;
     top: calc(44px + env(safe-area-inset-top, 0px) + 10px);
     left: 50%;
@@ -503,19 +503,19 @@
     pointer-events: none;
 }
 
-.pull-indicator.active {
+:where(body[data-app="twitter"]) .pull-indicator.active {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
 
-.notifications-list {
+:where(body[data-app="twitter"]) .notifications-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
 @media (max-width: 520px) {
-    .compose-modal {
+    :where(body[data-app="twitter"]) .compose-modal {
         max-height: 90vh;
         margin: 10px;
     }
@@ -528,4 +528,4 @@ body.desktop-mode .compose-modal {
         margin: 10px;
     }
 
-.tabs .refresh-btn { background: transparent; border: none; color: var(--twitter-accent, #1d9bf0); font-size: 16px; cursor: pointer; }
+:where(body[data-app="twitter"]) .tabs .refresh-btn { background: transparent; border: none; color: var(--twitter-accent, #1d9bf0); font-size: 16px; cursor: pointer; }

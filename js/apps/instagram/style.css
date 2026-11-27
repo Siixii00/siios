@@ -1,4 +1,4 @@
-:root {
+:where(body[data-app="instagram"]) {
     color-scheme: dark;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --accent: #f56040;
@@ -39,7 +39,7 @@
     display: none;
 }
 
-.ig-header {
+:where(body[data-app="instagram"]) .ig-header {
     position: sticky;
     top: 0;
     z-index: 10;
@@ -52,7 +52,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.ig-header .logo {
+:where(body[data-app="instagram"]) .ig-header .logo {
     font-family: 'Great Vibes', 'Inter', cursive;
     margin: 0;
     letter-spacing: 0.03em;
@@ -67,7 +67,7 @@
     text-overflow: ellipsis;
 }
 
-.ig-header .character-select {
+:where(body[data-app="instagram"]) .ig-header .character-select {
     max-width: 96px;
     text-overflow: ellipsis;
 }
@@ -95,7 +95,7 @@
     align-items: center;
 }
 
-.stories {
+:where(body[data-app="instagram"]) .stories {
     padding: 10px 0 0;
     display: flex;
     align-items: center;
@@ -104,11 +104,11 @@
     scrollbar-width: none;
 }
 
-.stories::-webkit-scrollbar {
+:where(body[data-app="instagram"]) .stories::-webkit-scrollbar {
     display: none;
 }
 
-.stories-track {
+:where(body[data-app="instagram"]) .stories-track {
     display: flex;
     gap: 12px;
     padding-right: 16px;
@@ -172,20 +172,20 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
-.post-header {
+:where(body[data-app="instagram"]) .post-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 12px 16px;
 }
 
-.post-user {
+:where(body[data-app="instagram"]) .post-user {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.post-user .avatar-ring {
+:where(body[data-app="instagram"]) .post-user .avatar-ring {
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -193,7 +193,7 @@
     background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
 }
 
-.post-user img {
+:where(body[data-app="instagram"]) .post-user img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -201,29 +201,29 @@
     object-fit: cover;
 }
 
-.post-user strong {
+:where(body[data-app="instagram"]) .post-user strong {
     font-size: 14px;
 }
 
-.post-meta {
+:where(body[data-app="instagram"]) .post-meta {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.6);
 }
 
-.post-image {
+:where(body[data-app="instagram"]) .post-image {
     position: relative;
     aspect-ratio: 4 / 5;
     overflow: hidden;
 }
 
-.post-image img {
+:where(body[data-app="instagram"]) .post-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.like-heart {
+:where(body[data-app="instagram"]) .like-heart {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -235,7 +235,7 @@
     text-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
 }
 
-.like-heart.active {
+:where(body[data-app="instagram"]) .like-heart.active {
     animation: heart-pop 0.8s ease;
 }
 
@@ -259,21 +259,21 @@
     cursor: pointer;
 }
 
-.post-stats {
+:where(body[data-app="instagram"]) .post-stats {
     padding: 0 16px 12px;
     font-size: 14px;
 }
 
-.caption {
+:where(body[data-app="instagram"]) .caption {
     padding: 0 16px 12px;
     font-size: 14px;
 }
 
-.caption strong {
+:where(body[data-app="instagram"]) .caption strong {
     margin-right: 6px;
 }
 
-.view-comments {
+:where(body[data-app="instagram"]) .view-comments {
     padding: 0 16px 14px;
     font-size: 13px;
     color: rgba(255, 255, 255, 0.58);
@@ -318,7 +318,7 @@
     background: var(--accent);
 }
 
-.nav-avatar {
+:where(body[data-app="instagram"]) .nav-avatar {
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -336,7 +336,7 @@
 }
 
 @media (max-width: 380px) {
-    .stories-track {
+    :where(body[data-app="instagram"]) .stories-track {
         gap: 8px;
     }
 
@@ -345,32 +345,32 @@
     }
 }
 /* Reels */
-.reels-wrap { display: flex; flex-direction: column; gap: 12px; padding: 12px; }
-.reels-bar { display: flex; justify-content: flex-end; }
-.reels-generate { padding: 8px 14px; border-radius: 18px; border: 1px solid var(--ig-border); background: var(--ig-surface); color: var(--ig-text); font-size: 13px; cursor: pointer; }
-.reels-generate:disabled { opacity: 0.6; cursor: wait; }
-.reels-empty { text-align: center; color: var(--ig-text-secondary); padding: 40px 0; font-size: 14px; }
-.reels-list { display: flex; flex-direction: column; gap: 12px; }
-.reel { position: relative; min-height: 340px; border-radius: 16px; padding: 16px; display: flex; justify-content: space-between; align-items: flex-end; color: #fff; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45); }
-.reel-info { flex: 1; padding-right: 12px; }
-.reel-caption { margin: 6px 0; font-size: 14px; line-height: 1.5; }
-.reel-music { font-size: 12px; opacity: 0.9; }
-.reel-side { display: flex; flex-direction: column; align-items: center; gap: 12px; font-size: 13px; }
-.reel-like { background: none; border: none; color: #fff; font-size: 14px; cursor: pointer; }
-.reel-like.liked { color: #ff4d6d; }
-.reel-del { background: rgba(0, 0, 0, 0.3); border: none; color: #fff; border-radius: 10px; font-size: 11px; padding: 4px 8px; cursor: pointer; }
+:where(body[data-app="instagram"]) .reels-wrap { display: flex; flex-direction: column; gap: 12px; padding: 12px; }
+:where(body[data-app="instagram"]) .reels-bar { display: flex; justify-content: flex-end; }
+:where(body[data-app="instagram"]) .reels-generate { padding: 8px 14px; border-radius: 18px; border: 1px solid var(--ig-border); background: var(--ig-surface); color: var(--ig-text); font-size: 13px; cursor: pointer; }
+:where(body[data-app="instagram"]) .reels-generate:disabled { opacity: 0.6; cursor: wait; }
+:where(body[data-app="instagram"]) .reels-empty { text-align: center; color: var(--ig-text-secondary); padding: 40px 0; font-size: 14px; }
+:where(body[data-app="instagram"]) .reels-list { display: flex; flex-direction: column; gap: 12px; }
+:where(body[data-app="instagram"]) .reel { position: relative; min-height: 340px; border-radius: 16px; padding: 16px; display: flex; justify-content: space-between; align-items: flex-end; color: #fff; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45); }
+:where(body[data-app="instagram"]) .reel-info { flex: 1; padding-right: 12px; }
+:where(body[data-app="instagram"]) .reel-caption { margin: 6px 0; font-size: 14px; line-height: 1.5; }
+:where(body[data-app="instagram"]) .reel-music { font-size: 12px; opacity: 0.9; }
+:where(body[data-app="instagram"]) .reel-side { display: flex; flex-direction: column; align-items: center; gap: 12px; font-size: 13px; }
+:where(body[data-app="instagram"]) .reel-like { background: none; border: none; color: #fff; font-size: 14px; cursor: pointer; }
+:where(body[data-app="instagram"]) .reel-like.liked { color: #ff4d6d; }
+:where(body[data-app="instagram"]) .reel-del { background: rgba(0, 0, 0, 0.3); border: none; color: #fff; border-radius: 10px; font-size: 11px; padding: 4px 8px; cursor: pointer; }
 
 /* 商店 */
-.shop-wrap { padding: 12px; }
+:where(body[data-app="instagram"]) .shop-wrap { padding: 12px; }
 :where(body[data-app="instagram"]) .shop-balance { text-align: right; font-size: 12px; color: var(--ig-text-secondary); margin-bottom: 10px; }
-.shop-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-.shop-item { background: var(--ig-surface); border: 1px solid var(--ig-border); border-radius: 14px; padding: 14px; text-align: center; }
-.shop-image { font-size: 48px; margin-bottom: 8px; }
-.shop-name { font-size: 14px; font-weight: 600; color: var(--ig-text); }
-.shop-seller { font-size: 11px; color: var(--ig-text-secondary); margin: 2px 0 6px; }
-.shop-price { font-size: 15px; font-weight: 700; color: var(--ig-primary); margin-bottom: 8px; }
-.shop-buy { width: 100%; padding: 8px; background: var(--ig-primary); color: #fff; border: none; border-radius: 8px; font-size: 13px; cursor: pointer; }
-.shop-buy:disabled { opacity: 0.6; }
+:where(body[data-app="instagram"]) .shop-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+:where(body[data-app="instagram"]) .shop-item { background: var(--ig-surface); border: 1px solid var(--ig-border); border-radius: 14px; padding: 14px; text-align: center; }
+:where(body[data-app="instagram"]) .shop-image { font-size: 48px; margin-bottom: 8px; }
+:where(body[data-app="instagram"]) .shop-name { font-size: 14px; font-weight: 600; color: var(--ig-text); }
+:where(body[data-app="instagram"]) .shop-seller { font-size: 11px; color: var(--ig-text-secondary); margin: 2px 0 6px; }
+:where(body[data-app="instagram"]) .shop-price { font-size: 15px; font-weight: 700; color: var(--ig-primary); margin-bottom: 8px; }
+:where(body[data-app="instagram"]) .shop-buy { width: 100%; padding: 8px; background: var(--ig-primary); color: #fff; border: none; border-radius: 8px; font-size: 13px; cursor: pointer; }
+:where(body[data-app="instagram"]) .shop-buy:disabled { opacity: 0.6; }
 
 /* 桌面外框 */
 /* 桌面的手機外框裡視窗很寬，上面的 max-width 手機版面不會套用，這裡用 body.desktop-mode 再套一次 */

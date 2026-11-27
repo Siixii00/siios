@@ -1,12 +1,12 @@
 .payment-app { --payment-bg: #1a1a2e; --payment-card: #16213e; --payment-text: #e5e5e5; --payment-muted: #888; --payment-accent: #e94560; }
 :where(body[data-app="payment-code"]) .payment-app .page { background: var(--payment-bg); min-height: calc(var(--app-h, 100vh) - 96px); display: flex; align-items: center; justify-content: center; padding: 16px; }
-.code-container { background: var(--payment-card); border-radius: 20px; padding: 32px; text-align: center; width: 100%; max-width: 300px; }
-.qr-placeholder { background: white; border-radius: 12px; padding: 24px; margin-bottom: 16px; }
-.qr-placeholder i { font-size: 120px; color: #333; }
-.code-text { font-size: 24px; font-weight: 700; color: #333; margin-top: 12px; letter-spacing: 4px; }
-.code-hint { font-size: 13px; color: var(--payment-muted); margin-bottom: 16px; }
-.refresh-btn { padding: 12px 24px; background: var(--payment-accent); color: white; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; }
-.qr-box { background: #fff; border-radius: 12px; padding: 12px; margin-bottom: 12px; }
-.qr-box svg { display: block; width: 100%; height: auto; }
+:where(body[data-app="payment-code"]) .code-container { background: var(--payment-card); border-radius: 20px; padding: 32px; text-align: center; width: 100%; max-width: 300px; }
+:where(body[data-app="payment-code"]) .qr-placeholder { background: white; border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+:where(body[data-app="payment-code"]) .qr-placeholder i { font-size: 120px; color: #333; }
+:where(body[data-app="payment-code"]) .code-text { font-size: 24px; font-weight: 700; color: #333; margin-top: 12px; letter-spacing: 4px; }
+:where(body[data-app="payment-code"]) .code-hint { font-size: 13px; color: var(--payment-muted); margin-bottom: 16px; }
+:where(body[data-app="payment-code"]) .refresh-btn { padding: 12px 24px; background: var(--payment-accent); color: white; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; }
+:where(body[data-app="payment-code"]) .qr-box { background: #fff; border-radius: 12px; padding: 12px; margin-bottom: 12px; }
+:where(body[data-app="payment-code"]) .qr-box svg { display: block; width: 100%; height: auto; }
 .payment-app .code-text { color: var(--payment-text); font-size: 20px; margin: 0 0 8px; }
-.code-expiry { font-size: 12px; color: var(--payment-muted); margin: 0 0 14px; }
+:where(body[data-app="payment-code"]) .code-expiry { font-size: 12px; color: var(--payment-muted); margin: 0 0 14px; }

@@ -18,7 +18,7 @@
   overflow: hidden;
 }
 
-.ocean-bg {
+:where(body[data-app="drift-bottle"]) .ocean-bg {
   position: absolute;
   inset: 0;
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="rgba(255,255,255,0.03)" d="M0 50 Q25 45 50 50 T100 50 V100 H0Z"/></svg>');
@@ -31,7 +31,7 @@
   100% { transform: translateX(-50%); }
 }
 
-.card-display {
+:where(body[data-app="drift-bottle"]) .card-display {
   flex: 1;
   display: flex;
   align-items: center;
@@ -40,18 +40,18 @@
   max-width: 320px;
 }
 
-.card-placeholder {
+:where(body[data-app="drift-bottle"]) .card-placeholder {
   text-align: center;
   color: var(--drift-muted);
 }
 
-.card-placeholder i {
+:where(body[data-app="drift-bottle"]) .card-placeholder i {
   font-size: 48px;
   margin-bottom: 16px;
   opacity: 0.6;
 }
 
-.tarot-card {
+:where(body[data-app="drift-bottle"]) .tarot-card {
   background: linear-gradient(145deg, #fff8e1, #ffe0b2);
   border-radius: 12px;
   padding: 24px;
@@ -66,29 +66,29 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-.tarot-card.reversed {
+:where(body[data-app="drift-bottle"]) .tarot-card.reversed {
   transform: rotate(180deg);
 }
 
-.card-name {
+:where(body[data-app="drift-bottle"]) .card-name {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
-.card-position {
+:where(body[data-app="drift-bottle"]) .card-position {
   font-size: 14px;
   color: #8d6e63;
   margin-bottom: 16px;
 }
 
-.card-meaning {
+:where(body[data-app="drift-bottle"]) .card-meaning {
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 16px;
 }
 
-.card-advice {
+:where(body[data-app="drift-bottle"]) .card-advice {
   font-size: 12px;
   color: #6d4c41;
   padding: 12px;
@@ -96,7 +96,7 @@
   border-radius: 8px;
 }
 
-.draw-btn {
+:where(body[data-app="drift-bottle"]) .draw-btn {
   padding: 16px 32px;
   background: var(--drift-accent);
   color: #0d47a1;
@@ -111,30 +111,30 @@
   box-shadow: 0 4px 20px rgba(100, 181, 246, 0.4);
 }
 
-.draw-btn:hover {
+:where(body[data-app="drift-bottle"]) .draw-btn:hover {
   background: #42a5f5;
 }
 
-.history-section {
+:where(body[data-app="drift-bottle"]) .history-section {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 16px;
   max-width: 320px;
 }
 
-.history-section h3 {
+:where(body[data-app="drift-bottle"]) .history-section h3 {
   font-size: 14px;
   color: var(--drift-text);
   margin-bottom: 8px;
 }
 
-.history-section p {
+:where(body[data-app="drift-bottle"]) .history-section p {
   font-size: 12px;
   color: var(--drift-muted);
   line-height: 1.5;
 }
 
-.character-selector { width: 100%; max-width: 320px; margin-bottom: 16px; }
-.selector-label { display: block; font-size: 14px; color: var(--drift-text); margin-bottom: 8px; }
-.character-select { width: 100%; padding: 12px 16px; background: rgba(255, 255, 255, 0.15); color: var(--drift-text); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; font-size: 14px; cursor: pointer; }
-.character-select option { background: #1565c0; color: white; }
+:where(body[data-app="drift-bottle"]) .character-selector { width: 100%; max-width: 320px; margin-bottom: 16px; }
+:where(body[data-app="drift-bottle"]) .selector-label { display: block; font-size: 14px; color: var(--drift-text); margin-bottom: 8px; }
+:where(body[data-app="drift-bottle"]) .character-select { width: 100%; padding: 12px 16px; background: rgba(255, 255, 255, 0.15); color: var(--drift-text); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; font-size: 14px; cursor: pointer; }
+:where(body[data-app="drift-bottle"]) .character-select option { background: #1565c0; color: white; }
