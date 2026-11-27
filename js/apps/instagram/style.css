@@ -70,6 +70,20 @@
 :where(body[data-app="instagram"]) .ig-header .character-select {
     max-width: 96px;
     text-overflow: ellipsis;
+    /* Tailwind 表單預設是白底；這裡是深色介面，文字要看得到 */
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--ig-text);
+    border: 1px solid var(--ig-border);
+    border-radius: 8px;
+    padding: 6px 28px 6px 10px;
+    font-size: 13px;
+    background-position: right 6px center;
+    background-size: 14px;
+}
+
+:where(body[data-app="instagram"]) .ig-header .character-select option {
+    background: var(--ig-surface);
+    color: var(--ig-text);
 }
 
 :where(body[data-app="instagram"]) .icon-btn {
@@ -248,7 +262,7 @@
 :where(body[data-app="instagram"]) .post-actions {
     display: flex;
     justify-content: space-between;
-    padding: 10px 16px;
+    padding: 2px 6px;
     font-size: 20px;
 }
 
@@ -257,6 +271,9 @@
     background: transparent;
     font-size: 22px;
     cursor: pointer;
+    /* 觸控範圍至少 44px */
+    min-width: 44px;
+    min-height: 44px;
 }
 
 :where(body[data-app="instagram"]) .post-stats {
@@ -294,6 +311,7 @@
 }
 
 :where(body[data-app="instagram"]) .nav-btn {
+    flex: 1;
     border: none;
     background: transparent;
     padding: 10px 0;
