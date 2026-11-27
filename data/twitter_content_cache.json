@@ -1,161 +1,206 @@
 {
   "metadata": {
-    "last_updated": "2026-11-26T21:22:24.758362",
-    "total_items": 59
+    "last_updated": "2026-11-27T03:57:42.274933",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
-        "title": "AMD Specific Patches for Llama.cpp",
-        "url": "https://devnull.land/amd-specific-llama-cpp",
+        "title": "Hard Drive pricing has gotten bad",
+        "url": "https://blog.ktz.me/black-friday-hard-drive-prices-are-messed-up/",
         "source": "Hacker News",
-        "score": 195
+        "score": 119
       },
       {
-        "title": "CTO of 'RansomwareHelp' Indicted for Wire Fraud",
-        "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
+        "title": "AI made self-hosting fun again",
+        "url": "https://janlukas.blog/posts/ai-self-hosting",
         "source": "Hacker News",
-        "score": 140
+        "score": 407
+      },
+      {
+        "title": "Kamil Khan Mumtaz: Pakistani architect, admired at home, almost invisible abroad",
+        "url": "https://worksinprogress.co/issue/the-greatest-architect-youve-never-heard-of-is-in-pakistan/",
+        "source": "Hacker News",
+        "score": 281
       },
       {
         "title": "YouTube Ad Punisher – Auto-reloads YouTube pages when an ad plays",
         "url": "https://github.com/antonpictures/youtube-punisher",
         "source": "Hacker News",
-        "score": 133
+        "score": 301
       },
       {
-        "title": "Show HN: Fuck_data_brokers.py",
-        "url": "https://github.com/gary23w/f-ck_data_brokers",
+        "title": "AMD-specific fork of llama.cpp",
+        "url": "https://devnull.land/amd-specific-llama-cpp",
         "source": "Hacker News",
-        "score": 106
+        "score": 303
       },
       {
-        "title": "Rvoip 0.5 the complete VoIP stack in Rust",
-        "url": "https://github.com/eisenzopf/rvoip",
+        "title": "CTO of 'RansomwareHelp' indicted for wire fraud",
+        "url": "https://krebsonsecurity.com/2026/11/cto-of-ransomwarehelp-indicted-for-wire-fraud/",
         "source": "Hacker News",
-        "score": 20
+        "score": 235
+      },
+      {
+        "title": "Google will show solo Android developers' phone numbers and addresses",
+        "url": "https://support.google.com/googleplay/android-developer/answer/17594752?hl=en",
+        "source": "Hacker News",
+        "score": 33
       },
       {
         "title": "Intel One Mono font (2023)",
         "url": "https://github.com/intel/intel-one-mono",
         "source": "Hacker News",
-        "score": 414
+        "score": 484
       },
       {
-        "title": "The USA as a Civilizations-esque map",
-        "url": "https://karpathy.ai/usaciv/",
+        "title": "Novita, StreamLake, etc. are ByteDance Ark wrappers",
+        "url": "https://kendell.dev/blog/arkwrapper/",
         "source": "Hacker News",
         "score": 60
       },
       {
-        "title": "Show HN: Olumino, a Markdown notes and spaced repetition app",
-        "url": "https://olumino.app",
+        "title": "Company Culture = Slack Emoji ÷ √Headcount",
+        "url": "https://lia.mg/posts/measuring-company-culture-with-slack-emoji/",
         "source": "Hacker News",
-        "score": 24
+        "score": 166
       },
       {
-        "title": "George Whitesides, 1939-2026",
-        "url": "https://www.science.org/content/blog-post/george-whitesides-1939-2026",
+        "title": "Show HN: Sqrin – A better screen share for Mac",
+        "url": "https://sqrin.app",
         "source": "Hacker News",
-        "score": 24
+        "score": 3
       },
       {
-        "title": "Curiosity Is No Solo Act",
-        "url": "https://thereader.mitpress.mit.edu/curiosity-is-no-solo-act/",
+        "title": "An introduction to uncertainty in machine learning",
+        "url": "https://chrhenning.com/blog/2026/introduction-to-uncertainty/",
         "source": "Hacker News",
-        "score": 105
+        "score": 28
       },
       {
-        "title": "Show HN: Three Linux VMs in a browser tab, each running a different browser",
-        "url": "https://michidk.github.io/sidebyside/",
+        "title": "Largest 2D Chart library in the world using BUI: BlenderUI",
+        "url": "https://bui.preetham.top/charts/",
         "source": "Hacker News",
-        "score": 87
-      },
-      {
-        "title": "Show HN: SimDrop – Running iOS simulators in the macOS Finder sidebar",
-        "url": "https://github.com/rxliuli/sim-drop",
-        "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "Lions' Commentary on Unix: Why It Was Secretly Copied for 20 Years",
-        "url": "https://fosscomics.com/posts/17.%20Lions%27%20Commentary%20on%20Unix/",
-        "source": "Hacker News",
-        "score": 257
+        "score": 77
       },
       {
         "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
         "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
         "source": "Hacker News",
-        "score": 148
+        "score": 276
       },
       {
-        "title": "Nextcloud Office Desktop app",
-        "url": "https://nextcloud.com/blog/euro-office-comes-to-your-desktop-with-the-nextcloud-office-desktop-app/",
+        "title": "Rvoip: VoIP stack in Rust",
+        "url": "https://github.com/eisenzopf/rvoip",
         "source": "Hacker News",
-        "score": 371
+        "score": 102
       }
     ],
     "ai": [
       {
+        "title": "AI made self-hosting fun again",
+        "url": "https://janlukas.blog/posts/ai-self-hosting",
+        "source": "Hacker News AI",
+        "score": 407
+      },
+      {
+        "title": "An introduction to uncertainty in machine learning",
+        "url": "https://chrhenning.com/blog/2026/introduction-to-uncertainty/",
+        "source": "Hacker News AI",
+        "score": 28
+      },
+      {
         "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
         "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
         "source": "Hacker News AI",
-        "score": 148
+        "score": 276
       },
       {
-        "title": "Much shorter version of GRH Lean verification from Anthropic",
-        "url": "https://github.com/lsernau/grh-lean",
+        "title": "The USAID Files",
+        "url": "https://reclaimthenet.org/usaid-files",
         "source": "Hacker News AI",
-        "score": 540
+        "score": 185
       },
       {
         "title": "An algebraic quantization of gravity from the null cone",
         "url": "https://arxiv.org/abs/2611.34924",
         "source": "Hacker News AI",
-        "score": 173
+        "score": 225
+      },
+      {
+        "title": "AI agents now control part of DeepMind's compute for Gemini experiments",
+        "url": "https://the-decoder.com/ai-agents-now-control-part-of-deepminds-compute-for-gemini-experiments-but-recursive-self-improvement-remains-distant/",
+        "source": "Hacker News AI",
+        "score": 41
       },
       {
         "title": "OpenAI may be in cost control mode",
         "url": "https://micjm.com/blog/openai-is-in-cost-control-mode/",
         "source": "Hacker News AI",
-        "score": 105
+        "score": 299
       },
       {
-        "title": "Tell HN: Lots of Ask HNs again",
-        "url": "https://news.ycombinator.com/item?id=50649864",
+        "title": "Against the International Oligarchy",
+        "url": "https://parismanifesto.world/en/",
         "source": "Hacker News AI",
-        "score": 386
-      },
-      {
-        "title": "An Introduction to Uncertainty in Machine Learning",
-        "url": "https://chrhenning.com/blog/2026/introduction-to-uncertainty/",
-        "source": "Hacker News AI",
-        "score": 4
-      },
-      {
-        "title": "Banks look to dump AI debt",
-        "url": "https://www.semafor.com/article/11/26/2026/banks-look-to-dump-ai-debt",
-        "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "Testers think they're hitting Claude Opus 5.6 through an Opus 5.5 Extra route",
-        "url": "https://www.testingcatalog.com/testers-share-early-results-possible-claude-opus-5-6/",
-        "source": "Hacker News AI",
-        "score": 24
+        "score": 12
       },
       {
         "title": "The New York Times warns photographers not to update Photoshop over AI features",
         "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
         "source": "Hacker News AI",
-        "score": 635
+        "score": 659
+      },
+      {
+        "title": "Testers think they're hitting Claude Opus 5.6 through an Opus 5.5 Extra route",
+        "url": "https://www.testingcatalog.com/testers-share-early-results-possible-claude-opus-5-6/",
+        "source": "Hacker News AI",
+        "score": 37
+      },
+      {
+        "title": "Top-cited AI scientists at four US companies compared",
+        "url": "https://topcitedscientists.com/figures/ai-at-four-us-companies/",
+        "source": "Hacker News AI",
+        "score": 37
+      },
+      {
+        "title": "Much shorter version of GRH Lean verification from Anthropic",
+        "url": "https://github.com/lsernau/grh-lean",
+        "source": "Hacker News AI",
+        "score": 550
+      },
+      {
+        "title": "OpenAI cuts GPT-6.2 usage: Astra hits limits 40% faster, Sol 25% faster",
+        "url": "https://twitter.com/thsottiaux/status/2125784147889393806",
+        "source": "Hacker News AI",
+        "score": 472
+      },
+      {
+        "title": "Porting Rockbox to an undocumented $9 Aliexpress 'YP3' MP3 Player with LLMs",
+        "url": "https://jayd.ml/2026/11/14/rockbox-on-yp3.html",
+        "source": "Hacker News AI",
+        "score": 275
       }
     ],
     "news": [
       {
+        "title": "US too focused on Middle East and not pushing Russia hard enough, Zelensky tells BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Major Thanksgiving storm brings flooding, flight delays across US",
+        "url": "https://www.bbc.co.uk/news/articles/ckm2mz3prq77o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Watch: Roofs torn off and streets under water as severe weather hits US",
         "url": "https://www.bbc.co.uk/news/videos/cq808d704m22o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "New Zealand's ruling coalition falls short of parliamentary majority by one seat",
+        "url": "https://www.bbc.co.uk/news/articles/c670278qk879o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -169,23 +214,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Diesel tanker carrying up to 7,000 tonnes capsizes near Ibiza, killing one",
-        "url": "https://www.bbc.co.uk/news/articles/c9gklryvj24do?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Gérard Depardieu to stand trial for alleged rape of actress in 2018, court rules",
         "url": "https://www.bbc.co.uk/news/articles/cmlyd76kyx44o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Pregnant US inmate escapes in prison vehicle after medical appointment",
-        "url": "https://www.bbc.co.uk/news/articles/c9m2jke85xzxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Two Italians killed in strike in Kuwait, as Iran denies responsibility",
-        "url": "https://www.bbc.co.uk/news/articles/c39w9y5dx4k5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -265,6 +295,16 @@
     ],
     "gaming": [
       {
+        "title": "8 Funniest ‘Far Side’ Comics About Fruits and Vegetables",
+        "url": "https://www.polygon.com/8-funniest-far-side-fruits-and-veggies/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Star Trek: Voyager Officially Revisits the Series' Best Two-Parter in a Brand-New Way",
+        "url": "https://www.polygon.com/star-trek-voyager-across-the-unknown-year-of-hell-dlc-announced/",
+        "source": "Polygon"
+      },
+      {
         "title": "GTA: Boston Would Go Wicked Hard, Kid",
         "url": "https://www.polygon.com/gta-6-boston-massachussetts/",
         "source": "Polygon"
@@ -287,16 +327,6 @@
       {
         "title": "The 14 Best Star Wars Games of All Time, Ranked",
         "url": "https://www.polygon.com/best-star-wars-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Sorry Jason And Lucia, These 5 GTA 6 Side Characters Steal Every Scene They're In",
-        "url": "https://www.polygon.com/gta-6-best-side-characters/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA 6 Developers Have Voted Against Unionization by 75% to 25%",
-        "url": "https://www.polygon.com/rockstar-game-workers-union-vote-gta-6/",
         "source": "Polygon"
       }
     ],
