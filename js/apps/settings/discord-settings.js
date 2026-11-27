@@ -331,7 +331,7 @@ async function renderDiscordSettings() {
     // 同步記憶到 Worker
     const memSyncBtn = createElement('button', 'ios-btn w-full mt-2 mx-4');
     memSyncBtn.style.maxWidth = 'calc(100% - 32px)';
-    memSyncBtn.style.background = '#10B981';
+    memSyncBtn.style.background = '#059669';
     memSyncBtn.style.color = '#fff';
     memSyncBtn.textContent = '🧠 同步記憶（雙向）';
     memSyncBtn.onclick = async () => {
@@ -413,7 +413,7 @@ main.appendChild(wiSyncBtn);
     // 備份資料並下載（直接從 PWA 觸發，不需 GitHub Actions）
     const backupBtn = createElement('button', 'ios-btn w-full mt-2 mx-4');
     backupBtn.style.maxWidth = 'calc(100% - 32px)';
-    backupBtn.style.background = '#F59E0B';
+    backupBtn.style.background = '#D97706';
     backupBtn.style.color = '#fff';
     backupBtn.textContent = '💾 備份資料並下載';
     backupBtn.onclick = async () => {

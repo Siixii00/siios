@@ -330,7 +330,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--nt-ink-faint);
+  color: var(--nt-ink-muted);
   font-size: 14px;
   text-align: center;
   padding: var(--nt-s-lg);

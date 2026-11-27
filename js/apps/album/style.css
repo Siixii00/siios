@@ -209,12 +209,12 @@
 :where(body[data-app="album"]) .album-app .empty-state p {
     font-size: 17px;
     margin-bottom: 4px;
-    color: var(--zapier-body-mid);
+    color: #716d62;
 }
 
 .album-app .empty-hint {
     font-size: 13px;
-    color: var(--zapier-mute);
+    color: #716d62;
     max-width: 260px;
 }
 

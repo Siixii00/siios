@@ -234,7 +234,7 @@ async function renderMCPMarket() {
             customList.appendChild(toolItem);
         });
     } else {
-        const emptyMsg = createElement('p', 'text-xs text-purple-400 text-center');
+        const emptyMsg = createElement('p', 'text-xs text-purple-600 text-center');
         emptyMsg.textContent = '尚未新增自定義工具';
         customList.appendChild(emptyMsg);
     }

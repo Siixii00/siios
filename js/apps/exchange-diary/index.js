@@ -18,6 +18,13 @@ const PROFILE_COLORS = [
   '#2a9d99', '#1aae39', '#62aef0', '#e65100'
 ];
 
+// 頭像底色有深有淺，文字顏色依底色挑黑或白，避免淺色底配白字看不清楚
+function avatarTextColor(hex) {
+  const [r, g, b] = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255)
+    .map(v => (v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4)));
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b > 0.2 ? '#1b1b1b' : '#ffffff';
+}
+
 const DEFAULT_PROFILES = [
   { id: 'writer_1', name: '小多', color: '#0075de' },
   { id: 'writer_2', name: '阿嗨', color: '#d6b6f6' }
@@ -99,7 +106,7 @@ function renderWriterBar(container) {
   if (!bar) return;
   bar.innerHTML = profiles.map(p => `
     <button class="diary-writer-pill ${p.id === activeWriterId ? 'active' : ''}" data-writer="${p.id}">
-      <span class="diary-writer-avatar" style="background:${p.color}">${escapeHtml(p.name.charAt(0))}</span>
+      <span class="diary-writer-avatar" style="background:${p.color};color:${avatarTextColor(p.color)}">${escapeHtml(p.name.charAt(0))}</span>
       ${escapeHtml(p.name)}
     </button>
   `).join('');
@@ -239,7 +246,7 @@ function renderEntryCard(entry, isReply = false) {
   return `
     <div class="diary-entry-card${isReply ? ' reply' : ''}" style="${isReply ? `border-left-color:${borderColor}` : ''}" data-entry-id="${entry.id}">
       <div class="diary-entry-top">
-        <span class="diary-entry-avatar" style="background:${writer?.color || '#0075de'}">${writerInitial}</span>
+        <span class="diary-entry-avatar" style="background:${writer?.color || '#0075de'};color:${avatarTextColor(writer?.color || '#0075de')}">${writerInitial}</span>
         <div class="diary-entry-meta">
           <span class="diary-entry-writer">${writerName}</span>
           <span class="diary-entry-time">${formatTime(entry.createdAt)}</span>
@@ -345,7 +352,7 @@ function openEditor(container, dateStr, replyTo = null) {
       </div>
       <div class="diary-editor-body">
         <div class="diary-editor-writer">
-          <span class="diary-writer-avatar" style="background:${writer.color}">${escapeHtml(writer.name.charAt(0))}</span>
+          <span class="diary-writer-avatar" style="background:${writer.color};color:${avatarTextColor(writer.color)}">${escapeHtml(writer.name.charAt(0))}</span>
           <span class="diary-editor-writer-name">${escapeHtml(writer.name)}</span>
           ${replyEntry ? `<span style="color:var(--nt-ink-faint);font-size:12px;margin-left:8px">回覆 ${replyWriterName}</span>` : ''}
         </div>
@@ -513,7 +520,7 @@ function openProfileModal(container) {
       <div class="diary-profile-list">
         ${profiles.map((p, i) => `
           <div class="diary-profile-item" data-idx="${i}">
-            <span class="diary-writer-avatar" style="background:${p.color}">${escapeHtml(p.name.charAt(0))}</span>
+            <span class="diary-writer-avatar" style="background:${p.color};color:${avatarTextColor(p.color)}">${escapeHtml(p.name.charAt(0))}</span>
             <input class="diary-profile-input" value="${escapeHtml(p.name)}" data-field="name" data-idx="${i}">
             <div class="diary-color-picker">
               ${PROFILE_COLORS.map(c => `<span class="diary-color-swatch${c === p.color ? ' active' : ''}" style="background:${c}" data-color="${c}" data-idx="${i}"></span>`).join('')}
@@ -547,6 +554,7 @@ function openProfileModal(container) {
       const avatar = modal.querySelector(`.diary-profile-item[data-idx="${idx}"] .diary-writer-avatar`);
       if (avatar) {
         avatar.style.background = color;
+        avatar.style.color = avatarTextColor(color);
         avatar.textContent = profiles[idx].name.charAt(0);
       }
     };

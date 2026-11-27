@@ -50,7 +50,7 @@ async function renderDiscordUserBinding() {
     // 同步綁定到 Worker
     const syncBtn = createElement('button', 'ios-btn w-full mb-2 mx-4');
     syncBtn.style.maxWidth = 'calc(100% - 32px)';
-    syncBtn.style.background = '#10B981';
+    syncBtn.style.background = '#059669';
     syncBtn.style.color = '#fff';
     syncBtn.textContent = '🔄 同步綁定到 Worker';
     syncBtn.onclick = async () => {
@@ -95,7 +95,7 @@ async function renderDiscordUserBinding() {
         emptyState.innerHTML = `
             <span class="material-symbols-outlined text-6xl text-gray-300 mb-4 block">link_off</span>
             <p class="text-gray-500 text-sm">尚未綁定任何 Discord 用戶</p>
-            <p class="text-gray-400 text-xs mt-2">點擊上方按鈕開始綁定</p>
+            <p class="text-gray-500 text-xs mt-2">點擊上方按鈕開始綁定</p>
         `;
         main.appendChild(emptyState);
     } else {

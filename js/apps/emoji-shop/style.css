@@ -4,6 +4,6 @@
 .emoji-item { background: var(--emoji-card); border-radius: 12px; padding: 16px; text-align: center; cursor: pointer; }
 .emoji-icon { font-size: 36px; display: block; margin-bottom: 8px; }
 .emoji-name { font-size: 12px; color: var(--emoji-text); display: block; margin-bottom: 4px; }
-:where(body[data-app="emoji-shop"]) .price { font-size: 11px; color: var(--emoji-accent); }
+:where(body[data-app="emoji-shop"]) .price { font-size: 11px; color: #d84315; }
 .owned { font-size: 11px; color: #4caf50; }
 .emoji-item.owned { opacity: 0.6; cursor: default; }

@@ -243,7 +243,7 @@ function renderSidebar(container) {
                     `).join('')}
                 </div>
             ` : ''}
-            ${records.length === 0 ? '<div style="padding:24px;text-align:center;color:var(--nt-ink-faint);font-size:13px">尚無頁面<br>點擊同步或新增</div>' : ''}
+            ${records.length === 0 ? '<div style="padding:24px;text-align:center;color:var(--nt-ink-muted);font-size:13px">尚無頁面<br>點擊同步或新增</div>' : ''}
         `;
 
         listEl.querySelectorAll('.wiki-page-item').forEach(item => {

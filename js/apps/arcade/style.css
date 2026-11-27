@@ -155,7 +155,7 @@
 }
 
 :where(body[data-app="arcade"]) .stat-item.rarity-4 .stat-value {
-  color: var(--rarity-4);
+  color: #d27fd2;
 }
 
 :where(body[data-app="arcade"]) .gacha-history {

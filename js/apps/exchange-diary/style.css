@@ -192,7 +192,7 @@
 .diary-calendar-weekday {
   font-size: 12px;
   font-weight: 500;
-  color: var(--nt-ink-faint);
+  color: var(--nt-ink-muted);
   padding: var(--nt-s-xxs) 0;
 }
 

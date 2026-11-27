@@ -5,7 +5,7 @@
 :where(body[data-app="guzi-guide"]) .stat-label { display: block; font-size: 11px; color: var(--guzi-muted); margin-bottom: 4px; }
 :where(body[data-app="guzi-guide"]) .stat-value { font-size: 18px; font-weight: 700; color: var(--guzi-text); }
 .total-count { background: var(--guzi-card); padding: 16px; border-radius: 12px; display: flex; justify-content: space-between; margin-bottom: 16px; font-weight: 600; }
-.total { font-size: 20px; color: var(--guzi-accent); }
+.total { font-size: 20px; color: var(--guzi-text); }
 .item-list { background: var(--guzi-card); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
 .item-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #ffe0b2; }
 :where(body[data-app="guzi-guide"]) .item-name { color: var(--guzi-text); }

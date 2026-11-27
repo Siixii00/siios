@@ -92,7 +92,7 @@ async function renderDiscordGuide() {
             };
             row.append(copyBtn, dlBtn);
             card.appendChild(row);
-            card.appendChild(createElement('div', 'text-xs text-gray-400 mt-1', { textContent: `程式碼版本 ${EXPECTED_WORKER_VERSION}` }));
+            card.appendChild(createElement('div', 'text-xs text-gray-500 mt-1', { textContent: `程式碼版本 ${EXPECTED_WORKER_VERSION}` }));
         }
         if (step.accessKey) {
             const keyRow = createElement('div', '');
