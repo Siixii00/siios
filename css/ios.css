@@ -41,6 +41,23 @@
     z-index: 1;
 }
 
+/* Chats、Music 標題列右側的圖示按鈕：觸控範圍至少 40px、按鈕之間留間距（原本沒有任何樣式，只有 14~20px 寬且黏在一起） */
+:where(body[data-app="chats"], body[data-app="music"]) .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-right: -8px;
+}
+
+:where(body[data-app="chats"], body[data-app="music"]) .header-action {
+    min-width: 40px;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
 .ios-large-title {
     font-family: var(--font-ios-display);
     font-size: 34px;

@@ -17,7 +17,7 @@
     top: 0;
     z-index: 20;
     display: grid;
-    grid-template-columns: 40px 1fr 40px;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 10px;
     padding: 48px 14px 12px;
@@ -32,6 +32,12 @@
     letter-spacing: 0.2px;
 }
 
+/* 共用樣式把標題設成絕對定位（不佔網格欄位），會讓右側選單鈕掉到中間欄；改回留在中間欄 */
+.ao3-header .menu-title {
+    position: static;
+    transform: none;
+}
+
 :where(body[data-app="ao3"]) .header-actions {
     display: flex;
     justify-content: flex-end;
@@ -44,6 +50,7 @@
     font-size: 16px;
     cursor: pointer;
     padding: 8px;
+    min-width: 40px;
 }
 
 :where(body[data-app="ao3"]) .menu-dropdown {
@@ -143,10 +150,11 @@
 
 :where(body[data-app="ao3"]) .field input,
 :where(body[data-app="ao3"]) .field textarea,
-:where(body[data-app="ao3"]) .field select {
+:where(body[data-app="ao3"]) .field select,
+:where(body[data-app="ao3"]) .field-grid select {
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(0, 0, 0, 0.35);
+    background-color: rgba(0, 0, 0, 0.35);
     color: #f7f0ec;
     border-radius: 12px;
     padding: 10px 12px;
@@ -624,7 +632,7 @@
 :where(body[data-app="ao3"]) .trope-tags,
 :where(body[data-app="ao3"]) .worldsetting-tags {
     font-size: 11px;
-    color: rgba(155, 44, 44, 0.8);
+    color: #e8908a;
 }
 
 :where(body[data-app="ao3"]) .trope-desc,

@@ -19,7 +19,7 @@
     top: 0;
     z-index: 20;
     display: grid;
-    grid-template-columns: 40px 1fr 40px;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 10px;
     padding: 48px 14px 12px;
@@ -32,6 +32,12 @@
     text-align: center;
     font-size: 18px;
     letter-spacing: 0.2px;
+}
+
+/* 共用樣式把標題設成絕對定位（不佔網格欄位），會讓右側按鈕掉到中間欄；改回留在中間欄 */
+.music-header .menu-title {
+    position: static;
+    transform: none;
 }
 
 :where(body[data-app="music"]) .icon-btn {
