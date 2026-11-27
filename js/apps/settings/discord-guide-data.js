@@ -1,6 +1,6 @@
 // Discord Worker 部署教學的內容與純函式（不依賴瀏覽器，方便測試）；畫面在 discord-guide.js
 // 與 scripts/discord-bot-worker.js 的 WORKER_VERSION 必須一致（tests/unit/discord-guide.test.mjs 會檢查）
-export const EXPECTED_WORKER_VERSION = '2026.10.24';
+export const EXPECTED_WORKER_VERSION = '2026.11.27';
 export const WORKER_CODE_PATH = 'scripts/discord-bot-worker.js';
 // 權限：查看頻道、傳送訊息、管理訊息（批次刪除用，沒有也能運作）、讀取訊息歷史、新增反應
 export const INVITE_PERMISSIONS = 1024 + 2048 + 8192 + 65536 + 64;
@@ -117,6 +117,7 @@ export const TROUBLESHOOTING = [
     ['Interactions Endpoint URL 儲存失敗', '步驟 5 的 DISCORD_PUBLIC_KEY 要和 Developer Portal 的 Public Key 完全一致（沒有多餘空白），且 Worker 已重新部署。'],
     ['回覆「資料庫尚未綁定」', '步驟 4 的 D1 綁定 Variable name 必須是大寫的 <code>DB</code>。'],
     ['回覆被拒絕或出現錯誤訊息', '多半是 AI 服務的問題（額度、模型名稱、內容過濾）。用 /config 看「最近被拒絕」紀錄；API URL 不要多加 /v1。'],
+    ['Discord 的記憶拉不回本機', '到「設定 → Discord 整合」按 <b>🔍 診斷記憶管線</b>，它會逐關列出卡在哪：AI 設定、/auth、頻道綁定、有沒有對話、本機有沒有拉下來。需要 Worker 版本 2026.11.27 以上，舊版請先照下一條更新。'],
     ['更新 Worker', '本頁的版本提醒出現時，回到步驟 3 重新複製程式碼貼上並 Deploy；資料庫與設定都不會動，再開一次 <code>{{WORKER}}/setup</code> 讓新指令生效。']
 ];
 

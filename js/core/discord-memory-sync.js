@@ -3,8 +3,9 @@
 //   拉：Worker 上機器人累積的記憶 → PWA（不含對話日誌、也不含本來就是從 PWA 推上去的）
 // 只送精簡欄位（不帶向量與感官等大欄位），並用 pushed_at 做增量，避免每次整包上傳。
 import { MemoryDB, SettingsDB, CharactersDB, ChatsDB } from '../db.js';
-import { workerFetch } from './discord-worker-client.js';
+import { workerFetch, testWorkerAccess } from './discord-worker-client.js';
 import { loadDislikes, formatDislikePrompt, mergeRemoteDislikes } from './dislikes.js';
+import { judgeMemoryPipeline } from './discord-diagnose.js';
 
 const PUSH_BATCH = 40; // Worker 每筆記憶一次 D1 寫入，批次小一點才不會碰到單次請求的子請求上限
 const AUTO_INTERVAL_MS = 30 * 60 * 1000;
@@ -86,6 +87,20 @@ export async function pullDiscordMemories(workerUrl) {
         count += await MemoryDB.importMany(data.memories.filter(m => !isDislikes(m)));
     }
     return count;
+}
+
+// 診斷：Discord 學到的記憶為什麼沒拉回本機。回傳 [{ status, title, hint }]（判斷邏輯在 discord-diagnose.js）
+export async function diagnoseMemoryPipeline(workerUrl) {
+    const base = String(workerUrl || '').replace(/\/+$/, '');
+    const access = await testWorkerAccess(base);
+    if (!access.ok) return [{ status: 'bad', title: access.message, hint: '' }];
+    const res = await workerFetch(`${base}/sync/diagnose`);
+    if (res.status === 404) return [{ status: 'warn', title: 'Worker 程式碼版本較舊，沒有診斷功能', hint: '請依「部署教學」步驟 3 重新貼上最新的 Worker 程式碼並 Deploy，再按一次診斷。' }];
+    const report = await res.json().catch(() => ({}));
+    if (!res.ok || !report.success) return [{ status: 'bad', title: report.error || `Worker 回應 ${res.status}`, hint: '' }];
+    const localChars = await CharactersDB.getAll();
+    const localDiscordMemories = (await MemoryDB.getAll()).filter(isFromDiscord).length;
+    return judgeMemoryPipeline({ report, localChars, localDiscordMemories });
 }
 
 // 開啟 App 時自動同步（每 30 分鐘最多一次）；沒設定 Worker 網址或失敗都靜默略過

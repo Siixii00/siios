@@ -1,7 +1,7 @@
 // Discord Bot Worker - 支援角色綁定、記憶同步、斜線指令、插嘴 (Interject)
 // Worker 版本：PWA「Discord 整合」頁會拿它和自己期待的版本比對（js/apps/settings/discord-guide-data.js 的 EXPECTED_WORKER_VERSION），
 // 不一致就提醒使用者重新貼上最新程式碼。改了 Worker 行為時一起更新兩邊。
-const WORKER_VERSION = '2026.10.24';
+const WORKER_VERSION = '2026.11.27';
 
 // 資料表（全部 IF NOT EXISTS，可重複執行；既有資料庫不受影響）。新使用者不用手動建表。
 const SCHEMA_STATEMENTS = [
@@ -284,6 +284,15 @@ export default {
                 const { bindings } = await request.json();
                 const count = await syncUserBindings(bindings, env);
                 return Response.json({ success: true, count }, { headers: corsHeaders });
+            } catch (error) {
+                return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
+            }
+        }
+
+        // 診斷：Discord 的記憶為什麼沒有（只回數量與時間，PWA「診斷記憶管線」用）
+        if (url.pathname === '/sync/diagnose' && request.method === 'GET') {
+            try {
+                return Response.json({ success: true, ...(await diagnoseDiscordMemory(env)) }, { headers: corsHeaders });
             } catch (error) {
                 return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
             }
@@ -2371,6 +2380,25 @@ async function syncMemories(memories, env) {
         count++;
     }
     return count;
+}
+
+// ===== 診斷：Discord 的記憶為什麼沒有 =====
+// 只回數量與時間，不回記憶內容；AI 設定只回「有沒有設定」，不回金鑰。對應的判斷在 PWA 的 js/core/discord-diagnose.js。
+async function diagnoseDiscordMemory(env) {
+    const fromDiscord = '%"source":"discord"%';
+    const authorized = await env.DB.prepare(`SELECT COUNT(*) AS n FROM authorizedUsers`).first();
+    const binds = await env.DB.prepare(`SELECT channel_id, character_id FROM channel_bindings LIMIT 50`).all();
+    const maps = await env.DB.prepare(`SELECT channel_id, character_id FROM discord_channel_mappings LIMIT 50`).all();
+    const memories = await env.DB.prepare(`SELECT character_id, COUNT(*) AS total, SUM(CASE WHEN metadata LIKE ? THEN 1 ELSE 0 END) AS discord, MAX(CASE WHEN metadata LIKE ? THEN timestamp END) AS last_discord_at FROM memories WHERE memory_type != 'raw' AND content NOT LIKE '[Discord 聊天]%' AND id NOT LIKE 'dislikes-%' GROUP BY character_id ORDER BY total DESC LIMIT 50`).bind(fromDiscord, fromDiscord).all();
+    const messages = await env.DB.prepare(`SELECT chat_id, SUM(CASE WHEN role = 'user' THEN 1 ELSE 0 END) AS user_msgs, SUM(CASE WHEN role = 'assistant' THEN 1 ELSE 0 END) AS ai_msgs, MAX(timestamp) AS last_at FROM messages WHERE metadata LIKE ? GROUP BY chat_id ORDER BY last_at DESC LIMIT 50`).bind(fromDiscord).all();
+    return {
+        version: WORKER_VERSION,
+        ai_configured: { url: !!(await getConfig(env, 'AI_API_URL')), key: !!(await getConfig(env, 'AI_API_KEY')) },
+        authorized_users: authorized?.n || 0,
+        bindings: [...(binds.results || []).map(r => ({ ...r, via: 'bind' })), ...(maps.results || []).map(r => ({ ...r, via: 'mapping' }))],
+        memories: (memories.results || []).map(r => ({ character_id: r.character_id, total: r.total || 0, discord: r.discord || 0, last_discord_at: r.last_discord_at || null })),
+        messages: (messages.results || []).map(r => ({ chat_id: r.chat_id, user_msgs: r.user_msgs || 0, ai_msgs: r.ai_msgs || 0, last_at: r.last_at || null }))
+    };
 }
 
 // ===== 取得記憶 =====

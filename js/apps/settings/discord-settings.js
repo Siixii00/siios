@@ -1,7 +1,7 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast, createKakaoBottomSheet } from '../../components.js';
 import { SettingsDB, CharactersDB, UsersDB, MemoryDB, WorldInfoDB, GlobalSettingsDB, GlobalForbiddenDB, MessagesDB, ChatsDB, DiscordUserBindingDB, initDB, parseWorkerTimestamp } from '../../db.js';
-import { pushMemories, pullDiscordMemories } from '../../core/discord-memory-sync.js';
+import { pushMemories, pullDiscordMemories, diagnoseMemoryPipeline } from '../../core/discord-memory-sync.js';
 import { EXPECTED_WORKER_VERSION } from './discord-guide-data.js';
 import { workerFetch, testWorkerAccess } from '../../core/discord-worker-client.js';
 
@@ -357,6 +357,35 @@ async function renderDiscordSettings() {
     };
     main.appendChild(memSyncBtn);
 
+    // 診斷：Discord 學到的記憶為什麼沒拉回本機（逐關列出哪裡沒過）
+    const diagBtn = createElement('button', 'ios-btn w-full mt-2 mx-4');
+    diagBtn.style.maxWidth = 'calc(100% - 32px)';
+    diagBtn.style.background = '#E5E5EA';
+    diagBtn.style.color = '#111827';
+    diagBtn.textContent = '🔍 診斷記憶管線';
+    const diagResult = createElement('div', 'mx-4 mt-2 space-y-2');
+    diagBtn.onclick = async () => {
+        const workerUrl = workerInput.value.replace(/\/+$/, '');
+        if (!workerUrl) {
+            createToast('請先輸入 Worker URL', 'error');
+            return;
+        }
+        diagBtn.disabled = true;
+        diagBtn.textContent = '診斷中...';
+        try {
+            await SettingsDB.set('discord_worker_key', accessInput.value.trim());
+            const checks = await diagnoseMemoryPipeline(workerUrl);
+            diagResult.replaceChildren(...checks.map(diagnosisRow));
+        } catch (error) {
+            createToast('診斷失敗：' + error.message, 'error');
+        } finally {
+            diagBtn.disabled = false;
+            diagBtn.textContent = '🔍 診斷記憶管線';
+        }
+    };
+    main.appendChild(diagBtn);
+    main.appendChild(diagResult);
+
     // 同步世界書到 Worker
     const wiSyncBtn = createElement('button', 'ios-btn w-full mt-2 mx-4');
     wiSyncBtn.style.maxWidth = 'calc(100% - 32px)';
@@ -651,6 +680,14 @@ async function importMessagesToPWA(messages) {
         }
     }
     await MessagesDB.importMany(messages);
+}
+
+const DIAG_ICON = { ok: '✅', warn: '⚠️', bad: '❌' };
+function diagnosisRow({ status, title, hint }) {
+    const row = createElement('div', 'bg-white rounded-lg p-3 text-sm');
+    row.appendChild(createElement('div', 'font-medium', { textContent: `${DIAG_ICON[status] || ''} ${title}` }));
+    if (hint) row.appendChild(createElement('div', 'text-xs text-gray-500 mt-1', { textContent: hint }));
+    return row;
 }
 
 function createChannelMappingRow(mapping = {}) {
