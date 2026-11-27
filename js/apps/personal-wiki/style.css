@@ -315,6 +315,9 @@
   font-family: var(--nt-font);
   cursor: pointer;
   padding: var(--nt-s-xxs);
+  /* 觸控範圍至少 40px；用負 margin 抵銷，標題列高度不變 */
+  min-height: 40px;
+  margin: -6px 0;
   display: flex;
   align-items: center;
   gap: 4px;

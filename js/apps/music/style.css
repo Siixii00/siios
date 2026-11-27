@@ -115,6 +115,7 @@
     color: #fff;
     padding: 0 14px;
     font-weight: 700;
+    min-height: 38px;
 }
 
 .companion-grid {
@@ -402,7 +403,7 @@
     border-radius: 6px;
     background: #111827;
     color: var(--music-text);
-    padding: 4px 8px;
+    padding: 8px 10px;
     font-size: 10px;
     cursor: pointer;
 }

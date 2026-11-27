@@ -92,7 +92,7 @@ async function renderMemoryList() {
     });
     searchInput.style.minWidth = '0'; // flex 子項預設不會縮到比內容小，沒設的話輸入框會把按鈕擠成直排的字
     searchBox.appendChild(searchInput);
-    const searchBtn = createElement('button', 'px-3 py-1 bg-claude-primary text-white rounded text-sm', {
+    const searchBtn = createElement('button', 'px-3 py-2 bg-claude-primary text-white rounded text-sm', {
         textContent: '搜尋',
         onClick: async () => {
             await SettingsDB.set('memory_filter', currentFilter);

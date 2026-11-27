@@ -34,6 +34,9 @@
   cursor: pointer;
   padding: var(--nt-s-xxs) var(--nt-s-xs);
   border-radius: var(--nt-r-xs);
+  /* 觸控範圍至少 40px；用負 margin 抵銷，標題列高度不變 */
+  min-height: 40px;
+  margin: -6px 0;
 }
 
 .diary-nav-back:hover { background: var(--nt-canvas-soft); }
@@ -53,6 +56,9 @@
   cursor: pointer;
   padding: var(--nt-s-xxs) var(--nt-s-xs);
   border-radius: var(--nt-r-xs);
+  min-width: 40px;
+  min-height: 40px;
+  margin: -6px 0;
 }
 
 .diary-nav-action:hover { background: var(--nt-canvas-soft); }

@@ -310,7 +310,7 @@ async function renderActivityPrivacySettings() {
     const deleteSection = createElement('div', 'mx-4 mb-8');
     const deleteCard = createElement('div', 'bg-red-50 rounded-xl p-4 border border-red-200');
     
-    const deleteBtn = createElement('button', 'w-full text-red-600 font-semibold text-sm');
+    const deleteBtn = createElement('button', 'w-full py-2 text-red-600 font-semibold text-sm');
     deleteBtn.textContent = '清除所有活動記錄';
     deleteBtn.onclick = async () => {
         if (await askConfirm('確定要清除所有活動記錄？此操作無法復原。')) {

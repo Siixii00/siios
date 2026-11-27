@@ -165,7 +165,7 @@ async function renderDiscordSettings() {
     
     channelCard.appendChild(channelList);
     
-    const addMappingBtn = createElement('button', 'mt-3 text-sm text-blue-500 underline');
+    const addMappingBtn = createElement('button', 'mt-3 py-2 text-sm text-blue-500 underline');
     addMappingBtn.textContent = '+ 新增頻道映射';
     addMappingBtn.onclick = () => {
         const newRow = createChannelMappingRow();

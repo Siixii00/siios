@@ -212,7 +212,7 @@ async function renderMCPMarket() {
     customTitle.appendChild(createElement('span', 'text-sm font-semibold text-purple-800', { textContent: '自定義 MCP 工具' }));
     customHeader.appendChild(customTitle);
     
-    const addCustomBtn = createElement('button', 'text-xs text-purple-600 font-medium hover:text-purple-800 transition-colors');
+    const addCustomBtn = createElement('button', 'text-xs text-purple-600 font-medium hover:text-purple-800 transition-colors py-2');
     addCustomBtn.innerHTML = '<span class="material-symbols-outlined text-sm align-middle">add_circle</span> 新增工具';
     addCustomBtn.onclick = () => showCustomToolDialog(container);
     customHeader.appendChild(addCustomBtn);

@@ -37,6 +37,9 @@
     cursor: pointer;
     padding: 0;
     flex-shrink: 0;
+    /* 觸控範圍至少 40px；用負 margin 抵銷，標題列高度不變 */
+    min-height: 40px;
+    margin: -7px 0;
 }
 
 .weather-app .ios-back-btn:active { opacity: 0.3; }
