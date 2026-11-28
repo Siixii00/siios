@@ -150,9 +150,12 @@ async function renderFarm() {
       <div class="coins"><i class="fas fa-coins"></i> <span class="farm-balance"></span></div>
     </header>
     <div class="fm-wrap">
+      <div class="fm-stage">
       <div class="fm-hud"><b class="hud-lv"></b><div class="fm-xp"><i></i></div><span class="hud-xp"></span><span class="hud-weather"></span></div>
       <div class="fm-world">${SCENE}</div>
       <div class="fm-hint"></div>
+      </div>
+      <div class="fm-bar">
       <div class="fm-seedbar"></div>
       <div class="fm-tools">
         <button data-act="mode" data-mode="plant">🌱 種植</button>
@@ -167,6 +170,7 @@ async function renderFarm() {
         <button data-act="open" data-sheet="book">📖 圖鑑</button>
       </div>
       <p class="fm-credit">像素素材：Kenney.nl（CC0）</p>
+      </div>
     </div>
     <div class="fm-sheet-host"></div>`;
 

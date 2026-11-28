@@ -136,6 +136,8 @@ function scheduleNativeCheck() {
 const COLOR_PROPS = /color|background|border|outline|fill|stroke|shadow|^--/;
 const sheetCache = new WeakMap(); // sheet → { key, text }
 const nodeIsOwn = n => n && OWN_IDS.includes(n.id);
+// 像素風的農場場景（草地、夜晚、下雨）被換成指定顏色會很怪（草地變紅色）：這張樣式表不換色
+const KEEP_COLORS = /\/apps\/farm\/style\.css/;
 
 function overridesFor(rules, target, opts) {
     const out = [];
@@ -165,7 +167,7 @@ function colorMapText(s) {
     const key = target + '|' + s.keepDanger;
     const parts = [];
     for (const sheet of document.styleSheets) {
-        if (nodeIsOwn(sheet.ownerNode)) continue;
+        if (nodeIsOwn(sheet.ownerNode) || KEEP_COLORS.test(sheet.href || '')) continue;
         let rules;
         try { rules = sheet.cssRules; } catch (_) { continue; } // 跨網域的樣式表（例如字型）讀不到，略過
         if (!rules) continue;
