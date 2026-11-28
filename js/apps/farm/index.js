@@ -6,6 +6,7 @@ import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { getBalance, charge, credit, formatMoney, WalletError } from '../../core/wallet.js';
 import { askConfirm } from '../../core/dialogs.js';
+import { MASTERY_AT, LUCK_HARVESTS, starsOf, perkOf, masteryReward, rollGolden, visitorOffer } from './game.js';
 
 // 農場：場景式畫面（天空隨真實時間變化、斜角農田、作物分階段生長、牧場動物會走動）。
 // 規則：種植、澆水施肥、倉庫、每日行情與訂單、動物、等級與經驗；收益與開銷都走「支付」錢包。
@@ -70,7 +71,7 @@ function skyFor(h) {
 }
 
 function defaultState() {
-  return { plots: Array(START_PLOTS).fill(null), level: 1, xp: 0, inv: {}, animals: [], orders: { date: '', list: [] }, harvested: 0 };
+  return { plots: Array(START_PLOTS).fill(null), level: 1, xp: 0, inv: {}, animals: [], orders: { date: '', list: [] }, harvested: 0, mastery: {}, luck: 0, visitor: { date: '', choice: null }, lastSeen: 0 };
 }
 
 async function loadState() {
@@ -108,6 +109,7 @@ const SCENE = `
   <div class="fm-ground"></div>
   <div class="fm-fieldwrap"><div class="fm-field"></div></div>
   ${img('farmer', 'fm-farmer')}
+  <button class="fm-visitor" data-act="open" data-sheet="visitor" type="button"><span>🧑‍🌾</span><i>!</i></button>
   <div class="fm-pen"><span class="fm-pen-sign">牧場</span><div class="fm-animals"></div></div>
   <div class="fm-rain"></div>
   <div class="fm-night"></div>
@@ -123,6 +125,7 @@ async function renderFarm() {
   let rainy = isRainy();
   const st = await loadState();
   if (st.orders.date !== today()) st.orders = { date: today(), list: makeOrders(st.level) };
+  if (st.visitor.date !== today()) st.visitor = { date: today(), choice: null };
   let balance = await getBalance();
   const save = () => SettingsDB.set(FARM_KEY, st);
 
@@ -156,6 +159,7 @@ async function renderFarm() {
         <button data-act="open" data-sheet="stock">📦 倉庫<i data-badge="stock"></i></button>
         <button data-act="open" data-sheet="orders">📋 訂單<i data-badge="orders"></i></button>
         <button data-act="open" data-sheet="animals">🐾 牧場商店</button>
+        <button data-act="open" data-sheet="book">📖 圖鑑</button>
       </div>
     </div>
     <div class="fm-sheet-host"></div>`;
@@ -211,7 +215,8 @@ async function renderFarm() {
     $('.hud-lv').textContent = 'Lv.' + st.level;
     $('.fm-xp i').style.width = (st.xp / xpNeed(st.level) * 100) + '%';
     $('.hud-xp').textContent = st.xp + '/' + xpNeed(st.level);
-    $('.hud-weather').textContent = rainy ? '🌧 雨天' : '☀️ 晴天';
+    $('.hud-weather').textContent = (rainy ? '🌧 雨天' : '☀️ 晴天') + (st.luck > 0 ? ' 🍀' + st.luck : '');
+    $('.fm-visitor').style.display = st.visitor.choice ? 'none' : '';
     const h = new Date().getHours() + new Date().getMinutes() / 60;
     const [a, b, night] = skyFor(Math.floor(h));
     $('.fm-sky').style.background = `linear-gradient(${a}, ${b})`;
@@ -288,32 +293,67 @@ async function renderFarm() {
   function giftHtml() {
     return `<h3>送 ${itemOf(sheet.id).icon} ${itemOf(sheet.id).name} 給誰？</h3>` + (sheet.chars.length ? sheet.chars.map(c => `<button class="shop-row" data-act="giftto" data-cid="${c.id}"><span>${esc(c.name)}</span><b>送出</b></button>`).join('') : '<p class="fm-muted">還沒有角色。</p>');
   }
+  function bookHtml() {
+    return `<h3>📖 作物圖鑑</h3><p class="farm-hint">同一種作物收成 ${MASTERY_AT.join('／')} 次各得 1 顆 ★：送一筆獎金，之後種下這種作物，生長時間每顆星縮短 5%。</p>` + CROPS.map(c => {
+      const n = st.mastery[c.id] || 0, stars = starsOf(n), next = MASTERY_AT[stars];
+      const locked = !n && st.level < c.lvl;
+      return `<div class="stock-row ${locked ? 'fm-dim' : ''}"><span class="bk-icon">${locked ? '🔒' : img('crop_' + c.id, 'seed-img')}</span><span class="st-name">${locked ? '農場 Lv.' + c.lvl + ' 解鎖' : c.name}${locked ? '' : `<small class="fm-muted"> ${n} 次收成${next ? '，再 ' + (next - n) + ' 次得 ★' + (stars + 1) : '，已精通'}</small>`}</span><b class="bk-stars">${'★'.repeat(stars)}${'☆'.repeat(MASTERY_AT.length - stars)}</b></div>`;
+    }).join('');
+  }
+  function visitorHtml() {
+    const o = visitorOffer(st.inv, priceOf);
+    if (o.kind === 'gift') return `<h3>🧑‍🌾 旅行商人</h3><p>商人看你的倉庫幾乎是空的，送你一個幸運符：接下來 ${LUCK_HARVESTS} 次收成，出現「金色作物」（產量 ×3）的機會大增。</p><button class="fm-primary" data-act="visit" data-choice="gift">收下</button>`;
+    const it = itemOf(o.item);
+    return `<h3>🧑‍🌾 旅行商人</h3><p>商人看上了你倉庫裡的 ${it.icon}${it.name}，你打算怎麼做？</p>
+      <button class="shop-row" data-act="visit" data-choice="sell"><span>賣給他 ${o.qty} 個<small>比今天的行情高 50%</small></span><b>${formatMoney(o.pay)}</b></button>
+      <button class="shop-row" data-act="visit" data-choice="luck"><span>換幸運符（給他 ${o.swap} 個）<small>接下來 ${LUCK_HARVESTS} 次收成，金色作物（×3）機率大增</small></span><b>🍀</b></button>
+      <button class="shop-row" data-act="visit" data-choice="decline"><span>婉拒<small>他明天會再來</small></span><b></b></button>`;
+  }
+  function welcomeHtml() {
+    const w = sheet, rows = [[w.ready, '🧺', '株作物成熟了，可以收成'], [w.products, '🥚', '份動物產品可以收取'], [w.hungry, '🥣', '隻動物餓了'], [w.growing, '🌱', '株作物還在生長']];
+    return `<h3>🌾 歡迎回來</h3><p class="fm-muted">你離開了 ${fmtDur(w.away / 1000)}，農場裡：</p>` + rows.filter(r => r[0]).map(r => `<div class="stock-row">${r[1]} <span class="st-name">${r[0]} ${r[2]}</span></div>`).join('');
+  }
   function renderSheet() {
     if (!sheet) { sheetHost.innerHTML = ''; return; }
-    const body = sheet.type === 'stock' ? stockHtml() : sheet.type === 'orders' ? ordersHtml() : sheet.type === 'animals' ? animalsShopHtml() : sheet.type === 'plot' ? plotSheetHtml() : giftHtml();
+    const body = sheet.type === 'stock' ? stockHtml() : sheet.type === 'orders' ? ordersHtml() : sheet.type === 'animals' ? animalsShopHtml() : sheet.type === 'plot' ? plotSheetHtml() : sheet.type === 'book' ? bookHtml() : sheet.type === 'visitor' ? visitorHtml() : sheet.type === 'welcome' ? welcomeHtml() : giftHtml();
     sheetHost.innerHTML = `<div class="fm-sheet-bg" data-act="closesheet"><div class="fm-sheet">${body}<button class="fm-primary alt" data-act="closesheet">關閉</button></div></div>`;
   }
 
   async function spend(amount, desc) { await charge(amount, desc, { category: 'farm' }); balance = await getBalance(); }
   async function earn(amount, desc) { await credit(amount, desc, { category: 'farm' }); balance = await getBalance(); }
 
+  // 作物精通的星星獎金：收成是同步的，錢包是非同步的，所以先記下來，等這次操作結束再入帳
+  const starRewards = [];
+  async function payStars() {
+    while (starRewards.length) {
+      const r = starRewards.shift();
+      await earn(r.reward, '作物精通：' + r.crop.name + ' ★' + r.star);
+      createToast('🏅 ' + r.crop.name + '達人 ★' + r.star + '　+' + formatMoney(r.reward), 'success');
+    }
+  }
+
   async function run(fn) {
     if (busy) return;
     busy = true;
-    try { await fn(); await save(); }
+    try { await fn(); await payStars(); await save(); }
     catch (e) { createToast(e instanceof WalletError ? e.message : (e.message || '操作失敗'), 'error'); }
-    finally { busy = false; if (alive) { sync(); if (sheet) renderSheet(); } }
+    finally { busy = false; if (alive) { sync(); renderSheet(); } } // sheet 被設成 null 時也要把面板關掉
   }
 
   const harvestPlot = (idx, el) => {
     const p = st.plots[idx];
     if (!p || growSec(p) - elapsed(p) > 0) return false;
     const c = CROPS.find(x => x.id === p.cropId);
-    const bonus = p.watered && p.fert ? 2 : 1;
+    const golden = rollGolden(Math.random, st.luck);
+    if (st.luck > 0) st.luck--;
+    const bonus = (p.watered && p.fert ? 2 : 1) * (golden ? 3 : 1);
     addInv(c.id, bonus);
     st.plots[idx] = null; st.harvested++;
     addXp(c.xp);
-    fx('+' + bonus + ' ' + c.icon, el, 'gain'); setTimeout(() => fx('+' + c.xp + ' XP', el, 'xp'), 250);
+    const before = starsOf(st.mastery[c.id] || 0);
+    st.mastery[c.id] = (st.mastery[c.id] || 0) + 1;
+    for (let star = before + 1; star <= starsOf(st.mastery[c.id]); star++) starRewards.push({ crop: c, star, reward: masteryReward(c, star) });
+    fx((golden ? '✨金色 +' : '+') + bonus + ' ' + c.icon, el, 'gain'); setTimeout(() => fx('+' + c.xp + ' XP', el, 'xp'), 250);
     return true;
   };
   const waterPlot = p => { if (p.watered) return false; p.watered = true; p.cut = (p.cut || 0) + CROPS.find(c => c.id === p.cropId).time * WATER_CUT; return true; };
@@ -343,7 +383,7 @@ async function renderFarm() {
         const c = CROPS.find(x => x.id === selectedCrop);
         if (st.level < c.lvl) throw new Error('這個作物需要農場 Lv.' + c.lvl);
         await spend(c.seed, '購買' + c.name + '種子');
-        st.plots[idx] = { cropId: c.id, plantedAt: Date.now(), cut: 0 };
+        st.plots[idx] = { cropId: c.id, plantedAt: Date.now(), cut: Math.round(c.time * perkOf(starsOf(st.mastery[c.id] || 0))) }; // 精通的星星縮短生長時間
         if (rainy) waterPlot(st.plots[idx]); // 雨天：雨水自動澆灌
         addXp(1);
         fx('-' + formatMoney(c.seed), el, 'cost');
@@ -370,6 +410,17 @@ async function renderFarm() {
       let n = 0;
       st.plots.forEach((p, k) => { if (harvestPlot(k, field.querySelector(`[data-i="${k}"]`))) n++; });
       if (!n) createToast('目前沒有成熟的作物');
+    });
+    if (act === 'visit') return run(async () => {
+      const o = visitorOffer(st.inv, priceOf), choice = el.dataset.choice;
+      if (st.visitor.choice) return;
+      if (choice === 'sell' && o.kind === 'trade') { await earn(o.pay, '賣給旅行商人：' + itemOf(o.item).name + ' ×' + o.qty); addInv(o.item, -o.qty); }
+      else if (choice === 'luck' && o.kind === 'trade') { addInv(o.item, -o.swap); st.luck = LUCK_HARVESTS; }
+      else if (choice === 'gift' && o.kind === 'gift') st.luck = LUCK_HARVESTS;
+      else if (choice !== 'decline') return;
+      st.visitor.choice = choice;
+      if (st.luck > 0 && choice !== 'sell' && choice !== 'decline') createToast('🍀 拿到幸運符：接下來 ' + LUCK_HARVESTS + ' 次收成運氣大增', 'success');
+      sheet = null;
     });
     if (act === 'buyplot') return run(async () => {
       const price = plotPrice(st.plots.length + 1);
@@ -440,9 +491,25 @@ async function renderFarm() {
 
   container.addEventListener('click', onClick);
   sync();
+  // 離開一陣子再回來：先告訴玩家農場裡發生了什麼事
+  const away = st.lastSeen ? Date.now() - st.lastSeen : 0;
+  if (away > 5 * MIN * 1000) {
+    const left = p => growSec(p) - elapsed(p);
+    const w = {
+      type: 'welcome', away,
+      ready: st.plots.filter(p => p && left(p) <= 0).length,
+      growing: st.plots.filter(p => p && left(p) > 0).length,
+      products: st.animals.filter(a => a.fedAt && ANIMALS.find(t => t.id === a.type).interval - (Date.now() - a.fedAt) / 1000 <= 0).length,
+      hungry: st.animals.filter(a => !a.fedAt).length
+    };
+    if (w.ready || w.products || w.hungry) { sheet = w; renderSheet(); }
+  }
+  st.lastSeen = Date.now();
   const timer = setInterval(() => {
     if (busy) return;
-    if (st.orders.date !== today()) { // 跨過午夜：換新的一天的訂單與天氣
+    st.lastSeen = Date.now();
+    if (st.orders.date !== today()) { // 跨過午夜：換新的一天的訂單、天氣與訪客
+      st.visitor = { date: today(), choice: null };
       st.orders = { date: today(), list: makeOrders(st.level) };
       rainy = isRainy();
       world.classList.toggle('rainy', rainy);
@@ -450,7 +517,7 @@ async function renderFarm() {
     }
     sync();
   }, 1000);
-  return { element: container, cleanup: () => { alive = false; clearInterval(timer); } };
+  return { element: container, cleanup: () => { alive = false; clearInterval(timer); st.lastSeen = Date.now(); save(); } };
 }
 
 export default {

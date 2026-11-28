@@ -94,5 +94,8 @@
 .farm-hint { font-size: 12px; color: #888; margin: 8px 0; }
 .fm-wrap > * { flex-shrink: 0; }
 
+.fm-visitor { position: absolute; right: 7%; top: 232px; z-index: 3; width: 44px; height: 44px; padding: 0; border: none; border-radius: 50%; background: #fff; font-size: 26px; box-shadow: 0 2px 8px rgba(0,0,0,.3); cursor: pointer; animation: hop .7s ease-in-out infinite alternate; }
+.fm-visitor i { position: absolute; top: -4px; right: -2px; width: 18px; height: 18px; border-radius: 50%; background: #e53935; color: #fff; font-style: normal; font-size: 12px; font-weight: 800; line-height: 18px; }
+.fm-dim { opacity: .5; } .stock-row .bk-icon { width: 34px; text-align: center; } .stock-row .st-name small { display: block; } .bk-stars { color: #ffb300; letter-spacing: 1px; }
 .seed .seed-img { height: 28px; width: auto; max-width: 34px; object-fit: contain; vertical-align: middle; }
 .fm-world img { user-select: none; -webkit-user-drag: none; }
