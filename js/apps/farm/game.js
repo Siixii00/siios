@@ -10,6 +10,20 @@ export const masteryReward = (crop, star) => Math.round(crop.sell * 2 * star);
 export const goldenChance = luck => GOLDEN_BASE + (luck > 0 ? GOLDEN_LUCK : 0);
 export const rollGolden = (rng, luck) => rng() < goldenChance(luck);
 
+// 像素版改版後下架的作物（素材沒有對應的圖）。舊存檔裡這些作物的種子與庫存，按原價退錢。
+export const REMOVED_CROPS = { c9: { seed: 200, sell: 700 }, c10: { seed: 160, sell: 540 }, c11: { seed: 280, sell: 1000 }, c12: { seed: 400, sell: 1500 } };
+
+export function migrateSaved(saved) {
+  let refund = 0;
+  const out = { ...saved };
+  out.plots = (saved.plots || []).map(p => { if (p && REMOVED_CROPS[p.cropId]) { refund += REMOVED_CROPS[p.cropId].seed; return null; } return p; });
+  out.inv = {};
+  for (const [id, n] of Object.entries(saved.inv || {})) { if (REMOVED_CROPS[id]) refund += REMOVED_CROPS[id].sell * n; else out.inv[id] = n; }
+  if ((saved.orders?.list || []).some(o => REMOVED_CROPS[o.item])) out.orders = { date: '', list: [] }; // 訂單要下架的作物：整批重開
+  if (saved.mastery) out.mastery = Object.fromEntries(Object.entries(saved.mastery).filter(([id]) => !REMOVED_CROPS[id]));
+  return { saved: out, refund };
+}
+
 // 旅行商人每天來一次。倉庫裡有 2 件以上的東西，就開價收購或換幸運符；否則直接送幸運符。
 export function visitorOffer(inv, priceOf) {
   const best = Object.keys(inv).filter(id => inv[id] >= 2).sort((a, b) => inv[b] * priceOf(b) - inv[a] * priceOf(a))[0];

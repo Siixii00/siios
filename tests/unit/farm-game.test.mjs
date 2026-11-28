@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { MASTERY_AT, LUCK_HARVESTS, starsOf, perkOf, masteryReward, goldenChance, rollGolden, visitorOffer } from '../../js/apps/farm/game.js';
+import { MASTERY_AT, LUCK_HARVESTS, starsOf, perkOf, masteryReward, goldenChance, rollGolden, visitorOffer, migrateSaved, REMOVED_CROPS } from '../../js/apps/farm/game.js';
 
 test('作物精通：收成 8／25／60 次依序拿到 1／2／3 星，星星縮短生長時間', () => {
     assert.deepEqual(MASTERY_AT, [8, 25, 60]);
@@ -38,4 +38,30 @@ test('旅行商人：倉庫空的送幸運符；有東西就挑總價值最高�
     assert.equal(o.swap, 3);
     assert.equal(visitorOffer({ c2: 2 }, price).qty, 2);
     assert.equal(visitorOffer({ c2: 2 }, price).swap, 2);
+});
+
+test('存檔遷移：下架作物的種子與庫存按原價退錢，其餘原封不動', () => {
+    assert.deepEqual(Object.keys(REMOVED_CROPS), ['c9', 'c10', 'c11', 'c12']);
+    const saved = {
+        plots: [{ cropId: 'c1', plantedAt: 1, cut: 0 }, { cropId: 'c9', plantedAt: 2, cut: 0 }, null],
+        inv: { c1: 4, c10: 3, p1: 2, c12: 1 },
+        orders: { date: 'd', list: [{ id: 'o1', item: 'c1' }] },
+        mastery: { c1: 9, c11: 40 },
+        level: 7
+    };
+    const { saved: out, refund } = migrateSaved(saved);
+    assert.equal(refund, 200 + 3 * 540 + 1 * 1500);
+    assert.deepEqual(out.plots, [{ cropId: 'c1', plantedAt: 1, cut: 0 }, null, null]);
+    assert.deepEqual(out.inv, { c1: 4, p1: 2 });
+    assert.deepEqual(out.orders, saved.orders); // 訂單沒用到下架作物就保留
+    assert.deepEqual(out.mastery, { c1: 9 });
+    assert.equal(out.level, 7);
+});
+
+test('存檔遷移：訂單用到下架作物就整批重開；空存檔或沒有下架作物時退款為 0', () => {
+    const { saved } = migrateSaved({ orders: { date: 'd', list: [{ id: 'o1', item: 'c9' }] } });
+    assert.deepEqual(saved.orders, { date: '', list: [] });
+    assert.equal(migrateSaved({}).refund, 0);
+    assert.deepEqual(migrateSaved({}).saved.inv, {});
+    assert.equal(migrateSaved({ plots: [{ cropId: 'c4' }], inv: { c4: 5 } }).refund, 0);
 });

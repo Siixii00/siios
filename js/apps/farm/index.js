@@ -6,36 +6,36 @@ import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { getBalance, charge, credit, formatMoney, WalletError } from '../../core/wallet.js';
 import { askConfirm } from '../../core/dialogs.js';
-import { MASTERY_AT, LUCK_HARVESTS, starsOf, perkOf, masteryReward, rollGolden, visitorOffer } from './game.js';
+import { MASTERY_AT, LUCK_HARVESTS, starsOf, perkOf, masteryReward, rollGolden, visitorOffer, migrateSaved } from './game.js';
 
-// 農場：場景式畫面（天空隨真實時間變化、斜角農田、作物分階段生長、牧場動物會走動）。
+// 農場：場景式畫面（俯視的像素農場，白天夜晚與雨天會變色、作物分階段生長、牧場動物會走動）。
 // 規則：種植、澆水施肥、倉庫、每日行情與訂單、動物、等級與經驗；收益與開銷都走「支付」錢包。
 const FARM_KEY = 'farm_state';
-const art = name => new URL('../../../assets/farm/' + name + '.webp', import.meta.url).href;
-const img = (name, cls = '') => `<img class="${cls}" src="${art(name)}" alt="" draggable="false">`;
 const MIN = 60;
+
+// 像素圖塊來自 Kenney Tiny Farm（CC0，assets/farm/tiny-farm.png）。圖塊用素材表上的 [欄, 列] 表示，一格 16px、間隔 1px。
+// 素材表前 6 列各是一種作物：幼苗、長大、成熟（4、5、6 欄）、收成品（8 欄）、種子袋（9 欄）
+const fam = r => ({ s0: [4, r], s1: [5, r], ready: [6, r], item: [8, r], bag: [9, r] });
+// size 省略時用外層的 --t（場景裡一格的大小），面板裡要給像素大小
+const tl = ([c, r], size = 0) => `<i class="fpx" style="--c:${c};--r:${r}${size ? ';--t:' + size + 'px' : ''}"></i>`;
 
 // lvl：農場等級需求；time：成熟秒數；seed：種子價；sell：基礎賣價；xp：收成經驗
 const CROPS = [
-  { id: 'c1', name: '番茄', icon: '🍅', lvl: 1, time: 2 * MIN, seed: 20, sell: 45, xp: 4 },
-  { id: 'c2', name: '玉米', icon: '🌽', lvl: 1, time: 3 * MIN, seed: 25, sell: 62, xp: 5 },
-  { id: 'c3', name: '草莓', icon: '🍓', lvl: 2, time: 5 * MIN, seed: 40, sell: 110, xp: 8 },
-  { id: 'c4', name: '紅蘿蔔', icon: '🥕', lvl: 2, time: 4 * MIN, seed: 30, sell: 80, xp: 6 },
-  { id: 'c5', name: '馬鈴薯', icon: '🥔', lvl: 3, time: 8 * MIN, seed: 50, sell: 150, xp: 10 },
-  { id: 'c6', name: '南瓜', icon: '🎃', lvl: 4, time: 12 * MIN, seed: 80, sell: 250, xp: 14 },
-  { id: 'c7', name: '向日葵', icon: '🌻', lvl: 5, time: 15 * MIN, seed: 90, sell: 300, xp: 16 },
-  { id: 'c8', name: '西瓜', icon: '🍉', lvl: 6, time: 20 * MIN, seed: 130, sell: 440, xp: 22 },
-  { id: 'c9', name: '葡萄', icon: '🍇', lvl: 7, time: 30 * MIN, seed: 200, sell: 700, xp: 30 },
-  { id: 'c10', name: '茄子', icon: '🍆', lvl: 8, time: 25 * MIN, seed: 160, sell: 540, xp: 26 },
-  { id: 'c11', name: '鳳梨', icon: '🍍', lvl: 9, time: 40 * MIN, seed: 280, sell: 1000, xp: 38 },
-  { id: 'c12', name: '茶葉', icon: '🍵', lvl: 10, time: 60 * MIN, seed: 400, sell: 1500, xp: 55 }
+  { id: 'c1', name: '番茄', icon: '🍅', lvl: 1, time: 2 * MIN, seed: 20, sell: 45, xp: 4, art: fam(3) },
+  { id: 'c2', name: '玉米', icon: '🌽', lvl: 1, time: 3 * MIN, seed: 25, sell: 62, xp: 5, art: fam(2) },
+  { id: 'c3', name: '草莓', icon: '🍓', lvl: 2, time: 5 * MIN, seed: 40, sell: 110, xp: 8, art: { s0: [4, 3], s1: [5, 3], ready: [6, 6], item: [6, 6], bag: [10, 3] } },
+  { id: 'c4', name: '紅蘿蔔', icon: '🥕', lvl: 2, time: 4 * MIN, seed: 30, sell: 80, xp: 6, art: fam(0) },
+  { id: 'c5', name: '蕪菁', icon: '🧅', lvl: 3, time: 8 * MIN, seed: 50, sell: 150, xp: 10, art: fam(1) },
+  { id: 'c6', name: '高麗菜', icon: '🥬', lvl: 4, time: 12 * MIN, seed: 80, sell: 250, xp: 14, art: fam(4) },
+  { id: 'c7', name: '向日葵', icon: '🌻', lvl: 5, time: 15 * MIN, seed: 90, sell: 300, xp: 16, art: { s0: [9, 6], s1: [8, 6], ready: [11, 6], item: [11, 6], bag: [10, 5] } },
+  { id: 'c8', name: '小麥', icon: '🌾', lvl: 6, time: 20 * MIN, seed: 130, sell: 440, xp: 22, art: fam(5) }
 ];
 
-// buy：購入價；interval：餵食後多久產出（秒）；feed：每次餵食費用
+// buy：購入價；interval：餵食後多久產出（秒）；feed：每次餵食費用；tile：動物的圖塊，item：產品的圖塊
 const ANIMALS = [
-  { id: 'a1', art: 'hen', name: '母雞', icon: '🐔', lvl: 2, buy: 150, feed: 5, interval: 4 * MIN, product: { id: 'p1', name: '雞蛋', icon: '🥚', sell: 40, xp: 4 } },
-  { id: 'a2', art: 'cow', name: '乳牛', icon: '🐄', lvl: 4, buy: 450, feed: 14, interval: 8 * MIN, product: { id: 'p2', name: '牛奶', icon: '🥛', sell: 130, xp: 8 } },
-  { id: 'a3', art: 'sheep', name: '綿羊', icon: '🐑', lvl: 6, buy: 900, feed: 28, interval: 12 * MIN, product: { id: 'p3', name: '羊毛', icon: '🧶', sell: 260, xp: 14 } }
+  { id: 'a1', tile: [2, 10], name: '母雞', icon: '🐔', lvl: 2, buy: 150, feed: 5, interval: 4 * MIN, product: { id: 'p1', name: '雞蛋', icon: '🥚', sell: 40, xp: 4, item: [5, 10] } },
+  { id: 'a2', tile: [1, 10], name: '乳牛', icon: '🐄', lvl: 4, buy: 450, feed: 14, interval: 8 * MIN, product: { id: 'p2', name: '牛奶', icon: '🥛', sell: 130, xp: 8, item: [4, 10] } },
+  { id: 'a3', tile: [0, 10], name: '綿羊', icon: '🐑', lvl: 6, buy: 900, feed: 28, interval: 12 * MIN, product: { id: 'p3', name: '羊毛', icon: '🧶', sell: 260, xp: 14, item: [2, 6] } }
 ];
 const ANIMAL_CAP = 4;
 
@@ -44,8 +44,9 @@ const plotPrice = n => 200 * (n - START_PLOTS); // 第 7 塊 200、第 8 塊 400
 const WATER_CUT = 0.25, FERT_CUT = 0.5, FERT_PRICE = 30;
 const xpNeed = lvl => 40 + 30 * (lvl - 1);
 
-const ITEMS = [...CROPS.map(c => ({ id: c.id, name: c.name, icon: c.icon, sell: c.sell, crop: true })), ...ANIMALS.map(a => ({ ...a.product, crop: false }))];
+const ITEMS = [...CROPS.map(c => ({ id: c.id, name: c.name, icon: c.icon, sell: c.sell, crop: true, item: c.art.item })), ...ANIMALS.map(a => ({ ...a.product, crop: false }))];
 const itemOf = id => ITEMS.find(i => i.id === id);
+const iconOf = id => tl(itemOf(id).item, 26); // 面板裡的物品圖示
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const today = () => { const d = new Date(); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); };
@@ -61,13 +62,13 @@ const priceOf = id => Math.max(1, Math.round(itemOf(id).sell * marketMult(id)));
 const fmtDur = s => s >= 3600 ? Math.floor(s / 3600) + 'h' + Math.floor(s % 3600 / 60) + 'm' : s >= 60 ? Math.floor(s / 60) + 'm' + String(Math.floor(s % 60)).padStart(2, '0') + 's' : Math.max(0, Math.floor(s)) + 's';
 const isRainy = () => hash(today() + 'rain') < 0.22;
 
-// 依真實時間決定天空：[上色, 下色, 夜色遮罩透明度]
-function skyFor(h) {
-  if (h >= 21 || h < 5) return ['#0b1d3a', '#24407a', 0.5];
-  if (h < 8) return ['#ff9a6b', '#ffe3a8', 0.18];
-  if (h < 17) return ['#5fb8ff', '#d9f2ff', 0];
-  if (h < 20) return ['#ff8a5b', '#ffd59a', 0.15];
-  return ['#27406e', '#6a5a8a', 0.35];
+// 依真實時間決定夜色遮罩的透明度
+function nightFor(h) {
+  if (h >= 21 || h < 5) return 0.5;
+  if (h < 8) return 0.18;
+  if (h < 17) return 0;
+  if (h < 20) return 0.15;
+  return 0.35;
 }
 
 function defaultState() {
@@ -75,8 +76,8 @@ function defaultState() {
 }
 
 async function loadState() {
-  const saved = (await SettingsDB.get(FARM_KEY)) || {};
-  const s = { ...defaultState(), ...saved };
+  const { saved, refund } = migrateSaved((await SettingsDB.get(FARM_KEY)) || {}); // 下架的作物先處理掉（退款在 renderFarm 入帳）
+  const s = { ...defaultState(), ...saved, refund };
   s.plots = (Array.isArray(saved.plots) ? saved.plots : []).slice(0, MAX_PLOTS).map(p => (p && CROPS.some(c => c.id === p.cropId) ? p : null));
   while (s.plots.length < START_PLOTS) s.plots.push(null);
   s.inv = saved.inv || {};
@@ -97,19 +98,16 @@ function makeOrders(level) {
 }
 
 // ───── 靜態場景（只建一次，之後不重畫，動畫才不會被打斷）─────
+// 場景是 7 格寬、10 格高的俯視地圖：piece 把 w×h 塊圖塊擺在第 (x, y) 格
+const piece = ([c, r], w, h, x, y, cls = '') => `<div class="fm-obj ${cls}" style="--w:${w};--x:${x};--y:${y}">${Array.from({ length: w * h }, (_, i) => tl([c + i % w, r + Math.floor(i / w)])).join('')}</div>`;
 const SCENE = `
-  <div class="fm-sky"></div>
-  <div class="fm-celestial"></div>
-  <span class="fm-cloud c1">☁️</span><span class="fm-cloud c2">☁️</span><span class="fm-cloud c3">☁️</span>
-  <svg class="fm-hills" viewBox="0 0 400 120" preserveAspectRatio="none"><path d="M0 120 L0 70 Q60 20 130 62 T260 58 T400 48 L400 120Z" fill="#7cc576"/><path d="M0 120 L0 92 Q80 50 170 88 T400 80 L400 120Z" fill="#5fae5a"/></svg>
-  ${img('barn', 'fm-barn')}
-  ${img('house', 'fm-house')}
-  ${img('windmill', 'fm-windmill')}
-  ${img('tree', 'fm-tree t1')}${img('pine', 'fm-tree t2')}${img('tree', 'fm-tree t3')}${img('pine', 'fm-tree t4')}
-  <div class="fm-ground"></div>
-  <div class="fm-fieldwrap"><div class="fm-field"></div></div>
-  ${img('farmer', 'fm-farmer')}
-  <button class="fm-visitor" data-act="open" data-sheet="visitor" type="button"><span>🧑‍🌾</span><i>!</i></button>
+  <div class="fm-grass"></div>
+  ${piece([3, 1], 1, 1, 0, 0)}${piece([3, 0], 1, 1, 1, 1)}${piece([3, 2], 1, 1, 0, 2)}${piece([3, 3], 1, 1, 3, 0)}
+  ${piece([6, 7], 3, 4, 4, 0)}
+  ${piece([0, 8], 1, 1, 2, 3)}${piece([1, 9], 1, 1, 3, 3, 'fm-farmer')}
+  ${piece([2, 9], 2, 1, 5, 4)}${piece([11, 0], 1, 1, 5, 5)}${piece([3, 10], 1, 1, 6, 5)}${piece([0, 6], 1, 1, 5, 6)}
+  <div class="fm-field"></div>
+  <button class="fm-visitor" data-act="open" data-sheet="visitor" type="button">${tl([0, 9], 40)}<b>!</b></button>
   <div class="fm-pen"><span class="fm-pen-sign">牧場</span><div class="fm-animals"></div></div>
   <div class="fm-rain"></div>
   <div class="fm-night"></div>
@@ -128,6 +126,13 @@ async function renderFarm() {
   if (st.visitor.date !== today()) st.visitor = { date: today(), choice: null };
   let balance = await getBalance();
   const save = () => SettingsDB.set(FARM_KEY, st);
+  if (st.refund) { // 像素版改版：下架作物的退款
+    await earn(st.refund, '農場改版：下架作物退款');
+    createToast('農場改成像素版，葡萄、茄子、鳳梨、茶葉已下架，退還 ' + formatMoney(st.refund), 'success');
+    delete st.refund;
+    await save();
+  }
+  delete st.refund;
 
   const growSec = p => CROPS.find(x => x.id === p.cropId).time - (p.cut || 0);
   const elapsed = p => (Date.now() - p.plantedAt) / 1000;
@@ -161,6 +166,7 @@ async function renderFarm() {
         <button data-act="open" data-sheet="animals">🐾 牧場商店</button>
         <button data-act="open" data-sheet="book">📖 圖鑑</button>
       </div>
+      <p class="fm-credit">像素素材：Kenney.nl（CC0）</p>
     </div>
     <div class="fm-sheet-host"></div>`;
 
@@ -175,26 +181,25 @@ async function renderFarm() {
   const sig = {};
   const setHtml = (el, key, html) => { if (sig[key] !== html) { sig[key] = html; el.innerHTML = html; } };
 
+  // 作物依生長進度換圖塊：幼苗、長大、成熟（成熟時頭上多一個可點的收成氣泡）
   function cropHtml(p) {
     const c = CROPS.find(x => x.id === p.cropId), prog = Math.min(1, elapsed(p) / growSec(p));
-    if (prog >= 1) return `${img('crop_' + c.id, 'cr ready')}<i class="spark">✨</i>`;
-    if (prog < 0.2) return img('stage0', 'cr s0');
-    if (prog < 0.5) return img('stage1', 'cr s1');
-    return `${img('stage2', 'cr s2')}`;
+    const [col, row] = c.art[prog >= 1 ? 'ready' : prog < 0.35 ? 's0' : 's1'];
+    return `<i class="fpx cr ${prog >= 1 ? 'ready' : ''}" style="--c:${col};--r:${row}"></i>${prog >= 1 ? `<span class="rb">${tl(c.art.item, 20)}</span>` : ''}`;
   }
 
   function syncField() {
+    const soil = tl([0, 0]);
     const tiles = st.plots.map((p, i) => {
       const ready = p && growSec(p) - elapsed(p) <= 0;
-      const inner = !p ? '<span class="plus">＋</span>' : cropHtml(p);
       const flags = p ? `${p.watered ? '<em class="w">💧</em>' : ''}${p.fert ? '<em class="f">🌿</em>' : ''}` : '';
       const timer = p && !ready ? `<small class="tm" data-i="${i}">${fmtDur(growSec(p) - elapsed(p))}</small>` : '';
-      return `<div class="tile ${p ? (ready ? 'ready' : 'growing') : 'empty'} ${p?.watered ? 'wet' : ''} ${p?.fert ? 'rich' : ''}" data-act="tile" data-i="${i}"><div class="up"><div class="in">${inner}${flags}${timer}</div></div></div>`;
+      return `<div class="tile ${p ? (ready ? 'ready' : 'growing') : 'empty'} ${p?.watered ? 'wet' : ''} ${p?.fert ? 'rich' : ''}" data-act="tile" data-i="${i}">${soil}${p ? cropHtml(p) : '<span class="plus">＋</span>'}${flags}${timer}</div>`;
     });
-    if (st.plots.length < MAX_PLOTS) tiles.push(`<div class="tile lock" data-act="buyplot"><div class="up"><div class="in"><span class="lk">🔒</span><small>${formatMoney(plotPrice(st.plots.length + 1))}</small></div></div></div>`);
+    if (st.plots.length < MAX_PLOTS) tiles.push(`<div class="tile lock" data-act="buyplot">${soil}<span class="lk">🔒</span><small>${formatMoney(plotPrice(st.plots.length + 1))}</small></div>`);
     // 倒數文字每秒都在變，不納入結構簽章，另外更新
     const structure = tiles.join('').replace(/<small class="tm"[^>]*>[^<]*<\/small>/g, '');
-    if (sig.field !== structure) { sig.field = structure; field.innerHTML = tiles.join(''); field.style.gridTemplateRows = `repeat(${Math.ceil(tiles.length / 3)}, 56px)`; }
+    if (sig.field !== structure) { sig.field = structure; field.innerHTML = tiles.join(''); }
     else st.plots.forEach((p, i) => { if (p) { const t = field.querySelector(`.tm[data-i="${i}"]`); if (t) t.textContent = fmtDur(growSec(p) - elapsed(p)); } });
   }
 
@@ -205,7 +210,7 @@ async function renderFarm() {
       const state = !a.fedAt ? 'hungry' : left <= 0 ? 'ready' : 'busy';
       // 平均分散在圍欄裡，前後兩排交錯，避免互相重疊
       const n = st.animals.length, x = n > 1 ? 4 + i * (74 / (n - 1)) : 40, y = i % 2 ? 34 : 6;
-      return `<div class="animal ${state}" data-act="animal" data-i="${i}" style="left:${x}%;top:${y}%;--d:${(4 + i % 4)}s;--dl:${-(i * 1.3)}s"><span class="bubble">${state === 'hungry' ? '🥣' : state === 'ready' ? t.product.icon : '💤'}</span>${img(t.art, 'an')}</div>`;
+      return `<div class="animal ${state}" data-act="animal" data-i="${i}" style="left:${x}%;top:${y}%;--d:${(4 + i % 4)}s;--dl:${-(i * 1.3)}s"><span class="bubble">${state === 'hungry' ? '🥣' : state === 'ready' ? t.product.icon : '💤'}</span>${tl(t.tile)}</div>`;
     }).join('');
     setHtml(animalsEl, 'animals', list || '<span class="pen-empty">還沒有動物，點下方「牧場商店」買一隻吧</span>');
   }
@@ -217,16 +222,7 @@ async function renderFarm() {
     $('.hud-xp').textContent = st.xp + '/' + xpNeed(st.level);
     $('.hud-weather').textContent = (rainy ? '🌧 雨天' : '☀️ 晴天') + (st.luck > 0 ? ' 🍀' + st.luck : '');
     $('.fm-visitor').style.display = st.visitor.choice ? 'none' : '';
-    const h = new Date().getHours() + new Date().getMinutes() / 60;
-    const [a, b, night] = skyFor(Math.floor(h));
-    $('.fm-sky').style.background = `linear-gradient(${a}, ${b})`;
-    $('.fm-night').style.opacity = night;
-    const cel = $('.fm-celestial');
-    const day = h >= 6 && h < 18;
-    const t = day ? (h - 6) / 12 : ((h + 6) % 24) / 12; // 0~1 沿弧線移動
-    cel.textContent = day ? '☀️' : '🌙';
-    cel.style.left = (8 + t * 78) + '%';
-    cel.style.top = (14 + 52 * Math.pow(2 * t - 1, 2)) + 'px';
+    $('.fm-night').style.opacity = nightFor(new Date().getHours());
     const ready = st.plots.filter(p => p && growSec(p) - elapsed(p) <= 0).length;
     $('.fm-tools .hv i').textContent = ready ? ' ' + ready : '';
     $('.fm-tools .hv').classList.toggle('has', ready > 0);
@@ -238,7 +234,7 @@ async function renderFarm() {
     hint.textContent = mode === 'plant' ? `點空地種下 ${crop.icon}${crop.name}（${formatMoney(crop.seed)}）；成熟後點一下收成${rainy ? '；雨天新種下的作物自動澆水' : ''}` : mode === 'water' ? '點生長中的作物澆水（縮短 25%，免費）' : `點生長中的作物施肥（縮短 50%，${formatMoney(FERT_PRICE)}）；澆水加施肥收成加倍`;
     const bar = $('.fm-seedbar');
     bar.style.display = mode === 'plant' ? '' : 'none';
-    setHtml(bar, 'seeds', CROPS.map(c => `<button class="seed ${c.id === selectedCrop ? 'on' : ''} ${st.level < c.lvl ? 'locked' : ''}" data-act="seed" data-id="${c.id}"><span>${st.level < c.lvl ? '🔒' : img('crop_' + c.id, 'seed-img')}</span><small>${st.level < c.lvl ? 'Lv.' + c.lvl : formatMoney(c.seed)}</small></button>`).join(''));
+    setHtml(bar, 'seeds', CROPS.map(c => `<button class="seed ${c.id === selectedCrop ? 'on' : ''} ${st.level < c.lvl ? 'locked' : ''}" data-act="seed" data-id="${c.id}"><span>${st.level < c.lvl ? '🔒' : tl(c.art.bag, 30)}</span><small>${st.level < c.lvl ? 'Lv.' + c.lvl : formatMoney(c.seed)}</small></button>`).join(''));
   }
 
   function sync() { syncField(); syncAnimals(); syncHud(); }
@@ -259,7 +255,7 @@ async function renderFarm() {
   function stockHtml() {
     const rows = Object.keys(st.inv).map(id => {
       const it = itemOf(id), m = marketMult(id), p = priceOf(id);
-      return `<div class="stock-row"><span class="st-name">${it.icon} ${it.name} × ${st.inv[id]}</span><span class="st-price ${m >= 1 ? 'up' : 'down'}">${formatMoney(p)} ${m >= 1 ? '▲' : '▼'}</span>
+      return `<div class="stock-row"><span class="st-name">${iconOf(id)} ${it.name} × ${st.inv[id]}</span><span class="st-price ${m >= 1 ? 'up' : 'down'}">${formatMoney(p)} ${m >= 1 ? '▲' : '▼'}</span>
         <button class="fm-btn" data-act="sell" data-id="${id}">賣出</button><button class="fm-btn alt" data-act="gift" data-id="${id}">送禮</button></div>`;
     }).join('');
     const total = Object.keys(st.inv).reduce((s, id) => s + priceOf(id) * st.inv[id], 0);
@@ -270,7 +266,7 @@ async function renderFarm() {
   function ordersHtml() {
     return '<h3>📋 今日訂單</h3>' + st.orders.list.map(o => {
       const it = itemOf(o.item), have = invCount(o.item);
-      return `<div class="order ${o.done ? 'done' : ''}"><div><strong>${it.icon} ${it.name} × ${o.qty}</strong><small>報酬 ${formatMoney(o.reward)} ＋ ${o.xp} XP（比行情高約 35%）</small></div>
+      return `<div class="order ${o.done ? 'done' : ''}"><div><strong>${iconOf(o.item)} ${it.name} × ${o.qty}</strong><small>報酬 ${formatMoney(o.reward)} ＋ ${o.xp} XP（比行情高約 35%）</small></div>
         ${o.done ? '<span class="fm-muted">已完成</span>' : `<button class="fm-btn" data-act="order" data-id="${o.id}" ${have >= o.qty ? '' : 'disabled'}>${have >= o.qty ? '交貨' : have + '/' + o.qty}</button>`}</div>`;
     }).join('') + '<p class="farm-hint">每天會換一批訂單；只會要求你目前等級已解鎖的作物。</p>';
   }
@@ -278,33 +274,33 @@ async function renderFarm() {
     return '<h3>🐾 牧場商店</h3><p class="farm-hint">動物會在牧場裡走動：頭上 🥣 表示餓了（點一下餵食），出現產品圖示表示可以收取，💤 是生產中。</p>' + ANIMALS.map(t => {
       const owned = st.animals.filter(a => a.type === t.id).length;
       const ok = st.level >= t.lvl && owned < ANIMAL_CAP;
-      return `<button class="shop-row" data-act="buyanimal" data-id="${t.id}" ${ok ? '' : 'disabled'}><span>${t.icon} ${t.name}（${owned}/${ANIMAL_CAP}）<small>${t.product.icon}${t.product.name} ${formatMoney(t.product.sell)}／每 ${Math.round(t.interval / MIN)} 分　飼料 ${formatMoney(t.feed)}</small></span><b>${st.level < t.lvl ? '需 Lv.' + t.lvl : owned >= ANIMAL_CAP ? '已滿' : formatMoney(t.buy)}</b></button>`;
+      return `<button class="shop-row" data-act="buyanimal" data-id="${t.id}" ${ok ? '' : 'disabled'}><span>${tl(t.tile, 30)} ${t.name}（${owned}/${ANIMAL_CAP}）<small>${iconOf(t.product.id)}${t.product.name} ${formatMoney(t.product.sell)}／每 ${Math.round(t.interval / MIN)} 分　飼料 ${formatMoney(t.feed)}</small></span><b>${st.level < t.lvl ? '需 Lv.' + t.lvl : owned >= ANIMAL_CAP ? '已滿' : formatMoney(t.buy)}</b></button>`;
     }).join('');
   }
   function plotSheetHtml() {
     const p = st.plots[sheet.idx];
     if (!p) return '';
     const c = CROPS.find(x => x.id === p.cropId);
-    return `<h3>${c.icon} ${c.name}</h3><p class="fm-muted">還要 ${fmtDur(growSec(p) - elapsed(p))}</p>
+    return `<h3>${iconOf(c.id)} ${c.name}</h3><p class="fm-muted">還要 ${fmtDur(growSec(p) - elapsed(p))}</p>
       <button class="shop-row" data-act="water" ${p.watered ? 'disabled' : ''}><span>💧 澆水<small>縮短 25% 生長時間（每株一次，免費）</small></span><b>${p.watered ? '已澆' : '免費'}</b></button>
       <button class="shop-row" data-act="fert" ${p.fert ? 'disabled' : ''}><span>🌿 施肥<small>縮短 50% 生長時間（每株一次）</small></span><b>${p.fert ? '已施' : formatMoney(FERT_PRICE)}</b></button>
       <button class="shop-row danger" data-act="remove"><span>🗑 鏟除<small>放棄這株作物（不退種子錢）</small></span><b></b></button>`;
   }
   function giftHtml() {
-    return `<h3>送 ${itemOf(sheet.id).icon} ${itemOf(sheet.id).name} 給誰？</h3>` + (sheet.chars.length ? sheet.chars.map(c => `<button class="shop-row" data-act="giftto" data-cid="${c.id}"><span>${esc(c.name)}</span><b>送出</b></button>`).join('') : '<p class="fm-muted">還沒有角色。</p>');
+    return `<h3>送 ${iconOf(sheet.id)} ${itemOf(sheet.id).name} 給誰？</h3>` + (sheet.chars.length ? sheet.chars.map(c => `<button class="shop-row" data-act="giftto" data-cid="${c.id}"><span>${esc(c.name)}</span><b>送出</b></button>`).join('') : '<p class="fm-muted">還沒有角色。</p>');
   }
   function bookHtml() {
     return `<h3>📖 作物圖鑑</h3><p class="farm-hint">同一種作物收成 ${MASTERY_AT.join('／')} 次各得 1 顆 ★：送一筆獎金，之後種下這種作物，生長時間每顆星縮短 5%。</p>` + CROPS.map(c => {
       const n = st.mastery[c.id] || 0, stars = starsOf(n), next = MASTERY_AT[stars];
       const locked = !n && st.level < c.lvl;
-      return `<div class="stock-row ${locked ? 'fm-dim' : ''}"><span class="bk-icon">${locked ? '🔒' : img('crop_' + c.id, 'seed-img')}</span><span class="st-name">${locked ? '農場 Lv.' + c.lvl + ' 解鎖' : c.name}${locked ? '' : `<small class="fm-muted"> ${n} 次收成${next ? '，再 ' + (next - n) + ' 次得 ★' + (stars + 1) : '，已精通'}</small>`}</span><b class="bk-stars">${'★'.repeat(stars)}${'☆'.repeat(MASTERY_AT.length - stars)}</b></div>`;
+      return `<div class="stock-row ${locked ? 'fm-dim' : ''}"><span class="bk-icon">${locked ? '🔒' : iconOf(c.id)}</span><span class="st-name">${locked ? '農場 Lv.' + c.lvl + ' 解鎖' : c.name}${locked ? '' : `<small class="fm-muted"> ${n} 次收成${next ? '，再 ' + (next - n) + ' 次得 ★' + (stars + 1) : '，已精通'}</small>`}</span><b class="bk-stars">${'★'.repeat(stars)}${'☆'.repeat(MASTERY_AT.length - stars)}</b></div>`;
     }).join('');
   }
   function visitorHtml() {
     const o = visitorOffer(st.inv, priceOf);
     if (o.kind === 'gift') return `<h3>🧑‍🌾 旅行商人</h3><p>商人看你的倉庫幾乎是空的，送你一個幸運符：接下來 ${LUCK_HARVESTS} 次收成，出現「金色作物」（產量 ×3）的機會大增。</p><button class="fm-primary" data-act="visit" data-choice="gift">收下</button>`;
     const it = itemOf(o.item);
-    return `<h3>🧑‍🌾 旅行商人</h3><p>商人看上了你倉庫裡的 ${it.icon}${it.name}，你打算怎麼做？</p>
+    return `<h3>🧑‍🌾 旅行商人</h3><p>商人看上了你倉庫裡的 ${iconOf(o.item)}${it.name}，你打算怎麼做？</p>
       <button class="shop-row" data-act="visit" data-choice="sell"><span>賣給他 ${o.qty} 個<small>比今天的行情高 50%</small></span><b>${formatMoney(o.pay)}</b></button>
       <button class="shop-row" data-act="visit" data-choice="luck"><span>換幸運符（給他 ${o.swap} 個）<small>接下來 ${LUCK_HARVESTS} 次收成，金色作物（×3）機率大增</small></span><b>🍀</b></button>
       <button class="shop-row" data-act="visit" data-choice="decline"><span>婉拒<small>他明天會再來</small></span><b></b></button>`;
