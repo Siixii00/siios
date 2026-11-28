@@ -107,6 +107,28 @@ function homeReturn(el) {
     ], { duration: 260 });
 }
 
+// 點讚的小爆發：從按鈕中心往外噴幾顆小圓點（掛在 body 上、用固定座標，不受 App 版面影響）
+export function burst(el, color = '#ff3040') {
+    if (!el || !motionAllowed()) return;
+    const r = el.getBoundingClientRect();
+    const layer = document.createElement('div');
+    layer.style.cssText = `position:fixed;left:${r.left + r.width / 2}px;top:${r.top + r.height / 2}px;width:0;height:0;pointer-events:none;z-index:9999`;
+    const N = 7;
+    for (let i = 0; i < N; i++) {
+        const dot = document.createElement('i');
+        dot.style.cssText = `position:absolute;left:-3px;top:-3px;width:6px;height:6px;border-radius:50%;background:${color}`;
+        const ang = (i / N) * Math.PI * 2 + Math.random() * 0.4;
+        const dist = 20 + Math.random() * 10;
+        play(dot, [
+            { translate: '0 0', scale: 1, opacity: 1 },
+            { translate: `${Math.cos(ang) * dist}px ${Math.sin(ang) * dist}px`, scale: 0.2, opacity: 0 }
+        ], { duration: 460, easing: 'cubic-bezier(0.2, 0.8, 0.3, 1)' });
+        layer.appendChild(dot);
+    }
+    document.body.appendChild(layer);
+    setTimeout(() => layer.remove(), 520);
+}
+
 export function initMotion(host) {
     if (!host || typeof MutationObserver === 'undefined') return;
 

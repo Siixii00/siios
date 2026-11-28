@@ -1,5 +1,11 @@
 /* 動態效果的樣式（開啟 App、換頁、清單進場的動畫在 js/core/motion.js）。
-   系統開啟「減少動態效果」或 <html data-motion="off"> 時，這裡的動畫也全部關閉。 */
+   系統開啟「減少動態效果」或 <html data-motion="off"> 時，這裡的動畫也全部關閉。
+   一律用獨立的 scale／translate 屬性，不會蓋掉元素自己的 transform。 */
+
+:root {
+    --motion-ease: cubic-bezier(0.32, 0.72, 0, 1);    /* 先快後慢、結尾柔和 */
+    --motion-spring: cubic-bezier(0.34, 1.56, 0.64, 1); /* 稍微衝過頭再彈回 */
+}
 
 /* 鎖定畫面：兩團柔光在壁紙上緩慢漂移（只用 transform，GPU 合成，不吃效能） */
 @keyframes motion-drift {
@@ -32,11 +38,69 @@
     transform: scale(0.9);
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .lock-screen::after { animation: none; }
-    .home-app-icon-bg, .home-dock-icon-bg { transition: none; }
+/* 所有按鈕：按下縮一點點，放開彈回（沒有自己 transition 的按鈕才會有彈回的緩動） */
+button,
+[role="button"] {
+    transition: scale 0.2s var(--motion-spring);
 }
 
-html[data-motion="off"] .lock-screen::after { animation: none; }
+button:not(:disabled):active,
+[role="button"]:active {
+    scale: 0.96;
+}
+
+/* 開關：旋鈕帶一點彈簧（Android 主題有自己的樣式，不受影響） */
+.ios-toggle {
+    transition: background-color 0.25s ease;
+}
+
+.ios-toggle::after {
+    transition: transform 0.38s var(--motion-spring);
+}
+
+/* 主畫面分頁小點：目前這頁拉長成膠囊 */
+.home-page-dot {
+    transition: width 0.3s var(--motion-ease), background-color 0.2s ease;
+}
+
+.home-page-dot.active {
+    width: 18px;
+    border-radius: 3px;
+}
+
+/* 下方彈出的面板：滑入的曲線更柔和一點 */
+.kakao-bottom-sheet {
+    transition: transform 0.42s var(--motion-ease);
+}
+
+/* 點讚的心：彈一下 */
+@keyframes motion-pop {
+    0% { scale: 1; }
+    35% { scale: 1.4; }
+    100% { scale: 1; }
+}
+
+.motion-pop {
+    display: inline-block;
+    animation: motion-pop 0.42s var(--motion-spring);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lock-screen::after, .motion-pop { animation: none; }
+    .home-app-icon-bg, .home-dock-icon-bg, button, [role="button"],
+    .ios-toggle, .ios-toggle::after, .home-page-dot, .kakao-bottom-sheet { transition: none; }
+    button:not(:disabled):active, [role="button"]:active { scale: 1; }
+}
+
+html[data-motion="off"] .lock-screen::after,
+html[data-motion="off"] .motion-pop { animation: none; }
 html[data-motion="off"] .home-app-icon-bg,
-html[data-motion="off"] .home-dock-icon-bg { transition: none; }
+html[data-motion="off"] .home-dock-icon-bg,
+html[data-motion="off"] button,
+html[data-motion="off"] [role="button"],
+html[data-motion="off"] .ios-toggle,
+html[data-motion="off"] .ios-toggle::after,
+html[data-motion="off"] .home-page-dot,
+html[data-motion="off"] .kakao-bottom-sheet { transition: none; }
+html[data-motion="off"] button:not(:disabled):active,
+html[data-motion="off"] [role="button"]:active { scale: 1; }

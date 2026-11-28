@@ -7,6 +7,7 @@ import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
 import { addOrder, newOrderId } from '../../core/orders.js';
 import { askConfirm } from '../../core/dialogs.js';
+import { burst } from '../../core/motion.js';
 
 const STORAGE_KEYS = {
     stories: 'instagram_stories',
@@ -335,6 +336,7 @@ async function bindPostInteractions(article, post) {
         post.liked = !post.liked;
         post.likes += post.liked ? 1 : -1;
         updateIcon();
+        if (post.liked) { likeBtn.querySelector('i')?.classList.add('motion-pop'); burst(likeBtn); }
         if (triggerOverlay) {
             heartOverlay.classList.remove('active');
             void heartOverlay.offsetWidth;
