@@ -426,7 +426,7 @@ async function renderStream(params) {
         title: streamerName,
         backPath: '/twitch',
         rightActions: [
-            { icon: 'more_horiz', onClick: () => {} }
+            { icon: 'more_horiz', onClick: () => createToast('更多選項尚未開放', 'info') }
         ]
     });
     header.classList.add('twitch-header');
@@ -681,7 +681,7 @@ async function renderProfile() {
     info.appendChild(createElement('div', 'text-ios-muted text-sm', { textContent: '@twitch_user' }));
     headerCard.appendChild(avatar);
     headerCard.appendChild(info);
-    headerCard.appendChild(createElement('button', 'twitch-ghost-btn', { textContent: '編輯' }));
+    headerCard.appendChild(createElement('button', 'twitch-ghost-btn', { textContent: '編輯', onClick: () => createToast('編輯個人檔案尚未開放', 'info') }));
     profile.appendChild(headerCard);
     
     const stats = createElement('div', 'twitch-profile-stats');

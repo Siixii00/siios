@@ -1347,7 +1347,7 @@ async function renderPlayer(params) {
         title: title,
         backPath: '/bilibili',
         rightActions: [
-            { icon: 'more_horiz', onClick: () => {} }
+            { icon: 'more_horiz', onClick: () => createToast('更多選項尚未開放', 'info') }
         ]
     });
     header.classList.add('bili-header');
