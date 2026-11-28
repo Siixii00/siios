@@ -1,196 +1,193 @@
 {
   "metadata": {
-    "last_updated": "2026-11-28T04:34:25.274469",
-    "total_items": 64
+    "last_updated": "2026-11-28T13:56:32.548973",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
-        "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+        "title": "Farewell",
+        "url": "https://github.com/p-e-w/heretic/issues/601",
         "source": "Hacker News",
-        "score": 212
+        "score": 333
       },
       {
-        "title": "GPT 6.2 Astra Solves a Historical Mystery",
-        "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
+        "title": "Claude Code sabotage: preliminary benchmarking",
+        "url": "https://xinyadu.github.io/blog/claude-code-sabotage.html",
         "source": "Hacker News",
-        "score": 373
+        "score": 89
       },
       {
-        "title": "The Balatro Timeline",
-        "url": "https://localthunk.com/blog/balatro-timeline-3aarh",
+        "title": "Show HN: Luciole Mono – terminal font designed for legibility",
+        "url": "https://scriptor-pro.github.io/luciole-mono/",
         "source": "Hacker News",
-        "score": 159
+        "score": 29
       },
       {
         "title": "Unkernel: Real Linux kernel, compiled to WebAssembly",
         "url": "https://unkernel.dev",
         "source": "Hacker News",
-        "score": 31
+        "score": 440
+      },
+      {
+        "title": "GGUF LLM Models with Hidden Malware on Hugging Face Reached 2400 Victims",
+        "url": "https://malspark.com/blog/malicious-gguf-models-hugging-face/",
+        "source": "Hacker News",
+        "score": 36
+      },
+      {
+        "title": "Audible removes download option for purchased audiobooks",
+        "url": "https://consumerrights.wiki/w/Audible_removes_download_option_for_purchased_audiobooks",
+        "source": "Hacker News",
+        "score": 28
+      },
+      {
+        "title": "Loom seamlessly combines weaving, knitting and braiding",
+        "url": "https://news.cornell.edu/stories/2026/11/loom-seamlessly-combines-weaving-knitting-and-braiding",
+        "source": "Hacker News",
+        "score": 186
+      },
+      {
+        "title": "Knuth: Moratorium on Error Reports",
+        "url": "https://www-cs-faculty.stanford.edu/~knuth/moratorium.html",
+        "source": "Hacker News",
+        "score": 223
+      },
+      {
+        "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+        "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+        "source": "Hacker News",
+        "score": 480
+      },
+      {
+        "title": "Diablo II",
+        "url": "https://www.filfre.net/2026/11/diablo-ii/",
+        "source": "Hacker News",
+        "score": 42
+      },
+      {
+        "title": "The Balatro Timeline",
+        "url": "https://localthunk.com/blog/balatro-timeline-3aarh",
+        "source": "Hacker News",
+        "score": 443
+      },
+      {
+        "title": "GPT 6.2 Astra Solves a Historical Mystery",
+        "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
+        "source": "Hacker News",
+        "score": 474
+      },
+      {
+        "title": "Paolo Soleri built a utopian eco-city in the Arizona desert",
+        "url": "https://www.worldofinteriors.com/story/paolo-soleri-arconsati-arizona",
+        "source": "Hacker News",
+        "score": 107
       },
       {
         "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
         "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
         "source": "Hacker News",
-        "score": 469
+        "score": 558
       },
       {
-        "title": "Atari Homebrew Awards Cancelled",
-        "url": "https://forums.atariage.com/topic/394894-atari-homebrew-awards-cancelled/",
+        "title": "Swapping Jolt's sorted collections to a B+tree",
+        "url": "https://yogthos.net/posts/2026-11-23-b+trees.html",
         "source": "Hacker News",
-        "score": 129
-      },
-      {
-        "title": "Cyberpunk Television Shows",
-        "url": "https://shellzine.net/cyberpunk-television/",
-        "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "Convex skills send the user's app idea to a remote server without telling them",
-        "url": "https://github.com/convex/convex-backend-skill/issues/64",
-        "source": "Hacker News",
-        "score": 255
-      },
-      {
-        "title": "9/UX: a Macintosh-inspired desktop for 9front",
-        "url": "https://progrium.github.io/9ux/",
-        "source": "Hacker News",
-        "score": 92
-      },
-      {
-        "title": "Citroën Hydraulic System",
-        "url": "https://www.citroenet.org.uk/miscellaneous/hydraulics/hydraulics-1.html",
-        "source": "Hacker News",
-        "score": 149
-      },
-      {
-        "title": "Build your own amp modeler: $78 DIY pedal kit from TONE3000",
-        "url": "https://www.guitarworld.com/gear/guitar-pedals/tone3000-daisy-audio-diy-pedal-kit",
-        "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "How WinHelp Files Work",
-        "url": "https://quin.fyi/posts/how-winhelp-files-work.html",
-        "source": "Hacker News",
-        "score": 18
-      },
-      {
-        "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
-        "url": "https://bouncemarket.minhanhday.com/",
-        "source": "Hacker News",
-        "score": 341
-      },
-      {
-        "title": "First images of the impact of DART asteroid deflection experiment",
-        "url": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup/",
-        "source": "Hacker News",
-        "score": 197
-      },
-      {
-        "title": "Tabernetes: A Kubernetes cluster whose nodes are browser tabs",
-        "url": "https://tabernet.es/",
-        "source": "Hacker News",
-        "score": 53
+        "score": 12
       }
     ],
     "ai": [
       {
+        "title": "Claude Code sabotage: preliminary benchmarking",
+        "url": "https://xinyadu.github.io/blog/claude-code-sabotage.html",
+        "source": "Hacker News AI",
+        "score": 89
+      },
+      {
+        "title": "GGUF LLM Models with Hidden Malware on Hugging Face Reached 2400 Victims",
+        "url": "https://malspark.com/blog/malicious-gguf-models-hugging-face/",
+        "source": "Hacker News AI",
+        "score": 36
+      },
+      {
+        "title": "Loom seamlessly combines weaving, knitting and braiding",
+        "url": "https://news.cornell.edu/stories/2026/11/loom-seamlessly-combines-weaving-knitting-and-braiding",
+        "source": "Hacker News AI",
+        "score": 186
+      },
+      {
         "title": "GPT 6.2 Astra Solves a Historical Mystery",
         "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
         "source": "Hacker News AI",
-        "score": 373
+        "score": 474
+      },
+      {
+        "title": "Show HN: Fleetlayer – Framework for running many AI agents on multiple machines",
+        "url": "https://fleetlayer.ai/",
+        "source": "Hacker News AI",
+        "score": 17
       },
       {
         "title": "Michael Nielsen took down his book on neural nets",
         "url": "https://neuralnetworksanddeeplearning.com/",
         "source": "Hacker News AI",
-        "score": 443
-      },
-      {
-        "title": "Woman evicted after landlord's AI assistant told her she could delay rent",
-        "url": "https://drmahfouz.substack.com/p/woman-evicted-after-landlords-ai",
-        "source": "Hacker News AI",
-        "score": 109
-      },
-      {
-        "title": "Prospero: Bloat-free, native AI coding harness with ImGui",
-        "url": "https://github.com/skeeto/prospero",
-        "source": "Hacker News AI",
-        "score": 46
+        "score": 594
       },
       {
         "title": "Show HN: DragDropMath – Learn math by feel",
         "url": "https://dragdropmath.com/",
         "source": "Hacker News AI",
-        "score": 115
-      },
-      {
-        "title": "Lydian Chromatic Concept of Tonal Organization",
-        "url": "https://en.wikipedia.org/wiki/Lydian_Chromatic_Concept_of_Tonal_Organization",
-        "source": "Hacker News AI",
-        "score": 50
-      },
-      {
-        "title": "Claude silently added rules to ignore users skintone preferences in our app",
-        "url": "https://twitter.com/jakozloski/status/2126281598517576049",
-        "source": "Hacker News AI",
-        "score": 6
+        "score": 156
       },
       {
         "title": "Claude sabotaging ML research tasks?",
         "url": "https://twitter.com/RealAstropulse/status/2126119408997466389",
         "source": "Hacker News AI",
-        "score": 647
+        "score": 733
+      },
+      {
+        "title": "Prospero: Bloat-free, native AI coding harness with ImGui",
+        "url": "https://github.com/skeeto/prospero",
+        "source": "Hacker News AI",
+        "score": 82
       },
       {
         "title": "\"What's Claude's fursona?\" and other questions",
         "url": "https://herecomesthemoon.net/2026/11/whats-claudes-fursona/",
         "source": "Hacker News AI",
-        "score": 189
-      },
-      {
-        "title": "Show HN: Getting 101 tok/s from Inkling 2 Mini in vLLM on one GB10",
-        "url": "https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/",
-        "source": "Hacker News AI",
-        "score": 50
-      },
-      {
-        "title": "US Air Force's cloud computing platform hacked",
-        "url": "https://news.sky.com/story/us-air-forces-cloud-computing-platform-hacked-13617163",
-        "source": "Hacker News AI",
-        "score": 338
-      },
-      {
-        "title": "Group chat where your AI talks behind your back",
-        "url": "https://construct22.com/",
-        "source": "Hacker News AI",
-        "score": 692
+        "score": 203
       },
       {
         "title": "AI made self-hosting fun again",
         "url": "https://janlukas.blog/posts/ai-self-hosting",
         "source": "Hacker News AI",
-        "score": 1107
-      },
-      {
-        "title": "The need for a formally verifiable mainstream programming language",
-        "url": "https://blainehansen.me/post/mainstream-verifiable-language/",
-        "source": "Hacker News AI",
-        "score": 319
+        "score": 1126
       }
     ],
     "news": [
+      {
+        "title": "Argentina's bid to stop Falklands oil drilling rejected",
+        "url": "https://www.bbc.co.uk/news/articles/c84gnq3qq9rno?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Two staff killed in Israeli strike on Gaza medical clinic, MSF says",
+        "url": "https://www.bbc.co.uk/news/articles/cm5y10yydln3o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Afghanistan explosion kills 10 students and injures more than 100, official says",
+        "url": "https://www.bbc.co.uk/news/articles/ckp80jyz6dl8o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Spanish PM and rivals rally supporters in final pitch for votes",
         "url": "https://www.bbc.co.uk/news/articles/c8wy5p4gdnwvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Turkish officials 'destroyed' pro-opposition TV channel, owner tells BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cq36gk151xkdo?at_medium=RSS&at_campaign=rss",
+        "title": "OpenAI counter-sues Apple over alleged theft of trade secrets",
+        "url": "https://www.bbc.co.uk/news/articles/cm15ekqvlezeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -199,60 +196,45 @@
         "source": "BBC World"
       },
       {
-        "title": "'Poison seller' Kenneth Law apologises in court to the families of his victims",
-        "url": "https://www.bbc.co.uk/news/articles/cmx2898wq2qjo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Zelensky criticises 'strange' Trump-Putin friendship in BBC interview",
-        "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "'We couldn't give up that easily': Marching bands scramble to cover costs after Thanksgiving parade rearranged",
-        "url": "https://www.bbc.co.uk/news/articles/ckd71ypy9e8eo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Millions of wives in South Asia unprotected from marital rape - study",
-        "url": "https://www.bbc.co.uk/news/articles/cw074p95ye5do?at_medium=RSS&at_campaign=rss",
+        "title": "Australian wrestler Bronson Reed dies aged 38, WWE says",
+        "url": "https://www.bbc.co.uk/news/articles/cvwy08g70ldko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " 6 Christmas gifts for designers, all discounted for Black Friday ",
-        "url": "https://www.creativebloq.com/deals/6-christmas-gifts-for-designers-all-discounted-for-black-friday",
+        "title": " 3 of my favourite wired earphones got decent Cyber Monday deals, and you should buy at least one of them! ",
+        "url": "https://www.creativebloq.com/deals/3-of-my-favourite-wired-earphones-got-decent-cyber-monday-deals-and-you-should-buy-at-least-one-of-them",
         "source": "Creative Bloq"
       },
       {
-        "title": " Black Friday might be your one chance to get a portable SSD at a price you can almost afford ",
-        "url": "https://www.creativebloq.com/deals/black-friday-might-be-your-last-chance-for-a-while-to-get-a-portable-ssd-at-a-price-you-can-almost-afford",
+        "title": " Cricut’s early Cyber Monday sale is bursting with bundles ",
+        "url": "https://www.creativebloq.com/deals/cricuts-early-cyber-monday-sale-is-bursting-with-bundles",
         "source": "Creative Bloq"
       },
       {
-        "title": " Time's ticking to get $30 off Nintendo Switch 2 for Black Friday ",
-        "url": "https://www.creativebloq.com/deals/times-ticking-to-get-usd30-off-nintendo-switch-2-for-black-friday",
+        "title": " \"A universe in which AI replaces folks? I don't see it\": how Adobe is protecting its creatives ",
+        "url": "https://www.creativebloq.com/features/a-universe-in-which-ai-replaces-folks-i-dont-see-it-how-adobe-is-protecting-its-creatives",
         "source": "Creative Bloq"
       },
       {
-        "title": " If you want a new TV, these Black Friday deals save up to 47% ",
-        "url": "https://www.creativebloq.com/deals/if-you-want-a-new-tv-these-black-friday-deals-save-up-to-47-percent",
+        "title": " Visa’s unpretentious brand refresh nails simple design ",
+        "url": "https://www.creativebloq.com/news/visas-unpretentious-brand-refresh-nails-simple-design",
         "source": "Creative Bloq"
       },
       {
-        "title": " The only budget ergonomic office chair to get a 10/10 from our chair expert just got a 26% discount ",
-        "url": "https://www.creativebloq.com/deals/the-only-budget-ergonomic-office-chair-to-get-a-10-10-from-our-chair-expert-just-got-a-26-percent-discount",
+        "title": " The 25+ best Black Friday deals LIVE: handpicked Cricut, Apple, drawing tablets, art supplies, Nintendo Switch, and more ",
+        "url": "https://www.creativebloq.com/live/news/black-friday-deals-for-creatives-day-two",
         "source": "Creative Bloq"
       },
       {
-        "title": " This beautiful headphone dongle comes with 10-band PEQ and costs under $90 ",
-        "url": "https://www.creativebloq.com/news/this-beautiful-headphone-dongle-comes-with-10-band-peq-and-costs-under-usd90",
+        "title": " From drab to dazzling: How Spotify's ads department found its sense of fun ",
+        "url": "https://www.creativebloq.com/news/from-drab-to-dazzling-how-spotifys-ads-department-found-its-sense-of-fun",
         "source": "Creative Bloq"
       },
       {
-        "title": " Avoid GTA 6 'Black Fraud Day' with my PS5 and Xbox price hack (and the deal to avoid) ",
-        "url": "https://www.creativebloq.com/deals/avoid-gta-6-black-fraud-day-with-my-ps5-and-xbox-price-hack-and-the-deal-to-avoid",
+        "title": " From Greek myths to Disney and Silksong, artist Lisanne Koeteeuw reveals her inspirations ",
+        "url": "https://www.creativebloq.com/features/from-greek-myths-to-disney-and-silksong-artist-lisanne-koeteeuw-reveals-her-inspirations",
         "source": "Creative Bloq"
       }
     ],
@@ -295,38 +277,38 @@
     ],
     "gaming": [
       {
-        "title": "8 Classic PlayStation Games That Are Barely Playable Today",
-        "url": "https://www.polygon.com/classic-playstation-games-unplayable-today/",
+        "title": "007 First Light's Brilliant Tutorial Is a Game Direction Miracle",
+        "url": "https://www.polygon.com/007-first-lights-tutorial-interview-io-interactive/",
         "source": "Polygon"
       },
       {
-        "title": "Every Free Game This Week on Steam, Epic, and Xbox (Nov. 27-Dec. 3)",
-        "url": "https://www.polygon.com/free-games-right-now-steam-epic-ps-plus-nov-27-dec-3/",
+        "title": "Stephen King's Near-Perfect 2-Part Thriller Is Officially Being Removed From Netflix",
+        "url": "https://www.polygon.com/castle-rock-leaving-netflix/",
         "source": "Polygon"
       },
       {
-        "title": "63 Years Later, CBS's Legendary 70-Episode Series Still Has the Only Vampire Worth Watching",
-        "url": "https://www.polygon.com/the-only-vampire-i-care-about-is-grandpa-munster/",
+        "title": "12 Years Later, Hbo's Near-Perfect Vampire Series Still Has an Unwatchable Ending",
+        "url": "https://www.polygon.com/true-blood-series-finale-look-back/",
         "source": "Polygon"
       },
       {
-        "title": "It’s Officially the End of an Era for HBO’s The Last of Us",
-        "url": "https://www.polygon.com/the-last-of-us-season-3-end-finale-hbo-2027/",
+        "title": "Alan Ritchson's Reacher Officially Hits Major Milestone Ahead of Season 5",
+        "url": "https://www.polygon.com/alan-ritchson-reacher-prime-streaming-milestone/",
         "source": "Polygon"
       },
       {
-        "title": "10 New Movies to Watch This Weekend on Netflix, Prime Video, and Hulu (November 27-29)",
-        "url": "https://www.polygon.com/new-movies-streaming-this-weekend-netflix-november-27-29/",
+        "title": "30 Years Later, Star Trek's Greatest 'Next Generation' Movie Is Officially Free to Stream",
+        "url": "https://www.polygon.com/star-trek-first-contact-best-next-generation-movie/",
         "source": "Polygon"
       },
       {
-        "title": "8 New TV Shows to Watch This Weekend on Netflix and Prime Video (November 27-29)",
-        "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-november-27-29/",
+        "title": "8 Sci-Fi Books That Get Even Better the Second Time You Read Them",
+        "url": "https://www.polygon.com/sci-fi-books-better-second-time/",
         "source": "Polygon"
       },
       {
-        "title": "Magic: The Gathering Designer Reveals 2026’s 11 Best New Commanders",
-        "url": "https://www.polygon.com/mtg-best-commanders-of-2026-gavin-verhey-interview/",
+        "title": "7 Funniest 'Far Side' Comics About Food",
+        "url": "https://www.polygon.com/7-funniest-far-side-comics-about-food/",
         "source": "Polygon"
       }
     ],
