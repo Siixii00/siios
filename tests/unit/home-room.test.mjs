@@ -15,6 +15,11 @@ test('宅家：每件家具都有格子尺寸與圖塊，且圖塊落在素材�
     }
 });
 
+test('宅家樣式：房間大小不用視窗寬度（vw）算，桌面版的手機外框比視窗窄，會超出畫面', () => {
+    const css = readFileSync(new URL('../../js/apps/home/style.css', import.meta.url), 'utf8');
+    assert.doesNotMatch(css, /\dvw\b/);
+});
+
 test('canPlace：不能超出房間、不能疊在實心家具上，地毯可被踩', () => {
     const placed = { bed: 'bed2', rug: 'rug1', tv: 'tv1' };
     const pos = { bed: { x: 0, y: 0 }, rug: { x: 0, y: 0 }, tv: { x: 3, y: 3 } };

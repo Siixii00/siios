@@ -22,8 +22,10 @@
 .h-tabs { display: flex; gap: 6px; margin-bottom: 12px; }
 .h-tabs button { flex: 1; padding: 9px 0; border: none; border-radius: 100px; background: var(--home-card); color: var(--home-muted); font-weight: 700; font-size: 13px; cursor: pointer; }
 .h-tabs button.on { background: var(--home-accent); color: #fff; }
-/* 房間：7×8 格（牆 2 格、地板 6 格）。圖塊來自 Kenney Roguelike Indoor pack（CC0），--t 是一格的像素 */
-.r-board { --t: min(48px, calc((100vw - 32px) / 7)); width: calc(var(--t) * 7); margin: 0 auto; border-radius: 12px; overflow: hidden; }
+/* 房間：7×8 格（牆 2 格、地板 6 格）。圖塊來自 Kenney Roguelike Indoor pack（CC0），--t 是一格的像素。
+   寬度跟著容器走（最大 336px），不能用視窗寬度：桌面版的手機外框比視窗窄 */
+.r-board { container-type: inline-size; width: min(100%, 336px); margin: 0 auto; border-radius: 12px; overflow: hidden; }
+.r-board > * { --t: calc(100cqw / 7); }
 .r-wall { position: relative; height: calc(var(--t) * 2); background: repeating-linear-gradient(90deg, transparent 0 calc(var(--t) - 1px), #d8ccb0 calc(var(--t) - 1px) var(--t)) #ebe2cd; box-shadow: inset 0 -6px 0 #a9835a; }
 .r-floor { position: relative; display: grid; grid-template-columns: repeat(7, var(--t)); grid-auto-rows: var(--t); user-select: none; -webkit-user-select: none; cursor: pointer; }
 .r-floor.sel { touch-action: none; }
