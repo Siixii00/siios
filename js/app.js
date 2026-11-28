@@ -10,6 +10,7 @@ import { initActivityAPI } from './activity-interceptor.js';
 import { ziweiLazyLoader } from './core/ziwei-lazy-loader.js';
 import { backupManager } from './core/backup-manager.js';
 import { initAssistiveTouch } from './core/assistive-touch.js';
+import { initMotion } from './core/motion.js';
 
 window.showError = function(errorInfo) {
     const info = typeof errorInfo === 'string'
@@ -196,6 +197,7 @@ const App = {
             await registerRoutes();
             console.log('[App] 路由註冊完成');
 
+            initMotion(this.getAppContainer());
             this.showLockScreen();
 
             Router.on('/', async () => {
