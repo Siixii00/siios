@@ -207,6 +207,22 @@
     color: var(--twitter-accent);
 }
 
+:where(body[data-app="twitter"]) .tweet-actions .liked,
+:where(body[data-app="twitter"]) .tweet-actions .liked i {
+    color: #f91880;
+}
+
+:where(body[data-app="twitter"]) .tweet-actions .retweeted,
+:where(body[data-app="twitter"]) .tweet-actions .retweeted i {
+    color: #00ba7c;
+}
+
+:where(body[data-app="twitter"]) .tweet-reply-to {
+    font-size: 13px;
+    color: var(--twitter-muted);
+    margin-top: 2px;
+}
+
 :where(body[data-app="twitter"]) .notification-card {
     display: flex;
     gap: 12px;
@@ -384,6 +400,7 @@
 :where(body[data-app="twitter"]) .compose-header h3 {
     font-size: 18px;
     font-weight: 700;
+    color: var(--twitter-text);
 }
 
 :where(body[data-app="twitter"]) .compose-body {

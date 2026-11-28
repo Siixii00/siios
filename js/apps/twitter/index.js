@@ -5,6 +5,7 @@ import APIClient from '../../api.js';
 import { extractArray } from '../../core/json-extract.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
+import { burst } from '../../core/motion.js';
 
 let userTweets = [];
 let npcTweets = [];
@@ -12,6 +13,7 @@ let bookmarks = [];
 let notifications = [];
 let pendingReactions = [];
 let activeTab = 'forYou';
+let reloadFeed = null; // 動態頁在畫面上時，發文／回覆後用它重畫列表
 let fabMenuOpen = false;
 let notificationInterval = null;
 let selectedCharacterId = null;
@@ -687,17 +689,64 @@ function createTweetEl(tweet, profile, isBookmarked = false) {
                 </div>
                 <button class="icon-btn tweet-menu-btn" aria-label="更多"><i class="fas fa-ellipsis"></i></button>
             </div>
+            ${tweet.replyTo ? `<div class="tweet-reply-to">回覆 ${escapeHtml(tweet.replyTo.handle || '')}</div>` : ''}
             <div class="tweet-body">${escapeHtml(tweet.content)}</div>
             <div class="tweet-actions">
                 <button type="button" data-action="reply"><i class="far fa-comment"></i><span>${tweet.stats?.reply || 0}</span></button>
-                <button type="button" data-action="retweet"><i class="fas fa-retweet"></i><span>${tweet.stats?.retweet || 0}</span></button>
-                <button type="button" data-action="like"><i class="far fa-heart"></i><span>${tweet.stats?.like || 0}</span></button>
+                <button type="button" data-action="retweet" class="${tweet.retweeted ? 'retweeted' : ''}"><i class="fas fa-retweet"></i><span>${tweet.stats?.retweet || 0}</span></button>
+                <button type="button" data-action="like" class="${tweet.liked ? 'liked' : ''}"><i class="${tweet.liked ? 'fas' : 'far'} fa-heart"></i><span>${tweet.stats?.like || 0}</span></button>
                 <button type="button" data-action="bookmark" class="${isBookmarked ? 'bookmarked' : ''}"><i class="${isBookmarked ? 'fas' : 'far'} fa-bookmark"></i></button>
             </div>
         </div>
     `;
     
     return article;
+}
+
+// 同一則推文可能同時存在於動態與書籤兩處（書籤是另存的複本），點讚／轉推／回覆時要一起更新、各自存檔
+function tweetCopies(tweet) {
+    const id = tweet.id || tweet.timestamp;
+    const copies = new Set([tweet]);
+    const saves = [];
+    for (const [list, save] of [[userTweets, saveUserTweets], [npcTweets, saveNpcTweets], [bookmarks, saveBookmarks]]) {
+        const found = list.find(t => (t.id || t.timestamp) === id);
+        if (found) { copies.add(found); saves.push(save); }
+    }
+    return { copies, saves };
+}
+
+async function adjustStat(tweet, key, delta, flag) {
+    const { copies, saves } = tweetCopies(tweet);
+    const on = flag ? !tweet[flag] : undefined;
+    for (const t of copies) {
+        if (flag) t[flag] = on;
+        t.stats = { reply: 0, retweet: 0, like: 0, ...t.stats };
+        t.stats[key] = Math.max(0, t.stats[key] + (flag && !on ? -delta : delta));
+    }
+    await Promise.all(saves.map(save => save()));
+    return { on, count: tweet.stats[key] };
+}
+
+function bindTweetActions(tweetEl, tweet) {
+    const toggle = (action, flag, key, color) => {
+        const btn = tweetEl.querySelector(`[data-action="${action}"]`);
+        btn.onclick = async () => {
+            const { on, count } = await adjustStat(tweet, key, 1, flag);
+            btn.classList.toggle(flag, on);
+            const icon = btn.querySelector('i');
+            if (action === 'like') icon.className = on ? 'fas fa-heart' : 'far fa-heart';
+            btn.querySelector('span').textContent = count;
+            if (on) { icon.classList.add('motion-pop'); burst(btn, color); }
+        };
+    };
+    toggle('like', 'liked', 'like', '#f91880');
+    toggle('retweet', 'retweeted', 'retweet', '#00ba7c');
+
+    const replyBtn = tweetEl.querySelector('[data-action="reply"]');
+    replyBtn.onclick = () => showComposeModal(
+        { id: tweet.id || tweet.timestamp, author: tweet.author, handle: tweet.handle || '' },
+        () => { replyBtn.querySelector('span').textContent = tweet.stats?.reply || 0; }
+    );
 }
 
 function createNotificationEl(notif) {
@@ -754,7 +803,7 @@ function createNotificationEl(notif) {
     return section;
 }
 
-async function addTweet(content) {
+async function addTweet(content, replyTo = null) {
     const trimmed = content.trim();
     if (!trimmed) return;
     
@@ -768,13 +817,16 @@ async function addTweet(content) {
         timestamp: Date.now(),
         time: '現在'
     };
+    if (replyTo) tweet.replyTo = replyTo;
     
     userTweets.unshift(tweet);
     await saveUserTweets();
+    if (replyTo) await adjustStat({ ...replyTo }, 'reply', 1);
     
     scheduleReactionsForTweet(tweet);
     
-    createToast('推文已發布');
+    createToast(replyTo ? '回覆已發布' : '推文已發布');
+    if (reloadFeed) await reloadFeed();
 }
 
 async function addNpcTweet(npcName, content) {
@@ -815,7 +867,10 @@ async function toggleTweetBookmark(tweet) {
             content: tweet.content,
             timestamp: tweet.timestamp,
             bookmarkedAt: Date.now(),
-            stats: tweet.stats
+            stats: tweet.stats,
+            liked: tweet.liked,
+            retweeted: tweet.retweeted,
+            replyTo: tweet.replyTo
         });
         await saveBookmarks();
         return true;
@@ -1102,6 +1157,7 @@ async function renderFeed(container) {
         const tweetId = tweet.id || tweet.timestamp;
         const isBookmarked = isTweetBookmarked(tweetId);
         const tweetEl = createTweetEl(tweet, profile, isBookmarked);
+        bindTweetActions(tweetEl, tweet);
         
         const bookmarkBtn = tweetEl.querySelector('[data-action="bookmark"]');
         bookmarkBtn.onclick = async () => {
@@ -1131,6 +1187,7 @@ async function renderBookmarksList(container) {
     
     for (const tweet of bookmarks) {
         const tweetEl = createTweetEl(tweet, profile, true);
+        bindTweetActions(tweetEl, tweet);
         const bookmarkBtn = tweetEl.querySelector('[data-action="bookmark"]');
         
         bookmarkBtn.onclick = async () => {
@@ -1171,19 +1228,19 @@ async function renderNotificationsList(container) {
     container.appendChild(list);
 }
 
-function showComposeModal() {
+function showComposeModal(replyTo = null, onDone = null) {
     const overlay = createElement('div', 'compose-modal-overlay');
     const modal = createElement('div', 'compose-modal card');
     
     modal.innerHTML = `
         <div class="compose-header">
             <button class="icon-btn compose-close" aria-label="關閉"><i class="fas fa-times"></i></button>
-            <h3>發布推文</h3>
+            <h3>${replyTo ? `回覆 ${escapeHtml(replyTo.handle || replyTo.author)}` : '發布推文'}</h3>
             <button class="primary-btn compose-submit" disabled>發布</button>
         </div>
         <div class="compose-body">
             <div class="avatar" style="background: ${DEFAULT_AVATAR}"></div>
-            <textarea class="compose-textarea" placeholder="有什麼新鮮事？" rows="4"></textarea>
+            <textarea class="compose-textarea" placeholder="${replyTo ? '寫下你的回覆' : '有什麼新鮮事？'}" rows="4"></textarea>
         </div>
     `;
     
@@ -1202,8 +1259,9 @@ function showComposeModal() {
         const content = textarea.value.trim();
         if (!content) return;
         
-        await addTweet(content);
+        await addTweet(content, replyTo);
         overlay.remove();
+        if (onDone) onDone();
     };
     
     closeBtn.onclick = () => overlay.remove();
@@ -1361,6 +1419,7 @@ async function renderTwitterHome() {
     const feedContainer = createElement('div', 'feed-container');
     await renderFeed(feedContainer);
     main.appendChild(feedContainer);
+    reloadFeed = async () => { feedContainer.innerHTML = ''; await renderFeed(feedContainer); };
     
     if (!selectedCharacterId && userTweets.length === 0 && npcTweets.length === 0) {
         const hint = createElement('section', 'card character-hint');
@@ -1512,6 +1571,7 @@ async function renderTwitterHome() {
     return { 
         element: container, 
         cleanup: () => {
+            reloadFeed = null;
             stopNotificationSystem();
             cleanupPullToRefresh();
         }
