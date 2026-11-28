@@ -22,7 +22,7 @@ async function renderTheaterSettings() {
     main.style.paddingTop = '16px';
     
     const entries = await TheaterSettingsDB.getAll();
-    const mountedIds = await SettingsDB.get('theater_mounted_settings') || [];
+    let mountedIds = await SettingsDB.get('theater_mounted_settings') || [];
     
     const listContainer = createElement('div', 'px-4');
     
@@ -38,6 +38,7 @@ async function renderTheaterSettings() {
             
             const content = createElement('div', 'flex-1 min-h-[44px] flex flex-col justify-center');
             content.appendChild(createElement('span', 'text-base font-semibold', { textContent: entry.name }));
+            if (!entry.enabled) content.appendChild(createElement('span', 'text-xs text-ios-muted', { textContent: '未啟用：到編輯頁打開「啟用」，掛載才會生效' }));
             
             const toggle = createElement('div', 'ios-toggle');
             if (mountedIds.includes(entry.id)) {
@@ -49,8 +50,9 @@ async function renderTheaterSettings() {
                     ? mountedIds.filter(id => id !== entry.id)
                     : [...mountedIds, entry.id];
                 await SettingsDB.set('theater_mounted_settings', newMountedIds);
+                mountedIds = newMountedIds; // 下一次點擊要依最新的狀態判斷，不然永遠取消不掉
                 toggle.classList.toggle('active');
-                createToast(mountedIds.includes(entry.id) ? '已取消掛載' : '已掛載', 'success');
+                createToast(mountedIds.includes(entry.id) ? '已掛載' : '已取消掛載', 'success');
             };
             
             cell.appendChild(content);
