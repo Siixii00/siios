@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-11-27T22:31:21.206921",
-    "total_items": 65
+    "last_updated": "2026-11-28T04:34:25.274469",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
+        "title": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+        "url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+        "source": "Hacker News",
+        "score": 212
+      },
+      {
         "title": "GPT 6.2 Astra Solves a Historical Mystery",
         "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
         "source": "Hacker News",
-        "score": 152
+        "score": 373
+      },
+      {
+        "title": "The Balatro Timeline",
+        "url": "https://localthunk.com/blog/balatro-timeline-3aarh",
+        "source": "Hacker News",
+        "score": 159
+      },
+      {
+        "title": "Unkernel: Real Linux kernel, compiled to WebAssembly",
+        "url": "https://unkernel.dev",
+        "source": "Hacker News",
+        "score": 31
       },
       {
         "title": "Credit card skimming scripts using WebRTC found on popular shopping sites",
         "url": "https://www.infohawk.com/news/2026-11-27-black-friday-webrtc-skimmer",
         "source": "Hacker News",
-        "score": 342
+        "score": 469
+      },
+      {
+        "title": "Atari Homebrew Awards Cancelled",
+        "url": "https://forums.atariage.com/topic/394894-atari-homebrew-awards-cancelled/",
+        "source": "Hacker News",
+        "score": 129
+      },
+      {
+        "title": "Cyberpunk Television Shows",
+        "url": "https://shellzine.net/cyberpunk-television/",
+        "source": "Hacker News",
+        "score": 60
       },
       {
         "title": "Convex skills send the user's app idea to a remote server without telling them",
         "url": "https://github.com/convex/convex-backend-skill/issues/64",
         "source": "Hacker News",
-        "score": 176
-      },
-      {
-        "title": "Citroën Hydraulic System",
-        "url": "https://www.citroenet.org.uk/miscellaneous/hydraulics/hydraulics-1.html",
-        "source": "Hacker News",
-        "score": 81
-      },
-      {
-        "title": "Michael Nielsen took down his book on neural nets",
-        "url": "https://twitter.com/michael_nielsen/status/2126359767362748777",
-        "source": "Hacker News",
-        "score": 259
-      },
-      {
-        "title": "The AT&T Unix PC (3B1) VM",
-        "url": "https://virtuallyfun.com/2026/11/22/the-ultimate-att-unix-pc-3b1-vm-w-tcp-ip-and-apps/",
-        "source": "Hacker News",
-        "score": 38
-      },
-      {
-        "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
-        "url": "https://bouncemarket.minhanhday.com/",
-        "source": "Hacker News",
-        "score": 305
+        "score": 255
       },
       {
         "title": "9/UX: a Macintosh-inspired desktop for 9front",
         "url": "https://progrium.github.io/9ux/",
         "source": "Hacker News",
-        "score": 12
+        "score": 92
       },
       {
-        "title": "False computer-checked proofs",
-        "url": "https://cr.yp.to/proofs/falseccp.html",
+        "title": "Citroën Hydraulic System",
+        "url": "https://www.citroenet.org.uk/miscellaneous/hydraulics/hydraulics-1.html",
         "source": "Hacker News",
         "score": 149
       },
       {
-        "title": "Show HN: DragDropMath – Learn math by feel",
-        "url": "https://dragdropmath.com/",
+        "title": "Build your own amp modeler: $78 DIY pedal kit from TONE3000",
+        "url": "https://www.guitarworld.com/gear/guitar-pedals/tone3000-daisy-audio-diy-pedal-kit",
         "source": "Hacker News",
-        "score": 67
+        "score": 61
+      },
+      {
+        "title": "How WinHelp Files Work",
+        "url": "https://quin.fyi/posts/how-winhelp-files-work.html",
+        "source": "Hacker News",
+        "score": 18
+      },
+      {
+        "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball",
+        "url": "https://bouncemarket.minhanhday.com/",
+        "source": "Hacker News",
+        "score": 341
       },
       {
         "title": "First images of the impact of DART asteroid deflection experiment",
         "url": "https://arstechnica.com/space/2026/11/europes-hera-mission-returns-to-the-chaotic-scene-of-a-cosmic-smashup/",
         "source": "Hacker News",
-        "score": 170
+        "score": 197
       },
       {
-        "title": "States sue SpaceX to stop Grok from generating child sex images, revenge porn",
-        "url": "https://www.oag.state.va.us/media-center/news-releases/jay-jones/3162-attorneys-general-jones-and-rayfield-file-suit-against-spacex-parent-company-of-x-xai-and-grok-over-creation-and-promotion-of-child-exploitation-and-non-consensual-images-on-platform",
+        "title": "Tabernetes: A Kubernetes cluster whose nodes are browser tabs",
+        "url": "https://tabernet.es/",
         "source": "Hacker News",
-        "score": 145
-      },
-      {
-        "title": "Group chat where your AI talks behind your back",
-        "url": "https://construct22.com/",
-        "source": "Hacker News",
-        "score": 659
-      },
-      {
-        "title": "I am scared: Careless People – Sarah Wynn-Williams on living under a gag order",
-        "url": "https://www.theguardian.com/books/2026/nov/27/careless-people-author-sarah-wynn-williams-the-silence-is-mine-it-doesnt-have-to-be-yours",
-        "source": "Hacker News",
-        "score": 92
-      },
-      {
-        "title": "Atlantic 1866: information and shipping in the age of the telegraph",
-        "url": "https://atlantic-1866.com/",
-        "source": "Hacker News",
-        "score": 10
+        "score": 53
       }
     ],
     "ai": [
@@ -101,91 +101,85 @@
         "title": "GPT 6.2 Astra Solves a Historical Mystery",
         "url": "https://generativehistory.substack.com/p/gpt-62-astra-solves-a-historical",
         "source": "Hacker News AI",
-        "score": 152
+        "score": 373
       },
       {
         "title": "Michael Nielsen took down his book on neural nets",
-        "url": "https://twitter.com/michael_nielsen/status/2126359767362748777",
+        "url": "https://neuralnetworksanddeeplearning.com/",
         "source": "Hacker News AI",
-        "score": 259
+        "score": 443
       },
       {
-        "title": "Show HN: DragDropMath – Learn math by feel",
-        "url": "https://dragdropmath.com/",
+        "title": "Woman evicted after landlord's AI assistant told her she could delay rent",
+        "url": "https://drmahfouz.substack.com/p/woman-evicted-after-landlords-ai",
         "source": "Hacker News AI",
-        "score": 67
-      },
-      {
-        "title": "Group chat where your AI talks behind your back",
-        "url": "https://construct22.com/",
-        "source": "Hacker News AI",
-        "score": 659
-      },
-      {
-        "title": "AI made self-hosting fun again",
-        "url": "https://janlukas.blog/posts/ai-self-hosting",
-        "source": "Hacker News AI",
-        "score": 1068
-      },
-      {
-        "title": "Lydian Chromatic Concept of Tonal Organization",
-        "url": "https://en.wikipedia.org/wiki/Lydian_Chromatic_Concept_of_Tonal_Organization",
-        "source": "Hacker News AI",
-        "score": 24
+        "score": 109
       },
       {
         "title": "Prospero: Bloat-free, native AI coding harness with ImGui",
         "url": "https://github.com/skeeto/prospero",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 46
       },
       {
-        "title": "The need for a formally verifiable mainstream programming language",
-        "url": "https://blainehansen.me/post/mainstream-verifiable-language/",
+        "title": "Show HN: DragDropMath – Learn math by feel",
+        "url": "https://dragdropmath.com/",
         "source": "Hacker News AI",
-        "score": 296
+        "score": 115
       },
       {
-        "title": "Show HN: Getting 101 tok/s from Inkling 2 Mini in vLLM on one GB10",
-        "url": "https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/",
+        "title": "Lydian Chromatic Concept of Tonal Organization",
+        "url": "https://en.wikipedia.org/wiki/Lydian_Chromatic_Concept_of_Tonal_Organization",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 50
       },
       {
-        "title": "US Air Force's cloud computing platform hacked",
-        "url": "https://news.sky.com/story/us-air-forces-cloud-computing-platform-hacked-13617163",
+        "title": "Claude silently added rules to ignore users skintone preferences in our app",
+        "url": "https://twitter.com/jakozloski/status/2126281598517576049",
         "source": "Hacker News AI",
-        "score": 299
+        "score": 6
       },
       {
         "title": "Claude sabotaging ML research tasks?",
         "url": "https://twitter.com/RealAstropulse/status/2126119408997466389",
         "source": "Hacker News AI",
-        "score": 510
+        "score": 647
       },
       {
         "title": "\"What's Claude's fursona?\" and other questions",
         "url": "https://herecomesthemoon.net/2026/11/whats-claudes-fursona/",
         "source": "Hacker News AI",
-        "score": 176
+        "score": 189
       },
       {
-        "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
-        "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+        "title": "Show HN: Getting 101 tok/s from Inkling 2 Mini in vLLM on one GB10",
+        "url": "https://runtimenotes.com/blog/getting-101-tok-s-from-inkling-2-mini-in-vllm-on-one-gb10/",
         "source": "Hacker News AI",
-        "score": 420
+        "score": 50
       },
       {
-        "title": "Claude Code Skills Now Sharable Across Teams",
-        "url": "https://emergent.sh/news/claude-code-skills-now-sharable-across-teams",
+        "title": "US Air Force's cloud computing platform hacked",
+        "url": "https://news.sky.com/story/us-air-forces-cloud-computing-platform-hacked-13617163",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 338
       },
       {
-        "title": "Banks look to dump AI debt",
-        "url": "https://www.semafor.com/article/11/26/2026/banks-look-to-dump-ai-debt",
+        "title": "Group chat where your AI talks behind your back",
+        "url": "https://construct22.com/",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 692
+      },
+      {
+        "title": "AI made self-hosting fun again",
+        "url": "https://janlukas.blog/posts/ai-self-hosting",
+        "source": "Hacker News AI",
+        "score": 1107
+      },
+      {
+        "title": "The need for a formally verifiable mainstream programming language",
+        "url": "https://blainehansen.me/post/mainstream-verifiable-language/",
+        "source": "Hacker News AI",
+        "score": 319
       }
     ],
     "news": [
@@ -195,13 +189,23 @@
         "source": "BBC World"
       },
       {
-        "title": "Zelensky criticises 'strange' Trump-Putin friendship in BBC interview",
-        "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo?at_medium=RSS&at_campaign=rss",
+        "title": "Turkish officials 'destroyed' pro-opposition TV channel, owner tells BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cq36gk151xkdo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Weary of war but with no sign of backing down, Kyiv faces another punishing winter",
-        "url": "https://www.bbc.co.uk/news/articles/c3pw4yrr8kz9o?at_medium=RSS&at_campaign=rss",
+        "title": "Eight killed in Peruvian military helicopter crash",
+        "url": "https://www.bbc.co.uk/news/articles/cwp9d85mlp88o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "'Poison seller' Kenneth Law apologises in court to the families of his victims",
+        "url": "https://www.bbc.co.uk/news/articles/cmx2898wq2qjo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Zelensky criticises 'strange' Trump-Putin friendship in BBC interview",
+        "url": "https://www.bbc.co.uk/news/articles/c820q9wgrpyyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -210,22 +214,27 @@
         "source": "BBC World"
       },
       {
-        "title": "Brazil pushes back on Macron calling its meat 'doped'",
-        "url": "https://www.bbc.co.uk/news/articles/c6rrg28npvzeo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Prosecutors seek 25-year prison term for 'poison seller' Kenneth Law",
-        "url": "https://www.bbc.co.uk/news/articles/cmx2898wq2qjo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Capsized tanker carrying 7,000 tonnes of diesel to be towed away from Ibiza",
-        "url": "https://www.bbc.co.uk/news/articles/cvrlgz6g0ekgo?at_medium=RSS&at_campaign=rss",
+        "title": "Millions of wives in South Asia unprotected from marital rape - study",
+        "url": "https://www.bbc.co.uk/news/articles/cw074p95ye5do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " 6 Christmas gifts for designers, all discounted for Black Friday ",
+        "url": "https://www.creativebloq.com/deals/6-christmas-gifts-for-designers-all-discounted-for-black-friday",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Black Friday might be your one chance to get a portable SSD at a price you can almost afford ",
+        "url": "https://www.creativebloq.com/deals/black-friday-might-be-your-last-chance-for-a-while-to-get-a-portable-ssd-at-a-price-you-can-almost-afford",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Time's ticking to get $30 off Nintendo Switch 2 for Black Friday ",
+        "url": "https://www.creativebloq.com/deals/times-ticking-to-get-usd30-off-nintendo-switch-2-for-black-friday",
+        "source": "Creative Bloq"
+      },
       {
         "title": " If you want a new TV, these Black Friday deals save up to 47% ",
         "url": "https://www.creativebloq.com/deals/if-you-want-a-new-tv-these-black-friday-deals-save-up-to-47-percent",
@@ -244,21 +253,6 @@
       {
         "title": " Avoid GTA 6 'Black Fraud Day' with my PS5 and Xbox price hack (and the deal to avoid) ",
         "url": "https://www.creativebloq.com/deals/avoid-gta-6-black-fraud-day-with-my-ps5-and-xbox-price-hack-and-the-deal-to-avoid",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " From pastels to paintbrushes, get essential art supplies starting from $8 ",
-        "url": "https://www.creativebloq.com/deals/get-essential-art-supplies-starting-from-usd8-this-black-friday",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These cassette players will help you become the most pretentious person on the train ",
-        "url": "https://www.creativebloq.com/deals/these-cassette-players-will-help-you-become-the-most-pretentious-person-on-the-train",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The best Black Friday deals for creatives LIVE: All handpicked, tested and loved by our editors ",
-        "url": "https://www.creativebloq.com/live/news/black-friday-deals-for-creatives",
         "source": "Creative Bloq"
       }
     ],
@@ -301,6 +295,21 @@
     ],
     "gaming": [
       {
+        "title": "8 Classic PlayStation Games That Are Barely Playable Today",
+        "url": "https://www.polygon.com/classic-playstation-games-unplayable-today/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Every Free Game This Week on Steam, Epic, and Xbox (Nov. 27-Dec. 3)",
+        "url": "https://www.polygon.com/free-games-right-now-steam-epic-ps-plus-nov-27-dec-3/",
+        "source": "Polygon"
+      },
+      {
+        "title": "63 Years Later, CBS's Legendary 70-Episode Series Still Has the Only Vampire Worth Watching",
+        "url": "https://www.polygon.com/the-only-vampire-i-care-about-is-grandpa-munster/",
+        "source": "Polygon"
+      },
+      {
         "title": "It’s Officially the End of an Era for HBO’s The Last of Us",
         "url": "https://www.polygon.com/the-last-of-us-season-3-end-finale-hbo-2027/",
         "source": "Polygon"
@@ -318,21 +327,6 @@
       {
         "title": "Magic: The Gathering Designer Reveals 2026’s 11 Best New Commanders",
         "url": "https://www.polygon.com/mtg-best-commanders-of-2026-gavin-verhey-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Dune Director Admits He’s ‘Deeply Disappointed’ by Showdown With Avengers: Doomsday",
-        "url": "https://www.polygon.com/dune-3-avengers-doomsday-box-office-showdown-december-18/",
-        "source": "Polygon"
-      },
-      {
-        "title": "New Dungeon Crawler Carl Release Officially Set for 2027",
-        "url": "https://www.polygon.com/dungeon-crawler-carl-new-comic-series-release-date-january-2027/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Steve Rogers Steals Another Thor Power in Official New Official Avengers: Doomsday Trailer",
-        "url": "https://www.polygon.com/avengers-doomsday-tv-spot-steve-rogers-latveria/",
         "source": "Polygon"
       }
     ],
