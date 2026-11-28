@@ -247,6 +247,47 @@ export const INTERACTIONS = [
 
 export const interactionUnlock = i => ({ affection: i.min, dates: i.dates || 0, ...(i.stage ? { stage: i.stage } : {}) });
 
+// ───── 遊戲化：心情表情、今日心願、紀念品 ─────
+// 角色只有一張頭像，表情靠心情兩個字換成表情符號。否定的詞（不開心、不高興）要排在前面，不然會被「開心」吃掉
+const MOOD_EMOJI = [
+    [/不開心|難過|失落|傷心|低落|委屈|寂寞|沮喪/, '😢'],
+    [/生氣|不悅|不高興|不滿|惱|煩/, '😠'],
+    [/害羞|臉紅|不好意思|羞|緊張|心動|慌/, '😳'],
+    [/驚訝|意外|吃驚|驚喜/, '😲'],
+    [/感動|溫暖|安心|感激/, '🥹'],
+    [/期待|興奮|好奇/, '✨'],
+    [/開心|愉快|高興|快樂|喜悅|雀躍|滿足|幸福|甜蜜/, '😊'],
+    [/平靜|放鬆|悠閒|自在|平淡/, '😌'],
+    [/睏|困|疲|累/, '😪']
+];
+export const moodEmoji = mood => (MOOD_EMOJI.find(([re]) => re.test(mood || '')) || [null, '🙂'])[1];
+
+// 一場約會在同一個地方做滿 3 件不同的事，第一次就能帶走那裡的紀念品
+export const MISSION_TARGET = 3;
+export const SOUVENIRS = {
+    cafe: { name: '拉花杯墊', icon: '☕' }, park: { name: '四葉草書籤', icon: '🍀' }, beach: { name: '小貝殼', icon: '🐚' },
+    restaurant: { name: '桌上的小蠟燭', icon: '🕯️' }, cinema: { name: '電影票根', icon: '🎟️' }, aquarium: { name: '小魚吊飾', icon: '🐠' },
+    market: { name: '夜市娃娃', icon: '🧸' }, bookstore: { name: '夾著書籤的書', icon: '📖' }, stars: { name: '流星許願卡', icon: '🌠' },
+    home: { name: '成對的馬克杯', icon: '🍵' }, bridal: { name: '試穿紀念照', icon: '📷' }, newhome: { name: '新家的鑰匙', icon: '🔑' }
+};
+export const souvenirOf = scene => SOUVENIRS[scene?.id] || null;
+
+// 回傳 { relation, souvenir }：做夠了、而且這個場景的紀念品還沒拿過才給（自訂地點沒有紀念品）
+export function claimSouvenir(relation, scene, doneCount) {
+    const souvenir = souvenirOf(scene), owned = relation?.souvenirs || [];
+    if (!souvenir || doneCount < MISSION_TARGET || owned.includes(scene.id)) return { relation, souvenir: null };
+    return { relation: { ...relation, souvenirs: [...owned, scene.id] }, souvenir };
+}
+
+// 各場景去過幾次：記下來的次數，和（舊紀錄只有的）約會回憶筆數，取較大的
+export function visitsOf(rel) {
+    const out = { ...(rel?.visits || {}) };
+    const fromHistory = {};
+    for (const h of rel?.history || []) if (h.sceneId) fromHistory[h.sceneId] = (fromHistory[h.sceneId] || 0) + 1;
+    for (const [id, n] of Object.entries(fromHistory)) out[id] = Math.max(out[id] || 0, n);
+    return out;
+}
+
 // ───── 好感度規則 ─────
 export const AFFECTION_MIN_DELTA = -5;
 export const AFFECTION_MAX_DELTA = 8;
@@ -255,6 +296,7 @@ export const DAILY_GAIN_CAP = 15; // 一個角色一天最多增加的好感（�
 export const clampDelta = n => Math.max(AFFECTION_MIN_DELTA, Math.min(AFFECTION_MAX_DELTA, Math.round(Number(n) || 0)));
 export const clampAffection = n => Math.max(0, Math.min(100, Math.round(Number(n) || 0)));
 export const dayKey = (d = new Date()) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+export const gainedToday = (rel, now = new Date()) => (rel?.daily?.day === dayKey(now) ? rel.daily.gained || 0 : 0);
 
 // ───── 提示詞 ─────
 export function buildDatePrompt({ charName, userName, scene, slot, affection, stage: stageIn = null, note = '', worldFacts = '', cardFacts = '', mood = '', turns = 0, gift = null }) {
@@ -313,7 +355,7 @@ export function renderNarration(text) {
 }
 
 // ───── 關係紀錄（每個角色一筆，存在 SettingsDB 的 dating_relations）─────
-export const emptyRelation = () => ({ affection: 10, dates: 0, lastDate: null, daily: { day: '', gained: 0 }, history: [], stageFloor: null, note: '', autoChat: true, chat: null, hint: null });
+export const emptyRelation = () => ({ affection: 10, dates: 0, lastDate: null, daily: { day: '', gained: 0 }, history: [], stageFloor: null, note: '', autoChat: true, chat: null, hint: null, souvenirs: [], visits: {} });
 
 // ───── 從世界書與角色設定讀關係 ─────
 // 有人把關係寫在世界書（因為角色設定常常不被好好遵守），所以也要讀。這是文字比對，不是理解：
@@ -438,6 +480,7 @@ export function finishDate(relation, entry) {
     const rel = { ...emptyRelation(), ...relation };
     rel.dates = (rel.dates || 0) + 1;
     rel.lastDate = entry.endedAt;
+    if (entry.sceneId) rel.visits = { ...visitsOf(rel), [entry.sceneId]: (visitsOf(rel)[entry.sceneId] || 0) + 1 };
     rel.history = [entry, ...(rel.history || [])].slice(0, 30);
     return rel;
 }

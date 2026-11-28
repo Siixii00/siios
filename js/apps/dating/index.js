@@ -12,7 +12,8 @@ import { charge, formatMoney } from '../../core/wallet.js';
 import {
     STAGES, relationStage, effAffection, checkUnlock, interactionUnlock, chatStatsFromMessages, applyChatEstimate, setRelationship, detectRelationHint, formatWorldFacts,
     timeSlot, SCENES, sceneById, customScene, INTERACTIONS, buildDatePrompt, parseReply, renderNarration, esc,
-    emptyRelation, applyAffection, finishDate, localSummary, clampDelta, clampAffection
+    emptyRelation, applyAffection, finishDate, localSummary, clampDelta, clampAffection,
+    moodEmoji, MISSION_TARGET, SOUVENIRS, souvenirOf, claimSouvenir, visitsOf, gainedToday, DAILY_GAIN_CAP
 } from './dating-data.js';
 
 const RELATIONS_KEY = 'dating_relations';
@@ -21,7 +22,7 @@ const HISTORY_TURNS = 14; // 送給模型的最近訊息數
 // 約會進行中的狀態（離開頁面時會自動收尾）
 let st = freshState();
 function freshState() {
-    return { view: 'select', character: null, userName: '', scene: null, slot: null, messages: [], mood: '', turns: 0, startedAt: 0, startAffection: 0, busy: false, panel: false, notedCap: false };
+    return { view: 'select', character: null, userName: '', scene: null, slot: null, messages: [], mood: '', turns: 0, startedAt: 0, startAffection: 0, busy: false, panel: false, notedCap: false, done: new Set(), gotSouvenir: null };
 }
 
 let ui = { characters: [], go: () => {} }; // 目前畫面的 characters 與換頁函式（面板重畫後重新綁事件用）
@@ -170,6 +171,10 @@ function viewHub() {
         <button class="dt-primary" data-act="to-scenes"><i class="fas fa-heart"></i> 開始約會</button>
         <button class="dt-link" data-act="relation"><i class="fas fa-sliders-h"></i> 關係設定</button>
       </div>
+      <h3 class="dt-sub">紀念品 <small class="dt-muted">${(r.souvenirs || []).length}/${Object.keys(SOUVENIRS).length}</small></h3>
+      <div class="dt-shelf">${SCENES.filter(s => SOUVENIRS[s.id]).map(s => (r.souvenirs || []).includes(s.id)
+          ? `<span class="dt-sv" title="${esc(SOUVENIRS[s.id].name)}（${esc(s.name)}）">${SOUVENIRS[s.id].icon}</span>`
+          : `<span class="dt-sv dt-sv-off" title="在${esc(s.name)}約會，做 ${MISSION_TARGET} 件不同的事">?</span>`).join('')}</div>
       <h3 class="dt-sub">約會回憶</h3>
       ${hist.length ? hist.map(h => `<div class="dt-memory">
           <div class="dt-memory-head"><span><i class="fas ${esc(h.icon || 'fa-heart')}"></i> ${esc(h.sceneName)}</span><span class="dt-muted">${new Date(h.endedAt).toLocaleDateString('zh-TW')} · ${h.delta >= 0 ? '+' : ''}${h.delta}</span></div>
@@ -178,7 +183,7 @@ function viewHub() {
 }
 
 function viewScenes() {
-    const r = relOf(st.character.id), now = timeSlot();
+    const r = relOf(st.character.id), now = timeSlot(), visits = visitsOf(r);
     return `<div class="dt-wrap">
       <h2 class="dt-title">要去哪裡？</h2>
       <p class="dt-muted dt-center">現在是${now.name}，標有「適合現在」的地方氣氛最好</p>
@@ -189,7 +194,7 @@ function viewScenes() {
             <div class="dt-card-info">
               <h3>${esc(s.name)}${s.best.includes(now.id) && !locked ? '<span class="dt-chip dt-chip-hot">適合現在</span>' : ''}</h3>
               <p>${esc(s.desc)}</p>
-              <small>${locked ? `解鎖條件：${lock.missing.join('、')}` : s.cost ? `預計花費 ${formatMoney(s.cost)}` : '免費'}</small>
+              <small>${locked ? `解鎖條件：${lock.missing.join('、')}` : s.cost ? `預計花費 ${formatMoney(s.cost)}` : '免費'}${visits[s.id] ? ` · 去過 ${visits[s.id]} 次` : ''}${(r.souvenirs || []).includes(s.id) ? ` · ${SOUVENIRS[s.id].icon}` : ''}</small>
             </div></button>`;
       }).join('')}
         <button class="dt-card dt-scene" data-scene="custom">
@@ -201,21 +206,28 @@ function viewScenes() {
 
 function headerHtml() {
     const c = st.character, r = relOf(c.id), stage = relationStage(r);
-    return `<div class="dt-head">
+    const sv = souvenirOf(st.scene);
+    const mission = !sv ? '' : `<div class="dt-mission">${(r.souvenirs || []).includes(st.scene.id)
+        ? `已收藏 ${sv.icon} ${esc(sv.name)}`
+        : `<span class="dt-pips">${Array.from({ length: MISSION_TARGET }, (_, i) => i < st.done.size ? '●' : '○').join('')}</span> 做 ${MISSION_TARGET} 件事帶走 ${sv.icon}${esc(sv.name)}`}</div>`;
+    return `<div class="dt-head" data-slot="${esc(st.slot.id)}">
       ${avatarHtml(c)}
       <div class="dt-head-info">
-        <h3>${esc(c.name)}<span class="dt-chip">${stage.name}</span>${st.mood ? `<span class="dt-chip dt-chip-mood">${esc(st.mood)}</span>` : ''}</h3>
+        <h3>${esc(c.name)}<span class="dt-chip">${stage.name}</span>${st.mood ? `<span class="dt-chip dt-chip-mood">${moodEmoji(st.mood)} ${esc(st.mood)}</span>` : ''}</h3>
         ${affectionBar(r.affection)}
-        <small id="dt-aff-label">好感度 ${r.affection}%</small>
+        <small id="dt-aff-label">好感度 ${r.affection}% · 今日 +${gainedToday(r)}/${DAILY_GAIN_CAP}</small>
       </div>
-      <div class="dt-badge"><i class="fas ${esc(st.scene.icon)}"></i> ${esc(st.scene.name)} · ${esc(st.slot.name)}</div>
+      <div class="dt-head-row">
+        <div class="dt-badge"><i class="fas ${esc(st.scene.icon)}"></i> ${esc(st.scene.name)} · ${esc(st.slot.name)}</div>
+        ${mission}
+      </div>
     </div>`;
 }
 
 function messageHtml(m) {
     if (m.hidden) return '';
-    if (m.role === 'narration') return `<div class="dt-narration">${renderNarration(m.content)}</div>`;
-    if (m.role === 'assistant') return `<div class="dt-msg dt-them">${avatarHtml(st.character, 'dt-avatar-sm')}<div class="dt-bubble">${renderNarration(m.content)}</div></div>`;
+    if (m.role === 'narration') return `<div class="dt-narration${m.milestone ? ' dt-milestone' : ''}">${renderNarration(m.content)}</div>`;
+    if (m.role === 'assistant') return `<div class="dt-msg dt-them">${avatarHtml(st.character, 'dt-avatar-sm')}<div class="dt-bubble">${renderNarration(m.content)}${m.gain ? `<div class="dt-gain ${m.gain > 0 ? 'dt-gain-up' : 'dt-gain-down'}">♥ ${m.gain > 0 ? '+' : ''}${m.gain}</div>` : ''}</div></div>`;
     return `<div class="dt-msg dt-me"><div class="dt-bubble${m.kind === 'action' ? ' dt-bubble-act' : ''}">${renderNarration(m.content)}</div></div>`;
 }
 
@@ -223,7 +235,7 @@ function panelHtml() {
     const rel = relOf(st.character.id);
     return `<div class="dt-panel" id="dt-panel"${st.panel ? '' : ' hidden'}>
       <div class="dt-panel-title">這裡可以做的事</div>
-      <div class="dt-chips">${st.scene.activities.map(a => `<button class="dt-act-btn" data-activity="${a.id}"><i class="fas ${esc(a.icon)}"></i> ${esc(a.name)}</button>`).join('')}</div>
+      <div class="dt-chips">${st.scene.activities.map(a => `<button class="dt-act-btn${st.done.has(a.id) ? ' dt-done' : ''}" data-activity="${a.id}"><i class="fas ${esc(a.icon)}"></i> ${esc(a.name)}${st.done.has(a.id) ? ' ✓' : ''}</button>`).join('')}</div>
       <div class="dt-panel-title">互動</div>
       <div class="dt-chips">${INTERACTIONS.map(i => {
           const lock = checkUnlock(interactionUnlock(i), rel);
@@ -261,6 +273,7 @@ function viewSummary() {
       <div class="dt-memory dt-memory-big"><p>${esc(s.summary)}</p></div>
       <div class="dt-delta">好感度 ${s.before} → <b>${s.after}</b> <span class="${s.delta >= 0 ? 'dt-up' : 'dt-down'}">(${s.delta >= 0 ? '+' : ''}${s.delta})</span></div>
       ${s.stageUp ? `<div class="dt-stage-up">💞 你們的關係進展到了「${esc(s.stageUp)}」</div>` : ''}
+      ${s.souvenir ? `<div class="dt-stage-up">🎁 新的紀念品：${s.souvenir.icon} ${esc(s.souvenir.name)}</div>` : ''}
       <button class="dt-primary" data-act="to-hub"><i class="fas fa-heart"></i> 回到 ${esc(st.character.name)}</button>
     </div>`;
 }
@@ -296,7 +309,7 @@ function bind(container, characters, go) {
     });
     on('[data-activity]', async el => {
         const a = st.scene.activities.find(x => x.id === el.dataset.activity);
-        if (a) await act(container, { display: `（${a.text}）`, api: `（${a.text}）`, base: a.delta });
+        if (a) await act(container, { display: `（${a.text}）`, api: `（${a.text}）`, base: a.delta, activity: a.id });
     });
     on('[data-interaction]', async el => {
         const i = INTERACTIONS.find(x => x.id === el.dataset.interaction);
@@ -418,8 +431,9 @@ async function startDate(container, go, scene) {
     await reply(container, { base: 0, opening: true });
 }
 
-async function act(container, { display, narration, api, base = 1, kind = 'action', gift = null }) {
+async function act(container, { display, narration, api, base = 1, kind = 'action', gift = null, activity = null }) {
     if (st.busy) return;
+    if (activity) st.done.add(activity);
     if (narration) st.messages.push({ role: 'narration', content: narration, api });
     else st.messages.push({ role: 'user', content: display, api, kind });
     st.turns++;
@@ -473,7 +487,8 @@ async function reply(container, { base = 1, gift = null, opening = false }) {
         text = fallbackLine(opening, base);
     }
     if (!text) text = fallbackLine(opening, base);
-    st.messages.push({ role: 'assistant', content: text });
+    const said = { role: 'assistant', content: text };
+    st.messages.push(said);
     if (mood) st.mood = mood;
 
     // 好感度：以角色這一輪的感受為準；模型沒給就用動作的基本值（開場不變動）
@@ -482,8 +497,17 @@ async function reply(container, { base = 1, gift = null, opening = false }) {
     const before = relOf(c.id);
     const res = applyAffection(before, raw);
     await saveRelation(c.id, res.relation);
+    said.gain = res.applied;
     const stageBefore = relationStage(before), stageAfter = relationStage(res.relation);
-    if (stageAfter.id !== stageBefore.id && res.applied > 0) st.messages.push({ role: 'narration', local: true, content: `💞 你們的關係進展到了「${stageAfter.name}」` });
+    if (stageAfter.id !== stageBefore.id && res.applied > 0) st.messages.push({ role: 'narration', local: true, milestone: true, content: `💞 你們的關係進展到了「${stageAfter.name}」` });
+    if (!opening) {
+        const claim = claimSouvenir(relOf(c.id), st.scene, st.done.size);
+        if (claim.souvenir) {
+            await saveRelation(c.id, claim.relation);
+            st.gotSouvenir = claim.souvenir;
+            st.messages.push({ role: 'narration', local: true, milestone: true, content: `🎁 帶走了紀念品：${claim.souvenir.icon} ${claim.souvenir.name}` });
+        }
+    }
     if (res.capped && !st.notedCap) { st.notedCap = true; st.messages.push({ role: 'narration', local: true, content: '今天已經相處得很開心了，好感度明天再繼續累積吧。' }); }
 
     setBusy(container, false);
@@ -552,7 +576,7 @@ async function endDate(container, go, { offline = false } = {}) {
         }).catch(() => {});
     }
 
-    const summaryData = { sceneName: scene.name, icon: scene.icon, slotName: slot.name, turns, summary, before, after, delta: after - before, stageUp };
+    const summaryData = { sceneName: scene.name, icon: scene.icon, slotName: slot.name, turns, summary, before, after, delta: after - before, stageUp, souvenir: st.gotSouvenir };
     const character = c;
     st = { ...freshState(), view: 'summary', character, summary: summaryData };
     if (go) go(turns > 0 ? 'summary' : 'hub');
