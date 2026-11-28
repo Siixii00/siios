@@ -312,7 +312,11 @@ const App = {
 
         const screen = createElement('div', 'phone-screen');
         // App 的 100vh 是視窗高度，不是手機外框的高度：把外框內的實際高度存成 --app-h 讓各 App 的 CSS 使用
-        const syncHeight = () => screen.style.setProperty('--app-h', screen.clientHeight + 'px');
+        // #app 可能被外觀設定的「文字大小」放大或縮小（zoom），裡面的高度要換算成同一個尺度才剛好填滿外框
+        const syncHeight = () => {
+            const zoom = parseFloat(getComputedStyle(appContainer).zoom) || 1;
+            screen.style.setProperty('--app-h', screen.clientHeight / zoom + 'px');
+        };
         if (typeof ResizeObserver === 'function') new ResizeObserver(syncHeight).observe(screen);
         window.addEventListener('resize', syncHeight);
 

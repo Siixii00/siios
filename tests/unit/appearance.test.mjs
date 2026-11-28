@@ -51,6 +51,10 @@ test('buildCss：預設什麼都不改；深色、字體、大小各自產生規
     assert.match(buildCss({ font: 'serif' }), /font-family: "Noto Serif TC"/);
     assert.doesNotMatch(buildCss({ font: 'system' }), /font-family/);
     assert.match(buildCss({ size: 'large' }), /zoom: 1\.1/);
+    // 放大後，用手機高度排版的畫面要除以同一個倍數；標準大小不需要這些規則
+    assert.match(buildCss({ size: 'large' }), /body:not\(\.desktop-mode\) #app \{ --app-h: calc\(100dvh \/ 1\.1\); \}/);
+    assert.match(buildCss({ size: 'small' }), /sx-android:not\(\.desktop-mode\) #app \{ --app-h: calc\(\(100dvh - 46px\) \/ 0\.92\); \}/);
+    assert.ok(!/--app-h/.test(buildCss({ size: 'medium' })));
     assert.equal(buildCss({ color: '#EC4899' }), ''); // 主題色不是濾鏡，由樣式表掃描處理
     assert.match(buildCss({ saturation: 120 }), /#app \{ filter: saturate\(1\.2\)/);
 });

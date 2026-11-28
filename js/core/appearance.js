@@ -119,7 +119,12 @@ export function buildCss(settings, systemDark = false) {
     if (s.font !== 'system') {
         rules.push(`#app :where(*:not(i):not(.material-icons):not(.material-symbols-outlined):not([class^="fa"]):not([class*=" fa-"])) { font-family: ${font.css} !important; }`);
     }
-    if (zoom !== 1) rules.push(`#app { zoom: ${zoom}; }`);
+    if (zoom !== 1) {
+        rules.push(`#app { zoom: ${zoom}; }`);
+        // #app 放大／縮小後，用手機高度排版的畫面（--app-h）也要除以同一個倍數，不然「大」會超出手機、「小」會在底下留白。桌面外框的高度由 app.js 依倍數換算
+        rules.push(`body:not(.desktop-mode) #app { --app-h: calc(100dvh / ${zoom}); }`);
+        rules.push(`body.sx-android:not(.desktop-mode) #app { --app-h: calc((100dvh - 46px) / ${zoom}); }`);
+    }
     return rules.join('\n');
 }
 

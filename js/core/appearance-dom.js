@@ -51,6 +51,7 @@ export function applyAppearance(settings) {
     meta.content = themeColorMeta(current, systemDark());
     try { localStorage.setItem(LS_KEY, JSON.stringify(current)); } catch (_) { /* 沒有 localStorage 也沒關係 */ }
     scheduleNativeCheck();
+    window.dispatchEvent(new Event('resize')); // 文字大小改變後，桌面外框的 --app-h 要重算（app.js 聽 resize）
     // 馬上套用（編輯器要立刻拿到 CSS 有沒有錯）；後來才載入的樣式表由 scheduleStyles 再補一次
     clearTimeout(cssTimer);
     try { applyStyles(); } catch (e) { console.warn('[Appearance] 套用樣式失敗：', e); }
