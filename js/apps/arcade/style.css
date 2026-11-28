@@ -12,6 +12,17 @@
   color: var(--arcade-text);
 }
 
+/* 標題列：共用的 .ios-header 是淺色底，這裡是深色介面，標題列也要深色底與淺色文字 */
+:where(body[data-app="arcade"]) .arcade-app .ios-header {
+  background: var(--arcade-bg);
+  border-bottom: 1px solid var(--arcade-border);
+}
+
+:where(body[data-app="arcade"]) .arcade-app .ios-header .menu-title,
+:where(body[data-app="arcade"]) .arcade-app .ios-header .ios-back-btn {
+  color: var(--arcade-text) !important;
+}
+
 :where(body[data-app="arcade"]) .arcade-app .page {
   background: var(--arcade-bg);
   min-height: calc(var(--app-h, 100vh) - 96px);

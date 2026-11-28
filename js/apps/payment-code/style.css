@@ -10,3 +10,18 @@
 :where(body[data-app="payment-code"]) .qr-box svg { display: block; width: 100%; height: auto; }
 .payment-app .code-text { color: var(--payment-text); font-size: 20px; margin: 0 0 8px; }
 :where(body[data-app="payment-code"]) .code-expiry { font-size: 12px; color: var(--payment-muted); margin: 0 0 14px; }
+
+/* 標題列：共用的 .ios-header 是淺色底，這裡是深色介面，標題列也要深色底與淺色文字 */
+.payment-app {
+    background: var(--payment-bg);
+}
+
+.payment-app .ios-header {
+    background: var(--payment-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.payment-app .ios-header .menu-title,
+.payment-app .ios-header .ios-back-btn {
+    color: var(--payment-text) !important;
+}

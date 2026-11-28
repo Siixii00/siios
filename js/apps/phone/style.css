@@ -611,3 +611,14 @@ body .app-container.phone-app {
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+/* 標題列：共用的 .ios-header 是淺色底，這裡是深色介面，標題列也要深色底與淺色文字 */
+.phone-app .ios-header {
+    background: rgb(15, 17, 21);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.phone-app .ios-header .menu-title,
+.phone-app .ios-header .ios-back-btn {
+    color: #fff !important;
+}

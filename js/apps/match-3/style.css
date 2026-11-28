@@ -108,3 +108,18 @@
 :where(body[data-app="match-3"]) .lv-btn small { font-size: 10px; color: var(--lv-muted); min-height: 12px; }
 :where(body[data-app="match-3"]) .lv-btn.done { border-color: #f8b040; }
 :where(body[data-app="match-3"]) .lv-btn.locked { opacity: .4; cursor: default; }
+
+/* 標題列：共用的 .ios-header 是淺色底，這裡是深色介面，標題列也要深色底與淺色文字 */
+.match3-app {
+    background: var(--match-bg);
+}
+
+.match3-app .ios-header {
+    background: var(--match-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.match3-app .ios-header .menu-title,
+.match3-app .ios-header .ios-back-btn {
+    color: var(--match-text) !important;
+}

@@ -165,3 +165,17 @@
 :where(body[data-app="bubbles"]) .send-btn:hover {
   background: var(--bubble-accent);
 }
+/* 標題列：共用的 .ios-header 是淺色底，這裡是深色介面，標題列也要深色底與淺色文字 */
+.bubbles-app {
+    background: var(--bubble-bg);
+}
+
+.bubbles-app .ios-header {
+    background: var(--bubble-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bubbles-app .ios-header .menu-title,
+.bubbles-app .ios-header .ios-back-btn {
+    color: var(--bubble-text) !important;
+}
